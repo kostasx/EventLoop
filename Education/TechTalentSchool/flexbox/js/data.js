@@ -553,9 +553,6 @@ data[data.length] = {
     },
     {
       name: '50%'
-    },
-    {
-      name: 'content'
     }
   ],
 
