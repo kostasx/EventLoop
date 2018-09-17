@@ -227,6 +227,7 @@ data[data.length] = {
   ],
 };
 
+// ALIGNMENT (SUBHEADER)
 data[data.length] = {
   name: 'alignment',
   title: 'Alignment',
@@ -384,6 +385,7 @@ data[data.length] = {
   ],
 };
 
+// align-content
 data[data.length] = {
   name: 'align-content',
 
@@ -450,6 +452,7 @@ data[data.length] = {
   type: 'subheader'
 };
 
+// flex-grow
 data[data.length] = {
   name: 'flex-grow',
 
@@ -487,6 +490,7 @@ data[data.length] = {
   ],
 };
 
+// flex-shrink
 data[data.length] = {
   name: 'flex-shrink',
 
@@ -530,6 +534,7 @@ data[data.length] = {
   ],
 };
 
+// flex-basis
 data[data.length] = {
   name: 'flex-basis',
 
@@ -570,4 +575,19 @@ data[data.length] = {
       }
     }
   ],
+};
+
+// DEMOS
+data[data.length] = {
+  name: 'demo',
+  title: 'Demos',
+  type: 'subheader'
+};
+
+// 
+data[data.length] = {
+  name: 'demos',
+
+  desc: '<p><a target="_blank" class="interactive_demo" href="https://codepen.io/kostasx/pen/LJJQLy?editors=1000">Interactive Demo</a></p>',
+
 };

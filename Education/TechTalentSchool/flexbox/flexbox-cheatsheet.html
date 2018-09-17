@@ -32,7 +32,7 @@
                 </div>
               </div>
 
-              <div class="demo__code" spellcheck="false"></div>
+              <div class="demo__code" contenteditable=true spellcheck="false"></div>
           </div>
       </div>
 
@@ -40,6 +40,54 @@
 
   <script src="./js/data.js"></script>
   <script src="./js/script.js"></script>
+  <!-- JS CSS Parser | https://github.com/therealglazou/jscssp -->
+  <script src="../libs/jscssp/cssParser.js"></script>
+  <script>
+
+    function injectStylesheet(cssContent){
+
+      removeInjectedStylesheet();
+  
+      var head   = document.head || document.getElementsByTagName('head')[0];
+      var style  = document.createElement('style');
+      style.type = 'text/css';
+      style.id = "injected_stylesheet";
+
+      if ( style.styleSheet ){
+        style.styleSheet.cssText = cssContent;
+      } else {
+        style.appendChild(document.createTextNode(cssContent));
+      }
+
+      head.appendChild( style );
+
+    }
+
+    Array.from( document.querySelectorAll(".demo__code") ).map(($demoCode)=>{
+
+      $demoCode.addEventListener("blur", function(e){
+
+        var source     = this.textContent;
+        var parser     = new CSSParser();
+        var sheet      = parser.parse(source, false, true);
+        var rand = "__" + Math.floor(Math.random() * 1000000);
+
+        sheet.cssRules.map((cssRule)=>{
+
+          cssRule.mSelectorText = "." + rand + " " + cssRule.mSelectorText;
+
+        });
+
+        var textResult = sheet.cssText()
+        var $demoView = this.previousElementSibling;
+        $demoView.classList.add(rand);
+        injectStylesheet(textResult);
+
+      });
+
+    });
+
+  </script>
 
 </body>
 </html>

@@ -275,6 +275,19 @@
 
 })(window);
 
+
+function removeInjectedStylesheet(){
+
+  var $injectStylesheet = document.querySelector("style#injected_stylesheet");
+
+  if ( $injectStylesheet ){
+
+    $injectStylesheet.remove();
+
+  }
+
+}
+
 var $ = tinyLib;
 
 var doc   = document;
@@ -342,6 +355,7 @@ Item.prototype.navItemElem = function () {
                       );
     // need to fix
     elemContent.elem.onclick = function() {
+      removeInjectedStylesheet();
       navItemCurrent = elemContent;
       setCurrentNavItem();
     };
@@ -420,6 +434,8 @@ Item.prototype.ContentItemElem = function ( ) {
 
 Item.prototype.contentItemTitle = function () {
 
+  if ( !this.dataItem.link ) return;
+
     return $.create('a')
                 .attr({ 
                   'target': '_blank',
@@ -462,8 +478,8 @@ Item.prototype.contentItemInitial = function () {
 //---------------------------------------------
 
 Item.prototype.contentItemDemo = function () {
-    this.demoWrapper = demoWrapper.clone();
 
+    this.demoWrapper = demoWrapper.clone();
     this.demoElem = $.get('.demo', this.demoWrapper);
     this.targetElemSelector = demoElemClasses[ this.dataItem.targetForDemo ];
 
@@ -478,7 +494,7 @@ Item.prototype.contentItemDemo = function () {
 
     this.demoElem.addClass( this.demoClassName );
 
-    if ( this.targetElemSelector.search('featured') > -1 ) {
+    if ( this.targetElemSelector && this.targetElemSelector.search('featured') > -1 ) {
       this.demoElem.addClass( 'demo--has-featured' );
     }
 

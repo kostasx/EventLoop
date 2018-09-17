@@ -15,9 +15,10 @@
 
 		<link rel="stylesheet" href="../libs/reveal.js/css/reveal.css">
 		<link rel="stylesheet" href="../libs/reveal.js/css/theme/black.css" id="theme">
-
+		<link rel="stylesheet" href="../css/bulma-columns.css">
 		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="../libs/reveal.js/lib/css/zenburn.css">
+		<!-- <link rel="stylesheet" href="../libs/reveal.js/lib/css/zenburn.css"> -->
+		<link rel="stylesheet" href="../css/obsidian.min.css">
 
 		<!-- TTS | Custom Root Directory -->
 		<script>var rootDirectory = "../libs/reveal.js/";</script>
@@ -52,10 +53,64 @@
 					<p>
 						<img 
 							style="width:140px; height:94px;" 
-							class="clean_img tts_logo" 
+							class="tts_logo" 
 							src="../img/tts-logo.png" 
 							alt="">
 					</p>
+				</section>
+
+				<!-- What is FlexBox -->
+				<section>
+					<h3>What is FlexBox?</h3>
+					<div class="columns">
+						<div class="column"></div>
+						<div class="column is-8">
+							<p class="small">According to the <a href="https://www.w3.org/TR/css-flexbox-1/"> Specs:</a></p>
+							<p class="small italics">
+
+								A new layout mode, <strong>flex layout</strong>, optimized for user interface design. In the flex layout model, the children of a flex container can be laid out in <strong>any direction</strong>, and can <strong>“flex”</strong> their sizes, either <strong>growing</strong> to fill unused space or <strong>shrinking</strong> to avoid overflowing the parent. 
+
+							</p>
+						</div>
+						<div class="column"></div>
+					</div>
+				</section>
+
+				<!-- FlexBox Axes -->
+				<section data-background="#ffffff">
+					<section>
+						<h3>How does it work?</h3>
+					</section>
+					<section>
+						<p>
+							<img src="../img/flexbox-vocabulary.jpg" alt="">
+						</p>
+					</section>
+					<section>
+						<div class="columns align-items-center">
+							<div class="column is-8">
+								<img src="../img/flexbox-vocabulary.jpg" alt="">
+							</div>
+							<div class="column">
+								<p><strong style="color:black;">display: flex;</strong></p>
+							</div>
+						</div>
+					</section>
+					<section>
+						<img src="../img/flex-axes.png" alt="" />
+						<p>
+							<small class="attribution"><a href="https://tympanus.net/codrops/css_reference/flexbox/">Image: FlexBox by Codrops</a></small>
+						</p>
+					</section>
+					<section>
+						<img src="../img/flex-direction-terms.svg" alt="" />
+						<p>
+							<small class="attribution"><a href="https://www.w3.org/TR/css-flexbox-1/">Image: W3C</a></small>
+						</p>
+					</section>
+					<section>
+						<a target="_blank" href="https://kostasx.github.io/EventLoop/Education/TechTalentSchool/flexbox/flexbox-cheatsheet.html#display">Interactive <strong>Demo</strong> Time</a>
+					</section>
 				</section>
 
 				<!--////// SAMPLES //////-->

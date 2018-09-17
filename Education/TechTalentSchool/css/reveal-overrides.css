@@ -1,4 +1,10 @@
-.reveal section img.clean_img {
+.reveal pre, .reveal code {
+
+	white-space: pre-line;
+
+}
+
+.reveal section img {
 
 	border    : none;
 	background: transparent;
@@ -12,5 +18,36 @@
 	font-family  : 'Roboto', sans-serif;
 	margin-bottom: 0;
 	font-weight  : 100;
+
+}
+
+.reveal p.small {
+
+	font-size: 0.6em;
+
+}
+
+.reveal p.italics {
+
+	font-style: italic;
+
+}
+
+.reveal p strong {
+
+	color: orange;
+
+}
+
+.reveal .columns.align-items-center {
+
+	align-items: center;
+
+}
+
+.reveal small.attribution a {
+
+	font-size: 0.7em;
+	opacity: 0.6;
 
 }
