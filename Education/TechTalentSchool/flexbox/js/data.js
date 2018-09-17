@@ -1,5 +1,6 @@
 var data = [];
 
+// SUBHEADER
 data[data.length] = {
   name: 'flexbox-cheatsheet',
   title: 'FlexBox Cheatsheet',
@@ -7,6 +8,7 @@ data[data.length] = {
   status: 'disabled'
 };
 
+// DISPLAY
 data[data.length] = {
   name: 'display',
 
@@ -44,12 +46,14 @@ data[data.length] = {
   demoBefore: 'Some text'
 };
 
+// ORDERING & ORIENTATION
 data[data.length] = {
   name: 'ordering-orientation',
   title: 'Ordering & Orientation',
   type: 'subheader'
 };
 
+// FLEX DIRECTION
 data[data.length] = {
   name: 'flex-direction',
 
@@ -90,6 +94,7 @@ data[data.length] = {
   }],
 };
 
+// FLEX WRAP
 data[data.length] = {
   name: 'flex-wrap',
 
@@ -134,6 +139,7 @@ data[data.length] = {
   ],
 };
 
+// FLEX FLOW
 data[data.length] = {
   name: 'flex-flow',
 
@@ -179,7 +185,7 @@ data[data.length] = {
   ],
 };
 
-// order
+// ORDER
 data[data.length] = {
   name: 'order',
 
@@ -188,7 +194,7 @@ data[data.length] = {
   targetForDemo: 'flex items',
   appliesTo: 'flex items',
 
-  desc: '<p>The <i>order</i> property controls the order in which children of a flex container appear within the flex container, by assigning them to ordinal groups. It takes a single <dfn ><a href=\'https://www.w3.org/TR/css3-values/#integer-value\'>&lt;integer&gt;</a></dfn> value, which specifies which ordinal group the <i>flex item</i> belongs to.</p><p>A flex container lays out its content in <dfn >order-modified document order</dfn>, starting from the lowest numbered ordinal group and going up. Items with the same ordinal group are laid out in the order they appear in the source document. This also affects the <a href=\'https://www.w3.org/TR/CSS2/zindex.html\'>painting order</a> , exactly as if the flex items were reordered in the source document.</p><p>Unless otherwise specified by a future specification, this property has no effect on boxes that are not children of a <i>flex container</i>.</p>',
+  desc: '<p><strong><a class="interactive_demo" target="_blank" href="https://kostasx.github.io/EventLoop/Education/TechTalentSchool/flexbox/flexbox-order.html">Interactive Demo</a></strong></p><p>The <i>order</i> property controls the order in which children of a flex container appear within the flex container, by assigning them to ordinal groups. It takes a single <dfn ><a href=\'https://www.w3.org/TR/css3-values/#integer-value\'>&lt;integer&gt;</a></dfn> value, which specifies which ordinal group the <i>flex item</i> belongs to.</p><p>A flex container lays out its content in <dfn >order-modified document order</dfn>, starting from the lowest numbered ordinal group and going up. Items with the same ordinal group are laid out in the order they appear in the source document. This also affects the <a href=\'https://www.w3.org/TR/CSS2/zindex.html\'>painting order</a> , exactly as if the flex items were reordered in the source document.</p><p>Unless otherwise specified by a future specification, this property has no effect on boxes that are not children of a <i>flex container</i>.</p>',
 
   initValue: '0',
 

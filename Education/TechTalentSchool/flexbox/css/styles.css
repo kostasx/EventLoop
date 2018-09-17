@@ -533,3 +533,12 @@ MARK {
   opacity: 1
 }
 
+.interactive_demo {
+  color          : orange;
+  text-decoration: none;
+  background     : black;
+  padding        : 10px 20px;
+  font-size      : 1.2em;
+  display        : inline-block;  
+  margin         : 0 0 15px 0;
+}
