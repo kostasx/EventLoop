@@ -310,6 +310,16 @@
 						space-between: items are evenly distributed in the line; first item is on the start line, last item on the end line
 						space-around: items are evenly distributed in the line with equal space around them. Note that visually the spaces aren't equal, since all the items have equal space on both sides. The first item will have one unit of space against the container edge, but two units of space between the next item because that next item has its own spacing that applies.
 						space-evenly: items are distributed so that the spacing between any two items (and the space to the edges) is equal.
+
+						...
+
+						justify-content: flex-start | flex-end | center | space-between | space-around |space-evenly;
+							i. flex-start (default): items are packed toward the start line
+							ii. flex-end: items are packed toward to end line
+							iii. center: items are centered along the line
+							iv. space-between: items are evenly distributed in the line; first item is on the start line, last item on the end line
+							v. space-around: items are evenly distributed in the line with equal space around them. Note that visually the spaces aren’t equal, since all the items have equal space on both sides. The first item will have one unit of space against the container edge, but two units of space between the next item because that next item has its own spacing that applies.
+							vi. space-evenly: items are distributed so that the spacing between any two items (and the space to the edges) is equal.
 					</section>
 					-->
 				</section>
@@ -365,7 +375,16 @@
 						flex-end: cross-end margin edge of the items is placed on the cross-end line
 						center: items are centered in the cross-axis
 						baseline: items are aligned such as their baselines align
-						stretch (default): stretch to fill the container (still respect min-width/max-width)	
+						stretch (default): stretch to fill the container (still respect min-width/max-width)
+
+						...
+
+						align-items: flex-start | flex-end | center | baseline | stretch;
+							i. flex-start: cross-start margin edge of the items is placed on the cross-start line
+							ii. flex-end: cross-end margin edge of the items is placed on the cross-end line
+							iii. center: items are centered in the cross-axis
+							iv. baseline: items are aligned such as their baselines align
+							v. stretch (default): stretch to fill the container (still respect min-width/max-width)
 					</section>
 					-->
 				</section>
@@ -426,9 +445,24 @@
 						space-between: lines evenly distributed; the first line is at the start of the container while the last one is at the end
 						space-around: lines evenly distributed with equal space around each line
 						stretch (default): lines stretch to take up the remaining space
-	
+
+						...
+
+						align-content: flex-start | flex-end | center | space-between | space-around | stretch;
+							i. flex-start: lines packed to the start of the container
+							ii. flex-end: lines packed to the end of the container
+							iii. center: lines packed to the center of the container
+							iv. space-between: lines evenly distributed; the first line is at the start of the container while the last one is at the end
+							v. space-around: lines evenly distributed with equal space around each line
+							vi. stretch (default): lines stretch to take up the remaining space
 					</section>
 					-->
+				</section>
+
+				<!-- FlexBox | align-items vs. align-content -->
+				<section>
+						<p class="highlight">align-items vs. align-content</p>
+						<a target="_blank" href="https://codepen.io/kostasx/pen/ZMyjWJ?editors=0100">Interactive <strong>Demo</strong> Time</a>		
 				</section>
 
 				<!-- FlexBox Children Properties -->
@@ -737,8 +771,10 @@
 				<section style="text-align: left; margin-left: 20px;">
 					<h6>Resources - Part I:</h6>
 					<p style="line-height: 0.9">
+						- <a class="tiny_lnk" target="_blank" href="https://cvan.io/flexboxin5/">FlexBox in 5 Minutes</a> <br>
 						- <a class="tiny_lnk" target="_blank" href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">CSS-Tricks: A Complete Guide to Flexbox</a> <br>
 						- <a class="tiny_lnk" target="_blank" href="https://kostasx.github.io/EventLoop/Education/TechTalentSchool/flexbox/flexbox-cheatsheet.html">FlexBox Cheatsheet</a> <br>
+						- <a class="tiny_lnk" target="_blank" href="http://fullstackwebdeveloper.net/list-of-all-flexbox-layout-properties/">List of all FLEXBOX Layout properties</a> <br>
 						- <a class="tiny_lnk" target="_blank" href="https://www.youtube.com/watch?v=Y8zMYaD1bz0&list=PL4cUxeGkcC9i3FXJSUfmsNOx8E7u6UuhG">CSS FlexBox YouTube Playlist by NetNinja</a> <br>
 						- <a class="tiny_lnk" target="_blank" href="https://www.educative.io/collection/5191711974227968/5741031244955648">UNDERSTANDING FLEXBOX: EVERYTHING YOU NEED TO KNOW</a> <br>
 						- <a class="tiny_lnk" target="_blank" href="https://flexboxfroggy.com/">		FLEXBOX FROGGY</a> <br>
@@ -755,6 +791,7 @@
 				<section style="text-align: left; margin-left: 20px;">
 					<h6>Resources - Part II:</h6>
 					<p style="line-height: 0.9">
+						- <a class="tiny_lnk" target="_blank" href="https://blog.fullstackdigital.com/how-to-create-a-flawless-responsive-post-grid-with-flexbox-e5c7cc9d28e">How to Create a Flawless Responsive Post Grid with Flexbox</a> <br>
 						- <a class="tiny_lnk" target="_blank" href="https://medium.freecodecamp.org/the-complete-illustrated-flexbox-tutorial-d35c085dbf35">The Complete Illustrated Flexbox Tutorial</a> <br>
 						- <a class="tiny_lnk" target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">BASIC CONCEPTS OF FLEXBOX, MDN</a> <br>
 						- <a class="tiny_lnk" target="_blank" href="https://www.educative.io/page/5191711974227968/5754903989321728">THE 4 (PRACTICAL) FLEXBOX TRICKS YOU NEED TO KNOW</a> <br>
