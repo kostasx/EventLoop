@@ -319,7 +319,10 @@ MARK {
   padding: .3rem .7rem;
   border: 0;
   border-radius: 3px;
-  background: #AAA
+  background: #AAA;
+
+  padding: 0.5em 1em;
+  font-size: 1.3em;
 }
 
 .demo-values__control--current {
@@ -356,7 +359,10 @@ MARK {
   background: #DDD;
   border-radius: .75rem;
   white-space: pre;
-  font-family: monospace
+  font-family: monospace;
+
+  flex-grow: 0.65;
+  font-size: 1.5em;
 }
 
 .parent {
@@ -437,7 +443,7 @@ MARK {
   padding: 0 1rem;
   font-size: 1.3rem;
   line-height: 1;
-  font-weight: 200;
+  /* font-weight: 200; */
 }
 
 .nav__item.nav__item--flexbox-cheatsheet h2 {
@@ -467,6 +473,9 @@ MARK {
   margin-left: 2rem;
   padding: 0 1rem;
   text-decoration: none;
+
+  font-size: 1.3em;
+
 }
 
 
@@ -475,6 +484,7 @@ MARK {
     margin-left: 5px;
     opacity: .2;
     transition: opacity 250ms ease;
+    font-size: 0.6em;
 }
 
 .nav__link span:hover {
@@ -522,3 +532,4 @@ MARK {
 .project-link:hover {
   opacity: 1
 }
+

@@ -10,6 +10,8 @@
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<!-- Roboto | Google Web Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
 
 		<link rel="stylesheet" href="../libs/reveal.js/css/reveal.css">
 		<link rel="stylesheet" href="../libs/reveal.js/css/theme/black.css" id="theme">
@@ -27,6 +29,8 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? rootDirectory +'css/print/pdf.css' : rootDirectory + 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+		<link rel="stylesheet" href="../css/reveal-overrides.css">
+		<link rel="stylesheet" href="../css/reveal-tts.css">
 
 	</head>
 
@@ -37,69 +41,24 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 
-				<section>
-					<h1>Reveal.js</h1>
-					<h3>The HTML Presentation Framework</h3>
+				<!-- Introduction -->
+				<section data-i18n>
+					<p class="super_heading">Introduction to</p>
+					<h1>FlexBox</h1>
+					<p class="super_heading">CSS Layouts I</p>
 					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> and <a href="https://github.com/hakimel/reveal.js/graphs/contributors">contributors</a></small>
+						<small>Created by <a href="https://github.com/kostasx">Kostas Minaidis</a></small>
+					</p>
+					<p>
+						<img 
+							style="width:140px; height:94px;" 
+							class="clean_img tts_logo" 
+							src="../img/tts-logo.png" 
+							alt="">
 					</p>
 				</section>
 
-				<section>
-					<h2>Hello There</h2>
-					<p>
-						reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
-					</p>
-				</section>
-
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>Slides can be nested inside of each other.</p>
-						<p>Use the <em>Space</em> key to navigate through all slides.</p>
-						<br>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>That's it, time to go back up.</p>
-						<br>
-						<a href="#/2">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
-
-				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="https://slides.com" target="_blank">https://slides.com</a>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
-				</section>
-
-				<section>
-					<h2>Touch Optimized</h2>
-					<p>
-						Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
-					</p>
-				</section>
+				<!--////// SAMPLES //////-->
 
 				<section data-markdown>
 					<script type="text/template">
@@ -107,15 +66,6 @@
 
 						Write content using inline or external Markdown.
 						Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-
-						```
-						<section data-markdown>
-						  ## Markdown support
-
-						  Write content using inline or external Markdown.
-						  Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
 					</script>
 				</section>
 
@@ -351,24 +301,6 @@ Reveal.addEventListener( 'customevent', function() {
 					</code></pre>
 				</section>
 
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
-					</p>
-				</section>
-
-				<section>
-					<h2>Much more</h2>
-					<ul>
-						<li>Right-to-left support</li>
-						<li><a href="https://github.com/hakimel/reveal.js#api">Extensive JavaScript API</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#auto-sliding">Auto-progression</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#parallax-background">Parallax backgrounds</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#keyboard-bindings">Custom keyboard bindings</a></li>
-					</ul>
-				</section>
-
 				<section style="text-align: left;">
 					<h1>THE END</h1>
 					<p>
@@ -383,6 +315,7 @@ Reveal.addEventListener( 'customevent', function() {
 
 		<script src="../libs/reveal.js/lib/js/head.min.js"></script>	
 		<script src="../libs/reveal.js/js/reveal.js"></script>	
+
 		<script>
 
 			// More info https://github.com/hakimel/reveal.js#configuration

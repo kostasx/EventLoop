@@ -1,0 +1,16 @@
+.reveal section img.clean_img {
+
+	border    : none;
+	background: transparent;
+	margin    : 0;
+	box-shadow: none;
+
+}
+
+.reveal p.super_heading {
+
+	font-family  : 'Roboto', sans-serif;
+	margin-bottom: 0;
+	font-weight  : 100;
+
+}
