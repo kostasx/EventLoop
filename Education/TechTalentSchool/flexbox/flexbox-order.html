@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href='https://fonts.googleapis.com/css?family=Lato:100,300,400,400i,700,900' rel='stylesheet'>
+    <style>* { font-family: 'Lato', sans-serif; }</style>
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+            padding-top: 20px;
+        }
+        .flex-container {
+            border    : 1px solid black;
+            box-sizing: border-box;
+            display   : flex;
+            margin    : 25px auto 0 auto;
+            width     : 1000px;
+        }
+        .flex-item {
+            border    : 1px solid gray;
+            flex-grow : 1;
+            padding   : 25px;
+            box-sizing: border-box;
+            color     : white;
+            font-size : 24px;
+            text-align: center;
+            transition: all 800ms ease;
+        }
+        .flex-item span {
+            outline: none;
+        }
+        .flex-1 {
+            background-color: cornflowerblue;
+        }
+        .flex-2 {
+            background-color: hotpink
+        }
+        .flex-3 {
+            background-color: burlywood
+        }
+        .flex-4 {
+            background-color: limegreen
+        }
+        .spacing {
+            align-items    : center;
+            background     : gray;
+            border         : 1px solid black;
+            box-sizing     : border-box;
+            color          : white;
+            display        : flex;
+            height         : 20px;
+            justify-content: center;
+            padding        : 20px;
+            position       : absolute;
+            width          : 100px;
+            transition: all 800ms ease;
+        }
+        .flex-container-heading {
+            font-size: 32px; 
+        }
+        .flex-container-subheading {
+            margin-top: 20px;
+        }
+        .flex-container-subheading a {
+            font-size: 20px;
+            text-decoration: none;
+            opacity: 0.5; 
+        }
+        .flex-container-subheading a:hover {
+            opacity: 1; 
+        }
+        #reset {
+            padding         : 10px 20px;
+            font-size       : 16px;
+            margin-top      : 20px;
+            background-color: white;
+            cursor          : pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="flex-container-heading">FlexBox | <strong>order</strong></div>
+    <div class="flex-container-subheading">
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items">Ordering Flex Items</a>
+    </div>
+    <div class="flex-container">
+        <div class="flex-item flex-1">Flex Item 1 <br/>( Order: <span contenteditable=true>0</span> )</div>
+        <div class="flex-item flex-2">Flex Item 2 <br/>( Order: <span contenteditable=true>0</span> )</div>
+        <div class="flex-item flex-3">Flex Item 3 <br/>( Order: <span contenteditable=true>0</span> )</div>
+        <div class="flex-item flex-4">Flex Item 4 <br/>( Order: <span contenteditable=true>0</span> )</div>
+    </div>
+    
+    <br/>
+    <button id="reset">Reset Order to Defaults</button>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+
+            let $flexContainer = document.querySelector(".flex-container");
+            let $flex1         = document.querySelector(".flex-1");
+            let $flex2         = document.querySelector(".flex-2");
+            let $flex3         = document.querySelector(".flex-3");
+            let $flex4         = document.querySelector(".flex-4");
+
+            $flex1.querySelector("span").addEventListener("input", function(e) {
+                this.parentElement.style.order = this.textContent;
+            }, false);
+            $flex2.querySelector("span").addEventListener("input", function(e) {
+                this.parentElement.style.order = this.textContent;
+            }, false);
+            $flex3.querySelector("span").addEventListener("input", function(e) {
+                this.parentElement.style.order = this.textContent;
+            }, false);
+            $flex4.querySelector("span").addEventListener("input", function(e) {
+                this.parentElement.style.order = this.textContent;
+            }, false);
+
+            document.querySelector("#reset").addEventListener("click", function(){
+
+                $flex1.style.order = $flex1.querySelector("span").textContent = 0;
+                $flex2.style.order = $flex2.querySelector("span").textContent = 0;
+                $flex3.style.order = $flex3.querySelector("span").textContent = 0;
+                $flex4.style.order = $flex4.querySelector("span").textContent = 0;
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>

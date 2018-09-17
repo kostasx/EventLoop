@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>FlexBox - Understanding Flex Shrink</title>
+	<style>
+		body {  margin: 0; }
+		.app {
+		    width: 100%;
+		    height: 100vh;
+		    display: flex;
+		    flex-direction: column;
+		}
+		.header, .footer {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.header {
+		    height: 50px;
+		    width: 100%;
+		    background: orchid;
+		    /*flex-shrink: 0;*/
+		}
+		.main {
+		    display: block; 
+		    flex-grow: 1;
+		    /*overflow: auto;*/
+		    padding: 0 20px;
+		}
+		.footer {
+		    width: 100%;
+		    height: 50px;
+		    background: coral;
+		    /*flex-shrink: 0;*/
+		}		
+	</style>
+</head>
+
+	<body class="app">
+
+		<!-- Showcase: flex-direction: column; flex inside flex; flex centering on all axes; flex-shrink; overflow: auto; order: 0; (Re-order flex items) -->
+		<!-- 0) Create Content and note the centering of the Header/Footer elements -->
+		<!-- 1) Show Header/Footer shrinking problem in mobile due to flex-shrink: 1 default -->
+		<!-- 2) Fix Overflow of .main with overflow: auto -->
+		<!-- 3) Fix Header/Footer with flex-shrink: 0 -->
+
+	    <header class="header">MENU</header>
+
+	    <main class="main">
+	        <h1>Cupcake ipsum dolor sit amet</h1>
+	        <p>Fruitcake macaroon candy canes marshmallow gummi bears biscuit I love dessert. Oat cake sugar plum marzipan gummi bears marshmallow I love brownie jelly bonbon. Sweet roll apple pie wafer fruitcake. Gummi bears lemon drops sesame snaps. Biscuit tiramisu sugar plum. Carrot cake pastry cupcake tootsie roll chocolate jujubes. Pudding muffin sweet. Cheesecake candy canes wafer gingerbread sweet.</p>
+	        <p>Liquorice candy canes cake. Gummies wafer tart topping pastry soufflé I love pie. Cake cookie croissant cupcake chocolate cake. Liquorice jelly beans pudding sugar plum biscuit fruitcake. Soufflé tootsie roll macaroon pudding. Chocolate cake cake sesame snaps sugar plum biscuit I love croissant icing. Caramels jelly dessert candy bonbon bear claw chocolate bar cheesecake icing. Toffee I love cake gingerbread jelly-o tootsie roll. Sesame snaps pie cupcake sweet. Croissant danish brownie gummies lollipop chupa chups gummies danish.</p>
+	        <p>Chupa chups pudding topping caramels pie. Tart jujubes ice cream muffin sugar plum. Soufflé candy canes I love lollipop pastry brownie danish apple pie. Apple pie chupa chups biscuit chocolate bar I love muffin I love. Caramels cupcake I love sugar plum icing candy canes I love macaroon. Marzipan danish cheesecake marshmallow jelly. Jelly-o sugar plum liquorice donut I love pastry candy donut. I love gummi bears chocolate.</p>
+	        <p>Gingerbread toffee pastry gingerbread I love toffee. Biscuit jelly wafer I love cheesecake candy canes chocolate cake. I love cake I love cotton candy muffin oat cake I love I love. I love bonbon macaroon toffee powder chupa chups cotton candy tootsie roll chocolate. Croissant dessert chocolate bar. Apple pie I love croissant sugar plum cotton candy I love. Candy canes jelly I love. Jelly beans cupcake brownie pudding lemon drops</p>
+	        <p>Cheesecake macaroon toffee sesame snaps cotton candy cotton candy I love. Cake sugar plum sweet marshmallow I love. Soufflé liquorice ice cream candy canes I love tootsie roll marzipan biscuit jelly. I love I love tiramisu donut. I love bear claw pastry toffee. Cheesecake apple pie bonbon bear claw jelly-o topping tootsie roll chocolate bar. Cake bonbon toffee donut macaroon chocolate lemon drops gummies gummies. Jelly beans chocolate bar cotton candy halvah fruitcake.</p>
+	    </main>
+
+	    <footer class="footer">FOOTER</footer>
+
+	</body>
+
+</html>

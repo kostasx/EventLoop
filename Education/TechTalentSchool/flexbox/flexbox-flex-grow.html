@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href='https://fonts.googleapis.com/css?family=Lato:100,300,400,400i,700,900' rel='stylesheet'>
+    <style>* { font-family: 'Lato', sans-serif; }</style>
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+            padding-top: 20px;
+        }
+        .flex-container {
+            border    : 1px solid black;
+            box-sizing: border-box;
+            display   : flex;
+            flex-wrap : wrap;
+            margin    : 25px auto 0 auto;
+            width     : 1000px;
+        }
+        .flex-item {
+            border: 1px solid gray;
+            DISABLEDflex-grow: 1;
+            padding: 25px;
+            box-sizing: border-box;
+            color: white;
+            text-align: center;
+            transition: all 800ms ease;
+        }
+        .flex-item-width .flex-item {
+            border-top: none;
+            padding: 5px 25px;
+            color: black;
+        }
+        .flex-1 {
+            background-color: cornflowerblue;
+        }
+        .flex-2 {
+            background-color: hotpink
+        }
+        .flex-3 {
+            background-color: burlywood
+        }
+        .flex-4 {
+            background-color: limegreen
+        }
+        .flex-grow-controls {
+            display: table;
+            border: 1px solid black;
+            padding: 15px;
+            margin: 50px auto;
+        }
+        input {
+            margin-left: 20px;
+        }
+        .spacing {
+            align-items    : center;
+            background     : gray;
+            border         : 1px solid black;
+            box-sizing     : border-box;
+            color          : white;
+            display        : flex;
+            height         : 20px;
+            justify-content: center;
+            padding        : 20px;
+            position       : absolute;
+            width          : 100px;
+            transition: all 800ms ease;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="flex-container-width">1000px</div>
+    <div class="flex-container">
+        <div class="flex-item flex-1">Flex Item 1 <span>(250px)</span></div>
+        <div class="flex-item flex-2">Flex Item 2 <span>(250px)</span></div>
+        <div class="flex-item flex-3">Flex Item 3 <span>(250px)</span></div>
+        <div class="flex-item flex-4">Flex Item 4 <span>(250px)</span></div>
+    </div>
+    <div class="spacing">266px</div>
+    
+    <br />
+
+    <div class="flex-grow-controls">
+        <label for="flex-grow">Flex Grow: <span>00</span></label>
+        <input type="range" name="flex-grow" id="flex-grow" min="0" max="10" value="0">
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+
+            // let getRect = (el)=> Element.prototype.getBoundingClientRect.call(el);
+
+            let $flexContainer = document.querySelector(".flex-container");
+            let $flex1         = document.querySelector(".flex-1");
+            let $flex2         = document.querySelector(".flex-2");
+            let $flex3         = document.querySelector(".flex-3");
+            let $flex4         = document.querySelector(".flex-4");
+            let $spacing       = document.querySelector(".spacing");
+
+            $flex1.querySelector("span").textContent = "(" + Math.round($flex1.getBoundingClientRect().width) + "px)"; 
+            $flex2.querySelector("span").textContent = "(" + Math.round($flex2.getBoundingClientRect().width) + "px)"; 
+            $flex3.querySelector("span").textContent = "(" + Math.round($flex3.getBoundingClientRect().width) + "px)"; 
+            $flex4.querySelector("span").textContent = "(" + Math.round($flex4.getBoundingClientRect().width) + "px)"; 
+
+            $spacing.style.left = $flex4.getBoundingClientRect().right + "px";
+            $spacing.style.width = $flexContainer.getBoundingClientRect().right - $flex4.getBoundingClientRect().right + "px";
+            $spacing.textContent = Math.round($spacing.getBoundingClientRect().width) + "px";
+            window.poop = $spacing;
+
+            document.getElementById("flex-grow").addEventListener("input",function(){
+
+                $flex1.style.flexGrow = this.value;
+                document.querySelector("label span").textContent = ( this.value.length > 1 ) ? this.value : "0" + this.value;
+
+            });
+
+            $flex1.addEventListener("transitionend", function(e) {
+
+                $flex2.querySelector("span").textContent = "(" + Math.round( $flex2.getBoundingClientRect().width ) + "px)";
+                $flex3.querySelector("span").textContent = "(" + Math.round( $flex3.getBoundingClientRect().width ) + "px)";
+                $flex4.querySelector("span").textContent = "(" + Math.round( $flex4.getBoundingClientRect().width ) + "px)";
+
+                $flex1.querySelector("span").textContent = "(" + Math.round($flex1.getBoundingClientRect().width) + "px)";
+                $spacing.textContent = Math.round($flex1.getBoundingClientRect().width) + "px";
+                $spacing.style.left  = $flex1.getBoundingClientRect().x + "px";
+                $spacing.style.width = $flex1.getBoundingClientRect().width + "px";
+
+            }, false);
+
+        });
+
+    </script>
+
+</body>
+</html>
