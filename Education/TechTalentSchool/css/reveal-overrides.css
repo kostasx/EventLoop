@@ -33,6 +33,7 @@
 
 }
 
+.reveal .highlight,
 .reveal p strong {
 
 	color: orange;
@@ -50,4 +51,12 @@
 	font-size: 0.7em;
 	opacity: 0.6;
 
+}
+
+.reveal sup {
+
+    vertical-align: super;
+    font-size: 0.6em;
+
+}	
 }

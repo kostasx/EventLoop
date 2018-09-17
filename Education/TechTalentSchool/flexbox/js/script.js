@@ -695,6 +695,10 @@ function DemoControl( parentObj, value ) {
                     .attr({'name': valName});
 
     this.elemSet.elem.onclick = function( ) {
+
+        removeInjectedStylesheet();
+        console.log("Reseting...");
+
         parentObj.currentValue = this.innerHTML;
         parentObj.contentItemChangeCSSProp();
 

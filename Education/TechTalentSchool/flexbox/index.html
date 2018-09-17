@@ -83,13 +83,13 @@
 					</section>
 					<section>
 						<p>
-							<img src="../img/flexbox-vocabulary.jpg" alt="">
+							<img src="./img/flexbox-vocabulary.jpg" alt="">
 						</p>
 					</section>
 					<section>
 						<div class="columns align-items-center">
 							<div class="column is-8">
-								<img src="../img/flexbox-vocabulary.jpg" alt="">
+								<img src="./img/flexbox-vocabulary.jpg" alt="">
 							</div>
 							<div class="column">
 								<p><strong style="color:black;">display: flex;</strong></p>
@@ -97,32 +97,338 @@
 						</div>
 					</section>
 					<section>
-						<img src="../img/flex-axes.png" alt="" />
+						<img src="./img/flex-axes.png" alt="" />
 						<p>
 							<small class="attribution"><a href="https://tympanus.net/codrops/css_reference/flexbox/">Image: FlexBox by Codrops</a></small>
 						</p>
 					</section>
 					<section>
-						<img src="../img/flex-direction-terms.svg" alt="" />
+						<img src="./img/flex-direction-terms.svg" alt="" />
 						<p>
 							<small class="attribution"><a href="https://www.w3.org/TR/css-flexbox-1/">Image: W3C</a></small>
 						</p>
+					</section>
+				</section>
+
+				<!-- FlexBox | diplay -->
+				<section>
+					<section>
+						<small>FlexBox Container/Parent Properties</small>
+						<p class="highlight">display</p>
+						<div class="columns">
+							<div class="column"></div>
+							<div class="column is-8">
+								<small>This defines a flex container; inline or block depending on the given value. It enables a flex context for all its direct children.</small>	
+								<pre><code>
+									.container { display: flex; }
+									.container { display: inline-flex; }
+
+								</code></pre>
+							</div>
+							<div class="column"></div>
+						</div>
+						<p>
+							<small class="attribution"><a target="_blank" href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-2">Source: A Complete Guide to FlexBox</a></small>
+						</p>
+
 					</section>
 					<section>
 						<a target="_blank" href="https://kostasx.github.io/EventLoop/Education/TechTalentSchool/flexbox/flexbox-cheatsheet.html#display">Interactive <strong>Demo</strong> Time</a>
 					</section>
 				</section>
 
-				<!--////// SAMPLES //////-->
+				<!-- FlexBox | flex-direction -->
+				<section>
+					<section>
+						<small>FlexBox Container/Parent Properties</small>
+						<p class="highlight">flex-direction</p>
+						<img src="img/flex-direction2.svg" alt="">
+					</section>
+					<section>
+						<p class="highlight">flex-direction</p>
+						<div class="columns">
+							<div class="column"></div>
+							<div class="column is-8">
+								<small>This establishes the main-axis, thus defining the direction flex items are placed in the flex container. Flexbox is (aside from optional wrapping) a single-direction layout concept. Think of flex items as primarily laying out either in horizontal rows or vertical.</small>	
+								<pre><code>
+								.container {
+								   flex-direction: row;
+								   flex-direction: row-reverse;
+								   flex-direction: column;
+								   flex-direction: column-reverse;
+								}
 
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
+								</code></pre>
+							</div>
+							<div class="column"></div>
 
-						Write content using inline or external Markdown.
-						Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-					</script>
+						</div>
+						<p>
+							<small class="attribution"><a target="_blank" href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-3">Source: A Complete Guide to FlexBox</a></small>
+						</p>
+					</section>
+					<section>
+						<a target="_blank" href="https://kostasx.github.io/EventLoop/Education/TechTalentSchool/flexbox/flexbox-cheatsheet.html#flex-direction">Interactive <strong>Demo</strong> Time</a>
+					</section>
+					<!-- PROPERTIES
+					<section>
+						row (default): left to right in ltr; right to left in rtl
+						row-reverse: right to left in ltr; left to right in rtl
+						column: same as row but top to bottom
+						column-reverse: same as row-reverse but bottom to top
+					</section>
+					-->
 				</section>
+
+				<!-- FlexBox | flex-wrap -->
+				<section>
+					<section>
+						<small>FlexBox Container/Parent Properties</small>
+						<p class="highlight">flex-wrap</p>
+						<img src="img/flex-wrap.svg" alt="">
+					</section>
+					<section>
+						<p class="highlight">flex-wrap</p>
+						<div class="columns">
+							<div class="column"></div>
+							<div class="column is-8">
+								<small>By default, flex items will all try to fit onto one line. You can change that and allow the items to wrap as needed with this property.</small>	
+								<pre><code>
+								.container{ flex-wrap: nowrap; }
+								.container{ flex-wrap: wrap; }
+								.container{ flex-wrap: wrap-reverse; }
+
+								</code></pre>
+							</div>
+							<div class="column"></div>
+
+						</div>
+						<p>
+							<small class="attribution"><a target="_blank" href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-4">Source: A Complete Guide to FlexBox</a></small>
+						</p>
+					</section>
+					<section>
+						<a target="_blank" href="https://kostasx.github.io/EventLoop/Education/TechTalentSchool/flexbox/flexbox-cheatsheet.html#flex-wrap">Interactive <strong>Demo</strong> Time</a>
+					</section>
+					<!-- PROPERTIES
+					<section>
+						nowrap (default): all flex items will be on one line
+						wrap: flex items will wrap onto multiple lines, from top to bottom.
+						wrap-reverse: flex items will wrap onto multiple lines from bottom to top.
+					</section>
+					-->
+				</section>
+
+				<!-- FlexBox | flex-flow -->
+				<section>
+					<section>
+						<small>FlexBox Container/Parent Properties</small>
+						<p class="highlight">flex-flow</p>
+						<div class="columns">
+							<div class="column"></div>
+							<div class="column is-8">
+								<small>This is a shorthand flex-direction and flex-wrap properties, which together define the flex container's main and cross axes. Default is row nowrap.</small>	
+								<pre><code>
+								.container { 
+
+								  flex-flow: &lt;flex-direction&gt; &lt;flex-wrap&gt;; 
+								}
+								</code></pre>
+							</div>
+							<div class="column"></div>
+
+						</div>
+						<p>
+							<small class="attribution"><a target="_blank" href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-5">Source: A Complete Guide to FlexBox</a></small>
+						</p>
+					</section>
+					<section>
+						<a target="_blank" href="https://codepen.io/kostasx/pen/oPaYOo?editors=0100">Interactive <strong>Demo</strong> Time</a>
+					</section>
+					<!-- PROPERTIES
+					<section>
+						nowrap (default): all flex items will be on one line
+						wrap: flex items will wrap onto multiple lines, from top to bottom.
+						wrap-reverse: flex items will wrap onto multiple lines from bottom to top.
+					</section>
+					-->
+				</section>
+
+				<!-- FlexBox | justify-content -->
+				<section>
+					<section>
+						<small>FlexBox Container/Parent Properties</small>
+						<p class="highlight">justify-content</p>
+						<div class="columns">
+							<div class="column"></div>
+							<div class="column">
+								<img src="img/justify-content-2.svg" alt="">
+							</div>
+							<div class="column"></div>
+						</div>
+					</section>
+					<section>
+						<p class="highlight">justify-content</p>
+						<div class="columns">
+							<div class="column"></div>
+							<div class="column is-8">
+								<small>This defines the alignment along the main axis. It helps distribute extra free space left over when either all the flex items on a line are inflexible, or are flexible but have reached their maximum size. It also exerts some control over the alignment of items when they overflow the line.</small>	
+							</div>
+							<div class="column"></div>
+						</div>
+						<div class="columns">
+							<div class="column"></div>
+							<div class="column is-10">
+								<pre><code>
+								.container { justify-content: flex-start; }
+								.container { justify-content: flex-end; }
+								.container { justify-content: center; }
+								.container { justify-content: space-between; }
+								.container { justify-content: space-around; }
+								.container { justify-content: space-evenly; }
+
+								</code></pre>
+							</div>
+							<div class="column"></div>
+
+						</div>
+						<p>
+							<small class="attribution"><a target="_blank" href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-6">Source: A Complete Guide to FlexBox</a></small>
+						</p>
+					</section>
+					<section>
+						<a target="_blank" href="https://kostasx.github.io/EventLoop/Education/TechTalentSchool/flexbox/flexbox-cheatsheet.html#justify-content">Interactive <strong>Demo</strong> Time</a>
+					</section>
+					<!-- PROPERTIES
+					<section>
+						flex-start (default): items are packed toward the start line
+						flex-end: items are packed toward to end line
+						center: items are centered along the line
+						space-between: items are evenly distributed in the line; first item is on the start line, last item on the end line
+						space-around: items are evenly distributed in the line with equal space around them. Note that visually the spaces aren't equal, since all the items have equal space on both sides. The first item will have one unit of space against the container edge, but two units of space between the next item because that next item has its own spacing that applies.
+						space-evenly: items are distributed so that the spacing between any two items (and the space to the edges) is equal.
+					</section>
+					-->
+				</section>
+
+				<!-- FlexBox | align-items -->
+				<section>
+					<section>
+						<small>FlexBox Container/Parent Properties</small>
+						<p class="highlight">align-items</p>
+						<div class="columns">
+							<div class="column"></div>
+							<div class="column">
+								<img src="img/align-items.svg" alt="">
+							</div>
+							<div class="column"></div>
+						</div>
+					</section>
+					<section>
+						<p class="highlight">align-items</p>
+						<div class="columns">
+							<div class="column"></div>
+							<div class="column is-8">
+								<small>This defines the default behaviour for how flex items are laid out along the cross axis on the current line. Think of it as the justify-content version for the cross-axis (perpendicular to the main-axis).</small>	
+							</div>
+							<div class="column"></div>
+						</div>
+						<div class="columns">
+							<div class="column"></div>
+							<div class="column is-10">
+								<pre><code>
+
+								.container { align-items: flex-start; }
+								.container { align-items: flex-end; }
+								.container { align-items: center; }
+								.container { align-items: baseline; }
+								.container { align-items: stretch; }
+
+								</code></pre>
+							</div>
+							<div class="column"></div>
+
+						</div>
+						<p>
+							<small class="attribution"><a target="_blank" href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-7">Source: A Complete Guide to FlexBox</a></small>
+						</p>
+					</section>
+					<section>
+						<a target="_blank" href="https://kostasx.github.io/EventLoop/Education/TechTalentSchool/flexbox/flexbox-cheatsheet.html#align-items">Interactive <strong>Demo</strong> Time</a>
+					</section>
+					<!-- PROPERTIES
+					<section>
+						flex-start: cross-start margin edge of the items is placed on the cross-start line
+						flex-end: cross-end margin edge of the items is placed on the cross-end line
+						center: items are centered in the cross-axis
+						baseline: items are aligned such as their baselines align
+						stretch (default): stretch to fill the container (still respect min-width/max-width)	
+					</section>
+					-->
+				</section>
+
+				<!-- FlexBox | align-content -->
+				<section>
+					<section>
+						<small>FlexBox Container/Parent Properties</small>
+						<p class="highlight">align-content</p>
+						<div class="columns">
+							<div class="column"></div>
+							<div class="column">
+								<img src="img/align-content.svg" alt="">
+							</div>
+							<div class="column"></div>
+						</div>
+					</section>
+					<section>
+						<p class="highlight">align-content</p>
+						<div class="columns">
+							<div class="column"></div>
+							<div class="column is-8">
+								<small>TThis aligns a flex container's lines within when there is extra space in the cross-axis, similar to how justify-content aligns individual items within the main-axis.</small>
+								<small><strong>Note:</strong> this property has no effect when there is only one line of flex items.</small>	
+							</div>
+							<div class="column"></div>
+						</div>
+						<div class="columns">
+							<div class="column"></div>
+							<div class="column is-10">
+								<pre><code>
+
+									.container { align-content: flex-start; }
+									.container { align-content: flex-end; }
+									.container { align-content: center; }
+									.container { align-content: space-between; }
+									.container { align-content: space-around; }
+									.container { align-content: stretch; }
+
+								</code></pre>
+							</div>
+							<div class="column"></div>
+
+						</div>
+						<p>
+							<small class="attribution"><a target="_blank" href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-8">Source: A Complete Guide to FlexBox</a></small>
+						</p>
+					</section>
+					<section>
+						<a target="_blank" href="https://kostasx.github.io/EventLoop/Education/TechTalentSchool/flexbox/flexbox-cheatsheet.html#align-items">Interactive <strong>Demo</strong> Time</a>
+					</section>
+					<!-- PROPERTIES
+					<section>
+
+						flex-start: lines packed to the start of the container
+						flex-end: lines packed to the end of the container
+						center: lines packed to the center of the container
+						space-between: lines evenly distributed; the first line is at the start of the container while the last one is at the end
+						space-around: lines evenly distributed with equal space around each line
+						stretch (default): lines stretch to take up the remaining space
+	
+					</section>
+					-->
+				</section>
+
+				<!--////// SAMPLES //////-->
 
 				<section>
 					<section id="fragments">
@@ -228,27 +534,6 @@
 						You can override background transitions per-slide.
 					</p>
 					<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
-				</section>
-
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code class="hljs" data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
-}
-					</code></pre>
-					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
 				</section>
 
 				<section>
