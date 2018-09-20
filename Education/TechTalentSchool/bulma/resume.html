@@ -6,6 +6,23 @@
   <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
   <style>
     * { font-family: 'Poppins', sans-serif; }
+    .intro {
+    	height: 100vh;
+    }
+    .intro-text {
+    	display: flex;
+    	justify-content: center;
+    	align-items: center;
+    	flex-direction: column;
+    }
+    .intro h1 {
+    	font-size: 5em;
+    	font-weight: 800;
+    }
+    .intro h2 {
+    	font-size: 4.5em;
+    	font-weight: 200;
+    }
     .has-portrait { 
     	background: url('img/tanja-heffner-431533-unsplash.jpg');
     	background-size: cover;
@@ -77,20 +94,16 @@
 </head>
 <body></body>
 <!-- INTRO-->
-<section class="hero is-fullheight">
-  <div class="hero-body is-paddingless">
-    <div class="container is-marginless">
-      <div class="columns" style="width:100vw;">
-        <div class="column has-portrait"></div>
-        <div class="column has-background-black has-text-white has-text-centered" style="display:flex;justify-content:center;align-items:center;flex-direction:column;">
-          <div class="has-text-left">
-            <h1 class="title has-text-white" style="font-size:5em;font-weight:800;">Roberta</h1>
-            <h2 class="subtitle has-text-white" style="font-size:4.5em;font-weight:200;">Rodriguez</h2>
-            <p class="is-size-5">
-               Experienced <strong class="has-text-white">Web Developer </strong></p><br>
-            <p class="socials"><span class="fa-stack"><i class="fas fa-circle fa-stack-2x" style="color:#3b5998;"></i><i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i></span><span class="fa-stack"><i class="fas fa-circle fa-stack-2x" style="color:#1da1f2;"></i><i class="fab fa-twitter fa-stack-1x fa-inverse"></i></span><span class="fa-stack"><i class="fas fa-circle fa-stack-2x" style="color:0077b5;"></i><i class="fab fa-linkedin fa-stack-1x fa-inverse"></i></span></p>
-          </div>
-        </div>
+<section class="intro">
+  <div class="columns is-marginless">
+    <div class="column has-portrait"></div>
+    <div class="column has-background-black has-text-white has-text-centered intro-text">
+      <div class="has-text-left">
+        <h1 class="title has-text-white">Roberta</h1>
+        <h2 class="subtitle has-text-white">Rodriguez</h2>
+        <p class="is-size-5">
+           Experienced <strong class="has-text-white">Web Developer </strong></p><br>
+        <p class="socials"><span class="fa-stack"><i class="fas fa-circle fa-stack-2x" style="color:#3b5998;"></i><i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i></span><span class="fa-stack"><i class="fas fa-circle fa-stack-2x" style="color:#1da1f2;"></i><i class="fab fa-twitter fa-stack-1x fa-inverse"></i></span><span class="fa-stack"><i class="fas fa-circle fa-stack-2x" style="color:0077b5;"></i><i class="fab fa-linkedin fa-stack-1x fa-inverse"></i></span></p>
       </div>
     </div>
   </div>
@@ -286,6 +299,7 @@
     </div>
   </div>
 </section>
+<!-- FOOTER-->
 <section class="footer has-background-black has-text-centered has-text-white">
   <p>Made with <i class="fa fa-heart has-text-danger"></i> at the <strong class="has-text-white">TechTalentSchool</strong></p>
 </section>

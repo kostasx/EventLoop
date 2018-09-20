@@ -6,6 +6,23 @@ head
 	script(defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js")
 	style.
 		* { font-family: 'Poppins', sans-serif; }
+		.intro {
+			height: 100vh;
+		}
+		.intro-text {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+		}
+		.intro h1 {
+			font-size: 5em;
+			font-weight: 800;
+		}
+		.intro h2 {
+			font-size: 4.5em;
+			font-weight: 200;
+		}
 		.has-portrait { 
 			background: url('img/tanja-heffner-431533-unsplash.jpg');
 			background-size: cover;
@@ -76,29 +93,27 @@ head
 body
 
 // INTRO
-section.hero.is-fullheight
-	.hero-body.is-paddingless
-		.container.is-marginless
-			.columns(style={ width: "100vw" })
-				.column.has-portrait
-				.column.has-background-black.has-text-white.has-text-centered(style={ "display": "flex", "justify-content": "center", "align-items": "center", "flex-direction" : "column" })
-					div.has-text-left
-						h1.title.has-text-white(style={ "font-size" : "5em", "font-weight" : "800"}) Roberta
-						h2.subtitle.has-text-white(style={ "font-size" : "4.5em", "font-weight" : "200" }) Rodriguez
-						p.is-size-5 
-							| Experienced 
-							strong.has-text-white Web Developer 
-						br
-						p.socials
-							span.fa-stack
-								i.fas.fa-circle.fa-stack-2x(style={ "color" : "#3b5998" })
-								i.fab.fa-facebook-f.fa-stack-1x.fa-inverse
-							span.fa-stack
-								i.fas.fa-circle.fa-stack-2x(style={ "color" : "#1da1f2" })
-								i.fab.fa-twitter.fa-stack-1x.fa-inverse
-							span.fa-stack
-								i.fas.fa-circle.fa-stack-2x(style={ "color" : "0077b5" })
-								i.fab.fa-linkedin.fa-stack-1x.fa-inverse
+section.intro
+	.columns.is-marginless
+		.column.has-portrait
+		.column.has-background-black.has-text-white.has-text-centered.intro-text
+			div.has-text-left
+				h1.title.has-text-white Roberta
+				h2.subtitle.has-text-white Rodriguez
+				p.is-size-5 
+					| Experienced 
+					strong.has-text-white Web Developer 
+				br
+				p.socials
+					span.fa-stack
+						i.fas.fa-circle.fa-stack-2x(style={ "color" : "#3b5998" })
+						i.fab.fa-facebook-f.fa-stack-1x.fa-inverse
+					span.fa-stack
+						i.fas.fa-circle.fa-stack-2x(style={ "color" : "#1da1f2" })
+						i.fab.fa-twitter.fa-stack-1x.fa-inverse
+					span.fa-stack
+						i.fas.fa-circle.fa-stack-2x(style={ "color" : "0077b5" })
+						i.fab.fa-linkedin.fa-stack-1x.fa-inverse
 
 // ENTRY
 section.resume-entry
@@ -306,5 +321,7 @@ section.contact.has-background-white-bis.has-text-centered
 				.column.is-10
 					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50310.6040190311!2d23.703234153489003!3d37.990831982893866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bd1f067043f1%3A0x2736354576668ddd!2sAthens!5e0!3m2!1sen!2sgr!4v1537437141209" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 
+// FOOTER
 section.footer.has-background-black.has-text-centered.has-text-white
+
 	p Made with <i class="fa fa-heart has-text-danger"></i> at the <strong class="has-text-white">TechTalentSchool</strong>
