@@ -1,0 +1,147 @@
+* {
+	font-family: 'Poppins', sans-serif;
+}
+
+.hidden {
+
+	display: none;
+
+}
+
+section.intro {
+
+	height: 100vh;
+
+}
+
+.intro-text {
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.intro h1 {
+
+	font-size: 5em;
+
+}
+
+.intro h2 {
+
+	font-size: 4.5em;
+
+}
+
+.portrait {
+
+	min-height: 100vh;
+	background-image: url(img/tanja-heffner-431533-unsplash.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+
+}
+
+.socials span {
+
+	margin-right: 10px;
+
+}
+
+section.about {
+
+	background-image: url(img/rsz_georgie-cobbs-467923-unsplash.jpg);
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-color: #ffd348;
+
+}
+
+.about-me {
+
+	padding: 100px;
+
+}
+
+section.jobs {
+
+	padding: 100px;
+
+}
+
+.divider {
+
+	border-left: 2px solid #bbb;
+	height     : 60px;
+	margin-top : -20px;	
+
+}
+
+.languages {
+
+	padding: 100px;
+
+}
+
+.languages h3 {
+
+	margin-bottom: 80px !important;
+
+}
+
+.languages li {
+
+	margin-bottom: 20px;
+}
+
+.cup {
+
+	background-image: url(img/cup.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 416px;
+}
+
+.clients {
+
+	padding: 60px;
+
+}
+
+.clients h3 {
+
+	margin-bottom: 60px !important;
+
+}
+
+.clients img {
+
+	filter: grayscale(100%);
+	transition: all 500ms ease;
+
+}
+
+.clients img:hover {
+
+	filter: grayscale(0%);
+
+}
+
+section.contact {
+
+	height: 100vh;
+	padding: 80px;
+	background-image: url(img-recreate/wov.png);
+}
+
+.contact h3 {
+
+	margin-bottom: 80px !important;
+
+}
+
+.love {
+	padding: 20px;
+}
