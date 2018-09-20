@@ -1,0 +1,122 @@
+doctype html
+head
+  meta(charset='utf-8')
+  title Bulma | EventLoop | TechTalentSchool 2018
+  meta(name='description' content='')
+  meta(name='author' content='KostasX')
+  meta(name='apple-mobile-web-app-capable' content='yes')
+  meta(name='apple-mobile-web-app-status-bar-style' content='black-translucent')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+  // Roboto | Google Web Fonts
+  link(href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900' rel='stylesheet')
+  link(rel='stylesheet' href='../libs/reveal.js/css/reveal.css')
+  link#theme(rel='stylesheet' href='../libs/reveal.js/css/theme/black.css')
+  link(rel='stylesheet' href='../css/bulma-columns.css')
+  // Theme used for syntax highlighting of code
+  // <link rel="stylesheet" href="../libs/reveal.js/lib/css/zenburn.css">
+  link(rel='stylesheet' href='../css/obsidian.min.css')
+  // TTS | Custom Root Directory
+  script.
+    var rootDirectory = "../libs/reveal.js/";
+  // Printing and PDF exports
+  script.
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? rootDirectory +'css/print/pdf.css' : rootDirectory + 'css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  link(rel='stylesheet' href='../css/reveal-overrides.css')
+  link(rel='stylesheet' href='../css/reveal-tts.css')
+body
+  .reveal
+    // Any section element inside of this container is displayed as a slide
+    .slides
+
+      // Introduction
+      section(data-i18n='')
+        p.super_heading Introduction to the
+        h2 Bulma Framework
+        p.super_heading CSS Frameworks
+        p
+          small
+            | Created by 
+            a(href='https://github.com/kostasx') Kostas Minaidis
+        p
+          img.tts_logo(style='width:140px; height:94px;' src='../img/tts-logo.png' alt='')
+
+      // What is Bulma
+      section
+        section
+          h3 What is Bulma?
+          .columns
+            .column.is-8.is-offset-2
+              p.small.fragment
+                | According to the 
+                a(href='https://bulma.io/') Official site:
+              p.small.italics.fragment
+                | Bulma is an open source CSS framework based on Flexbox and used by more than 100,000 developers. 
+              p.small.fragment
+                | Bulma is:
+                ul.small
+                  li.fragment Easy to learn
+                  li.fragment Quick to start with (only 1 file needed)
+                  li.fragment Can be customized (it is based on SASS)
+                  li.fragment There is no JavaScript required.
+        section
+          .columns
+            .column.is-8.is-offset-2
+              p.small
+                | Bulma is simply a collection of CSS classes to help you write the HTML you want, without ever leaving the markup file.
+              p.small.fragment
+                | By using descriptive and easy to memorize CSS classes, Bulma is equally easy to write and read. One can simply go through the HTML file and easily visualize the page styling by reading the CSS classes applied to the page elements and sections.
+              p.small.fragment
+                | It is extremely efficient in prototyping and quickly building page layouts and web interfaces. It is also, a lightweight CSS library and the size can be trimmed down using modularization.  
+
+      section(data-background="coral")
+        h3 DEMO TIME!
+
+      // RESPONSIVE
+      section
+        h3 RESPONSIVE BREAKPOINTS
+        p.small mobile    : (max-width: 768px)
+        p.small tablet    : (min-width: 769px)
+        p.small touch     : (max-width: 1087px)
+        p.small desktop   : (min-width: 1088px)
+        p.small widescreen: (min-width: 1280px)
+        p.small fullhd    : (min-width: 1472px)
+
+      // An Overview of Bulma | Column Grid
+      section
+        p WiP
+
+      // Get Started
+      // https://bulma.io/documentation/overview/start/
+
+      // RESOURCES
+      section(style='text-align: left; margin-left: 20px;')
+        h6 Resources:
+        p(style='line-height: 0.9')
+          | - 
+          a.tiny_lnk(target='_blank' href='https://bulma.io') Official Site
+
+  script(src='../libs/reveal.js/lib/js/head.min.js')
+  script(src='../libs/reveal.js/js/reveal.js')
+  script.
+    // More info https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    transition: 'slide', // none/fade/slide/convex/concave/zoom
+    // More info https://github.com/hakimel/reveal.js#dependencies
+    dependencies: [
+    { src: rootDirectory + 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+    { src: rootDirectory + 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: rootDirectory + 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: rootDirectory + 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+    { src: rootDirectory + 'plugin/search/search.js', async: true },
+    { src: rootDirectory + 'plugin/zoom-js/zoom.js', async: true },
+    { src: rootDirectory + 'plugin/notes/notes.js', async: true }
+    ]
+    });

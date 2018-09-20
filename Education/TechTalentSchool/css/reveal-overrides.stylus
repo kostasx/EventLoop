@@ -1,0 +1,41 @@
+.reveal
+
+    .highlight, p strong
+        color orange
+    
+    pre, code
+        white-space pre-line
+
+    section
+        img
+            border none
+            background transparent
+            margin 0
+            box-shadow none
+    p
+        &.super_heading
+            font-family 'Roboto', sans-serif
+            margin-bottom 0
+            font-weight 100
+        &.small
+            font-size 0.6em
+        &.italics
+            font-style italic
+    .columns
+        &.align-items-center
+            align-items center
+    small
+        &.attribution
+            a
+                font-size 0.7em
+                opacity 0.6
+    sup
+        vertical-align super
+        font-size 0.6em
+    a
+        &.tiny_lnk
+            font-size 0.6em
+    ul
+        &.small
+            font-size 0.6em
+
