@@ -1,0 +1,879 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>JavaScript Module 1 | Week 02 Part I | Social Hackers Academy</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Kosmas Pouianou, Kostas Minaidis">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../../libs/revealjs/css/reveal.css">
+		<link rel="stylesheet" href="../../libs/revealjs/css/theme/black-sha.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../../libs/revealjs/lib/css/monokai-sublime-sha.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../../libs/revealjs/css/print/pdf.css' : '../../libs/revealjs/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+		<style>
+		.reveal .clean_img {
+		    background-color: #9dbe49;				
+		}
+		.reveal .clean_img img {
+			border: none;
+			box-shadow: none;
+
+		}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<!-- INTRO -->
+				<section>
+					<h1>JavaScript</h1>
+					<h3 class="colorful">Module 01 | Week 02a</h3>
+					<p>
+						<small>By <a href="https://github.com/kpouianou">Kosmas Pouianou</a> and <a href="https://github.com/kostasx">Kostas Minaidis</a></small>
+					</p>
+				</section>
+
+				<section class="clean_img">
+					<img src="images/understanding_functions_01.jpg" alt="">
+				</section>
+				<section class="clean_img">
+					<img src="images/understanding_functions_02.jpg" alt="">
+				</section>
+				<section class="clean_img">
+					<img src="images/understanding_functions_03.jpg" alt="">
+				</section>
+				<section class="clean_img">
+					<img src="images/understanding_functions_04.jpg" alt="">
+				</section>
+				<section class="clean_img">
+					<img src="images/understanding_functions_05.jpg" alt="">
+				</section>
+				<section class="clean_img">
+					<img src="images/understanding_functions_06.jpg" alt="">
+				</section>
+
+				<!-- SRC :: Recapping Part I -->   
+				<section class="clean_img">
+					<h2>Part I | Recapping</h2>
+					<ul class="small">
+						<li>Recap Logical operators</li>
+						<li>Typeof</li>
+						<li>Loops (for/while)</li>
+						<li>Functions</li> 
+						<li class="greyed_out">Objects [Advanced data types]</li>  
+						<li class="greyed_out">Conditions</li>
+						<li class="greyed_out">Statements vs Expressions</li> 
+						<li class="greyed_out">Naming conventions</li>
+					</ul>
+				</section>
+
+				<!-- SRC :: EXPRESSIONS & STATEMENTS -->
+				<section>
+
+					<section>
+						<h2 class="colorful">Expressions &amp; Statements</h2>
+						<h3 class="fragment">Quick Intro</h3>
+					</section>
+
+					<section>
+						<p>What are <strong class="colorful">EXPRESSIONS</strong>?</p>
+						<small class="fragment">A piece of code that produces a value:</small>
+						<pre class="fragment">
+							<code class="hljs" data-trim contenteditable>4 + 5</code>
+						</pre>
+						<small class="fragment">This piece of code produces a value of <strong class="colorful">9</strong></small>
+						<pre class="fragment">
+							<code class="hljs" data-trim contenteditable>x = 6</code>
+						</pre>
+						<small class="fragment">Evaluates to <strong class="colorful">6</strong></small>
+
+						<pre class="fragment">
+							<code class="hljs" data-trim contenteditable>"Some Text String"</code>
+						</pre>
+						<small class="fragment">Evalutes to <strong class="colorful">"Some Text String"</strong></small>
+
+						<p class="fragment"><small><a href="https://eloquentjavascript.net/1st_edition/chapter2.html#key32">More on Expressions</a></small></p>
+
+					</section>
+
+					<section>
+						
+						<p>What are <strong class="colorful">STATEMENTS</strong>?</p>
+						<p><small class="fragment">Can be thought of as commands/instructions.</small></p>
+						<p><small class="fragment">They can contain <strong class="colorful">EXPRESSIONS</strong>.</small></p>
+						<p><small class="fragment">They end with a semicolon <strong class="colorful">;</strong></small></p>
+
+						<pre class="fragment">
+							<code class="hljs" data-trim contenteditable>
+							let bucket = 4 + 5; 
+							</code>
+						</pre>
+
+						<p class="fragment"><small><a href="https://eloquentjavascript.net/1st_edition/chapter2.html#key33">More on Statements</a></small></p>
+
+					</section>
+
+				</section>
+
+				<!-- SRC :: WHILE LOOP -->
+				<section>
+					<section>
+						<h2>The <strong class="colorful">while ... loop</strong></h2>
+						<h3>(Recap)</h3>
+					</section>
+					<section>
+						<pre>
+							<code class="hljs" data-trim contenteditable>
+							while ( EXPRESSION ){
+
+								RUN CODE...
+
+							}
+							</code>
+						</pre> 
+						<p><small>While some <strong class="colorful">EXPRESSION</strong> evaluates to <strong>TRUE</strong> run the { code }</small></p>
+					</section>
+					<section>
+						<h5>Example:</h5>
+						<pre>
+							<code class="hljs" data-trim contenteditable>
+							let counter = 0;
+
+							while ( counter < 3 ){
+
+								console.log( “Counter value is: “ + counter );
+								counter = counter + 1;
+
+							}
+							</code>
+						</pre>
+						<p>
+							<small><strong>Output:</strong><br/><br/></small>
+						</p>
+						<pre class="fragment">
+							<code class="html" data-trim>
+							Counter value is: 0
+							</code>
+						</pre>
+						<pre class="fragment">
+							<code class="html" data-trim>
+							Counter value is: 1
+							</code>
+						</pre>
+						<pre class="fragment">
+							<code class="html" data-trim>
+							Counter value is: 2
+							</code>
+						</pre>
+
+					</section>
+				</section>
+
+				<!-- SRC :: FOR LOOP -->
+				<section>
+					<section>
+						<h2>The <strong class="colorful">for ... loop</strong></h2>
+						<h5>A while statement with... a twist!</h5>
+						<h4 class="greyed_out">(Recap)</h4>
+					</section>
+					<section>
+						<pre>
+							<code class="hljs" data-trim contenteditable>
+							let counter = 0; 
+							while ( counter < 3 ){
+
+								console.log( counter );
+								counter = counter + 1;
+
+							}
+							</code>
+						</pre> 
+						<pre class="fragment">
+							<code class="hljs" data-trim contenteditable>
+							for ( let counter = 0; counter < 3; counter = counter + 1 ){
+
+								console.log( counter );
+
+							}
+							</code>
+						</pre> 
+						<p class="fragment"><small>So, the loop structure is this:</small></p>
+						<pre class="fragment">
+							<code class="hljs" data-trim contenteditable>
+							for ( START STATEMENT; CONDITION; END STATEMENT ){
+
+								CODE
+
+							}
+							</code>
+						</pre> 
+
+
+					</section>
+					<section>
+						<h5>Example:</h5>
+						<pre>
+							<code class="javascript" data-trim contenteditable>
+							let someArray = [ "a", "b", "c" ];
+
+							for ( let counter = 0; counter < someArray.length; counter++ ){
+
+							  console.log( "Counter value is: " + someArray[counter] );
+
+							}
+							</code>
+						</pre>
+						<p>
+							<small><strong>Output:</strong><br/><br/></small>
+						</p>
+						<pre class="fragment">
+							<code class="html" data-trim>
+							Counter value is: a
+							</code>
+						</pre>
+						<pre class="fragment">
+							<code class="html" data-trim>
+							Counter value is: b
+							</code>
+						</pre>
+						<pre class="fragment">
+							<code class="html" data-trim>
+							Counter value is: c
+							</code>
+						</pre>
+
+					</section>
+				</section>
+
+				<!-- SRC :: FUNCTIONS -->
+				<section>
+					<section>
+						<h2><strong class="colorful">Functions</strong></h2>
+						<h4 class="greyed_out">(Recap)</h4>
+					</section>
+					<section>
+						<p><small>Declaring a Function:</small></p>
+						<pre>
+							<code class="hljs" data-trim contenteditable>
+							function repeatCode( param, otherParam ){
+
+								console.log( param );
+								console.log( otherParam );
+
+							}
+							</code>
+						</pre> 
+						<p class="fragment"><small>Calling the Function:</small></p>
+						<pre class="fragment">
+							<code class="hljs" data-trim contenteditable>
+							repeatCode( "value for param", "value for otherParam" );
+							</code>
+						</pre> 
+
+						<p class="fragment"><small>Will output:</small></p>
+						<pre class="fragment">
+							<code class="hljs" data-trim contenteditable>
+							"value for param"
+							"value for otherParam"
+							</code>
+						</pre> 
+
+					</section>
+					<section>
+						<p><small>Declaring a Function (#2):</small></p>
+						<pre>
+							<code class="hljs" data-trim contenteditable>
+							function repeatCode( param, otherParam ){
+
+								console.log( param );
+								console.log( otherParam );
+
+							}
+							</code>
+						</pre> 
+						<p class="fragment"><small>Can be declared as:</small></p>
+						<pre class="fragment">
+							<code class="hljs" data-trim contenteditable>
+							let repeatCode = function( param, otherParam ){
+
+								console.log( param );
+								console.log( otherParam );
+
+							}
+
+							</code>
+						</pre> 
+
+
+					</section>
+				</section>
+
+				<!-- SRC :: VAR, LET, CONST -->
+				<section>
+					<section>
+						<h2><strong class="colorful">Understanding Scope</strong></h2>
+						<h4>let, const, var</h4>
+					</section>
+					<section>
+						<p><small>Declaring a Function:</small></p>
+						<pre>
+							<code class="hljs" data-trim contenteditable>
+							function repeatCode( param, otherParam ){
+
+								console.log( param );
+								console.log( otherParam );
+
+							}
+							</code>
+						</pre> 
+						<p class="fragment"><small>Calling the Function:</small></p>
+						<pre class="fragment">
+							<code class="hljs" data-trim contenteditable>
+							repeatCode( "value for param", "value for otherParam" );
+							</code>
+						</pre> 
+
+						<p class="fragment"><small>Will output:</small></p>
+						<pre class="fragment">
+							<code class="hljs" data-trim contenteditable>
+							"value for param"
+							"value for otherParam"
+							</code>
+						</pre> 
+
+					</section>
+					<section>
+						<p><small>Declaring a Function (#2):</small></p>
+						<pre>
+							<code class="hljs" data-trim contenteditable>
+							function repeatCode( param, otherParam ){
+
+								console.log( param );
+								console.log( otherParam );
+
+							}
+							</code>
+						</pre> 
+						<p class="fragment"><small>Can be declared as:</small></p>
+						<pre class="fragment">
+							<code class="hljs" data-trim contenteditable>
+							let repeatCode = function( param, otherParam ){
+
+								console.log( param );
+								console.log( otherParam );
+
+							}
+
+							</code>
+						</pre> 
+
+
+					</section>
+				</section>
+
+				<!-- SRC :: typeof -->
+				<section>
+					<section>
+						<h2>The <strong class="colorful">typeof</strong> operator</h2>
+						<h3 class="greyed_out">(Recap)</h3>
+					</section>
+					<section data-state="evaluation">
+						<pre>
+							<code class="hljs" data-trim contenteditable>
+							typeof "Some Text";	//=> 'string'
+							typeof 1234;		//=> 'number'
+							typeof true;		//=> 'boolean'
+							</code>
+						</pre> 
+					</section>
+				</section>
+
+				<!-- SRC :: Part II ToC -->   
+				<section>
+					<h2>Part II</h2>
+					<ul class="small">
+						<li class="greyed_out">Recap Logical operators</li>
+						<li class="greyed_out">Typeof</li>
+						<li class="greyed_out">Loops (for/while)</li>
+						<li class="greyed_out">Functions</li> 
+						<li>Objects [Advanced data types]</li>  
+						<li>Conditions</li>
+						<li>Statements vs Expressions</li> 
+						<li>Naming conventions</li>
+					</ul>
+				</section>
+
+				<!-- SRC :: CONDITIONALS -->
+				<section>
+					<section>
+						<h2>CONDITIONAL STATEMENTS</h2>
+						<h3 class="colorful">if ... else</h3>
+					</section>
+					<section>
+						<p>if { ... } </p>
+						<pre>
+							<code class="hljs" data-trim contenteditable>
+							let trafficLight = 'red';
+
+							if ( trafficLight === 'red' ){
+
+
+							  console.log( "Stop the car!" );
+
+
+							}
+							</code>
+						</pre> 
+
+					</section>
+					<section>
+						<p>if { ... } else { ... }</p>
+						<pre>
+							<code class="hljs" data-trim contenteditable>
+							let trafficLight = 'red';
+
+							if ( trafficLight === 'red' ){
+
+
+								console.log( "Stop the car!" );
+
+
+							} else {
+
+								console.log( "Move on." );
+
+							}
+							</code>
+						</pre> 
+
+					</section>
+
+					<section>
+						<p>NESTED if { ... } else { ... }</p>
+						<pre>
+							<code class="hljs" data-trim contenteditable>
+							let trafficLight = 'red';
+
+							if ( trafficLight === 'red' ){
+							  console.log( "Stop the car!" );
+							} else {
+							  if ( trafficLight === "orange" ){
+							    console.log( "Slow down!" );
+							  } else {
+							    if ( trafficLight === "green" ){
+							      console.log( "Move on." );
+							    }
+							  }
+							}
+							</code>
+						</pre> 
+						<p><small class="colorful">This can be written like this...</small></p>
+
+					</section>
+
+					<section>
+						<p>if { ... } else if { ... }</p>
+						<pre>
+							<code class="hljs" data-trim contenteditable>
+							if ( trafficLight === 'red' ){
+
+							  console.log( "Stop the car!" );
+
+							} else if ( trafficLight === "orange" ){
+
+							    console.log( "Slow down!" );
+
+							} else if ( trafficLight === "green" ){
+
+							      console.log( "Move on." );
+
+							}
+							</code>
+						</pre> 
+					</section>
+
+				</section>
+
+				<!-- SRC :: SWITCH STATEMENT -->
+				<section>
+						<h2>The <strong class="colorful">switch</strong> statement</h2>
+						<p>No more <code class="colorful">else if's</code>!</p>
+						<pre>
+							<code class="hljs" data-trim contenteditable>
+							let trafficLight = "orange";
+
+							switch (trafficLight){
+
+							    case "red":
+								  console.log("Stop!");
+								  break;
+							    case "orange":
+								  console.log("Slow down");
+								  break;
+							    case "green":
+								  console.log("Move on");
+								  break;
+							}
+							</code>
+						</pre>
+						<p><small><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch">More on the <strong class="colorful">Switch</strong> Statement</a></small></p>
+
+				</section>
+
+				<!-- SRC :: CONDITIONAL EXERCISES -->
+				<section data-transition="slide" data-background="#F7BE2C" data-background-transition="zoom">
+					<h2>LET'S CODE!</h2>
+					<a class="black" target="_blank" href="https://codepen.io/KPouianou/pen/ZrGKqr?editors=0011">http://bit.ly/<strong>2siSKqw</strong></a>
+				</section>
+
+				<!-- SRC :: OBJECTS -->
+				<section>
+					<section>
+						<h3 class="colorful">Objects</h3>
+						<h5>{ Advanced Data Structures }</h5>
+					</section>
+					<section>
+						<h5>Remember Arrays?</h5>
+						<pre>
+							<code class="hljs" data-trim contenteditable>
+							let arr = [ "Kosmas", "Kostas", "Chris" ]; 
+							console.log( arr[0] );
+							</code>
+						</pre>
+						<p><small>Under the hood, this works much like this:</small></p>
+						<pre>
+							<code class="hljs" data-trim contenteditable>
+								[ 0: "Kosmas", 1: "Kostas", 2: "Chris" ]
+							</code>
+						</pre>
+					</section>
+					<section>
+						<p>Declaring an Object:</p>
+						<pre>
+							<code class="hljs" data-trim contenteditable>
+							let obj = { teacher: "Kosmas", assistant: "Kostas", founder: "Chris" }
+							</code>
+						</pre>
+						<p><small>In Objects, instead of using a numeric index for each element,<br/>we explicitly define a key (String).</small></p>
+					</section>
+					<section>
+						<p>Accessing an Object Property:</p>
+						<pre><code class="hljs" data-trim contenteditable>
+						let obj = { teacher: "Kosmas", assistant: "Kostas", founder: "Chris" }
+
+						console.log( obj["teacher"] );
+						console.log( obj.assistant );
+						</code></pre>
+						<p class="fragment"><small>Will Output:</small></p>
+						<pre class="fragment"><code class="hljs">
+							"Kosmas"
+							"Kostas"
+						</code></pre>
+					</section>
+					<section>
+						<p>Setting an Object Property:</p>
+						<pre><code class="hljs" data-trim contenteditable>
+						let obj = { teacher: "Kosmas", assistant: "Kostas", founder: "Chris" }
+
+						obj.teacher = "Mary";
+
+						console.log( obj );
+						console.log( obj["teacher"] );
+						</code></pre>
+						<p class="fragment"><small>Will Output:</small></p>
+						<pre class="fragment"><code class="hljs">{ teacher: "Mary", assistant: "Kostas", founder: "Chris" }
+							"Mary"
+						</code></pre>
+					</section>
+					<section>
+						<p><small>When an Object Property contains a Function, it is called a <strong class="colorful">method</strong></small></p>
+						<pre>
+							<code class="hljs" data-trim contenteditable>
+							let car = {
+							  color: "red",
+							  year: 2010,
+							  type: "sports",
+							  showInfo: function(){
+							    console.log("A red sports car.");
+							  }
+							}
+							car.showInfo();
+							</code>
+						</pre>
+						<p><small>Will output:</small></p>
+						<pre><code class="hljs" data-trim>
+						"A red sports car."
+						</code></pre>
+					</section>
+					<section>
+						<p><small>You can access any Object property using the <strong class="colorful">this</strong> keyword, while inside the Object.</small></p>
+						<pre>
+							<code class="hljs" data-trim contenteditable>
+							let car = {
+							  color: "red",
+							  year: 2010,
+							  type: "sports",
+							  showInfo: function(){
+							    console.log("A " + this.color + " sports car.");
+							  }
+							}
+							car.showInfo();
+							</code>
+						</pre>
+						<p><small>Will output:</small></p>
+						<pre><code class="hljs" data-trim>
+						"A red sports car."
+						</code></pre>
+					</section>
+				</section>
+
+				<!-- SRC :: OBJECT EXERCISE -->
+				<section data-transition="slide" data-background="#F7BE2C" data-background-transition="zoom">
+					<h2>LET'S CODE!</h2>
+					<a class="black" target="_blank" href="https://codepen.io/KPouianou/pen/LQVWby?editors=0011">http://bit.ly/<strong>2E8Qxn4</strong></a>
+				</section>
+
+				<!-- SRC :: NAMING CONVENTIONS -->
+				<section>
+					<h2 class="colorful">Naming Conventions</h2>
+					<ul>
+						<li class="small">Variable names and object keys should be camel-cased</li>
+						<li class="small">Variables should use nouns as names, and functions should use verbs</li>
+						<li class="small">Variables with array values should use plural nouns, variables with object values should use singular nouns</li>
+						<li class="small">Variable and function names should preferably be short but expressive</li>
+					</ul>
+					<pre><code class="hljs" data-trim contenteditable>
+					const some_number = 'apple'; // BAD
+					const fruits = 'apple'; // BAD
+					const color = ['red', 'orange']; // BAD
+					const Xyz = 33; // BAD
+
+					const user = { // GOOD
+					    preferredFruits: ['apple', 'orange'],
+					    topFruit: 'apple'
+					}
+					</code></pre>
+				</section>
+
+				<!-- NESTED VERTICAL SLIDES -->
+				<!--
+				<section>
+					<section>
+						<h2>Vertical Slides</h2>
+						<p>Slides can be nested inside of each other.</p>
+						<p>Use the <em>Space</em> key to navigate through all slides.</p>
+						<br>
+						<a href="#" class="navigate-down">
+							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+						</a>
+					</section>
+					<section>
+						<h2>Basement Level 1</h2>
+						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
+					</section>
+					<section>
+						<h2>Basement Level 2</h2>
+						<p>That's it, time to go back up.</p>
+						<br>
+						<a href="#/2">
+							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
+						</a>
+					</section>
+				</section>
+				-->
+
+				<!-- Alt+Click | Zoom -->
+				<!-- S | Speaker View -->
+				<!-- B or . | Pause View -->
+
+				<!-- MARKDOWN -->
+				<!--
+				<section data-markdown>
+					<script type="text/template">
+						```javascript
+						function myFunc(alt,opt){
+							let ok = true;
+						}
+						```
+					</script>
+				</section>
+				-->
+
+				<!-- FRAGMENTS | class="fragment" -->
+
+				<!-- REF :: BACKGROUNDS -->
+				<!--
+				<section>
+					<section data-background="#dddddd">
+						<h2>Slide Backgrounds</h2>
+						<p>
+							Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
+						</p>
+						<a href="#" class="navigate-down">
+							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+						</a>
+					</section>
+					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
+						<h2>Image Backgrounds</h2>
+						<pre><code class="hljs">&lt;section data-background="image.png"&gt;</code></pre>
+					</section>
+					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
+						<h2>Tiled Backgrounds</h2>
+						<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
+					</section>
+					<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
+						<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+							<h2>Video Backgrounds</h2>
+							<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
+						</div>
+					</section>
+					<section data-background="http://i.giphy.com/90F8aUepslB84.gif">
+						<h2>... and GIFs!</h2>
+					</section>
+				</section>
+				-->
+
+				<!-- BACKGROUND TRANSITION | LET'S CODE -->
+				<!--
+				<section data-transition="slide" data-background="#F7BE2C" data-background-transition="zoom">
+					<h2>LET'S CODE!</h2>
+				</section>
+				-->	
+
+				<!-- TABULAR TABLES -->
+				<!--
+				<section>
+					<h2>Tabular Tables</h2>
+					<table>
+						<thead>
+							<tr>
+								<th>Item</th>
+								<th>Value</th>
+								<th>Quantity</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Apples</td>
+								<td>$1</td>
+								<td>7</td>
+							</tr>
+							<tr>
+								<td>Lemonade</td>
+								<td>$2</td>
+								<td>18</td>
+							</tr>
+							<tr>
+								<td>Bread</td>
+								<td>$3</td>
+								<td>2</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+				-->
+
+				<!-- QUOTES -->
+				<!--
+				<section>
+					<h2>Clever Quotes</h2>
+					<p>
+						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">The nice thing about standards is that there are so many to choose from</q> and block:
+					</p>
+					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
+						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
+					</blockquote>
+				</section>
+				-->
+
+				<!-- INNER LINKS -->
+				<!--
+				<section>
+					<h2>Intergalactic Interconnections</h2>
+					<p>
+						You can link between slides internally,
+						<a href="#/2/3">like this</a>.
+					</p>
+				</section>
+				-->
+
+			</div>
+
+		</div>
+
+		<script src="../../libs/revealjs/lib/js/head.min.js"></script>
+		<script src="../../libs/revealjs/js/reveal.js"></script>
+
+		<script>
+
+			/* SHA */
+			Reveal.configure({
+				keyboard: {
+					// Key: 'e'
+				    69: function(){
+				    	/*
+				    	IF NOT EXIST
+							<PRE>.insertAdjacentHTML('afterend', code);
+						EVALUATE 
+							eval( <PRE>.textContent )
+						*/
+				    }
+				  }
+			});
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: '../../libs/revealjs/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../../libs/revealjs/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../libs/revealjs/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../libs/revealjs/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../../libs/revealjs/plugin/search/search.js', async: true },
+					{ src: '../../libs/revealjs/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../../libs/revealjs/plugin/notes/notes.js', async: true }
+				]
+			});
+
+			/* SHA */
+			Reveal.addEventListener( 'evaluation', function() {
+				console.log( 'Evaluation!' );
+			});
+		</script>
+
+	</body>
+</html>

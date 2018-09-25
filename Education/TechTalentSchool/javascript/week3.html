@@ -1,0 +1,779 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>JavaScript Module 1 | Week 03 | Social Hackers Academy</title>
+		<meta name="author" content="Kosmas Pouianou, Kostas Minaidis">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	  <link rel="stylesheet" href="../libs/revealjs/css/reveal.css">
+	  <link rel="stylesheet" href="../libs/revealjs/css/theme/black-sha.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../libs/revealjs/lib/css/monokai-sublime-sha.css">
+
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<!-- Alt+Click | Zoom -->
+				<!-- S | Speaker View -->
+				<!-- B or . | Pause View -->
+
+				<!-- INTRO -->
+				<section>
+					<h1>JavaScript</h1>
+					<h3 class="colorful">Module 01 | Week 03</h3>
+					<p>
+						<small>By <a href="https://github.com/kpouianou">Kosmas Pouianou</a> and <a href="https://github.com/kostasx">Kostas Minaidis</a></small>
+					</p>
+				</section>
+
+				<!-- SRC :: Recapping Week 02 Part II -->   
+				<section>
+					<h2>Recapping Week 02 Part II</h2>
+					<ul class="small">
+						<li>Objects</li>
+						<li>Conditions</li>
+						<li>Statements &amp; Expressions</li>
+					</ul>
+				</section>
+
+				<!-- SRC :: Objects -->
+				<section>
+					<section>
+						<h2><strong class="colorful">Objects</strong></h2>
+					</section>
+					<section>
+						<p><small>An <strong class="colorful">Object</strong> is a collection of variables (called <strong class="colorful">properties</strong>)<br/> and functions (called <strong class="colorful">methods</strong>) which can be accessed<br/>using the . dot notation: <strong class="colorful">Object.property, Object.method()</strong></small></p>
+						<pre>
+							<code class="hljs" data-trim contenteditable>
+							let client = {
+							  age: 50,
+							  name: "Jane",
+							  surname: "Doe",
+							  getName: function(){
+
+							    console.log( this.name + " " + this.surname );
+
+							  } 
+							}
+
+							client.getName();
+							</code>
+						</pre> 
+						<pre class="fragment">
+							<code class="hljs" data-trim contenteditable>
+							"Jane Doe"
+							</code>
+						</pre> 
+					</section>
+				</section>
+
+				<!-- SRC :: Conditions -->
+				<section>
+					<section>
+						<h2><strong class="colorful">Conditional</strong> Statements</h2>
+					</section>
+					<section>
+						<p><small><strong class="colorful">IF ... ELSE IF ... ELSE</strong></small></p>
+						<pre>
+							<code class="hljs" data-trim contenteditable>
+							if ( EXPRESSION ){
+							  ...
+							} else {
+							  ...
+							}
+							</code>
+						</pre> 
+						<pre>
+							<code class="hljs" data-trim contenteditable>
+							if ( EXPRESSION ){
+							  ...
+							} else if ( EXPRESSION ){
+							  ...
+							} else if ( EXPRESSION ){
+							  ...
+							} else {
+							  ...
+							}
+							</code>
+						</pre> 
+					</section>
+				</section>
+
+				<!-- SRC :: Statements & Expressions -->
+				<section>
+					<section>
+						<h2><strong class="colorful">Expressions</strong> &amp; <strong class="colorful">Statements</strong></h2>
+						<!--
+						<p><small>While some <strong class="colorful">EXPRESSION</strong> evaluates to <strong>TRUE</strong> run the { code }</small></p>
+					    -->
+					</section>
+				</section>
+
+				<!-- SRC :: ToC -->
+				<section>
+					<h2>Contents of Week 03</h2>
+					<ul class="small">
+						<li>Code Commenting</li>
+						<li>Array Manipulation</li>
+						<li>Closures and ‘this’</li>
+						<li>Basic DOM Manipulation</li>
+					</ul>
+				</section>
+
+				<!-- SRC :: COMMENTS -->
+				<section>
+
+					<section>
+						<h2 class="colorful">Comments</h2>
+					</section>
+
+					<section>
+						<p>What are <strong class="colorful">Comments</strong>?</p>
+						<small class="fragment">Parts of the program that don't get executed</small>
+						<p><small class="fragment">Single line comments:</small></p>
+						<pre class="fragment">
+							<code class="hljs" data-trim contenteditable>// This is a single line comment</code>
+						</pre>
+
+						<p><small class="fragment">Multi-line comments:</small></p>
+						<pre class="fragment">
+							<code class="hljs" data-trim contenteditable>
+							/* Comments that
+							span multiple lines
+							can be placed like this.
+							*/
+							</code>
+						</pre>
+
+					</section>
+				</section>
+
+				<!-- SRC :: Array Manipulation :: Recapping -->
+				<section>
+					<section>
+						<h2>Manipulating <strong class="colorful">Arrays</strong></h2>
+						<h4>Recapping: <strong class="colorful">push</strong>, <strong class="colorful">pop</strong>, <strong class="colorful">shift</strong>, <strong class="colorful">unshift</strong></h4>
+					</section>
+					<section>
+						<p><small></small></p>
+						<pre class="small">
+							<code class="hljs" data-trim contenteditable>let todo = [ ];</code>
+						</pre> 
+						<pre class="fragment small">
+							<code class="hljs" data-trim contenteditable>todo.push("Create website");</code>
+						</pre> 
+						<pre class="fragment small">
+							<code class="hljs" data-trim contenteditable>[ "Create website" ]</code>
+						</pre> 
+						<pre class="fragment small">
+							<code class="hljs" data-trim contenteditable>todo.push("Post on Facebook");</code>
+						</pre> 
+						<pre class="fragment small">
+							<code class="hljs" data-trim contenteditable>[ "Create website", "Post on Facebook" ]</code>
+						</pre> 
+						<pre class="fragment small">
+							<code class="hljs" data-trim contenteditable>todo.shift();</code>
+						</pre> 
+						<pre class="fragment small">
+							<code class="hljs" data-trim contenteditable>[ "Post on Facebook" ]</code>
+						</pre> 
+						<pre class="fragment small">
+							<code class="hljs" data-trim contenteditable>todo.unshift( "Design website" );</code>
+						</pre> 
+						<pre class="fragment small">
+							<code class="hljs" data-trim contenteditable>[ "Design website", "Post on Facebook" ]</code>
+						</pre> 
+						<pre class="fragment small">
+							<code class="hljs" data-trim contenteditable>todo.pop();</code>
+						</pre> 
+						<pre class="fragment small">
+							<code class="hljs" data-trim contenteditable>[ "Design website" ]</code>
+						</pre> 
+					</section>
+					<section>
+						<p>Tip: You can also create a new Array<br/>using the following syntax:</p>
+						<pre>
+							<code class="hljs" data-trim contenteditable>let someArray = new Array( 1, "text", false );</code>
+						</pre> 
+						<p class="fragment">...but we tend to use the [ ] syntax.</p>
+					</section>
+				</section>
+
+				<!-- SRC :: Array Manipulation -->
+				<section>
+
+					<section>
+						<h2>Manipulating <strong class="colorful">Arrays</strong></h2>
+					</section>
+
+					<!-- reverse() -->
+					<section>
+						<h3>Array<strong class="colorful">.reverse()</strong></h3>
+						<pre>
+							<code class="hljs" data-trim contenteditable>
+							let listOfNumbers = [ 1, 2, 3, 4, 5 ];
+							</code>
+						</pre> 
+						<pre class="fragment">
+							<code class="hljs" data-trim contenteditable>
+							listOfNumbers.reverse();
+							</code>
+						</pre> 
+
+						<pre class="fragment">
+							<code class="hljs" data-trim contenteditable>
+							console.log( listOfNumbers );
+							</code>
+						</pre> 
+
+						<p class="fragment"><small>Will output:</small></p>
+						<pre class="fragment">
+							<code class="hljs" data-trim contenteditable>
+							[ 5, 4, 3, 2, 1]
+							</code>
+						</pre> 
+
+						<p class="fragment"><small><strong class="colorful">WARNING: </strong> reverse() will <strong>mutate</strong> (change) the contents of the Array!</small></p>
+
+						<p class="fragment"><small><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse">More on Array.prototype.reverse()</a></small></p>
+					</section>
+
+					<!-- sort() -->
+					<section>
+						<h3>Array<strong class="colorful">.sort()</strong></h3>
+						<p><small>Sorts an Array alphabetically using the ordered <a href="https://raw.githubusercontent.com/wiki/tomgibara/ascii-table/tables/ascii-table-1.1.png" target="_blank">ASCII character table</a><br/>or a custom sorting function. Works on a character-by-character basis.</small></p>
+						<pre class="fragment small">
+							<code class="hljs" data-trim contenteditable>
+							let someNames = [ "Eve", "Adam", "Bob", "Bill", "adam" ];
+							</code>
+						</pre> 
+						<pre class="fragment small">
+							<code class="hljs" data-trim contenteditable>
+							console.log( someNames.sort() );
+							</code>
+						</pre> 
+						<pre class="fragment small">
+							<code class="hljs" data-trim contenteditable>
+							[ 'Adam', 'Bill', 'Bob', 'Eve', 'adam' ];
+							</code>
+						</pre> 
+						<p class="fragment"><small><strong class="colorful">Warning: </strong>Numbers get converted to Strings and are compared alphabetically:</small></p>
+						<pre class="fragment small">
+							<code class="hljs" data-trim contenteditable>
+							let someNumbers = [ 2, 11, 1 ];
+							</code>
+						</pre> 
+						<pre class="fragment small">
+							<code class="hljs" data-trim contenteditable>
+							console.log( someNumbers.sort() );
+							</code>
+						</pre> 
+						<pre class="fragment small">
+							<code class="hljs" data-trim contenteditable>
+							[ 1, 11, 2 ]
+							</code>
+						</pre> 
+					</section>
+
+					<!-- sort() #2 -->
+					<section>
+						<p><small>So how do we compare a list of numbers using <strong class="colorful">sort()</strong>?</small></p>
+						<p class="fragment"><small>We need to pass a custom sorting function<br/>as an argument to the sort() function.</small></p>
+						<pre class="fragment"><code class="hljs" data-trim contenteditable>
+						let someNumbers = [ 2, 11, 1 ];
+						</code></pre>
+						<pre class="fragment"><code class="hljs" data-trim contenteditable>
+						let sorting = function( a, b ){
+						  if ( a < b ){ 
+						    return -1; 
+						  } else if ( a > b ){ 
+						    return 1; 
+						  } else { return 0; }	// a === b
+						}
+						</code></pre>
+
+						<pre class="fragment">
+							<code class="hljs" data-trim contenteditable>
+						console.log( someNumbers.sort( sorting ) );
+						</code>
+						</pre>
+
+						<pre class="fragment">
+							<code class="hljs" data-trim contenteditable>
+							[ 1, 2, 11 ]
+							</code>
+						</pre>
+					</section>
+
+					<!-- slice() -->
+					<section>
+						<h3>Array<strong class="colorful">.slice( start, until )</strong></h3>
+						<p class="fragment"><small>Returns a portion of the Array beginning at the <strong class="colorful">start</strong> index<br/>up to (but not including) the <strong class="colorful">until</strong> index.</small></p>
+						<pre class="fragment">
+							<code class="hljs" data-trim contenteditable>
+							let animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+							// Index -->     0       1        2        3         4
+							</code>
+						</pre> 
+						<pre class="fragment"><code class="hljs" data-trim contenteditable>console.log(animals.slice(2, 4));</code></pre> 
+						<pre class="fragment"><code class="hljs" data-trim contenteditable>["camel", "duck"]</code></pre> 
+						<pre class="fragment"><code class="hljs" data-trim contenteditable>console.log(animals.slice(1, 5));</code></pre> 
+						<pre class="fragment"><code class="hljs" data-trim contenteditable>["bison", "camel", "duck", "elephant"]</code></pre> 
+						<p class="fragment"><small>If the second parameter (<strong class="colorful">until</strong>) is omitted, slice extracts through the end of the Array.</small></p>
+						<pre class="fragment"><code class="hljs" data-trim contenteditable>console.log(animals.slice(2));</code></pre> 
+						<pre class="fragment"><code class="hljs" data-trim contenteditable>
+						["camel", "duck", "elephant"]</code></pre> 
+					</section>
+
+					<!-- slice() tip : clone an Array -->
+					<section>
+						<p>Tip: Using Array<strong class="colorful">.slice()</strong> to clone an Array</p>
+						<p class="Dfragment"><small>When the first slice argument is omitted, it is automatically set to index 0.</small></p>
+						<pre class="fragment">
+							<code class="hljs" data-trim contenteditable>let numbers = [ 1, 2, 3, 4 ];</code>
+						</pre> 
+						<pre class="fragment">
+							<code class="hljs" data-trim contenteditable>let reversedNumbers = numbers.slice();</code>
+						</pre> 
+						<pre class="fragment">
+							<code class="hljs" data-trim contenteditable>reversedNumbers.reverse();</code>
+						</pre> 
+						<pre class="fragment">
+							<code class="hljs" data-trim contenteditable>console.log( numbers );</code>
+						</pre> 
+						<pre class="fragment">
+							<code class="hljs" data-trim contenteditable>[ 1, 2, 3, 4 ]</code>
+						</pre> 
+						<pre class="fragment">
+							<code class="hljs" data-trim contenteditable>console.log( reversedNumbers );</code>
+						</pre> 
+						<pre class="fragment">
+							<code class="hljs" data-trim contenteditable>[ 4, 3, 2, 1 ]</code>
+						</pre> 
+					</section>
+
+					<!-- splice() -->
+					<section>
+						<h3>Array<strong class="colorful">.splice( start, deleteCount )</strong></h3>
+						<small>Removes or adds elements to an Array, and returns the removed/added elements.</small>
+						<pre class="fragment"><code class="hljs" data-trim contenteditable>
+							let animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+							// Index -->     0       1        2        3         4
+							</code>
+						</pre>
+
+						<small class="fragment">Remove 1 element from index 3</small>
+						<pre class="fragment"><code class="hljs" data-trim contenteditable>
+						animals.splice( 3, 1 );
+						</code>
+						</pre>
+						<pre class="fragment"><code class="hljs" data-trim contenteditable>
+						             [ 'ant', 'bison', 'camel', 'elephant' ]
+						// Index -->     0       1        2          3
+						</code>
+						</pre> 
+						<small class="fragment">Remove 2 elements from index 1</small>
+						<pre class="fragment"><code class="hljs" data-trim contenteditable>
+						animals.splice( 1, 2 );
+						</code>
+						</pre> 
+
+						<pre class="fragment"><code class="hljs" data-trim contenteditable>
+						[ 'ant', 'elephant' ]
+						</code>
+						</pre> 
+
+					</section>
+
+					<!-- splice() #02 -->
+					<section>
+						<h3>Array<strong class="colorful">.splice( start, deleteCount )</strong></h3>
+						<pre><code class="hljs" data-trim contenteditable>
+							let animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+							// Index -->     0       1        2        3         4
+							</code>
+						</pre>
+
+						<small class="fragment">Remove 1 element from index 2, and insert 'monkey'</small>
+						<pre class="fragment"><code class="hljs" data-trim contenteditable>
+						animals.splice( 2, 1, 'monkey');
+						</code>
+						</pre> 
+						<pre class="fragment"><code class="hljs" data-trim contenteditable>
+						            [ 'ant', 'bison', 'monkey', 'duck', 'elephant' ]
+						//--> Index     0       1        2         3          4
+						</code>
+						</pre> 
+						<small class="fragment">Insert 1 element at index 3</small>
+						<pre class="fragment"><code class="hljs" data-trim contenteditable>
+						animals.splice(3,0,'gorilla');
+						</code></pre> 
+						<pre class="fragment"><code class="hljs" data-trim contenteditable>
+						[ 'ant', 'bison', 'monkey', 'gorilla', 'duck', 'elephant' ]
+						</code></pre> 
+
+					</section>
+
+					<!-- map() -->
+					<section>
+						<h3>Array<strong class="colorful">.map()</strong></h3>
+						<p><small>Creates a new array with the results of calling a provided function<br/>on every element in the calling array.</small></p>
+						<pre class="fragment fade-up"><code class="hljs" data-trim contenteditable>
+							let numbers = [ 2, 4, 8 ];
+						</code></pre> 
+						<pre class="fragment fade-up"><code class="hljs" data-trim contenteditable>
+							let modify = function( element ){
+							  return element * element;
+							} 
+						</code></pre> 
+						<pre class="fragment fade-up"><code class="hljs" data-trim contenteditable>
+							let squares = numbers.map( modify );
+						</code></pre> 
+						<pre class="fragment fade-up"><code class="hljs" data-trim contenteditable>
+						console.log( squares );
+						</code>
+						</pre> 
+						<pre class="fragment fade-up"><code class="hljs" data-trim contenteditable>
+						[ 4, 16, 64 ]
+						</code></pre> 
+					</section>
+
+					<!-- map() #02 -->
+					<section>
+						<p><small>Array.map() Under the hood...</small></p>
+						<pre class="fragment fade-up"><code class="hljs" data-trim contenteditable>
+						let numbers = [ 2, 4, 8 ];
+						function modify( element ){
+						  return element * element;
+						}
+						let results = numbers.map( modify );
+						</code></pre> 
+						
+						<p class="fragment"><small>
+						[ <strong class="colorful">2</strong>, 4, 8 ]<br/><br/>
+						<span class="fragment">modify( <strong class="colorful">2</strong> );</span> <span class="fragment"> <span class="hljs-comment">--></span> 2 * 2 </span><span class="fragment"> <span class="hljs-comment">--></span> 4 </span><span class="fragment"> <span class="hljs-comment">--></span> <span class="hljs-title">[ 4 ]</span></span>
+						</small></p>
+
+						<p class="fragment"><small>
+						[ 2, <strong class="colorful">4</strong>, 8 ]<br/><br/>
+						<span class="fragment">modify( <strong class="colorful">4</strong> );</span> <span class="fragment"> <span class="hljs-comment">--></span> 4 * 4 </span><span class="fragment"> <span class="hljs-comment">--></span> 16 </span><span class="fragment"> <span class="hljs-comment">--></span> <span class="hljs-title">[ 4, 16 ]</span></span>
+						</small></p>
+
+						<p class="fragment"><small>
+						[ 2, 4, <strong class="colorful">8</strong> ]<br/><br/>
+						<span class="fragment">modify( <strong class="colorful">8</strong> );</span> <span class="fragment"> <span class="hljs-comment">--></span> 8 * 8 </span><span class="fragment"> <span class="hljs-comment">--></span> 64 </span><span class="fragment"> <span class="hljs-comment">--></span> <span class="hljs-title">[ 4, 16, 64 ]</span></span>
+						</small></p>
+					</section>
+
+					<!-- filter() -->
+					<section>
+						<h3>Array<strong class="colorful">.filter( test)</strong></h3>
+						<p><small>Runs the custom <strong class="colorful">test</strong> function for all Array elements.<br/>Creates a new Array with all the elements that passed the test function.</small></p>
+						<pre class="fragment fade-up"><code class="hljs" data-trim contenteditable>
+						let ages = [ 15, 22, 23, 44, 54, 18, 36 ];
+						</code></pre> 
+						<pre class="fragment fade-up"><code class="hljs" data-trim contenteditable>
+						function test( element ){
+						  return ( element > 18 && element < 50 ); 
+						}
+						</code></pre> 
+						<pre class="fragment fade-up"><code class="hljs" data-trim contenteditable>
+						let passed = ages.filter( test );
+						</code>
+						</pre> 
+						<pre class="fragment fade-up"><code class="hljs" data-trim contenteditable>
+						[ 22, 23, 44, 36 ] 
+						</code></pre> 
+					</section>
+
+					<!-- filter() #02 -->
+					<section>
+						<p><small>Array.filter() Under the hood...</small></p>
+						<pre class="fragment fade-up"><code class="hljs" data-trim contenteditable>
+						let ages = [ 15, 22, 44, 54 ];
+						function test( element ){ 
+						  return ( element > 18 && element < 50 ); 
+						}
+						let passed = ages.filter( test );
+						</code></pre> 
+						
+						<p class="fragment"><small>
+						[ <strong class="colorful">15</strong>, 22, 44, 54 ]<br/>
+						<span class="fragment">test( <strong class="colorful">15</strong> );</span> <span class="fragment"> <span class="hljs-comment">--></span> ( 15 > 18 &amp;&amp; 15 < 50) </span><span class="fragment"> <span class="hljs-comment">--></span> false </span><span class="fragment"> <span class="hljs-comment">--></span> <span class="hljs-title">[ ]</span></span>
+						</small></p>
+
+						<p class="fragment"><small>
+						[ 15, <strong class="colorful">22</strong>, 44, 54 ]<br/>
+						<span class="fragment">test( <strong class="colorful">22</strong> );</span> <span class="fragment"> <span class="hljs-comment">--></span> ( 22 > 18 &amp;&amp; 22 < 50) </span><span class="fragment"> <span class="hljs-comment">--></span> true </span><span class="fragment"> <span class="hljs-comment">--></span> <span class="hljs-title">[ 22 ]</span></span>
+						</small></p>
+
+						<p class="fragment"><small>
+						[ 15, 22, <strong class="colorful">44</strong>, 54 ]<br/>
+						<span class="fragment">test( <strong class="colorful">44</strong> );</span> <span class="fragment"> <span class="hljs-comment">--></span> ( 44 > 18 &amp;&amp; 44 < 50) </span><span class="fragment"> <span class="hljs-comment">--></span> true </span><span class="fragment"> <span class="hljs-comment">--></span> <span class="hljs-title">[ 22, 44 ]</span></span>
+						</small></p>
+
+						<p class="fragment"><small>
+						[ 15, 22, 44, <strong class="colorful">54</strong> ]<br/>
+						<span class="fragment">test( <strong class="colorful">54</strong> );</span> <span class="fragment"> <span class="hljs-comment">--></span> ( 54 > 18 &amp;&amp; 54 < 50) </span><span class="fragment"> <span class="hljs-comment">--></span> false </span><span class="fragment"> <span class="hljs-comment">--></span> <span class="hljs-title">[ 22, 44 ]</span></span>
+						</small></p>
+
+					</section>
+
+					<!-- reduce() -->
+					<section>
+						<h3>Array<strong class="colorful">.reduce()</strong></h3>
+						<p><small>Goes through each element, runs a function and returns an accumulator.</small></p>
+						<pre>
+							<code class="hljs" data-trim contenteditable>
+							let numbers = [ 12, 8, 10, 5, 5 ];
+							let sum = function( accumulator, currentValue ){
+
+							  accumulator = accumulator + currentValue;
+							  return accumulator;
+
+							}
+							numbers.reduce( sum, 0 );
+							</code>
+						</pre> 
+					</section>
+
+				</section>
+
+				<!-- SRC :: ... EXERCISES -->
+				<section data-transition="slide" data-background="#F7BE2C" data-background-transition="zoom">
+					<h2>LET'S CODE!</h2>
+					<a class="black" target="_blank" href="https://codepen.io/kostasx/pen/NyaPjY?editors=0011">http://bit.ly/<strong>2HfsyjN</strong></a>
+				</section>
+
+				<!-- SRC :: Closures and 'this' -->
+				<section>
+					<section>
+						<h2><strong class="colorful">Closures</strong></h2>
+					</section>
+					<section>
+						<p><small></small></p>
+						<pre>
+							<code class="hljs" data-trim contenteditable>
+							function parent(){
+
+							  let local = "value";
+
+							  let child = function(){
+
+							     let childVariable = "Some private thing";
+							    console.log( local );
+
+							  }
+
+							}
+							</code>
+						</pre> 
+						<a target="_blank" href="https://2.bp.blogspot.com/-ce8JZu-2De8/VzIj3tYM1qI/AAAAAAAALFc/ve0ZprxQQoI4_3x0EidEaHDnEdx5S9ZCACLcB/s1600/closure.jpg">Closures #01</a>
+						<a target="_blank" href="http://csharpcorner.mindcrackerinc.netdna-cdn.com/UploadFile/82b980/closures-in-javascript/Images/call%20to%20closure%20function.jpg">Closures #02</a>
+					</section>
+				</section>
+
+				<!-- SRC :: ... EXERCISES -->
+				<section data-transition="slide" data-background="#F7BE2C" data-background-transition="zoom">
+					<h2>LET'S CODE!</h2>
+					<a class="black" target="_blank" href="https://codepen.io/KPouianou/pen/zRdggr?editors=0011">http://bit.ly/<strong>2GdzzAD</strong></a>
+				</section>
+
+				<!-- SRC :: Basic DOM Manipulation -->
+				<section>
+					<section>
+						<h3><strong class="colorful">DOM</strong> | The Document Object Model</h3>
+						<a href="https://www.kirupa.com/html5/images/DOM_js_72.png" target="_blank">Schematic</a>
+					</section>
+					<section>
+						<h2>Basic <strong class="colorful">DOM</strong> Manipulation</h2>
+						<p class="Dfragment">document<strong class="colorful">.createElement()</strong>;</p>
+						<p class="Dfragment">document<strong class="colorful">.getElementById()</strong>;</p>
+						<p class="Dfragment">document<strong class="colorful">.querySelector()</strong>;</p>
+					</section>
+					<section>
+						<p class="Dfragment">Node<strong class="colorful">.appendChild()</strong>;</p>
+						<p class="Dfragment">Node<strong class="colorful">.remove()</strong>;</p>
+						<p class="Dfragment">Node<strong class="colorful">.setAttribute( key, value )</strong>;</p>
+						<p class="Dfragment">Node<strong class="colorful">.style</strong></p>
+
+					</section>
+
+				</section>
+
+				<!-- SRC :: ... EXERCISES -->
+				<section data-transition="slide" data-background="#F7BE2C" data-background-transition="zoom">
+					<h2>LET'S CODE!</h2>
+					<a class="black" target="_blank" href="https://codepen.io/KPouianou/pen/KQXPvK?editors=0010">http://bit.ly/<strong>2GapioH</strong></a>
+				</section>
+
+				<!-- SRC :: Extras :: Introduction to Arrow Functions -->
+				<section>
+					<section>
+						<h2><strong class="colorful">Arrow Functions</strong></h2>
+						<h4 class="fragment">An Introduction</h4>
+					</section>
+					<section>
+						<pre>
+							<code class="hljs" data-trim contenteditable>
+							while ( EXPRESSION ){
+
+								RUN CODE...
+
+							}
+							</code>
+						</pre> 
+						<p><small>While some <strong class="colorful">EXPRESSION</strong> evaluates to <strong>TRUE</strong> run the { code }</small></p>
+					</section>
+				</section>
+
+				<!-- SRC :: Extras :: Hoisting -->
+				<section>
+					<section>
+						<h2><strong class="colorful">Hoisting</strong></h2>
+					</section>
+					<section>
+						<pre>
+							<code class="hljs" data-trim contenteditable>
+							while ( EXPRESSION ){
+
+								RUN CODE...
+
+							}
+							</code>
+						</pre> 
+						<p><small>While some <strong class="colorful">EXPRESSION</strong> evaluates to <strong>TRUE</strong> run the { code }</small></p>
+					</section>
+				</section>
+
+				<!-- REF :: BACKGROUNDS + VIDEOS -->
+				<!--
+				<section>
+					<section data-background="#dddddd">
+						<h2>Slide Backgrounds</h2>
+						<p>
+							Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
+						</p>
+						<a href="#" class="navigate-down">
+							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+						</a>
+					</section>
+					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
+						<h2>Image Backgrounds</h2>
+						<pre><code class="hljs">&lt;section data-background="image.png"&gt;</code></pre>
+					</section>
+					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
+						<h2>Tiled Backgrounds</h2>
+						<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
+					</section>
+					<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
+						<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+							<h2>Video Backgrounds</h2>
+							<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
+						</div>
+					</section>
+					<section data-background="http://i.giphy.com/90F8aUepslB84.gif">
+						<h2>... and GIFs!</h2>
+					</section>
+				</section>
+				-->
+
+				<!-- TABULAR TABLES -->
+				<!--
+				<section>
+					<h2>Tabular Tables</h2>
+					<table>
+						<thead>
+							<tr>
+								<th>Item</th>
+								<th>Value</th>
+								<th>Quantity</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Apples</td>
+								<td>$1</td>
+								<td>7</td>
+							</tr>
+							<tr>
+								<td>Lemonade</td>
+								<td>$2</td>
+								<td>18</td>
+							</tr>
+							<tr>
+								<td>Bread</td>
+								<td>$3</td>
+								<td>2</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+				-->
+
+			</div>
+
+		</div>
+
+		<script src="../libs/revealjs/lib/js/head.min.js"></script>
+		<script src="../libs/revealjs/js/reveal.js"></script>
+
+		<script>
+
+			/* SHA */
+			Reveal.configure({
+				keyboard: {
+					// Key: 'e'
+				    69: function(){
+				    	/*
+				    	IF NOT EXIST
+							<PRE>.insertAdjacentHTML('afterend', code);
+						EVALUATE 
+							eval( <PRE>.textContent )
+						*/
+				    }
+				  }
+			});
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: '../libs/revealjs/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../libs/revealjs/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../libs/revealjs/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../libs/revealjs/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../libs/revealjs/plugin/search/search.js', async: true },
+					{ src: '../libs/revealjs/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../libs/revealjs/plugin/notes/notes.js', async: true }
+				]
+			});
+
+			/* SHA */
+			Reveal.addEventListener( 'evaluation', function() {
+				console.log( 'Evaluation!' );
+			});
+		</script>
+
+	</body>
+</html>
