@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
+
 img.tts_logo {
 	
 	background-color: #bd2b39 !important;
@@ -7,3 +9,17 @@ img.tts_logo {
 	padding   : 20px;
 
 }
+
+h1, h2, h3, h4, h5, h6 {
+
+	font-family: 'Montserrat', sans-serif;
+
+}
+
+h1.big, h2.big, h3.big, h4.big, h5.big, h6.big {
+
+	font-weight: 700;
+
+}
+
+h3.big { font-size: 3em; }
