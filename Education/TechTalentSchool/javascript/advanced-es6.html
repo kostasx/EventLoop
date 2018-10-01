@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>TechTalentSchool | Advanced JavaScript - Part II</title>
+		<meta name="author" content="Kostas Minaidis">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<!-- Bulma.io | https://cdnjs.com/libraries/bulma -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+
+	  <link rel="stylesheet" href="../libs/reveal.js/css/reveal.css">
+	  <link rel="stylesheet" href="../libs/reveal.js/css/theme/black-tts.css" id="theme">
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css">
+		<!-- Roboto | Google Web Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../libs/reveal.js/lib/css/monokai-sublime-sha.css">
+		<link rel="stylesheet" href="../css/reveal-overrides.css">
+		<link rel="stylesheet" href="../css/reveal-tts.css">
+
+		<style>
+			a.full-anchor {
+				position: fixed;
+				top     : -50%;
+				left    : -50%;
+				width   : 200vw;
+				height  : 200vh;
+				text-indent: -50000px;
+			}
+			.reveal .slide-background {
+			    background-size: contain;
+			}
+			.svg_contain svg {
+				position:absolute;
+				top     :0;
+				left    :0;
+				width   :100%;
+				height  :auto;"				
+			}
+   		</style>
+	</head>
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<!-- Alt+Click | Zoom -->
+				<!-- S | Speaker View -->
+				<!-- B or . | Pause View -->
+
+				<!-- INTRO -->
+				<section>
+					<h2>Advanced JavaScript - Part II</h2>
+					<h3 class="colorful">Front-end Bootcamp</h3>
+					<p>
+						<small>Created by <a href="https://github.com/kostasx">Kostas Minaidis</a> | Sep 2018</small>
+					</p>
+					<p>
+						<img 
+							style="width:140px; height:94px;" 
+							class="tts_logo" 
+							src="../img/tts-logo.png" 
+							alt="">
+					</p>
+				</section>
+
+				<!-- Agenta -->
+				<section>
+					<h3>Agenta</h3>
+					<p class="small">Mostly ES6...</p>
+					<ul style="font-size:0.8em;">
+						<li>JSON</li>
+						<li>fetch() API</li>
+						<li>Arrow Functions</li>
+						<li>Template Literals</li>
+						<li>Async/Await</li>
+						<li>ES6 Classes</li>
+					</ul>
+				</section>
+
+				<!-- JSON --->
+			    <section>
+
+			        <section>
+			            <h1>JSON</h1>
+			            <h4 class="fragment">(<strong class="colorful">J</strong>ava<strong class="colorful">S</strong>cript <strong class="colorful">O</strong>bject <strong class="colorful">N</strong>otation)</h4>
+			            <p class="fragment">A Data Format</p>
+			        </section>
+
+					<!-- What is JSON -->
+					<section>
+					    <h2>What is JSON</h2>
+					    <ul>
+					      <li class="fragment">JSON is a simple &amp; lightweight data-interchange format</li>
+					      <li class="fragment">It is easy for humans to read and write</li>
+					      <li class="fragment">It is easy for machines to parse and generate</li>
+					      <li class="fragment">It is completely language independent and a common web standard</li>
+					    </ul>
+					    <p class="small fragment">
+					        <a href="http://json.org/json-el.html" target="_blank">JSON (Ελληνικά)</a>
+					    </p>
+					</section>
+
+					<!-- JSON Values -->
+			        <section>
+			            <h2>JSON allowed values</h2>
+			            <ul>
+			              <li class="fragment">string</li>
+			              <li class="fragment">number</li>
+			              <li class="fragment">object</li>
+			              <li class="fragment">array</li>
+			              <li class="fragment">boolean</li>
+			              <li class="fragment">null</li>
+			              <li class="fragment"><strike>functions</strike></li>
+			            </ul>
+			        </section>
+
+					<!-- JSON Example -->
+			        <section>
+			            <h2>An example</h2>
+						<pre><code class="hljs" data-trim contenteditable>
+						{
+						  "firstname": "Kostas",
+						  "lastname": "Minaidis",
+						  "address": {
+						    "city": "Athens",
+						    "street": "24, My Street",
+						  },
+						  "isMarried": false,
+						  "hobbies": [
+						    "books",
+						    "coding"
+						  ]
+						}
+						</code></pre>
+			        </section>
+
+					<!-- JSON Stringify -->
+			        <section>
+			            <h2>Convert an object to JSON</h2>
+			            <p>JSON.stringify</p>
+			            <div class="columns">
+			            	<div class="column">
+								<pre><code class="hljs" data-trim contenteditable>
+								const me = {
+								  firstname: 'Kostas',
+								  lastname: 'Minaidis',
+								  address: {
+								    city: 'Athens',
+								    street: '24, My Street',
+								  },
+								  isMarried: false,
+								  hobbies: [
+								    "books", "coding"
+								  ]
+								};
+								const meJSON = JSON.stringify(me);
+								console.log(meJSON);
+								</code></pre>
+			            	</div>
+			            	<div class="column">
+								<pre><code class="hljs json" data-trim contenteditable>
+									'{
+									  "firstname": "Kostas",
+									  "lastname": "Minaidis",
+									  "address": {
+									    "city": "Athens",
+									    "street": "24, My Street"
+									  },
+									  "isMarried": false,
+									  "hobbies": [
+									    "books",
+									    "coding"
+									  ]
+									}'
+								</code></pre>
+			            	</div>
+			            </div>
+			            <p class="small">Check: <strong>typeof</strong> me and <strong>typeof</strong> meJSON</p>
+			        </section>
+
+					<!-- JSON Parse -->
+			        <section>
+			            <h2>Convert a JSON to object</h2>
+			            <p>JSON.parse</p>
+			            <div class="columns">
+			            	<div class="column">
+								<pre><code class="hljs" data-trim contenteditable>
+									const meJSON = `{
+									  "firstname": "Kostas",
+									  "lastname": "Minaidis",
+									  "address": {
+									    "city": "Athens",
+									    "street": "24, My Street"
+									  },
+									  "isMarried": false,
+									  "hobbies": [ "books", "coding" ]
+									}`;
+									const me = JSON.parse(meJSON);
+									console.log(me);
+								</code></pre>
+			            	</div>
+			            	<div class="column">
+								<pre><code class="hljs" data-trim contenteditable>
+								{
+								  firstname: 'Kostas',
+								  lastname: 'Minaidis',
+								  address: {
+								    city: 'Athens',
+								    street: '24, My Street',
+								  },
+								  isMarried: false,
+								  hobbies: [
+								    "books", "coding"
+								  ]
+								}
+								</code></pre>
+			            	</div>
+			            </div>
+			            <p class="small">Mention Template literals. Check: <strong>typeof</strong> me and <strong>typeof</strong> meJSON</p>
+			        </section>
+
+			        <!-- JSON Examples Online -->
+			        <section>
+			        	<div class="column">
+			        		<div class="column is-8 is-offset-2">
+				        	<h3>JSON Examples Online</h3>
+				        	<a target="_blank" href="https://jsonplaceholder.typicode.com/posts/1/">JSON Placeholder</a>
+				        	<h2><a target="_blank" href="https://bit.ly/2RfcGCR">https://bit.ly/<span style="color:white;">2RfcGCR</span></a></h2>
+				        	<ul>
+				        		<li class="fragment">1) Open link and Copy the JSON data</li>
+				        		<li class="fragment">2) Open Browser console, declare a variable <strong class="colorful">let json = ...</strong class="colorful"> and paste the copied JSON data as a value.</li>
+				        		<li class="fragment">3) Type <strong class="colorful">json</strong> to get the object contents.</li>
+				        		<li class="fragment">4) Retrieve the object Post title...</li>
+				        	</ul>
+			        		</div>
+			        	</div>
+			        </section>
+
+			        <!-- Custom JSON -->
+			        <section>
+			        	<h3>Create and serve your<br>own sample JSON data</h3>
+			        	<br>
+			        	<div class="columns">
+			        		<div class="column">
+					        	<h2><a target="_blank" href="https://bit.ly/2NbOeiE">https://bit.ly/<span style="color:white;">2NbOeiE</span></a></h2>
+					        	<p class="small">(Server emulation)</p>
+					        	<ul>
+					        		<li>1) Open: <a target="_blank" href="https://bit.ly/2NbOeiE">MyJSON</a></li>
+					        		<li>2) Paste the Code on the left</li>
+					        		<li>3) Copy the JSON URI <p class="small">(<a target="_blank" href="https://api.myjson.com/bins/e6h14">https://api.myjson.com/bins/e6h14</a>)</p></li>
+					        	</ul>
+			        			
+			        		</div>
+			        		<div class="column">
+			        			<pre><code class="hljs" data-trim contenteditable>
+								{
+								  "title": "On the Road",
+								  "author": "Jack Kerouac",
+								  "published": 1957,
+								  "isNovel": true,
+								  "characters": [ "Sal", "Dean" ]
+								}					        				
+			        			</code></pre></li>
+			        		</div>
+			        	</div>
+			        </section>
+
+			        <!-- Recap #1-->
+			        <section>
+			            <h2>JSON Recap</h2>
+			            <h4>Which of these is JSON?</h4>
+			            <p style="color:lightgreen; font-weight: .5em;"> remember JSON is slightly different from Javascript Objects</p>
+			            <div class="columns">
+			            	<div class="column">
+								<pre><code class="hljs" data-trim contenteditable>
+								  {
+								    "firstname": "John",
+								    "lastname": "Tsevdos",
+								    "age": 35,
+								    "address": {
+								      "city": "Athens",
+								      "street": "my street",
+								      "number": 12
+								    }
+								  }
+								</code></pre>
+			            	</div>
+			            	<div class="column">
+								<pre><code class="hljs" data-trim contenteditable>
+								  {
+								    firstname: "John",
+								    lastname: "Tsevdos",
+								    age: 35,
+								    address: {
+								      city: "Athens",
+								      street: "my street",
+								      number: 12
+								    }
+								  }
+								</code></pre>
+			            		
+			            	</div>
+			            </div>
+			        </section>
+
+			        <!-- Recap JSON.parse() -->
+			        <section>
+			            <h2>JSON.parse</h2>
+			            <h4>Takes a JSON string -> Returns a Javascript Object </h4>
+			            <div class="columns">
+			            	<div class="column is-8 is-offset-2">
+								<pre><code data-trim contenteditable>
+								  let a = JSON.parse("{'name':'nick','age':27}");
+								  a
+								  //{
+								  //  name: "nick",
+								  //  age: 27
+								  //}
+								</code></pre>
+			            	</div>
+			            </div>
+			        </section>
+			          
+			        <!-- Recap JSON.stringify() -->
+			        <section>
+			            <h2>JSON.stringify</h2>
+			            <h4>Takes a Javascript Object -> Returns a JSON string </h4>
+			            <h4 style="color: lightgreen; font-weight: .5em">It's the reverse of JSON.parse </h4>
+			            <div class="columns is-centered">
+			            	<div class="column is-8">
+					            <pre><code class="hljs" data-trim contenteditable>JSON.stringify({ name: "nick", age: 27 });</code></pre>
+					            <pre><code class="hljs" data-trim contenteditable>"{'name':'nick','age':27}"</code></pre>
+			            		
+			            	</div>
+			            </div>
+
+			        </section>
+				</section>
+
+				<!-- FETCH -->
+				<section>
+
+					<!-- What is FETCH? -->
+			        <section>
+			          		<div class="columns">
+			          			<div class="column is-8 is-offset-2">
+						            <h2>fetch()</h2>
+						            <ul>
+						              <li class="fragment">fetch API provides a JavaScript interface for making HTTP requests</li>
+						              <li class="fragment">fetch() method provides an easy way to fetch resources asynchronously</li>
+						              <li class="fragment">fetch() is the modern alternative to the old and more complicated AJAX API</li>
+						              <li class="fragment">fetch() method returns a Promise</li>
+						            </ul>
+			          			</div>
+			          		</div>
+			        </section>
+
+					<!-- fetch() Example -->
+					<!-- TODO: Add Copy Functionality button for easily copying and pasting example codes in the console -->
+			        <section>
+			            <h2>fetch example</h2>
+			            <div class="columns">
+			            	<div class="column is-8 is-offset-2">
+					            <p><a href="https://developers.google.com/web/updates/2015/03/introduction-to-fetch" target="_blank">Documentation</a></p>
+								<pre>
+									<code class="hljs multiline" data-trim contenteditable>
+								fetch('https://jsonplaceholder.typicode.com/posts/1/')
+								  </code>
+								  <code class="fragment hljs" data-trim contenteditable>
+								  .then(function(response) {
+								    console.log(response);
+								    return response.json();
+								  })</code>
+								  <code class="fragment hljs" data-trim contenteditable>
+								  .then(function(data) {
+								    console.log(data)
+								  });
+								  </code></pre>
+			            	</div>
+			            </div>
+			        </section>
+
+			    </section>
+
+			    <!-- ASYNC/AWAIT -->
+			    <section>
+			    	<h3>Async/Await</h3>
+			    	<a href="https://javascript.info/async-await" target="_blank">JavaScript.info: Async/Await</a>
+			    	<br>
+			    	<a href="https://www.youtube.com/watch?v=568g8hxJJp4" target="_blank">Async/Await in JavaScript - Fun Fun Function</a>
+			    	<br>
+			    	<hr>
+			    	<a target="_blank" href="https://codepen.io/kostasx/pen/ePNVbx?editors=0011">CodePen Time!</a>
+			    	<br>
+			    	<a target="_blank" href="https://bit.ly/2RfArLi">https://bit.ly/<strong style="color:white;">2RfArLi</strong></a>
+			    </section>
+
+			    <!-- ARROW FUNCTIONS -->
+			    <section>
+
+			    	<h3>Arrow Functions</h3>
+			    	<a href="https://javascript.info/function-expressions-arrows#arrow-functions" target="_blank">JavaScript.info: Arrow Functions</a>
+			    	<br>
+			    	<a href="https://javascript.info/arrow-functions" target="_blank">JavaScript.info: Arrow Functions Revisited</a>
+			    	<hr>
+			    	<a href="https://codepen.io/kostasx/pen/LgVdLb?editors=0010" target="_blank">CodePen Time!</a>
+			    	<br>
+			    	<a target="_blank" href="https://bit.ly/2zIZxLF">https://bit.ly/<strong style="color:white;">2zIZxLF</strong></a>
+			    </section>
+
+		        <!-- PRACTICE: Fetch + JSON Async -->
+				<section data-transition="slide" data-background="#F7BE2C" data-background-transition="zoom">
+					<h2>LET'S CODE!</h2>
+					<a class="black" target="_blank" href="https://bit.ly/2It2pPI">https://bit.ly/<strong>2It2pPI</strong></a>
+					<br>
+					<a class="black" target="_blank" href="https://bit.ly/2y3RLdl">https://bit.ly/<strong>2y3RLdl</strong></a>
+				</section>
+
+				<!-- ES5 Prototypes -->
+				<section>
+					<section>
+						<h3>Prototype and Prototypal Inheritance</h3>
+					</section>
+					<section>
+						<p>
+							<a target="_blank" href="https://blog.bitsrc.io/understanding-javascripts-prototypal-inheritance-354292253bcb">Understanding JavaScript’s Prototypal Inheritance</a>
+						</p>
+						<p>
+						<p>
+							<img src="images/advanced/prototype.png" alt="">
+						</p>
+							<a target="_blank" href="https://codepen.io/kostasx/pen/yRLBaZ?editors=0012">Time for a quick CodePen...</a>
+						</p>
+					</section>
+				</section>
+
+				<!-- ES6 Classes -->
+				<section>
+					<h1>ES6 Classes</h1>
+					<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes">MDN ES6 Classes</a>
+					<br>
+					<p>Time for a CodePen:</p>
+					<a target="_blank" style="font-size:1.6em;" href="https://bit.ly/2Rl0PU6">https://bit.ly/<strong style="color:white;">2Rl0PU6</strong></a>
+				</section>
+
+				<!-- RESOURCES -->
+
+			</div>
+
+		</div>
+
+		<script src="../libs/reveal.js/lib/js/head.min.js"></script>
+		<script src="../libs/reveal.js/js/reveal.js"></script>
+
+		<script>
+
+			/* SHA */
+			Reveal.configure({
+				keyboard: {
+					// Key: 'e'
+				    69: function(){
+				    	/*
+				    	IF NOT EXIST
+							<PRE>.insertAdjacentHTML('afterend', code);
+						EVALUATE 
+							eval( <PRE>.textContent )
+						*/
+				    }
+				  }
+			});
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+
+			    width: '100%',
+			    height: '100%',
+
+				history: true,
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: '../libs/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../libs/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../libs/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../libs/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../libs/reveal.js/plugin/search/search.js', async: true },
+					{ src: '../libs/reveal.js/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../libs/reveal.js/plugin/notes/notes.js', async: true }
+				]
+			});
+
+			/* SHA */
+			Reveal.addEventListener( 'evaluation', function() {
+				console.log( 'Evaluation!' );
+			});
+		</script>
+
+	</body>
+</html>
