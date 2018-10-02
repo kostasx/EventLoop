@@ -495,31 +495,31 @@
 					<section>
 						<p><small>Array.filter() Under the hood...</small></p>
 						<pre class="fragment fade-up"><code class="hljs" data-trim contenteditable>
-						let ages = [ 15, 22, 44, 54 ];
-						function test( element ){ 
-						  return ( element > 18 && element < 50 ); 
+						let ages = [ 15, 22, 44, 11 ];
+						function isAdult( age ){ 
+						  return ( age > 18 ); 
 						}
-						let passed = ages.filter( test );
+						let passed = ages.filter( isAdult );
 						</code></pre> 
 						
 						<p class="fragment"><small>
-						[ <strong class="colorful">15</strong>, 22, 44, 54 ]<br/>
-						<span class="fragment">test( <strong class="colorful">15</strong> );</span> <span class="fragment"> <span class="hljs-comment">--></span> ( 15 > 18 &amp;&amp; 15 < 50) </span><span class="fragment"> <span class="hljs-comment">--></span> false </span><span class="fragment"> <span class="hljs-comment">--></span> <span class="hljs-title">[ ]</span></span>
+						[ <strong class="colorful">15</strong>, 22, 44, 11 ]<br/>
+						<span class="fragment">test( <strong class="colorful">15</strong> );</span> <span class="fragment"> <span class="hljs-comment">--></span> ( 15 > 18 ) </span><span class="fragment"> <span class="hljs-comment">--></span> false </span><span class="fragment"> <span class="hljs-comment">--></span> <span class="hljs-title">[ ]</span></span>
 						</small></p>
 
 						<p class="fragment"><small>
-						[ 15, <strong class="colorful">22</strong>, 44, 54 ]<br/>
-						<span class="fragment">test( <strong class="colorful">22</strong> );</span> <span class="fragment"> <span class="hljs-comment">--></span> ( 22 > 18 &amp;&amp; 22 < 50) </span><span class="fragment"> <span class="hljs-comment">--></span> true </span><span class="fragment"> <span class="hljs-comment">--></span> <span class="hljs-title">[ 22 ]</span></span>
+						[ 15, <strong class="colorful">22</strong>, 44, 11 ]<br/>
+						<span class="fragment">test( <strong class="colorful">22</strong> );</span> <span class="fragment"> <span class="hljs-comment">--></span> ( 22 > 18 ) </span><span class="fragment"> <span class="hljs-comment">--></span> true </span><span class="fragment"> <span class="hljs-comment">--></span> <span class="hljs-title">[ 22 ]</span></span>
 						</small></p>
 
 						<p class="fragment"><small>
-						[ 15, 22, <strong class="colorful">44</strong>, 54 ]<br/>
-						<span class="fragment">test( <strong class="colorful">44</strong> );</span> <span class="fragment"> <span class="hljs-comment">--></span> ( 44 > 18 &amp;&amp; 44 < 50) </span><span class="fragment"> <span class="hljs-comment">--></span> true </span><span class="fragment"> <span class="hljs-comment">--></span> <span class="hljs-title">[ 22, 44 ]</span></span>
+						[ 15, 22, <strong class="colorful">44</strong>, 11 ]<br/>
+						<span class="fragment">test( <strong class="colorful">44</strong> );</span> <span class="fragment"> <span class="hljs-comment">--></span> ( 44 > 18 ) </span><span class="fragment"> <span class="hljs-comment">--></span> true </span><span class="fragment"> <span class="hljs-comment">--></span> <span class="hljs-title">[ 22, 44 ]</span></span>
 						</small></p>
 
 						<p class="fragment"><small>
-						[ 15, 22, 44, <strong class="colorful">54</strong> ]<br/>
-						<span class="fragment">test( <strong class="colorful">54</strong> );</span> <span class="fragment"> <span class="hljs-comment">--></span> ( 54 > 18 &amp;&amp; 54 < 50) </span><span class="fragment"> <span class="hljs-comment">--></span> false </span><span class="fragment"> <span class="hljs-comment">--></span> <span class="hljs-title">[ 22, 44 ]</span></span>
+						[ 15, 22, 44, <strong class="colorful">11</strong> ]<br/>
+						<span class="fragment">test( <strong class="colorful">54</strong> );</span> <span class="fragment"> <span class="hljs-comment">--></span> ( 54 > 18 ) </span><span class="fragment"> <span class="hljs-comment">--></span> false </span><span class="fragment"> <span class="hljs-comment">--></span> <span class="hljs-title">[ 22, 44 ]</span></span>
 						</small></p>
 					</section>
 
