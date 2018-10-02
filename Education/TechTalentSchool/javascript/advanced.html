@@ -475,19 +475,19 @@
 						<h3>Array<strong class="colorful">.filter( test)</strong></h3>
 						<p><small>Runs the custom <strong class="colorful">test</strong> function for all Array elements.<br/>Creates a new Array with all the elements that passed the test function.</small></p>
 						<pre class="fragment fade-up"><code class="hljs" data-trim contenteditable>
-						let ages = [ 15, 22, 23, 44, 54, 18, 36 ];
+						let ages = [ 15, 22, 23, 44, 11, 18 ];
 						</code></pre> 
 						<pre class="fragment fade-up"><code class="hljs" data-trim contenteditable>
-						function test( element ){
-						  return ( element > 18 && element < 50 ); 
+						function isAdult( age ){
+						  return ( age > 18 ); 
 						}
 						</code></pre> 
 						<pre class="fragment fade-up"><code class="hljs" data-trim contenteditable>
-						let passed = ages.filter( test );
+						let passed = ages.filter( isAdult );
 						</code>
 						</pre> 
 						<pre class="fragment fade-up"><code class="hljs" data-trim contenteditable>
-						[ 22, 23, 44, 36 ] 
+						[22, 23, 44] // passed 
 						</code></pre> 
 					</section>
 
