@@ -27,3 +27,8 @@ h3.big { font-size: 3em; }
 .reveal strong {
     color: inherit;
 }
+
+.reveal a.bitly_link strong,
+.reveal a.bitly_link {
+	color: white;
+}
