@@ -37,3 +37,5 @@ li p.small {
     padding-top: 0;
     margin-top: 0;
 }
+
+ul.colorful li strong { color: orange; }

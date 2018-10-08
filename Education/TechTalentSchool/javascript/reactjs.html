@@ -220,6 +220,97 @@
 					</section>
 				</section>
 
+				<!-- Code Walkthrough -->
+				<section>
+					<section>
+						<a target="_blank" href="https://codesandbox.io/u/kostasx">Create React App Boilerplate</a>
+						<p class="small">https://codesandbox.io/u/kostasx/</p>
+					</section>
+					<section>
+						<a href="https://codesandbox.io/s/ov59rpkloz" target="_blank">Quick Start</a>
+						<pre>
+							<code data-trim contenteditable>
+							import React from 'react';
+							import ReactDOM from 'react-dom';
+
+							// Write code here:
+							let math = <h1>2 + 3 = 2 + 3</h1>;
+
+							ReactDOM.render( math, document.getElementById("app"));
+								
+							</code>
+						</pre>
+						
+					</section>
+					<section>
+						<ul>
+							<li>
+								<a href="#">Basics: Our App</a>
+							</li>
+							<li>
+								<a href="https://codesandbox.io/s/8m7zkjqj0" target="_blank">Basics: JSX</a>
+							</li>
+							<li>
+								<a href="#">Basics: A Component</a>
+							</li>
+							<li>
+								<a href="#">Basics: Component Props</a>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<a href="#">Basics: Component State</a>
+						<p class="small">2 ways to initialize: </p>
+						<p class="small"><strong>state = {...}</strong> directly inside the class
+						</p><p class="small">Write a constructor and use <strong>this.state = { ... }</strong></p>
+					</section>
+					<section>
+						<a href="#">Basics: Component Event Handlers</a>
+						<p class="small">Take care of your class binding:</p>
+						<p class="small">
+							(1) Constructor <strong>this.method.bind(this)</strong>
+						</p>
+						<p class="small">
+							(2) <strong>method = ()=> { ... }</strong>
+						</p>
+						<p class="small">Events: <strong>onClick</strong>, <strong>onMouseOver</strong></p>
+					</section>
+					<section>
+						<ul>
+							<li>
+								<a href="">Component Lifecycle</a>
+								<p class="small"></p>
+							</li>
+						</ul>
+					</section>
+				</section>
+
+				<!-- GOTCHAS -->
+				<section>
+					<h3>React Gotchas</h3>
+					<ul class="colorful">
+						<li>Self-closing JSX</li>
+						<li>Using <strong>class</strong> instead of <strong>className</strong></li>
+						<li>You cannot inject an <strong>if</strong> statement into a JSX expressions
+							<p class="small">Use <strong>logical operators: &amp;&amp;, ||</strong> or <strong>ternary operators: ( condition ) ? then : else ;</strong></p>
+						</li>
+					</ul>
+
+				</section>
+
+				<!-- RESOURCES -->
+				<section>
+					<h6>Resources</h6>
+					<ul>
+						<li>
+							<a target="_blank" href="https://www.codecademy.com/courses/react-101/">Codecademy: Learn React.JS</a>
+						</li>
+						<li>
+							<a href="https://wsvincent.com/react-counter/" target="_blank">React Counter Button Exercise</a>
+						</li>
+					</ul>
+				</section>
+
 			</div>
 
 		</div>
