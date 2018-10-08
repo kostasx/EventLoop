@@ -79,12 +79,29 @@
 
 				<!-- What is React.JS -->
 				<section>
+
 					<section>
 						<h3>What is React.JS?</h3>
 						<div class="columns">
 							<div class="column is-10 is-offset-1">
 								<p class="fragment">A JavaScript library for building user interfaces using reusable encapsulated <strong>Components</strong> that manage their own <strong>State</strong>.</p>
 								<p class="fragment">It uses the <strong>Virtual DOM</strong> and <strong>JSX</strong> technologies to accomplish that.</p>
+								<p class="small fragment">React was developed by engineers at Facebook.</p>
+							</div>
+						</div>
+					</section>
+					<section>
+						<p>It is specially for projects which need performant DOM manipulations, like Facebook, AirBnB, etc. where a lot of areas update.</p>
+						<p class="fragment">It is also a way to work by splitting the interface and app features into components.</p>
+					</section>
+					<section>
+						<h3>What the heck is the <strong>VirtualDOM</strong>?</h3>
+						<div class="columns">
+							<div class="column is-8 is-offset-2">
+								<p class="small fragment">Whenever something is needed to be re-rendered, a virtual representation of the updated DOM is generated.</p>
+								<p class="small fragment">The Virtual DOM consists of light representations of elements modeled after the component tree, making the process of generating them much more efficient than generating real DOM elements.</p>
+								<p class="small fragment">Before applying the changes to the real DOM, checks are done to determine where exactly in the component tree the changes happened, a diff is created, and only those specific changes are applied.</p>
+								<p class="small fragment">Source: <a href="https://www.toptal.com/react-native/cold-dive-into-react-native-a-beginners-tutorial" target="_blank">https://www.toptal.com/react-native/cold-dive-into-react-native-a-beginners-tutorial</a></p>
 							</div>
 						</div>
 					</section>
@@ -99,6 +116,25 @@
 					<section>
 						<img src="images/reactjs/components-sketching.jpg" alt="">
 					</section>
+				</section>
+
+				<!-- General Framework Concepts -->
+				<section>
+					<h3>General Front-end Framework Concepts</h3>
+					<div class="columns">
+						<div class="column is-8 is-offset-2">
+							<ul class="colorful" style="font-size: 0.6em;">
+								<li class="fragment"><strong>COMPONENTS:</strong> Split UI into independent, isolated, reusable pieces.</li>
+								<li class="fragment"><strong>PROPS:</strong> Data passed into a COMPONENT</li>
+								<li class="fragment"><strong>STATE:</strong> Private COMPONENT data</li>
+								<li class="fragment"><strong>LIFE CYCLE:</strong> Different forms in which a component can exist: mounted, destroyed, etc. <ul>
+									<li class="fragment"><strong>MOUNT:</strong> constructor, render, componentDidMount</li>
+									<li class="fragment"><strong>UPDATE:</strong> render, componentDidUpdate</li>
+									<li class="fragment"><strong>UNMOUNT:</strong> componentWillUnmount</li>
+								</ul> </li>
+							</ul>
+						</div>
+					</div>
 				</section>
 
 				<!-- create-react-app -->
@@ -131,10 +167,23 @@
 				<!-- Prerequisits: ES6 Object Restructuring, Import/Export -->
 				<section>
 					<section>
+						<h3>Prerequisites:</h3>
+						<div class="columns">
+							<div class="column is-8 is-offset-2">
+								<p>It requires Node.JS and knowledge of ES6</p>
+								<p class="fragment">Do you have node?</p>
+								<pre class="fragment"><code>$ node -v</code></pre>
+							</div>
+						</div>
+					</section>
+
+					<section>
 						<p>Prerequisites:</p>
 						<h3>ES6 <a href="" target="_blank">Import/Export</a><br>&amp; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Object_destructuring" target="_blank">Object Destructuring</a></h3>
 						<h6 class="fragment">A Quick Tour...</h6>
 					</section>
+
+					<!-- Object Destructuring -->
 					<section>
 						<h3><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Object_destructuring">ES6 Object Destructuring</a></h3>
 						<pre>
@@ -150,6 +199,8 @@
 							</code>
 						</pre>
 					</section>
+
+					<!-- ES6 Module -->
 					<section>
 						<h3><a target="_blank" href="https://hackernoon.com/import-export-default-require-commandjs-javascript-nodejs-es6-vs-cheatsheet-different-tutorial-example-5a321738b50f">ES6 Modules</a> | Named Exports</h3>
 						<p class="small">lib.js</p>
@@ -169,7 +220,8 @@
 							import { square, diag } from 'lib';
 							</code>
 						</pre>
-					</section>					<section>
+					</section>					
+					<section>
 						<h3><a target="_blank" href="https://hackernoon.com/import-export-default-require-commandjs-javascript-nodejs-es6-vs-cheatsheet-different-tutorial-example-5a321738b50f">ES6 Modules</a> | Default Exports</h3>
 						<p class="small">(One per module)</p>
 						<p class="small">lib.js</p>
@@ -222,10 +274,13 @@
 
 				<!-- Code Walkthrough -->
 				<section>
+
 					<section>
 						<a target="_blank" href="https://codesandbox.io/u/kostasx">Create React App Boilerplate</a>
 						<p class="small">https://codesandbox.io/u/kostasx/</p>
 					</section>
+
+					<!-- Quick Start -->
 					<section>
 						<a href="https://codesandbox.io/s/ov59rpkloz" target="_blank">Quick Start</a>
 						<pre>
@@ -242,28 +297,41 @@
 						</pre>
 						
 					</section>
+
+					<!-- Basics -->
 					<section>
 						<ul>
 							<li>
-								<a href="#">Basics: Our App</a>
+								<a href="https://codesandbox.io/s/ryrmo90354" target="_blank">Basics: Our App</a>
 							</li>
-							<li>
+							<li class="fragment">
 								<a href="https://codesandbox.io/s/8m7zkjqj0" target="_blank">Basics: JSX</a>
+								<p class="small">Smart Syntax using HTML + JS</p>
 							</li>
-							<li>
+							<li class="fragment">
 								<a href="#">Basics: A Component</a>
+								<p class="small">Reusable Block</p>
 							</li>
-							<li>
-								<a href="#">Basics: Component Props</a>
+							<li class="fragment">
+								<a href="https://codesandbox.io/s/9ynj104m6r" target="_blank">Basics: Component Styling</a>
+								<p class="small">External and Inline CSS Styling. Adding Media.</p>
+							</li>
+							<li class="fragment">
+								<a href="https://codesandbox.io/s/v31woq1xpy" target="_blank">Basics: Component Props</a>
+								<p class="small">Passing data to our Components top-down. (Extras: Children)</p>
 							</li>
 						</ul>
 					</section>
+
+					<!-- Component State -->
 					<section>
 						<a href="#">Basics: Component State</a>
 						<p class="small">2 ways to initialize: </p>
 						<p class="small"><strong>state = {...}</strong> directly inside the class
 						</p><p class="small">Write a constructor and use <strong>this.state = { ... }</strong></p>
 					</section>
+
+					<!-- Event Handlers -->
 					<section>
 						<a href="#">Basics: Component Event Handlers</a>
 						<p class="small">Take care of your class binding:</p>
@@ -275,40 +343,99 @@
 						</p>
 						<p class="small">Events: <strong>onClick</strong>, <strong>onMouseOver</strong></p>
 					</section>
+
+					<!-- Parent/Child Communication & Passing Data from Child Component to Parent Component -->
+					<section>
+						<h6>Passing Data from Child Component<br/>to Parent</h6>
+						<a href="https://codesandbox.io/s/50kzzknv5n" target="_blank">CodeSandbox</a>
+					</section>
+
+					<!-- Component Lifecycle -->
 					<section>
 						<ul>
 							<li>
-								<a href="">Component Lifecycle</a>
-								<p class="small"></p>
+								<a href="https://reactjs.org/docs/react-component.html#the-component-lifecycle" target="_blank">Component Lifecycle</a>
+								<p class="small">Mounting, Updating, Unmounting</p>
+								<a href="https://codesandbox.io/s/v828m8j8x0" target="_blank">CodeSandbox</a>
 							</li>
 						</ul>
 					</section>
 				</section>
 
+				<section>
+					<h3>Hands-on: A Click Counter Button</h3>
+					<a href="https://codesandbox.io/s/k3rm7vx057" target="_blank">Click Counter Button</a>
+				</section>
+
 				<!-- GOTCHAS -->
 				<section>
-					<h3>React Gotchas</h3>
-					<ul class="colorful">
-						<li>Self-closing JSX</li>
-						<li>Using <strong>class</strong> instead of <strong>className</strong></li>
-						<li>You cannot inject an <strong>if</strong> statement into a JSX expressions
-							<p class="small">Use <strong>logical operators: &amp;&amp;, ||</strong> or <strong>ternary operators: ( condition ) ? then : else ;</strong></p>
-						</li>
-					</ul>
+					<section>
+						<h3>React Gotchas</h3>
+						<ul class="colorful">
+							<li>Self-closing JSX</li>
+							<li>A JSX expression must have exactly one outermost element</li>
+							<li>Using <strong>class</strong> instead of <strong>className</strong></li>
+							<li>Using <strong>&lt;label for=""</strong> instead of <strong>&lt; label htmlFor=""</strong></li>
+						</ul>
+					</section>
+					<section>
+						<ul class="colorful">
+							<li>You cannot inject an <strong>if</strong> statement into a JSX expressions
+								<p class="small">Use <strong>logical operators: &amp;&amp;, ||</strong> or <strong>ternary operators: ( condition ) ? then : else ;</strong></p>
+							</li>
+							<li>Changing the state directly via <strong>this.state</strong> instead of <strong>this.setState</strong> </li>
+							<li>Forget to <strong>export</strong> the Component</li>
+						</ul>
+						
+					</section>
 
 				</section>
 
 				<!-- RESOURCES -->
 				<section>
 					<h6>Resources</h6>
-					<ul>
-						<li>
-							<a target="_blank" href="https://www.codecademy.com/courses/react-101/">Codecademy: Learn React.JS</a>
-						</li>
-						<li>
-							<a href="https://wsvincent.com/react-counter/" target="_blank">React Counter Button Exercise</a>
-						</li>
-					</ul>
+					<div class="columns">
+						<div class="column is-8 is-offset-2">
+							
+						<ul class="small">
+							<li>
+								<a target="_blank" href="https://www.codecademy.com/courses/react-101/">Codecademy: Learn React.JS</a>
+							</li>
+							<li>
+								<a href="https://wsvincent.com/react-counter/" target="_blank">React Counter Button Exercise</a>
+							</li>
+							<li>
+								<a target="_blank" href="https://reactjs.org/blog/2016/07/22/create-apps-with-no-configuration.html#getting-started">GETTING STARTED WITH CREATE REACT APP</a>
+							</li>
+							<li>
+								<a target="_blank" href="https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md">CREATE REACT APP GUIDE</a>
+							</li>
+							<li>
+								<a target="_blank" href="https://reactforbeginners.com/">REACT FOR BEGINNERS (Wes Bos)</a>
+							</li>
+							<li>
+								<a target="_blank" href="https://medium.com/@JohnAyeni/how-i-learnt-front-end-frameworks-b275aba18a8b">HOW I LEARNT FRONT-END FRAMEWORKS</a>
+							</li>
+							<li>
+								<a target="_blank" href="https://www.youtube.com/watch?v=Ke90Tje7VS0">REACT | LEARN REACT - REACT CRASH COURSE 2018 - REACT TUTORIAL WITH EXAMPLES</a>
+							</li>
+							<li>
+								<a target="_blank" href="https://reactjs.org/docs/react-component.html">REACT COMPONENT</a>
+							</li>
+							<li>
+								<a target="_blank" href="https://stackoverflow.com/questions/36795819/when-should-i-use-curly-braces-for-es6-import/36796281#36796281">WHEN SHOULD I USE CURLY BRACES FOR ES6 IMPORT? (DIFFERENCE BETWEEN DEFAULT AND NAMED EXPORTS)</a>
+							</li>
+							<li>
+								<a target="_blank" href="https://stackoverflow.com/questions/48308936/what-does-this-react-scripts-eject-command-do#answer-48309071">REACT EJECT</a>
+							</li>
+							<li>
+								<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import">ES6 IMPORTS</a>
+							</li>
+
+						</ul>
+
+						</div>
+					</div>
 				</section>
 
 			</div>
