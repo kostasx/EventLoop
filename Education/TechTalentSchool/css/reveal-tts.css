@@ -32,3 +32,8 @@ h3.big { font-size: 3em; }
 .reveal a.bitly_link {
 	color: white;
 }
+
+li p.small {
+    padding-top: 0;
+    margin-top: 0;
+}

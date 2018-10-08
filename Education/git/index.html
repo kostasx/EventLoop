@@ -1,0 +1,805 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Git Oversimplified | Social Hackers Academy</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Kosmas Pouianou, Kostas Minaidis">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="./libs/revealjs/css/reveal.css">
+		<link rel="stylesheet" href="./libs/revealjs/css/theme/black-sha.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="./libs/revealjs/lib/css/monokai-sublime-sha.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? './libs/revealjs/css/print/pdf.css' : './libs/revealjs/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		<!-- VIMEO -->
+		<script src="https://player.vimeo.com/api/player.js"></script>
+		<!-- 140 Bytes Template Engine -->
+		<script>
+			var render = function(a,b){return a.replace(/\${(\w+)}/ig,function(a,c){return b[c]!=[]._?b[c]:a})}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+		<style>
+			.reveal .block-center {
+				margin: 0 auto;
+			}
+			.reveal img.img-clean {
+				border: none;
+				background: transparent;
+				display: block;
+				box-shadow: none;
+			}
+			.reveal .two_columns {
+				display: flex;
+				justify-content: center;				
+			}
+			.reveal .col_one,
+			.reveal .col_two {
+    			padding: 0 40px;
+			}
+			.reveal .subs .col_one, 
+			.reveal .subs .col_two {
+			    padding: 0 100px;
+			}
+			.reveal .fullclear {
+				margin: 0;
+				padding: 0;
+			}
+			.reveal .font-half {
+				font-size: 0.5em;
+			}
+			.reveal .slides section .fragment.highlight-orange,
+			.reveal .slides section .fragment.highlight-current-orange {
+			  opacity: 1;
+			  visibility: inherit; 
+			}
+
+			.reveal .slides section .fragment.highlight-orange.visible {
+			  color: #F7BE2C; 
+			  color: #df4c37;
+			}
+
+			.reveal .slides section .fragment.highlight-current-orange.current-fragment {
+			  color: #F7BE2C; 
+			  color: #df4c37;
+			}
+			.reveal .lightblue {
+				color: #3ca1e6;
+			}
+			div.reveal.slide.center {
+				background-image: url(img/git-icon.svg);
+				background-position: 110% -10%;
+				background-size: 25%;
+				background-repeat: no-repeat;
+			}
+			.reveal .font-medium {
+				font-size: 0.7em;
+			}
+			/* Git */
+			.reveal a.gitcolor,
+			.reveal span.gitcolor,
+			.reveal strong.gitcolor,
+			.reveal h1.gitcolor,
+			.reveal h2.gitcolor,
+			.reveal h3.gitcolor,
+			.reveal small.gitcolor,
+			.reveal h4.gitcolor,
+			.reveal h5.gitcolor,
+			.reveal p.gitcolor,
+			.reveal h6.gitcolor {
+			  color: #df4c37;
+			}
+			.reveal .git-index { color: #f54d28; }
+			.reveal .git-add { color: #cd9f0c; }
+			.reveal .git-commit { color: #00909a; }
+			.reveal .stage-box {
+				border: 5px solid transparent;
+				padding: 40px 0px;
+			}
+			.reveal .stage-box.git-index { border-color: #f54d28; }
+			.reveal .stage-box.git-add { border-color: #cd9f0c; }
+			.reveal .stage-box.git-commit { border-color: #00909a; }
+		</style>
+		<!-- Bulma.io -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css">
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<!-- INTRO -->
+				<section>
+					<h1>Git 101</h1>
+					<h3 class="gitcolor">A Gentle Introduction to Version Control, Git &amp; GitHub</h3>
+					<p>
+						<small><a style="color:#0388a6;" href="https://github.com/kpouianou">Kosmas Pouianou, Kostas Minaidis</a></small>
+						<br/><small class="font-half">(Instructors at Social Hackers Academy)</small>
+					</p>
+					<p>
+						<small style="opacity: 0.5; font-size:0.3em;">Version 0.1.0 | 26/04/2018</small>
+					</p>
+				</section>
+
+				<!-- TABLE OF CONTENTS [WiP] -->   
+				<section>
+					<h2>Table of Contents</h2>
+					<ul class="small">
+						<li>Version Control</li>
+						<li>Git</li>
+						<li>GitHub</li>
+						<li>Hands-on</li>
+					</ul>
+				</section>
+
+				<!-- WORKING WITHOUT VCS -->
+				<section>
+
+					<!-- What does it mean to work without VCS? -->
+					<section>
+						<h4>Prelude</h4>
+						<h3 class="fragment colorful">What does it mean to work<br/>without Version Control?</h3>
+					</section>
+
+					<!-- Daily Tasks -->
+					<section>
+						<h4>Your Daily Tasks</h4>
+						<p class="fragment"><span class="colorful">Create</span> Things</p>
+						<p class="fragment"><span class="colorful">Save</span> Things</p>
+						<p class="fragment"><span class="colorful">Edit</span> Things</p>
+						<p class="fragment">Save the Things <span class="colorful">Again</span></p>
+					</section>
+
+					<!-- Working without a VCS -->
+					<section data-state="without-vcs">
+
+						<div class="columns">
+						  <div class="column is-4">index.html</div>
+						  <div class="column is-7">style.css</div>
+						 </div>
+
+						<div class="columns">
+						  <div class="column is-4">
+							<svg version="1.1" id="browser-site" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 58 58" style="enable-background:new 0 0 58 58;" xml:space="preserve">
+								<rect style="fill:#ECF0F1;" width="58" height="58"/>
+								<rect style="fill:#546A79;" width="58" height="12"/>
+								<circle style="fill:#ED7161;" cx="6" cy="6" r="3"/>
+								<circle style="fill:#F0C419;" cx="15" cy="6" r="3"/>
+								<circle style="fill:#4FBA6F;" cx="24" cy="6" r="3"/>
+								<rect class="site-sidebar" x="45" y="17" style="fill:#BDC3C7;" width="8" height="36"/>
+								<rect class="site-menu" x="5" y="17" style="fill:#BDC3C7;" width="8" height="36"/>
+								<rect class="site-footer" x="18" y="47" style="fill:#71C285;" width="22" height="6"/>
+								<rect class="site-header" x="18" y="17" style="fill:#71C285;" width="22" height="12"/>
+								<path style="fill:#BDC3C7;" d="M28,34h-9c-0.552,0-1-0.448-1-1s0.448-1,1-1h9c0.552,0,1,0.448,1,1S28.552,34,28,34z"/>
+								<path style="fill:#BDC3C7;" d="M39,38H19c-0.552,0-1-0.448-1-1s0.448-1,1-1h20c0.552,0,1,0.448,1,1S39.552,38,39,38z"/>
+								<path style="fill:#BDC3C7;" d="M39,42H19c-0.552,0-1-0.448-1-1s0.448-1,1-1h20c0.552,0,1,0.448,1,1S39.552,42,39,42z"/>
+								<g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+							</svg>
+						  </div>
+						  <div class="column">&nbsp;</div>
+						  <script id="browser-contents" type="text/template">
+.header {
+
+  background-color: ${headercolor};
+
+}
+
+.footer {
+
+  background-color: ${footercolor};
+
+}
+						  </script>
+						  <div class="column is-7">
+							<pre><code id="browser-code" class="hljs css" data-trim contenteditable>
+								</code></pre>
+						  </div>
+						</div>
+
+						<div class="columns">
+						  <div style="font-size: 0.7em;" data-day="day-monday" class="column fragment grow highlight-orange">
+						    Monday
+						  </div>
+						  <div style="font-size: 0.7em;" data-day="day-tuesday" class="column fragment grow highlight-orange">
+						    Tuesday
+						  </div>
+						  <div style="font-size: 0.7em;" data-day="day-wednesday" class="column fragment grow highlight-orange">
+						    Wednesday
+						  </div>
+						  <div style="font-size: 0.7em;" data-day="day-thursday" class="column fragment grow highlight-orange">
+						    Thursday
+						  </div>
+						  <div style="font-size: 0.7em;" data-day="day-friday" class="column fragment grow highlight-orange">
+						    Friday
+						  </div>
+						</div>
+
+					</section>					
+
+					<section>
+						<h3 class="colorful">No VCS means:</h3>
+						<p class="fragment" style="font-size:0.8em;">No control over our changes. They are permanent.</p>
+						<p class="fragment" style="font-size:0.8em;">We cannot revert to a previous state.</p>
+						<p class="fragment" style="font-size:0.8em;">There is no descriptive history of the changes.</p>
+						<p class="fragment" style="font-size:0.8em;">It is almost impossible to work collaboratively.</p>
+					</section>
+
+				</section>
+
+				<!-- VERSION CONTROL -->
+				<section>
+
+					<!-- What is a Version Control System? -->
+					<section>
+						<h3 class="colorful">Version Control System (VCS)</h3>
+						<p class="fragment font-medium">A system that records changes to a file or set of files<br/>over time so that you can recall specific versions later.</p>
+						<p class="fragment font-medium">A system that enables collaboration:<br/>A Team of people working on one Project, on the same files.</p>
+					</section>
+
+					<!-- Features of VCS -->
+					<section>
+						<p>It allows you to:</p>
+						<ul style="list-style:none;">
+							<li class="fragment"><small>&bull; Revert selected files back to a previous state<br/></small></li>
+							<li class="fragment"><small>&bull; Revert the entire project back to a previous state</small></li>
+							<li class="fragment"><small>&bull; Compare changes over time</small></li>
+							<li class="fragment"><small>&bull; See who last modified something that might be causing a problem</small></li>
+						</ul>
+						<p>
+							<small class="fragment">
+								<strong class="colorful">Using a VCS also generally means that<br/>if you screw things up or lose files, you can easily recover.</strong>
+							</small>
+						</p>
+					</section>
+
+					<!-- Working with a VCS -->
+					<section data-state="with-vcs">
+
+						<p>Version History</p>
+
+						<!-- Days -->
+						<div class="columns">
+						  <div style="font-size: 0.7em;" data-day="day-monday" class="column fragment DISABLEDgrow highlight-orange">
+						    Monday
+						    <pre class="fragment"><code class="hljs css" data-trim contenteditable>header: #ff69b4
+								</code></pre>
+
+						  </div>
+						  <div style="font-size: 0.7em;" data-day="day-tuesday" class="column fragment DISABLEDgrow highlight-orange">
+						    Tuesday
+						    <pre class="fragment"><code class="hljs css" data-trim contenteditable>footer: #185d2c
+								</code></pre>
+						  </div>
+						  <div style="font-size: 0.7em;" data-day="day-wednesday" class="column fragment DISABLEDgrow highlight-orange">
+						    Wednesday
+						    <pre class="fragment"><code class="hljs css" data-trim contenteditable>header: #457aa5, footer: #457aa5
+								</code></pre>
+						  </div>
+						  <div style="font-size: 0.7em;" data-day="day-thursday" class="column fragment DISABLEDgrow highlight-orange">
+						    Thursday
+						    <pre class="fragment"><code class="hljs css" data-trim contenteditable>header: #a57d45
+								</code></pre>
+						  </div>
+						  <div style="font-size: 0.7em;" data-day="day-friday" class="column fragment DISABLEDgrow highlight-orange">
+						    Friday
+						    <pre class="fragment"><code class="hljs css" data-trim contenteditable>header: #457aa5, footer: #ad2222
+								</code></pre>
+						  </div>
+						</div>
+						<div class="columns">
+						  <div class="column is-4">index.html</div>
+						  <div class="column is-7">style.css</div>
+						 </div>
+
+						<div class="columns">
+						  <div class="column is-4">
+							<svg version="1.1" id="vcs-browser-site" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 58 58" style="enable-background:new 0 0 58 58;" xml:space="preserve">
+								<rect style="fill:#ECF0F1;" width="58" height="58"/>
+								<rect style="fill:#546A79;" width="58" height="12"/>
+								<circle style="fill:#ED7161;" cx="6" cy="6" r="3"/>
+								<circle style="fill:#F0C419;" cx="15" cy="6" r="3"/>
+								<circle style="fill:#4FBA6F;" cx="24" cy="6" r="3"/>
+								<rect class="site-sidebar" x="45" y="17" style="fill:#BDC3C7;" width="8" height="36"/>
+								<rect class="site-menu" x="5" y="17" style="fill:#BDC3C7;" width="8" height="36"/>
+								<rect class="site-footer" x="18" y="47" style="fill:#71C285;" width="22" height="6"/>
+								<rect class="site-header" x="18" y="17" style="fill:#71C285;" width="22" height="12"/>
+								<path style="fill:#BDC3C7;" d="M28,34h-9c-0.552,0-1-0.448-1-1s0.448-1,1-1h9c0.552,0,1,0.448,1,1S28.552,34,28,34z"/>
+								<path style="fill:#BDC3C7;" d="M39,38H19c-0.552,0-1-0.448-1-1s0.448-1,1-1h20c0.552,0,1,0.448,1,1S39.552,38,39,38z"/>
+								<path style="fill:#BDC3C7;" d="M39,42H19c-0.552,0-1-0.448-1-1s0.448-1,1-1h20c0.552,0,1,0.448,1,1S39.552,42,39,42z"/>
+								<g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+							</svg>
+						  </div>
+						  <div class="column">&nbsp;</div>
+						  <script id="vcs-browser-contents" type="text/template">
+.header {
+
+  background-color: ${headercolor};
+
+}
+
+.footer {
+
+  background-color: ${footercolor};
+
+}
+						  </script>
+						  <div class="column is-7">
+							<pre><code id="vcs-browser-code" class="hljs css" data-trim contenteditable>
+								</code></pre>
+						  </div>
+						</div>
+
+
+
+					</section>	
+
+					<!-- Daily Tasks with VCS 01 -->
+					<section>
+						<h4>Your Daily Tasks</h4>
+						<p class="fragment"><span class="colorful">Create</span> Things</p>
+						<p class="fragment"><span class="colorful">Save</span> Things</p>
+						<p class="fragment"><span class="colorful">Edit</span> Things</p>
+						<p class="fragment">Save the Things <span class="colorful">Again</span></p>
+					</section>
+
+					<!-- Daily Tasks with VCS 02 -->
+					<section>
+						<h4>Your Daily Tasks</h4>
+						<p style="opacity:0.2;"><span class="colorful">Create</span> Things</p>
+						<p style="opacity:0.2;"><span class="colorful">Save</span> Things</p>
+						<p style="opacity:0.2;"><span class="colorful">Edit</span> Things</p>
+						<p>Save the Things <span class="colorful">Again</span></p>
+						<p style="margin:0;line-height:0;"><small><span class="colorful">^</span></small></p>
+						<small><span class="colorful">VCS comes into play at this stage.</span></small>
+					</section>
+
+					<!-- Version Tracking -->
+					<section>
+						<p>
+							<small><span class="colorful">Version Control Systems</span> keep track of every file change,<br/>and create a Version History <span class="colorful">(Database)</span><br/>from these file changes <span class="colorful">(Versions)</span>.</small>
+						</p>
+						<img style="width:50%;" src="img/LocalVersionControl.png" alt="">
+					</section>
+
+					<!-- History Tracking -->
+					<section>
+						<small><span class="colorful">Version Control Systems</span> allow the user to store<br/>a short descriptive message along with every single change.</small>
+						<img style="width:85%;" src="img/HistoryTracking.jpg" alt="">
+						<small style="font-size:0.5em;">A VCS can tell us who did what and when:<br/><span style="">"On <span class="colorful">April 23</span> the user <span class="colorful">Kostas</span> removed <span class="colorful">lines 30-36</span> from the file <span class="colorful">style.css</span>"</span></small>
+					</section>
+
+				</section>
+
+				<!-- What is Git? -->
+				<section>
+
+					<section>
+						<h3 class="gitcolor">What is Git?</h3>
+						<p class="fragment font-medium">Git is a widely used and very <span class="colorful">popular</span> VCS.</p>
+						<p class="fragment font-medium">It is a tool that we install on our computers and tracks<br/>file changes and keeps a history of them <span class="colorful">(Commits)</span></p>
+						<p class="fragment font-medium">It allows <span class="colorful">multiple users</span> to work<br/>on a Project at the same time.</p>
+						<p class="fragment font-medium"><span class="colorful">No Waiting:</span> Continue working while other people<br/>are working on the same Project at the same time.</p>
+						<p class="fragment font-medium">It supports a powerful feature called: <span class="colorful">Feature Branches.</span></p>
+					</section>
+
+					<!-- Collaboration -->
+					<section>
+						<p>
+							<small><span class="gitcolor">Git</span> is a <span class="colorful">Distributed</span> VCS.</small><br/>
+							<small class="fragment">The Database of changes (Version History) is stored<br/>on a central Server and shared among all users.</small>
+						</p>
+						<img style="width:40%;" src="img/DistributedVCS.png" alt="">
+					</section>
+
+					<!-- Collaborative History Tracking -->
+					<section>
+						<p>
+							<small>The Distributed nature of Git enables us to keep track of<br/>each user's changes and contributions over time.</small>
+						</p>
+						<img style="width:80%;" src="img/CollabHistoryTracking.jpg" alt="">
+					</section>
+
+					<!-- Real Life Example -->
+					<section>
+						<p class="font-medium">A Real Life Example of a Git Workflow in Production</p>
+						<img style="width:80%;" src="img/PlethoraCommits.jpg" alt="">
+					</section>
+
+				</section>
+
+				<!-- How Git Works -->
+				<section>
+
+					<section>
+						<h3 class="gitcolor">How does Git work?</h3>
+					</section>
+
+					<section>
+						<p class="colorful"><strong class="colorful">Step 1</strong></p>
+						<p class="font-medium">In order for Git to start tracking our Project's files<br/>we first have to initialize our Project's folder</p>
+						<p class="fragment font-medium">Go to your Project Directory:<br/><span class="colorful">&gt; cd myProject</span></p>
+						<p class="fragment font-medium">Initialize with Git:<br/><span class="colorful">&gt; git init</span></p>
+						<p class="fragment"><small class="font-half colorful">Git has just created a <span class="colorful">.git</span> folder inside your Project's folder.<br/>All tracking data and information will be stored inside this folder.</small></p>
+						<p class="fragment gitcolor font-medium">That's it! Git can now start tracking all changes.</p>
+					</section>
+
+					<!-- Three Stages of Git -->
+					<section>
+						<h3 class="gitcolor">The Three Stages of Git</h3>
+
+						<div class="columns" style="margin-bottom:0;">
+							<div class="column">
+								<p>
+									<small><span class="git-index">Working Directory</span><br/>Untracked Files</small>
+								</p>
+							</div>
+							<div class="column"></div>
+							<div class="column">
+								<p>
+									<small><span class="git-add">Staging Area</span><br/>Tracked Files</small>
+								</p>
+							</div>
+							<div class="column"></div>
+							<div class="column">
+								<p>
+									<small><span class="git-commit">Git Repository</span><br/>Commited Files<br/>(Version History)</small>
+								</p>
+							</div>
+						</div>
+
+						<div class="columns">
+							<div class="column git-index stage-box">
+								<img style="width:50%;margin:0 auto;" class="img-clean" src="img/css-file.svg" alt="">
+							</div>
+							<div class="column fragment">
+								<small>-- git <span class="git-add">add</span> --&gt;</small>
+							</div>
+							<div class="column fragment git-add stage-box">
+								<img style="width:50%;margin:0 auto;" class="img-clean" src="img/css-file.svg" alt="">
+							</div>
+							<div class="column fragment ">
+								<small>-- git <span class="git-commit">commit</span> --&gt;</small>
+							</div>
+							<div class="column fragment git-commit stage-box">
+								<img style="width:50%;margin:0 auto;" class="img-clean" src="img/css-file.svg" alt="">
+							</div>
+						</div>
+					</section>
+
+					<!-- Three Stages of Git :: Working Directory -->
+					<section>
+						<small>Files in a repository go through three stages<br/>before being under version control with git:</small>
+						<hr>
+
+
+						<div class="columns">
+							<div class="column is-one-quarter">
+								<p>
+									<small><span class="git-index">Working Directory</span></small>
+								</p>
+								<p>
+									<small><span class="git-add">Staging Area</span></small>
+								</p>
+								<p>
+									<small><span class="git-commit">Git Repository</span></small>
+								</p>
+							</div>
+							<div class="column">
+								<p>
+									<small class="font-half">Untracked Files: Files exist but they are not part of Git's version control.</small>
+								</p>
+								<p>
+									<small class="font-half">Tracked Files: Files have been added to Git's version control using the <span class="colorful">git add</span> command but changes have not been commited (stored) yet.</small>
+								</p>
+								<p>
+									<small class="font-half">Commited Files: Changes have been commited using the <span class="colorful">git commit</span> command and are now stored in your Git Repository (Database of changes)</small>
+								</p>
+							</div>
+						</div>
+						<hr>
+						<small>The <span class="colorful">git status</span> command is used to understand<br/>what stage the files in a repository are at.</small>
+					</section>
+
+					<!-- Three Stages of Git :: Video -->
+					<section>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/ihKRRWBVn5k?start=263&end=427" frameborder="0" allowfullscreen></iframe>
+					</section>
+
+					<!-- TODO: GitHub, Remote Servers, Push and Pull -->
+					<!--
+					<section></section>
+					-->
+				</section>
+
+				<!-- WiP: GitHub -->
+				<section>
+					<section>
+						<h3 class="gitcolor">GitHub</h3>
+						<img src="img/RemoveGithubRepo.png" alt="">
+						<small><strong class="colorful">Master</strong> (Local Repo) --&gt; <strong class="colorful">Origin</strong> (Remote Repo)</small>
+					</section>
+
+					<section>
+						<div class="columns">
+							<div class="column">
+								<img src="img/GitRepos.png" alt="">
+							</div>
+							<div class="column">
+								<img src="img/GitReposComic.png" alt="">
+							</div>
+						</div>
+					</section>
+
+					<section>
+						<p>Local / Remote Repo Synchronization</p>
+						<!-- Git #3 - Remember the latest synced version and push your local changes -->
+						<div style="padding:56.25% 0 0 0;position:relative;">
+							<iframe src="https://player.vimeo.com/video/197615572?color=70e5d7&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+							</iframe>
+						</div>
+					</section>
+
+				</section>
+
+				<!-- Setting Up Git and GitHub -->
+				<section data-transition="slide" data-background="#000" data-background-transition="zoom">
+
+					<section>
+						<h3>Enough Theory: Let's Practice!</h3>
+					</section>
+
+					<section>
+						<h4>Prerequisites:</h4>
+						<p class="fragment font-medium">
+							1) Install Git<span class="colorful">*</span> and test that everything is working by running:<br/><span class="colorful">git --version</span>
+							<br/>
+							<a class="font-half" href="https://git-scm.com/download/win">Download for Windows</a><br/>
+							<a class="font-half" href="https://git-scm.com/download/linux">Download for Linux</a><br/>
+							<a class="font-half" href="https://git-scm.com/download/mac">Download for Mac</a><br/>
+						</p>
+						<p class="fragment">2) Create a GitHub Account</p>
+						<p class="fragment"><small><span class="colorful">*Windows: Check Git Bash</span></small></p>
+					</section>
+
+					<section>
+						<p>3) Configure Git</p>
+						<p><span class="colorful">git config --global user.name "Joe"</span></p>
+						<p><span class="colorful">git config --global user.email "your@email.com"</span></p>	
+					</section>
+				</section>
+
+				<!-- Git Hands-on -->
+				<section>
+
+					<section>
+						<h3><span class="gitcolor">Git</span> Hands-On</h3>
+					</section>
+
+					<section>
+						<p>What we'll do...</p>
+						<!-- 3 Stages of Git: Modify, Add, Commit -->
+						<div style="padding:56.25% 0 0 0;position:relative;">
+							<iframe src="https://player.vimeo.com/video/195333943?color=70e5d7&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+							</iframe>
+						</div>
+					</section>
+
+					<section>
+						<h3>[ Demo Session ]</h3>
+					</section>
+
+				</section>
+
+				<section>
+					<h3>Let's <span class="colorful">Try Git</span></h3>
+					<a href="https://try.github.io/levels/1/challenges/1">Click Here.</a>
+				</section>
+
+				<!-- Terminology -->
+				<section>
+					<p class="font-half">
+						<span class="colorful">Commit(s):</span> Git's way of saving (changes) into its History of Changes Database.
+					</p>
+					<p class="font-half"><span class="colorful">Repository (Repo) / Project:</span> All Changes are tracked here</p>
+					<p class="font-half">
+						<span class="colorful">Staging (Area):</span> Control what gets Commited.
+					</p>
+					<p class="font-half"><span class="colorful">Working Directory:</span> Where our Project lives</p>
+					<!-- TODO -->
+					<!-- 
+						Working Tree: What we see in our folder
+						HEAD: Local Repository
+						origin: Remote Repository
+					-->
+				</section>
+
+				<!-- TODO: Git Commands -->
+				<!--
+				<section>
+
+					<h4>Git Commands Cheatsheet</h4>
+				</section>
+				-->
+
+				<!-- RESOURCES -->
+				<section>
+					<p>References and Sources:</p>
+					<p class="font-half">
+						<a href="https://www.atlassian.com/git/tutorials/what-is-version-control">&bull; Atlassian Git Tutorial: What is Version Control</a>
+						<br/>
+						<a href="https://github.com/SocialHackersCodeSchool/working-with-git/blob/master/working_with_git.md">&bull; Working With Git</a>
+						<br/>
+						<a href="https://tutorialzine.com/2016/06/learn-git-in-30-minutes">Learn Git in 30 Minutes</a>
+						<br/>
+						<a href="http://archaeogeek.github.io/foss4gukdontbeafraid/git/stages.html">&bull; The three stages of Git</a>
+						<br/>
+						<a href="https://www.youtube.com/watch?v=ihKRRWBVn5k">&bull; Git Tutorial for Beginners: 4 Git Concepts and Architecture</a>
+						<br/>
+						<a href="https://maryrosecook.com/blog/post/git-from-the-inside-out">&bull; Mary Rose Cook: Git from the inside out</a>
+						<br/>
+						<a href="https://githowto.com/">&bull; GitHowTo: A guided tour through the fundamentals of Git.</a>
+						<br/>
+						<a href="https://marklodato.github.io/visual-git-guide/index-en.html">&bull; A Visual Git Reference</a>
+						<br/>
+						<a href="https://learngitbranching.js.org">&bull; Learn Git Branching</a>
+						<br/>
+						<a href="https://agripongit.vincenttunru.com/">&bull; A Grip On Git: A Simple, Visual Git Tutorial</a>
+					</p>
+				</section>
+
+				<!-- FINALE -->
+				<section>
+					<p>That's all Folks!</p>
+				</section>
+
+
+			</div>
+
+		</div>
+
+		<script src="./libs/revealjs/lib/js/head.min.js"></script>
+		<script src="./libs/revealjs/js/reveal.js"></script>
+
+		<script>
+
+			/* SHA */
+			Reveal.configure({
+				keyboard: {
+					// Key: 'e'
+				    69: function(){
+				    	/*
+				    	IF NOT EXIST
+							<PRE>.insertAdjacentHTML('afterend', code);
+						EVALUATE 
+							eval( <PRE>.textContent )
+						*/
+				    }
+				  }
+			});
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: './libs/revealjs/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: './libs/revealjs/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: './libs/revealjs/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: './libs/revealjs/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: './libs/revealjs/plugin/search/search.js', async: true },
+					{ src: './libs/revealjs/plugin/zoom-js/zoom.js', async: true },
+					{ src: './libs/revealjs/plugin/notes/notes.js', async: true }
+				]
+			});
+
+			/* SHA */
+			Reveal.addEventListener( 'evaluation', function() {
+				console.log( 'Evaluation!' );
+			});
+
+			let highlightCSS = function(){
+
+				let contents = document.querySelector("#browser-contents").textContent;
+				let VCScontents = document.querySelector("#browser-contents").textContent;
+					contents = render(contents, { 'headercolor': '#71C285', 'footercolor': '#71C285' });
+					VCScontents = render(VCScontents, { 'headercolor': '#71C285', 'footercolor': '#71C285' });
+				let css = document.querySelector("#browser-code");
+				let VCScss = document.querySelector("#vcs-browser-code");
+				css.textContent = contents;
+				VCScss.textContent = VCScontents;
+				hljs.highlightBlock(css);
+				hljs.highlightBlock(VCScss);
+
+			}
+
+			window.addEventListener("load",function(){
+				highlightCSS();
+			});
+
+			Reveal.addEventListener( 'without-vcs', function( event ) {
+				highlightCSS();
+			});
+
+			Reveal.addEventListener( 'with-vcs', function( event ) {
+				// highlightCSS();
+			});
+
+			let changeDaysColors = function(selector, contentsSelector, codeSelector){
+
+				let $browserSite = document.querySelector(selector);
+				let day = event.fragment.getAttribute('data-day');
+				let contents = document.querySelector(contentsSelector).textContent;
+				let css = document.querySelector(codeSelector);
+
+				let changeColor = function(colors){
+
+					contents = render(contents, { 'headercolor': colors.header, 'footercolor': colors.footer });
+					css.textContent = contents;
+					hljs.highlightBlock(css);
+					window.poop = document.querySelector(selector + " .site-header");
+					document.querySelector(selector + " .site-header").style.fill = colors.header;
+					document.querySelector(selector + " .site-footer").style.fill = colors.footer;
+				}
+
+				if ( day ){
+
+					day = day.replace('day-','');
+					switch (day){
+						case "monday":
+						 changeColor({ header: '#ff69b4', footer: '#71C285' });
+						 break;
+						case "tuesday":
+						 changeColor({ header: '#ff69b4', footer: '#185d2c' });
+						 break;
+						case "wednesday":
+						 changeColor({ header: '#457aa5', footer: '#457aa5' });
+						 break;
+						case "thursday":
+						 changeColor({ header: '#a57d45', footer: '#457aa5' });
+						 break;
+						case "friday":
+						 changeColor({ header: '#457aa5', footer: '#ad2222' });
+						 break;
+					}	
+
+				}
+
+			}
+
+			Reveal.addEventListener( 'fragmenthidden', function( event ){});
+			Reveal.addEventListener( 'fragmentshown', function( event ){ 
+				changeDaysColors("#browser-site", "#browser-contents", "#browser-code"); 
+				changeDaysColors("#vcs-browser-site", "#vcs-browser-contents", "#vcs-browser-code"); 
+			});
+
+		</script>
+
+	</body>
+</html>

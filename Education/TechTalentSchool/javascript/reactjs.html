@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>TechTalentSchool | JavaScript Frameworks: React.js</title>
+		<meta name="author" content="Kostas Minaidis">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<!-- Bulma.io | https://cdnjs.com/libraries/bulma -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+
+		<link rel="stylesheet" href="../libs/reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="../libs/reveal.js/css/theme/black-tts.css" id="theme">
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css">
+		<!-- Roboto | Google Web Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../libs/reveal.js/lib/css/monokai-sublime-sha.css">
+		<link rel="stylesheet" href="../css/reveal-overrides.css">
+		<link rel="stylesheet" href="../css/reveal-tts.css">
+
+		<style>
+			a.full-anchor {
+				position: fixed;
+				top     : -50%;
+				left    : -50%;
+				width   : 200vw;
+				height  : 200vh;
+				text-indent: -50000px;
+			}
+			.reveal .slide-background {
+			    background-size: contain;
+			}
+			.svg_contain svg {
+				position:absolute;
+				top     :0;
+				left    :0;
+				width   :100%;
+				height  :auto;"				
+			}
+   		</style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<!-- Alt+Click | Zoom -->
+				<!-- S | Speaker View -->
+				<!-- B or . | Pause View -->
+
+				<!-- INTRO -->
+				<section>
+					<h2>JavaScript Frameworks</h2>
+					<img src="images/reactjs/React-icon.svg" width="150" alt="">
+					<h3>React.JS</h3>
+					<p>
+						<small>Created by <a href="https://github.com/kostasx">Kostas Minaidis</a> | Oct 2018</small>
+					</p>
+					<p>
+						<img 
+							style="width:140px; height:94px;" 
+							class="tts_logo" 
+							src="../img/tts-logo.png" 
+							alt="">
+					</p>
+					<small>Front-end Bootcamp</small>
+				</section>
+
+				<!-- What is React.JS -->
+				<section>
+					<section>
+						<h3>What is React.JS?</h3>
+						<div class="columns">
+							<div class="column is-10 is-offset-1">
+								<p class="fragment">A JavaScript library for building user interfaces using reusable encapsulated <strong>Components</strong> that manage their own <strong>State</strong>.</p>
+								<p class="fragment">It uses the <strong>Virtual DOM</strong> and <strong>JSX</strong> technologies to accomplish that.</p>
+							</div>
+						</div>
+					</section>
+					<section>
+						<div class="column">
+							<div class="column is-8 is-offset-2">
+								<h6>Breaking down our Web App<br>into Compontents</h6>
+							</div>
+						</div>
+								<img src="images/reactjs/components-planning.jpg" alt="">
+					</section>
+					<section>
+						<img src="images/reactjs/components-sketching.jpg" alt="">
+					</section>
+				</section>
+
+				<!-- create-react-app -->
+				<section>
+					<h5>Our Tools</h5>
+					<div class="columns">
+						<div class="column is-8 is-offset-2">
+							<ul>
+								<li>
+									<a href="https://github.com/facebook/create-react-app" target="_blank">Create-React-App</a>
+									<p class="small">Create React apps with no build configuration.</p>
+									
+								</li>
+								<li>
+									<a href="https://marketplace.visualstudio.com/items?itemName=burkeholland.simple-react-snippets" target="_blank">Simple React Snippets</a>
+									<p class="small">Package for Visual Studio Code</p>
+									
+								</li>
+								<li>
+									<a href="https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en" target="_blank">React Developer Tools</a>
+									<p class="small">Chrome Extension</p>
+									
+								</li>
+							</ul>
+								
+						</div>
+					</div>
+				</section>
+
+				<!-- Prerequisits: ES6 Object Restructuring, Import/Export -->
+				<section>
+					<section>
+						<p>Prerequisites:</p>
+						<h3>ES6 <a href="" target="_blank">Import/Export</a><br>&amp; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Object_destructuring" target="_blank">Object Destructuring</a></h3>
+						<h6 class="fragment">A Quick Tour...</h6>
+					</section>
+					<section>
+						<h3><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Object_destructuring">ES6 Object Destructuring</a></h3>
+						<pre>
+							<code class="hljs" data-trim contenteditable>
+							var React = { Component: "My Component", Render: "Render!" }
+							var { Component } = React;						
+							</code>
+						</pre>
+						<br>
+						<pre class="fragment">
+							<code class="hljs" data-trim contenteditable>
+							Component; // "My Component"						
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h3><a target="_blank" href="https://hackernoon.com/import-export-default-require-commandjs-javascript-nodejs-es6-vs-cheatsheet-different-tutorial-example-5a321738b50f">ES6 Modules</a> | Named Exports</h3>
+						<p class="small">lib.js</p>
+						<pre>
+							<code class="hljs" data-trim contenteditable>
+							export function square(x) {
+							    return x * x;
+							}
+							export function diag(x, y) {
+							    return sqrt(Math.sqrt(x) + Math.sqrt(y));
+							}
+							</code>
+						</pre>
+						<p class="small">main.js</p>
+						<pre>
+							<code class="hljs" data-trim contenteditable>
+							import { square, diag } from 'lib';
+							</code>
+						</pre>
+					</section>					<section>
+						<h3><a target="_blank" href="https://hackernoon.com/import-export-default-require-commandjs-javascript-nodejs-es6-vs-cheatsheet-different-tutorial-example-5a321738b50f">ES6 Modules</a> | Default Exports</h3>
+						<p class="small">(One per module)</p>
+						<p class="small">lib.js</p>
+						<pre>
+							<code class="hljs" data-trim contenteditable>
+							export default function (){ ... };
+							</code>
+						</pre>
+						<p class="small">main.js</p>
+						<pre>
+							<code class="hljs" data-trim contenteditable>
+							import myFunc from 'myFunc';
+							myFunc();
+							</code>
+						</pre>
+					</section>
+				</section>
+
+				<!-- CRA & CodeSandbox -->
+				<section>
+					<section>
+						<div class="columns">
+							<div class="column is-8 is-offset-2">
+								<h3>Gettings started with<br><strong class="colorful">create-react-app</strong></h3>
+								<pre class="fragment">
+									<code data-trim contenteditable>
+										> npm install create-react-app -g
+									</code>
+								</pre>
+								<pre class="fragment">
+									<code data-trim contenteditable>
+										> create-react-app MyApp
+									</code>
+								</pre>
+								<pre class="fragment">
+									<code data-trim contenteditable>
+										> cd MyApp
+										> npm start
+									</code>
+								</pre>
+							</div>
+						</div>
+					</section>
+					<section>
+						<h5>Let's meet our practice partner:</h5>
+						<h3 class="fragment">CodeSandbox</h3>
+						<a class="fragment" style="font-size:1.6em;" target="_blank" href="https://codesandbox.io/">https://codesandbox.io/</a>
+					</section>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="../libs/reveal.js/lib/js/head.min.js"></script>
+		<script src="../libs/reveal.js/js/reveal.js"></script>
+
+		<script>
+
+			/* SHA */
+			Reveal.configure({
+				keyboard: {
+					// Key: 'e'
+				    69: function(){
+				    	/*
+				    	IF NOT EXIST
+							<PRE>.insertAdjacentHTML('afterend', code);
+						EVALUATE 
+							eval( <PRE>.textContent )
+						*/
+				    }
+				  }
+			});
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+
+				history: true,
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: '../libs/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../libs/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../libs/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../libs/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../libs/reveal.js/plugin/search/search.js', async: true },
+					{ src: '../libs/reveal.js/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../libs/reveal.js/plugin/notes/notes.js', async: true }
+				]
+			});
+
+			/* SHA */
+			Reveal.addEventListener( 'evaluation', function() {
+				console.log( 'Evaluation!' );
+			});
+		</script>
+
+	</body>
+</html>
