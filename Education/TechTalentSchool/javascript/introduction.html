@@ -60,7 +60,17 @@
 			<!-- S | Speaker View -->
 			<!-- B or . | Pause View -->
 
+			<!-- INTRO | TTS -->
+			<section class="tts-title" id="tts-title1" data-state="ttstitle1">
+				<img src="images/tts-titles-js-fundamentals.jpg">
+			</section>
+
+			<section class="tts-title" id="tts-title2" data-state="ttstitle1">
+				<img src="images/tts-titles-joinus.jpg">
+			</section>
+
 			<!-- INTRO -->
+			<!--
 			<section>
 				<h2>JavaScript Fundamentals</h2>
 				<h3 class="colorful">Front-end Bootcamp</h3>
@@ -71,6 +81,7 @@
 					<img style="width:140px; height:94px;" class="tts_logo" src="../img/tts-logo.png" alt="">
 				</p>
 			</section>
+			-->
 
 			<!-- Web Trio -->
 			<section class="svg_contain">
@@ -6840,6 +6851,16 @@
 		Reveal.addEventListener('evaluation', function () {
 			console.log('Evaluation!');
 		});
+
+		/* TTS */
+		Reveal.addEventListener('ttstitle1', function () {
+			console.log('"ttstitle1" has fired');
+		});
+
+		Reveal.addEventListener('ttstitle2', function () {
+			console.log('"ttstitle2" has fired');
+		});
+
 	</script>
 
 </body>
