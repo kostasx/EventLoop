@@ -39,6 +39,15 @@ html(lang='en')
             }
         style.
             #array_recap pre.small { margin-bottom: -8px; }
+        style#tts.
+            .reveal.tts-intro {
+                background-image: url('images/tts-titles-js-advanced.jpg');
+                background-size: cover;
+            }
+            .reveal.tts-outro {
+                background-image: url('images/tts-titles-joinus.jpg');
+                background-size: cover;
+            }
 
     body
 
@@ -49,8 +58,11 @@ html(lang='en')
         .reveal
             .slides
 
+                // TTS | INTRO
+                section#tts-intro.tts-title(data-state='tts-intro' data-transition="fade-out")
+
                 // INTRO
-                section
+                section(data-transition="fade-out")
                     h2 Advanced JavaScript
                     h3.colorful Front-end Bootcamp
                     p
@@ -1033,6 +1045,9 @@ html(lang='en')
                         </li>
                         <li><a href="https://www.youtube.com/watch?v=2d7s3spWAzo" target="_blank">Promises by @mpjme</a></li>
 
+                // TTS | OUTRO 
+                section#tts-outro.tts-title(data-state='outro')
+
         //- SCRIPTS
         script(src='../libs/reveal.js/lib/js/head.min.js')
         script(src='../libs/reveal.js/js/reveal.js')
@@ -1066,4 +1081,59 @@ html(lang='en')
                     { src: '../libs/reveal.js/plugin/zoom-js/zoom.js', async: true },
                     { src: '../libs/reveal.js/plugin/notes/notes.js', async: true }
                 ]
+            });
+
+            //- Reveal.addEventListener('data-state-value-here', function (){});
+
+            Reveal.addEventListener( 'ready', function( e ) {
+
+                let slideState = e.currentSlide.getAttribute('data-state');
+                switch ( slideState ) {
+                    case 'tts-intro':
+                        console.log('tts-intro');
+                        document.querySelector(".reveal").classList.add("tts-intro")
+                        break;
+                    case 'intro':
+                        console.log('intro');
+                        document.querySelector(".reveal").classList.remove("tts-intro")
+                        break;
+                    case 'outro':
+                        console.log('outro');
+                        document.querySelector(".reveal").classList.add("tts-outro")
+                        break;
+                    default:
+                        console.log("default");
+                        document.querySelector(".reveal").classList.remove("tts-outro")
+                        document.querySelector(".reveal").classList.remove("tts-intro")
+
+                }    
+
+            });
+
+            /* TTS */
+
+            Reveal.addEventListener( 'slidechanged', function( e ) {
+
+                let slideState = e.currentSlide.getAttribute('data-state');
+                switch ( slideState ) {
+                    case 'tts-intro':
+                        console.log('tts-intro');
+                        document.querySelector(".reveal").classList.add("tts-intro")
+                        break;
+                    case 'intro':
+                        console.log('intro');
+                        document.querySelector(".reveal").classList.remove("tts-intro")
+                        break;
+                    case 'outro':
+                        console.log('outro');
+                        document.querySelector(".reveal").classList.add("tts-outro")
+                        break;
+                    default:
+                        console.log("default");
+                        document.querySelector(".reveal").classList.remove("tts-outro")
+                        document.querySelector(".reveal").classList.remove("tts-intro")
+
+                }    
+                // event.indexh
+                
             });

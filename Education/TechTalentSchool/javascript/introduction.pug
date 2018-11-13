@@ -1,0 +1,293 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        meta(http-equiv='X-UA-Compatible' content='ie=edge')
+        meta(name='author' content='Kostas Minaidis')
+        meta(name='apple-mobile-web-app-capable' content='yes')
+        meta(name='apple-mobile-web-app-status-bar-style' content='black-translucent')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+
+        link(rel='stylesheet' href='../libs/reveal.js/css/reveal.css')
+        link#theme(rel='stylesheet' href='../libs/reveal.js/css/theme/black-tts.css')
+        link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css')
+        // Roboto | Google Web Fonts
+        link(href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900' rel='stylesheet')
+        // Theme used for syntax highlighting of code
+        link(rel='stylesheet' href='../libs/reveal.js/lib/css/monokai-sublime-sha.css')
+        link(rel='stylesheet' href='../css/reveal-overrides.css')
+        link(rel='stylesheet' href='../css/reveal-tts.css')
+
+        title TechTalentSchool | JavaScript Fundamentals
+
+        style#tts.
+            .reveal.tts-intro {
+                background-image: url('images/tts-titles-js-fundamentals.jpg');
+                background-size: cover;
+            }
+            .reveal.tts-outro {
+                background-image: url('images/tts-titles-joinus.jpg');
+                background-size: cover;
+            }
+
+        style.
+            a.full-anchor {
+                position   : fixed;
+                top        : -50%;
+                left       : -50%;
+                width      : 200vw;
+                height     : 200vh;
+                text-indent: -50000px;
+            }
+            .reveal .slide-background {
+                background-size: contain;
+            }
+            .svg_contain svg {
+                position: absolute;
+                top     : 0;
+                left    : 0;
+                width   : 100%;
+                height: auto;
+            }
+
+    body
+
+        // Alt+Click | Zoom
+        // S | Speaker View
+        // B or . | Pause View
+
+        .reveal
+            .slides
+
+                // TTS | INTRO
+                section#tts-intro.tts-title(data-state='tts-intro' data-transition="fade-out")
+
+                //- INTRO
+                    section
+                    h2 JavaScript Fundamentals
+                    h3.colorful Front-end Bootcamp
+                    p
+                        small
+                        | Created by 
+                        a(href='https://github.com/kostasx') Kostas Minaidis
+                        |  | Sep 2018
+                    p
+                        img.tts_logo(style='width:140px; height:94px;' src='../img/tts-logo.png' alt='')
+
+                section(data-state='intro')
+                    include introduction/introduction.svg
+
+                // WEB TRIO
+                section.svg_contain
+                    include introduction/web-trio.svg
+
+                // HTML
+                section
+                    include introduction/html.svg
+
+                // CSS
+                section
+                    include introduction/css.svg
+
+                // JS
+                section
+                    include introduction/js.svg
+
+                // HTML + CSS + JS
+                section
+                    include introduction/html-css.js.svg
+
+                // CSS INCLUDES
+                section.svg_contain
+                    include introduction/css-includes.svg
+
+                // CSS INCLUDES | External
+                section.svg_contain
+                    include introduction/css-includes-external.svg
+
+                // CSS INCLUDES | Internal
+                section.svg_contain
+                    include introduction/css-includes-internal.svg
+
+                // CSS INCLUDES | Inline
+                section.svg_contain
+                    include introduction/css-includes-inline.svg
+
+                // JS INCLUDES
+                section.svg_contain
+                    include introduction/js-includes.svg
+
+                // JS INCLUDES | External
+                section.svg_contain
+                    include introduction/js-includes-external.svg
+
+                // JS INCLUDES | Internal
+                section.svg_contain
+                    include introduction/js-includes-internal.svg
+
+                // JS INCLUDES | Inline
+                section.svg_contain
+                    include introduction/js-includes-inline.svg
+
+                // JS Proper Placement of <script>
+                section.svg_contain
+                    include introduction/js-includes-best-practices.svg
+
+                // JS INTERPRETER #1
+                section.svg_contain(data-transition="fade-out")
+                        include introduction/js-interpreter.svg
+
+                // JS INTERPRETER #2
+                section.svg_contain(data-transition="fade-out")
+                        include introduction/js-interpreter-002.svg
+
+                // JS INTERPRETER #3
+                section.svg_contain(data-transition="fade-out")
+                        include introduction/js-interpreter-003.svg
+
+                // JS INTERPRETER #4 (I/O)
+                section.svg_contain(data-transition="fade-out")
+                        include introduction/js-interpreter-004.svg
+
+                // JS INTERPRETER #5 (INPUT)
+                section.svg_contain(data-transition="fade-out")
+                        include introduction/js-interpreter-005.svg
+
+                // JS INTERPRETER #6 (DATA MANIPULATION)
+                section.svg_contain(data-transition="fade-out")
+                        include introduction/js-interpreter-006.svg
+
+                // JS INTERPRETER #7 (DATA MANIPULATION II)
+                section.svg_contain(data-transition="fade-out")
+                        include introduction/js-interpreter-007.svg
+
+                // JS INTERPRETER #8 
+                section.svg_contain(data-transition="fade-out")
+                        include introduction/js-interpreter-008.svg
+
+                // JS STATEMENTS 
+                section.svg_contain
+                        include introduction/js-statements.svg
+
+                // JS STATEMENTS (Our first statement)
+                section.svg_contain
+                        include introduction/js-statements-01.svg
+
+                // JS STATEMENTS (Our first statement - II)
+                section.svg_contain
+                        include introduction/js-statements-02.svg
+
+                // JS STATEMENTS (Our first statement - III)
+                section.svg_contain
+                        include introduction/js-statements-03.svg
+
+                // PRIMITIVE DATA TYPES
+                section
+                    section
+                        h3 Primitive Data Types
+                        h5.colorful A real life comparison...
+                    section.svg_contain(data-background='#ffffff' data-transition='fade')
+                        img.plain(src='./introduction/DataTypeTalk-001.svg' alt='')
+                    section.svg_contain(data-background='#ffffff' data-transition='fade')
+                        img.plain(src='./introduction/DataTypeTalk-002.svg' alt='')
+                    section.svg_contain(data-background='#ffffff' data-transition='fade')
+                        img.plain(src='./introduction/DataTypeTalk-003.svg' alt='')
+                    section.svg_contain(data-background='#ffffff' data-transition='fade')
+                        img.plain(src='./introduction/DataTypeTalk-004.svg' alt='')
+                    section.svg_contain(data-background='#ffffff' data-transition='fade')
+                        img.plain(src='./introduction/DataTypeTalk-005.svg' alt='')
+
+                // ARITHMETIC OPERATORS 001
+                // ... 
+
+                // TTS | OUTRO 
+                section#tts-outro.tts-title(data-state='outro')
+
+        //- SCRIPTS
+        script(src='../libs/reveal.js/lib/js/head.min.js')
+        script(src='../libs/reveal.js/js/reveal.js')
+        script.
+            /* SHA */
+            Reveal.configure({
+                keyboard: {
+                // Key: 'e'
+                    69: function () {
+                    /*
+                    IF NOT EXIST
+                    <PRE>.insertAdjacentHTML('afterend', code);
+                    EVALUATE
+                    eval( <PRE>.textContent )
+                    */
+                    }
+                }
+            });
+            // More info https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                history: true,
+                // More info https://github.com/hakimel/reveal.js#dependencies
+                dependencies: [
+                { src: '../libs/reveal.js/lib/js/classList.js', condition: function () { return !document.body.classList; } },
+                { src: '../libs/reveal.js/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: '../libs/reveal.js/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: '../libs/reveal.js/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+                { src: '../libs/reveal.js/plugin/search/search.js', async: true },
+                { src: '../libs/reveal.js/plugin/zoom-js/zoom.js', async: true },
+                { src: '../libs/reveal.js/plugin/notes/notes.js', async: true }
+                ]
+            });
+
+            //- Reveal.addEventListener('data-state-value-here', function (){});
+
+            Reveal.addEventListener( 'ready', function( e ) {
+
+                let slideState = e.currentSlide.getAttribute('data-state');
+                switch ( slideState ) {
+                    case 'tts-intro':
+                        console.log('tts-intro');
+                        document.querySelector(".reveal").classList.add("tts-intro")
+                        break;
+                    case 'intro':
+                        console.log('intro');
+                        document.querySelector(".reveal").classList.remove("tts-intro")
+                        break;
+                    case 'outro':
+                        console.log('outro');
+                        document.querySelector(".reveal").classList.add("tts-outro")
+                        break;
+                    default:
+                        console.log("default");
+                        document.querySelector(".reveal").classList.remove("tts-outro")
+                        document.querySelector(".reveal").classList.remove("tts-intro")
+
+                }    
+
+            });
+
+            /* TTS */
+
+            Reveal.addEventListener( 'slidechanged', function( e ) {
+
+                let slideState = e.currentSlide.getAttribute('data-state');
+                switch ( slideState ) {
+                    case 'tts-intro':
+                        console.log('tts-intro');
+                        document.querySelector(".reveal").classList.add("tts-intro")
+                        break;
+                    case 'intro':
+                        console.log('intro');
+                        document.querySelector(".reveal").classList.remove("tts-intro")
+                        break;
+                    case 'outro':
+                        console.log('outro');
+                        document.querySelector(".reveal").classList.add("tts-outro")
+                        break;
+                    default:
+                        console.log("default");
+                        document.querySelector(".reveal").classList.remove("tts-outro")
+                        document.querySelector(".reveal").classList.remove("tts-intro")
+
+                }    
+                // event.indexh
+                
+            });
