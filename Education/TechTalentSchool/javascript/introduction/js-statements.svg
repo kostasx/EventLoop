@@ -1,0 +1,51 @@
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+    y="0px" width="1024px" height="768px" viewBox="0 0 1024 768" enable-background="new 0 0 1024 768" xml:space="preserve">
+
+    <path fill="none" d="M348.855,472.992c0.063-0.156,0.13-0.315,0.193-0.466C348.98,472.681,348.916,472.82,348.855,472.992z" />
+    <path fill="none" d="M348.377,474.229l0.159-0.407C348.479,473.945,348.427,474.087,348.377,474.229z" />
+    <path fill="none" d="M349.422,471.659c0.076-0.163,0.154-0.325,0.234-0.485C349.591,471.338,349.51,471.497,349.422,471.659z" />
+    <path fill="none" d="M349.994,470.554c0.126-0.239,0.256-0.476,0.389-0.708C350.25,470.078,350.12,470.314,349.994,470.554z" />
+    <path fill="none" d="M351.349,468.248c0.215-0.33,0.436-0.654,0.665-0.976C351.784,467.591,351.563,467.916,351.349,468.248z" />
+    <path fill="none" d="M350.733,469.229c0.109-0.184,0.22-0.365,0.335-0.545C350.953,468.863,350.843,469.045,350.733,469.229z" />
+    <path fill="none" d="M347.939,475.561c0.021-0.086,0.051-0.176,0.075-0.262C347.986,475.385,347.961,475.47,347.939,475.561z" />
+    <path fill="none" d="M347.26,478.246l0.025-0.131L347.26,478.246z" />
+    <path fill="none" d="M347.002,479.75c0.018-0.113,0.035-0.229,0.055-0.347C347.037,479.506,347.02,479.622,347.002,479.75z" />
+    <path fill="none" d="M347.56,476.92l0.095-0.378L347.56,476.92z" />
+    <path fill="none" d="M353.963,464.811c0.187-0.212,0.377-0.408,0.573-0.627C354.34,464.391,354.149,464.599,353.963,464.811z" />
+    <path fill="none" d="M346.727,482.641c0-0.11,0-0.225,0-0.336C346.735,482.416,346.73,482.53,346.727,482.641z" />
+    <path fill="none" d="M352.906,466.073c0.328-0.414,0.67-0.823,1.021-1.223C353.576,465.247,353.234,465.654,352.906,466.073z" />
+    <path fill="none" d="M356.57,462.223c-0.662,0.58-1.297,1.187-1.904,1.827C355.273,463.409,355.908,462.803,356.57,462.223z" />
+    <path fill="none" d="M352.245,466.942c0.147-0.2,0.297-0.399,0.448-0.595C352.543,466.543,352.393,466.742,352.245,466.942z" />
+    <path fill="none" d="M346.836,481.051" />
+    <text transform="matrix(1 0 0 1 224.2485 115.0674)">
+        <tspan x="0" y="0" fill="#F7BE2C" font-family="'Roboto'" font-size="41.9282">JavaScript</tspan>
+        <tspan x="200" y="0" fill="#FFFFFF" font-family="'Roboto'" font-size="41.9282"> statements</tspan>
+    </text>
+    <text transform="matrix(1 0 0 1 217.8057 195.5)">
+        <tspan x="0" y="0" fill="#FFFFFF" font-family="'Roboto'" font-size="24">Statements</tspan>
+        <tspan x="124.453" y="0" fill="#FFFFFF" font-family="'Roboto'" font-size="24">, are code instructions terminated
+            by a semi</tspan>
+        <tspan x="589.055" y="0" fill="#FFFFFF" font-family="'Roboto'" font-size="24">-</tspan>
+        <tspan x="0" y="30" fill="#FFFFFF" font-family="'Roboto'" font-size="24">colon; They are executed one by one, in
+            the same order as </tspan>
+        <tspan x="0" y="60" fill="#FFFFFF" font-family="'Roboto'" font-size="24">they are written:</tspan>
+        <tspan x="0" y="210" fill="#FFFFFF" font-family="'Roboto'" font-size="24"> </tspan>
+        <tspan x="0" y="270" fill="#FFFFFF" font-family="'Roboto'" font-size="24">The main ingredients of statements are:
+        </tspan>
+        <tspan x="430.711" y="270" fill="#FFFFFF" font-family="'Roboto'" font-size="24">Values, </tspan>
+        <tspan x="0" y="300" fill="#FFFFFF" font-family="'Roboto'" font-size="24">Operators, Keywords, Expressions
+        </tspan>
+        <tspan x="369.52" y="300" fill="#FFFFFF" font-family="'Roboto'" font-size="24">and</tspan>
+        <tspan x="414.352" y="300" fill="#FFFFFF" font-family="'Roboto'" font-size="24"> Comments</tspan>
+        <tspan x="538.02" y="300" fill="#FFFFFF" font-family="'Roboto'" font-size="24">.</tspan>
+    </text>
+    <text transform="matrix(1 0 0 1 345.9326 308.8838)">
+        <tspan x="0" y="0" fill="#F7BE2C" font-family="'Hack'" font-size="24">1. doThisFirst();</tspan>
+        <tspan x="0" y="32.64" fill="#F7BE2C" font-family="'Hack'" font-size="24">2. thenThis();</tspan>
+        <tspan x="0" y="65.28" fill="#F7BE2C" font-family="'Hack'" font-size="24">3. andThis();</tspan>
+        <tspan x="0" y="97.92" fill="#F7BE2C" font-family="'Hack'" font-size="24">4. lastlyDoThis();</tspan>
+    </text>
+    <path id="_x38_1BC7163_x5F_start_x5F_arrow_x5F_path_7_" fill="#F7BE2C" d="M280.063,370.811l-14.855-40.159L294.5,330.5
+        L280.063,370.811z" />
+
+</svg>
