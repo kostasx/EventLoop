@@ -8,6 +8,8 @@
 
 }
 
+/* SECTION: INTRO */
+
 section.intro {
 
 	height: 100vh;
@@ -50,6 +52,8 @@ section.intro {
 
 }
 
+/* SECTION: ABOUT */
+
 section.about {
 
 	background-image: url(img/rsz_georgie-cobbs-467923-unsplash.jpg);
@@ -65,6 +69,8 @@ section.about {
 
 }
 
+/* SECTION: JOBS */
+
 section.jobs {
 
 	padding: 100px;
@@ -78,6 +84,8 @@ section.jobs {
 	margin-top : -20px;	
 
 }
+
+/* SECTION: LANGUAGES */
 
 .languages {
 
@@ -131,7 +139,7 @@ section.jobs {
 
 section.contact {
 
-	height: 100vh;
+	/* height: 100vh; */
 	padding: 80px;
 	background-image: url(img-recreate/wov.png);
 }
