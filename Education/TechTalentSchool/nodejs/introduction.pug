@@ -1,0 +1,456 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        meta(http-equiv='X-UA-Compatible' content='ie=edge')
+        meta(name='author' content='Kostas Minaidis')
+        meta(name='apple-mobile-web-app-capable' content='yes')
+        meta(name='apple-mobile-web-app-status-bar-style' content='black-translucent')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+
+        link(rel='stylesheet' href='../css/bulma-columns.css')
+        link(rel='stylesheet' href='../libs/reveal.js/css/reveal.css')
+        link#theme(rel='stylesheet' href='../libs/reveal.js/css/theme/black-tts.css')
+        link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css')
+        // Roboto | Google Web Fonts
+        link(href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900' rel='stylesheet')
+        // Theme used for syntax highlighting of code
+        link(rel='stylesheet' href='../libs/reveal.js/lib/css/monokai-sublime-sha.css')
+        link(rel='stylesheet' href='../css/reveal-tts-white.css')
+
+        title TechTalentSchool | Introduction to Node.JS
+
+        style#tts.
+            .reveal.tts-intro {
+                background-image: url('images/tts-titles-nodejs-introduction.jpg');
+                background-size: cover;
+            }
+            .reveal.tts-outro {
+                background-image: url('images/tts-titles-joinus.jpg');
+                background-size: cover;
+            }
+    body
+
+        // Alt+Click | Zoom
+        // S | Speaker View
+        // B or . | Pause View
+
+        //- Tech Talent School - Node.JS Fundamentals - Part I & II ( 2 x 4h )
+        //-     - Introduction - What is Node.JS?
+        //-     - Installing Node.JS
+        //-     - Our first Hello World Node.JS App
+        //-         - Node REPL
+        //-         - Executing JS Files
+        //-     - Node Modules
+        //-         - What are Node Modules
+        //-         - Create a Module
+        //-         - Loading a Module
+        //-         - Built-in Modules: process
+        //-         - Built-in Modules: fs
+        //-         - Built-in Modules: path
+        //-         - Built-in Modules: os
+        //-         - External Modules & Node Package Manager (npm)
+        //-     - Hello World Server App using the HTTP Module
+        //-     - Developing with Node.JS: nodemon
+        //-     - Creating a basic Web Server
+        //-     - Opening our App to the World via NGROK
+        //-     - Deploying our Node.JS App (Heroku)
+
+        .reveal
+            .slides
+
+                // TTS | INTRO
+                section#tts-intro.tts-title(data-state='tts-intro')
+
+                section.with-tts-right(data-state='intro' data-transition="fade-out")
+                    h3 An Introduction to 
+                    h2 Node.JS
+
+                // TABLE OF CONTENTS
+                section.with-tts-right
+                    h3.colorful Table of Contents
+                    ul
+                        li.small.fragment What is Node.JS?
+                        li.small.fragment Installing Node.JS
+                        li.small.fragment Hello World App
+                        li.small.fragment Node REPL
+                        li.small.fragment Executing JS Files
+                        li.small.fragment Node Modules
+                        li.small.fragment Hello World Server App
+                        li.small.fragment Creating a basic Web Server
+                        li.small.fragment Opening our App to the World
+                        li.small.fragment Deploying (Heroku)
+
+                // INTRODUCTION - WHAT IS NODE.JS?
+                section.with-tts-right
+                    section
+                        h2 What is Node.JS?
+                        .columns
+                            .column.is-8.is-offset-2
+                                p.small.fragment A Runtime Environment to run JavaScript outside the Browser. Think: Server-side JavaScript interpreter.
+
+                                p.small.fragment It uses Chrome's V8 JavaScript engine to compile JS commands into executable code.
+
+                                p.small.fragment It is a free and open source software created in 2009 by Ryan Dahl. 
+                    section
+                        .columns
+                            .column.is-8.is-offset-2
+                                h3 Details
+                                ul
+                                    li.small.fragment It's cross-platform and is mainly used to build backend services (APIs, servers, etc.) and Command line tools.
+                                    li.small.fragment Uses the same JavaScript language that the browser uses, but has access to different context and APIs:
+                                        ul
+                                            li.small.fragment Browser: document, location, window, accelerometer, geolocation, etc. (Browser APIs)
+                                            li.small.fragment Node: fs (file system), os (operating system), http, etc.
+                                    li.small.fragment Node.js has the largest open source library in the world: The NPM.
+
+                // INSTALLING NODE.JS
+                section.with-tts-right
+                    section
+                        h2 Installing Node.JS
+                        .columns
+                            .column.is-8.is-offset-2
+                                p.small.fragment 1) Go to: 
+                                    a(target="_blank" href="https://nodejs.org/en/download/") https://nodejs.org/en/download/
+                                p.small.fragment 2) Download the <strong>LTS</strong> version for your platform and follow the instructions   
+                                p.small.fragment 3) Once installed, open the terminal and check that node has been installed:
+                                pre.fragment
+                                    code.hljs(data-trim contenteditable) $ node --version
+                                p.small.fragment You should see something like this:    
+                                pre.fragment
+                                    code.hljs(data-trim contenteditable) v10.13.0
+                    section
+                        h4 What's the difference between<br/><strong class="colorful">LTS</strong> and <strong class="colorful">Current</strong> version?
+
+                        .columns
+                            .column.is-8.is-offset-2
+                                p.small.fragment <strong class="colorful">LTS</strong>: Stability, rare updates, enterprise-level apps and services, long-term support: 18 months. Better suited for production.
+
+                                p.small.fragment <strong class="colorful">Current/Stable</strong>: Front-end tools, local development, regular updates, new features, performance updates, bug fixes, cutting-edge technologies, etc. Support for approximately 8 months.
+
+                    section
+                        h4 Bottom line?
+                        .columns
+                            .column.is-8.is-offset-2
+                                p.small If you are ready for production, hit for LTS.<br/>Otherwise use Current.
+
+                                h6.small References: 
+                                p.small
+                                    a(href="https://stackoverflow.com/questions/34829167/what-is-the-difference-between-the-lts-version-and-the-stable-version-of-node-js/34830675" target="_blank") What is the difference between the LTS version<br/>and the stable version of node.js?
+                                p.small
+                                    a(target="_blank" href="https://stackoverflow.com/questions/33661274/what-are-the-differences-between-long-term-support-lts-and-stable-versions-of") What are the differences between Long Term Support (LTS) and Stable versions of Node.js?
+
+                // NODE.JS ON THE BROWSER
+                section.with-tts.right
+                    .columns
+                        .column.is-8.is-offset-2
+                            h4 Can't / Don't want to install Node.JS?
+                            p.fragment No problem.<br>Try out Node.JS in the browser!
+                            a.fragment(href="https://repl.it/languages" target="_blank") Repl.it
+                            .linebreak
+                            a.fragment(href="https://runkit.com/" target="_blank") RunKit.com
+
+                // OUR FIRST HELLO WORLD NODE.JS APP
+                section.with-tts-right
+                    section
+                        h4 A simple Node.JS app
+                        .columns
+                            .column.is-8.is-offset-2
+                                pre.fragment
+                                    code.hljs.bash(data-trim contenteditable) $ mkdir app
+                                .linebreak
+                                pre.fragment
+                                    code.hljs.bash(data-trim contenteditable) $ cd app
+                                .linebreak
+                                pre.fragment
+                                    code.hljs.bash(data-trim contenteditable) $ touch app.js
+                                .linebreak
+                                pre.fragment
+                                    code.hljs.javascript(data-trim contenteditable) console.log('Node!');
+                                .linebreak
+                                pre.fragment
+                                    code.hljs.bash(data-trim contenteditable) $ node app.js
+                    section
+                        h4 Gotchas
+                        .columns
+                            .column.is-8.is-offset-2
+                                pre.fragment
+                                    code.hljs.bash(data-trim contenteditable) $ code app.js
+                                .linebreak
+                                pre.fragment
+                                    code.hljs.javascript(data-trim contenteditable) console.log( window );
+                                .linebreak
+                                pre.fragment
+                                    code.hljs.bash(data-trim contenteditable) $ node app.js
+                                .linebreak
+                                pre.fragment
+                                    code.hljs(data-trim contenteditable)  ReferenceError: window is not defined
+                                .linebreak
+                                p.small.fragment We are <strong class="colorful">not</strong> running JS in the browser where the window global object is available.
+                    section
+                        h4 Global Object
+                        .columns
+                            .column.is-8.is-offset-2
+                                p.small.fragment Built-in functions such as <code>setTimeout()</code> are available both on Node.JS and the Browser. 
+                                p.small.fragment On the Browser, these built-in functions are methods of the global <strong class="colorful">window</strong> Object, whereas in Node.js they are methods of the <strong class="colorful">global</strong> object:
+                                pre.fragment
+                                    code.hljs.bash(data-trim contenteditable) window.setTimeout
+                                .linebreak
+                                pre.fragment
+                                    code.hljs.bash(data-trim contenteditable) global.setTimeout
+                                .linebreak
+                                p.small.fragment Unlike the browser's window object, variables are not automatically added to Node.JS <strong class="colorful">global</strong> object.
+                                .linebreak
+                                pre.fragment
+                                    code.hljs.bash(data-trim contenteditable).
+                                        let message = 1;
+                                        global.message == undefined 
+
+                // NODE REPL
+                section.with-tts-right
+                    section
+                        h2 Node REPL
+                        p.fragment Read-Eval-Print-Loop
+                        p.small.fragment Use the Node REPL to test 
+                    section
+                        .columns
+                            .column.is-6.is-offset-3
+                                p Open up your terminal and type 
+                                pre
+                                    code.hljs.bash $ node
+                                .linebreak
+                                pre.fragment
+                                    code.hljs.bash &gt; 4+6
+                                .linebreak
+                                pre.fragment
+                                    code.hljs.bash 10
+                    section
+                        .columns
+                            .column.is-6.is-offset-3
+                                p Basic REPL commands
+                                pre
+                                    code.hljs.bash &gt; .help
+                                .linebreak
+                                pre.fragment
+                                    code.hljs.bash &gt; .exit
+                                .linebreak
+                                pre.fragment
+                                    code.hljs.bash &gt; .break or .clear
+                                .linebreak
+                                pre.fragment
+                                    code.hljs.bash &gt; .editor
+                                .linebreak
+                                pre.fragment
+                                    code.hljs.bash &gt; .save
+                                .linebreak
+                                pre.fragment
+                                    code.hljs.bash &gt; .load
+
+                // NODE MODULES
+                section.with-tts-right
+                    section
+                        h4 Node Modules
+                        .columns
+                            .column.is-8.is-offset-2
+                                p.small.fragment Every file in Node is considered a Module.
+                                pre.fragment
+                                    code.hljs.javascript.
+                                        console.log(module); 
+                                        // NOT a global.module object!
+                                .linebreak
+                                pre.fragment
+                                    code.hljs.javascript.
+                                        Module {
+                                            ...
+                                            exports: {},
+                                            ...
+                                        }
+                                .linebreak
+                                p.small.fragment Module global variables available: exports, require, module, __filename, __dirname
+                                p.small.fragment Think of each JavaScript file a separate Module with its own private scope and context.
+                    section
+                        h4 Code
+                        .columns
+                            .column.is-8.is-offset-2
+                                pre.fragment
+                                    code.hljs.shell $ touch app.js 
+                                .linebreak
+                                pre.fragment
+                                    code.hljs.javascript console.log(module); 
+                                .linebreak
+                                pre.fragment
+                                    code.hljs.shell $ node app.js 
+                    section
+                        h4 3 Types of Modules
+                        .columns
+                            .column.is-8.is-offset-2
+                                p.small.fragment 1) Your own source files
+                                p.small.fragment 2) Core node modules
+                                p.small.fragment 2) Installed dependencies in <code>node_modules/ folder</code>
+
+                // CREATING AND LOADING A MODULE
+                section.with-tts-right
+                    section
+                        h4 Working with Modules:<br/>Creating a Module
+                    section
+                        .columns
+                            .column.is-8.is-offset-2
+                                pre
+                                    code.hljs.bash $ touch logger.js
+                                .linebreak
+                                pre
+                                    code.hljs.javascript.
+                                        let message = "Module";
+
+                                        function log(){ 
+                                            console.log( message );
+                                        }
+
+                                        module.exports.log = log;
+                                .linebreak
+                                p.small Both <code>log</code> and <code>message</code> are scoped into the module and are not available outside the module (file). We try to export only a minimal amount of variables and keep things private in the Module. 
+
+                                p.small We can also export a single value, e.g. a function, instead of an object:
+
+                                pre
+                                    code.hljs.javascript module.exports = log;
+                    section
+                        h4 Working with Modules:<br/>Loading a Module
+
+                // Built-in Modules: process
+                // Built-in Modules: fs
+                // Built-in Modules: path
+                // Built-in Modules: os
+                // External Modules & Node Package Manager (npm)
+                //- package.json
+                //- npm scripts
+                // Hello World Server App using the HTTP Module
+                // Developing with Node.JS: nodemon
+                // Creating a basic Web Server
+
+                // Opening our App to the World via NGROK
+                section(data-background="#ffffff")
+                    h5(style="margin-bottom:0") Opening our App<br/>to the World via NGROK
+                    p.small(style="margin-top:0") Public URLs for demoing from your machine
+                    a(href="https://ngrok.com/" target="_blank" style="color:#666;") https://ngrok.com/
+                    img(src="images/ngrok.jpg")
+
+                // Deploying our Node.JS App (Heroku)
+
+                // RESOURCES
+                section
+                    h4 RESOURCES
+                    .columns
+                        .column.is-8.is-offset-2
+                            ul.mid.black-links
+                                li
+                                    a(href="https://www.youtube.com/watch?v=TlB_eWDSMt4" target="_blank") NODE.JS TUTORIAL FOR BEGINNERS: LEARN NODE IN 1 HOUR
+                                .linebreak
+                                li
+                                    a(href="https://medium.freecodecamp.org/the-definitive-node-js-handbook-6912378afc6e" target="_blank") THE DEFINITIVE NODE.JS HANDBOOK
+                                .linebreak
+                                li
+                                    a(href="https://medium.com/@LindaVivah/the-beginners-guide-understanding-node-js-express-js-fundamentals-e15493462be1" target="_blank") THE BEGINNER’S GUIDE: UNDERSTANDING NODE.JS &amp; EXPRESS.JS FUNDAMENTALS
+                                .linebreak
+                                li
+                                    a(href="https://blog.bloomca.me/2018/07/09/nodejs-repl-in-depth.html" target="_blank") Node.js REPL in Depth
+                                .linebreak
+                                li
+                                    a(href="https://www.npmjs.com/package/javascripting" target="_blank") LEARN JAVASCRIPT BY ADVENTURING AROUND IN THE TERMINAL
+                            pre
+                                code.hljs.bash $ npm install javascripting -g
+                            .linebreak
+                            pre
+                                code.hljs.bash $ javascripting
+
+                // TTS | OUTRO 
+                section#tts-outro.tts-title(data-state='outro' data-transition="fade-out")
+
+        //- SCRIPTS
+        script(src='../libs/reveal.js/lib/js/head.min.js')
+        script(src='../libs/reveal.js/js/reveal.js')
+        script.
+            /* SHA */
+            Reveal.configure({
+                keyboard: {
+                // Key: 'e'
+                    69: function () {
+                    /*
+                    IF NOT EXIST
+                    <PRE>.insertAdjacentHTML('afterend', code);
+                    EVALUATE
+                    eval( <PRE>.textContent )
+                    */
+                    }
+                }
+            });
+            // More info https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                history: true,
+                // More info https://github.com/hakimel/reveal.js#dependencies
+                dependencies: [
+                { src: '../libs/reveal.js/lib/js/classList.js', condition: function () { return !document.body.classList; } },
+                { src: '../libs/reveal.js/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: '../libs/reveal.js/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: '../libs/reveal.js/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+                { src: '../libs/reveal.js/plugin/search/search.js', async: true },
+                { src: '../libs/reveal.js/plugin/zoom-js/zoom.js', async: true },
+                { src: '../libs/reveal.js/plugin/notes/notes.js', async: true }
+                ]
+            });
+
+            //- Reveal.addEventListener('data-state-value-here', function (){});
+
+            Reveal.addEventListener( 'ready', function( e ) {
+
+                let slideState = e.currentSlide.getAttribute('data-state');
+                switch ( slideState ) {
+                    case 'tts-intro':
+                        console.log('tts-intro');
+                        document.querySelector(".reveal").classList.add("tts-intro")
+                        break;
+                    case 'intro':
+                        console.log('intro');
+                        document.querySelector(".reveal").classList.remove("tts-intro")
+                        break;
+                    case 'outro':
+                        console.log('outro');
+                        document.querySelector(".reveal").classList.add("tts-outro")
+                        break;
+                    default:
+                        console.log("default");
+                        document.querySelector(".reveal").classList.remove("tts-outro")
+                        document.querySelector(".reveal").classList.remove("tts-intro")
+
+                }    
+
+            });
+
+            /* TTS */
+
+            Reveal.addEventListener( 'slidechanged', function( e ) {
+
+                let slideState = e.currentSlide.getAttribute('data-state');
+                switch ( slideState ) {
+                    case 'tts-intro':
+                        console.log('tts-intro');
+                        document.querySelector(".reveal").classList.add("tts-intro")
+                        break;
+                    case 'intro':
+                        console.log('intro');
+                        document.querySelector(".reveal").classList.remove("tts-intro")
+                        break;
+                    case 'outro':
+                        console.log('outro');
+                        document.querySelector(".reveal").classList.add("tts-outro")
+                        break;
+                    default:
+                        console.log("default");
+                        document.querySelector(".reveal").classList.remove("tts-outro")
+                        document.querySelector(".reveal").classList.remove("tts-intro")
+
+                }    
+                // event.indexh
+                
+            });

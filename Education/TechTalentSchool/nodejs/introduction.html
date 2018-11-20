@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Kostas Minaidis">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../css/bulma-columns.css">
+    <link rel="stylesheet" href="../libs/reveal.js/css/reveal.css">
+    <link id="theme" rel="stylesheet" href="../libs/reveal.js/css/theme/black-tts.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css">
+    <!-- Roboto | Google Web Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <!-- Theme used for syntax highlighting of code-->
+    <link rel="stylesheet" href="../libs/reveal.js/lib/css/monokai-sublime-sha.css">
+    <link rel="stylesheet" href="../css/reveal-tts-white.css">
+    <title>TechTalentSchool | Introduction to Node.JS</title>
+    <style id="tts">
+      .reveal.tts-intro {
+          background-image: url('images/tts-titles-nodejs-introduction.jpg');
+          background-size: cover;
+      }
+      .reveal.tts-outro {
+          background-image: url('images/tts-titles-joinus.jpg');
+          background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Alt+Click | Zoom-->
+    <!-- S | Speaker View-->
+    <!-- B or . | Pause View-->
+    <div class="reveal">
+      <div class="slides">
+        <!-- TTS | INTRO-->
+        <section class="tts-title" id="tts-intro" data-state="tts-intro"></section>
+        <section class="with-tts-right" data-state="intro" data-transition="fade-out">
+          <h3>An Introduction to </h3>
+          <h2>Node.JS</h2>
+        </section>
+        <!-- TABLE OF CONTENTS-->
+        <section class="with-tts-right">
+          <h3 class="colorful">Table of Contents</h3>
+          <ul>
+            <li class="small fragment">What is Node.JS?</li>
+            <li class="small fragment">Installing Node.JS</li>
+            <li class="small fragment">Hello World App</li>
+            <li class="small fragment">Node REPL</li>
+            <li class="small fragment">Executing JS Files</li>
+            <li class="small fragment">Node Modules</li>
+            <li class="small fragment">Hello World Server App</li>
+            <li class="small fragment">Creating a basic Web Server</li>
+            <li class="small fragment">Opening our App to the World</li>
+            <li class="small fragment">Deploying (Heroku)</li>
+          </ul>
+        </section>
+        <!-- INTRODUCTION - WHAT IS NODE.JS?-->
+        <section class="with-tts-right">
+          <section>
+            <h2>What is Node.JS?</h2>
+            <div class="columns">
+              <div class="column is-8 is-offset-2">
+                <p class="small fragment">A Runtime Environment to run JavaScript outside the Browser. Think: Server-side JavaScript interpreter.</p>
+                <p class="small fragment">It uses Chrome's V8 JavaScript engine to compile JS commands into executable code.</p>
+                <p class="small fragment">It is a free and open source software created in 2009 by Ryan Dahl. </p>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="columns">
+              <div class="column is-8 is-offset-2">
+                <h3>Details</h3>
+                <ul>
+                  <li class="small fragment">It's cross-platform and is mainly used to build backend services (APIs, servers, etc.) and Command line tools.</li>
+                  <li class="small fragment">Uses the same JavaScript language that the browser uses, but has access to different context and APIs:
+                    <ul>
+                      <li class="small fragment">Browser: document, location, window, accelerometer, geolocation, etc. (Browser APIs)</li>
+                      <li class="small fragment">Node: fs (file system), os (operating system), http, etc.</li>
+                    </ul>
+                  </li>
+                  <li class="small fragment">Node.js has the largest open source library in the world: The NPM.</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </section>
+        <!-- INSTALLING NODE.JS-->
+        <section class="with-tts-right">
+          <section>
+            <h2>Installing Node.JS</h2>
+            <div class="columns">
+              <div class="column is-8 is-offset-2">
+                <p class="small fragment">1) Go to: <a target="_blank" href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a></p>
+                <p class="small fragment">2) Download the <strong>LTS</strong> version for your platform and follow the instructions   </p>
+                <p class="small fragment">3) Once installed, open the terminal and check that node has been installed:</p>
+                <pre class="fragment"><code class="hljs" data-trim contenteditable>$ node --version</code></pre>
+                <p class="small fragment">You should see something like this:    </p>
+                <pre class="fragment"><code class="hljs" data-trim contenteditable>v10.13.0</code></pre>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h4>What's the difference between<br/><strong class="colorful">LTS</strong> and <strong class="colorful">Current</strong> version?</h4>
+            <div class="columns">
+              <div class="column is-8 is-offset-2">
+                <p class="small fragment"><strong class="colorful">LTS</strong>: Stability, rare updates, enterprise-level apps and services, long-term support: 18 months. Better suited for production.</p>
+                <p class="small fragment"><strong class="colorful">Current/Stable</strong>: Front-end tools, local development, regular updates, new features, performance updates, bug fixes, cutting-edge technologies, etc. Support for approximately 8 months.</p>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h4>Bottom line?</h4>
+            <div class="columns">
+              <div class="column is-8 is-offset-2">
+                <p class="small">If you are ready for production, hit for LTS.<br/>Otherwise use Current.</p>
+                <h6 class="small">References: </h6>
+                <p class="small"><a href="https://stackoverflow.com/questions/34829167/what-is-the-difference-between-the-lts-version-and-the-stable-version-of-node-js/34830675" target="_blank">What is the difference between the LTS version<br/>and the stable version of node.js?</a></p>
+                <p class="small"><a target="_blank" href="https://stackoverflow.com/questions/33661274/what-are-the-differences-between-long-term-support-lts-and-stable-versions-of">What are the differences between Long Term Support (LTS) and Stable versions of Node.js?</a></p>
+              </div>
+            </div>
+          </section>
+        </section>
+        <!-- NODE.JS ON THE BROWSER-->
+        <section class="with-tts right">
+          <div class="columns">
+            <div class="column is-8 is-offset-2">
+              <h4>Can't / Don't want to install Node.JS?</h4>
+              <p class="fragment">No problem.<br>Try out Node.JS in the browser!</p><a class="fragment" href="https://repl.it/languages" target="_blank">Repl.it</a>
+              <div class="linebreak"></div><a class="fragment" href="https://runkit.com/" target="_blank">RunKit.com</a>
+            </div>
+          </div>
+        </section>
+        <!-- OUR FIRST HELLO WORLD NODE.JS APP-->
+        <section class="with-tts-right">
+          <section>
+            <h4>A simple Node.JS app</h4>
+            <div class="columns">
+              <div class="column is-8 is-offset-2">
+                <pre class="fragment"><code class="hljs bash" data-trim contenteditable>$ mkdir app</code></pre>
+                <div class="linebreak"></div>
+                <pre class="fragment"><code class="hljs bash" data-trim contenteditable>$ cd app</code></pre>
+                <div class="linebreak"></div>
+                <pre class="fragment"><code class="hljs bash" data-trim contenteditable>$ touch app.js</code></pre>
+                <div class="linebreak"></div>
+                <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>console.log('Node!');</code></pre>
+                <div class="linebreak"></div>
+                <pre class="fragment"><code class="hljs bash" data-trim contenteditable>$ node app.js</code></pre>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h4>Gotchas</h4>
+            <div class="columns">
+              <div class="column is-8 is-offset-2">
+                <pre class="fragment"><code class="hljs bash" data-trim contenteditable>$ code app.js</code></pre>
+                <div class="linebreak"></div>
+                <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>console.log( window );</code></pre>
+                <div class="linebreak"></div>
+                <pre class="fragment"><code class="hljs bash" data-trim contenteditable>$ node app.js</code></pre>
+                <div class="linebreak"></div>
+                <pre class="fragment"><code class="hljs" data-trim contenteditable> ReferenceError: window is not defined</code></pre>
+                <div class="linebreak"></div>
+                <p class="small fragment">We are <strong class="colorful">not</strong> running JS in the browser where the window global object is available.</p>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h4>Global Object</h4>
+            <div class="columns">
+              <div class="column is-8 is-offset-2">
+                <p class="small fragment">Built-in functions such as <code>setTimeout()</code> are available both on Node.JS and the Browser. </p>
+                <p class="small fragment">On the Browser, these built-in functions are methods of the global <strong class="colorful">window</strong> Object, whereas in Node.js they are methods of the <strong class="colorful">global</strong> object:</p>
+                <pre class="fragment"><code class="hljs bash" data-trim contenteditable>window.setTimeout</code></pre>
+                <div class="linebreak"></div>
+                <pre class="fragment"><code class="hljs bash" data-trim contenteditable>global.setTimeout</code></pre>
+                <div class="linebreak"></div>
+                <p class="small fragment">Unlike the browser's window object, variables are not automatically added to Node.JS <strong class="colorful">global</strong> object.</p>
+                <div class="linebreak"></div>
+                <pre class="fragment"><code class="hljs bash" data-trim contenteditable>let message = 1;
+global.message == undefined 
+</code></pre>
+              </div>
+            </div>
+          </section>
+        </section>
+        <!-- NODE REPL-->
+        <section class="with-tts-right">
+          <section>
+            <h2>Node REPL</h2>
+            <p class="fragment">Read-Eval-Print-Loop</p>
+            <p class="small fragment">Use the Node REPL to test </p>
+          </section>
+          <section>
+            <div class="columns">
+              <div class="column is-6 is-offset-3">
+                <p>Open up your terminal and type </p>
+                <pre><code class="hljs bash">$ node</code></pre>
+                <div class="linebreak"></div>
+                <pre class="fragment"><code class="hljs bash">&gt; 4+6</code></pre>
+                <div class="linebreak"></div>
+                <pre class="fragment"><code class="hljs bash">10</code></pre>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="columns">
+              <div class="column is-6 is-offset-3">
+                <p>Basic REPL commands</p>
+                <pre><code class="hljs bash">&gt; .help</code></pre>
+                <div class="linebreak"></div>
+                <pre class="fragment"><code class="hljs bash">&gt; .exit</code></pre>
+                <div class="linebreak"></div>
+                <pre class="fragment"><code class="hljs bash">&gt; .break or .clear</code></pre>
+                <div class="linebreak"></div>
+                <pre class="fragment"><code class="hljs bash">&gt; .editor</code></pre>
+                <div class="linebreak"></div>
+                <pre class="fragment"><code class="hljs bash">&gt; .save</code></pre>
+                <div class="linebreak"></div>
+                <pre class="fragment"><code class="hljs bash">&gt; .load</code></pre>
+              </div>
+            </div>
+          </section>
+        </section>
+        <!-- NODE MODULES-->
+        <section class="with-tts-right">
+          <section>
+            <h4>Node Modules</h4>
+            <div class="columns">
+              <div class="column is-8 is-offset-2">
+                <p class="small fragment">Every file in Node is considered a Module.</p>
+                <pre class="fragment"><code class="hljs javascript">console.log(module); 
+// NOT a global.module object!</code></pre>
+                <div class="linebreak"></div>
+                <pre class="fragment"><code class="hljs javascript">Module {
+    ...
+    exports: {},
+    ...
+}</code></pre>
+                <div class="linebreak"></div>
+                <p class="small fragment">Module global variables available: exports, require, module, __filename, __dirname</p>
+                <p class="small fragment">Think of each JavaScript file a separate Module with its own private scope and context.</p>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h4>Code</h4>
+            <div class="columns">
+              <div class="column is-8 is-offset-2">
+                <pre class="fragment"><code class="hljs shell">$ touch app.js </code></pre>
+                <div class="linebreak"></div>
+                <pre class="fragment"><code class="hljs javascript">console.log(module); </code></pre>
+                <div class="linebreak"></div>
+                <pre class="fragment"><code class="hljs shell">$ node app.js </code></pre>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h4>3 Types of Modules</h4>
+            <div class="columns">
+              <div class="column is-8 is-offset-2">
+                <p class="small fragment">1) Your own source files</p>
+                <p class="small fragment">2) Core node modules</p>
+                <p class="small fragment">2) Installed dependencies in <code>node_modules/ folder</code></p>
+              </div>
+            </div>
+          </section>
+        </section>
+        <!-- CREATING AND LOADING A MODULE-->
+        <section class="with-tts-right">
+          <section>
+            <h4>Working with Modules:<br/>Creating a Module</h4>
+          </section>
+          <section>
+            <div class="columns">
+              <div class="column is-8 is-offset-2">
+                <pre><code class="hljs bash">$ touch logger.js</code></pre>
+                <div class="linebreak"></div>
+                <pre><code class="hljs javascript">let message = "Module";
+
+function log(){ 
+    console.log( message );
+}
+
+module.exports.log = log;</code></pre>
+                <div class="linebreak"></div>
+                <p class="small">Both <code>log</code> and <code>message</code> are scoped into the module and are not available outside the module (file). We try to export only a minimal amount of variables and keep things private in the Module. </p>
+                <p class="small">We can also export a single value, e.g. a function, instead of an object:</p>
+                <pre><code class="hljs javascript">module.exports = log;</code></pre>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h4>Working with Modules:<br/>Loading a Module</h4>
+          </section>
+        </section>
+        <!-- Built-in Modules: process-->
+        <!-- Built-in Modules: fs-->
+        <!-- Built-in Modules: path-->
+        <!-- Built-in Modules: os-->
+        <!-- External Modules & Node Package Manager (npm)-->
+        <!-- Hello World Server App using the HTTP Module-->
+        <!-- Developing with Node.JS: nodemon-->
+        <!-- Creating a basic Web Server-->
+        <!-- Opening our App to the World via NGROK-->
+        <section data-background="#ffffff">
+          <h5 style="margin-bottom:0">Opening our App<br/>to the World via NGROK</h5>
+          <p class="small" style="margin-top:0">Public URLs for demoing from your machine</p><a href="https://ngrok.com/" target="_blank" style="color:#666;">https://ngrok.com/</a><img src="images/ngrok.jpg">
+        </section>
+        <!-- Deploying our Node.JS App (Heroku)-->
+        <!-- RESOURCES-->
+        <section>
+          <h4>RESOURCES</h4>
+          <div class="columns">
+            <div class="column is-8 is-offset-2">
+              <ul class="mid black-links">
+                <li><a href="https://www.youtube.com/watch?v=TlB_eWDSMt4" target="_blank">NODE.JS TUTORIAL FOR BEGINNERS: LEARN NODE IN 1 HOUR</a></li>
+                <div class="linebreak"></div>
+                <li><a href="https://medium.freecodecamp.org/the-definitive-node-js-handbook-6912378afc6e" target="_blank">THE DEFINITIVE NODE.JS HANDBOOK</a></li>
+                <div class="linebreak"></div>
+                <li><a href="https://medium.com/@LindaVivah/the-beginners-guide-understanding-node-js-express-js-fundamentals-e15493462be1" target="_blank">THE BEGINNER’S GUIDE: UNDERSTANDING NODE.JS &amp; EXPRESS.JS FUNDAMENTALS</a></li>
+                <div class="linebreak"></div>
+                <li><a href="https://blog.bloomca.me/2018/07/09/nodejs-repl-in-depth.html" target="_blank">Node.js REPL in Depth</a></li>
+                <div class="linebreak"></div>
+                <li><a href="https://www.npmjs.com/package/javascripting" target="_blank">LEARN JAVASCRIPT BY ADVENTURING AROUND IN THE TERMINAL</a></li>
+              </ul>
+              <pre><code class="hljs bash">$ npm install javascripting -g</code></pre>
+              <div class="linebreak"></div>
+              <pre><code class="hljs bash">$ javascripting</code></pre>
+            </div>
+          </div>
+        </section>
+        <!-- TTS | OUTRO -->
+        <section class="tts-title" id="tts-outro" data-state="outro" data-transition="fade-out"></section>
+      </div>
+    </div>
+    <script src="../libs/reveal.js/lib/js/head.min.js"></script>
+    <script src="../libs/reveal.js/js/reveal.js"></script>
+    <script>
+      /* SHA */
+      Reveal.configure({
+          keyboard: {
+          // Key: 'e'
+              69: function () {
+              /*
+              IF NOT EXIST
+              <PRE>.insertAdjacentHTML('afterend', code);
+              EVALUATE
+              eval( <PRE>.textContent )
+              */
+              }
+          }
+      });
+      // More info https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+          history: true,
+          // More info https://github.com/hakimel/reveal.js#dependencies
+          dependencies: [
+          { src: '../libs/reveal.js/lib/js/classList.js', condition: function () { return !document.body.classList; } },
+          { src: '../libs/reveal.js/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+          { src: '../libs/reveal.js/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+          { src: '../libs/reveal.js/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+          { src: '../libs/reveal.js/plugin/search/search.js', async: true },
+          { src: '../libs/reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: '../libs/reveal.js/plugin/notes/notes.js', async: true }
+          ]
+      });
+      
+      //- Reveal.addEventListener('data-state-value-here', function (){});
+      
+      Reveal.addEventListener( 'ready', function( e ) {
+      
+          let slideState = e.currentSlide.getAttribute('data-state');
+          switch ( slideState ) {
+              case 'tts-intro':
+                  console.log('tts-intro');
+                  document.querySelector(".reveal").classList.add("tts-intro")
+                  break;
+              case 'intro':
+                  console.log('intro');
+                  document.querySelector(".reveal").classList.remove("tts-intro")
+                  break;
+              case 'outro':
+                  console.log('outro');
+                  document.querySelector(".reveal").classList.add("tts-outro")
+                  break;
+              default:
+                  console.log("default");
+                  document.querySelector(".reveal").classList.remove("tts-outro")
+                  document.querySelector(".reveal").classList.remove("tts-intro")
+      
+          }    
+      
+      });
+      
+      /* TTS */
+      
+      Reveal.addEventListener( 'slidechanged', function( e ) {
+      
+          let slideState = e.currentSlide.getAttribute('data-state');
+          switch ( slideState ) {
+              case 'tts-intro':
+                  console.log('tts-intro');
+                  document.querySelector(".reveal").classList.add("tts-intro")
+                  break;
+              case 'intro':
+                  console.log('intro');
+                  document.querySelector(".reveal").classList.remove("tts-intro")
+                  break;
+              case 'outro':
+                  console.log('outro');
+                  document.querySelector(".reveal").classList.add("tts-outro")
+                  break;
+              default:
+                  console.log("default");
+                  document.querySelector(".reveal").classList.remove("tts-outro")
+                  document.querySelector(".reveal").classList.remove("tts-intro")
+      
+          }    
+          // event.indexh
+          
+      });
+    </script>
+  </body>
+</html>
