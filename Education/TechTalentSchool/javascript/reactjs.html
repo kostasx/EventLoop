@@ -305,32 +305,51 @@
 
 					<!-- Basics -->
 					<section>
-						<ul>
-							<li>
-								<a href="https://codesandbox.io/s/ryrmo90354" target="_blank">Basics: Our App</a>
-							</li>
-							<li class="fragment">
-								<a href="https://codesandbox.io/s/8m7zkjqj0" target="_blank">Basics: JSX</a>
-								<p class="small">Smart Syntax using HTML + JS</p>
-							</li>
-							<li class="fragment">
-								<a href="#">Basics: A Component</a>
-								<p class="small">Reusable Block</p>
-							</li>
-							<li class="fragment">
-								<a href="https://codesandbox.io/s/9ynj104m6r" target="_blank">Basics: Component Styling</a>
-								<p class="small">External and Inline CSS Styling. Adding Media.</p>
-							</li>
-							<li class="fragment">
-								<a href="https://codesandbox.io/s/v31woq1xpy" target="_blank">Basics: Component Props</a>
-								<p class="small">Passing data to our Components top-down. (Extras: Children)</p>
-							</li>
-						</ul>
+						<a href="https://codesandbox.io/s/ryrmo90354" target="_blank">Basics: Our App</a>
 					</section>
 
+					<!-- Basics JSX -->
+					<section>
+						<a href="https://codesandbox.io/s/8m7zkjqj0" target="_blank">Basics: JSX</a>
+						<div class="columns">
+							<div class="column is-8 is-offset-2">
+								<p class="small">Smart Syntax using HTML + JS</p>
+								<p class="small fragment">JSX elements are treated as JavaScript expressions. They can go anywhere that JavaScript expressions can go.</p>
+								<p class="small fragment">That means that a JSX element can be saved in a variable, passed to a function, stored in an object or array...you name it.</p>
+								<p class="small fragment">If a JSX expression takes up more than one line, then you must wrap the multi-line JSX expression in parentheses.</p>
+							</div>
+						</div>
+					</section>
+
+					<!-- Basics: Components -->
+					<section>
+						<a href="https://codesandbox.io/s/ryrmo90354" target="_blank">Basics: A Component</a>
+						<div class="columns">
+							<div class="column is-8 is-offset-2">
+								<p class="small">Reusable Block</p>
+								<p class="small fragment">A component is a small, reusable chunk of code that is responsible for one job. That job is often to render some HTML. Every component must come from a component class.</p>
+								<p class="small fragment">A component class is like a factory that creates components. If you have a component class, then you can use that class to produce as many components as you want.</p>
+								<p class="small fragment">To make a component class, you use a base class from the React library: <strong>React.Component</strong></p>
+							</div>
+						</div>									
+	
+					</section>
+
+					<!-- Basics: Components II -->
+					<section>
+						<a href="https://codesandbox.io/s/9ynj104m6r" target="_blank">Basics: Component Styling</a>
+						<p class="small">External and Inline CSS Styling. Adding Media.</p>
+					</section>
+
+					<!-- Basics: Components III -->
+					<section>
+						<a href="https://codesandbox.io/s/v31woq1xpy" target="_blank">Basics: Component Props</a>
+						<p class="small">Passing data to our Components top-down. (Extras: Children)</p>
+					</section>
+						
 					<!-- Component State -->
 					<section>
-						<a href="#">Basics: Component State</a>
+						<a href="https://codesandbox.io/s/k3rm7vx057" target="_blank">Basics: Component State</a>
 						<p class="small">2 ways to initialize: </p>
 						<p class="small"><strong>state = {...}</strong> directly inside the class
 						</p><p class="small">Write a constructor and use <strong>this.state = { ... }</strong></p>
@@ -338,7 +357,7 @@
 
 					<!-- Event Handlers -->
 					<section>
-						<a href="#">Basics: Component Event Handlers</a>
+						<a href="https://codesandbox.io/s/k3rm7vx057" target="_blank">Basics: Component Event Handlers</a>
 						<p class="small">Take care of your class binding:</p>
 						<p class="small">
 							(1) Constructor <strong>this.method.bind(this)</strong>
@@ -346,7 +365,9 @@
 						<p class="small">
 							(2) <strong>method = ()=> { ... }</strong>
 						</p>
-						<p class="small">Events: <strong>onClick</strong>, <strong>onMouseOver</strong></p>
+						<p class="small">Events: <strong>onClick</strong>, <strong>onMouseOver</strong>, etc.</p>
+						<h6>Docs</h6>
+						<p class="small"><a href="https://reactjs.org/docs/handling-events.html"  target="_blank">Handling Events</a> / <a target="_blank" href="https://reactjs.org/docs/events.html#supported-events">Supported Events</a></p>
 					</section>
 
 					<!-- Parent/Child Communication & Passing Data from Child Component to Parent Component -->
