@@ -24,12 +24,18 @@ html(lang='en')
         style#tts.
             .reveal.tts-intro {
                 background-image: url('images/tts-titles-nodejs-introduction.jpg');
-                background-size: cover;
             }
             .reveal.tts-outro {
                 background-image: url('images/tts-titles-joinus.jpg');
-                background-size: cover;
             }
+        style.
+            .reveal.tts-intro,
+            .reveal.tts-outro {
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+
     body
 
         // Alt+Click | Zoom
