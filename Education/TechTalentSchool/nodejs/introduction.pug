@@ -378,8 +378,78 @@ html(lang='en')
                                         console.log( logger );
                                         logger();
 
+                // BUILT-IN MODULES: FS
+                section.with-tts-right
+                    section
+                        h4 BUILT-IN MODULES
+                    section
+                        h6 The <strong class="colorful">fs</strong> Built-in Module
+                        p.small Synchronous Code
+                        .columns
+                            .column.is-8.is-offset-2
+                                pre.fragment
+                                    code.hljs.bash app.js:
+                                .linebreak
+                                pre.fragment
+                                    code.hljs.javascript.
+                                        const fs = require('fs');
+                                        const files = fs.readdirSync('./')
+                                p.small.fragment Files will be a string array
+                                pre.fragment
+                                    code.hljs.javascript.
+                                        console.log(files);
+                    section
+                        h6 The <strong class="colorful">fs</strong> Built-in Module
+                        p.small Asynchronous Code
+                        .columns
+                            .column.is-10.is-offset-1
+                                pre.fragment
+                                    code.hljs.bash app.js:
+                                .linebreak
+                                pre.fragment
+                                    code.hljs.javascript.
+                                        const fs = require('fs');
+                                        const files = fs.readdir('./', (err,files)=>{
 
-                // Built-in Modules: process
+                                            if (err) {
+                                                console.log(err);
+                                            } else {
+                                                console.log(files);
+                                            }
+                                        
+                                        }); 
+                                p.small.fragment.
+                                    <strong>BEST PRACTICES:</strong> Prefer asynchronous methods instead of sync (readdirSync) for non-blocking code.
+                                p.small.fragment(style="font-size:0.5em; opacity:0.6;font-style:italic") *Add 2 console.log statements to test asynchronous code
+                    section
+                        h6 The <strong class="colorful">fs</strong> Built-in Module
+                        p.small <strong>readFileSync()</strong> (Asynchronous Code)
+                        .columns
+                            .column.is-10.is-offset-1
+                                pre
+                                    code.hljs.bash app.js:
+                                .linebreak
+                                pre.fragment
+                                    code.hljs.javascript.
+                                        const fs = require('fs');
+                                        let contents = fs.readFileSync('app.js');
+                                        console.log(contents);
+                                p.small.fragment What do you see in the console?
+                                p.small.fragment Let's try again with one small addition...
+                                pre.fragment
+                                    code.hljs.javascript.
+                                        contents = fs.readFileSync('app.js','utf8');
+                                        console.log(contents);
+
+                        //- ASYNC:
+
+                        //- const fs = require(‘fs’);
+                        //- fs.readFile('package.json', function (err, buf){
+                        //-     console.log(buf.toString());
+                        //- });
+
+                        //- (Callback style programming. Mention Promises?)
+
                 // Built-in Modules: fs
                 // Built-in Modules: path
                 // Built-in Modules: os

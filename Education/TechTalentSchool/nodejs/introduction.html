@@ -344,13 +344,71 @@ module.exports = log;</code></pre>
 // We must be on the same folder here
 console.log( logger );
 logger();
-
 </code></pre>
               </div>
             </div>
           </section>
         </section>
-        <!-- Built-in Modules: process-->
+        <!-- BUILT-IN MODULES: FS-->
+        <section class="with-tts-right">
+          <section>
+            <h4>BUILT-IN MODULES</h4>
+          </section>
+          <section>
+            <h6>The <strong class="colorful">fs</strong> Built-in Module</h6>
+            <p class="small">Synchronous Code</p>
+            <div class="columns">
+              <div class="column is-8 is-offset-2">
+                <pre class="fragment"><code class="hljs bash">app.js:</code></pre>
+                <div class="linebreak"></div>
+                <pre class="fragment"><code class="hljs javascript">const fs = require('fs');
+const files = fs.readdirSync('./')</code></pre>
+                <p class="small fragment">Files will be a string array</p>
+                <pre class="fragment"><code class="hljs javascript">console.log(files);</code></pre>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h6>The <strong class="colorful">fs</strong> Built-in Module</h6>
+            <p class="small">Asynchronous Code</p>
+            <div class="columns">
+              <div class="column is-10 is-offset-1">
+                <pre class="fragment"><code class="hljs bash">app.js:</code></pre>
+                <div class="linebreak"></div>
+                <pre class="fragment"><code class="hljs javascript">const fs = require('fs');
+const files = fs.readdir('./', (err,files)=>{
+
+    if (err) {
+        console.log(err);
+    } else {
+        console.log(files);
+    }
+
+}); </code></pre>
+                <p class="small fragment"><strong>BEST PRACTICES:</strong> Prefer asynchronous methods instead of sync (readdirSync) for non-blocking code.</p>
+                <p class="small fragment" style="font-size:0.5em; opacity:0.6;font-style:italic">*Add 2 console.log statements to test asynchronous code</p>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h6>The <strong class="colorful">fs</strong> Built-in Module</h6>
+            <p class="small"><strong>readFileSync()</strong> (Asynchronous Code)</p>
+            <div class="columns">
+              <div class="column is-10 is-offset-1">
+                <pre><code class="hljs bash">app.js:</code></pre>
+                <div class="linebreak"></div>
+                <pre class="fragment"><code class="hljs javascript">const fs = require('fs');
+let contents = fs.readFileSync('app.js');
+console.log(contents);</code></pre>
+                <p class="small fragment">What do you see in the console?</p>
+                <p class="small fragment">Let's try again with one small addition...</p>
+                <pre class="fragment"><code class="hljs javascript">contents = fs.readFileSync('app.js','utf8');
+console.log(contents);
+</code></pre>
+              </div>
+            </div>
+          </section>
+        </section>
         <!-- Built-in Modules: fs-->
         <!-- Built-in Modules: path-->
         <!-- Built-in Modules: os-->
