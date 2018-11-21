@@ -302,6 +302,53 @@ module.exports.log = log;</code></pre>
           <section>
             <h4>Working with Modules:<br/>Loading a Module</h4>
           </section>
+          <section>
+            <div class="columns">
+              <div class="column is-8 is-offset-2">
+                <pre><code class="hljs bash">app.js:</code></pre>
+                <div class="linebreak"></div>
+                <pre class="fragment"><code class="hljs javascript">let logger = require("./logger.js");
+// We must be on the same folder here
+console.log( logger );
+logger();
+</code></pre>
+                <p class="small fragment">We could have used:</p>
+                <pre class="fragment"><code class="hljs javascript">require('./folder/logger.js');</code></pre>
+                <p class="small fragment">or:</p>
+                <pre class="fragment"><code class="hljs javascript">require('../logger.js');
+</code></pre>
+                <p class="small fragment"><strong>BEST PRACTICE:</strong> use a <code>const</code> to store <code>require()</code> objects.</p>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h4>Side by Side</h4>
+            <div class="columns">
+              <div class="column is-6">
+                <pre><code class="hljs bash">logger.js:</code></pre>
+                <p class="small"><code>module.exports</code> :: Exports --&gt;</p>
+                <div class="linebreak"></div>
+                <pre><code class="hljs javascript">let message = "Module";
+
+function log(){ 
+    console.log( message );
+}
+
+module.exports = log;</code></pre>
+              </div>
+              <div class="column is-6">
+                <pre><code class="hljs bash">app.js:</code></pre>
+                <p class="small">&lt;-- <code>require()</code> :: Imports</p>
+                <div class="linebreak"></div>
+                <pre><code class="hljs javascript">let logger = require("./logger.js");
+// We must be on the same folder here
+console.log( logger );
+logger();
+
+</code></pre>
+              </div>
+            </div>
+          </section>
         </section>
         <!-- Built-in Modules: process-->
         <!-- Built-in Modules: fs-->

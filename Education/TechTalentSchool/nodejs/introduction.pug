@@ -323,6 +323,61 @@ html(lang='en')
                                     code.hljs.javascript module.exports = log;
                     section
                         h4 Working with Modules:<br/>Loading a Module
+                    section
+                        .columns
+                            .column.is-8.is-offset-2
+                                pre
+                                    code.hljs.bash app.js:
+                                .linebreak
+                                pre.fragment
+                                    code.hljs.javascript.
+                                        let logger = require("./logger.js");
+                                        // We must be on the same folder here
+                                        console.log( logger );
+                                        logger();
+
+                                p.small.fragment We could have used:
+                                pre.fragment
+                                    code.hljs.javascript.
+
+                                        require('./folder/logger.js');
+                                p.small.fragment or:
+                                pre.fragment
+                                    code.hljs.javascript.
+
+                                        require('../logger.js');
+
+                                p.small.fragment <strong>BEST PRACTICE:</strong> use a <code>const</code> to store <code>require()</code> objects.
+
+                    section
+                        h4 Side by Side
+                        .columns
+                            .column.is-6
+                                pre
+                                    code.hljs.bash logger.js:
+                                p.small <code>module.exports</code> :: Exports --&gt;
+                                .linebreak
+                                pre
+                                    code.hljs.javascript.
+                                        let message = "Module";
+
+                                        function log(){ 
+                                            console.log( message );
+                                        }
+
+                                        module.exports = log;
+                            .column.is-6
+                                pre
+                                    code.hljs.bash app.js:
+                                p.small &lt;-- <code>require()</code> :: Imports
+                                .linebreak
+                                pre
+                                    code.hljs.javascript.
+                                        let logger = require("./logger.js");
+                                        // We must be on the same folder here
+                                        console.log( logger );
+                                        logger();
+
 
                 // Built-in Modules: process
                 // Built-in Modules: fs
