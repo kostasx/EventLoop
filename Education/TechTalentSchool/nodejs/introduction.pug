@@ -122,10 +122,10 @@ html(lang='en')
                                 p.small.fragment 2) Download the <strong>LTS</strong> version for your platform and follow the instructions   
                                 p.small.fragment 3) Once installed, open the terminal and check that node has been installed:
                                 pre.fragment
-                                    code.hljs(data-trim contenteditable) $ node --version
+                                    code.hljs.bash(data-trim contenteditable) $ node --version
                                 p.small.fragment You should see something like this:    
                                 pre.fragment
-                                    code.hljs(data-trim contenteditable) v10.13.0
+                                    code.hljs.bash(data-trim contenteditable) v10.13.0
                     section
                         h4 What's the difference between<br/><strong class="colorful">LTS</strong> and <strong class="colorful">Current</strong> version?
 
@@ -641,16 +641,105 @@ html(lang='en')
                                         require('colors');
                                         const pluralize = require('pluralize');
                                         const convert = require('convert-units');
+
                                         let MB = convert(1024).from('Kb').to('Mb');
                                         let output = MB + " " + pluralize('megabyte', MB);
+
                                         console.log( output.red );
 
-                // Hello World Server App using the HTTP Module
-                // Developing with Node.JS: nodemon
-                // Creating a basic Web Server
+                // HELLO WORLD SERVER APP USING THE HTTP MODULE
+                section.with-tts-right
+                    section
+                        h6 Our first Server App!
+                        p.small Go to: <a href="https://nodejs.org" target="_blank">https://nodejs.org</a>
+                        p.small DOCS &gt; GUIDES &gt; GETTING STARTED
+                        p.small
+                            a(href="https://nodejs.org/en/docs/guides/getting-started-guide/" target="_blank") Getting Started
+                    section
+                        p.small Once you have installed Node, let's try building our first web server.<br/>Create a file named "app.js", and paste the following code:
+                        pre
+                            code.hljs.javascript.
+                                const http = require('http');
+                                const port = 3000;
+                                const server = http.createServer((request, response) => {
+                                    response.statusCode = 200;
+                                    response.setHeader('Content-Type', 'text/plain');
+                                    response.end('Hello World\n');
+                                });
 
-                // Opening our App to the World via NGROK [WiP]
-                section(data-background="#ffffff")
+                                server.listen(port, () => {
+                                    console.log(`Server running at port: ${port}`);
+                                });
+
+                        p.small After that, run your web server using node app.js, visit http://localhost:3000<br>and you will see a message 'Hello World'
+
+                // COMBINING THE HTTP SERVER AND NPM PACKAGES
+                section.with-tts-right
+                    section
+                        h6 Combining HTTP Server<br>and NPM Modules
+                        p.small.fragment ...to create our first Web Service!
+                    section
+                        h6 Step 01
+                        .columns
+                            .column
+                                pre
+                                    code.hljs.javascript.
+                                        const http = require('http');
+                                        const port = 8080;
+                                        const server = http.createServer((request, response) => {
+                                            response.statusCode = 200;
+                                            response.setHeader('Content-Type', 'text/html');
+                                            response.end("<br>Pluralize Web Service");
+                                        });
+
+                                        server.listen(port, () => {
+                                            console.log(`Server running at port: ${port}`);
+                                        });
+                                p.small Open https://localhost:8080 and check...
+                    section
+                        h6 Step 02
+                        p.small Add two more modules to our app.js file
+                        .columns
+                            .column.is-10.is-offset-1
+                                pre
+                                    code.hljs.javascript.
+                                        // Parse URLs
+                                        const url = require('url'); 
+ 
+                                        // Lets Pluralize!
+                                        const pluralize = require('pluralize');
+                                p.small You will need <code>npm install pluralize</code> for the 2nd module...
+                    section
+                        h6 Step 03
+                        p.small Add some more code inside the request handler function: 
+                        .columns
+                            .column.is-12
+                                pre
+                                    code.hljs.javascript.
+                                        const server = http.createServer((request, response) => {
+
+                                            let parts = url.parse(request.url, true);
+                                            let query = parts.query;
+                                            console.log( query );
+
+                                            ...
+
+                                            if ( query.word ){
+                                                response.write(pluralize(query.word));
+                                            }
+                                            response.end();
+
+                // DEVELOPING WITH NODE.JS: NODEMON
+                section.with-tts-right
+                    section
+                        h6 Developing with Nodemon
+                        p.small 
+                            a(target="_blank" href="https://www.npmjs.com/package/nodemon") Nodemon Package
+
+                // CREATING A BASIC WEB SERVER
+
+                // OPENING OUR APP TO THE WORLD VIA NGROK [WIP]
+                //- section(data-background="#ffffff")
                     h5(style="margin-bottom:0") Opening our App<br/>to the World via NGROK
                     p.small(style="margin-top:0") Public URLs for demoing from your machine
                     a(href="https://ngrok.com/" target="_blank" style="color:#666;") https://ngrok.com/

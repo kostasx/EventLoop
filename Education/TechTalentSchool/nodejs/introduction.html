@@ -103,9 +103,9 @@
                 <p class="small fragment">1) Go to: <a target="_blank" href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a></p>
                 <p class="small fragment">2) Download the <strong>LTS</strong> version for your platform and follow the instructions   </p>
                 <p class="small fragment">3) Once installed, open the terminal and check that node has been installed:</p>
-                <pre class="fragment"><code class="hljs" data-trim contenteditable>$ node --version</code></pre>
+                <pre class="fragment"><code class="hljs bash" data-trim contenteditable>$ node --version</code></pre>
                 <p class="small fragment">You should see something like this:    </p>
-                <pre class="fragment"><code class="hljs" data-trim contenteditable>v10.13.0</code></pre>
+                <pre class="fragment"><code class="hljs bash" data-trim contenteditable>v10.13.0</code></pre>
               </div>
             </div>
           </section>
@@ -610,22 +610,111 @@ console.log( result );
                 <pre><code class="hljs javascript">require('colors');
 const pluralize = require('pluralize');
 const convert = require('convert-units');
+
 let MB = convert(1024).from('Kb').to('Mb');
 let output = MB + " " + pluralize('megabyte', MB);
+
 console.log( output.red );
 </code></pre>
               </div>
             </div>
           </section>
         </section>
-        <!-- Hello World Server App using the HTTP Module-->
-        <!-- Developing with Node.JS: nodemon-->
-        <!-- Creating a basic Web Server-->
-        <!-- Opening our App to the World via NGROK [WiP]-->
-        <section data-background="#ffffff">
-          <h5 style="margin-bottom:0">Opening our App<br/>to the World via NGROK</h5>
-          <p class="small" style="margin-top:0">Public URLs for demoing from your machine</p><a href="https://ngrok.com/" target="_blank" style="color:#666;">https://ngrok.com/</a><img src="images/ngrok.jpg">
+        <!-- HELLO WORLD SERVER APP USING THE HTTP MODULE-->
+        <section class="with-tts-right">
+          <section>
+            <h6>Our first Server App!</h6>
+            <p class="small">Go to: <a href="https://nodejs.org" target="_blank">https://nodejs.org</a></p>
+            <p class="small">DOCS &gt; GUIDES &gt; GETTING STARTED</p>
+            <p class="small"><a href="https://nodejs.org/en/docs/guides/getting-started-guide/" target="_blank">Getting Started</a></p>
+          </section>
+          <section>
+            <p class="small">Once you have installed Node, let's try building our first web server.<br/>Create a file named "app.js", and paste the following code:</p>
+            <pre><code class="hljs javascript">const http = require('http');
+const port = 3000;
+const server = http.createServer((request, response) => {
+    response.statusCode = 200;
+    response.setHeader('Content-Type', 'text/plain');
+    response.end('Hello World\n');
+});
+
+server.listen(port, () => {
+    console.log(`Server running at port: ${port}`);
+});
+</code></pre>
+            <p class="small">After that, run your web server using node app.js, visit http://localhost:3000<br>and you will see a message 'Hello World'</p>
+          </section>
         </section>
+        <!-- COMBINING THE HTTP SERVER AND NPM PACKAGES-->
+        <section class="with-tts-right">
+          <section>
+            <h6>Combining HTTP Server<br>and NPM Modules</h6>
+            <p class="small fragment">...to create our first Web Service!</p>
+          </section>
+          <section>
+            <h6>Step 01</h6>
+            <div class="columns">
+              <div class="column">
+                <pre><code class="hljs javascript">const http = require('http');
+const port = 8080;
+const server = http.createServer((request, response) => {
+    response.statusCode = 200;
+    response.setHeader('Content-Type', 'text/html');
+    response.end("<br>Pluralize Web Service");
+});
+
+server.listen(port, () => {
+    console.log(`Server running at port: ${port}`);
+});</code></pre>
+                <p class="small">Open https://localhost:8080 and check...</p>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h6>Step 02</h6>
+            <p class="small">Add two more modules to our app.js file</p>
+            <div class="columns">
+              <div class="column is-10 is-offset-1">
+                <pre><code class="hljs javascript">// Parse URLs
+const url = require('url'); 
+
+// Lets Pluralize!
+const pluralize = require('pluralize');</code></pre>
+                <p class="small">You will need <code>npm install pluralize</code> for the 2nd module...</p>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h6>Step 03</h6>
+            <p class="small">Add some more code inside the request handler function: </p>
+            <div class="columns">
+              <div class="column is-12">
+                <pre><code class="hljs javascript">const server = http.createServer((request, response) => {
+
+    let parts = url.parse(request.url, true);
+    let query = parts.query;
+    console.log( query );
+
+    ...
+
+    if ( query.word ){
+        response.write(pluralize(query.word));
+    }
+    response.end();
+</code></pre>
+              </div>
+            </div>
+          </section>
+        </section>
+        <!-- DEVELOPING WITH NODE.JS: NODEMON-->
+        <section class="with-tts-right">
+          <section>
+            <h6>Developing with Nodemon</h6>
+            <p class="small"> <a target="_blank" href="https://www.npmjs.com/package/nodemon">Nodemon Package</a></p>
+          </section>
+        </section>
+        <!-- CREATING A BASIC WEB SERVER-->
+        <!-- OPENING OUR APP TO THE WORLD VIA NGROK [WIP]-->
         <!-- DEPLOYING OUR NODE.JS APP (HEROKU)-->
         <!-- RESOURCES-->
         <section>
