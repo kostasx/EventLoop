@@ -349,11 +349,14 @@ logger();
             </div>
           </section>
         </section>
-        <!-- BUILT-IN MODULES: FS-->
+        <!-- BUILT-IN MODULES-->
         <section class="with-tts-right">
           <section>
             <h4>BUILT-IN MODULES</h4>
           </section>
+        </section>
+        <!-- BUILT-IN MODULES: FS-->
+        <section class="with-tts-right">
           <section>
             <h6>The <strong class="colorful">fs</strong> Built-in Module</h6>
             <p class="small">Synchronous Code</p>
@@ -392,7 +395,7 @@ const files = fs.readdir('./', (err,files)=>{
           </section>
           <section>
             <h6>The <strong class="colorful">fs</strong> Built-in Module</h6>
-            <p class="small"><strong>readFileSync()</strong> (Asynchronous Code)</p>
+            <p class="small"><strong>readFileSync()</strong> (Synchronous Code)</p>
             <div class="columns">
               <div class="column is-10 is-offset-1">
                 <pre><code class="hljs bash">app.js:</code></pre>
@@ -403,16 +406,218 @@ console.log(contents);</code></pre>
                 <p class="small fragment">What do you see in the console?</p>
                 <p class="small fragment">Let's try again with one small addition...</p>
                 <pre class="fragment"><code class="hljs javascript">contents = fs.readFileSync('app.js','utf8');
-console.log(contents);
+console.log(contents);</code></pre>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h6>The <strong class="colorful">fs</strong> Built-in Module</h6>
+            <p class="small"><strong>readFile()</strong> (Asynchronous Code)</p>
+            <div class="columns">
+              <div class="column is-10 is-offset-1">
+                <pre><code class="hljs bash">app.js:</code></pre>
+                <div class="linebreak"></div>
+                <pre class="fragment"><code class="hljs javascript">const fs = require(‘fs’);
+fs.readFile('app.js', (err, buffer)=>{
+    console.log(buffer.toString());
+});
 </code></pre>
               </div>
             </div>
           </section>
         </section>
-        <!-- Built-in Modules: fs-->
-        <!-- Built-in Modules: path-->
-        <!-- Built-in Modules: os-->
-        <!-- External Modules & Node Package Manager (npm)-->
+        <!-- BUILT-IN MODULES: PATH-->
+        <section class="with-tts-right">
+          <section>
+            <h6>The <strong class="colorful">path</strong> Built-in Module</h6>
+            <div class="columns">
+              <div class="column is-10 is-offset-1">
+                <pre class="fragment"><code class="hljs bash">app.js:</code></pre>
+                <div class="linebreak"></div>
+                <pre class="fragment"><code class="hljs javascript">const path = require('path'); 
+let pathObj = path.parse(__filename);</code></pre>
+                <p class="small fragment"><code>__filename</code>: The file name of the current module.</p>
+                <pre class="fragment"><code class="hljs json">{ 
+    root: '/',
+    dir: '/Users/kostasx/Desktop',
+    base: 'app.js',
+    ext: '.js',
+    name: 'app' 
+}</code></pre>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h6>One step further...</h6>
+            <div class="columns">
+              <div class="column is-10 is-offset-1">
+                <pre class="fragment"><code class="hljs bash">app.js:</code></pre>
+                <div class="linebreak"></div>
+                <pre class="fragment"><code class="hljs javascript">const path = require('path'); 
+let arguments = process.argv;
+// process.argv == Array of command line arguments
+let pathObj = path.parse( arguments[2] );
+console.log( pathObj );</code></pre>
+              </div>
+            </div>
+            <div class="columns">
+              <div class="column is-8 is-offset-2">
+                <p class="small fragment"><code>process</code>: global object that provides information about, and control over, the current Node.js process. It is always available to Node.js apps without <code>require()</code>;</p>
+              </div>
+            </div>
+          </section>
+        </section>
+        <!-- BUILT-IN MODULES: OS-->
+        <section class="with-tts-right">
+          <section>
+            <h6>The <strong class="colorful">os</strong> Built-in Module</h6>
+            <p class="small">Information about Operating System<br><a href="https://nodejs.org/api/os.html#os_os" target="_blank">Documentation</a></p>
+            <div class="columns">
+              <div class="column is-10 is-offset-1">
+                <pre class="fragment"><code class="hljs bash">app.js:</code></pre>
+                <div class="linebreak"></div>
+                <pre class="fragment"><code class="hljs javascript">const os = require('os');
+
+os.totalmem();
+os.freemem(); 
+
+console.log( `Total Memory: ${os.totalmem()}` );</code></pre>
+              </div>
+            </div>
+            <div class="columns">
+              <div class="column is-8 is-offset-2">
+                <p class="small fragment">Google for: <code>js convert bytes to gb</code><br/>refactor code to display the total memory in GB</p>
+              </div>
+            </div>
+          </section>
+        </section>
+        <!-- NPM + External Modules-->
+        <section class="with-tts-right">
+          <section>
+            <h6><strong class="colorful">NPM</strong> Node Package Manager</h6>
+            <div class="columns">
+              <div class="column is-8 is-offset-2">
+                <p class="small">The official package manager for Node and is bundled &amp; installed automatically with the environment.</p>
+                <pre><code class="hljs bash">$ npm --version</code></pre>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h6>Let's see what npm can do:</h6>
+            <div class="columns">
+              <div class="column is-8 is-offset-2">
+                <ul class="mid">
+                  <li class="fragment">
+                    npm install package-name
+                    <br>const package = require('package-name');
+                  </li>
+                  <li class="fragment">
+                    npm init
+                    <br> npm init -y
+                    <br>package.json
+                  </li>
+                  <li class="fragment">
+                    npm install package-name --save
+                    <br>npm install package-name --save-dev
+                  </li>
+                  <li class="fragment">.gitignore</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h6><strong class="colorful">package.json</strong></h6>
+            <div class="columns">
+              <div class="column is-8 is-offset-2">
+                <p class="small fragment">A file that serves as documentation<br>for what packages your project depends on.</p>
+                <p class="small fragment">Allows you to specify the versions of a package that your project can use using semantic versioning rules.</p>
+                <pre class="fragment"><code class="hljs bash">$ npm install lodash@4.17.4</code></pre>
+                <p class="small fragment">Makes your build reproducible which means that its way easier to share with other developers.</p>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h6>Quick mention: <strong class="colorful">NPM</strong> scripts</h6>
+            <p class="small fragment" style="opacity:0.6;font-style:italic">*Remember create-react-app <code>npm start</code>?</p>
+          </section>
+        </section>
+        <!-- NPM + External Modules: Hands-on-->
+        <section class="with-tts-right">
+          <section>
+            <h6>Node.JS Packages: Hands-on</h6>
+            <div class="columns">
+              <div class="column is-8 is-offset-2"><a target="_blank" href="https://runkit.com/kostasx/5b6e14a66f23060012ca240b">RunKit</a></div>
+            </div>
+          </section>
+          <section>
+            <div class="columns">
+              <div class="column is-10 is-offset-1">
+                <h6>Pluralize</h6>
+                <pre class="fragment"><code class="hljs bash">$ npm install pluralize --save</code></pre><br>
+                <pre class="fragment"><code class="hljs javascript">const pluralize = require('pluralize');
+
+let result = pluralize('test');
+console.log( "test: ", result );
+
+result = pluralize('paper');
+console.log( "paper: ", result );
+
+result = pluralize('mummy');
+console.log( "mummy: ", result );</code></pre>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="columns">
+              <div class="column is-10 is-offset-1">
+                <h6>Colors</h6>
+                <pre class="fragment"><code class="hljs bash">$ npm install colors --save</code></pre><br>
+                <pre class="fragment"><code class="hljs javascript">require('colors');
+
+console.log('hello'.green); // outputs green text
+console.log('i like cake and pies'.underline.red) // outputs red underlined text
+console.log('inverse the color'.inverse); // inverses the color
+console.log('OMG Rainbows!'.rainbow); // rainbow</code></pre>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="columns">
+              <div class="column is-10 is-offset-1">
+                <h6>Convert-Units</h6>
+                <pre><code class="hljs bash">$ npm install convert-units --save</code></pre><br>
+                <pre><code class="hljs javascript">const convert = require('convert-units');
+
+// Days to Hours
+let result = convert(1).from('d').to('h');
+console.log( result );
+
+// Week(s) to Days
+result = convert(1).from('week').to('d');
+console.log( result );
+
+// Kilobytes to MBytes
+result = convert(1024).from('Kb').to('Mb');
+console.log( result );
+</code></pre>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="columns">
+              <div class="column is-10 is-offset-1">
+                <p class="small">Putting it all together</p>
+                <pre><code class="hljs javascript">require('colors');
+const pluralize = require('pluralize');
+const convert = require('convert-units');
+let MB = convert(1024).from('Kb').to('Mb');
+let output = MB + " " + pluralize('megabyte', MB);
+console.log( output.red );
+</code></pre>
+              </div>
+            </div>
+          </section>
+        </section>
         <!-- Hello World Server App using the HTTP Module-->
         <!-- Developing with Node.JS: nodemon-->
         <!-- Creating a basic Web Server-->
@@ -421,7 +626,7 @@ console.log(contents);
           <h5 style="margin-bottom:0">Opening our App<br/>to the World via NGROK</h5>
           <p class="small" style="margin-top:0">Public URLs for demoing from your machine</p><a href="https://ngrok.com/" target="_blank" style="color:#666;">https://ngrok.com/</a><img src="images/ngrok.jpg">
         </section>
-        <!-- Deploying our Node.JS App (Heroku)-->
+        <!-- DEPLOYING OUR NODE.JS APP (HEROKU)-->
         <!-- RESOURCES-->
         <section>
           <h4>RESOURCES</h4>
