@@ -491,6 +491,59 @@ console.log( `Total Memory: ${os.totalmem()}` );</code></pre>
             </div>
           </section>
         </section>
+        <!-- BUILT-IN MODULES: HTTP-->
+        <section class="with-tts-right">
+          <section>
+            <h6>The <strong class="colorful">http(s)</strong> Built-in Module</h6>
+            <p class="small">Communication over HTTP(S)<br><a href="https://nodejs.org/api/https.html" target="_blank">Documentation</a></p>
+            <div class="columns">
+              <div class="column is-12">
+                <pre class="fragment"><code class="hljs bash">app.js:</code></pre>
+                <div class="linebreak"></div>
+                <pre class="fragment"><code class="hljs javascript">const https = require('https');
+const URL = 'https://api.chucknorris.io/jokes/random';
+
+https.get( URL, (response) => {
+
+    let data = '';
+
+    response.on('data', (chunk) => { data += chunk; });
+
+    response.on('end', () => {
+        console.log(JSON.parse(data));
+    });
+
+});</code></pre>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="columns">
+              <div class="column is-12">
+                <h6>Let's also add some error handling,<br/>just in case...</h6>
+                <pre class="fragment"><code class="hljs javascript">const https = require('https');
+const URL = 'https://api.chucknorris.io/jokes/random';
+
+https.get( URL, (response) => {
+
+    ...
+
+}).on("error", (err) => {
+
+    console.log("Error:" + err.message);
+
+});                                    
+</code></pre>
+              </div>
+            </div>
+          </section>
+        </section>
+        <!-- BUILT-IN MODULES LIST-->
+        <section class="with-tts-right">
+          <h6>Available Builtin Modules</h6>
+          <div class="linebreak"></div><a target="_blank" href="https://www.w3schools.com/nodejs/ref_modules.asp">W3Schools List</a>
+          <div class="linebreak"></div><a href="https://github.com/sindresorhus/builtin-modules/blob/master/builtin-modules.json" target="_blank">List by @sindresorhus</a>
+        </section>
         <!-- NPM + External Modules-->
         <section class="with-tts-right">
           <section>
@@ -706,6 +759,30 @@ const pluralize = require('pluralize');</code></pre>
             </div>
           </section>
         </section>
+        <!-- OPENING OUR APP TO THE WORLD VIA NGROK [WIP]-->
+        <section data-background="#ffffff">
+          <section>
+            <h5 style="margin-bottom:0">Opening our App<br/>to the World via NGROK</h5>
+            <p class="small" style="margin-top:0">Public URLs for demoing from your machine</p><a href="https://ngrok.com/" target="_blank" style="color:#666;">https://ngrok.com/</a><img src="images/ngrok.jpg">
+          </section>
+          <section>
+            <div class="columns">
+              <div class="column is-8 is-offset-2">
+                <h6>Quick Setup</h6>
+                <p class="small fragment">1) Go to <a href="https://ngrok.com/" target="_blank">https://ngrok.com/</a><br>and click on <strong>Get started for free</strong></p>
+                <p class="small fragment">2)  You will need to sign up first.<br/>Try GitHub login for quick easy access</p>
+                <p class="small fragment">3) Follow the 4-step Setup &amp; Installation guide</p>
+                <p class="small fragment">4) Copy the ngrok file to your app's folder<br> and run your app on port 8080 </p>
+                <pre class="fragment"><code class="hljs bash">$ ./ngrok http 8080</code></pre>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h6>Hands-on</h6>
+            <p class="small">Create your own tiny server<br>and share your content with the world!</p>
+            <p class="small">...or Slack ;)</p>
+          </section>
+        </section>
         <!-- DEVELOPING WITH NODE.JS: NODEMON-->
         <section class="with-tts-right">
           <section>
@@ -714,8 +791,10 @@ const pluralize = require('pluralize');</code></pre>
           </section>
         </section>
         <!-- CREATING A BASIC WEB SERVER-->
-        <!-- OPENING OUR APP TO THE WORLD VIA NGROK [WIP]-->
         <!-- DEPLOYING OUR NODE.JS APP (HEROKU)-->
+        <section class="with-tts-right">
+          <h6>Deploying our Node.JS app<br>to the cloud</h6><a href="https://heroku.com" target="_blank">HEROKU</a>
+        </section>
         <!-- RESOURCES-->
         <section>
           <h4>RESOURCES</h4>
