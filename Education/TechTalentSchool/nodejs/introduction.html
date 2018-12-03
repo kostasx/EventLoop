@@ -238,10 +238,10 @@ global.message == undefined
             <div class="columns">
               <div class="column is-8 is-offset-2">
                 <p class="small fragment">Every file in Node is considered a Module.</p>
-                <pre class="fragment"><code class="hljs javascript">console.log(module); 
+                <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>console.log( module ); 
 // NOT a global.module object!</code></pre>
                 <div class="linebreak"></div>
-                <pre class="fragment"><code class="hljs javascript">Module {
+                <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>Module {
     ...
     exports: {},
     ...
@@ -256,11 +256,12 @@ global.message == undefined
             <h4>Code</h4>
             <div class="columns">
               <div class="column is-8 is-offset-2">
-                <pre class="fragment"><code class="hljs shell">$ touch app.js </code></pre>
+                <pre class="fragment"><code class="hljs shell" data-trim contenteditable>$ touch app.js </code></pre>
                 <div class="linebreak"></div>
-                <pre class="fragment"><code class="hljs javascript">console.log(module); </code></pre>
+                <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>console.log( module ); </code></pre>
                 <div class="linebreak"></div>
-                <pre class="fragment"><code class="hljs shell">$ node app.js </code></pre>
+                <pre class="fragment"><code class="hljs shell" data-trim contenteditable>$ node app.js </code></pre>
+                <p class="small fragment" style="font-size:0.5em; opacity:0.6;font-style:italic">*The touch command creates a new file in *nix systems</p>
               </div>
             </div>
           </section>
@@ -283,19 +284,19 @@ global.message == undefined
           <section>
             <div class="columns">
               <div class="column is-8 is-offset-2">
-                <pre><code class="hljs bash">$ touch logger.js</code></pre>
+                <pre><code class="hljs bash" data-trim contenteditable>$ touch logger.js</code></pre>
                 <div class="linebreak"></div>
-                <pre><code class="hljs javascript">let message = "Module";
+                <pre><code class="hljs javascript" data-trim contenteditable>let message = "Module";
 
 function log(){ 
     console.log( message );
 }
 
-module.exports.log = log;</code></pre>
+module.exports = log;</code></pre>
                 <div class="linebreak"></div>
                 <p class="small">Both <code>log</code> and <code>message</code> are scoped into the module and are not available outside the module (file). We try to export only a minimal amount of variables and keep things private in the Module. </p>
-                <p class="small">We can also export a single value, e.g. a function, instead of an object:</p>
-                <pre><code class="hljs javascript">module.exports = log;</code></pre>
+                <p class="small">We can also export multiple values:</p>
+                <pre><code class="hljs javascript" data-trim contenteditable>module.exports.log = log;</code></pre>
               </div>
             </div>
           </section>
@@ -305,17 +306,17 @@ module.exports.log = log;</code></pre>
           <section>
             <div class="columns">
               <div class="column is-8 is-offset-2">
-                <pre><code class="hljs bash">app.js:</code></pre>
+                <pre><code class="hljs bash" data-trim contenteditable>app.js:</code></pre>
                 <div class="linebreak"></div>
-                <pre class="fragment"><code class="hljs javascript">let logger = require("./logger.js");
+                <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>const logger = require( './logger.js' );
 // We must be on the same folder here
 console.log( logger );
 logger();
 </code></pre>
                 <p class="small fragment">We could have used:</p>
-                <pre class="fragment"><code class="hljs javascript">require('./folder/logger.js');</code></pre>
+                <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>require( './folder/logger.js' );</code></pre>
                 <p class="small fragment">or:</p>
-                <pre class="fragment"><code class="hljs javascript">require('../logger.js');
+                <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>require( '../logger.js' );
 </code></pre>
                 <p class="small fragment"><strong>BEST PRACTICE:</strong> use a <code>const</code> to store <code>require()</code> objects.</p>
               </div>
@@ -325,10 +326,10 @@ logger();
             <h4>Side by Side</h4>
             <div class="columns">
               <div class="column is-6">
-                <pre><code class="hljs bash">logger.js:</code></pre>
+                <pre><code class="hljs bash" data-trim contenteditable>logger.js:</code></pre>
                 <p class="small"><code>module.exports</code> :: Exports --&gt;</p>
                 <div class="linebreak"></div>
-                <pre><code class="hljs javascript">let message = "Module";
+                <pre><code class="hljs javascript" data-trim contenteditable>let message = "Module";
 
 function log(){ 
     console.log( message );
@@ -337,10 +338,10 @@ function log(){
 module.exports = log;</code></pre>
               </div>
               <div class="column is-6">
-                <pre><code class="hljs bash">app.js:</code></pre>
+                <pre><code class="hljs bash" data-trim contenteditable>app.js:</code></pre>
                 <p class="small">&lt;-- <code>require()</code> :: Imports</p>
                 <div class="linebreak"></div>
-                <pre><code class="hljs javascript">let logger = require("./logger.js");
+                <pre><code class="hljs javascript" data-trim contenteditable>const logger = require("./logger.js");
 // We must be on the same folder here
 console.log( logger );
 logger();
@@ -364,10 +365,10 @@ logger();
               <div class="column is-8 is-offset-2">
                 <pre class="fragment"><code class="hljs bash">app.js:</code></pre>
                 <div class="linebreak"></div>
-                <pre class="fragment"><code class="hljs javascript">const fs = require('fs');
-const files = fs.readdirSync('./')</code></pre>
-                <p class="small fragment">Files will be a string array</p>
-                <pre class="fragment"><code class="hljs javascript">console.log(files);</code></pre>
+                <pre class="fragment"><code class="hljs javascript">const fs = require( 'fs' );
+const files = fs.readdirSync( './' );</code></pre>
+                <p class="small fragment"><code>files</code> will be a String Array</p>
+                <pre class="fragment"><code class="hljs javascript">console.log( files );</code></pre>
               </div>
             </div>
           </section>
@@ -378,13 +379,13 @@ const files = fs.readdirSync('./')</code></pre>
               <div class="column is-10 is-offset-1">
                 <pre class="fragment"><code class="hljs bash">app.js:</code></pre>
                 <div class="linebreak"></div>
-                <pre class="fragment"><code class="hljs javascript">const fs = require('fs');
-const files = fs.readdir('./', (err,files)=>{
+                <pre class="fragment"><code class="hljs javascript">const fs = require( 'fs' );
+const files = fs.readdir( './', ( err,files )=>{
 
-    if (err) {
-        console.log(err);
+    if ( err ) {
+        console.log( err );
     } else {
-        console.log(files);
+        console.log( files );
     }
 
 }); </code></pre>
@@ -400,13 +401,13 @@ const files = fs.readdir('./', (err,files)=>{
               <div class="column is-10 is-offset-1">
                 <pre><code class="hljs bash">app.js:</code></pre>
                 <div class="linebreak"></div>
-                <pre class="fragment"><code class="hljs javascript">const fs = require('fs');
-let contents = fs.readFileSync('app.js');
-console.log(contents);</code></pre>
+                <pre class="fragment"><code class="hljs javascript">const fs = require( 'fs' );
+let contents = fs.readFileSync( 'app.js' );
+console.log( contents );</code></pre>
                 <p class="small fragment">What do you see in the console?</p>
                 <p class="small fragment">Let's try again with one small addition...</p>
-                <pre class="fragment"><code class="hljs javascript">contents = fs.readFileSync('app.js','utf8');
-console.log(contents);</code></pre>
+                <pre class="fragment"><code class="hljs javascript">contents = fs.readFileSync( 'app.js','utf8' );
+console.log( contents );</code></pre>
               </div>
             </div>
           </section>
@@ -417,9 +418,9 @@ console.log(contents);</code></pre>
               <div class="column is-10 is-offset-1">
                 <pre><code class="hljs bash">app.js:</code></pre>
                 <div class="linebreak"></div>
-                <pre class="fragment"><code class="hljs javascript">const fs = require(‘fs’);
-fs.readFile('app.js', (err, buffer)=>{
-    console.log(buffer.toString());
+                <pre class="fragment"><code class="hljs javascript">const fs = require( 'fs' );
+fs.readFile( 'app.js', ( err, buffer )=>{
+    console.log( buffer.toString() );
 });
 </code></pre>
               </div>

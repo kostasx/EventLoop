@@ -261,12 +261,12 @@ html(lang='en')
                             .column.is-8.is-offset-2
                                 p.small.fragment Every file in Node is considered a Module.
                                 pre.fragment
-                                    code.hljs.javascript.
-                                        console.log(module); 
+                                    code.hljs.javascript(data-trim contenteditable).
+                                        console.log( module ); 
                                         // NOT a global.module object!
                                 .linebreak
                                 pre.fragment
-                                    code.hljs.javascript.
+                                    code.hljs.javascript(data-trim contenteditable).
                                         Module {
                                             ...
                                             exports: {},
@@ -280,13 +280,14 @@ html(lang='en')
                         .columns
                             .column.is-8.is-offset-2
                                 pre.fragment
-                                    code.hljs.shell $ touch app.js 
+                                    code.hljs.shell(data-trim contenteditable) $ touch app.js 
                                 .linebreak
                                 pre.fragment
-                                    code.hljs.javascript console.log(module); 
+                                    code.hljs.javascript(data-trim contenteditable) console.log( module ); 
                                 .linebreak
                                 pre.fragment
-                                    code.hljs.shell $ node app.js 
+                                    code.hljs.shell(data-trim contenteditable) $ node app.js 
+                                p.small.fragment(style="font-size:0.5em; opacity:0.6;font-style:italic") *The touch command creates a new file in *nix systems
                     section
                         h4 3 Types of Modules
                         .columns
@@ -303,49 +304,49 @@ html(lang='en')
                         .columns
                             .column.is-8.is-offset-2
                                 pre
-                                    code.hljs.bash $ touch logger.js
+                                    code.hljs.bash(data-trim contenteditable) $ touch logger.js
                                 .linebreak
                                 pre
-                                    code.hljs.javascript.
+                                    code.hljs.javascript(data-trim contenteditable).
                                         let message = "Module";
 
                                         function log(){ 
                                             console.log( message );
                                         }
 
-                                        module.exports.log = log;
+                                        module.exports = log;
                                 .linebreak
                                 p.small Both <code>log</code> and <code>message</code> are scoped into the module and are not available outside the module (file). We try to export only a minimal amount of variables and keep things private in the Module. 
 
-                                p.small We can also export a single value, e.g. a function, instead of an object:
+                                p.small We can also export multiple values:
 
                                 pre
-                                    code.hljs.javascript module.exports = log;
+                                    code.hljs.javascript(data-trim contenteditable) module.exports.log = log;
                     section
                         h4 Working with Modules:<br/>Loading a Module
                     section
                         .columns
                             .column.is-8.is-offset-2
                                 pre
-                                    code.hljs.bash app.js:
+                                    code.hljs.bash(data-trim contenteditable) app.js:
                                 .linebreak
                                 pre.fragment
-                                    code.hljs.javascript.
-                                        let logger = require("./logger.js");
+                                    code.hljs.javascript(data-trim contenteditable).
+                                        const logger = require( './logger.js' );
                                         // We must be on the same folder here
                                         console.log( logger );
                                         logger();
 
                                 p.small.fragment We could have used:
                                 pre.fragment
-                                    code.hljs.javascript.
+                                    code.hljs.javascript(data-trim contenteditable).
 
-                                        require('./folder/logger.js');
+                                        require( './folder/logger.js' );
                                 p.small.fragment or:
                                 pre.fragment
-                                    code.hljs.javascript.
+                                    code.hljs.javascript(data-trim contenteditable).
 
-                                        require('../logger.js');
+                                        require( '../logger.js' );
 
                                 p.small.fragment <strong>BEST PRACTICE:</strong> use a <code>const</code> to store <code>require()</code> objects.
 
@@ -354,11 +355,11 @@ html(lang='en')
                         .columns
                             .column.is-6
                                 pre
-                                    code.hljs.bash logger.js:
+                                    code.hljs.bash(data-trim contenteditable) logger.js:
                                 p.small <code>module.exports</code> :: Exports --&gt;
                                 .linebreak
                                 pre
-                                    code.hljs.javascript.
+                                    code.hljs.javascript(data-trim contenteditable).
                                         let message = "Module";
 
                                         function log(){ 
@@ -368,12 +369,12 @@ html(lang='en')
                                         module.exports = log;
                             .column.is-6
                                 pre
-                                    code.hljs.bash app.js:
+                                    code.hljs.bash(data-trim contenteditable) app.js:
                                 p.small &lt;-- <code>require()</code> :: Imports
                                 .linebreak
                                 pre
-                                    code.hljs.javascript.
-                                        let logger = require("./logger.js");
+                                    code.hljs.javascript(data-trim contenteditable).
+                                        const logger = require("./logger.js");
                                         // We must be on the same folder here
                                         console.log( logger );
                                         logger();
@@ -395,12 +396,12 @@ html(lang='en')
                                 .linebreak
                                 pre.fragment
                                     code.hljs.javascript.
-                                        const fs = require('fs');
-                                        const files = fs.readdirSync('./')
-                                p.small.fragment Files will be a string array
+                                        const fs = require( 'fs' );
+                                        const files = fs.readdirSync( './' );
+                                p.small.fragment <code>files</code> will be a String Array
                                 pre.fragment
                                     code.hljs.javascript.
-                                        console.log(files);
+                                        console.log( files );
                     section
                         h6 The <strong class="colorful">fs</strong> Built-in Module
                         p.small Asynchronous Code
@@ -411,13 +412,13 @@ html(lang='en')
                                 .linebreak
                                 pre.fragment
                                     code.hljs.javascript.
-                                        const fs = require('fs');
-                                        const files = fs.readdir('./', (err,files)=>{
+                                        const fs = require( 'fs' );
+                                        const files = fs.readdir( './', ( err,files )=>{
 
-                                            if (err) {
-                                                console.log(err);
+                                            if ( err ) {
+                                                console.log( err );
                                             } else {
-                                                console.log(files);
+                                                console.log( files );
                                             }
                                         
                                         }); 
@@ -434,15 +435,15 @@ html(lang='en')
                                 .linebreak
                                 pre.fragment
                                     code.hljs.javascript.
-                                        const fs = require('fs');
-                                        let contents = fs.readFileSync('app.js');
-                                        console.log(contents);
+                                        const fs = require( 'fs' );
+                                        let contents = fs.readFileSync( 'app.js' );
+                                        console.log( contents );
                                 p.small.fragment What do you see in the console?
                                 p.small.fragment Let's try again with one small addition...
                                 pre.fragment
                                     code.hljs.javascript.
-                                        contents = fs.readFileSync('app.js','utf8');
-                                        console.log(contents);
+                                        contents = fs.readFileSync( 'app.js','utf8' );
+                                        console.log( contents );
                     section
                         h6 The <strong class="colorful">fs</strong> Built-in Module
                         p.small <strong>readFile()</strong> (Asynchronous Code)
@@ -453,9 +454,9 @@ html(lang='en')
                                 .linebreak
                                 pre.fragment
                                     code.hljs.javascript.
-                                        const fs = require(‘fs’);
-                                        fs.readFile('app.js', (err, buffer)=>{
-                                            console.log(buffer.toString());
+                                        const fs = require( 'fs' );
+                                        fs.readFile( 'app.js', ( err, buffer )=>{
+                                            console.log( buffer.toString() );
                                         });
 
                 // BUILT-IN MODULES: PATH
