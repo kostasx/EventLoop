@@ -322,6 +322,489 @@ html(lang='en')
                         a(href="http://www.pythontutor.com/javascript.html#code=let%20numberList%20%3D%20%5B%201,%202,%203%20%5D%3B%0A%0AnumberList.push%28%204%20%29%3B%0A%0AnumberList.pop%28%204%20%29%3B%0A%0AnumberList.unshift%280%29%3B%0A%0AnumberList.shift%28%29%3B&curInstr=5&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D" target="_blank")
                             h2 https://bit.ly/2KQCumh
 
+                // PRACTICE TIME: https://codepen.io/kostasx/pen/ppBGGb
+                section(data-transition="slide" data-background="#F7BE2C" data-background-transition="zoom")
+                    h2 It's time to test our skills!
+                    .columns
+                        .column.is-8.is-offset-2
+                            a.dark(target="_blank" href="https://codepen.io/kostasx/pen/ppBGGb?editors=0010")
+                                p https://bit.ly/2Pjj5e7
+                                img.no_hover_effect(src='./introduction/codepen.png' width="160px")
+                            .linebreak
+
+                // NULL + UNDEFINED
+                section.svg_contain
+                    include introduction/null-undefined.svg
+
+                // COMPARISON OPERATORS
+                section.svg_contain
+                    include introduction/comparison-operators-001.svg
+
+                // COMPARISON OPERATORS
+                section.svg_contain
+                    include introduction/comparison-operators-002.svg
+
+                // LOGICAL OPERATORS
+                section.svg_contain
+                    include introduction/logical-operators-001.svg
+                
+                // CONDITIONAL STATEMENTS 
+                section(data-background="#ffffff")
+                    h3 Conditionals
+                    h6 { Conditional Statements }
+                    <p style="font-size:14px; opacity:0.5;">Image by: <a style="color: black;" href="https://www.guru99.com/how-to-use-conditional-statements-in-javascript.html">Guru99</a></p>
+                    img(src="images/conditionals.png" alt="")
+
+                // Conditionals | If ... Else
+                section
+                    section
+                        <h3 class="colorful">if ... else</h3>
+                    section
+                        p if { ... }
+                        pre
+                            code.hljs(data-trim contenteditable).
+                                let trafficLight = 'red';
+
+                                if ( trafficLight === 'red' ){
+
+                                    console.log( "Stop the car!" );
+
+                                }
+                    section
+                        <p>if { ... } else { ... }</p>
+                        pre
+                            code.hljs(data-trim contenteditable).
+                                    let trafficLight = 'red';
+
+                                    if ( trafficLight === 'red' ){
+
+                                        console.log( "Stop the car!" );
+
+                                    } else {
+
+                                        console.log( "Move on." );
+
+                                    }
+                    section
+                        <p>NESTED if { ... } else { ... }</p>
+                        pre
+                            code.hljs(data-trim contenteditable).
+                                let trafficLight = 'red';
+
+                                if ( trafficLight === 'red' ){
+                                    console.log( "Stop the car!" );
+                                } else {
+                                    if ( trafficLight === "orange" ){
+                                        console.log( "Slow down!" );
+                                    } else {
+                                        if ( trafficLight === "green" ){
+                                        console.log( "Move on." );
+                                        }
+                                    }
+                                }
+                        <p><small class="colorful">This can be written like this...</small></p>
+                    section
+                        <p>if { ... } else if { ... }</p>
+                        pre
+                            code.hljs(data-trim contenteditable).
+                                if ( trafficLight === 'red' ){
+
+                                    console.log( "Stop the car!" );
+
+                                } else if ( trafficLight === "orange" ){
+
+                                    console.log( "Slow down!" );
+
+                                } else if ( trafficLight === "green" ){
+
+                                    console.log( "Move on." );
+
+                                }
+
+                // Conditionals | Switch
+                section
+                    section
+                        <h2>The <strong class="colorful">switch</strong> statement</h2>
+                        <p>No more <strong class="colorful">else ... if's</strong>!</p>
+                    section
+                        pre
+                            code.hljs(data-trim contenteditable).
+                                let trafficLight = "orange";
+                                switch (trafficLight){
+                                    case "red":
+                                        console.log("Stop!");
+                                        break;
+                                    case "orange":
+                                        console.log("Slow down");
+                                        break;
+                                    case "green":
+                                        console.log("Move on");
+                                        break;
+                                    default:
+                                        console.log("Default catch...");
+                                }
+                        <p><small><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch">More on the <strong class="colorful">Switch</strong> Statement</a></small></p>
+
+                // LOOPS
+                section
+                    section
+                        h3 Loops
+                    // Loops | While
+                    section
+                        <h2>The <strong class="colorful">while ... loop</strong></h2>
+                    section
+                        pre
+                            code.hljs(data-trim contenteditable).
+                                while ( EXPRESSION ){
+
+                                    RUN CODE...
+
+                                }
+                        <p><small>While some <strong class="colorful">EXPRESSION</strong> evaluates to <strong>TRUE</strong> run the { code }</small></p>
+                    section
+                        <h5>Example:</h5>
+                        pre
+                            code.hljs(data-trim contenteditable).
+                                let counter = 0;
+
+                                while ( counter < 3 ){
+
+                                    console.log( “Counter value is: “ + counter );
+                                    counter = counter + 1;
+
+                                }
+                        <p>
+                            <small><strong>Output:</strong><br /><br /></small>
+                        </p>
+                        pre.fragment
+                            code.html(data-trim contenteditable).
+                                Counter value is: 0
+                        pre.fragment
+                            code.html(data-trim contenteditable).
+                                Counter value is: 1
+                        pre.fragment
+                            code.html(data-trim contenteditable).
+                                Counter value is: 2
+                    section
+                        h3 Quick Practice:
+                        a(href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_while" target="_blank") https://bit.ly/2riL4RE
+
+                    // Loops | for ... loop
+                    section
+                        <h2>The <strong class="colorful">for ... loop</strong></h2>
+                        <h5>A while statement with... a twist!</h5>
+                    section
+                        pre
+                            code.hljs(data-trim contenteditable).
+                                let counter = 0; 
+                                while ( counter < 3 ){
+
+                                    console.log( counter );
+                                    counter = counter + 1;
+
+                                }
+                        .linebreak
+                        pre.fragment
+                            code.hljs(data-trim contenteditable).
+                                for ( let counter = 0; counter < 3; counter = counter + 1 ){
+
+                                    console.log( counter );
+
+                                }
+                        <p class="fragment"><small>So, the loop structure is this:</small></p>
+                        pre.fragment
+                            code.hljs(data-trim contenteditable).
+                                for ( START STATEMENT; CONDITION; END STATEMENT ){
+
+                                    CODE
+
+                                }
+                    section
+                        <h5>Example:</h5>
+                        pre
+                            code.javascript(data-trim contenteditable).
+                                let someArray = [ "a", "b", "c" ];
+
+                                for ( let counter = 0; counter < someArray.length; counter++ ){
+
+                                console.log( "Counter value is: " + someArray[counter] );
+
+                                }
+                        <p>
+                            <small><strong>Output:</strong><br /><br /></small>
+                        </p>
+                        pre.fragment
+                            code.html(data-trim).
+                                Counter value is: a
+                        pre.fragment
+                            code.html(data-trim).
+                                Counter value is: b
+                        pre.fragment
+                            code.html(data-trim).
+                                Counter value is: c
+                    section
+                        h3 Quick Practice:
+                        a(href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_loop_for" target="_blank") https://bit.ly/2sFunCg
+
+                    // Loops | Quick Mention: do ... while
+                    section
+                        h3 Quick Mention:
+                        h4 The <strong class="colorful">do ... while</strong> loop
+                        a(href="https://www.w3schools.com/js/js_loop_while.asp" target="_blank") W3Schools.com
+
+                // FUNCTIONS
+                section
+                    section(data-background="#9cbf3f")
+                        h3 Functions
+                    section.clean_img(data-background="#9cbf3f")
+                        <img src="images/understanding_functions_01.jpg" alt="">
+                    section.clean_img(data-background="#9cbf3f")
+                        <img src="images/understanding_functions_02.jpg" alt="">
+                    section.clean_img(data-background="#9cbf3f")
+                        <img src="images/understanding_functions_03.jpg" alt="">
+                    section.clean_img(data-background="#9cbf3f")
+                        <img src="images/understanding_functions_04.jpg" alt="">
+                    section.clean_img(data-background="#9cbf3f")
+                        <img src="images/understanding_functions_05.jpg" alt="">
+                    section.clean_img(data-background="#9cbf3f")
+                        <img src="images/understanding_functions_06.jpg" alt="">
+
+                // FUNCTIONS | Declaring & Calling
+                section
+                    section
+                        <p><small>Declaring a Function:</small></p>
+                        pre
+                            code.hljs(data-trim contenteditable).
+                                function repeatCode( param, otherParam ){
+
+                                    console.log( param );
+                                    console.log( otherParam );
+
+                                }
+                        <p class="fragment"><small>Calling the Function:</small></p>
+                        pre.fragment
+                            code.hljs(data-trim contenteditable).
+                                repeatCode( "value for param", "value for otherParam" );
+
+                        <p class="fragment"><small>Will output:</small></p>
+                        pre.fragment
+                            code.hljs(data-trim contenteditable).
+                                "value for param"
+                                "value for otherParam"
+
+                    section
+                        <p><small>Declaring a Function (#2):</small></p>
+                        pre
+                            code.hljs.javascript(data-trim contenteditable).
+                                function repeatCode( param, otherParam ){
+
+                                    console.log( param );
+                                    console.log( otherParam );
+
+                                }
+                        <p class="fragment"><small>Can be declared as:</small></p>
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                let repeatCode = function( param, otherParam ){
+
+                                    console.log( param );
+                                    console.log( otherParam );
+
+                                }
+                    section
+                        <p><small>The return statement:</small></p>
+                        pre
+                            code.hljs.javascript(data-trim contenteditable).
+                                function repeatCode( one, two ){
+
+                                    return one + two;
+
+                                }
+                        .linebreak
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                repeatCode( 4, 6 );
+                        .linebreak
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                console.log( repeatCode( 4, 6 ) );
+                        .linebreak
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                let sum = repeatCode( 4, 6 );
+                        .linebreak
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                console.log( sum );
+                        p.small.fragment ( What if there is no return statement present? )
+
+                // OBJECTS
+                section
+                    section
+                        <h3 class="colorful">Objects</h3>
+                        <h5 class="fragment">{ Advanced Data Structures }</h5>
+                    section
+                        <h5>Remember Arrays?</h5>
+                        pre
+                            code.hljs(data-trim contenteditable).
+                                let arr = [ "Kosmas", "Kostas", "Chris" ]; 
+                                console.log( arr[0] );
+                        <p><small>Under the hood, this works much like this:</small></p>
+                        pre
+                            code.hljs(data-trim contenteditable).
+                                [ 0: "Kosmas", 1: "Kostas", 2: "Chris" ]
+                    section
+                        <p>Declaring an Object:</p>
+                        pre
+                            code.hljs(data-trim contenteditable).
+                                let obj = { 
+
+                                    teacher: "Kosmas",
+                                    assistant: "Kostas",
+                                    founder: "Chris" 
+
+                                }
+                        <p><small>In Objects, instead of using a numeric index for each element,<br />we explicitly define a key (String).</small></p>
+                    section
+                        <p>Accessing an Object Property:</p>
+                        pre
+                            code.hljs(data-trim contenteditable).
+                                let obj = { teacher: "Kosmas", assistant: "Kostas", founder: "Chris" }
+
+                                console.log( obj["teacher"] );
+                                console.log( obj.assistant );
+                        <p class="fragment"><small>Will Output:</small></p>
+                        pre.fragment
+                            code.hljs.
+                                "Kosmas"
+                                "Kostas"
+                    section
+                        <p>Setting an Object Property:</p>
+                        pre
+                            code.hljs(data-trim contenteditable).
+                                let obj = { teacher: "Kosmas", assistant: "Kostas", founder: "Chris" }
+
+                                obj.teacher = "Mary";
+
+                                console.log( obj );
+                                console.log( obj["teacher"] );
+                        <p class="fragment"><small>Will Output:</small></p>
+                        pre.fragment
+                            code.hljs.javascript.
+                                { teacher: "Mary", assistant: "Kostas", founder: "Chris" }
+                                "Mary"
+                    section
+                        <p><small>When an Object Property contains a Function, it is called a <strong class="colorful">method</strong></small></p>
+                        pre
+                            code.hljs.javascript(data-trim contenteditable).
+                                let car = {
+                                    color: "red",
+                                    year: 2010,
+                                    type: "sports",
+                                    showInfo: function(){
+                                        console.log("A red sports car.");
+                                    }
+                                }
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                car.showInfo();
+                        <p class="fragment"><small>Will output:</small></p>
+                        pre.fragment
+                            code.hljs(data-trim contenteditable).
+                                "A red sports car."
+                    section
+                        <p><small>You can access any Object property using the <strong class="colorful">this</strong> keyword, while inside the Object.</small></p>
+                        pre
+                            code.hljs.javascript(data-trim contenteditable).
+                                let car = {
+                                    color: "red",
+                                    year: 2010,
+                                    type: "sports",
+                                    showInfo: function(){
+                                        console.log("A " + this.color + " sports car.");
+                                    }
+                                }
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                car.showInfo();
+                        <p class="fragment"><small>Will output:</small></p>
+                        pre.fragment
+                            code.hljs(data-trim).
+                                "A red sports car."
+                    section
+                        <h4>Recap</h4>
+                    section
+                        <p><small>An <strong class="colorful">Object</strong> is a collection of variables (called <strong class="colorful">properties</strong>)<br />
+                                and functions (called <strong class="colorful">methods</strong>) which can be accessed<br />using the . dot
+                                notation: <strong class="colorful">Object.property, Object.method()</strong></small></p>
+                        pre
+                            code.hljs.javascript(data-trim contenteditable).
+                                let client = {
+                                    age: 50,
+                                    name: "Jane",
+                                    surname: "Doe",
+                                    getName: function(){
+
+                                        console.log( this.name + " " + this.surname );
+
+                                    } 
+                                }
+
+                                client.getName();
+                        pre.fragment
+                            code.hljs(data-trim contenteditable).
+                                "Jane Doe"
+                    section
+                        h3 Quick Practice?
+                        a(href="https://codepen.io/kostasx/pen/YJJBrR?editors=0010" target="_blank") https://bit.ly/2FWYb5d
+
+                // RESOURCES
+                section
+                    <h3>Resources</h3>
+                    .columns
+                        .column.is-8.is-offset-2
+                            <ul style="font-size: 28px;">
+                                <li>
+                                    <a href="https://jgthms.com/javascript-in-14-minutes/">JavaScript in 14 minutes</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.javascript.com/">READY TO TRY JavaScript?</a>
+                                </li>
+                                <li>
+                                    <a href="http://jsforcats.com/">JavaScript for Cats: An introduction for new programmers</a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch1.md">You Don't Know JS - Up &amp; Going | Into Programming</a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch2.md">You Don't Know JS - Up &amp; Going | Into JavaScript</a>
+                                </li>
+                                <li>
+                                    <a href="https://scrimba.com/g/gintrotojavascript">Scrimba: Introduction to JavaScript</a>
+                                </li>
+                                <li>
+                                    <a href="https://javascript.info/first-steps">JavaScript.info: JavaScript Fundamentals</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.w3schools.com/js/default.asp">W3Schools: JavaScript</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.codecademy.com/learn/introduction-to-javascript">Introduction to JavaScript: Learn
+                                        JavaScript fundamentals and build interactive websites and pages.</a>
+                                </li>
+                            </ul>
+
+                // EXERCISES 
+                section
+                    <h3>Exercises & Practice Material:</h3>
+                    .columns
+                        .column.is-8.is-offset-2
+                            ul
+                                li
+                                    <a href="https://www.w3schools.com/js/js_examples.asp">W3Schools: JavaScript by Example</a>
+                                li
+                                    <a href="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_variables1">W3Schools: JavaScript Exercises</a>
+
                 // TTS | OUTRO 
                 section#tts-outro.tts-title(data-state='outro')
 
