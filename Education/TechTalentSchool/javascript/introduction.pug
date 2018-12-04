@@ -9,6 +9,8 @@ html(lang='en')
         meta(name='apple-mobile-web-app-status-bar-style' content='black-translucent')
         meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
 
+        // Bulma.io | https://cdnjs.com/libraries/bulma
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css")
         link(rel='stylesheet' href='../libs/reveal.js/css/reveal.css')
         link#theme(rel='stylesheet' href='../libs/reveal.js/css/theme/black-tts.css')
         link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css')
@@ -38,6 +40,9 @@ html(lang='en')
             }
 
         style.
+            a.dark {
+                color: black;
+            }
             a.full-anchor {
                 position   : fixed;
                 top        : -50%;
@@ -55,6 +60,15 @@ html(lang='en')
                 left    : 0;
                 width   : 100%;
                 height: auto;
+            }
+            .reveal a:hover img.no_hover_effect {
+                background: transparent;
+                border-color: none;
+                box-shadow: none;
+            }
+            .linebreak {
+                display: block;
+                height: 10px;
             }
 
     body
@@ -205,7 +219,108 @@ html(lang='en')
                         img.plain(src='./introduction/DataTypeTalk-005.svg' alt='')
 
                 // ARITHMETIC OPERATORS 001
-                // ... 
+                section.svg_contain
+                    include introduction/arithmetic-operators-001.svg
+
+                // ARITHMETIC OPERATORS 002
+                section.svg_contain
+                    include introduction/arithmetic-operators-002.svg
+
+                // ARITHMETIC OPERATORS 003 | OPERATOR PRECEDENCE
+                section.svg_contain
+                    include introduction/arithmetic-operators-003.svg
+
+                // STRINGS
+                section.svg_contain
+                    include introduction/strings.svg
+
+                // COMMENTS
+                section
+                    section
+                        h2.colorful Comments
+                    section
+                        p What are <strong class="colorful">Comments</strong>?
+                        small.fragment Parts of the program that don't get executed
+                        p
+                            small.fragment Single line comments:
+                        pre.fragment
+                            code.hljs(data-trim contenteditable).
+                                // This is a single line comment
+
+                        p
+                            small.fragment Multi-line comments:
+                        pre.fragment
+                            code.hljs(data-trim contenteditable).
+                                /* Comments that
+                                span multiple lines
+                                can be placed like this.
+                                */
+
+                // PRACTICE TIME: https://codepen.io/kostasx/pen/opVQQg
+                section(data-transition="slide" data-background="#F7BE2C" data-background-transition="zoom")
+                    h2 It's time to test our skills!
+                    .columns
+                        .column.is-8.is-offset-2
+                            a.dark(target="_blank" href="https://codepen.io/kostasx/pen/opVQQg?editors=0010")
+                                p https://bit.ly/2U97u52
+                                img.no_hover_effect(src='./introduction/codepen.png' width="160px")
+                            .linebreak
+                            small <strong>*</strong>In JavaScript there are 2 basic functions<br>to output values to the browser:
+                    .columns
+                        .column.is-6.is-offset-3
+                            pre
+                                code alert( VALUE );
+                            .linebreak
+                            pre
+                                code console.log( VALUE );
+
+                // TYPE COERCION
+                section.svg_contain
+                    include introduction/type-coercion.svg
+
+                // VARIABLES
+                section.svg_contain
+                    section
+                        include introduction/variables-001.svg
+                    section
+                        include introduction/variables-002.svg
+                    section
+                        h2 Let's see a visualization...
+                        a(target="_blank" href="http://www.pythontutor.com/javascript.html#code=let%20someName%20%3D%20%22Kostas%22%3B%0Alet%20someDate%20%3D%202018%3B%0AsomeDate%20%3D%202019%3B%0Aconst%20dateOfBirth%20%3D%201995%3B%0A%0A//%20Access%20%26%20print%20the%20Values%3A%0Aconsole.log%28%20someDate%20%29%3B%0Aconsole.log%28%20dateOfBirth%20%29%3B&curInstr=6&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D") 
+                            h2 https://bit.ly/2AOczXA 
+
+                // PRACTICE TIME: https://codepen.io/kostasx/pen/QaoRZN
+                section(data-transition="slide" data-background="#F7BE2C" data-background-transition="zoom")
+                    h2 It's time to test our skills!
+                    .columns
+                        .column.is-8.is-offset-2
+                            a.dark(target="_blank" href="https://codepen.io/kostasx/pen/QaoRZN?editors=0010")
+                                p https://bit.ly/2BPf11W
+                                img.no_hover_effect(src='./introduction/codepen.png' width="160px")
+                            .linebreak
+
+                // BOOLEANS
+                section.svg_contain
+                    include introduction/booleans-001.svg
+
+                // ARRAYS 01
+                section.svg_contain
+                    section
+                        include introduction/arrays-001.svg
+                    // ACCESING VALUES
+                    section
+                        include introduction/arrays-002.svg
+                    // ADDING AND REMOVING VALUES
+                    section
+                        include introduction/arrays-003.svg
+                    // VISUALIZATION
+                    section
+                        h2 Let's some visualizations...
+                        a(target="blank" href="http://www.pythontutor.com/javascript.html#code=let%20listOfNames%20%3D%20%5B%20'Abdul',%20'Sofia',%20'Chris'%20%5D%3B%0A%0Aconsole.log%28%20listOfNames%20%29%3B%0A%0AlistOfNames%5B2%5D%20%3D%20'Mary'%3B%0A%0Aconsole.log%28%20listOfNames%5B2%5D%20%29%3B%0A%0Aconsole.log%28%20listOfNames%20%29%3B%0A&curInstr=5&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D")
+                            h2 https://bit.ly/2Ue8btL
+                        .linebreak
+                        a(href="http://www.pythontutor.com/javascript.html#code=let%20numberList%20%3D%20%5B%201,%202,%203%20%5D%3B%0A%0AnumberList.push%28%204%20%29%3B%0A%0AnumberList.pop%28%204%20%29%3B%0A%0AnumberList.unshift%280%29%3B%0A%0AnumberList.shift%28%29%3B&curInstr=5&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D" target="_blank")
+                            h2 https://bit.ly/2KQCumh
 
                 // TTS | OUTRO 
                 section#tts-outro.tts-title(data-state='outro')
