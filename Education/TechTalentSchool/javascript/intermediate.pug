@@ -1,0 +1,1511 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        title TechTalentSchool | Intermediate JavaScript 
+        meta(name='author' content='Kostas Minaidis')
+        meta(name='apple-mobile-web-app-capable' content='yes')
+        meta(name='apple-mobile-web-app-status-bar-style' content='black-translucent')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+        // Bulma.io | https://cdnjs.com/libraries/bulma
+        link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css')
+        link(rel='stylesheet' href='../libs/reveal.js/css/reveal.css')
+        link#theme(rel='stylesheet' href='../libs/reveal.js/css/theme/black-tts.css')
+        link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css')
+        // Roboto | Google Web Fonts
+        link(href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900' rel='stylesheet')
+        // Theme used for syntax highlighting of code
+        link(rel='stylesheet' href='../libs/reveal.js/lib/css/monokai-sublime-sha.css')
+        link(rel='stylesheet' href='../css/reveal-overrides.css')
+        link(rel='stylesheet' href='../css/reveal-tts.css')
+        style.
+            a.full-anchor {
+                position: fixed;
+                top     : -50%;
+                left    : -50%;
+                width   : 200vw;
+                height  : 200vh;
+                text-indent: -50000px;
+            }
+            .reveal .slide-background {
+                background-size: contain;
+            }
+            .svg_contain svg {
+                position:absolute;
+                top     :0;
+                left    :0;
+                width   :100%;
+                height  :auto;"
+            }
+        style.
+            #array_recap pre.small { margin-bottom: -8px; }
+
+        style#tts.
+
+            .reveal.tts-intro {
+                background-image: url('images/tts-titles-js-intermediate.jpg');
+            }
+            .reveal.tts-outro {
+                background-image: url('images/tts-titles-joinus.jpg');
+            }
+            .reveal.tts-intro,
+            .reveal.tts-outro {
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+            }
+            .reveal.tts-intro .progress,
+            .reveal.tts-outro .progress {
+                display: none !important;
+            }      
+            .linebreak {
+                display: block;
+                height: 10px;
+            }
+            /* Bulma Overrides */
+            code { background-color: transparent; }
+
+    body
+
+        // Alt+Click | Zoom
+        // S | Speaker View
+        // B or . | Pause View
+
+        .reveal
+            .slides
+
+                // TTS | INTRO
+                section#tts-intro.tts-title(data-state='tts-intro' data-transition="fade-out")
+
+                // INTRO
+                section(data-transition="fade-out")
+                    h2 Intermediate JavaScript
+                    h3.colorful Front-end Bootcamp
+                    p
+                        small
+                            | Created by 
+                            a(href='https://github.com/kostasx') Kostas Minaidis
+                            |  | Dec 2018
+                    p
+                        img.tts_logo(style='width:140px; height:94px;' src='../img/tts-logo.png' alt='')
+
+                // AGENTA
+                section
+                    h3 Agenta
+                    ul(style='font-size:0.8em;')
+                        li Variables &amp; Scope In-Depth: <strong>var</strong>, <strong>let</strong> &amp; <strong>const</strong>
+                        li Hoisting
+                        li Advanced Array Manipulation Methods
+                        li Working with the DOM
+                        li Events and User Input
+                        li Async: Callbacks, Promises
+                        li JSON &amp; Fetch()
+                        li Prototypes &amp; Function Constructors
+                        li ES6: Template Literals, Arrow Functions &amp; Classes
+
+                // var, let, const & SCOPE
+                section(data-background='#9cbf3f')
+                    section
+                        h1 JS Variables 
+                        h2(style='color:white;')
+                            strong var
+                            | , 
+                            strong let
+                            |  and 
+                            strong const
+                    section
+                        img(src='images/advanced/let_var_const_01.jpg' alt='')
+                    section
+                        img(src='images/advanced/let_var_const_02.jpg' alt='')
+                    section
+                        img(src='images/advanced/let_var_const_03.jpg' alt='')
+                    section
+                        img(src='images/advanced/let_var_const_04.jpg' alt='')
+                    section
+                        img(src='images/advanced/let_var_const_05.jpg' alt='')
+                    section
+                        img(src='images/advanced/let_var_const_06.jpg' alt='')
+                    section
+                        img(src='images/advanced/let_var_const_07.jpg' alt='')
+                    section
+                        img(src='images/advanced/let_var_const_08.jpg' alt='')
+                    section
+                        img(src='images/advanced/let_var_const_09.jpg' alt='')
+                    section
+                        img(src='images/advanced/let_var_const_10.jpg' alt='')
+                    section
+                        img(src='images/advanced/let_var_const_11.jpg' alt='')
+                    section
+                        img(src='images/advanced/let_var_const_12.jpg' alt='')
+                    section
+                        img(src='images/advanced/let_var_const_13.jpg' alt='')
+                    section(data-background='#9cbf3f')
+                        section
+                            h3 General Rule:
+                            p.fragment "Use <strong style="color:black">let</strong> only for loop counters or only if you really need reassignment. Everywhere else, use <strong style="color:black">const</strong>."
+
+                // HOISTING [ WiP ]
+                section
+                    section(data-background="#fff")
+                        img(src="./intermediate/hoisting-img.jpg")
+                    section(data-background="#fff")
+                        h6 Definition:
+                        img(src="./intermediate/hoisting.jpg")
+                        p.small ( Ανέλκυση )
+                    section
+                        p.
+                            "Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their scope before code execution."
+                        .linebreak
+                        h6.fragment.colorful(style="font-weight: 400;") "Of note however, is the fact that the hoisting mechanism only moves the declaration. The assignments are left in place."
+                    section
+                        pre
+                            code.hljs.javascript(data-trim contenteditable).
+                                doSomething();
+
+                                for (i = 0; i <= 10; i++) {
+                                    console.log(i);
+                                }
+
+                                function doSomething() {
+                                    console.log('function executed');
+                                }
+                        .columns
+                            .column.is-10.is-offset-1
+
+                                p.small.fragment "Although the <code>doSomething()</code> function is called before it's defined,<br>the code still works." 
+
+                                p.small.fragment "In fact, the <code>for loop</code> isn't started until the JavaScript engine figures out that <code>doSomething()</code> is defined and can execute the call."
+                    section
+                        h6 CodePen Examples:
+                        p
+                            a(target="_blank" href="https://codepen.io/kostasx/pen/jXOzGX?editors=0011") Variable Hoisting: https://bit.ly/2GaIZBu
+                        p
+                            a(target="_blank" href="https://codepen.io/kostasx/pen/MZWVZW?editors=0011") Function Hoisting: https://bit.ly/2L5vMZt
+                        p
+                            a(target="_blank" href="https://codepen.io/kostasx/pen/xmxWeg?editors=0011") Function Variables Hoisting: https://bit.ly/2zPhIzc
+                        p
+                            a(target="_blank" href="https://codepen.io/kostasx/pen/ZVExmY?editors=0011") Undeclared Variables: https://bit.ly/2EmZQQ0
+
+                // Array Manipulation | Recapping
+                section
+
+                    section
+                        h2
+                            | Manipulating 
+                            strong.colorful Arrays
+                        h4
+                            | Recapping: 
+                            strong.colorful push
+                            | , 
+                            strong.colorful pop
+                            | , 
+                            strong.colorful shift
+                            | , 
+                            strong.colorful unshift
+
+                    section#array_recap
+                        <pre class="small">
+                            <code class="hljs" data-trim contenteditable>let todo = [ ];</code>
+                        </pre> 
+                        <pre class="fragment small">
+                            <code class="hljs" data-trim contenteditable>todo.push("ENTRY");</code>
+                        </pre> 
+                        <pre class="fragment small">
+                            <code class="hljs" data-trim contenteditable>[ "ENTRY" ]</code>
+                        </pre> 
+                        <pre class="fragment small">
+                            <code class="hljs" data-trim contenteditable>todo.push("AT THE END");</code>
+                        </pre> 
+                        <pre class="fragment small">
+                            <code class="hljs" data-trim contenteditable>[ "ENTRY", "AT THE END" ]</code>
+                        </pre> 
+                        <pre class="fragment small">
+                            <code class="hljs" data-trim contenteditable>todo.shift();</code>
+                        </pre> 
+                        <pre class="fragment small">
+                            <code class="hljs" data-trim contenteditable>[ "AT THE END" ]</code>
+                        </pre> 
+                        <pre class="fragment small">
+                            <code class="hljs" data-trim contenteditable>todo.unshift( "AT START" );</code>
+                        </pre> 
+                        <pre class="fragment small">
+                            <code class="hljs" data-trim contenteditable>[ "AT START", "AT THE END" ]</code>
+                        </pre> 
+                        <pre class="fragment small">
+                            <code class="hljs" data-trim contenteditable>todo.pop();</code>
+                        </pre> 
+                        <pre class="fragment small">
+                            <code class="hljs" data-trim contenteditable>[ "AT START" ]</code>
+                        </pre> 
+
+                    section
+                        p
+                            | Tip: You can also create a new Array
+                            br
+                            | using the following syntax:
+                        <pre>
+                            <code class="hljs" data-trim contenteditable>let someArray = new Array( 1, "text", false );</code>
+                        </pre> 
+                        p.fragment ...but we tend to prefer the [ ] syntax.
+
+                // Advanced Array Manipulation
+                section
+
+                    section
+                        h2 Manipulating <strong class="colorful">Arrays</strong>
+
+                    // reverse()
+                    section
+
+                        <h3>Array<strong class="colorful">.reverse()</strong></h3>
+
+                        pre
+                            code.hljs(data-trim contenteditable).
+                                let listOfNumbers = [ 1, 2, 3, 4, 5 ];
+
+                        pre.fragment
+                            code.hljs(data-trim contenteditable).
+                                listOfNumbers.reverse();
+
+                        pre.fragment
+                            code.hljs(data-trim contenteditable).
+                                console.log( listOfNumbers );
+
+                        p.fragment
+                            small Will output
+
+                        pre.fragment
+                            code.hljs(data-trim contenteditable).
+                                [ 5, 4, 3, 2, 1]
+
+                        <p class="fragment">
+                            <small>
+                                <strong class="colorful">WARNING: </strong> reverse() will <strong>mutate</strong> (change) the contents of the Array!
+                            </small>
+                        </p>
+
+                        <p class="fragment">
+                            <small>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse">More on Array.prototype.reverse()</a>
+                            </small>
+                        </p>
+
+                    // sort()
+                    section
+
+                        <h3>Array<strong class="colorful">.sort()</strong></h3>
+
+                        <p>
+                            <small>Sorts an Array alphabetically using the ordered <a href="https://raw.githubusercontent.com/wiki/tomgibara/ascii-table/tables/ascii-table-1.1.png" target="_blank">ASCII character table</a><br/>or a custom sorting function. Works on a character-by-character basis.
+                            </small>
+                        </p>
+
+                        pre.fragment.small
+                            code.hljs(data-trim contenteditable).
+                                let someNames = [ "Eve", "Adam", "Bob", "Bill", "adam" ];
+
+                        pre.fragment.small
+                            code.hljs(data-trim contenteditable).
+                                console.log( someNames.sort() );
+
+                        pre.fragment.small
+                            code.hljs(data-trim contenteditable).
+                                [ 'Adam', 'Bill', 'Bob', 'Eve', 'adam' ];
+
+                        <p class="fragment">
+                            <small>
+                                <strong class="colorful">Warning: </strong>Numbers get converted to Strings and are compared alphabetically:
+                            </small>
+                        </p>
+
+                        pre.fragment.small
+                            code.hljs(data-trim contenteditable).
+                                let someNumbers = [ 2, 11, 1 ];
+
+                        pre.fragment.small
+                            code.hljs(data-trim contenteditable).
+                                console.log( someNumbers.sort() );
+
+                        pre.fragment.small
+                            code.hljs(data-trim contenteditable).
+                                [ 1, 11, 2 ]
+
+                    // sort() #2
+                    section
+                        <p><small>So how do we compare a list of numbers using <strong class="colorful">sort()</strong>?</small></p>
+                        <p class="fragment"><small>We need to pass a custom sorting function<br/>as an argument to the sort() function.</small></p>
+
+                        pre.fragment
+                            code.hljs(data-trim contenteditable).
+                                let someNumbers = [ 2, 11, 1 ];
+
+                        pre.fragment
+                            code.hljs(data-trim contenteditable).
+                                let sorting = function( a, b ){
+                                if ( a < b ){ 
+                                    return -1; 
+                                } else if ( a > b ){ 
+                                    return 1; 
+                                } else { return 0; }	// a === b
+                                }
+
+                        pre.fragment
+                            code.hljs(data-trim contenteditable).
+                                console.log( someNumbers.sort( sorting ) );
+
+                        pre.fragment
+                            code.hljs(data-trim contenteditable).
+                                [ 1, 2, 11 ]
+
+                    // slice()
+                    section
+
+                        <h3>Array<strong class="colorful">.slice( start, until )</strong></h3>
+
+                        <p class="fragment"><small>Returns a portion of the Array beginning at the <strong class="colorful">start</strong> index<br/>up to (but not including) the <strong class="colorful">until</strong> index.</small></p>
+
+                        pre.fragment
+                            code.hljs(data-trim contenteditable).
+                                let animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+                                // Index -->     0       1        2        3         4
+
+                        pre.fragment
+                            code.hljs(data-trim contenteditable).
+                                console.log(animals.slice(2, 4));
+
+                        pre.fragment
+                            code.hljs(data-trim contenteditable).
+                                ["camel", "duck"]
+
+                        pre.fragment
+                            code.hljs(data-trim contenteditable).
+                                console.log(animals.slice(1, 5));
+
+                        pre.fragment
+                            code.hljs(data-trim contenteditable).
+                                ["bison", "camel", "duck", "elephant"]
+
+                        <p class="fragment">
+                            <small>If the second parameter (<strong class="colorful">until</strong>) is omitted, slice extracts through the end of the Array.
+                            </small>
+                        </p>
+
+                        pre.fragment
+                            code.hljs(data-trim contenteditable).
+                                console.log(animals.slice(2));
+
+                        pre.fragment
+                            code.hljs(data-trim contenteditable).
+                                ["camel", "duck", "elephant"]
+
+                    // slice() tip : clone an Array 
+                    section
+
+                        <p>Tip: Using Array<strong class="colorful">.slice()</strong> to clone an Array</p>
+                        <p class="Dfragment"><small>When the first slice argument is omitted, it is automatically set to index 0.</small></p>
+
+                        pre.fragment
+                            code.hljs(data-trim contenteditable).
+                                let numbers = [ 1, 2, 3, 4 ];</code>
+
+                        pre.fragment
+                            code.hljs(data-trim contenteditable).
+                                let reversedNumbers = numbers.slice();
+
+                        pre.fragment
+                            code.hljs(data-trim contenteditable).
+                                reversedNumbers.reverse();
+
+                        pre.fragment
+                            code.hljs(data-trim contenteditable).
+                                console.log( numbers );
+
+                        pre.fragment
+                            code.hljs(data-trim contenteditable).
+                                [ 1, 2, 3, 4 ]
+
+                        pre.fragment
+                            code.hljs(data-trim contenteditable).
+                                console.log( reversedNumbers );
+
+                        pre.fragment
+                            code.hljs(data-trim contenteditable).
+                                [ 4, 3, 2, 1 ]
+
+                    // splice() 
+                    section
+
+                        <h3>Array<strong class="colorful">.splice( start, deleteCount )</strong></h3>
+                        <small>Removes or adds elements to an Array, and returns the removed/added elements.</small>
+
+                        pre.fragment
+                            code.hljs(data-trim contenteditable).
+                                let animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+                                // Index -->     0       1        2        3         4
+        
+                        <small class="fragment">Remove 1 element from index 3</small>
+        
+                        pre.fragment
+                            code.hljs(data-trim contenteditable).
+                                let duck = animals.splice( 3, 1 );
+
+                        pre.fragment
+                            code.hljs(data-trim contenteditable).
+                                             [ 'ant', 'bison', 'camel', 'elephant' ]
+                                // Index -->     0       1        2          3
+
+                        <small class="fragment">Remove 2 elements from index 1</small>
+
+                        pre.fragment
+                            code.hljs(data-trim contenteditable).
+                                let bisonAndCamel = animals.splice( 1, 2 );
+
+                        pre.fragment
+                            code.hljs(data-trim contenteditable).
+                                [ 'ant', 'elephant' ] // animals
+
+                    // splice() #02 
+                    section
+
+                        <h3>Array<strong class="colorful">.splice( start, deleteCount )</strong></h3>
+
+                        pre
+                            code.hljs(data-trim contenteditable).
+                                let animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+                                // Index -->     0       1        2        3         4
+
+                        <small class="fragment">Remove 1 element from index 2, and insert 'monkey'</small>
+
+                        pre.fragment
+                            code.hljs(data-trim contenteditable).
+                                animals.splice( 2, 1, 'monkey');
+
+                        pre.fragment
+                            code.hljs(data-trim contenteditable).
+                                            [ 'ant', 'bison', 'monkey', 'duck', 'elephant' ]
+                                //--> Index     0       1        2         3          4
+
+                        <small class="fragment">Insert 1 element at index 3</small>
+
+                        pre.fragment
+                            code.hljs(data-trim contenteditable).
+                                animals.splice(3,0,'gorilla');
+
+                        pre.fragment
+                            code.hljs(data-trim contenteditable).
+                                [ 'ant', 'bison', 'monkey', 'gorilla', 'duck', 'elephant' ]
+
+                        <a style="font-size:0.6em" class="fragment" target="_blank" href="https://codepen.io/kostasx/pen/OvBjaY">A Visual Guide to Array.prototype.splice</a>
+
+                    // map() 
+                    section
+
+                        <h3>Array<strong class="colorful">.map()</strong></h3>
+
+                        <p><small>Creates a new array with the results of calling a provided function<br/>on every element in the calling array.</small></p>
+
+                        pre.fragment.fade-up
+                            code.hljs(data-trim contenteditable).
+                                let numbers = [ 2, 4, 8 ];
+
+                        pre.fragment.fade-up
+                            code.hljs(data-trim contenteditable).
+                                let modify = function( element ){
+                                    return element * element;
+                                } 
+
+                        pre.fragment.fade-up
+                            code.hljs(data-trim contenteditable).
+                                let squares = numbers.map( modify );
+
+                        pre.fragment.fade-up
+                            code.hljs(data-trim contenteditable).
+                                console.log( squares );
+
+                        pre.fragment.fade-up
+                            code.hljs(data-trim contenteditable).
+                                [ 4, 16, 64 ]
+
+                    // map() (Under the Hood)
+                    section
+
+                        p
+                            small Array.map() Under the hood...
+
+                        pre.fragment.fade-up
+                            code.hljs(data-trim contenteditable).
+
+                                let numbers = [ 2, 4, 8 ];
+                                function modify( element ){
+                                    return element * element;
+                                }
+                                let results = numbers.map( modify );
+
+                        p.fragment
+                            small.
+                                [ <strong class="colorful">2</strong>, 4, 8 ]
+                            br
+                            small
+                                <span class="fragment">modify( <strong class="colorful">2</strong> );</span> <span class="fragment"> <span class="hljs-comment">--></span> 2 * 2 </span><span class="fragment"> <span class="hljs-comment">--></span> 4 </span><span class="fragment"> <span class="hljs-comment">--></span> <span class="hljs-title">[ 4 ]</span></span>
+
+
+                        p.fragment
+                            small.
+                                [ 2, <strong class="colorful">4</strong>, 8 ]
+                            br
+                            small
+                                <span class="fragment">modify( <strong class="colorful">4</strong> );</span> <span class="fragment"> <span class="hljs-comment">--></span> 4 * 4 </span><span class="fragment"> <span class="hljs-comment">--></span> 16 </span><span class="fragment"> <span class="hljs-comment">--></span> <span class="hljs-title">[ 4, 16 ]</span></span>
+
+                        p.fragment
+                            small.
+                                [ 2, 4, <strong class="colorful">8</strong> ]
+                            br
+                            small
+                                <span class="fragment">modify( <strong class="colorful">8</strong> );</span> <span class="fragment"> <span class="hljs-comment">--></span> 8 * 8 </span><span class="fragment"> <span class="hljs-comment">--></span> 64 </span><span class="fragment"> <span class="hljs-comment">--></span> <span class="hljs-title">[ 4, 16, 64 ]</span></span>
+                                </small>
+
+                    // .forEach() 
+                    section
+
+                        <h3>Array<strong class="colorful">.forEach( test )</strong></h3>
+
+                        pre
+                            code.hljs(data-trim contenteditable).
+                                let numbers = [ 2, 4, 8 ];
+                                function modify( element ){
+                                    return element * element;
+                                }
+                                let results = numbers.forEach( modify ); // undefined
+                                results = numbers.map( modify );         // [ 4, 16, 64 ]
+
+                    // filter() 
+                    section
+
+                        <h3>Array<strong class="colorful">.filter( test)</strong></h3>
+                        <p><small>Runs the custom <strong class="colorful">test</strong> function for all Array elements.<br/>Creates a new Array with all the elements that passed the test function.</small></p>
+
+                        pre.fragment.fade-up
+                            code.hljs(data-trim contenteditable).
+                                let ages = [ 15, 22, 23, 44, 11, 18 ];
+
+                        pre.fragment.fade-up
+                            code.hljs(data-trim contenteditable).
+                                function isAdult( age ){
+                                  return ( age > 18 ); 
+                                }
+
+                        pre.fragment.fade-up
+                            code.hljs(data-trim contenteditable).
+                                let passed = ages.filter( isAdult );
+
+                        pre.fragment.fade-up
+                           code.hljs(data-trim contenteditable).
+                                [22, 23, 44] // passed 
+
+                        <p class="small fragment"><span>CodePen</span>	
+                            <a target="_blank" href="https://codepen.io/kostasx/pen/xyZZRg?editors=0012">https://bit.ly/2P6pwlx</a>
+                        </p>
+
+                    // filter() (Under the Hood)
+                    section
+
+                        p Array.filter() Under the hood...
+
+                    // filter() (Under the Hood)
+                    section
+
+                        pre
+                            code.hljs(data-trim contenteditable).
+
+                                let ages = [ 15, 22, 44, 11 ];
+                                function isAdult( age ){ 
+                                    return ( age > 18 ); 
+                                }
+                                let passed = ages.filter( isAdult );
+                        
+                        p.fragment(style="margin-bottom:0")
+                            small.
+                                [ <strong class="colorful">15</strong>, 22, 44, 11 ]
+                            br
+                            small
+                                <span class="fragment">test( <strong class="colorful">15</strong> );</span> <span class="fragment"> <span class="hljs-comment">--></span> ( 15 > 18 ) </span><span class="fragment"> <span class="hljs-comment">--></span> false </span><span class="fragment"> <span class="hljs-comment">--></span> <span class="hljs-title">[ ]</span></span>
+
+                        p.fragment(style="margin:0")
+                            small.
+                                [ 15, <strong class="colorful">22</strong>, 44, 11 ]
+                            br
+                            small
+                                <span class="fragment">test( <strong class="colorful">22</strong> );</span> <span class="fragment"> <span class="hljs-comment">--></span> ( 22 > 18 ) </span><span class="fragment"> <span class="hljs-comment">--></span> true </span><span class="fragment"> <span class="hljs-comment">--></span> <span class="hljs-title">[ 22 ]</span></span>
+
+                        p.fragment(style="margin:0")
+                            small.
+                                [ 15, 22, <strong class="colorful">44</strong>, 11 ]
+                            br
+                            small
+                                <span class="fragment">test( <strong class="colorful">44</strong> );</span> <span class="fragment"> <span class="hljs-comment">--></span> ( 44 > 18 ) </span><span class="fragment"> <span class="hljs-comment">--></span> true </span><span class="fragment"> <span class="hljs-comment">--></span> <span class="hljs-title">[ 22, 44 ]</span></span>
+
+                        p.fragment(style="margin:0")
+                            small.
+                                [ 15, 22, 44, <strong class="colorful">11</strong> ]
+                            br
+                            small
+                                <span class="fragment">test( <strong class="colorful">54</strong> );</span> <span class="fragment"> <span class="hljs-comment">--></span> ( 54 > 18 ) </span><span class="fragment"> <span class="hljs-comment">--></span> false </span><span class="fragment"> <span class="hljs-comment">--></span> <span class="hljs-title">[ 22, 44 ]</span></span>
+
+                    // reduce()
+                    section
+
+                        <h3>Array<strong class="colorful">.reduce()</strong></h3>
+
+                        <p><small>Goes through each element, runs a function and returns an accumulator.</small></p>
+
+                        pre
+                            code.hljs(data-trim contenteditable).
+                                let numbers = [ 12, 8, 10, 5, 5 ];
+                                let sum = function( accumulator, currentValue ){
+
+                                    accumulator = accumulator + currentValue;
+                                    return accumulator;
+
+                                }
+                                numbers.reduce( sum, 0 );
+                                &nbsp;
+
+                    // Chaining
+                    section
+                        <h3>Quick mention: Chaining</h3>
+                        <p class="small"><span>CodePen</span>	
+                            <a target="_blank" href="https://codepen.io/kostasx/pen/zmrrdo?editors=0012">https://bit.ly/2RhnZL7</a>
+                        </p>
+
+                // YouTube: (map) https://www.youtube.com/watch?v=bCqtb-Z5YGQ
+                // YouTube: (reduce) https://www.youtube.com/watch?v=Wl98eZpkp-c
+
+                // PRACTICE: Array Manipulation
+                section(data-transition="slide" data-background="#F7BE2C" data-background-transition="zoom")
+
+                    <h2>LET'S CODE!</h2>
+                    <a class="black" target="_blank" href="https://codepen.io/kostasx/pen/NyaPjY?editors=0011">https://goo.gl/<strong>qtoLF4</strong></a>
+                    <br>
+                    <a class="black" target="_blank" href="https://codepen.io/kostasx/pen/xyKyMg?editors=0012">https://goo.gl/<strong>Vh8bMf</strong></a>
+
+                // Basic DOM Manipulation 
+                section
+
+                    section
+                        <h3><strong class="colorful">DOM</strong> | The Document Object Model</h3>
+
+                    section
+                        img(src="./images/advanced/DOM-Kirupa.webp" alt="")
+
+                    // Basic DOM Terms: document, element, NodeList
+                    section
+                        ul
+                            <li><strong class="colorful">document:</strong> the root object</li>
+                            <li><strong class="colorful">element:</strong> refers to an object (member of the DOM)</li>
+                            <li><strong class="colorful">nodeList:</strong> A collection (array) of elements</li>
+
+                    section
+                        <h2>Basic <strong class="colorful">DOM</strong> Manipulation</h2>
+                        <p class="Dfragment">document<strong class="colorful">.createElement()</strong>;</p>
+                        <p class="Dfragment">document<strong class="colorful">.getElementById()</strong>;</p>
+                        <p class="Dfragment">document<strong class="colorful">.querySelector()</strong>;</p>
+
+                    section
+                        <p class="Dfragment">Element<strong class="colorful">.appendChild()</strong>;</p>
+                        <p class="Dfragment">Element<strong class="colorful">.remove()</strong>;</p>
+                        <p class="Dfragment">Element<strong class="colorful">.setAttribute( key, value )</strong>;</p>
+                        <p class="Dfragment">Element<strong class="colorful">.style</strong></p>
+
+                    // John Tsevdos
+                    // DOM Manipulation
+                    section
+                      h2 DOM Manipulation
+                      ul
+                        li Querying the DOM
+                        li Modifying properties, attributes and HTML classes
+                        li Creating, modifying and removing HTML Elements
+
+                    section
+                      h2 Querying the DOM
+                      <p>Open your favorite web site (or
+                      <a href="https://v4-alpha.getbootstrap.com/examples/jumbotron/" target="_blank">click here</a>) and navigate the DOM!
+                      </p>
+
+                    // Basic DOM API
+                    section
+                        pre
+                            code.hljs(data-trim contenteditable).
+                                document.getElementById('hero'); 
+                                // Selects the element with the specific id
+
+                                document.getElementsByTagName('p'); 
+                                // Selects all ellements that matching the tag
+
+                                document.getElementsByClassName('btn'); 
+                                // Selects all ellements that match CSS class
+
+                                document.querySelector('h1'); 
+                                // Selects the first h1 element that match selector
+
+                                document.querySelectorAll('h2'); 
+                                // Selects all the elements that match selector
+                       
+                    // The DOM Element Family
+                    section
+                        h2 Meet the "family"
+                        pre
+                            code.hljs(data-trim contenteditable).
+                                const el = document.querySelector('.container');
+
+                                el.parentNode
+                                el.children
+                                el.firstElementChild
+                                el.lastElementChild
+                                el.previousElementSibling
+                                el.nextElementSibling
+
+                    // Modifying DOM Elements
+                    section
+
+                        h2 Modifying properties and attributes
+
+                        pre
+                            code.hljs(data-trim contenteditable).
+
+                                const title = document.querySelector('h1');
+                                const img = document.querySelector('.img');
+
+                                title.id = 'my-ID';
+                                title.innerHTML = 'Hi all!';
+                                img.setAttribute("alt", "My image");
+
+                    // Modifying innerHTML
+                    section
+
+                      <h2>Fun with innerHTML on console</h2>
+                      <p>Open your favorite web site console tab. Type and explain the below code snippet.</p>
+
+                        pre
+                            code.hljs(data-trim contenteditable).
+
+                                function makeAllLinksTextYOLO() {
+
+                                    const links = document.querySelectorAll("a");
+                                    Array.from( links ).map( (link)=>{
+                                        link.innerHTML = "YOLO" 
+                                    });
+
+                                }
+
+                                makeAllLinksTextYOLO();
+
+                    // Modifying CSS Classes
+                    section
+                      <h2>Modifying HTML classes</h2>
+
+                        pre
+                            code.hljs(data-trim contenteditable).
+
+                                const el = document.querySelector('h1');
+
+                                el.classList.add('myClass');
+                                el.classList.remove('myClass');
+                                el.classList.toggle('myClass');
+
+                    // Create and Append
+                    section
+                      <h2>DOM Manipulation:</h2>
+                      <h3>Create and append</h3>
+                      <p>Create a codepen (<a href="https://codepen.io/kostasx/pen/pxzQwy" target="_blank">example</a>)</p>
+
+                        pre
+                            code.hljs(data-trim contenteditable).
+
+                                const Paragraph = document.createElement('p');
+
+                                Paragraph.innerHTML = "Hello world!";
+
+                                document.body.appendChild(Paragraph);
+
+                    // Create and insertBefore 
+                    section
+                        h2 DOM Manipulation
+                        h3 Create and insertBefore
+                        pre
+                            code.hljs(data-trim contenteditable).
+                                // ... previous code
+                                const Title = document.createElement('h1');
+                                Title.innerHTML = "Welcome to JavaScript DOM Magic!";
+
+                                // parentNode.insertBefore( Node, referenceNode );
+                                document.body.insertBefore( Title, Paragraph );
+
+                    // Remove
+                    section
+                        h2 DOM Manipulation: Remove
+                        pre
+                            code.hljs(data-trim contenteditable).
+                                const el = document.querySelector('h1');
+                                el.remove();
+
+                    // TODO: Hands-on Link
+                    section
+                        p Quick Hands-on (Array.map + DOM)
+                        a(target="_blank" href="https://bit.ly/2z7wSPI") https://bit.ly/2z7wSPI
+                        br
+                        a(style="font-size:0.5em" target="_blank" href="https://codepen.io/kostasx/pen/Gdmgom?editors=0010") https://codepen.io/kostasx/pen/Gdmgom
+
+                // EVENTS
+                section
+
+                        // What are Events?
+                        section
+                          <h2>Events &amp; Capturing User Input</h2>
+                          <ul>
+                            <li class="fragment">Events are actions that happen in time</li>
+                            <li class="fragment">They might be triggered from the user or the browser</li>
+                            <li class="fragment">We have many <a href="https://developer.mozilla.org/en-US/docs/Web/Events" target="_blank">DOM events</a> but most of the times we use mouse and keyboard events.</li>
+                          </ul>
+
+                        // Click Event
+                        section
+                            h2 Click event
+                            pre
+                                code.hljs(data-trim contenteditable).
+                                    <button id="MyButton" type="button">Click me</button>
+                            br
+                            pre
+                                code.hljs(data-trim contenteditable).
+                                    const btn = document.querySelector('#MyButton');
+
+                                    btn.addEventListener('click', function(event){
+
+                                        console.log( event.type + ' got fired!' );
+
+                                    });
+                            p
+                                <a href="https://codepen.io/kostasx/pen/zmOXae?editors=1010" target="_blank">CodePen</a><br>
+                                <a target="_blank" class="bitly_link" href="https://bit.ly/2O34Sq5">https://bit.ly/<strong>2O34Sq5</strong></a>
+
+                        // The Event Object
+                        section
+                          <h2>Meet the event object</h2>
+                          <ul>
+                            <li>event.type</li>
+                            <li>event.target</li>
+                            <li>event.preventDefault()</li>
+                            <li>and a lot more depending the event type!</li>
+                          </ul>
+
+                        // PRACTICE: Click Event
+                        section
+                          <h2>Click event hands on</h2>
+                          <p>
+                            Solve this <a href="https://codepen.io/kostasx/pen/QZLPVa?editors=0010" target="_blank">exercise</a><br>
+                              <a target="_blank" class="bitly_link" href="https://bit.ly/2DZADeZ">https://bit.ly/<strong>2DZADeZ</strong></a>
+                              
+                          </p>
+
+                        // List of Events
+                        section
+                          <h2>Most used events</h2>
+                          <ul>
+                            <li>click</li>
+                            <li>mouseenter</li>
+                            <li>mouseleave</li>
+                            <li>mousedown</li>
+                            <li>mouseup</li>
+                            <li>mousemove</li>
+                            <li>keydown</li>
+                            <li>keyup</li>
+                            <li>blur</li>
+                            <li>focus</li>
+                          </ul>
+
+                        // The KeyUp Event
+                        section
+                            h2 The KeyUp Event
+    
+                            pre
+                                code.hljs(data-trim contenteditable).
+                                    <input id="myInput" type="text">
+                            br
+                            pre
+                                code.hljs(data-trim contenteditable).
+                                    const input = document.querySelector('#myInput');
+
+                                    input.addEventListener('keyup', function(event){
+
+                                        console.log(event.type + event.target.value);
+
+                                    });
+
+                            p
+                                <a href="https://codepen.io/kostasx/pen/vVBMPK?editors=1111" target="_blank">codepen</a><br>
+                                <a target="_blank" class="bitly_link" href="https://bit.ly/2O5M6OB">https://bit.ly/<strong>2O5M6OB</strong></a>
+
+
+                        // PRACTICE: KeyUp Event
+                        section
+                          <h2>Keyup Event Hands-On</h2>
+                          <p>Solve this <a href="https://codepen.io/kostasx/pen/zmOXbX" target="_blank">exercise</a><br>
+                              <a target="_blank" href="https://bit.ly/2yfveKK" class="bitly_link">https://bit.ly/<strong>2yfveKK</strong></a></p>
+
+                        // Mouseenter + Mouseleave
+                        section
+                          <h2>The mouseenter &amp; mouseleave Events</h2>
+                            pre
+                                code.hljs(data-trim contenteditable).
+
+                                    img.addEventListener('mouseenter', function(e){
+
+                                        console.log(event.type + event.target);
+
+                                    });
+
+                                    img.addEventListener('mouseleave', function(e){
+
+                                        console.log(event.type + event.target);
+
+                                    });
+
+                          <p>
+                              <a href="https://codepen.io/kostasx/pen/mzbgZR?editors=1011" target="_blank">codepen</a>
+                              <br>
+                              <a href="https://bit.ly/2zTJwmp" class="bitly_link" target="_blank">https://bit.ly/<strong>2zTJwmp</strong></a>
+                          </p>
+
+                        // Mouseenter + Mouseleave
+                        section
+                          <h2>Mouseenter and mouseleave event hands on</h2>
+                          <ul>
+                            <li>Solve this <a href="https://codepen.io/kostasx/pen/mzbYbR" target="_blank">exercise</a></li>
+                          </ul>
+
+                        // On Page Load
+                        section
+                            h2 On Page Load
+
+                            pre
+                                code.hljs(data-trim contenteditable).
+
+                                    document.addEventListener('DOMContentLoaded', function(e){
+
+                                        console.log(event.type, event.target);
+
+                                    });
+                            p
+                                <a href="https://codepen.io/kostasx/pen/pxzmvx" target="_blank">codepen</a>
+
+                // TODO: PRACTICE 
+                // https://codepen.io/KPouianou/pen/KQXPvK?editors=0010" 
+
+                // ASYNC: Callbacks & Promises 
+                section
+
+                    // Async Intro 
+                    section
+                        h3.big Async
+                        h4 Handling Asynchronous code with Callbacks and Promises
+
+                    // Sync Example 
+                    section
+                        <h2>Sync</h2>
+                        pre
+                            code.hljs(data-trim contenteditable).
+                                console.log(1);
+                                console.log(2);
+                                console.log(3);
+
+                        <p class="fragment">Will output:</p>
+
+                        pre.fragment
+                            code.hljs(data-trim contenteditable).
+                                1
+                        pre.fragment
+                            code.hljs(data-trim contenteditable).
+                                2
+                        pre.fragment
+                            code.hljs(data-trim contenteditable).
+                                3
+
+                    // Async Example 
+                    section
+                        <h2>Example 2</h2>
+
+                        pre
+                            code.hljs(data-trim contenteditable).
+
+                                console.log(1);
+
+                                setTimeout( function(){
+
+                                    console.log(2);
+
+                                }, 1000 );
+
+                                console.log(3);
+
+                        <p class="small" style="font-style: italic;">*Functions can be passed as arguments</p>
+                        <p class="fragment">Will output:</p>
+
+                        pre.fragment
+                            code.hljs(data-trim contenteditable).
+                                1
+                        pre.fragment
+                            code.hljs(data-trim contenteditable).
+                                3
+                        pre.fragment
+                            code.hljs(data-trim contenteditable).
+                                2
+
+                    // Live Example 
+                    section
+                        <p>Let's dive deeper to see how to deal with asynchronous code...</p>
+                        <a target="_blank" href="https://codepen.io/kostasx/pen/oavKer?editors=0012">Codepen</a>
+
+                    // Resources
+                    section
+                        <p>More on Callbacks:</p>
+                        <a target="_blank" href="https://javascript.info/callbacks">JavaScript.info: Introduction to Callbacks</a>
+                        <p>More on Promises:</p>
+                        <a target="_blank" href="https://javascript.info/promise-basics">JavaScript.info: Promise Basics</a>
+
+                // JSON 
+                section
+
+                    section
+                        h1 JSON
+                        <h4 class="fragment">(<strong class="colorful">J</strong>ava<strong class="colorful">S</strong>cript <strong class="colorful">O</strong>bject <strong class="colorful">N</strong>otation)</h4>
+                        <p class="fragment">A Data Format</p>
+
+                    // What is JSON
+                    section
+                        <h2>What is JSON</h2>
+                        <ul>
+                          <li class="fragment">JSON is a simple &amp; lightweight data-interchange format</li>
+                          <li class="fragment">It is easy for humans to read and write</li>
+                          <li class="fragment">It is easy for machines to parse and generate</li>
+                          <li class="fragment">It is completely language independent and a common web standard</li>
+                        </ul>
+                        <p class="small fragment">
+                            <a href="http://json.org/json-el.html" target="_blank">JSON (Ελληνικά)</a>
+                        </p>
+
+                    // JSON Values
+                    section
+                        <h2>JSON allowed values</h2>
+                        <ul>
+                          <li class="fragment">string</li>
+                          <li class="fragment">number</li>
+                          <li class="fragment">object</li>
+                          <li class="fragment">array</li>
+                          <li class="fragment">boolean</li>
+                          <li class="fragment">null</li>
+                          <li class="fragment"><strike>functions</strike></li>
+                        </ul>
+
+                    // JSON Example
+                    section
+                        <h2>An example</h2>
+                        pre
+                            code.hljs.json(data-trim contenteditable).
+                                {
+                                    "firstname": "Kostas",
+                                    "lastname": "Minaidis",
+                                    "address": {
+                                        "city": "Athens",
+                                        "street": "24, My Street",
+                                    },
+                                    "isMarried": false,
+                                    "hobbies": [
+                                        "books",
+                                        "coding"
+                                    ]
+                                }
+
+                    // JSON Stringify
+                    section
+                        h2 Convert an object to JSON
+                        p JSON.stringify
+                        <div class="columns">
+                            <div class="column">
+                                pre
+                                    code.hljs.javascript(data-trim contenteditable).
+                                        const me = {
+                                        firstname: 'Kostas',
+                                        lastname: 'Minaidis',
+                                        address: {
+                                            city: 'Athens',
+                                            street: '24, My Street',
+                                        },
+                                        isMarried: false,
+                                        hobbies: [
+                                            "books", "coding"
+                                        ]
+                                        };
+                                        const meJSON = JSON.stringify(me);
+                                        console.log(meJSON);
+                            </div>
+                            <div class="column">
+
+                                pre
+                                    code.hljs.javascript(data-trim contenteditable).
+                                        '{
+                                        "firstname": "Kostas",
+                                        "lastname": "Minaidis",
+                                        "address": {
+                                            "city": "Athens",
+                                            "street": "24, My Street"
+                                        },
+                                        "isMarried": false,
+                                        "hobbies": [
+                                            "books",
+                                            "coding"
+                                        ]
+                                        }'
+                            </div>
+                        </div>
+                        <p class="small">Check: <strong>typeof</strong> me and <strong>typeof</strong> meJSON</p>
+
+                    // JSON Parse
+                    section
+                        h2 Convert a JSON to object
+                        p JSON.parse
+                        <div class="columns">
+                            <div class="column">
+                                pre
+                                    code.hljs.javascript(data-trim contenteditable).
+                                        const meJSON = `{
+                                        "firstname": "Kostas",
+                                        "lastname": "Minaidis",
+                                        "address": {
+                                            "city": "Athens",
+                                            "street": "24, My Street"
+                                        },
+                                        "isMarried": false,
+                                        "hobbies": [ "books", "coding" ]
+                                        }`;
+                                        const me = JSON.parse(meJSON);
+                                        console.log(me);
+                            </div>
+                            <div class="column">
+
+                                pre
+                                    code.hljs.javascript(data-trim contenteditable).
+                                        {
+                                        firstname: 'Kostas',
+                                        lastname: 'Minaidis',
+                                        address: {
+                                            city: 'Athens',
+                                            street: '24, My Street',
+                                        },
+                                        isMarried: false,
+                                        hobbies: [
+                                            "books", "coding"
+                                        ]
+                                        }
+                            </div>
+                        </div>
+                        <p class="small">Mention Template literals. Check: <strong>typeof</strong> me and <strong>typeof</strong> meJSON</p>
+
+                    // JSON Examples Online
+                    section
+                        div.column
+                            div.column.is-8.is-offset-2
+                                h3 JSON Examples Online
+                                <a target="_blank" href="https://jsonplaceholder.typicode.com/posts/1/">JSON Placeholder</a>
+                                <h2><a target="_blank" href="https://bit.ly/2RfcGCR">https://bit.ly/<span style="color:white;">2RfcGCR</span></a></h2>
+                                <ul>
+                                    <li class="fragment">1) Open link and Copy the JSON data</li>
+                                    <li class="fragment">2) Open Browser console, declare a variable <strong class="colorful">let json = ...</strong class="colorful"> and paste the copied JSON data as a value.</li>
+                                    <li class="fragment">3) Type <strong class="colorful">json</strong> to get the object contents.</li>
+                                    <li class="fragment">4) Retrieve the object Post title...</li>
+                                </ul>
+
+                    // Custom JSON
+                    section
+                        <h3>Create and serve your<br>own sample JSON data</h3>
+                        <br>
+                        <div class="columns">
+                            <div class="column">
+                                <h2><a target="_blank" href="https://bit.ly/2NbOeiE">https://bit.ly/<span style="color:white;">2NbOeiE</span></a></h2>
+                                <p class="small">(Server emulation)</p>
+                                <ul>
+                                    <li>1) Open: <a target="_blank" href="https://bit.ly/2NbOeiE">MyJSON</a></li>
+                                    <li>2) Paste the Code on the left</li>
+                                    <li>3) Copy the JSON URI <p class="small">(<a target="_blank" href="https://api.myjson.com/bins/e6h14">https://api.myjson.com/bins/e6h14</a>)</p></li>
+                                </ul>
+                                
+                            </div>
+                            <div class="column">
+                                pre
+                                    code.hljs.javascript(data-trim contenteditable).
+                                        {
+                                        "title": "On the Road",
+                                        "author": "Jack Kerouac",
+                                        "published": 1957,
+                                        "isNovel": true,
+                                        "characters": [ "Sal", "Dean" ]
+                                        }					        				
+                            </div>
+                        </div>
+
+                    // Recap #1
+                    section
+                        h2 JSON Recap
+                        h4 Which of these is JSON?
+                        p.colorful remember JSON is slightly different from Javascript Objects
+                        .columns
+                            .column
+                                pre
+                                    code.hljs.json(data-trim contenteditable).
+                                        {
+                                            "firstname": "John",
+                                            "lastname": "Doe",
+                                            "age": 35,
+                                            "address": {
+                                                "city": "Athens",
+                                                "street": "my street",
+                                                "number": 12
+                                            }
+                                        }
+                            .column
+                                pre
+                                    code.hljs.javascript(data-trim contenteditable).
+                                        {
+                                            firstname: "John",
+                                            lastname: "Doe",
+                                            age: 35,
+                                            address: {
+                                                city: "Athens",
+                                                street: "my street",
+                                                number: 12
+                                            }
+                                        }
+
+                    // Recap JSON.parse()
+                    section
+                        h2 JSON.parse
+                        h5 Takes a JSON string -&gt; Returns a Javascript Object 
+                        .columns
+                            .column.is-12
+                                pre
+                                    code.hljs.javascript(data-trim contenteditable).
+                                        let user = JSON.parse( "{'name':'nick','age':27}" );
+
+                                        console.log( user );
+                                .linebreak
+                                pre
+                                    code.hljs.javascript(data-trim contenteditable).
+                                        {
+                                          name: "nick",
+                                          age: 27
+                                        }
+                      
+                    // Recap JSON.stringify() 
+                    section
+                        <h2>JSON.stringify</h2>
+                        <h4>Takes a Javascript Object -> Returns a JSON string </h4>
+                        <h4 style="color: lightgreen; font-weight: .5em">It's the reverse of JSON.parse </h4>
+                        .columns.is-centered
+                            .column.is-10
+                                pre
+                                    code.hljs.javascript(data-trim contenteditable).
+                                        JSON.stringify({ name: "nick", age: 27 });
+                                .linebreak
+                                pre
+                                    code.hljs.javascript(data-trim contenteditable).
+                                        "{'name':'nick','age':27}"
+
+                // FETCH 
+                section
+
+                    // What is FETCH?
+                    section
+                        div.columns
+                            .column.is-10.is-offset-1
+                                <h2>fetch()</h2>
+                                <ul>
+                                    <li class="fragment">fetch API provides a JavaScript interface for making HTTP requests</li>
+                                    <li class="fragment">fetch() method provides an easy way to fetch resources asynchronously</li>
+                                    <li class="fragment">fetch() is the modern alternative to the old and more complicated AJAX API</li>
+                                    <li class="fragment">fetch() method returns a Promise</li>
+                                </ul>
+
+                    // fetch() Example 
+                    // TODO: Add Copy Functionality button for easily copying and pasting example codes in the console
+                    section
+                        h2 fetch example
+                        .columns
+                            .column
+                                p
+                                    <a href="https://developers.google.com/web/updates/2015/03/introduction-to-fetch" target="_blank">Documentation</a>
+
+                                pre
+                                    code.fragment.hljs.multiline.javascript(data-trim contenteditable).
+                                        fetch('https://jsonplaceholder.typicode.com/posts/1/')
+                                    code.fragment.hljs.multiline.javascript(data-trim contenteditable).
+                                        .then(function(response) {
+                                            return response.json();
+                                        })
+                                    code.fragment.hljs.multiline.javascript(data-trim contenteditable).
+                                        .then(function(data) {
+                                            console.log(data)
+                                        });
+
+                // ARROW FUNCTIONS 
+                section
+
+                    <h3>Arrow Functions</h3>
+                    <a href="https://javascript.info/function-expressions-arrows#arrow-functions" target="_blank">JavaScript.info: Arrow Functions</a>
+                    <br>
+                    <a href="https://javascript.info/arrow-functions" target="_blank">JavaScript.info: Arrow Functions Revisited</a>
+                    <hr>
+                    <a href="https://codepen.io/kostasx/pen/LgVdLb?editors=0010" target="_blank">CodePen Time!</a>
+                    <br>
+                    <a target="_blank" href="https://bit.ly/2zIZxLF">https://bit.ly/<strong style="color:white;">2zIZxLF</strong></a>
+
+                // PRACTICE: Fetch + JSON Async 
+                section(data-transition="slide" data-background="#F7BE2C" data-background-transition="zoom")
+                    <h2>LET'S CODE!</h2>
+                    <a class="black" target="_blank" href="https://bit.ly/2It2pPI">https://bit.ly/<strong>2It2pPI</strong></a>
+                    <br>
+                    <a class="black" target="_blank" href="https://bit.ly/2y3RLdl">https://bit.ly/<strong>2y3RLdl</strong></a>
+
+                // ES5 Prototypes 
+                section
+                    <section>
+                        <h3>Prototype and Prototypal Inheritance</h3>
+                    </section>
+                    <section>
+                        <p>
+                            <a target="_blank" href="https://blog.bitsrc.io/understanding-javascripts-prototypal-inheritance-354292253bcb">Understanding JavaScript’s Prototypal Inheritance</a>
+                        </p>
+                        <p>
+                        <p>
+                            <img src="images/advanced/prototype.png" alt="">
+                        </p>
+                            <a target="_blank" href="https://codepen.io/kostasx/pen/yRLBaZ?editors=0012">Time for a quick CodePen...</a>
+                        </p>
+                    </section>
+
+                // ES6 Classes 
+                section
+                    <h1>ES6 Classes</h1>
+                    <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes">MDN ES6 Classes</a>
+                    <br>
+                    <p>Time for a CodePen:</p>
+                    <a target="_blank" style="font-size:1.6em;" href="https://bit.ly/2Rl0PU6">https://bit.ly/<strong style="color:white;">2Rl0PU6</strong></a>
+
+                // FETCH +  APIS
+                section
+                    h1 Fetch + APIs
+
+                // PROTOTYPE + FUNCTION CONSTRUCTORS
+                section
+
+                    section
+                        <h3>Prototype and Prototypal Inheritance</h3>
+                        <div class="columns">
+                            <div class="column is-8 is-offset-2">
+                                <ul>
+                                    <li>The <strong>new</strong> keyword and the Function constructor</li>
+                                    <li>What is <strong>this</strong>?</li>
+                                    <li>The road to ES6 Classes...</li>
+                                </ul>
+                                
+                            </div>
+                        </div>
+
+                    section
+                        <p>
+                            <img src="images/advanced/prototype.png" alt="">
+                        </p>
+                        <p>
+                        <a target="_blank" href="https://codepen.io/kostasx/pen/yRLBaZ?editors=0012">Time for a quick CodePen...</a>
+                        </p>
+
+                // ES6: TEMPLATE LITERALS
+                section
+                    h2 ES6 Template Literals
+
+                // ES6: ARROW FUNCTIONS
+                section
+                    h2 ES6 Arrow Functions
+
+                // ES6: CLASSES
+                section
+                    h2 ES6 Classes
+                    h4 Syntactic Sugar for Prototypal Inheritance
+
+                // RESOURCES
+                section
+                    h3 Resources:
+                    ul
+                        li
+                            a(href="var, let and const - What, why and how - ES6 JavaScript Features" target="_blank") var, let and const - What, why and how - ES6 JavaScript Features
+                        li
+                            <a target="_blank" href="https://codepen.io/kostasx/pen/NONQgL?editors=0011">Hands-on: Bitcoin Wallet</a><br>
+                            <a class="bitly_link" target="_blank" href="https://bit.ly/2No4jlx">
+                                <span>https://bit.ly/<strong>2No4jlx</strong></span>
+                            </a>							
+                        li 
+                            a(href="https://scotch.io/tutorials/understanding-hoisting-in-javascript" target="_blank") Understanding Hoisting in JavaScript
+                        li 
+                            a(href="https://www.impressivewebs.com/javascript-hoisting-little-known-fact/" target="_blank") About JavaScript Hoisting
+                            
+                        li
+                            a(href="https://www.youtube.com/watch?v=2d7s3spWAzo" target="_blank") Promises by @mpjme
+
+                // TTS | OUTRO 
+                section#tts-outro.tts-title(data-state='outro' data-transition="fade-out")
+
+        //- SCRIPTS
+        script(src='../libs/reveal.js/lib/js/head.min.js')
+        script(src='../libs/reveal.js/js/reveal.js')
+        script.
+
+            Reveal.configure({
+                keyboard: { 69: function(){} }
+            });
+
+            // More info https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                maxScale: 1,
+                minScale: 1,
+                history: true,
+                // More info https://github.com/hakimel/reveal.js#dependencies
+                dependencies: [
+                    { src: '../libs/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: '../libs/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: '../libs/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: '../libs/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: '../libs/reveal.js/plugin/search/search.js', async: true },
+                    { src: '../libs/reveal.js/plugin/zoom-js/zoom.js', async: true },
+                    { src: '../libs/reveal.js/plugin/notes/notes.js', async: true }
+                ]
+            });
+
+            /* TTS */
+            function handleSlideDataChange( e ) {
+                let slideState = e.currentSlide.getAttribute('data-state');
+                switch ( slideState ) {
+                    case 'tts-intro':
+                        document.querySelector(".reveal").classList.add("tts-intro")
+                        break;
+                    case 'intro':
+                        document.querySelector(".reveal").classList.remove("tts-intro")
+                        break;
+                    case 'outro':
+                        document.querySelector(".reveal").classList.add("tts-outro")
+                        break;
+                    default:
+                        document.querySelector(".reveal").classList.remove("tts-outro")
+                        document.querySelector(".reveal").classList.remove("tts-intro")
+                }    
+            };
+
+            //- Reveal.addEventListener('data-state-value-here', function (){});
+            Reveal.addEventListener( 'ready', handleSlideDataChange );
+            Reveal.addEventListener( 'slidechanged', handleSlideDataChange );
