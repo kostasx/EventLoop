@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <head>
   <meta charset="utf-8">
   <title>Bulma | EventLoop | TechTalentSchool 2018</title>
@@ -23,13 +22,12 @@
     var link = document.createElement( 'link' );
     link.rel = 'stylesheet';
     link.type = 'text/css';
-    link.href = window.location.search.match( /print-pdf/gi ) ? rootDirectory + 'css/print/pdf.css' : rootDirectory + 'css/print/paper.css';
-    document.getElementsByTagName( 'head' )[ 0 ].appendChild( link );
+    link.href = window.location.search.match( /print-pdf/gi ) ? rootDirectory +'css/print/pdf.css' : rootDirectory + 'css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
   </script>
   <link rel="stylesheet" href="../css/reveal-overrides.css">
   <link rel="stylesheet" href="../css/reveal-tts.css">
 </head>
-
 <body>
   <div class="reveal">
     <!-- Any section element inside of this container is displayed as a slide-->
@@ -49,8 +47,7 @@
           <div class="columns">
             <div class="column is-8 is-offset-2">
               <p class="small fragment">According to the <a href="https://bulma.io/">Official site:</a></p>
-              <p class="small italics fragment">Bulma is an open source CSS framework based on Flexbox and used by more
-                than 100,000 developers. </p>
+              <p class="small italics fragment">Bulma is an open source CSS framework based on Flexbox and used by more than 100,000 developers. </p>
               <p class="small fragment">Bulma is:
                 <ul class="small">
                   <li class="fragment">Easy to learn</li>
@@ -65,14 +62,9 @@
         <section>
           <div class="columns">
             <div class="column is-8 is-offset-2">
-              <p class="small">Bulma is simply a collection of CSS classes to help you write the HTML you want, without
-                ever leaving the markup file.</p>
-              <p class="small fragment">By using descriptive and easy to memorize CSS classes, Bulma is equally easy to
-                write and read. One can simply go through the HTML file and easily visualize the page styling by
-                reading the CSS classes applied to the page elements and sections.</p>
-              <p class="small fragment">It is extremely efficient in prototyping and quickly building page layouts and
-                web interfaces. It is also, a lightweight CSS library and the size can be trimmed down using
-                modularization. </p>
+              <p class="small">Bulma is simply a collection of CSS classes to help you write the HTML you want, without ever leaving the markup file.</p>
+              <p class="small fragment">By using descriptive and easy to memorize CSS classes, Bulma is equally easy to write and read. One can simply go through the HTML file and easily visualize the page styling by reading the CSS classes applied to the page elements and sections.</p>
+              <p class="small fragment">It is extremely efficient in prototyping and quickly building page layouts and web interfaces. It is also, a lightweight CSS library and the size can be trimmed down using modularization.  </p>
             </div>
           </div>
         </section>
@@ -88,17 +80,12 @@
       <section style="text-align: left; margin-left: 20px;">
         <h6>Resources:</h6>
         <p style="line-height: 0.5">- <a class="tiny_lnk" target="_blank" href="https://bulma.io">Official Bulma Site</a></p>
-        <p style="line-height: 0.5">- <a class="tiny_lnk" target="_blank" href="https://scrimba.com/g/gbulma">Bulma
-            Screencasts at Scrimba.com</a></p>
-        <p style="line-height: 0.5">- <a class="tiny_lnk" target="_blank" href="https://fontawesome.com">Font Awesome
-            Icons</a></p>
+        <p style="line-height: 0.5">- <a class="tiny_lnk" target="_blank" href="https://fontawesome.com">Font Awesome Icons</a></p>
         <p style="line-height: 0.5">- <a class="tiny_lnk" target="_blank" href="https://github.com">GitHub</a></p>
         <p style="line-height: 0.5">- <a class="tiny_lnk" target="_blank" href="https://brandcolors.net/">BrandColors</a></p>
-        <p style="line-height: 0.5">- <a class="tiny_lnk" target="_blank" href="https://unsplash.com/">Unsplash (Free
-            Images*)</a></p>
+        <p style="line-height: 0.5">- <a class="tiny_lnk" target="_blank" href="https://unsplash.com/">Unsplash (Free Images*)</a></p>
         <p style="line-height: 0.5">- <a class="tiny_lnk" target="_blank" href="https://fonts.google.com/">Google Fonts</a></p>
-        <p style="line-height: 0.5">- <a class="tiny_lnk" target="_blank" href="https://worldvectorlogo.com/">World
-            Logos</a></p>
+        <p style="line-height: 0.5">- <a class="tiny_lnk" target="_blank" href="https://worldvectorlogo.com/">World Logos</a></p>
       </section>
     </div>
   </div>
@@ -106,22 +93,22 @@
   <script src="../libs/reveal.js/js/reveal.js"></script>
   <script>
     // More info https://github.com/hakimel/reveal.js#configuration
-    Reveal.initialize( {
-      controls: true,
-      progress: true,
-      history: true,
-      center: true,
-      transition: 'slide', // none/fade/slide/convex/concave/zoom
-      // More info https://github.com/hakimel/reveal.js#dependencies
-      dependencies: [
-        { src: rootDirectory + 'lib/js/classList.js', condition: function () { return !document.body.classList; } },
-        { src: rootDirectory + 'plugin/markdown/marked.js', condition: function () { return !!document.querySelector( '[data-markdown]' ); } },
-        { src: rootDirectory + 'plugin/markdown/markdown.js', condition: function () { return !!document.querySelector( '[data-markdown]' ); } },
-        { src: rootDirectory + 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
-        { src: rootDirectory + 'plugin/search/search.js', async: true },
-        { src: rootDirectory + 'plugin/zoom-js/zoom.js', async: true },
-        { src: rootDirectory + 'plugin/notes/notes.js', async: true }
-      ]
-    } );
+    Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    transition: 'slide', // none/fade/slide/convex/concave/zoom
+    // More info https://github.com/hakimel/reveal.js#dependencies
+    dependencies: [
+    { src: rootDirectory + 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+    { src: rootDirectory + 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: rootDirectory + 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: rootDirectory + 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+    { src: rootDirectory + 'plugin/search/search.js', async: true },
+    { src: rootDirectory + 'plugin/zoom-js/zoom.js', async: true },
+    { src: rootDirectory + 'plugin/notes/notes.js', async: true }
+    ]
+    });
   </script>
 </body>

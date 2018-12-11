@@ -720,29 +720,83 @@ html(lang='en')
                 section
 
                     section
-                        <h3><strong class="colorful">DOM</strong> | The Document Object Model</h3>
+                        h3 <strong class="colorful">DOM</strong> | The Document Object Model
 
                     section
-                        img(src="./images/advanced/DOM-Kirupa.webp" alt="")
+                        p The Document Object Model (DOM) is the programmable interface of web pages.
+                        .linebreak
+                        p.fragment In other words, it allows JavaScript programs to read and manipulate the page content, structure and CSS styles.
+
+                    section
+                        p DOM is basically a tree-like<br/>structure of the web page
+                        img.fragment(src="./images/advanced/DOM-Kirupa.webp" alt="")
+                        .linebreak
+                        a.fragment( target="_blank" href="https://software.hixie.ch/utilities/js/live-dom-viewer/") Live DOM Viewed
+                    
+                    section
+                        p All objects of an HTML page are included and can be manipulated by the DOM.
+                        .linebreak
+                        p.fragment The DOM is an interface that allows programs and scripts to dynamically update webpages: add and delete HTML elements, move elements to another place, change their CSS style, and more. 
 
                     // Basic DOM Terms: document, element, NodeList
                     section
+                        h6 What does DOM contains?
                         ul
-                            <li><strong class="colorful">document:</strong> the root object</li>
-                            <li><strong class="colorful">element:</strong> refers to an object (member of the DOM)</li>
-                            <li><strong class="colorful">nodeList:</strong> A collection (array) of elements</li>
+                            li Elements: <strong class="colorful">&lt;head&gt;</strong>, <strong class="colorful">&lt;body&gt;</strong>, <strong class="colorful">&lt;div&gt;</strong>, etc.
+                            li Attributes: <strong class="colorful">class</strong>, <strong class="colorful">id</strong>, <strong class="colorful">href</strong>, <strong class="colorful">src</strong>, etc.
+                            li All text in-between (including spaces)
+                        p.fragment All these objects are known as DOM <strong class="colorful">Nodes</strong>.
 
                     section
-                        <h2>Basic <strong class="colorful">DOM</strong> Manipulation</h2>
-                        <p class="Dfragment">document<strong class="colorful">.createElement()</strong>;</p>
-                        <p class="Dfragment">document<strong class="colorful">.getElementById()</strong>;</p>
-                        <p class="Dfragment">document<strong class="colorful">.querySelector()</strong>;</p>
+                        h6 Example of Nodes?
+                        .linebreak
+                        pre.fragment
+                            code.hljs.html(data-trim contenteditable).
+                                <a href="https://google.com" rel="index"> Google </a>
+                        .linebreak
+                        ul
+                            li.fragment <strong class="colorful">&lt;a&gt;</strong> is an <strong class="colorful">Element</strong> Node
+                            li.fragment <strong class="colorful">href</strong> and <strong class="colorful">rel</strong> are <strong class="colorful">Attribute</strong> Nodes
+                            li.fragment <strong class="colorful">Google</strong> is a <strong class="colorful">Text</strong> Node
+                        .linebreak
+                        img.fragment(src="./intermediate/attribute_nodes.jpg", alt="")
 
                     section
-                        <p class="Dfragment">Element<strong class="colorful">.appendChild()</strong>;</p>
-                        <p class="Dfragment">Element<strong class="colorful">.remove()</strong>;</p>
-                        <p class="Dfragment">Element<strong class="colorful">.setAttribute( key, value )</strong>;</p>
-                        <p class="Dfragment">Element<strong class="colorful">.style</strong></p>
+                        h6 Basic Terminology
+                        ul
+
+                            li <strong class="colorful">document:</strong> the root object
+
+                            li <strong class="colorful">Node:</strong> refers to an object (member of the DOM)
+
+                            li <strong class="colorful">element:</strong> refers to an HTML element (member of the DOM)
+
+                            li <strong class="colorful">nodeList:</strong> A collection (array-like) of elements
+
+                    // Basic DOM Manipulation
+                    section
+                        h2 Basic <strong class="colorful">DOM</strong> Manipulation
+                        p.fragment.
+                            document<strong class="colorful">.getElementById()</strong>;
+                        p.fragment.
+                            document<strong class="colorful">.querySelector()</strong>;
+                        p.fragment.
+                            document<strong class="colorful">.getElementsByTagName()</strong>;
+                        p.fragment.
+                            document<strong class="colorful">.createElement()</strong>;
+                        p.small.fragment *Note: plural verbs return lists...
+
+                    // Elements Properties and Methods
+                    section
+                        h2 Elements
+                        p.fragment.
+                            Element<strong class="colorful">.appendChild()</strong>;
+                        p.fragment.
+                            Element<strong class="colorful">.remove()</strong>;
+                        p.fragment.
+                            Element<strong class="colorful">.setAttribute( key, value )</strong>;
+                        p.fragment.
+                            Element<strong class="colorful">.style</strong>
 
                     // John Tsevdos
                     // DOM Manipulation
@@ -762,7 +816,7 @@ html(lang='en')
                     // Basic DOM API
                     section
                         pre
-                            code.hljs(data-trim contenteditable).
+                            code.hljs.javascript(data-trim contenteditable).
                                 document.getElementById('hero'); 
                                 // Selects the element with the specific id
 
@@ -785,12 +839,13 @@ html(lang='en')
                             code.hljs(data-trim contenteditable).
                                 const el = document.querySelector('.container');
 
-                                el.parentNode
-                                el.children
-                                el.firstElementChild
-                                el.lastElementChild
-                                el.previousElementSibling
-                                el.nextElementSibling
+                                el.parentNode;
+                                el.children;
+                                el.children.length;
+                                el.firstElementChild;
+                                el.lastElementChild;
+                                el.previousElementSibling;
+                                el.nextElementSibling;
 
                     // Modifying DOM Elements
                     section
@@ -810,13 +865,13 @@ html(lang='en')
                     // Modifying innerHTML
                     section
 
-                      <h2>Fun with innerHTML on console</h2>
-                      <p>Open your favorite web site console tab.<br/>Type and explain the below code snippet.</p>
+                      h2 Fun with innerHTML on console
+                      p Open your favorite web site console and paste the code:
 
                         pre
                             code.hljs.javascript(data-trim contenteditable).
 
-                                function makeAllLinksTextYOLO() {
+                                function YOLO() {
 
                                     const links = document.querySelectorAll("a");
 
@@ -828,7 +883,7 @@ html(lang='en')
 
                                 }
 
-                                makeAllLinksTextYOLO();
+                                YOLO();
 
                     // Modifying CSS Classes
                     section

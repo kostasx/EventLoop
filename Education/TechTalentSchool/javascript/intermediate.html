@@ -461,24 +461,73 @@ numbers.reduce( sum, 0 );
         </section>
         <!-- Basic DOM Manipulation -->
         <section>
-          <section><h3><strong class="colorful">DOM</strong> | The Document Object Model</h3></section>
-          <section><img src="./images/advanced/DOM-Kirupa.webp" alt=""></section>
+          <section>
+            <h3><strong class="colorful">DOM</strong> | The Document Object Model</h3>
+          </section>
+          <section>
+            <p>The Document Object Model (DOM) is the programmable interface of web pages.</p>
+            <div class="linebreak"></div>
+            <p class="fragment">In other words, it allows JavaScript programs to read and manipulate the page content, structure and CSS styles.</p>
+          </section>
+          <section>
+            <p>DOM is basically a tree-like<br/>structure of the web page</p><img class="fragment" src="./images/advanced/DOM-Kirupa.webp" alt="">
+            <div class="linebreak"></div><a class="fragment" target="_blank" href="https://software.hixie.ch/utilities/js/live-dom-viewer/">Live DOM Viewed</a>
+          </section>
+          <section>
+            <p>All objects of an HTML page are included and can be manipulated by the DOM.</p>
+            <div class="linebreak"></div>
+            <p class="fragment">The DOM is an interface that allows programs and scripts to dynamically update webpages: add and delete HTML elements, move elements to another place, change their CSS style, and more. </p>
+          </section>
           <!-- Basic DOM Terms: document, element, NodeList-->
           <section>
-            <ul><li><strong class="colorful">document:</strong> the root object</li>
-<li><strong class="colorful">element:</strong> refers to an object (member of the DOM)</li>
-<li><strong class="colorful">nodeList:</strong> A collection (array) of elements</li>
+            <h6>What does DOM contains?</h6>
+            <ul>
+              <li>Elements: <strong class="colorful">&lt;head&gt;</strong>, <strong class="colorful">&lt;body&gt;</strong>, <strong class="colorful">&lt;div&gt;</strong>, etc.</li>
+              <li>Attributes: <strong class="colorful">class</strong>, <strong class="colorful">id</strong>, <strong class="colorful">href</strong>, <strong class="colorful">src</strong>, etc.</li>
+              <li>All text in-between (including spaces)</li>
+            </ul>
+            <p class="fragment">All these objects are known as DOM <strong class="colorful">Nodes</strong>.</p>
+          </section>
+          <section>
+            <h6>Example of Nodes?</h6>
+            <div class="linebreak"></div>
+            <pre class="fragment"><code class="hljs html" data-trim contenteditable><a href="https://google.com" rel="index"> Google </a></code></pre>
+            <div class="linebreak"></div>
+            <ul>
+              <li class="fragment"><strong class="colorful">&lt;a&gt;</strong> is an <strong class="colorful">Element</strong> Node</li>
+              <li class="fragment"><strong class="colorful">href</strong> and <strong class="colorful">rel</strong> are <strong class="colorful">Attribute</strong> Nodes</li>
+              <li class="fragment"><strong class="colorful">Google</strong> is a <strong class="colorful">Text</strong> Node</li>
+            </ul>
+            <div class="linebreak"></div><img class="fragment" src="./intermediate/attribute_nodes.jpg" alt="">
+          </section>
+          <section>
+            <h6>Basic Terminology</h6>
+            <ul>
+              <li><strong class="colorful">document:</strong> the root object</li>
+              <li><strong class="colorful">Node:</strong> refers to an object (member of the DOM)</li>
+              <li><strong class="colorful">element:</strong> refers to an HTML element (member of the DOM)</li>
+              <li><strong class="colorful">nodeList:</strong> A collection (array-like) of elements</li>
             </ul>
           </section>
-          <section><h2>Basic <strong class="colorful">DOM</strong> Manipulation</h2>
-<p class="Dfragment">document<strong class="colorful">.createElement()</strong>;</p>
-<p class="Dfragment">document<strong class="colorful">.getElementById()</strong>;</p>
-<p class="Dfragment">document<strong class="colorful">.querySelector()</strong>;</p>
+          <!-- Basic DOM Manipulation-->
+          <section>
+            <h2>Basic <strong class="colorful">DOM</strong> Manipulation</h2>
+            <p class="fragment">document<strong class="colorful">.getElementById()</strong>;</p>
+            <p class="fragment">document<strong class="colorful">.querySelector()</strong>;</p>
+            <p class="fragment">document<strong class="colorful">.getElementsByTagName()</strong>;</p>
+            <p class="fragment">document<strong class="colorful">.createElement()</strong>;</p>
+            <p class="small fragment">*Note: plural verbs return lists...</p>
           </section>
-          <section><p class="Dfragment">Element<strong class="colorful">.appendChild()</strong>;</p>
-<p class="Dfragment">Element<strong class="colorful">.remove()</strong>;</p>
-<p class="Dfragment">Element<strong class="colorful">.setAttribute( key, value )</strong>;</p>
-<p class="Dfragment">Element<strong class="colorful">.style</strong></p>
+          <!-- Elements Properties and Methods-->
+          <section>
+            <h2>Elements</h2>
+            <p class="fragment">Element<strong class="colorful">.appendChild()</strong>;</p>
+            <p class="fragment">Element<strong class="colorful">.remove()</strong>;</p>
+            <p class="fragment">Element<strong class="colorful">.setAttribute( key, value )</strong>;</p>
+            <p class="fragment">
+              Element<strong class="colorful">.style</strong>
+              
+            </p>
           </section>
           <!-- John Tsevdos-->
           <!-- DOM Manipulation-->
@@ -497,7 +546,7 @@ numbers.reduce( sum, 0 );
           </section>
           <!-- Basic DOM API-->
           <section>
-            <pre><code class="hljs" data-trim contenteditable>document.getElementById('hero'); 
+            <pre><code class="hljs javascript" data-trim contenteditable>document.getElementById('hero'); 
 // Selects the element with the specific id
 
 document.getElementsByTagName('p'); 
@@ -518,12 +567,13 @@ document.querySelectorAll('h2');
             <h2>Meet the "family"</h2>
             <pre><code class="hljs" data-trim contenteditable>const el = document.querySelector('.container');
 
-el.parentNode
-el.children
-el.firstElementChild
-el.lastElementChild
-el.previousElementSibling
-el.nextElementSibling
+el.parentNode;
+el.children;
+el.children.length;
+el.firstElementChild;
+el.lastElementChild;
+el.previousElementSibling;
+el.nextElementSibling;
 </code></pre>
           </section>
           <!-- Modifying DOM Elements-->
@@ -538,9 +588,10 @@ img.setAttribute("alt", "My image");
 </code></pre>
           </section>
           <!-- Modifying innerHTML-->
-          <section><h2>Fun with innerHTML on console</h2>
-<p>Open your favorite web site console tab.<br/>Type and explain the below code snippet.</p>
-            <pre><code class="hljs javascript" data-trim contenteditable>function makeAllLinksTextYOLO() {
+          <section>
+            <h2>Fun with innerHTML on console</h2>
+            <p>Open your favorite web site console and paste the code:
+              <pre><code class="hljs javascript" data-trim contenteditable>function YOLO() {
 
     const links = document.querySelectorAll("a");
 
@@ -552,8 +603,9 @@ img.setAttribute("alt", "My image");
 
 }
 
-makeAllLinksTextYOLO();
+YOLO();
 </code></pre>
+            </p>
           </section>
           <!-- Modifying CSS Classes-->
           <section><h2>Modifying HTML classes</h2>
