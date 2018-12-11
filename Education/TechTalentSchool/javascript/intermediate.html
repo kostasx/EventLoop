@@ -118,10 +118,12 @@
           <section><img src="images/advanced/let_var_const_12.jpg" alt=""></section>
           <section><img src="images/advanced/let_var_const_13.jpg" alt=""></section>
           <section data-background="#9cbf3f">
-            <section>
-              <h3>General Rule:</h3>
-              <p class="fragment">"Use <strong style="color:black">let</strong> only for loop counters or only if you really need reassignment. Everywhere else, use <strong style="color:black">const</strong>."</p>
-            </section>
+            <h2>Confused?</h2><a class="fragment" href="https://codepen.io/kostasx/pen/pqvWPw?editors=1100" target="_blank">
+              <h4>CodePen to the rescue:<br/>https://bit.ly/2ElTkcl</h4></a>
+          </section>
+          <section data-background="#9cbf3f">
+            <h3>General Rule:</h3>
+            <p class="fragment">"Use <strong style="color:black">let</strong> only for loop counters or only if you really need reassignment. Everywhere else, use <strong style="color:black">const</strong>."</p>
           </section>
         </section>
         <!-- HOISTING [ WiP ]-->
@@ -139,7 +141,7 @@
           <section>
             <pre><code class="hljs javascript" data-trim contenteditable>doSomething();
 
-for (i = 0; i <= 10; i++) {
+for (let i = 0; i <= 10; i++) {
     console.log(i);
 }
 
@@ -223,16 +225,10 @@ function doSomething() {
 </code></pre>
             <p class="fragment"><small>Will output</small></p>
             <pre class="fragment"><code class="hljs" data-trim contenteditable>[ 5, 4, 3, 2, 1]
-</code></pre><p class="fragment">
-<small>
-<strong class="colorful">WARNING: </strong> reverse() will <strong>mutate</strong> (change) the contents of the Array!
-</small>
-</p>
-<p class="fragment">
-<small>
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse">More on Array.prototype.reverse()</a>
-</small>
-</p>
+</code></pre>
+            <p class="fragment"><small><strong class="colorful">WARNING: </strong> reverse() will <strong>mutate</strong> (change) the contents of the Array!</small></p>
+            <div class="linebreak"></div><a class="fragment" href="https://codepen.io/kostasx/pen/MZYraW?editors=0011" target="_blank">Quick Practice!</a>
+            <div class="linebreak"></div><small class="fragment"><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse">More on Array.prototype.reverse()</a></small>
           </section>
           <!-- sort()-->
           <section><h3>Array<strong class="colorful">.sort()</strong></h3>
@@ -314,6 +310,21 @@ if ( a < b ){
 </code></pre>
             <pre class="fragment"><code class="hljs" data-trim contenteditable>[ 4, 3, 2, 1 ]
 </code></pre>
+          </section>
+          <!-- concat() -->
+          <section>
+            <h3>Array<strong class="colorful">.concat( Array, Array )</strong></h3><small>Merges 2 or more Arrays</small>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>let array1 = ['a', 'b', 'c'];
+let array2 = ['d', 'e', 'f'];
+</code></pre>
+            <div class="linebreak"></div>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>let merged = array1.concat( array2 );
+console.log( merged );
+</code></pre>
+            <div class="linebreak"></div>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>// merged === Array ["a", "b", "c", "d", "e", "f"]
+</code></pre>
+            <div class="linebreak"></div><a class="fragment" target="_blank" href="https://codepen.io/kostasx/pen/XoJZWe?editors=0011">Quick Practice!</a>
           </section>
           <!-- splice() -->
           <section><h3>Array<strong class="colorful">.splice( start, deleteCount )</strong></h3>
@@ -518,7 +529,7 @@ el.nextElementSibling
           <!-- Modifying DOM Elements-->
           <section>
             <h2>Modifying properties and attributes</h2>
-            <pre><code class="hljs" data-trim contenteditable>const title = document.querySelector('h1');
+            <pre><code class="hljs javascript" data-trim contenteditable>const title = document.querySelector('h1');
 const img = document.querySelector('.img');
 
 title.id = 'my-ID';
@@ -528,12 +539,15 @@ img.setAttribute("alt", "My image");
           </section>
           <!-- Modifying innerHTML-->
           <section><h2>Fun with innerHTML on console</h2>
-<p>Open your favorite web site console tab. Type and explain the below code snippet.</p>
-            <pre><code class="hljs" data-trim contenteditable>function makeAllLinksTextYOLO() {
+<p>Open your favorite web site console tab.<br/>Type and explain the below code snippet.</p>
+            <pre><code class="hljs javascript" data-trim contenteditable>function makeAllLinksTextYOLO() {
 
     const links = document.querySelectorAll("a");
-    Array.from( links ).map( (link)=>{
+
+    Array.from( links ).map( function(link){
+
         link.innerHTML = "YOLO" 
+
     });
 
 }
@@ -582,7 +596,7 @@ el.remove();
           </section>
           <!-- TODO: Hands-on Link-->
           <section>
-            <p>Quick Hands-on (Array.map + DOM)</p><a target="_blank" href="https://bit.ly/2z7wSPI">https://bit.ly/2z7wSPI</a><br><a style="font-size:0.5em" target="_blank" href="https://codepen.io/kostasx/pen/Gdmgom?editors=0010">https://codepen.io/kostasx/pen/Gdmgom</a>
+            <p>Quick Hands-on (Array.map + DOM)</p><a target="_blank" href="https://codepen.io/kostasx/pen/Gdmgom?editors=0010">https://bit.ly/2z7wSPI</a>
           </section>
         </section>
         <!-- EVENTS-->
@@ -1078,7 +1092,8 @@ console.log( user );</code></pre>
         <section>
           <h3>Resources:</h3>
           <ul>
-            <li><a href="var, let and const - What, why and how - ES6 JavaScript Features" target="_blank">var, let and const - What, why and how - ES6 JavaScript Features</a></li>
+            <li><a href="https://www.youtube.com/watch?v=sjyJBL5fkp8" target="_blank">var, let and const - What, why and how - ES6 JavaScript Features</a></li>
+            <li><a href="https://medium.com/javascript-scene/javascript-es6-var-let-or-const-ba58b8dcde75" target="_blank">JavaScript ES6+: var, let, or const?</a></li>
             <li><a target="_blank" href="https://codepen.io/kostasx/pen/NONQgL?editors=0011">Hands-on: Bitcoin Wallet</a><br>
 <a class="bitly_link" target="_blank" href="https://bit.ly/2No4jlx">
 <span>https://bit.ly/<strong>2No4jlx</strong></span>
