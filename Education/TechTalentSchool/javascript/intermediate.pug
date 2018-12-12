@@ -711,7 +711,7 @@ html(lang='en')
                 // PRACTICE: Array Manipulation
                 section(data-transition="slide" data-background="#F7BE2C" data-background-transition="zoom")
 
-                    <h2>LET'S CODE!</h2>
+                    <h2>Let's practice on the<br/>Array methods!</h2>
                     <a class="black" target="_blank" href="https://codepen.io/kostasx/pen/NyaPjY?editors=0011">https://goo.gl/<strong>qtoLF4</strong></a>
                     <br>
                     <a class="black" target="_blank" href="https://codepen.io/kostasx/pen/xyKyMg?editors=0012">https://goo.gl/<strong>Vh8bMf</strong></a>
@@ -731,7 +731,7 @@ html(lang='en')
                         p DOM is basically a tree-like<br/>structure of the web page
                         img.fragment(src="./images/advanced/DOM-Kirupa.webp" alt="")
                         .linebreak
-                        a.fragment( target="_blank" href="https://software.hixie.ch/utilities/js/live-dom-viewer/") Live DOM Viewed
+                        a.fragment( target="_blank" href="https://software.hixie.ch/utilities/js/live-dom-viewer/") Live DOM Viewer
                     
                     section
                         p All objects of an HTML page are included and can be manipulated by the DOM.
@@ -747,6 +747,7 @@ html(lang='en')
                             li All text in-between (including spaces)
                         p.fragment All these objects are known as DOM <strong class="colorful">Nodes</strong>.
 
+                    // Examples of Nodes
                     section
                         h6 Example of Nodes?
                         .linebreak
@@ -761,6 +762,7 @@ html(lang='en')
                         .linebreak
                         img.fragment(src="./intermediate/attribute_nodes.jpg", alt="")
 
+                    // Basic Terminology
                     section
                         h6 Basic Terminology
                         ul
@@ -795,6 +797,12 @@ html(lang='en')
                             Element<strong class="colorful">.remove()</strong>;
                         p.fragment.
                             Element<strong class="colorful">.setAttribute( key, value )</strong>;
+                        p.fragment.
+                            Element<strong class="colorful">.innerHTML</strong>
+                        p.fragment.
+                            Element<strong class="colorful">.textContent</strong> / Element<strong class="colorful">.innerText*</strong>
+                        p.fragment.small
+                            a(href="https://codepen.io/kostasx/pen/vvNWvG?editors=0011" target="_blank") *CodePen
                         p.fragment.
                             Element<strong class="colorful">.style</strong>
 
@@ -836,7 +844,7 @@ html(lang='en')
                     section
                         h2 Meet the "family"
                         pre
-                            code.hljs(data-trim contenteditable).
+                            code.hljs.javascript(data-trim contenteditable).
                                 const el = document.querySelector('.container');
 
                                 el.parentNode;
@@ -890,7 +898,7 @@ html(lang='en')
                       <h2>Modifying HTML classes</h2>
 
                         pre
-                            code.hljs(data-trim contenteditable).
+                            code.hljs.javascript(data-trim contenteditable).
 
                                 const el = document.querySelector('h1');
 
@@ -900,12 +908,12 @@ html(lang='en')
 
                     // Create and Append
                     section
-                      <h2>DOM Manipulation:</h2>
-                      <h3>Create and append</h3>
-                      <p>Create a codepen (<a href="https://codepen.io/kostasx/pen/pxzQwy" target="_blank">example</a>)</p>
+                      h2 DOM Manipulation:
+                      h3 Create and append
+                      p Create a codepen (<a href="https://codepen.io/kostasx/pen/pxzQwy" target="_blank">example</a>)
 
                         pre
-                            code.hljs(data-trim contenteditable).
+                            code.hljs.javascript(data-trim contenteditable).
 
                                 const Paragraph = document.createElement('p');
 
@@ -918,13 +926,18 @@ html(lang='en')
                         h2 DOM Manipulation
                         h3 Create and insertBefore
                         pre
-                            code.hljs(data-trim contenteditable).
-                                // ... previous code
+                            code.hljs.javascript(data-trim contenteditable).
+                                const Paragraph = document.createElement('p');
+                                Paragraph.innerHTML = "Hello world!";
+                                document.body.appendChild(Paragraph);
+
                                 const Title = document.createElement('h1');
                                 Title.innerHTML = "Welcome to JavaScript DOM Magic!";
 
                                 // parentNode.insertBefore( Node, referenceNode );
                                 document.body.insertBefore( Title, Paragraph );
+                        .linebreak
+                        a(href="https://codepen.io/kostasx/pen/NeGwYv?editors=0011" target="_blank") CodePen Example
 
                     // Remove
                     section
@@ -944,27 +957,27 @@ html(lang='en')
 
                         // What are Events?
                         section
-                          <h2>Events &amp; Capturing User Input</h2>
-                          <ul>
+                          h2 Events &amp; Capturing User Input
+                          ul
                             <li class="fragment">Events are actions that happen in time</li>
                             <li class="fragment">They might be triggered from the user or the browser</li>
                             <li class="fragment">We have many <a href="https://developer.mozilla.org/en-US/docs/Web/Events" target="_blank">DOM events</a> but most of the times we use mouse and keyboard events.</li>
-                          </ul>
 
                         // Click Event
                         section
                             h2 Click event
                             pre
-                                code.hljs(data-trim contenteditable).
+                                code.hljs.html(data-trim contenteditable).
                                     <button id="MyButton" type="button">Click me</button>
                             br
                             pre
-                                code.hljs(data-trim contenteditable).
+                                code.hljs.javascript(data-trim contenteditable).
                                     const btn = document.querySelector('#MyButton');
 
-                                    btn.addEventListener('click', function(event){
+                                    btn.addEventListener( 'click', function( event ){
 
                                         console.log( event.type + ' got fired!' );
+                                        console.log( this );
 
                                     });
                             p
@@ -973,54 +986,50 @@ html(lang='en')
 
                         // The Event Object
                         section
-                          <h2>Meet the event object</h2>
-                          <ul>
-                            <li>event.type</li>
-                            <li>event.target</li>
-                            <li>event.preventDefault()</li>
+                          h2 Meet the event object
+                          ul
+                            <li>event.<strong>type</strong></li>
+                            <li>event.<strong>target</strong></li>
+                            <li>event.<strong>preventDefault()</strong></li>
                             <li>and a lot more depending the event type!</li>
-                          </ul>
 
                         // PRACTICE: Click Event
                         section
-                          <h2>Click event hands on</h2>
-                          <p>
+                          h2 Click event hands on
+                          p
                             Solve this <a href="https://codepen.io/kostasx/pen/QZLPVa?editors=0010" target="_blank">exercise</a><br>
                               <a target="_blank" class="bitly_link" href="https://bit.ly/2DZADeZ">https://bit.ly/<strong>2DZADeZ</strong></a>
                               
-                          </p>
-
                         // List of Events
                         section
-                          <h2>Most used events</h2>
-                          <ul>
-                            <li>click</li>
-                            <li>mouseenter</li>
-                            <li>mouseleave</li>
-                            <li>mousedown</li>
-                            <li>mouseup</li>
-                            <li>mousemove</li>
-                            <li>keydown</li>
-                            <li>keyup</li>
-                            <li>blur</li>
-                            <li>focus</li>
-                          </ul>
+                          h2 Most used events
+                          ul
+                            li click
+                            li mouseenter
+                            li mouseleave
+                            li mousedown
+                            li mouseup
+                            li mousemove
+                            li keydown
+                            li keyup
+                            li blur
+                            li focus
 
                         // The KeyUp Event
                         section
                             h2 The KeyUp Event
     
                             pre
-                                code.hljs(data-trim contenteditable).
+                                code.hljs.html(data-trim contenteditable).
                                     <input id="myInput" type="text">
                             br
                             pre
-                                code.hljs(data-trim contenteditable).
-                                    const input = document.querySelector('#myInput');
+                                code.hljs.javascript(data-trim contenteditable).
+                                    const input = document.querySelector( '#myInput' );
 
-                                    input.addEventListener('keyup', function(event){
+                                    input.addEventListener( 'keyup', function( event ){
 
-                                        console.log(event.type + event.target.value);
+                                        console.log( event.type + event.target.value );
 
                                     });
 
@@ -1028,54 +1037,51 @@ html(lang='en')
                                 <a href="https://codepen.io/kostasx/pen/vVBMPK?editors=1111" target="_blank">codepen</a><br>
                                 <a target="_blank" class="bitly_link" href="https://bit.ly/2O5M6OB">https://bit.ly/<strong>2O5M6OB</strong></a>
 
-
                         // PRACTICE: KeyUp Event
                         section
-                          <h2>Keyup Event Hands-On</h2>
+                          h2 Keyup Event Hands-On
                           <p>Solve this <a href="https://codepen.io/kostasx/pen/zmOXbX" target="_blank">exercise</a><br>
                               <a target="_blank" href="https://bit.ly/2yfveKK" class="bitly_link">https://bit.ly/<strong>2yfveKK</strong></a></p>
 
                         // Mouseenter + Mouseleave
                         section
-                          <h2>The mouseenter &amp; mouseleave Events</h2>
+                            h2 The mouseenter &amp; mouseleave Events
                             pre
-                                code.hljs(data-trim contenteditable).
+                                code.hljs.javascript(data-trim contenteditable).
 
-                                    img.addEventListener('mouseenter', function(e){
+                                    img.addEventListener( 'mouseenter', function( event ){
 
-                                        console.log(event.type + event.target);
-
-                                    });
-
-                                    img.addEventListener('mouseleave', function(e){
-
-                                        console.log(event.type + event.target);
+                                        console.log( event.type + event.target );
 
                                     });
 
-                          <p>
-                              <a href="https://codepen.io/kostasx/pen/mzbgZR?editors=1011" target="_blank">codepen</a>
-                              <br>
-                              <a href="https://bit.ly/2zTJwmp" class="bitly_link" target="_blank">https://bit.ly/<strong>2zTJwmp</strong></a>
-                          </p>
+                                    img.addEventListener( 'mouseleave', function( event ){
+
+                                        console.log( event.type + event.target );
+
+                                    });
+
+                            p
+                                <a href="https://codepen.io/kostasx/pen/mzbgZR?editors=1011" target="_blank">codepen</a>
+                                <br>
+                                <a href="https://bit.ly/2zTJwmp" class="bitly_link" target="_blank">https://bit.ly/<strong>2zTJwmp</strong></a>
 
                         // Mouseenter + Mouseleave
                         section
-                          <h2>Mouseenter and mouseleave event hands on</h2>
-                          <ul>
+                          h2 Mouseenter and mouseleave event hands on
+                          ul
                             <li>Solve this <a href="https://codepen.io/kostasx/pen/mzbYbR" target="_blank">exercise</a></li>
-                          </ul>
 
                         // On Page Load
                         section
                             h2 On Page Load
 
                             pre
-                                code.hljs(data-trim contenteditable).
+                                code.hljs.javascript(data-trim contenteditable).
 
-                                    document.addEventListener('DOMContentLoaded', function(e){
+                                    document.addEventListener('DOMContentLoaded', function( event ){
 
-                                        console.log(event.type, event.target);
+                                        console.log( event.type, event.target );
 
                                     });
                             p
@@ -1094,14 +1100,14 @@ html(lang='en')
 
                     // Sync Example 
                     section
-                        <h2>Sync</h2>
+                        h2 Sync
                         pre
-                            code.hljs(data-trim contenteditable).
-                                console.log(1);
-                                console.log(2);
-                                console.log(3);
+                            code.hljs.javascript(data-trim contenteditable).
+                                console.log( 1 );
+                                console.log( 2 );
+                                console.log( 3 );
 
-                        <p class="fragment">Will output:</p>
+                        p.fragment Will output:
 
                         pre.fragment
                             code.hljs(data-trim contenteditable).
@@ -1113,12 +1119,78 @@ html(lang='en')
                             code.hljs(data-trim contenteditable).
                                 3
 
+                    // Sync Example with Blocking Execution 
+                    section
+                        h2 Sync Example with Blocking Execution
+                        pre
+                            code.hljs.javascript(data-trim contenteditable).
+                                console.log( 1 );
+                                slowConnectionToDatabase();
+                                console.log( "Rest of the code..." );
+
+                        p.fragment Execution
+
+                        pre.fragment
+                            code.hljs(data-trim contenteditable).
+                                1
+
+                        pre.fragment
+                            span.fragment .
+                            span.fragment .
+                            span.fragment .
+                            span.fragment .
+                            span.fragment .
+                            span.fragment .
+                            span.fragment .
+                            span.fragment .
+                            span.fragment .
+                            span.fragment .
+                                
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                "Rest of the code..."
+
+                    // Async Pattern 
+                    section
+                        h2 Asynchronous Execution
+                        pre
+                            code.hljs.javascript(data-trim contenteditable).
+                                console.log( 1 );
+                                slowConnectionToDatabase();
+                                console.log( "Rest of the code..." );
+
+                        p.fragment Execution
+
+                        pre.fragment
+                            code.hljs(data-trim contenteditable).
+                                1
+
+                        pre.fragment
+                            code.hljs(data-trim contenteditable).
+                                // slowConnectionToDatabase() starts execution but does not block the rest of the code...
+                                
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                "Rest of the code..."
+
+                        pre.fragment
+                            span.fragment .
+                            span.fragment .
+                            span.fragment .
+                            span.fragment .
+                            span.fragment .
+                            span.fragment .
+
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                // Result from slowConnectionToDatabase() comes back...
+
                     // Async Example 
                     section
-                        <h2>Example 2</h2>
+                        h2 Example
 
                         pre
-                            code.hljs(data-trim contenteditable).
+                            code.hljs.javascript(data-trim contenteditable).
 
                                 console.log(1);
 
@@ -1131,7 +1203,8 @@ html(lang='en')
                                 console.log(3);
 
                         <p class="small" style="font-style: italic;">*Functions can be passed as arguments</p>
-                        <p class="fragment">Will output:</p>
+
+                        p.fragment Will output:
 
                         pre.fragment
                             code.hljs(data-trim contenteditable).
@@ -1145,12 +1218,12 @@ html(lang='en')
 
                     // Live Example 
                     section
-                        <p>Let's dive deeper to see how to deal with asynchronous code...</p>
+                        p Let's dive deeper to see how to deal with asynchronous code...
                         <a target="_blank" href="https://codepen.io/kostasx/pen/oavKer?editors=0012">Codepen</a>
 
                     // Resources
                     section
-                        <p>More on Callbacks:</p>
+                        p More on Callbacks:
                         <a target="_blank" href="https://javascript.info/callbacks">JavaScript.info: Introduction to Callbacks</a>
                         <p>More on Promises:</p>
                         <a target="_blank" href="https://javascript.info/promise-basics">JavaScript.info: Promise Basics</a>
@@ -1178,8 +1251,8 @@ html(lang='en')
 
                     // JSON Values
                     section
-                        <h2>JSON allowed values</h2>
-                        <ul>
+                        h2 JSON allowed values
+                        ul
                           <li class="fragment">string</li>
                           <li class="fragment">number</li>
                           <li class="fragment">object</li>
@@ -1187,11 +1260,10 @@ html(lang='en')
                           <li class="fragment">boolean</li>
                           <li class="fragment">null</li>
                           <li class="fragment"><strike>functions</strike></li>
-                        </ul>
 
                     // JSON Example
                     section
-                        <h2>An example</h2>
+                        h2 An example
                         pre
                             code.hljs.json(data-trim contenteditable).
                                 {
@@ -1217,36 +1289,26 @@ html(lang='en')
                                 pre
                                     code.hljs.javascript(data-trim contenteditable).
                                         const me = {
-                                        firstname: 'Kostas',
-                                        lastname: 'Minaidis',
-                                        address: {
-                                            city: 'Athens',
-                                            street: '24, My Street',
-                                        },
-                                        isMarried: false,
-                                        hobbies: [
-                                            "books", "coding"
-                                        ]
+                                            firstname: 'Kostas',
+                                            lastname: 'Minaidis',
+                                            hobbies: [
+                                                "books", "coding"
+                                            ]
                                         };
-                                        const meJSON = JSON.stringify(me);
-                                        console.log(meJSON);
+                                        const meJSON = JSON.stringify( me );
+                                        console.log( meJSON );
                             </div>
                             <div class="column">
 
                                 pre
                                     code.hljs.javascript(data-trim contenteditable).
                                         '{
-                                        "firstname": "Kostas",
-                                        "lastname": "Minaidis",
-                                        "address": {
-                                            "city": "Athens",
-                                            "street": "24, My Street"
-                                        },
-                                        "isMarried": false,
-                                        "hobbies": [
-                                            "books",
-                                            "coding"
-                                        ]
+                                            "firstname": "Kostas",
+                                            "lastname": "Minaidis",
+                                            "hobbies": [
+                                                "books",
+                                                "coding"
+                                            ]
                                         }'
                             </div>
                         </div>
@@ -1296,10 +1358,10 @@ html(lang='en')
                     // JSON Examples Online
                     section
                         div.column
-                            div.column.is-8.is-offset-2
+                            div.column
                                 h3 JSON Examples Online
                                 <a target="_blank" href="https://jsonplaceholder.typicode.com/posts/1/">JSON Placeholder</a>
-                                <h2><a target="_blank" href="https://bit.ly/2RfcGCR">https://bit.ly/<span style="color:white;">2RfcGCR</span></a></h2>
+                                h4 <a target="_blank" href="https://bit.ly/2RfcGCR">https://bit.ly/<span style="color:white;">2RfcGCR</span></a>
                                 <ul>
                                     <li class="fragment">1) Open link and Copy the JSON data</li>
                                     <li class="fragment">2) Open Browser console, declare a variable <strong class="colorful">let json = ...</strong class="colorful"> and paste the copied JSON data as a value.</li>
@@ -1309,11 +1371,11 @@ html(lang='en')
 
                     // Custom JSON
                     section
-                        <h3>Create and serve your<br>own sample JSON data</h3>
-                        <br>
-                        <div class="columns">
-                            <div class="column">
-                                <h2><a target="_blank" href="https://bit.ly/2NbOeiE">https://bit.ly/<span style="color:white;">2NbOeiE</span></a></h2>
+                        h3 Create and serve your<br>own sample JSON data
+                        br
+                        .columns
+                            .column
+                                h6 <a target="_blank" href="https://bit.ly/2NbOeiE">https://bit.ly/<span style="color:white;">2NbOeiE</span></a>
                                 <p class="small">(Server emulation)</p>
                                 <ul>
                                     <li>1) Open: <a target="_blank" href="https://bit.ly/2NbOeiE">MyJSON</a></li>
@@ -1321,19 +1383,16 @@ html(lang='en')
                                     <li>3) Copy the JSON URI <p class="small">(<a target="_blank" href="https://api.myjson.com/bins/e6h14">https://api.myjson.com/bins/e6h14</a>)</p></li>
                                 </ul>
                                 
-                            </div>
-                            <div class="column">
+                            .column
                                 pre
-                                    code.hljs.javascript(data-trim contenteditable).
+                                    code.hljs.json(data-trim contenteditable).
                                         {
-                                        "title": "On the Road",
-                                        "author": "Jack Kerouac",
-                                        "published": 1957,
-                                        "isNovel": true,
-                                        "characters": [ "Sal", "Dean" ]
+                                            "title": "On the Road",
+                                            "author": "Jack Kerouac",
+                                            "published": 1957,
+                                            "isNovel": true,
+                                            "characters": [ "Sal", "Dean" ]
                                         }					        				
-                            </div>
-                        </div>
 
                     // Recap #1
                     section

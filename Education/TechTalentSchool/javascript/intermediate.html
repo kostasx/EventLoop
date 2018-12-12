@@ -454,7 +454,7 @@ numbers.reduce( sum, 0 );
         <!-- YouTube: (map) https://www.youtube.com/watch?v=bCqtb-Z5YGQ-->
         <!-- YouTube: (reduce) https://www.youtube.com/watch?v=Wl98eZpkp-c-->
         <!-- PRACTICE: Array Manipulation-->
-        <section data-transition="slide" data-background="#F7BE2C" data-background-transition="zoom"><h2>LET'S CODE!</h2>
+        <section data-transition="slide" data-background="#F7BE2C" data-background-transition="zoom"><h2>Let's practice on the<br/>Array methods!</h2>
 <a class="black" target="_blank" href="https://codepen.io/kostasx/pen/NyaPjY?editors=0011">https://goo.gl/<strong>qtoLF4</strong></a>
 <br>
 <a class="black" target="_blank" href="https://codepen.io/kostasx/pen/xyKyMg?editors=0012">https://goo.gl/<strong>Vh8bMf</strong></a>
@@ -471,7 +471,7 @@ numbers.reduce( sum, 0 );
           </section>
           <section>
             <p>DOM is basically a tree-like<br/>structure of the web page</p><img class="fragment" src="./images/advanced/DOM-Kirupa.webp" alt="">
-            <div class="linebreak"></div><a class="fragment" target="_blank" href="https://software.hixie.ch/utilities/js/live-dom-viewer/">Live DOM Viewed</a>
+            <div class="linebreak"></div><a class="fragment" target="_blank" href="https://software.hixie.ch/utilities/js/live-dom-viewer/">Live DOM Viewer</a>
           </section>
           <section>
             <p>All objects of an HTML page are included and can be manipulated by the DOM.</p>
@@ -488,6 +488,7 @@ numbers.reduce( sum, 0 );
             </ul>
             <p class="fragment">All these objects are known as DOM <strong class="colorful">Nodes</strong>.</p>
           </section>
+          <!-- Examples of Nodes-->
           <section>
             <h6>Example of Nodes?</h6>
             <div class="linebreak"></div>
@@ -500,6 +501,7 @@ numbers.reduce( sum, 0 );
             </ul>
             <div class="linebreak"></div><img class="fragment" src="./intermediate/attribute_nodes.jpg" alt="">
           </section>
+          <!-- Basic Terminology-->
           <section>
             <h6>Basic Terminology</h6>
             <ul>
@@ -524,6 +526,9 @@ numbers.reduce( sum, 0 );
             <p class="fragment">Element<strong class="colorful">.appendChild()</strong>;</p>
             <p class="fragment">Element<strong class="colorful">.remove()</strong>;</p>
             <p class="fragment">Element<strong class="colorful">.setAttribute( key, value )</strong>;</p>
+            <p class="fragment">Element<strong class="colorful">.innerHTML</strong></p>
+            <p class="fragment">Element<strong class="colorful">.textContent</strong> / Element<strong class="colorful">.innerText*</strong></p>
+            <p class="fragment small"><a href="https://codepen.io/kostasx/pen/vvNWvG?editors=0011" target="_blank">*CodePen</a></p>
             <p class="fragment">
               Element<strong class="colorful">.style</strong>
               
@@ -565,7 +570,7 @@ document.querySelectorAll('h2');
           <!-- The DOM Element Family-->
           <section>
             <h2>Meet the "family"</h2>
-            <pre><code class="hljs" data-trim contenteditable>const el = document.querySelector('.container');
+            <pre><code class="hljs javascript" data-trim contenteditable>const el = document.querySelector('.container');
 
 el.parentNode;
 el.children;
@@ -609,7 +614,7 @@ YOLO();
           </section>
           <!-- Modifying CSS Classes-->
           <section><h2>Modifying HTML classes</h2>
-            <pre><code class="hljs" data-trim contenteditable>const el = document.querySelector('h1');
+            <pre><code class="hljs javascript" data-trim contenteditable>const el = document.querySelector('h1');
 
 el.classList.add('myClass');
 el.classList.remove('myClass');
@@ -617,27 +622,32 @@ el.classList.toggle('myClass');
 </code></pre>
           </section>
           <!-- Create and Append-->
-          <section><h2>DOM Manipulation:</h2>
-<h3>Create and append</h3>
-<p>Create a codepen (<a href="https://codepen.io/kostasx/pen/pxzQwy" target="_blank">example</a>)</p>
-            <pre><code class="hljs" data-trim contenteditable>const Paragraph = document.createElement('p');
+          <section>
+            <h2>DOM Manipulation:</h2>
+            <h3>Create and append</h3>
+            <p>Create a codepen (<a href="https://codepen.io/kostasx/pen/pxzQwy" target="_blank">example</a>)
+              <pre><code class="hljs javascript" data-trim contenteditable>const Paragraph = document.createElement('p');
 
 Paragraph.innerHTML = "Hello world!";
 
 document.body.appendChild(Paragraph);
 </code></pre>
+            </p>
           </section>
           <!-- Create and insertBefore -->
           <section>
             <h2>DOM Manipulation</h2>
             <h3>Create and insertBefore</h3>
-            <pre><code class="hljs" data-trim contenteditable>// ... previous code
+            <pre><code class="hljs javascript" data-trim contenteditable>const Paragraph = document.createElement('p');
+Paragraph.innerHTML = "Hello world!";
+document.body.appendChild(Paragraph);
+
 const Title = document.createElement('h1');
 Title.innerHTML = "Welcome to JavaScript DOM Magic!";
 
 // parentNode.insertBefore( Node, referenceNode );
-document.body.insertBefore( Title, Paragraph );
-</code></pre>
+document.body.insertBefore( Title, Paragraph );</code></pre>
+            <div class="linebreak"></div><a href="https://codepen.io/kostasx/pen/NeGwYv?editors=0011" target="_blank">CodePen Example</a>
           </section>
           <!-- Remove-->
           <section>
@@ -654,22 +664,23 @@ el.remove();
         <!-- EVENTS-->
         <section>
           <!-- What are Events?-->
-          <section><h2>Events &amp; Capturing User Input</h2>
-<ul>
-<li class="fragment">Events are actions that happen in time</li>
+          <section>
+            <h2>Events &amp; Capturing User Input</h2>
+            <ul><li class="fragment">Events are actions that happen in time</li>
 <li class="fragment">They might be triggered from the user or the browser</li>
 <li class="fragment">We have many <a href="https://developer.mozilla.org/en-US/docs/Web/Events" target="_blank">DOM events</a> but most of the times we use mouse and keyboard events.</li>
-</ul>
+            </ul>
           </section>
           <!-- Click Event-->
           <section>
             <h2>Click event</h2>
-            <pre><code class="hljs" data-trim contenteditable><button id="MyButton" type="button">Click me</button></code></pre><br>
-            <pre><code class="hljs" data-trim contenteditable>const btn = document.querySelector('#MyButton');
+            <pre><code class="hljs html" data-trim contenteditable><button id="MyButton" type="button">Click me</button></code></pre><br>
+            <pre><code class="hljs javascript" data-trim contenteditable>const btn = document.querySelector('#MyButton');
 
-btn.addEventListener('click', function(event){
+btn.addEventListener( 'click', function( event ){
 
     console.log( event.type + ' got fired!' );
+    console.log( this );
 
 });</code></pre>
             <p><a href="https://codepen.io/kostasx/pen/zmOXae?editors=1010" target="_blank">CodePen</a><br>
@@ -677,44 +688,47 @@ btn.addEventListener('click', function(event){
             </p>
           </section>
           <!-- The Event Object-->
-          <section><h2>Meet the event object</h2>
-<ul>
-<li>event.type</li>
-<li>event.target</li>
-<li>event.preventDefault()</li>
+          <section>
+            <h2>Meet the event object</h2>
+            <ul><li>event.<strong>type</strong></li>
+<li>event.<strong>target</strong></li>
+<li>event.<strong>preventDefault()</strong></li>
 <li>and a lot more depending the event type!</li>
-</ul>
+            </ul>
           </section>
           <!-- PRACTICE: Click Event-->
-          <section><h2>Click event hands on</h2>
-<p>
-            <Solve>
-              this <a href="https://codepen.io/kostasx/pen/QZLPVa?editors=0010" target="_blank">exercise</a><br><a target="_blank" class="bitly_link" href="https://bit.ly/2DZADeZ">https://bit.ly/<strong>2DZADeZ</strong></a></Solve></p>
+          <section>
+            <h2>Click event hands on</h2>
+            <p>
+              <Solve>
+                this <a href="https://codepen.io/kostasx/pen/QZLPVa?editors=0010" target="_blank">exercise</a><br><a target="_blank" class="bitly_link" href="https://bit.ly/2DZADeZ">https://bit.ly/<strong>2DZADeZ</strong></a></Solve>
+            </p>
           </section>
           <!-- List of Events-->
-          <section><h2>Most used events</h2>
-<ul>
-<li>click</li>
-<li>mouseenter</li>
-<li>mouseleave</li>
-<li>mousedown</li>
-<li>mouseup</li>
-<li>mousemove</li>
-<li>keydown</li>
-<li>keyup</li>
-<li>blur</li>
-<li>focus</li>
-</ul>
+          <section>
+            <h2>Most used events</h2>
+            <ul>
+              <li>click</li>
+              <li>mouseenter</li>
+              <li>mouseleave</li>
+              <li>mousedown</li>
+              <li>mouseup</li>
+              <li>mousemove</li>
+              <li>keydown</li>
+              <li>keyup</li>
+              <li>blur</li>
+              <li>focus</li>
+            </ul>
           </section>
           <!-- The KeyUp Event-->
           <section>
             <h2>The KeyUp Event</h2>
-            <pre><code class="hljs" data-trim contenteditable><input id="myInput" type="text"></code></pre><br>
-            <pre><code class="hljs" data-trim contenteditable>const input = document.querySelector('#myInput');
+            <pre><code class="hljs html" data-trim contenteditable><input id="myInput" type="text"></code></pre><br>
+            <pre><code class="hljs javascript" data-trim contenteditable>const input = document.querySelector( '#myInput' );
 
-input.addEventListener('keyup', function(event){
+input.addEventListener( 'keyup', function( event ){
 
-    console.log(event.type + event.target.value);
+    console.log( event.type + event.target.value );
 
 });
 </code></pre>
@@ -723,41 +737,41 @@ input.addEventListener('keyup', function(event){
             </p>
           </section>
           <!-- PRACTICE: KeyUp Event-->
-          <section><h2>Keyup Event Hands-On</h2>
-<p>Solve this <a href="https://codepen.io/kostasx/pen/zmOXbX" target="_blank">exercise</a><br>
+          <section>
+            <h2>Keyup Event Hands-On</h2><p>Solve this <a href="https://codepen.io/kostasx/pen/zmOXbX" target="_blank">exercise</a><br>
 <a target="_blank" href="https://bit.ly/2yfveKK" class="bitly_link">https://bit.ly/<strong>2yfveKK</strong></a></p>
           </section>
           <!-- Mouseenter + Mouseleave-->
-          <section><h2>The mouseenter &amp; mouseleave Events</h2>
-            <pre><code class="hljs" data-trim contenteditable>img.addEventListener('mouseenter', function(e){
+          <section>
+            <h2>The mouseenter &amp; mouseleave Events</h2>
+            <pre><code class="hljs javascript" data-trim contenteditable>img.addEventListener( 'mouseenter', function( event ){
 
-    console.log(event.type + event.target);
-
-});
-
-img.addEventListener('mouseleave', function(e){
-
-    console.log(event.type + event.target);
+    console.log( event.type + event.target );
 
 });
-</code></pre><p>
-<a href="https://codepen.io/kostasx/pen/mzbgZR?editors=1011" target="_blank">codepen</a>
+
+img.addEventListener( 'mouseleave', function( event ){
+
+    console.log( event.type + event.target );
+
+});
+</code></pre>
+            <p><a href="https://codepen.io/kostasx/pen/mzbgZR?editors=1011" target="_blank">codepen</a>
 <br>
 <a href="https://bit.ly/2zTJwmp" class="bitly_link" target="_blank">https://bit.ly/<strong>2zTJwmp</strong></a>
-</p>
+            </p>
           </section>
           <!-- Mouseenter + Mouseleave-->
-          <section><h2>Mouseenter and mouseleave event hands on</h2>
-<ul>
-<li>Solve this <a href="https://codepen.io/kostasx/pen/mzbYbR" target="_blank">exercise</a></li>
-</ul>
+          <section>
+            <h2>Mouseenter and mouseleave event hands on</h2>
+            <ul><li>Solve this <a href="https://codepen.io/kostasx/pen/mzbYbR" target="_blank">exercise</a></li></ul>
           </section>
           <!-- On Page Load-->
           <section>
             <h2>On Page Load</h2>
-            <pre><code class="hljs" data-trim contenteditable>document.addEventListener('DOMContentLoaded', function(e){
+            <pre><code class="hljs javascript" data-trim contenteditable>document.addEventListener('DOMContentLoaded', function( event ){
 
-    console.log(event.type, event.target);
+    console.log( event.type, event.target );
 
 });</code></pre>
             <p><a href="https://codepen.io/kostasx/pen/pxzmvx" target="_blank">codepen</a></p>
@@ -773,19 +787,54 @@ img.addEventListener('mouseleave', function(e){
             <h4>Handling Asynchronous code with Callbacks and Promises</h4>
           </section>
           <!-- Sync Example -->
-          <section><h2>Sync</h2>
-            <pre><code class="hljs" data-trim contenteditable>console.log(1);
-console.log(2);
-console.log(3);
-</code></pre><p class="fragment">Will output:</p>
+          <section>
+            <h2>Sync</h2>
+            <pre><code class="hljs javascript" data-trim contenteditable>console.log( 1 );
+console.log( 2 );
+console.log( 3 );
+</code></pre>
+            <p class="fragment">Will output:</p>
             <pre class="fragment"><code class="hljs" data-trim contenteditable>1</code></pre>
             <pre class="fragment"><code class="hljs" data-trim contenteditable>2</code></pre>
             <pre class="fragment"><code class="hljs" data-trim contenteditable>3
 </code></pre>
           </section>
+          <!-- Sync Example with Blocking Execution -->
+          <section>
+            <h2>Sync Example with Blocking Execution</h2>
+            <pre><code class="hljs javascript" data-trim contenteditable>console.log( 1 );
+slowConnectionToDatabase();
+console.log( "Rest of the code..." );
+</code></pre>
+            <p class="fragment">Execution</p>
+            <pre class="fragment"><code class="hljs" data-trim contenteditable>1
+</code></pre>
+            <pre class="fragment"><span class="fragment">.</span><span class="fragment">.</span><span class="fragment">.</span><span class="fragment">.</span><span class="fragment">.</span><span class="fragment">.</span><span class="fragment">.</span><span class="fragment">.</span><span class="fragment">.</span><span class="fragment">.</span></pre>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>"Rest of the code..."
+</code></pre>
+          </section>
+          <!-- Async Pattern -->
+          <section>
+            <h2>Asynchronous Execution</h2>
+            <pre><code class="hljs javascript" data-trim contenteditable>console.log( 1 );
+slowConnectionToDatabase();
+console.log( "Rest of the code..." );
+</code></pre>
+            <p class="fragment">Execution</p>
+            <pre class="fragment"><code class="hljs" data-trim contenteditable>1
+</code></pre>
+            <pre class="fragment"><code class="hljs" data-trim contenteditable>// slowConnectionToDatabase() starts execution but does not block the rest of the code...
+</code></pre>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>"Rest of the code..."
+</code></pre>
+            <pre class="fragment"><span class="fragment">.</span><span class="fragment">.</span><span class="fragment">.</span><span class="fragment">.</span><span class="fragment">.</span><span class="fragment">.</span></pre>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>// Result from slowConnectionToDatabase() comes back...
+</code></pre>
+          </section>
           <!-- Async Example -->
-          <section><h2>Example 2</h2>
-            <pre><code class="hljs" data-trim contenteditable>console.log(1);
+          <section>
+            <h2>Example</h2>
+            <pre><code class="hljs javascript" data-trim contenteditable>console.log(1);
 
 setTimeout( function(){
 
@@ -795,19 +844,19 @@ setTimeout( function(){
 
 console.log(3);
 </code></pre><p class="small" style="font-style: italic;">*Functions can be passed as arguments</p>
-<p class="fragment">Will output:</p>
+            <p class="fragment">Will output:</p>
             <pre class="fragment"><code class="hljs" data-trim contenteditable>1</code></pre>
             <pre class="fragment"><code class="hljs" data-trim contenteditable>3</code></pre>
             <pre class="fragment"><code class="hljs" data-trim contenteditable>2
 </code></pre>
           </section>
           <!-- Live Example -->
-          <section><p>Let's dive deeper to see how to deal with asynchronous code...</p>
-<a target="_blank" href="https://codepen.io/kostasx/pen/oavKer?editors=0012">Codepen</a>
+          <section>
+            <p>Let's dive deeper to see how to deal with asynchronous code...</p><a target="_blank" href="https://codepen.io/kostasx/pen/oavKer?editors=0012">Codepen</a>
           </section>
           <!-- Resources-->
-          <section><p>More on Callbacks:</p>
-<a target="_blank" href="https://javascript.info/callbacks">JavaScript.info: Introduction to Callbacks</a>
+          <section>
+            <p>More on Callbacks:</p><a target="_blank" href="https://javascript.info/callbacks">JavaScript.info: Introduction to Callbacks</a>
 <p>More on Promises:</p>
 <a target="_blank" href="https://javascript.info/promise-basics">JavaScript.info: Promise Basics</a>
           </section>
@@ -831,19 +880,20 @@ console.log(3);
 </p>
           </section>
           <!-- JSON Values-->
-          <section><h2>JSON allowed values</h2>
-<ul>
-<li class="fragment">string</li>
+          <section>
+            <h2>JSON allowed values</h2>
+            <ul><li class="fragment">string</li>
 <li class="fragment">number</li>
 <li class="fragment">object</li>
 <li class="fragment">array</li>
 <li class="fragment">boolean</li>
 <li class="fragment">null</li>
 <li class="fragment"><strike>functions</strike></li>
-</ul>
+            </ul>
           </section>
           <!-- JSON Example-->
-          <section><h2>An example</h2>
+          <section>
+            <h2>An example</h2>
             <pre><code class="hljs json" data-trim contenteditable>{
     "firstname": "Kostas",
     "lastname": "Minaidis",
@@ -865,32 +915,22 @@ console.log(3);
             <p>JSON.stringify</p><div class="columns">
 <div class="column">
             <pre><code class="hljs javascript" data-trim contenteditable>const me = {
-firstname: 'Kostas',
-lastname: 'Minaidis',
-address: {
-    city: 'Athens',
-    street: '24, My Street',
-},
-isMarried: false,
-hobbies: [
-    "books", "coding"
-]
+    firstname: 'Kostas',
+    lastname: 'Minaidis',
+    hobbies: [
+        "books", "coding"
+    ]
 };
-const meJSON = JSON.stringify(me);
-console.log(meJSON);</code></pre></div>
+const meJSON = JSON.stringify( me );
+console.log( meJSON );</code></pre></div>
 <div class="column">
             <pre><code class="hljs javascript" data-trim contenteditable>'{
-"firstname": "Kostas",
-"lastname": "Minaidis",
-"address": {
-    "city": "Athens",
-    "street": "24, My Street"
-},
-"isMarried": false,
-"hobbies": [
-    "books",
-    "coding"
-]
+    "firstname": "Kostas",
+    "lastname": "Minaidis",
+    "hobbies": [
+        "books",
+        "coding"
+    ]
 }'</code></pre></div>
 </div>
 <p class="small">Check: <strong>typeof</strong> me and <strong>typeof</strong> meJSON</p>
@@ -931,10 +971,9 @@ hobbies: [
           <!-- JSON Examples Online-->
           <section>
             <div class="column">
-              <div class="column is-8 is-offset-2">
+              <div class="column">
                 <h3>JSON Examples Online</h3><a target="_blank" href="https://jsonplaceholder.typicode.com/posts/1/">JSON Placeholder</a>
-<h2><a target="_blank" href="https://bit.ly/2RfcGCR">https://bit.ly/<span style="color:white;">2RfcGCR</span></a></h2>
-<ul>
+                <h4><a target="_blank" href="https://bit.ly/2RfcGCR">https://bit.ly/<span style="color:white;">2RfcGCR</span></a></h4><ul>
 <li class="fragment">1) Open link and Copy the JSON data</li>
 <li class="fragment">2) Open Browser console, declare a variable <strong class="colorful">let json = ...</strong class="colorful"> and paste the copied JSON data as a value.</li>
 <li class="fragment">3) Type <strong class="colorful">json</strong> to get the object contents.</li>
@@ -944,27 +983,28 @@ hobbies: [
             </div>
           </section>
           <!-- Custom JSON-->
-          <section><h3>Create and serve your<br>own sample JSON data</h3>
-<br>
-<div class="columns">
-<div class="column">
-<h2><a target="_blank" href="https://bit.ly/2NbOeiE">https://bit.ly/<span style="color:white;">2NbOeiE</span></a></h2>
-<p class="small">(Server emulation)</p>
+          <section>
+            <h3>Create and serve your<br>own sample JSON data</h3><br>
+            <div class="columns">
+              <div class="column">
+                <h6><a target="_blank" href="https://bit.ly/2NbOeiE">https://bit.ly/<span style="color:white;">2NbOeiE</span></a></h6><p class="small">(Server emulation)</p>
 <ul>
 <li>1) Open: <a target="_blank" href="https://bit.ly/2NbOeiE">MyJSON</a></li>
 <li>2) Paste the Code on the left</li>
 <li>3) Copy the JSON URI <p class="small">(<a target="_blank" href="https://api.myjson.com/bins/e6h14">https://api.myjson.com/bins/e6h14</a>)</p></li>
 </ul>
-</div>
-<div class="column">
-            <pre><code class="hljs javascript" data-trim contenteditable>{
-"title": "On the Road",
-"author": "Jack Kerouac",
-"published": 1957,
-"isNovel": true,
-"characters": [ "Sal", "Dean" ]
-}					        				</code></pre></div>
-</div>
+              </div>
+              <div class="column">
+                <pre><code class="hljs json" data-trim contenteditable>{
+    "title": "On the Road",
+    "author": "Jack Kerouac",
+    "published": 1957,
+    "isNovel": true,
+    "characters": [ "Sal", "Dean" ]
+}					        				
+</code></pre>
+              </div>
+            </div>
           </section>
           <!-- Recap #1-->
           <section>
