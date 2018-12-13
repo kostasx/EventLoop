@@ -428,7 +428,7 @@ let passed = ages.filter( isAdult );
             <p class="fragment" style="margin-bottom:0"><small>[ <strong class="colorful">15</strong>, 22, 44, 11 ]</small><br><small><span class="fragment">test( <strong class="colorful">15</strong> );</span> <span class="fragment"> <span class="hljs-comment">--></span> ( 15 > 18 ) </span><span class="fragment"> <span class="hljs-comment">--></span> false </span><span class="fragment"> <span class="hljs-comment">--></span> <span class="hljs-title">[ ]</span></span></small></p>
             <p class="fragment" style="margin:0"><small>[ 15, <strong class="colorful">22</strong>, 44, 11 ]</small><br><small><span class="fragment">test( <strong class="colorful">22</strong> );</span> <span class="fragment"> <span class="hljs-comment">--></span> ( 22 > 18 ) </span><span class="fragment"> <span class="hljs-comment">--></span> true </span><span class="fragment"> <span class="hljs-comment">--></span> <span class="hljs-title">[ 22 ]</span></span></small></p>
             <p class="fragment" style="margin:0"><small>[ 15, 22, <strong class="colorful">44</strong>, 11 ]</small><br><small><span class="fragment">test( <strong class="colorful">44</strong> );</span> <span class="fragment"> <span class="hljs-comment">--></span> ( 44 > 18 ) </span><span class="fragment"> <span class="hljs-comment">--></span> true </span><span class="fragment"> <span class="hljs-comment">--></span> <span class="hljs-title">[ 22, 44 ]</span></span></small></p>
-            <p class="fragment" style="margin:0"><small>[ 15, 22, 44, <strong class="colorful">11</strong> ]</small><br><small><span class="fragment">test( <strong class="colorful">54</strong> );</span> <span class="fragment"> <span class="hljs-comment">--></span> ( 54 > 18 ) </span><span class="fragment"> <span class="hljs-comment">--></span> false </span><span class="fragment"> <span class="hljs-comment">--></span> <span class="hljs-title">[ 22, 44 ]</span></span></small></p>
+            <p class="fragment" style="margin:0"><small>[ 15, 22, 44, <strong class="colorful">11</strong> ]</small><br><small><span class="fragment">test( <strong class="colorful">11</strong> );</span> <span class="fragment"> <span class="hljs-comment">--></span> ( 11 > 18 ) </span><span class="fragment"> <span class="hljs-comment">--></span> false </span><span class="fragment"> <span class="hljs-comment">--></span> <span class="hljs-title">[ 22, 44 ]</span></span></small></p>
           </section>
           <!-- reduce()-->
           <section><h3>Array<strong class="colorful">.reduce()</strong></h3>
@@ -857,8 +857,8 @@ console.log(3);
           <!-- Resources-->
           <section>
             <p>More on Callbacks:</p><a target="_blank" href="https://javascript.info/callbacks">JavaScript.info: Introduction to Callbacks</a>
-<p>More on Promises:</p>
-<a target="_blank" href="https://javascript.info/promise-basics">JavaScript.info: Promise Basics</a>
+            <p>More on Promises:</p><a target="_blank" href="https://javascript.info/promise-basics">JavaScript.info: Promise Basics</a>
+            <div class="linebreak"></div><a href="https://egghead.io/courses/javascript-promises-in-depth" target="_blank">JavaScript Promises in Depth</a>
           </section>
         </section>
         <!-- JSON -->
@@ -1076,13 +1076,13 @@ console.log( user );</code></pre>
           <!-- What is FETCH?-->
           <section>
             <div class="columns">
-              <div class="column is-10 is-offset-1"><h2>fetch()</h2>
-<ul>
-<li class="fragment">fetch API provides a JavaScript interface for making HTTP requests</li>
-<li class="fragment">fetch() method provides an easy way to fetch resources asynchronously</li>
-<li class="fragment">fetch() is the modern alternative to the old and more complicated AJAX API</li>
-<li class="fragment">fetch() method returns a Promise</li>
-</ul>
+              <div class="column is-10 is-offset-1">
+                <h2>fetch()</h2>
+                <ul><li class="fragment">fetch API provides a JavaScript interface for making HTTP requests</li>
+<li class="fragment"><strong class="colorful">fetch()</strong> method provides an easy way to fetch resources asynchronously</li>
+<li class="fragment"><strong class="colorful">fetch()</strong> is the modern alternative to the old and more complicated AJAX API</li>
+<li class="fragment"><strong class="colorful">fetch()</strong> method returns a Promise</li>
+                </ul>
               </div>
             </div>
           </section>
@@ -1097,75 +1097,49 @@ console.log( user );</code></pre>
     return response.json();
 })</code><code class="fragment hljs multiline javascript" data-trim contenteditable>.then(function(data) {
     console.log(data)
-});
-</code></pre>
+});</code></pre>
               </div>
             </div>
           </section>
-        </section>
-        <!-- ARROW FUNCTIONS -->
-        <section><h3>Arrow Functions</h3>
-<a href="https://javascript.info/function-expressions-arrows#arrow-functions" target="_blank">JavaScript.info: Arrow Functions</a>
-<br>
-<a href="https://javascript.info/arrow-functions" target="_blank">JavaScript.info: Arrow Functions Revisited</a>
-<hr>
-<a href="https://codepen.io/kostasx/pen/LgVdLb?editors=0010" target="_blank">CodePen Time!</a>
-<br>
-<a target="_blank" href="https://bit.ly/2zIZxLF">https://bit.ly/<strong style="color:white;">2zIZxLF</strong></a>
+          <!-- FETCH +  APIS-->
+          <section>
+            <h1>Fetch + APIs</h1><a href="https://codepen.io/kostasx/pen/XyRdgX?editors=0010" target="_blank">OMDB API</a>
+          </section>
+          <section>
+            <h2>Error Handling with Promises</h2><a href="https://codepen.io/kostasx/pen/oJjENo?editors=0011" target="_blank">CodePen</a>
+          </section>
         </section>
         <!-- PRACTICE: Fetch + JSON Async -->
-        <section data-transition="slide" data-background="#F7BE2C" data-background-transition="zoom"><h2>LET'S CODE!</h2>
-<a class="black" target="_blank" href="https://bit.ly/2It2pPI">https://bit.ly/<strong>2It2pPI</strong></a>
-<br>
-<a class="black" target="_blank" href="https://bit.ly/2y3RLdl">https://bit.ly/<strong>2y3RLdl</strong></a>
+        <section data-transition="slide" data-background="#F7BE2C" data-background-transition="zoom">
+          <h2>Let's Practice Promises! </h2><a class="black" target="_blank" href="https://bit.ly/2It2pPI">https://bit.ly/<strong>2It2pPI</strong> (Promises)</a><br><a class="black" target="_blank" href="https://bit.ly/2y3RLdl">https://bit.ly/<strong>2y3RLdl</strong> (Async/Await)</a>
         </section>
-        <!-- ES5 Prototypes -->
-        <section><section>
-<h3>Prototype and Prototypal Inheritance</h3>
-</section>
-<section>
-<p>
-<a target="_blank" href="https://blog.bitsrc.io/understanding-javascripts-prototypal-inheritance-354292253bcb">Understanding JavaScript’s Prototypal Inheritance</a>
-</p>
-<p>
-<p>
-<img src="images/advanced/prototype.png" alt="">
-</p>
-<a target="_blank" href="https://codepen.io/kostasx/pen/yRLBaZ?editors=0012">Time for a quick CodePen...</a>
-</p>
-</section>
+        <!-- ES5 Prototypes + Function Constructors -->
+        <section>
+          <section>
+            <h3>Prototype and Prototypal Inheritance</h3>
+            <div class="columns">
+              <div class="column is-8 is-offset-2">
+                <ul><li>The <strong>new</strong> keyword and the Function constructor</li>
+<li>What is <strong>this</strong>?</li>
+<li>The road to ES6 Classes...</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section>
+            <p><a target="_blank" href="https://blog.bitsrc.io/understanding-javascripts-prototypal-inheritance-354292253bcb">Understanding JavaScript’s Prototypal Inheritance</a></p>
+            <p>
+              <p><img src="images/advanced/prototype.png" alt=""></p><a target="_blank" href="https://codepen.io/kostasx/pen/yRLBaZ?editors=0012">Time for a quick CodePen...</a>
+            </p>
+          </section>
         </section>
-        <!-- ES6 Classes -->
-        <section><h1>ES6 Classes</h1>
-<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes">MDN ES6 Classes</a>
+        <!-- ES6: CLASSES-->
+        <section>
+          <h2>ES6 Classes</h2>
+          <h4>Syntactic Sugar for Prototypal Inheritance</h4><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes">MDN ES6 Classes</a>
 <br>
 <p>Time for a CodePen:</p>
 <a target="_blank" style="font-size:1.6em;" href="https://bit.ly/2Rl0PU6">https://bit.ly/<strong style="color:white;">2Rl0PU6</strong></a>
-        </section>
-        <!-- FETCH +  APIS-->
-        <section>
-          <h1>Fetch + APIs</h1>
-        </section>
-        <!-- PROTOTYPE + FUNCTION CONSTRUCTORS-->
-        <section>
-          <section><h3>Prototype and Prototypal Inheritance</h3>
-<div class="columns">
-<div class="column is-8 is-offset-2">
-<ul>
-<li>The <strong>new</strong> keyword and the Function constructor</li>
-<li>What is <strong>this</strong>?</li>
-<li>The road to ES6 Classes...</li>
-</ul>
-</div>
-</div>
-          </section>
-          <section><p>
-<img src="images/advanced/prototype.png" alt="">
-</p>
-<p>
-<a target="_blank" href="https://codepen.io/kostasx/pen/yRLBaZ?editors=0012">Time for a quick CodePen...</a>
-</p>
-          </section>
         </section>
         <!-- ES6: TEMPLATE LITERALS-->
         <section>
@@ -1173,12 +1147,15 @@ console.log( user );</code></pre>
         </section>
         <!-- ES6: ARROW FUNCTIONS-->
         <section>
-          <h2>ES6 Arrow Functions</h2>
-        </section>
-        <!-- ES6: CLASSES-->
-        <section>
-          <h2>ES6 Classes</h2>
-          <h4>Syntactic Sugar for Prototypal Inheritance</h4>
+          <section>
+            <h2>ES6 Arrow Functions</h2><a href="https://javascript.info/function-expressions-arrows#arrow-functions" target="_blank">JavaScript.info: Arrow Functions</a>
+<br>
+<a href="https://javascript.info/arrow-functions" target="_blank">JavaScript.info: Arrow Functions Revisited</a>
+<hr>
+<a href="https://codepen.io/kostasx/pen/LgVdLb?editors=0010" target="_blank">CodePen Time!</a>
+<br>
+<a target="_blank" href="https://bit.ly/2zIZxLF">https://bit.ly/<strong style="color:white;">2zIZxLF</strong></a>
+          </section>
         </section>
         <!-- RESOURCES-->
         <section>
