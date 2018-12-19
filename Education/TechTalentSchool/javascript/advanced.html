@@ -395,6 +395,10 @@ run( 1, 2 );
         <section>
           <section>
             <h3><strong class="colorful">ES6</strong> Object Destructuring </h3>
+            <p class="small"><strong class="colorful">Destructuring</strong> allows you to pull out data from arrays<br/>and objects into distinct variables with concise syntax.</p>
+          </section>
+          <section>
+            <h3>Destructuring Objects  </h3>
             <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>const address = {
     street: 'Street',
     city: 'Athens',
@@ -406,7 +410,7 @@ const city = address.city;
 const country = address.country;</code></pre>
           </section>
           <section>
-            <h3><strong class="colorful">ES6</strong> Object Destructuring </h3>
+            <h3>Destructuring Objects  </h3>
             <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>const address = {
     street: 'Street',
     city: 'Athens',
@@ -417,7 +421,7 @@ const { street, city, country } = address;
 </code></pre>
           </section>
           <section>
-            <h3><strong class="colorful">ES6</strong> Object Destructuring </h3>
+            <h3>Destructuring Objects  </h3>
             <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>const address = {
     street: 'Street',
     city: 'Athens',
@@ -428,7 +432,7 @@ const { city: town } = address;
 </code></pre>
           </section>
           <section>
-            <h3><strong class="colorful">ES6</strong> Object Destructuring </h3>
+            <h3>Destructuring Objects  </h3>
             <h6 class="fragment">Before...</h6>
             <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>function doStuff( one, two, options ) {
     console.log( options.a, options.b, options.c );
@@ -441,7 +445,7 @@ doStuff( 'example1', 'example2', {
 });</code></pre>
           </section>
           <section>
-            <h3><strong class="colorful">ES6</strong> Object Destructuring</h3>
+            <h3>Destructuring Objects  </h3>
             <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>function doStuff( one, two, { a, b, c } ) {
     console.log( a, b, c );
 }
@@ -468,8 +472,28 @@ let [ red, green, blue ] = colors;
 </code></pre><br>
             <p class="small fragment">With default values:</p>
             <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>let colors = [ 255, 100 ];
-let [ red = 99, green = 99, blue = 99 ] = colors;
+let [ red = 99, green = 99, blue = 99 ] = colors;</code></pre>
+          </section>
+          <section>
+            <h3>Value Swapping</h3>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>let colorA = "Black";
+let colorB = "White";
+[ colorA, colorB ] = [ colorB, colorA ];
+</code></pre><br>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>colorA; // "White"
+colorB; // "Black"
 </code></pre>
+          </section>
+          <section>
+            <h3>Practice</h3><a href="https://codepen.io/kostasx/pen/KbNOaz?editors=0011" target="_blank">CodePen</a>
+          </section>
+          <section>
+            <h3>More Exercises!</h3>
+            <ul>
+              <li> <a target="_blank" href="https://marijnhaverbeke.nl/talks/es6_falsyvalues2015/exercises/#Avoiding_disaster">Avoiding Disaster</a></li>
+              <li><a target="_blank" href="https://marijnhaverbeke.nl/talks/es6_falsyvalues2015/exercises/#Default_argument">Default Argument</a></li>
+              <li><a target="_blank" href="https://marijnhaverbeke.nl/talks/es6_falsyvalues2015/exercises/#Improve_this_code">Improve this code</a></li>
+            </ul>
           </section>
         </section>
         <!-- ES6: Spread Operator-->
@@ -495,14 +519,79 @@ const second = { job: "Instructor" };</code></pre><br>
 console.log( combined );
 // { name: "Kostas", job: "Instructor", location: "Greece" }
 
-const clone = { ...first };                    
-</code></pre>
+const clone = { ...first };                    </code></pre>
+          </section>
+          <section>
+            <h3>Practice</h3><a href="https://codepen.io/kostasx/pen/VqPZJK?editors=0011" target="_blank">CodePen</a>
           </section>
         </section>
         <!-- ES6: Modules-->
         <section>
-          <h3><strong class="colorful">ES6</strong> Modules</h3>
-          <p class="small">Let's dive right into this...</p><br><a href="https://codesandbox.io/s/6ljwk986yk" target="_blank">SandBox demo</a><br><a href="https://codesandbox.io/s/vjqo0komxl" target="_blank">SandBox demo (final)</a>
+          <!-- INTRO-->
+          <section>
+            <h3><strong class="colorful">ES6</strong> Modules</h3>
+            <p class="small">In ES6, we can use an <strong class="colorful">export</strong> token to export<br/>a module's (modules === JS files) public API</p>
+            <p class="small"> <strong class="colorful">lib.js:</strong></p>
+            <pre><code class="hljs javascript" data-trim contenteditable>// Export the function
+export function sayHello(){ console.log('Hello'); }
+
+// Do not export the function
+function somePrivateFunction(){ ...}</code></pre>
+            <p class="small fragment"><strong class="colorful">app.js</strong>: And an <strong class="colorful">import</strong> token to import parts that a module exports:</p>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>import { sayHello } from './lib';
+sayHello();  
+// => Hello
+</code></pre>
+          </section>
+          <!-- ALIASES-->
+          <section>
+            <p class="small">We can even give imports an alias using as:</p>
+            <pre><code class="hljs javascript" data-trim contenteditable>import { sayHello as say } from './lib';
+say();  
+// => Hello</code></pre>
+            <p class="small fragment">...or load an entire module at once:</p>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>import * as lib from './lib';
+lib.sayHello();  
+// => Hello
+</code></pre>
+          </section>
+          <!-- DEFAULT EXPORTS-->
+          <section>
+            <p class="small">The format also supports default exports:</p>
+            <pre><code class="hljs javascript" data-trim contenteditable>// lib.js
+// Export default function
+export default function sayHello(){ console.log( 'Hello' ); }
+
+// Export non-default function
+export function sayBye(){ console.log('Bye'); }
+</code></pre>
+            <p class="small fragment">...which you can import like this:</p>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>import sayHello, { sayBye } from './lib';
+sayHello();  
+// => Hello
+
+sayBye();  
+// => Bye
+</code></pre>
+          </section>
+          <section>
+            <p class="small">You can export not only functions, but anything you like:</p>
+            <pre><code class="hljs javascript" data-trim contenteditable>// Export simple value
+export const apiUrl = '...';
+
+// Export object
+export const settings = {  
+    debug: true
+}</code></pre>
+          </section>
+          <section>
+            <h6>Browser Support</h6>
+            <p class="small">The native module format is not yet supported by all browsers.</p>
+            <p class="small">We can use the ES6 module by using a transpiler like Babel.</p>
+          </section>
+          <section>
+            <p class="small">Let's dive right into Practice...</p><br><a href="https://codesandbox.io/s/6ljwk986yk" target="_blank">SandBox demo</a><br><a href="https://codesandbox.io/s/vjqo0komxl" target="_blank">SandBox demo (final)</a>
+          </section>
         </section>
         <!-- TYPES & EQUALITY-->
         <!-- JS PATTERNS: IIFE-->
@@ -511,11 +600,12 @@ const clone = { ...first };
         <section>
           <h3>Resources:</h3>
           <ul>
-            <li><a href="https://github.com/getify/You-Dont-Know-JS/tree/master/this%20%26%20object%20prototypes">You Don't Know JS: this &amp; Object Prototypes</a></li>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this">Read about this at MDN</a></li>
-            <li><a href="https://codeburst.io/es6-destructuring-the-complete-guide-7f842d08b98f">ES6 Destructuring: The Complete Guide</a></li>
-            <li><a href="https://alligator.io/js/modules-es6/">ES6 Modules (alligator.io)</a></li>
-            <li><a target="_blank" href="https://codepen.io/kostasx/pen/NONQgL?editors=0011">Hands-on: Bitcoin Wallet</a><br><a class="bitly_link" target="_blank" href="https://bit.ly/2No4jlx"><span>https://bit.ly/<strong>2No4jlx</strong></span></a></li>
+            <li class="small"><a href="https://github.com/getify/You-Dont-Know-JS/tree/master/this%20%26%20object%20prototypes">You Don't Know JS: this &amp; Object Prototypes</a></li>
+            <li class="small"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this">Read about this at MDN</a></li>
+            <li class="small"><a href="https://codeburst.io/es6-destructuring-the-complete-guide-7f842d08b98f">ES6 Destructuring: The Complete Guide</a></li>
+            <li class="small"><a href="https://alligator.io/js/modules-es6/">ES6 Modules (alligator.io)</a></li>
+            <li class="small"><a href="https://www.jvandemo.com/a-10-minute-primer-to-javascript-modules-module-formats-module-loaders-and-module-bundlers#es6moduleformat">A 10 minute primer to JavaScript modules, ... [ES6 Section]</a></li>
+            <li class="small"><a target="_blank" href="https://codepen.io/kostasx/pen/NONQgL?editors=0011">Hands-on: Bitcoin Wallet</a><br><a class="bitly_link" target="_blank" href="https://bit.ly/2No4jlx"><span>https://bit.ly/<strong>2No4jlx</strong></span></a></li>
           </ul>
         </section>
         <!-- TTS | OUTRO -->

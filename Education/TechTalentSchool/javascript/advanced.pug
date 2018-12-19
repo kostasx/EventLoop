@@ -470,6 +470,10 @@ html(lang='en')
                 section
                     section
                         h3 <strong class="colorful">ES6</strong> Object Destructuring 
+                        p.small <strong class="colorful">Destructuring</strong> allows you to pull out data from arrays<br/>and objects into distinct variables with concise syntax.
+
+                    section
+                        h3 Destructuring Objects  
                         pre.fragment
                             code.hljs.javascript(data-trim contenteditable).
                                 const address = {
@@ -482,7 +486,7 @@ html(lang='en')
                                 const city = address.city;
                                 const country = address.country;
                     section
-                        h3 <strong class="colorful">ES6</strong> Object Destructuring 
+                        h3 Destructuring Objects  
                         pre.fragment
                             code.hljs.javascript(data-trim contenteditable).
                                 const address = {
@@ -494,7 +498,7 @@ html(lang='en')
                                 const { street, city, country } = address;
 
                     section
-                        h3 <strong class="colorful">ES6</strong> Object Destructuring 
+                        h3 Destructuring Objects  
                         pre.fragment
                             code.hljs.javascript(data-trim contenteditable).
                                 const address = {
@@ -506,7 +510,7 @@ html(lang='en')
                                 const { city: town } = address;
 
                     section
-                        h3 <strong class="colorful">ES6</strong> Object Destructuring 
+                        h3 Destructuring Objects  
                         h6.fragment Before...
                         pre.fragment
                             code.hljs.javascript(data-trim contenteditable).
@@ -521,7 +525,7 @@ html(lang='en')
                                     c: 'opt3'
                                 });
                     section
-                        h3 <strong class="colorful">ES6</strong> Object Destructuring
+                        h3 Destructuring Objects  
                         pre.fragment
                             code.hljs.javascript(data-trim contenteditable).
 
@@ -560,6 +564,35 @@ html(lang='en')
 
                                 let colors = [ 255, 100 ];
                                 let [ red = 99, green = 99, blue = 99 ] = colors;
+                    section
+                        h3 Value Swapping
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+
+                                let colorA = "Black";
+                                let colorB = "White";
+                                [ colorA, colorB ] = [ colorB, colorA ];
+
+                        br
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+
+                                colorA; // "White"
+                                colorB; // "Black"
+                    
+                    section
+                        h3 Practice
+                        a(href="https://codepen.io/kostasx/pen/KbNOaz?editors=0011" target="_blank") CodePen
+
+                    section
+                        h3 More Exercises!
+                        ul
+                            li 
+                                a(target="_blank" href="https://marijnhaverbeke.nl/talks/es6_falsyvalues2015/exercises/#Avoiding_disaster") Avoiding Disaster
+                            li
+                                a(target="_blank" href="https://marijnhaverbeke.nl/talks/es6_falsyvalues2015/exercises/#Default_argument") Default Argument
+                            li
+                                a(target="_blank" href="https://marijnhaverbeke.nl/talks/es6_falsyvalues2015/exercises/#Improve_this_code") Improve this code
 
                 // ES6: Spread Operator
                 section
@@ -600,17 +633,97 @@ html(lang='en')
                                 // { name: "Kostas", job: "Instructor", location: "Greece" }
 
                                 const clone = { ...first };                    
+                    section
+                        h3 Practice
+                        a(href="https://codepen.io/kostasx/pen/VqPZJK?editors=0011" target="_blank") CodePen
 
                 // ES6: Modules
                 section
-                    h3 <strong class="colorful">ES6</strong> Modules
-                    p.small Let's dive right into this...
 
-                    br
-                    a(href="https://codesandbox.io/s/6ljwk986yk" target="_blank") SandBox demo
+                    // INTRO
+                    section
+                        h3 <strong class="colorful">ES6</strong> Modules
+                        p.small In ES6, we can use an <strong class="colorful">export</strong> token to export<br/>a module's (modules === JS files) public API
+                        p.small 
+                            strong.colorful lib.js:
+                        pre
+                            code.hljs.javascript(data-trim contenteditable).
+                                // Export the function
+                                export function sayHello(){ console.log('Hello'); }
 
-                    br
-                    a(href="https://codesandbox.io/s/vjqo0komxl" target="_blank") SandBox demo (final)
+                                // Do not export the function
+                                function somePrivateFunction(){ ...}
+                        p.small.fragment <strong class="colorful">app.js</strong>: And an <strong class="colorful">import</strong> token to import parts that a module exports:
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                import { sayHello } from './lib';
+                                sayHello();  
+                                // => Hello
+
+                    // ALIASES
+                    section
+                        p.small We can even give imports an alias using as:
+                        pre
+                            code.hljs.javascript(data-trim contenteditable).
+                                import { sayHello as say } from './lib';
+                                say();  
+                                // => Hello
+                        p.small.fragment ...or load an entire module at once:
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                import * as lib from './lib';
+                                lib.sayHello();  
+                                // => Hello
+
+                    // DEFAULT EXPORTS
+                    section
+
+                        p.small The format also supports default exports:
+                        pre
+                            code.hljs.javascript(data-trim contenteditable).
+                                // lib.js
+                                // Export default function
+                                export default function sayHello(){ console.log( 'Hello' ); }
+
+                                // Export non-default function
+                                export function sayBye(){ console.log('Bye'); }
+    
+                        p.small.fragment ...which you can import like this:
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                import sayHello, { sayBye } from './lib';
+                                sayHello();  
+                                // => Hello
+
+                                sayBye();  
+                                // => Bye
+
+                    section
+                        p.small You can export not only functions, but anything you like:
+
+                        pre
+                            code.hljs.javascript(data-trim contenteditable).
+                                // Export simple value
+                                export const apiUrl = '...';
+
+                                // Export object
+                                export const settings = {  
+                                    debug: true
+                                }
+                    section
+                        h6 Browser Support
+                        p.small The native module format is not yet supported by all browsers.
+
+                        p.small We can use the ES6 module by using a transpiler like Babel.
+                        
+                    section
+                        p.small Let's dive right into Practice...
+
+                        br
+                        a(href="https://codesandbox.io/s/6ljwk986yk" target="_blank") SandBox demo
+
+                        br
+                        a(href="https://codesandbox.io/s/vjqo0komxl" target="_blank") SandBox demo (final)
 
                 // TYPES & EQUALITY
                 //- section
@@ -625,15 +738,17 @@ html(lang='en')
                 section
                     h3 Resources:
                     ul
-                        li
+                        li.small
                             a(href="https://github.com/getify/You-Dont-Know-JS/tree/master/this%20%26%20object%20prototypes") You Don't Know JS: this &amp; Object Prototypes
-                        li
+                        li.small
                             a(href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this") Read about this at MDN
-                        li
+                        li.small
                             a(href="https://codeburst.io/es6-destructuring-the-complete-guide-7f842d08b98f") ES6 Destructuring: The Complete Guide
-                        li
+                        li.small
                             a(href="https://alligator.io/js/modules-es6/") ES6 Modules (alligator.io)
-                        li
+                        li.small
+                            a(href="https://www.jvandemo.com/a-10-minute-primer-to-javascript-modules-module-formats-module-loaders-and-module-bundlers#es6moduleformat") A 10 minute primer to JavaScript modules, ... [ES6 Section]
+                        li.small
                             a(target="_blank" href="https://codepen.io/kostasx/pen/NONQgL?editors=0011") Hands-on: Bitcoin Wallet
                             br
                             a(class="bitly_link" target="_blank" href="https://bit.ly/2No4jlx")
