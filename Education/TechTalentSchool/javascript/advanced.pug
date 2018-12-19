@@ -412,24 +412,107 @@ html(lang='en')
                                         }, 2000)
                                     }
                                 } 
+                    // SUMMARY
+                    section
+                        h3 Summary
+                        p.small.fragment Determining the <strong class="colorful">this</strong> binding for an executing function<br/>requires finding the direct call-site of that function.
+                        p.small.fragment Once examined, four rules can be applied<br/>to the call-site, in this order of precedence:
+                        p.small.fragment - Called with <strong class="colorful">new</strong>? Use the newly constructed object.
+                        p.small.fragment - Called with <strong class="colorful">call</strong> or <strong class="colorful">apply</strong> (or <strong class="colorful">bind</strong>)? Use the specified object.
+                        p.small.fragment - Called with a <strong class="colorful">context object</strong> owning the call? Use that context object.
+                        p.small.fragment <strong class="colorful">- Default</strong>: undefined in strict mode, global object otherwise.
+                    // RECAP
+                    section
+                        h6 Recap...
+                        h6 ...through some examples
+                        a(href="https://www.w3schools.com/js/js_this.asp" target="_blank") W3Schools
+                        br
+                        a.fragment(href="https://codepen.io/kostasx/pen/yGVOKQ?editors=1011" target="_blank") Let's practice a bit...
 
                 // ES6: Default Function Parameters
                 section
                     section
+                        h3 <strong class="colorful">ES6</strong>: Default Parameters
+                    section
                         h3 Default Parameters in ES5?
-
                         pre.fragment
                             code.hljs.javascript(data-trim contenteditable).
+                                function run( arg1, arg2 ){
+                                    if ( typeof arg1 === "undefined" ){
+                                        arg1 = "default value #1";
+                                    }
+                                    if ( typeof arg2 === "undefined" ){
+                                        arg2 = "default value #2";
+                                    }
 
-                // ES6: Spread Operator & Destructuring Assignments
+                                    console.log( arg1, arg2 );
+                                }
+
+                                run();
+                                run( 1 );
+                                run( 1, 2 );
+                    section
+                        h3 Default Parameters in ES6!
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                function run( arg1 = "default #1", arg2 = "default #2" ){
+                                    console.log( arg1, arg2 );
+                                }
+
+                                run();
+                                run( 1 );
+                                run( 1, 2 );
+
+                    section
+                        a(href="https://codepen.io/kostasx/pen/pqNymY?editors=1111" target="_blank") Quick Practice...
+
+                // ES6: Destructuring Assignments
                 section
                     section
-                        h3 Destructuring
+                        h3 <strong class="colorful">ES6</strong> Object Destructuring 
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                const address = {
+                                    street: 'Street',
+                                    city: 'Athens',
+                                    county: 'Greece'
+                                }
+
+                                const street = address.street;
+                                const city = address.city;
+                                const country = address.country;
+                    section
+                        h3 <strong class="colorful">ES6</strong> Object Destructuring 
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                const address = {
+                                    street: 'Street',
+                                    city: 'Athens',
+                                    county: 'Greece'
+                                }
+
+                                const { street, city, country } = address;
+
+                    section
+                        h3 <strong class="colorful">ES6</strong> Object Destructuring 
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                const address = {
+                                    street: 'Street',
+                                    city: 'Athens',
+                                    county: 'Greece'
+                                }
+                                const { street } = address;
+                                const { city: town } = address;
+
+                    section
+                        h3 <strong class="colorful">ES6</strong> Object Destructuring 
+                        h6.fragment Before...
                         pre.fragment
                             code.hljs.javascript(data-trim contenteditable).
 
-                                function doStuff( one, two, { a, b, c } ) {
-                                    console.log(a, b, c, d);
+                                function doStuff( one, two, options ) {
+                                    console.log( options.a, options.b, options.c );
                                 }
 
                                 doStuff( 'example1', 'example2', {
@@ -437,18 +520,106 @@ html(lang='en')
                                     b: 'opt2',
                                     c: 'opt3'
                                 });
+                    section
+                        h3 <strong class="colorful">ES6</strong> Object Destructuring
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+
+                                function doStuff( one, two, { a, b, c } ) {
+                                    console.log( a, b, c );
+                                }
+
+                                doStuff( 'example1', 'example2', {
+                                    a: 'opt1',
+                                    b: 'opt2',
+                                    c: 'opt3'
+                                });
+                    section
+                        h3 With default parameters:
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+
+                                function doStuff( one, two, { a = 'opt1', b = 'opt2', c = 'opt3' } = {} ) {
+                                    console.log( a, b, c );
+                                }
+
+                                doStuff( 'example1', 'example2' );
+
+                    section
+                        h3 Array Destructuring
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+
+                                let colors = [ 255, 100, 55 ];
+                                let [ red, green, blue ] = colors;
+
+                        br
+                        p.small.fragment With default values:
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+
+                                let colors = [ 255, 100 ];
+                                let [ red = 99, green = 99, blue = 99 ] = colors;
+
+                // ES6: Spread Operator
+                section
+                    section
+                        h3 <strong class="colorful">ES6</strong> Spread Operator (Arrays)
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                const first = [ 1, 2, 3 ];
+                                const second = [ 4, 5, 6 ];
+                                const combined = first.concat( second );
+                                // [ 1, 2, 3, 4, 5, 6 ]
+                        br
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                const combined = [ ...first, ...second ];
+                                // [ 1, 2, 3, 4, 5, 6 ]
+                        br
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                const combined = [ ...first, 'middle', ...second, 'end' ];
+                                // [ 1, 2, 3, 'middle', 4, 5, 6, 'end' ]
+                        br
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                const clone = [ ...first ];
+                    section
+                        h3 Spread Operator (Objects)
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                const first = { name: "Kostas" };
+                                const second = { job: "Instructor" };
+                        br
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                const combined = { ...first, ...second, location: "Greece" };
+
+                                console.log( combined );
+                                // { name: "Kostas", job: "Instructor", location: "Greece" }
+
+                                const clone = { ...first };                    
 
                 // ES6: Modules
                 section
+                    h3 <strong class="colorful">ES6</strong> Modules
+                    p.small Let's dive right into this...
+
+                    br
+                    a(href="https://codesandbox.io/s/6ljwk986yk" target="_blank") SandBox demo
+
+                    br
+                    a(href="https://codesandbox.io/s/vjqo0komxl" target="_blank") SandBox demo (final)
 
                 // TYPES & EQUALITY
-                section
+                //- section
 
                 // JS PATTERNS: IIFE
-                section
+                //- section
 
                 // REGULAR EXPRESSIONS 
-                section
+                //- section
 
                 // RESOURCES
                 section
@@ -458,6 +629,10 @@ html(lang='en')
                             a(href="https://github.com/getify/You-Dont-Know-JS/tree/master/this%20%26%20object%20prototypes") You Don't Know JS: this &amp; Object Prototypes
                         li
                             a(href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this") Read about this at MDN
+                        li
+                            a(href="https://codeburst.io/es6-destructuring-the-complete-guide-7f842d08b98f") ES6 Destructuring: The Complete Guide
+                        li
+                            a(href="https://alligator.io/js/modules-es6/") ES6 Modules (alligator.io)
                         li
                             a(target="_blank" href="https://codepen.io/kostasx/pen/NONQgL?editors=0011") Hands-on: Bitcoin Wallet
                             br

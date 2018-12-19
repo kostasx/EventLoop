@@ -338,47 +338,183 @@ person.show.call( other, "Hi ", "!" );</code></pre>
          console.log( this.name );
         }, 2000)
     }
-} 
-</code></pre>
+} </code></pre>
+          </section>
+          <!-- SUMMARY-->
+          <section>
+            <h3>Summary</h3>
+            <p class="small fragment">Determining the <strong class="colorful">this</strong> binding for an executing function<br/>requires finding the direct call-site of that function.</p>
+            <p class="small fragment">Once examined, four rules can be applied<br/>to the call-site, in this order of precedence:</p>
+            <p class="small fragment">- Called with <strong class="colorful">new</strong>? Use the newly constructed object.</p>
+            <p class="small fragment">- Called with <strong class="colorful">call</strong> or <strong class="colorful">apply</strong> (or <strong class="colorful">bind</strong>)? Use the specified object.</p>
+            <p class="small fragment">- Called with a <strong class="colorful">context object</strong> owning the call? Use that context object.</p>
+            <p class="small fragment"><strong class="colorful">- Default</strong>: undefined in strict mode, global object otherwise.</p>
+          </section>
+          <!-- RECAP-->
+          <section>
+            <h6>Recap...</h6>
+            <h6>...through some examples</h6><a href="https://www.w3schools.com/js/js_this.asp" target="_blank">W3Schools</a><br><a class="fragment" href="https://codepen.io/kostasx/pen/yGVOKQ?editors=1011" target="_blank">Let's practice a bit...</a>
           </section>
         </section>
         <!-- ES6: Default Function Parameters-->
         <section>
           <section>
-            <h3>Default Parameters in ES5?</h3>
-            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable></code></pre>
+            <h3><strong class="colorful">ES6</strong>: Default Parameters</h3>
           </section>
+          <section>
+            <h3>Default Parameters in ES5?</h3>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>function run( arg1, arg2 ){
+    if ( typeof arg1 === "undefined" ){
+        arg1 = "default value #1";
+    }
+    if ( typeof arg2 === "undefined" ){
+        arg2 = "default value #2";
+    }
+
+    console.log( arg1, arg2 );
+}
+
+run();
+run( 1 );
+run( 1, 2 );</code></pre>
+          </section>
+          <section>
+            <h3>Default Parameters in ES6!</h3>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>function run( arg1 = "default #1", arg2 = "default #2" ){
+    console.log( arg1, arg2 );
+}
+
+run();
+run( 1 );
+run( 1, 2 );
+</code></pre>
+          </section>
+          <section><a href="https://codepen.io/kostasx/pen/pqNymY?editors=1111" target="_blank">Quick Practice...</a></section>
         </section>
-        <!-- ES6: Spread Operator & Destructuring Assignments-->
+        <!-- ES6: Destructuring Assignments-->
         <section>
           <section>
-            <h3>Destructuring</h3>
-            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>function doStuff( one, two, { a, b, c } ) {
-    console.log(a, b, c, d);
+            <h3><strong class="colorful">ES6</strong> Object Destructuring </h3>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>const address = {
+    street: 'Street',
+    city: 'Athens',
+    county: 'Greece'
+}
+
+const street = address.street;
+const city = address.city;
+const country = address.country;</code></pre>
+          </section>
+          <section>
+            <h3><strong class="colorful">ES6</strong> Object Destructuring </h3>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>const address = {
+    street: 'Street',
+    city: 'Athens',
+    county: 'Greece'
+}
+
+const { street, city, country } = address;
+</code></pre>
+          </section>
+          <section>
+            <h3><strong class="colorful">ES6</strong> Object Destructuring </h3>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>const address = {
+    street: 'Street',
+    city: 'Athens',
+    county: 'Greece'
+}
+const { street } = address;
+const { city: town } = address;
+</code></pre>
+          </section>
+          <section>
+            <h3><strong class="colorful">ES6</strong> Object Destructuring </h3>
+            <h6 class="fragment">Before...</h6>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>function doStuff( one, two, options ) {
+    console.log( options.a, options.b, options.c );
 }
 
 doStuff( 'example1', 'example2', {
     a: 'opt1',
     b: 'opt2',
     c: 'opt3'
-});
+});</code></pre>
+          </section>
+          <section>
+            <h3><strong class="colorful">ES6</strong> Object Destructuring</h3>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>function doStuff( one, two, { a, b, c } ) {
+    console.log( a, b, c );
+}
+
+doStuff( 'example1', 'example2', {
+    a: 'opt1',
+    b: 'opt2',
+    c: 'opt3'
+});</code></pre>
+          </section>
+          <section>
+            <h3>With default parameters:</h3>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>function doStuff( one, two, { a = 'opt1', b = 'opt2', c = 'opt3' } = {} ) {
+    console.log( a, b, c );
+}
+
+doStuff( 'example1', 'example2' );
+</code></pre>
+          </section>
+          <section>
+            <h3>Array Destructuring</h3>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>let colors = [ 255, 100, 55 ];
+let [ red, green, blue ] = colors;
+</code></pre><br>
+            <p class="small fragment">With default values:</p>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>let colors = [ 255, 100 ];
+let [ red = 99, green = 99, blue = 99 ] = colors;
+</code></pre>
+          </section>
+        </section>
+        <!-- ES6: Spread Operator-->
+        <section>
+          <section>
+            <h3><strong class="colorful">ES6</strong> Spread Operator (Arrays)</h3>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>const first = [ 1, 2, 3 ];
+const second = [ 4, 5, 6 ];
+const combined = first.concat( second );
+// [ 1, 2, 3, 4, 5, 6 ]</code></pre><br>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>const combined = [ ...first, ...second ];
+// [ 1, 2, 3, 4, 5, 6 ]</code></pre><br>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>const combined = [ ...first, 'middle', ...second, 'end' ];
+// [ 1, 2, 3, 'middle', 4, 5, 6, 'end' ]</code></pre><br>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>const clone = [ ...first ];</code></pre>
+          </section>
+          <section>
+            <h3>Spread Operator (Objects)</h3>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>const first = { name: "Kostas" };
+const second = { job: "Instructor" };</code></pre><br>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>const combined = { ...first, ...second, location: "Greece" };
+
+console.log( combined );
+// { name: "Kostas", job: "Instructor", location: "Greece" }
+
+const clone = { ...first };                    
 </code></pre>
           </section>
         </section>
         <!-- ES6: Modules-->
-        <section></section>
+        <section>
+          <h3><strong class="colorful">ES6</strong> Modules</h3>
+          <p class="small">Let's dive right into this...</p><br><a href="https://codesandbox.io/s/6ljwk986yk" target="_blank">SandBox demo</a><br><a href="https://codesandbox.io/s/vjqo0komxl" target="_blank">SandBox demo (final)</a>
+        </section>
         <!-- TYPES & EQUALITY-->
-        <section></section>
         <!-- JS PATTERNS: IIFE-->
-        <section></section>
         <!-- REGULAR EXPRESSIONS -->
-        <section></section>
         <!-- RESOURCES-->
         <section>
           <h3>Resources:</h3>
           <ul>
             <li><a href="https://github.com/getify/You-Dont-Know-JS/tree/master/this%20%26%20object%20prototypes">You Don't Know JS: this &amp; Object Prototypes</a></li>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this">Read about this at MDN</a></li>
+            <li><a href="https://codeburst.io/es6-destructuring-the-complete-guide-7f842d08b98f">ES6 Destructuring: The Complete Guide</a></li>
+            <li><a href="https://alligator.io/js/modules-es6/">ES6 Modules (alligator.io)</a></li>
             <li><a target="_blank" href="https://codepen.io/kostasx/pen/NONQgL?editors=0011">Hands-on: Bitcoin Wallet</a><br><a class="bitly_link" target="_blank" href="https://bit.ly/2No4jlx"><span>https://bit.ly/<strong>2No4jlx</strong></span></a></li>
           </ul>
         </section>
