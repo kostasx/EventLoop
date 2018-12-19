@@ -595,6 +595,92 @@ export const settings = {
         </section>
         <!-- TYPES & EQUALITY-->
         <!-- JS PATTERNS: IIFE-->
+        <section>
+          <section>
+            <h3><strong class="colorful">IIFE</strong></h3>
+            <h5>Immediately Invoked Function Expression</h5>
+            <div class="columns">
+              <div class="column is-8 is-offset-2">
+                <pre><code class="hljs javascript" data-trim contenteditable>(function(){
+    // ...
+})()
+</code></pre>
+                <p class="small fragment">An <strong class="colorful">IIFE</strong> is an anonymous function that is invoked when it is declared.</p>
+                <p class="small fragment">Notice how the function is surrounded by parentheses. </p>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="columns">
+              <div class="column is-8 is-offset-2">
+                <p class="small">In JavaScript, a line starting with the word function is considered as a function declaration:</p>
+                <pre><code class="hljs javascript" data-trim contenteditable>// Function declaration
+function(){  
+    console.log('test');
+}</code></pre>
+                <p class="small fragment">Immediately invoking a function declaration<br/>throws an error:</p>
+                <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>// Immediately Invoked Function Declaration
+function(){  
+    console.log('test');
+}()
+// => Uncaught SyntaxError: Unexpected token )
+</code></pre>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="columns">
+              <div class="column is-10 is-offset-1">
+                <p class="small">Putting parentheses around the function makes it a function expression:</p>
+                <pre><code class="hljs javascript" data-trim contenteditable>// Function expression
+(function(){
+    console.log('test');
+})
+// => returns function(){ console.log('test') }
+</code></pre>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="columns">
+              <div class="column is-8 is-offset-2">
+                <p class="small">The function expression returns the function, so we can immediately call it:</p>
+              </div>
+            </div>
+            <pre><code class="hljs javascript" data-trim contenteditable>// Immediately Invoked Function Expression
+(function(){
+    console.log('test');
+})()
+// => writes 'test' to the console and returns undefined
+</code></pre>
+          </section>
+          <section>
+            <p class="small">We can assign the IIFE return value to a variable:</p>
+            <pre><code class="hljs javascript" data-trim contenteditable>// Expose module as global variable
+let App = (function(){
+    // Inner logic
+    function sayHello(){
+        console.log('Hello');
+    }
+    // Expose API
+    return { sayHello: sayHello }
+})();</code></pre>
+            <p class="small fragment">We can now access the module's API through the variable:</p>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>// Access module functionality
+App.sayHello();  
+// => Hello
+</code></pre>
+          </section>
+          <section>
+            <div class="columns">
+              <div class="column is-8 is-offset-2">
+                <h6>Immediately Invoked Function Expressions allow us to:</h6>
+                <p class="small fragment">- encapsulate code complexity inside IIFE so we don't have to understand what the IIFE code does</p>
+                <p class="small fragment">- define variables inside the IIFE so they don't pollute the global scope (var, let, const statements inside the IIFE remain within the IIFE's closure)</p>
+              </div>
+            </div>
+          </section>
+        </section>
         <!-- REGULAR EXPRESSIONS -->
         <!-- RESOURCES-->
         <section>
