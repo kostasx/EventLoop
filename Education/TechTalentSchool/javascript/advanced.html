@@ -682,6 +682,167 @@ App.sayHello();
           </section>
         </section>
         <!-- REGULAR EXPRESSIONS -->
+        <style>
+          .reveal table.regexp {
+              font-size: 1.5rem;
+              border: 1px solid white;
+          }                
+          .reveal table.regexp td,
+          .reveal table.regexp th {
+              border: 1px solid white;
+          }
+          .reveal table.regexp th {
+              background: orange;
+          }
+          .reveal table.regexp td {
+              background: #3b84bd;
+          }
+          
+        </style>
+        <section>
+          <section>
+            <h3>Regular Expressions</h3>
+            <h5>The Pattern Matching Syntax</h5>
+          </section>
+          <section>
+            <h6>Basic Syntax: </h6>
+            <p class="small">PATTERN: of characters defined by / ... /</p>
+            <pre><code class="hljs javascript" data-trim contenteditable>let regExp = /PATTERN/;  // Define Regular Expression</code></pre><br>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>regExp.test( "Text" );  // Tests for PATTERN inside "Text"</code></pre><br>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>regExp.exec( "Text" ); // Find PATTERN matches in "Text"</code></pre><br>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>"Text".split( regExp ); // Split 'Text' using regExp</code></pre><br>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>"Text".replace( regExp, "replacement" ); // Replace pattern in 'Text'</code></pre>
+          </section>
+          <!-- TABLE-->
+          <section>
+            <h6>PATTERNS can be:</h6>
+            <table class="regexp">
+              <thead>
+                <tr>
+                  <th>PATTERN</th>
+                  <th>MATCHES</th>
+                  <th>EXAMPLE</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>abc</td>
+                  <td>plain text characters</td>
+                  <td>'abc'</td>
+                </tr>
+                <tr>
+                  <td>[a-z]</td>
+                  <td>lowercase group</td>
+                  <td>'abcdef'</td>
+                </tr>
+                <tr>
+                  <td>\w+</td>
+                  <td>word</td>
+                  <td>'Magic'</td>
+                </tr>
+                <tr>
+                  <td>\d</td>
+                  <td>digit</td>
+                  <td>9</td>
+                </tr>
+                <tr>
+                  <td>\s</td>
+                  <td>space</td>
+                  <td>''</td>
+                </tr>
+                <tr>
+                  <td>.*</td>
+                  <td>wildcard</td>
+                  <td>'username74'</td>
+                </tr>
+                <tr>
+                  <td>+ or *</td>
+                  <td>greedy mattch</td>
+                  <td>'aaaaaa'</td>
+                </tr>
+                <tr>
+                  <td>\S</td>
+                  <td>NOT space</td>
+                  <td>'no_spaces'</td>
+                </tr>
+                <tr>
+                  <td>^, $</td>
+                  <td>Start / End of pattern</td>
+                  <td>'^Phrase$'</td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="small">More: <a target="_blank" href="https://www.w3schools.com/jsref/jsref_obj_regexp.asp"> W3Schools</a></p>
+          </section>
+          <!-- EXAMPLES-->
+          <section>
+            <h6>Examples</h6>
+            <p class="small">Open <a href="https://regex101.com/" target="_blank">regex101.com</a> or <a href="https://www.regexpal.com/" target="_blank">www.regexpal.com</a></p>
+            <pre><code class="hljs javascript" data-trim contenteditable>let regExp = /abc/;
+let match = regExp.exec ("abcd ABCD abcd" );
+console.log( match[0] );</code></pre>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>let regExp = /[a-c]/;
+match = regExp.exec ("abcd ABCD abcd" );</code></pre>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>let regExp = /[a-c]+/;
+match = regExp.exec ("abcd ABCD abcd" );</code></pre>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>let regExp = /[a-zA-Z]+/;
+match = regExp.exec ("abcd ABCD abcd" );</code></pre>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>let regExp = /[a-z0-9]+/;
+match = regExp.exec ("abcd 1234" );
+</code></pre>
+          </section>
+          <section>
+            <pre><code class="hljs javascript" data-trim contenteditable>let regExp = /\w/;
+regExp.exec ("Some words in here." );</code></pre>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>let regExp = /\w+/;
+regExp.exec ("Some words in here." );</code></pre>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>let regExp = /\d+/;
+regExp.exec ("Some digits 123456 in here." );</code></pre>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>let regExp = /\d{1,3}/;
+regExp.exec ("Some digits 123456 in here." );</code></pre>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>let regExp = /\d{1,3}/;
+regExp.exec ("Some digits 123456 in here." );</code></pre>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>let regExp = /^Some|here.$/;
+regExp.exec ("Some digits 123456 in here." );
+</code></pre>
+          </section>
+          <!-- FLAGS-->
+          <section>
+            <h6>Flags</h6>
+            <div class="columns">
+              <div class="column is-6 is-offset-3">
+                <pre><code class="hljs javascript" data-trim contenteditable>let regExp = /PATTERN/FLAGS;</code></pre>
+                <p class="small fragment">Some basic Flags can be:</p>
+                <p class="small fragment"><strong class="colorful">g:</strong> global match; find all matches rather than stopping after the first match</p>
+                <p class="small fragment"><strong class="colorful">i:</strong> ignore case; </p>
+                <p class="small fragment"><strong class="colorful">m:</strong> multiline; </p>
+                <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>let regExp = /[a-zA-Z]/gi;</code></pre>
+              </div>
+            </div>
+          </section>
+          <!-- REGEXP PROPERTIES-->
+          <section>
+            <h6>RegExp Object Properties</h6>
+            <pre><code class="hljs javascript" data-trim contenteditable>let myRegExp = /example/ig
+
+// The flags property
+console.log( myRegExp.flags ) // "gi"
+
+// The global property
+console.log( myRegExp.global ) // true
+
+// The multiline property
+console.log( myRegExp.multiline ) // false
+
+// The source property
+console.log( myRegExp.source ) // /example/
+</code></pre>
+          </section>
+          <!-- PRACTICE-->
+          <section>
+            <h3>Practice</h3><a href="https://alf.nu/RegexGolf" target="_blank">RegexGolf</a>
+          </section>
+        </section>
         <!-- RESOURCES-->
         <section>
           <h3>Resources:</h3>
@@ -691,6 +852,7 @@ App.sayHello();
             <li class="small"><a href="https://codeburst.io/es6-destructuring-the-complete-guide-7f842d08b98f">ES6 Destructuring: The Complete Guide</a></li>
             <li class="small"><a href="https://alligator.io/js/modules-es6/">ES6 Modules (alligator.io)</a></li>
             <li class="small"><a href="https://www.jvandemo.com/a-10-minute-primer-to-javascript-modules-module-formats-module-loaders-and-module-bundlers#es6moduleformat">A 10 minute primer to JavaScript modules, ... [ES6 Section]</a></li>
+            <li class="small"><a href="https://flaviocopes.com/javascript-regular-expressions/">A GUIDE TO JAVASCRIPT REGULAR EXPRESSIONS</a></li>
             <li class="small"><a target="_blank" href="https://codepen.io/kostasx/pen/NONQgL?editors=0011">Hands-on: Bitcoin Wallet</a><br><a class="bitly_link" target="_blank" href="https://bit.ly/2No4jlx"><span>https://bit.ly/<strong>2No4jlx</strong></span></a></li>
           </ul>
         </section>

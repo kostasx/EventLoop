@@ -817,7 +817,188 @@ html(lang='en')
                                 p.small.fragment - define variables inside the IIFE so they don't pollute the global scope (var, let, const statements inside the IIFE remain within the IIFE's closure)
 
                 // REGULAR EXPRESSIONS 
-                //- section
+                style.
+                    .reveal table.regexp {
+                        font-size: 1.5rem;
+                        border: 1px solid white;
+                    }                
+                    .reveal table.regexp td,
+                    .reveal table.regexp th {
+                        border: 1px solid white;
+                    }
+                    .reveal table.regexp th {
+                        background: orange;
+                    }
+                    .reveal table.regexp td {
+                        background: #3b84bd;
+                    }
+
+                section
+                    section
+                        h3 Regular Expressions
+                        h5 The Pattern Matching Syntax
+                    section
+                        h6 Basic Syntax: 
+                        p.small PATTERN: of characters defined by / ... /
+                        pre
+                            code.hljs.javascript(data-trim contenteditable).
+                                let regExp = /PATTERN/;  // Define Regular Expression
+                        br
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                regExp.test( "Text" );  // Tests for PATTERN inside "Text"
+                        br
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                regExp.exec( "Text" ); // Find PATTERN matches in "Text"
+                        br
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                "Text".split( regExp ); // Split 'Text' using regExp
+                        br
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                "Text".replace( regExp, "replacement" ); // Replace pattern in 'Text'
+                    // TABLE
+                    section
+                        h6 PATTERNS can be:
+                        table.regexp
+                            thead
+                                tr
+                                    th PATTERN
+                                    th MATCHES
+                                    th EXAMPLE
+                            tbody
+                                tr
+                                    td abc
+                                    td plain text characters
+                                    td 'abc'
+                                tr
+                                    td [a-z]
+                                    td lowercase group
+                                    td 'abcdef'
+                                tr
+                                    td \w+
+                                    td word
+                                    td 'Magic'
+                                tr
+                                    td \d
+                                    td digit
+                                    td 9
+                                tr
+                                    td \s
+                                    td space
+                                    td ''
+                                tr
+                                    td .*
+                                    td wildcard
+                                    td 'username74'
+                                tr
+                                    td + or *
+                                    td greedy mattch
+                                    td 'aaaaaa'
+                                tr
+                                    td \S
+                                    td NOT space
+                                    td 'no_spaces'
+                                tr
+                                    td ^, $
+                                    td Start / End of pattern
+                                    td '^Phrase$'
+
+                        p.small More: <a target="_blank" href="https://www.w3schools.com/jsref/jsref_obj_regexp.asp"> W3Schools</a>
+
+                    // EXAMPLES
+                    section
+                        h6 Examples
+                        p.small Open <a href="https://regex101.com/" target="_blank">regex101.com</a> or <a href="https://www.regexpal.com/" target="_blank">www.regexpal.com</a>
+
+                        pre
+                            code.hljs.javascript(data-trim contenteditable).
+                                let regExp = /abc/;
+                                let match = regExp.exec ("abcd ABCD abcd" );
+                                console.log( match[0] );
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                let regExp = /[a-c]/;
+                                match = regExp.exec ("abcd ABCD abcd" );
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                let regExp = /[a-c]+/;
+                                match = regExp.exec ("abcd ABCD abcd" );
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                let regExp = /[a-zA-Z]+/;
+                                match = regExp.exec ("abcd ABCD abcd" );
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                let regExp = /[a-z0-9]+/;
+                                match = regExp.exec ("abcd 1234" );
+
+                    section
+                        pre
+                            code.hljs.javascript(data-trim contenteditable).
+                                let regExp = /\w/;
+                                regExp.exec ("Some words in here." );
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                let regExp = /\w+/;
+                                regExp.exec ("Some words in here." );
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                let regExp = /\d+/;
+                                regExp.exec ("Some digits 123456 in here." );
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                let regExp = /\d{1,3}/;
+                                regExp.exec ("Some digits 123456 in here." );
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                let regExp = /\d{1,3}/;
+                                regExp.exec ("Some digits 123456 in here." );
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                let regExp = /^Some|here.$/;
+                                regExp.exec ("Some digits 123456 in here." );
+
+                    // FLAGS
+                    section
+                        h6 Flags
+                        .columns
+                            .column.is-6.is-offset-3
+                                pre
+                                    code.hljs.javascript(data-trim contenteditable).
+                                        let regExp = /PATTERN/FLAGS;
+                                p.small.fragment Some basic Flags can be:
+                                p.small.fragment <strong class="colorful">g:</strong> global match; find all matches rather than stopping after the first match
+                                p.small.fragment <strong class="colorful">i:</strong> ignore case; 
+                                p.small.fragment <strong class="colorful">m:</strong> multiline; 
+                                pre.fragment
+                                    code.hljs.javascript(data-trim contenteditable).
+                                        let regExp = /[a-zA-Z]/gi;
+                    // REGEXP PROPERTIES
+                    section
+                        h6 RegExp Object Properties
+                        pre
+                            code.hljs.javascript(data-trim contenteditable).
+                                let myRegExp = /example/ig
+
+                                // The flags property
+                                console.log( myRegExp.flags ) // "gi"
+
+                                // The global property
+                                console.log( myRegExp.global ) // true
+
+                                // The multiline property
+                                console.log( myRegExp.multiline ) // false
+
+                                // The source property
+                                console.log( myRegExp.source ) // /example/
+
+                    // PRACTICE
+                    section
+                        h3 Practice
+                        a(href="https://alf.nu/RegexGolf" target="_blank") RegexGolf
 
                 // RESOURCES
                 section
@@ -833,6 +1014,8 @@ html(lang='en')
                             a(href="https://alligator.io/js/modules-es6/") ES6 Modules (alligator.io)
                         li.small
                             a(href="https://www.jvandemo.com/a-10-minute-primer-to-javascript-modules-module-formats-module-loaders-and-module-bundlers#es6moduleformat") A 10 minute primer to JavaScript modules, ... [ES6 Section]
+                        li.small
+                            a(href="https://flaviocopes.com/javascript-regular-expressions/") A GUIDE TO JAVASCRIPT REGULAR EXPRESSIONS
                         li.small
                             a(target="_blank" href="https://codepen.io/kostasx/pen/NONQgL?editors=0011") Hands-on: Bitcoin Wallet
                             br
