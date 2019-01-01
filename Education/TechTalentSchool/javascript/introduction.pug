@@ -295,6 +295,7 @@ html(lang='en')
                     section
                         h6 What happens when we try to use the + or - operators on Strings and Numbers?
                     section
+                        h6 Implicit Coercion (Automatic)
                         pre
                             code.hljs.javascript(data-trim contenteditable).
                                 "2" + 2;    
@@ -329,6 +330,28 @@ html(lang='en')
                         pre.fragment
                             code.hljs.javascript(data-trim contenteditable).
                                 NaN
+                    section
+                        h6 Explicit Coercion (Manual)
+                        pre
+                            code.hljs.javascript(data-trim contenteditable).
+                                let strValue = "2";
+                                let numValue = 2;
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                Number( strValue ); 
+                                //=> 2
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                parseInt( strValue, 10 );
+                                //=> 2
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                String( numValue );
+                                //=> "2"
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                ""+2
+                                //=> "2"
 
                 // VARIABLES
                 section.svg_contain

@@ -3741,6 +3741,7 @@ can be placed like this.
             <h6>What happens when we try to use the + or - operators on Strings and Numbers?</h6>
           </section>
           <section>
+            <h6>Implicit Coercion (Automatic)</h6>
             <pre><code class="hljs javascript" data-trim contenteditable>"2" + 2;    </code></pre>
             <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>"22"    // String</code></pre>
             <div class="linebreak"></div>
@@ -3754,7 +3755,20 @@ can be placed like this.
             <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>0   // Number</code></pre>
             <div class="linebreak"></div>
             <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>"A" - 2;</code></pre>
-            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>NaN
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>NaN</code></pre>
+          </section>
+          <section>
+            <h6>Explicit Coercion (Manual)</h6>
+            <pre><code class="hljs javascript" data-trim contenteditable>let strValue = "2";
+let numValue = 2;</code></pre>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>Number( strValue ); 
+//=> 2</code></pre>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>parseInt( strValue, 10 );
+//=> 2</code></pre>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>String( numValue );
+//=> "2"</code></pre>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>""+2
+//=> "2"
 </code></pre>
           </section>
         </section>
