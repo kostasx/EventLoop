@@ -3615,7 +3615,8 @@ can be placed like this.
           </div>
         </section>
         <!-- TYPE COERCION-->
-        <section class="svg_contain"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+        <section class="svg_contain">
+          <section><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
     y="0px" width="1024px" height="768px" viewBox="0 0 1024 768" enable-background="new 0 0 1024 768" xml:space="preserve">
     <rect x="1" y="-2" fill="#0D2234" width="1023" height="769" />
     <g opacity="0.1">
@@ -3735,6 +3736,27 @@ can be placed like this.
     </g>
 </svg>
 
+          </section>
+          <section>
+            <h6>What happens when we try to use the + or - operators on Strings and Numbers?</h6>
+          </section>
+          <section>
+            <pre><code class="hljs javascript" data-trim contenteditable>"2" + 2;    </code></pre>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>"22"    // String</code></pre>
+            <div class="linebreak"></div>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>2 + "2";</code></pre>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>"22"   // String</code></pre>
+            <div class="linebreak"></div>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>"2" - 1;</code></pre>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>1   // Number</code></pre>
+            <div class="linebreak"></div>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>2 - "2";</code></pre>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>0   // Number</code></pre>
+            <div class="linebreak"></div>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>"A" - 2;</code></pre>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>NaN
+</code></pre>
+          </section>
         </section>
         <!-- VARIABLES-->
         <section class="svg_contain">

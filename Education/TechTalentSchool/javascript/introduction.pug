@@ -290,7 +290,45 @@ html(lang='en')
 
                 // TYPE COERCION
                 section.svg_contain
-                    include introduction/type-coercion.svg
+                    section
+                        include introduction/type-coercion.svg
+                    section
+                        h6 What happens when we try to use the + or - operators on Strings and Numbers?
+                    section
+                        pre
+                            code.hljs.javascript(data-trim contenteditable).
+                                "2" + 2;    
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                "22"    // String
+                        .linebreak
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                2 + "2";
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                "22"   // String
+                        .linebreak
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                "2" - 1;
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                1   // Number
+                        .linebreak
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                2 - "2";
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                0   // Number
+                        .linebreak
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                "A" - 2;
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                NaN
 
                 // VARIABLES
                 section.svg_contain
