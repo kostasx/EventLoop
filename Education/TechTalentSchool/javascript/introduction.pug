@@ -859,45 +859,69 @@ html(lang='en')
                         h3 Quick Practice?
                         a(href="https://codepen.io/kostasx/pen/YJJBrR?editors=0010" target="_blank") https://bit.ly/2FWYb5d
 
+                // PASS BY VALUE vs PASS BY REFERENCE
+                section
+                    section
+                        h3 Passing Data <strong class="colorful">by Value</strong><br/>versus<br/>Passing Data <strong class="colorful">by Reference</strong>
+                        a(href="https://www.youtube.com/watch?v=e-_mDyqm2oU" target="_blank")
+                    section
+                        .columns
+                            .column
+                                h6 <strong class="colorful">By Value</strong> 
+                                p Strings
+                                p Numbers
+                                p Booleans
+                                p null
+                                p undefined
+                                p(style="opacity:0.5") (Primitives)
+                            .column
+                                h6 <strong class="colorful">By Reference</strong>
+                                p Arrays
+                                p Objects
+                                p Functions
+                    section
+
+                        p
+                            a(href="http://www.pythontutor.com/visualize.html#code=let%20fruit%20%3D%20%22apple%22%3B%0Alet%20fruit2%20%3D%20fruit%3B%0A%0Aconsole.log%28%20%22%5Cnfruit%3A%22,%20fruit%20%29%3B%0Aconsole.log%28%20%22fruit2%3A%22,%20fruit2%20%29%3B%0A%0Afruit%20%3D%20%22orange%22%3B%0A%0Aconsole.log%28%20%22%5Cnfruit%3A%22,%20fruit%20%29%3B%0Aconsole.log%28%20%22fruit2%3A%22,%20fruit2%20%29%3B%0A%0Alet%20fruitBasket%20%3D%20%5B%20%22apples%22%20,%20%22oranges%22%20%5D%3B%0Alet%20fruitBasket2%20%3D%20fruitBasket%3B%0A%0Aconsole.log%28%20%22%5CnfruitBasket%3A%22,%20fruitBasket%20%29%3B%0Aconsole.log%28%20%22fruitBasket2%3A%22,%20fruitBasket2%20%29%3B%0A%0AfruitBasket%5B0%5D%20%3D%20%22bananas%22%3B%0A%0Aconsole.log%28%20%22%5CnfruitBasket%3A%22,%20fruitBasket%20%29%3B%0Aconsole.log%28%20%22fruitBasket2%3A%22,%20fruitBasket2%20%29%3B%0A%0Alet%20person%20%3D%20%7B%20name%3A%20%22John%22%20%7D%0Alet%20anotherPerson%20%3D%20person%3B%0AanotherPerson.name%20%3D%20%22Jane%22%3B%0A%0Aconsole.log%28%20%22%5CanotherPerson%3A%22,%20anotherPerson%20%29%3B%0Aconsole.log%28%20%22person%3A%22,%20person%20%29%3B%0A&cumulative=false&curInstr=19&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank") Visualization
+
+                        <iframe width="800" height="500" frameborder="0" src="http://pythontutor.com/iframe-embed.html#code=let%20fruit%20%3D%20%22apple%22%3B%0Alet%20fruit2%20%3D%20fruit%3B%0A%0Aconsole.log%28%20%22%5Cnfruit%3A%22,%20fruit%20%29%3B%0Aconsole.log%28%20%22fruit2%3A%22,%20fruit2%20%29%3B%0A%0Afruit%20%3D%20%22orange%22%3B%0A%0Aconsole.log%28%20%22%5Cnfruit%3A%22,%20fruit%20%29%3B%0Aconsole.log%28%20%22fruit2%3A%22,%20fruit2%20%29%3B%0A%0Alet%20fruitBasket%20%3D%20%5B%20%22apples%22%20,%20%22oranges%22%20%5D%3B%0Alet%20fruitBasket2%20%3D%20fruitBasket%3B%0A%0Aconsole.log%28%20%22%5CnfruitBasket%3A%22,%20fruitBasket%20%29%3B%0Aconsole.log%28%20%22fruitBasket2%3A%22,%20fruitBasket2%20%29%3B%0A%0AfruitBasket%5B0%5D%20%3D%20%22bananas%22%3B%0A%0Aconsole.log%28%20%22%5CnfruitBasket%3A%22,%20fruitBasket%20%29%3B%0Aconsole.log%28%20%22fruitBasket2%3A%22,%20fruitBasket2%20%29%3B%0A%0Alet%20person%20%3D%20%7B%20name%3A%20%22John%22%20%7D%0Alet%20anotherPerson%20%3D%20person%3B%0AanotherPerson.name%20%3D%20%22Jane%22%3B%0A%0Aconsole.log%28%20%22%5CanotherPerson%3A%22,%20anotherPerson%20%29%3B%0Aconsole.log%28%20%22person%3A%22,%20person%20%29%3B%0A&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+
+                    section
+                        h6 Resources on Value Types &amp; Reference Types
+                        p 
+                            a(href="https://www.youtube.com/watch?v=e-_mDyqm2oU" target="_blank") Value Types and Reference Types in JavaScript
+
                 // RESOURCES
                 section
-                    <h3>Resources</h3>
+                    h3 Resources
                     .columns
                         .column.is-8.is-offset-2
-                            <ul style="font-size: 28px;">
-                                <li>
-                                    <a href="https://jgthms.com/javascript-in-14-minutes/">JavaScript in 14 minutes</a>
-                                </li>
-                                <li>
-                                    <a href="https://www.javascript.com/">READY TO TRY JavaScript?</a>
-                                </li>
-                                <li>
-                                    <a href="http://jsforcats.com/">JavaScript for Cats: An introduction for new programmers</a>
-                                </li>
-                                <li>
+                            ul(style="font-size: 28px;")
+                                li
+                                    a( href="https://jgthms.com/javascript-in-14-minutes/") JavaScript in 14 minutes
+                                li
+                                    a( href="https://www.javascript.com/" ) READY TO TRY JavaScript?
+                                li
+                                    a( href="http://jsforcats.com/" ) JavaScript for Cats: An introduction for new programmers
+                                li
+                                    a( href="https://wsvincent.com/javascript-guide/" ) JavaScript Guide by William S. Vincent
+                                li
                                     <a href="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch1.md">You Don't Know JS - Up &amp; Going | Into Programming</a>
-                                </li>
-                                <li>
+                                li
                                     <a href="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch2.md">You Don't Know JS - Up &amp; Going | Into JavaScript</a>
-                                </li>
-                                <li>
+                                li
                                     <a href="https://scrimba.com/g/gintrotojavascript">Scrimba: Introduction to JavaScript</a>
-                                </li>
-                                <li>
+                                li
                                     <a href="https://javascript.info/first-steps">JavaScript.info: JavaScript Fundamentals</a>
-                                </li>
-                                <li>
+                                li
                                     <a href="https://www.w3schools.com/js/default.asp">W3Schools: JavaScript</a>
-                                </li>
-                                <li>
+                                li
                                     <a href="https://www.codecademy.com/learn/introduction-to-javascript">Introduction to JavaScript: Learn
                                         JavaScript fundamentals and build interactive websites and pages.</a>
-                                </li>
-                            </ul>
 
                 // EXERCISES 
                 section
-                    <h3>Exercises & Practice Material:</h3>
+                    h3 Exercises &amp; Practice Material:
                     .columns
                         .column.is-8.is-offset-2
                             ul
@@ -905,6 +929,12 @@ html(lang='en')
                                     <a href="https://www.w3schools.com/js/js_examples.asp">W3Schools: JavaScript by Example</a>
                                 li
                                     <a href="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_variables1">W3Schools: JavaScript Exercises</a>
+
+                // BEING A DEVELOPER
+                section(data-background="#000")
+                    h3 And remember...
+                    img.fragment(src="./images/being-a-developer.jpg")
+
 
                 // TTS | OUTRO 
                 section#tts-outro.tts-title(data-state='outro')
