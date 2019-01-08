@@ -15,8 +15,12 @@
 ### What can you build with JavaScript?
 
 - [Dynamic HTML Pages](https://www.w3schools.com/js/)
-- [Web Applications: Photoshop Clone](https://www.photopea.com/) 
-- [Desktop Applications](https://electronjs.org/)
+- Web Applications:
+    - [Photopea: A Photoshop Clone](https://www.photopea.com/) 
+- Desktop Applications (Using [Electron.JS](https://electronjs.org/))
+    - [Skype](https://www.skype.com/en/)
+    - [Slack](https://slack.com/)
+    - [Visual Studio Code](https://code.visualstudio.com/)
 - [Mobile Apps](https://facebook.github.io/react-native/)
 - [Server Applications](https://nodejs.org/en/)
 - [Command Line Tools](https://developer.atlassian.com/blog/2015/11/scripting-with-node/)
