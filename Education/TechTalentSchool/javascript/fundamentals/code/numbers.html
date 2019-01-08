@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Numbers</title>
+</head>
+<body>
+
+    <h1>Numbers</h1>
+    <p>Press F12 to display the console and inspect the JS code.</p>
+
+    <script>
+
+        let integer = 10;
+        let float = 3.14;
+
+        console.log( "integer:", integer );
+        console.log( "float:", float );
+
+        console.log( "typeof integer:", typeof integer );
+        console.log( "typeof float:", typeof float );
+
+        // Number to String
+        let str = String( integer );
+        console.log( "str:", str );
+        console.log( "typeof str:", typeof str );
+
+        // String to Number using Number()
+        console.log( Number( str ) );
+        console.log( typeof Number( str ) );
+
+        // String to Number using parseInt()
+        console.log( parseInt( str, 10 ) );
+        console.log( typeof parseInt( str, 10 ) );
+
+        // Differences between Number() and parseInt()
+        console.log( Number( "2a" ) );    // NaN
+        console.log( Number( "a2" ) );    // NaN
+        console.log( Number( "  2  " ) ); // 2
+
+        console.log( parseInt( "2a" ) );    // 2
+        console.log( parseInt( "a2" ) );    // NaN
+        console.log( parseInt( "  2  " ) ); // 2
+
+    </script>
+</body>
+</html>
