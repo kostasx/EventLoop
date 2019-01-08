@@ -1,5 +1,7 @@
 # JAVASCRIPT FUNDAMENTALS
 
+[Slides](https://kostasx.github.io/EventLoop/Education/TechTalentSchool/javascript/introduction.html#/tts-intro)
+
 <details>
 
 <summary>JavaScript Day 01</summary>
