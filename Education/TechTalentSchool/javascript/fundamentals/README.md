@@ -1,14 +1,12 @@
 # JAVASCRIPT FUNDAMENTALS
 
-<a href="https://kostasx.github.io/EventLoop/Education/TechTalentSchool/javascript/introduction.html#/tts-intro" target="_blank">Slides</a>
+#### Slides: <a href="https://kostasx.github.io/EventLoop/Education/TechTalentSchool/javascript/introduction.html#/tts-intro" target="_blank">(click to open)</a>
 
-### Searching for JavaScript:
+#### Searching for JavaScript:
 
-**W3Schools:**<br/>
-Google for: `w3schools js alert`
+**W3Schools:** => Google for: `w3schools js alert`, `w3schools js String`, etc.
 
-**MDN JS:**<br/>
-Google for: `mdn js alert`
+**MDN JS:** => Google for: `mdn js alert`, `mdn js String`, etc.
 
 <details>
 
