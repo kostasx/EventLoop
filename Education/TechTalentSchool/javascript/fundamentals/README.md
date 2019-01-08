@@ -33,6 +33,14 @@
 - [Numbers](./code/numbers.html)
 - [typeof Operator](./code/typeof.html)
 
+### QUESTIONS
+
+_How do we clear the console?_
+
+- Click the `Clear Console` Button
+- Press `Ctrl + L`
+- Write `console.clear();`
+
 </details>
 
 ### RESOURCES
