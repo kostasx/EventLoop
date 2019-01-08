@@ -51,4 +51,5 @@ _How do we clear the console?_
 
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Live Server extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+- [JavaScript Tutorial](http://www.javascripttutorial.net/)
 - [The JavaScript Handbook, by Flavio Copes](https://flaviocopes.com/page/ebooks/)
