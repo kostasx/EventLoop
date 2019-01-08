@@ -1,6 +1,6 @@
 # JAVASCRIPT FUNDAMENTALS
 
-[Slides](https://kostasx.github.io/EventLoop/Education/TechTalentSchool/javascript/introduction.html#/tts-intro)
+<a href="https://kostasx.github.io/EventLoop/Education/TechTalentSchool/javascript/introduction.html#/tts-intro" target="_blank">Slides</a>
 
 <details>
 
