@@ -9,14 +9,27 @@
 <body>
 
     <h1>Hello World in JavaScript!</h1>
+    <p>Press F12 to display the console and inspect the JS code.</p>
+
     <script>
+
         // Display an alert message
-        // alert( "Hello World!" );
+        alert( "Hello from alert()!" );
 
         // Display a message to the console (F12)
-        console.log( "Hello from console" );
+        console.log( "Hello from console!" );
+
+        // Display HTML using document.write()
+        document.write( "Hello from document.write()" );
+        document.write( "<br/>" );
+
+        // Display HTML using a TextNode
+        document.body.appendChild( document.createTextNode("Hello from a TextNode!") );
+
     </script>
+
+    <!-- Load and execute an External JavaScript File: -->
     <script src="hello.js"></script>
-    
+
 </body>
 </html>
