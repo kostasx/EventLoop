@@ -114,4 +114,5 @@ References:
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Live Server extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
 - [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS)
+- [JavaScript Tutorial](http://www.javascripttutorial.net/)
 - [The JavaScript Handbook, by Flavio Copes](https://flaviocopes.com/page/ebooks/)
