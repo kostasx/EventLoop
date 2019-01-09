@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arrays</title>
+</head>
+<body>
+
+    <h1>Arrays</h1>
+    
+    <script>
+        // Declare an Array:
+        let personal = [ "Kostas", "Minaidis", "Instructor" ];
+
+        console.log( personal );
+
+        // Accessing Array elements:
+        console.log( "Name:" + personal[0] );           // "Kostas"
+        console.log( "Surname:" + personal[1] );        // "Minaidis"
+        console.log( "Occupation:" + personal[2] );     // "Instructor"
+        console.log( personal[3] );                     // undefined
+        // console.log( personal[0], personal[1], personal[3] ); // Console log multiple values
+
+        document.write( personal[0] );  // Write to the document
+        document.write( "<br/> Length:" + personal.length );
+
+        // Add a number at the end of the personal Array:
+        personal.push( 100 );
+        // Add two booleans at the end of personal Array:
+        personal.push( true, false );
+        document.write( "<br/>" + personal );
+        document.write( "<br/> Length:" + personal.length );
+
+        // Remove an element from the end of the Array with pop():
+        personal.pop();
+        document.write( "<br/> pop():" + personal );
+        document.write( "<br/> Length:" + personal.length );
+        personal.pop();
+        personal.pop();
+        document.write( "<br/> pop() twice:" + personal );
+        document.write( "<br/> Length:" + personal.length );
+
+        // Add an element at the start of the Array
+        personal.unshift("Garbage");
+        document.write( "<br/> unshift():" + personal );
+        document.write( "<br/> Length:" + personal.length );
+        personal.shift();
+        document.write( "<br/> After shift():" + personal );
+        document.write( "<br/> Length:" + personal.length );
+
+    </script>
+
+</body>
+</html>
