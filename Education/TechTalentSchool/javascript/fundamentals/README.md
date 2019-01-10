@@ -96,10 +96,14 @@ Using the '\n' escape character.
     - When you want to tweak CSS styling before the body is rendered via a script.
 
 <br/>
-References:
+References:<br/>
+
 - [What is the difference between placing <script> in head and before </body>?](https://www.reddit.com/r/javascript/comments/5di1va/what_is_the_difference_between_placing_script_in/)
+
 - [Where to place JavaScript in an HTML file?](https://stackoverflow.com/questions/196702/where-to-place-javascript-in-an-html-file)
+
 - [Should I write script in the body or the head of the html? [duplicate]](https://stackoverflow.com/questions/3531314/should-i-write-script-in-the-body-or-the-head-of-the-html)
+
 - [When to use the <script> tag in the head and body section of a html page? ](https://stackoverflow.com/questions/38407962/when-to-use-the-script-tag-in-the-head-and-body-section-of-a-html-page?noredirect=1&lq=1)
 
 ### REFERENCES
@@ -109,7 +113,7 @@ References:
 
 </details>
 
-<details open>
+<details>
 
 <summary>JavaScript Day 03</summary>
 
