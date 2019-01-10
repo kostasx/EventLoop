@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Functions</title>
+</head>
+<body>
+    <h1>Functions</h1>
+    <script>
+        // Display some custom data to the HTML document:
+        function showMessage( data ){
+
+            // When type of data is "string"
+            if ( typeof data === "string" ){
+
+                data = data.toUpperCase();
+                document.write( "<p>" + data + "</p>" );
+
+            // When type of data is not string, e.g. "undefined", "number", etc.
+            } else {
+
+                document.write(
+
+                    "<p style='color:tomato'>WARNING: Expecting String as input</p>"
+
+                );
+            }
+
+            // EXERCISE: Add a condition that checks for typeof data is equal 
+            // to number, and if so converts the data to a string using the
+            // String( variable ) and displays it on the page.
+        }
+
+        showMessage( "Kostas" );
+        showMessage( "Minaidis" );
+        showMessage( "Instructor" );
+        showMessage();
+        showMessage( 42 );
+        showMessage("End of code");
+
+        // Create a function that adds two numbers and returns them:
+        const addNumbers = function( numA, numB ){
+
+            return numA + numB;
+
+        }
+
+        // Alternative Syntax (behaves almost identically)
+        // function addNumbers( numA, numB ){ return numA + numB; }
+
+        let result = addNumbers( 10, 5 ); // numA === 10, numB === 5
+        document.write( "10 + 5 = " + result ); // Concatenate & display the result
+
+        // EXERCISE: Add a conditional that checks for type number on the two parameters (Hint: use the logical AND operator) and returns NaN in all other cases
+
+    </script>
+    
+</body>
+</html>
