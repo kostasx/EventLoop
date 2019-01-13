@@ -179,6 +179,12 @@ html(lang='en')
 
                                 p.small.fragment "In fact, the <code>for loop</code> isn't started until the JavaScript engine figures out that <code>doSomething()</code> is defined and can execute the call."
                     section
+                        h6 Best Practices
+                        ul
+                            li Place your variable and function declarations at the top section of the scope in which they are declared
+                            li Place value assignments to variables before accessing them
+
+                    section
                         h6 CodePen Examples:
                         p
                             a(target="_blank" href="https://codepen.io/kostasx/pen/jXOzGX?editors=0011") Variable Hoisting: https://bit.ly/2GaIZBu
@@ -436,6 +442,9 @@ html(lang='en')
                         pre.fragment
                             code.hljs(data-trim contenteditable).
                                 [ 4, 3, 2, 1 ]
+
+                        p.fragment.small
+                            a(href="http://www.pythontutor.com/javascript.html#code=let%20numbers%20%3D%20%5B%201,%202,%203,%204%20%5D%3B%0Alet%20reversedNumbers%20%3D%20numbers.slice%28%29%3B%0AreversedNumbers.reverse%28%29%3B%0Aconsole.log%28%20numbers%20%29%3B%0Aconsole.log%28%20reversedNumbers%20%29%3B&curInstr=0&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D" target="_blank") Visualisation
 
                     // concat() 
                     section
