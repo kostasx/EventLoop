@@ -8,7 +8,7 @@
 
 **MDN JS:** => Google for: `mdn js alert`, `mdn js String`, etc.
 
-<details open>
+<details>
 
 <summary>JavaScript Intermediate Day 01</summary>
 
@@ -55,6 +55,37 @@
 
 </details>
 
+<details>
+
+<summary>JavaScript Intermediate Day 02</summary>
+
+### CODE
+
+- [Array Methods](./code/array-methods.html)
+- [Array Methods: map()](./code/array-map.html)
+- [Array Methods: map() - Extras](./code/array-map-extras.html)
+- [Array Methods: reduce()](./code/array-reduce.html)
+- [Array Methods: Chaining](./code/array-chaining.html)
+- ["DOM Manipulation"](./code/dom.html)
+
+
+
+### REFERENCES
+
+- [Altering the DOM with JavaScript](https://zellwk.com/blog/js-in-dom/)
+- [DOM and Layout Trees](https://github.com/leonardomso/33-js-concepts#13-dom-and-layout-trees)
+
+</details>
+
+<details>
+
+<summary>JavaScript Intermediate Day 03</summary>
+
+### CODE
+
+- [Event Listener](./code/eventlistener.html)
+
+</details>
 
 ### RESOURCES | TOOLS
 
