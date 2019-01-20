@@ -55,7 +55,7 @@
 
 </details>
 
-<details open>
+<details>
 
 <summary>JavaScript Intermediate Day 02</summary>
 
@@ -77,7 +77,7 @@
 
 </details>
 
-<details open>
+<details>
 
 <summary>JavaScript Intermediate Day 03</summary>
 
