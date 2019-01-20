@@ -18,6 +18,9 @@ html(lang='en')
         link(rel='stylesheet' href='../libs/reveal.js/lib/css/monokai-sublime-sha.css')
         link(rel='stylesheet' href='../css/reveal-overrides.css')
         link(rel='stylesheet' href='../css/reveal-tts.css')
+
+        script(defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js" integrity="sha384-EIHISlAOj4zgYieurP0SdoiBYfGJKkgWedPHH4jCzpCXLmzVsw1ouK59MuUtP4a1" crossorigin="anonymous")
+
         style.
             a.full-anchor {
                 position: fixed;
@@ -159,7 +162,8 @@ html(lang='en')
                         p.
                             "Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their scope before code execution."
                         .linebreak
-                        h6.fragment.colorful(style="font-weight: 400;") "Of note however, is the fact that the hoisting mechanism only moves the declaration. The assignments are left in place."
+                        i.fragment.fas.fa-exclamation-triangle.colorful-svg(style="margin-bottom:20px")
+                        h6.fragment.colorful(style="font-weight: 400;") "Of note however, is the fact that the hoisting mechanism only moves the <strong>declaration</strong>. The assignments are left in place."
                     section
                         pre
                             code.hljs.javascript(data-trim contenteditable).
@@ -304,7 +308,7 @@ html(lang='en')
                         <h3>Array<strong class="colorful">.sort()</strong></h3>
 
                         <p>
-                            <small>Sorts an Array alphabetically using the ordered <a href="https://raw.githubusercontent.com/wiki/tomgibara/ascii-table/tables/ascii-table-1.1.png" target="_blank">ASCII character table</a><br/>or a custom sorting function. Works on a character-by-character basis.
+                            <small>Sorts an Array lexicographically using the ordered <a href="https://unicode-table.com/en/" target="_blank">Unicode character table</a><br/>or a custom sorting function. Works on a character-by-character basis.
                             </small>
                         </p>
 
@@ -368,46 +372,51 @@ html(lang='en')
                         p.fragment.small
                             a(href="https://youtu.be/MWD-iKzR2c8?t=171" target="_blank") Watch: Coding Train - Custom sorting function for Array sort()
 
+                    // slice() INTRO
+                    section
+
+                        h3 Let's slice some Arrays!
+                        img(src="./intermediate/pizza-slice.png", alt="")
+
                     // slice()
                     section
 
-                        <h3>Array<strong class="colorful">.slice( start, until )</strong></h3>
+                        h3 Array<strong class="colorful">.slice( start, until )</strong>
 
                         <p class="fragment"><small>Returns a portion of the Array beginning at the <strong class="colorful">start</strong> index<br/>up to (but not including) the <strong class="colorful">until</strong> index.</small></p>
 
                         pre.fragment
-                            code.hljs(data-trim contenteditable).
+                            code.hljs.javascript(data-trim contenteditable).
                                 let animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
                                 // Index -->     0       1        2        3         4
 
                         pre.fragment
-                            code.hljs(data-trim contenteditable).
-                                console.log(animals.slice(2, 4));
+                            code.hljs.javascript(data-trim contenteditable).
+                                console.log( animals.slice( 2, 4 ) );
 
                         pre.fragment
-                            code.hljs(data-trim contenteditable).
-                                ["camel", "duck"]
+                            code.hljs.javascript(data-trim contenteditable).
+                                [ "camel", "duck" ]
 
                         pre.fragment
-                            code.hljs(data-trim contenteditable).
-                                console.log(animals.slice(1, 5));
+                            code.hljs.javascript(data-trim contenteditable).
+                                console.log( animals.slice( 1, 5 ) );
 
                         pre.fragment
-                            code.hljs(data-trim contenteditable).
-                                ["bison", "camel", "duck", "elephant"]
+                            code.hljs.javascript(data-trim contenteditable).
+                                [ "bison", "camel", "duck", "elephant" ]
 
-                        <p class="fragment">
+                        p.fragment
                             <small>If the second parameter (<strong class="colorful">until</strong>) is omitted, slice extracts through the end of the Array.
                             </small>
-                        </p>
 
                         pre.fragment
-                            code.hljs(data-trim contenteditable).
-                                console.log(animals.slice(2));
+                            code.hljs.javascript(data-trim contenteditable).
+                                console.log( animals.slice( 2 ) );
 
                         pre.fragment
-                            code.hljs(data-trim contenteditable).
-                                ["camel", "duck", "elephant"]
+                            code.hljs.javascript(data-trim contenteditable).
+                                [ "camel", "duck", "elephant" ]
 
                     // slice() tip : clone an Array 
                     section
@@ -479,60 +488,77 @@ html(lang='en')
                         <small>Removes or adds elements to an Array, and returns the removed/added elements.</small>
 
                         pre.fragment
-                            code.hljs(data-trim contenteditable).
+                            code.hljs.javascript(data-trim contenteditable).
                                 let animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
                                 // Index -->     0       1        2        3         4
         
-                        <small class="fragment">Remove 1 element from index 3</small>
+                        .linebreak
+                        small.fragment Remove 1 element from index 3
         
                         pre.fragment
-                            code.hljs(data-trim contenteditable).
+                            code.hljs.javascript(data-trim contenteditable).
                                 let duck = animals.splice( 3, 1 );
 
                         pre.fragment
-                            code.hljs(data-trim contenteditable).
+                            code.hljs.javascript(data-trim contenteditable).
+                                console.log( duck );
+
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                "duck"
+
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                // animals:
                                              [ 'ant', 'bison', 'camel', 'elephant' ]
                                 // Index -->     0       1        2          3
 
-                        <small class="fragment">Remove 2 elements from index 1</small>
+                        .linebreak
+                        small.fragment Remove 2 elements from index 1
 
                         pre.fragment
-                            code.hljs(data-trim contenteditable).
+                            code.hljs.javascript(data-trim contenteditable).
                                 let bisonAndCamel = animals.splice( 1, 2 );
 
                         pre.fragment
-                            code.hljs(data-trim contenteditable).
-                                [ 'ant', 'elephant' ] // animals
+                            code.hljs.javascript(data-trim contenteditable).
+                                // animals:
+
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                [ 'ant', 'elephant' ]
 
                     // splice() #02 
                     section
 
-                        <h3>Array<strong class="colorful">.splice( start, deleteCount )</strong></h3>
+                        h3 Array<strong class="colorful">.splice( start, deleteCount )</strong>
 
                         pre
-                            code.hljs(data-trim contenteditable).
+                            code.hljs.javascript(data-trim contenteditable).
                                 let animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
                                 // Index -->     0       1        2        3         4
 
-                        <small class="fragment">Remove 1 element from index 2, and insert 'monkey'</small>
+                        .linebreak
+                        small.fragment Remove 1 element from index 2, and insert 'monkey'
 
                         pre.fragment
-                            code.hljs(data-trim contenteditable).
-                                animals.splice( 2, 1, 'monkey');
+                            code.hljs.javascript(data-trim contenteditable).
+                                animals.splice( 2, 1, 'monkey' );
 
                         pre.fragment
-                            code.hljs(data-trim contenteditable).
+                            code.hljs.javascript(data-trim contenteditable).
                                             [ 'ant', 'bison', 'monkey', 'duck', 'elephant' ]
                                 //--> Index     0       1        2         3          4
 
-                        <small class="fragment">Insert 1 element at index 3</small>
+                        .linebreak
+                        small.fragment Insert 1 element at index 3
 
                         pre.fragment
-                            code.hljs(data-trim contenteditable).
-                                animals.splice(3,0,'gorilla');
+                            code.hljs.javascript(data-trim contenteditable).
+                                animals.splice( 3, 0, 'gorilla' );
 
                         pre.fragment
-                            code.hljs(data-trim contenteditable).
+                            code.hljs.javascript(data-trim contenteditable).
                                 [ 'ant', 'bison', 'monkey', 'gorilla', 'duck', 'elephant' ]
 
                         <a style="font-size:0.6em" class="fragment" target="_blank" href="https://codepen.io/kostasx/pen/OvBjaY">A Visual Guide to Array.prototype.splice</a>
@@ -540,30 +566,30 @@ html(lang='en')
                     // map() 
                     section
 
-                        <h3>Array<strong class="colorful">.map()</strong></h3>
+                        h3 Array<strong class="colorful">.map()</strong>
 
-                        <p><small>Creates a new array with the results of calling a provided function<br/>on every element in the calling array.</small></p>
+                        p <small>Creates a new array with the results of calling a provided function<br/>on every element in the calling array.</small>
 
                         pre.fragment.fade-up
-                            code.hljs(data-trim contenteditable).
+                            code.hljs.javascript(data-trim contenteditable).
                                 let numbers = [ 2, 4, 8 ];
 
                         pre.fragment.fade-up
-                            code.hljs(data-trim contenteditable).
+                            code.hljs.javascript(data-trim contenteditable).
                                 let modify = function( element ){
                                     return element * element;
                                 } 
 
                         pre.fragment.fade-up
-                            code.hljs(data-trim contenteditable).
+                            code.hljs.javascript(data-trim contenteditable).
                                 let squares = numbers.map( modify );
 
                         pre.fragment.fade-up
-                            code.hljs(data-trim contenteditable).
+                            code.hljs.javascript(data-trim contenteditable).
                                 console.log( squares );
 
                         pre.fragment.fade-up
-                            code.hljs(data-trim contenteditable).
+                            code.hljs.javascript(data-trim contenteditable).
                                 [ 4, 16, 64 ]
 
                     // map() (Under the Hood)
@@ -573,7 +599,7 @@ html(lang='en')
                             small Array.map() Under the hood...
 
                         pre.fragment.fade-up
-                            code.hljs(data-trim contenteditable).
+                            code.hljs.javascript(data-trim contenteditable).
 
                                 let numbers = [ 2, 4, 8 ];
                                 function modify( element ){
@@ -607,10 +633,10 @@ html(lang='en')
                     // .forEach() 
                     section
 
-                        <h3>Array<strong class="colorful">.forEach( test )</strong></h3>
+                        h3 Array<strong class="colorful">.forEach( test )</strong>
 
                         pre
-                            code.hljs(data-trim contenteditable).
+                            code.hljs.javascript(data-trim contenteditable).
                                 let numbers = [ 2, 4, 8 ];
                                 function modify( element ){
                                     return element * element;
@@ -621,8 +647,9 @@ html(lang='en')
                     // filter() 
                     section
 
-                        <h3>Array<strong class="colorful">.filter( test)</strong></h3>
-                        <p><small>Runs the custom <strong class="colorful">test</strong> function for all Array elements.<br/>Creates a new Array with all the elements that passed the test function.</small></p>
+                        h3 Array<strong class="colorful">.filter( test)</strong>
+
+                        p <small>Runs the custom <strong class="colorful">test</strong> function for all Array elements.<br/>Creates a new Array with all the elements that passed the test function.</small>
 
                         pre.fragment.fade-up
                             code.hljs(data-trim contenteditable).
@@ -655,7 +682,7 @@ html(lang='en')
                     section
 
                         pre
-                            code.hljs(data-trim contenteditable).
+                            code.hljs.javascript(data-trim contenteditable).
 
                                 let ages = [ 15, 22, 44, 11 ];
                                 function isAdult( age ){ 
@@ -668,38 +695,38 @@ html(lang='en')
                                 [ <strong class="colorful">15</strong>, 22, 44, 11 ]
                             br
                             small
-                                <span class="fragment">test( <strong class="colorful">15</strong> );</span> <span class="fragment"> <span class="hljs-comment">--></span> ( 15 > 18 ) </span><span class="fragment"> <span class="hljs-comment">--></span> false </span><span class="fragment"> <span class="hljs-comment">--></span> <span class="hljs-title">[ ]</span></span>
+                                <span class="fragment">isAdult( <strong class="colorful">15</strong> );</span> <span class="fragment"> <span class="hljs-comment">--></span> ( 15 > 18 ) </span><span class="fragment"> <span class="hljs-comment">--></span> false </span><span class="fragment"> <span class="hljs-comment">--></span> <span class="hljs-title">[ ]</span></span>
 
                         p.fragment(style="margin:0")
                             small.
                                 [ 15, <strong class="colorful">22</strong>, 44, 11 ]
                             br
                             small
-                                <span class="fragment">test( <strong class="colorful">22</strong> );</span> <span class="fragment"> <span class="hljs-comment">--></span> ( 22 > 18 ) </span><span class="fragment"> <span class="hljs-comment">--></span> true </span><span class="fragment"> <span class="hljs-comment">--></span> <span class="hljs-title">[ 22 ]</span></span>
+                                <span class="fragment">isAdult( <strong class="colorful">22</strong> );</span> <span class="fragment"> <span class="hljs-comment">--></span> ( 22 > 18 ) </span><span class="fragment"> <span class="hljs-comment">--></span> true </span><span class="fragment"> <span class="hljs-comment">--></span> <span class="hljs-title">[ 22 ]</span></span>
 
                         p.fragment(style="margin:0")
                             small.
                                 [ 15, 22, <strong class="colorful">44</strong>, 11 ]
                             br
                             small
-                                <span class="fragment">test( <strong class="colorful">44</strong> );</span> <span class="fragment"> <span class="hljs-comment">--></span> ( 44 > 18 ) </span><span class="fragment"> <span class="hljs-comment">--></span> true </span><span class="fragment"> <span class="hljs-comment">--></span> <span class="hljs-title">[ 22, 44 ]</span></span>
+                                <span class="fragment">isAdult( <strong class="colorful">44</strong> );</span> <span class="fragment"> <span class="hljs-comment">--></span> ( 44 > 18 ) </span><span class="fragment"> <span class="hljs-comment">--></span> true </span><span class="fragment"> <span class="hljs-comment">--></span> <span class="hljs-title">[ 22, 44 ]</span></span>
 
                         p.fragment(style="margin:0")
                             small.
                                 [ 15, 22, 44, <strong class="colorful">11</strong> ]
                             br
                             small
-                                <span class="fragment">test( <strong class="colorful">11</strong> );</span> <span class="fragment"> <span class="hljs-comment">--></span> ( 11 > 18 ) </span><span class="fragment"> <span class="hljs-comment">--></span> false </span><span class="fragment"> <span class="hljs-comment">--></span> <span class="hljs-title">[ 22, 44 ]</span></span>
+                                <span class="fragment">isAdult( <strong class="colorful">11</strong> );</span> <span class="fragment"> <span class="hljs-comment">--></span> ( 11 > 18 ) </span><span class="fragment"> <span class="hljs-comment">--></span> false </span><span class="fragment"> <span class="hljs-comment">--></span> <span class="hljs-title">[ 22, 44 ]</span></span>
 
                     // reduce()
                     section
 
-                        <h3>Array<strong class="colorful">.reduce()</strong></h3>
+                        h3 Array<strong class="colorful">.reduce()</strong>
 
-                        <p><small>Goes through each element, runs a function and returns an accumulator.</small></p>
+                        p <small>Goes through each element, runs a function and returns an accumulator.</small>
 
                         pre
-                            code.hljs(data-trim contenteditable).
+                            code.hljs.javascript(data-trim contenteditable).
                                 let numbers = [ 12, 8, 10, 5, 5 ];
                                 let sum = function( accumulator, currentValue ){
 
@@ -712,10 +739,9 @@ html(lang='en')
 
                     // Chaining
                     section
-                        <h3>Quick mention: Chaining</h3>
-                        <p class="small"><span>CodePen</span>	
+                        h3 Quick mention: Chaining
+                        p.small <span>CodePen</span>	
                             <a target="_blank" href="https://codepen.io/kostasx/pen/zmrrdo?editors=0012">https://bit.ly/2RhnZL7</a>
-                        </p>
 
                 // YouTube: (map) https://www.youtube.com/watch?v=bCqtb-Z5YGQ
                 // YouTube: (reduce) https://www.youtube.com/watch?v=Wl98eZpkp-c
@@ -857,15 +883,15 @@ html(lang='en')
                         h2 Meet the "family"
                         pre
                             code.hljs.javascript(data-trim contenteditable).
-                                const el = document.querySelector('.container');
+                                const $el = document.querySelector('.container');
 
-                                el.parentNode;
-                                el.children;
-                                el.children.length;
-                                el.firstElementChild;
-                                el.lastElementChild;
-                                el.previousElementSibling;
-                                el.nextElementSibling;
+                                $el.parentNode;
+                                $el.children;
+                                $el.children.length;
+                                $el.firstElementChild;
+                                $el.lastElementChild;
+                                $el.previousElementSibling;
+                                $el.nextElementSibling;
 
                     // Modifying DOM Elements
                     section
@@ -875,12 +901,12 @@ html(lang='en')
                         pre
                             code.hljs.javascript(data-trim contenteditable).
 
-                                const title = document.querySelector('h1');
-                                const img = document.querySelector('.img');
+                                const $title = document.querySelector('h1');
+                                const $img = document.querySelector('.img');
 
-                                title.id = 'my-ID';
-                                title.innerHTML = 'Hi all!';
-                                img.setAttribute("alt", "My image");
+                                $title.id = 'my-ID';
+                                $title.innerHTML = 'Hi all!';
+                                $img.setAttribute("alt", "My image");
 
                     // Modifying innerHTML
                     section
@@ -907,16 +933,18 @@ html(lang='en')
 
                     // Modifying CSS Classes
                     section
-                      <h2>Modifying HTML classes</h2>
 
+                        h2 Modifying HTML classes
                         pre
                             code.hljs.javascript(data-trim contenteditable).
 
-                                const el = document.querySelector('h1');
+                                const $el = document.querySelector( 'h1' );
 
-                                el.classList.add('myClass');
-                                el.classList.remove('myClass');
-                                el.classList.toggle('myClass');
+                                $el.classList.add( 'myClass' );
+
+                                $el.classList.remove( 'myClass' );
+
+                                $el.classList.toggle( 'myClass' );
 
                     // Create and Append
                     section
@@ -927,11 +955,11 @@ html(lang='en')
                         pre
                             code.hljs.javascript(data-trim contenteditable).
 
-                                const Paragraph = document.createElement('p');
+                                const $paragraph = document.createElement( 'p' );
 
-                                Paragraph.innerHTML = "Hello world!";
+                                $paragraph.innerHTML = "Hello world!";
 
-                                document.body.appendChild(Paragraph);
+                                document.body.appendChild( $paragraph );
 
                     // Create and insertBefore 
                     section
@@ -939,15 +967,15 @@ html(lang='en')
                         h3 Create and insertBefore
                         pre
                             code.hljs.javascript(data-trim contenteditable).
-                                const Paragraph = document.createElement('p');
-                                Paragraph.innerHTML = "Hello world!";
-                                document.body.appendChild(Paragraph);
+                                const $paragraph = document.createElement( 'p' );
+                                $paragraph.innerHTML = "Hello world!";
+                                document.body.appendChild( $paragraph );
 
-                                const Title = document.createElement('h1');
-                                Title.innerHTML = "Welcome to JavaScript DOM Magic!";
+                                const $title = document.createElement( 'h1' );
+                                $title.innerHTML = "Welcome to JavaScript DOM Magic!";
 
                                 // parentNode.insertBefore( Node, referenceNode );
-                                document.body.insertBefore( Title, Paragraph );
+                                document.body.insertBefore( $title, $paragraph );
                         .linebreak
                         a(href="https://codepen.io/kostasx/pen/NeGwYv?editors=0011" target="_blank") CodePen Example
 
@@ -955,9 +983,10 @@ html(lang='en')
                     section
                         h2 DOM Manipulation: Remove
                         pre
-                            code.hljs(data-trim contenteditable).
-                                const el = document.querySelector('h1');
-                                el.remove();
+                            code.hljs.javascript(data-trim contenteditable).
+                                const $el = document.querySelector( 'h1' );
+
+                                $el.remove();
 
                     // TODO: Hands-on Link
                     section
@@ -971,9 +1000,9 @@ html(lang='en')
                         section
                           h2 Events &amp; Capturing User Input
                           ul
-                            <li class="fragment">Events are actions that happen in time</li>
-                            <li class="fragment">They might be triggered from the user or the browser</li>
-                            <li class="fragment">We have many <a href="https://developer.mozilla.org/en-US/docs/Web/Events" target="_blank">DOM events</a> but most of the times we use mouse and keyboard events.</li>
+                            li.fragment Events are actions that happen in time
+                            li.fragment They might be triggered from the user or the browser
+                            li.fragment We have many <a href="https://developer.mozilla.org/en-US/docs/Web/Events" target="_blank">DOM events</a> but most of the times we use mouse and keyboard events.
 
                         // Click Event
                         section
@@ -982,17 +1011,24 @@ html(lang='en')
                                 code.hljs.html(data-trim contenteditable).
                                     <button id="MyButton" type="button">Click me</button>
                             br
-                            pre
+                            pre.fragment
                                 code.hljs.javascript(data-trim contenteditable).
-                                    const btn = document.querySelector('#MyButton');
+                                    const $btn = document.querySelector('#MyButton');
 
-                                    btn.addEventListener( 'click', function( event ){
+                            pre.fragment
+                                code.hljs.javascript(data-trim contenteditable).
 
+                                    function clickHandler( event ){
                                         console.log( event.type + ' got fired!' );
                                         console.log( this );
+                                    }
 
-                                    });
-                            p
+                            pre.fragment
+                                code.hljs.javascript(data-trim contenteditable).
+
+                                    $btn.addEventListener( 'click', clickHandler );
+
+                            p.fragment
                                 <a href="https://codepen.io/kostasx/pen/zmOXae?editors=1010" target="_blank">CodePen</a><br>
                                 <a target="_blank" class="bitly_link" href="https://bit.ly/2O34Sq5">https://bit.ly/<strong>2O34Sq5</strong></a>
 
@@ -1000,10 +1036,10 @@ html(lang='en')
                         section
                           h2 Meet the event object
                           ul
-                            <li>event.<strong>type</strong></li>
-                            <li>event.<strong>target</strong></li>
-                            <li>event.<strong>preventDefault()</strong></li>
-                            <li>and a lot more depending the event type!</li>
+                            li event.<strong class="colorful">type</strong>
+                            li event.<strong class="colorful">target</strong>
+                            li event.<strong class="colorful">preventDefault()</strong>
+                            li and a lot more depending the event type!
 
                         // PRACTICE: Click Event
                         section
@@ -1037,13 +1073,13 @@ html(lang='en')
                             br
                             pre
                                 code.hljs.javascript(data-trim contenteditable).
-                                    const input = document.querySelector( '#myInput' );
+                                    const $input = document.querySelector( '#myInput' );
 
-                                    input.addEventListener( 'keyup', function( event ){
-
+                                    function keyUpHandler( event ){
                                         console.log( event.type + event.target.value );
+                                    }
 
-                                    });
+                                    $input.addEventListener( 'keyup', keyUpHandler );
 
                             p
                                 <a href="https://codepen.io/kostasx/pen/vVBMPK?editors=1111" target="_blank">codepen</a><br>
@@ -1061,13 +1097,13 @@ html(lang='en')
                             pre
                                 code.hljs.javascript(data-trim contenteditable).
 
-                                    img.addEventListener( 'mouseenter', function( event ){
+                                    $img.addEventListener( 'mouseenter', function( event ){
 
                                         console.log( event.type + event.target );
 
                                     });
 
-                                    img.addEventListener( 'mouseleave', function( event ){
+                                    $img.addEventListener( 'mouseleave', function( event ){
 
                                         console.log( event.type + event.target );
 
@@ -1089,13 +1125,18 @@ html(lang='en')
                             h2 On Page Load
 
                             pre
-                                code.hljs.javascript(data-trim contenteditable).
+                                code.hljs.html(data-trim contenteditable).
+                                    &lt;/body&gt;
+                                    &lt;script&gt;
+                                        function init( event ){
 
-                                    document.addEventListener('DOMContentLoaded', function( event ){
+                                            console.log( event.type );
+                                            // Main App Code
 
-                                        console.log( event.type, event.target );
+                                        }
 
-                                    });
+                                        document.addEventListener('DOMContentLoaded', init );
+                                    &lt;/script&gt;
                             p
                                 <a href="https://codepen.io/kostasx/pen/pxzmvx" target="_blank">codepen</a>
 
@@ -1204,15 +1245,17 @@ html(lang='en')
                         pre
                             code.hljs.javascript(data-trim contenteditable).
 
-                                console.log(1);
+                                console.log( 1 );
 
-                                setTimeout( function(){
+                                function displayTwo(){
 
-                                    console.log(2);
+                                    console.log( 2 );
 
-                                }, 1000 );
+                                }
 
-                                console.log(3);
+                                setTimeout( displayTwo, 1000 );
+
+                                console.log( 3 );
 
                         <p class="small" style="font-style: italic;">*Functions can be passed as arguments</p>
 

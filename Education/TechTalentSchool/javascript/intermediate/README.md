@@ -68,16 +68,22 @@
 - [Array Methods: Chaining](./code/array-chaining.html)
 - ["DOM Manipulation"](./code/dom.html)
 
+### QUESTIONS
 
+***Can we access the local filesystem (files and folders on our computer) via JavaScript?***
+
+- No, JavaScript that runs on the browser has no direct access to our local filesystem for security purposes.
+- We can only selectively upload files on a web page or download files. 
 
 ### REFERENCES
 
 - [Altering the DOM with JavaScript](https://zellwk.com/blog/js-in-dom/)
 - [DOM and Layout Trees](https://github.com/leonardomso/33-js-concepts#13-dom-and-layout-trees)
+- [What’s the difference between Map and ForEach in JavaScript?](https://codeburst.io/javascript-map-vs-foreach-f38111822c0f)
 
 </details>
 
-<details>
+<details open>
 
 <summary>JavaScript Intermediate Day 03</summary>
 
@@ -86,6 +92,35 @@
 - [Event Listener](./code/eventlistener.html)
 
 </details>
+
+### QUESTIONS
+
+***How do we pass custom arguments to Event Handler Callback functions?***
+
+- There are multiple way to achieve this. Here are two ways:
+- A: Through a callback function:
+	```
+	function handler( firstArg, secondArg ){
+
+	  return function( event ){
+		console.log( firstArg, secondArg, event );
+	  }
+	}
+
+	Element.addEventListener( "click", handler( "first", "second" ) );
+	```
+- B: Using bind():
+
+	```
+	function handler( firstArg, secondArg, event ){
+  		console.log( firstArg, secondArg, event );
+	}
+
+	Element.addEventListener( "click", handler.bind( null, "first arg value", "second arg value" ) );
+	```
+***Do we have a sleep() function in JavaScript that pauses execution?***
+
+- No, but we can simulate such a function using custom code. Multiple examples can be found in [this StackOverflow thread](https://stackoverflow.com/questions/951021/what-is-the-javascript-version-of-sleep).
 
 ### RESOURCES | TOOLS
 

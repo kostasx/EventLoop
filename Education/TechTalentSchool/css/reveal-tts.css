@@ -1,5 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:700);
 
+.colorful-svg path {
+	fill: #f7be2c;
+}
+
 img.tts_logo {
 	
 	background-color: #bd2b39 !important;
