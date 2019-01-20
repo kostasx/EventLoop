@@ -91,8 +91,6 @@
 
 - [Event Listener](./code/eventlistener.html)
 
-</details>
-
 ### QUESTIONS
 
 ***How do we pass custom arguments to Event Handler Callback functions?***
@@ -121,6 +119,8 @@
 ***Do we have a sleep() function in JavaScript that pauses execution?***
 
 - No, but we can simulate such a function using custom code. Multiple examples can be found in [this StackOverflow thread](https://stackoverflow.com/questions/951021/what-is-the-javascript-version-of-sleep).
+
+</details>
 
 ### RESOURCES | TOOLS
 
