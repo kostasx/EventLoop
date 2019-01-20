@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS DOM</title>
+    <style>
+        .minimal { color: tomato; }
+        p.main span#note {
+            border: 5px solid black;
+        }
+        .limegreen {
+            color: limegreen;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="title">DOM</h1>
+    <h2 class="minimal">Subtitle<br>with class 'minimal'</h2>
+    <p class="main">
+        <span id="note">Some Notes</span>
+    </p>
+    <p class="article">Article 1</p>
+    <p class="article">Article 2</p>
+
+    <script>
+
+        // GET ELEMENT USING THE ID ATTR
+        let title = document.getElementById("title"); 
+        // title always refers to the H1 tag with id 'title'
+        document.write( "<h2>" + title.textContent + "</h2>" );
+        title.textContent = "Kostas";
+
+        /* GET ELEMENT BY CSS SELECTOR */
+        let h2 = document.querySelector(".minimal");    // Get Element by Class
+        document.write( h2.textContent );
+
+        let h1 = document.querySelector("#title");      // Get Element by ID
+        document.write( "<br>" + h1.textContent );
+
+        let note = document.querySelector("p.main span#note");
+        note.textContent = "Changed!";
+
+        /* GET ELEMENTS BY TAG NAME */
+        let listOfArticles = document.getElementsByTagName("p");
+        console.log( listOfArticles );
+        listOfArticles[1].textContent = "2nd <p> Tag";
+
+        /* CREATE A DOM ELEMENT */
+        let myh3 = document.createElement("h3");
+        // console.log( myh3 );
+        myh3.textContent = "Hurray!";
+        document.body.appendChild( myh3 );
+
+        /* Create and append a new span element to: <p class="main"> */
+        let span = document.createElement("span");
+        span.textContent = "New span!";
+        let main = document.querySelector("p.main");
+        main.appendChild( span );
+        console.log( 
+            "main.innerHTML:", main.innerHTML 
+        );
+        console.log( 
+            "main.textContent:", main.textContent 
+        );
+        document.write( "<br>" + main.innerHTML )
+
+        /* REMOVE AN ELEMENT AFTER 3 SECONDS (3000 ms) */
+        setTimeout( function(){
+
+            listOfArticles[2].remove();
+
+        }, 3000 );
+
+        // Set attribute `class` to value `limegreen` after 3000ms === 3 seconds
+        setTimeout( function(){
+
+            h1.setAttribute( "class", "limegreen" );        
+
+        }, 3000 );
+
+        /* Replace <body> HTML with an H1 Tag */
+        // document.body.innerHTML = "<h1>Ops!</h1>";
+
+        /* MANIPULATE CSS VIA THE STYLE ELEMENT PROPERTY */
+        // style="border:5px dashed black";
+        main.style.border = "5px dashed black";
+        // style="padding: 10px";
+        main.style.padding = "10px";
+        main.style.fontSize = "2rem";
+
+    </script>
+</body>
+</html>

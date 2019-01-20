@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array Methods</title>
+</head>
+<body>
+
+    <h1>Array Methods</h1>
+
+    <script>
+        // List of prices
+        let prices = [ 700, 500, 400 ];
+
+        // Get the total price ( price + VAT 23% ) of the first product:
+        let firstProductPrice = prices[0] * 1.23;
+
+        document.write( "firstProductPrice: " + firstProductPrice + "<br>" );
+
+        // Create a function that return total price ( price + VAT )
+        function getTotalPrice( price ){
+            return price * 1.23;
+        }
+
+        firstProductPrice = getTotalPrice( prices[0] );
+
+        document.write( "firstProductPrice: " + firstProductPrice + "<br>" );
+
+        // Let's create a product
+        let product = {
+            brand: "iPhone",
+            model: "X",
+            price: 100,
+            resolution: "10M"
+        }
+
+        // Operator Precedence: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
+        // Multiplication: 14
+        // Addition: 13
+        document.write( ( product.price * 1.23 ) + "€" );
+
+        document.write( "<br/>" );
+        document.write( getTotalPrice(product.price) + "€" );
+
+        // Create an Array of products
+        let products = [
+            {
+                brand: "Samsung",
+                model: "Galaxy",
+                price: 500,
+                resolution: "6M"
+            },
+            {
+                brand: "Nokia",
+                model: "7.1",
+                price: 400,
+                resolution: "6M"
+            }
+        ];
+
+        // Place the iPhone at the middle of the Array products:
+        products.splice(1, 0, product );
+        // document.write( JSON.stringify( products ) ); // Display the Array structure
+
+        // Create an Array of products along with their total price
+        let iphone = product;
+        iphone.total = iphone.price * 1.23;
+        document.write( JSON.stringify( iphone ) );
+
+        // Create a function that takes a product object and return a product object along with its total price
+        function getFinalProduct( item ){
+            
+            let copy = Object.assign({}, item); 
+            // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
+            copy.debug = item.price * 1.23; // Passed by reference
+            return copy;
+ 
+        }
+
+        let copy = getFinalProduct( product );
+        document.write( "<br>copy:", JSON.stringify( copy ) );
+        document.write( "<br>product:", JSON.stringify( product ) );
+
+
+    </script>
+
+</body>
+</html>

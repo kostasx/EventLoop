@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <button>Click</button>
+    <script>
+        let $btn = document.querySelector("button");
+        function handle(e,first,second){
+            console.log("e", e);
+            console.log("first", first);
+            console.log("second", second);
+        }
+        $btn.addEventListener( "click", handle.bind( this, 1, 2 ) );
+    </script>
+</body>
+</html>

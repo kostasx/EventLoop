@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array map</title>
+</head>
+<body>
+    <h1>Array map()</h1>
+    <script>
+    let price = 100;
+
+    // let total = price * 1.24;
+
+    // document.write( "Total:" + total );
+
+    function getTotalPrice( num ){
+        return num * 1.24;
+    }
+
+    let total = getTotalPrice( price );
+
+    document.write( "Total: " + total + "€" );
+    // Ctrl + Alt + e (greek)
+
+    // Create an Array of prices
+    let prices = [
+        100,
+        200,
+        300,
+        400,
+        500
+    ];
+
+    // The old way to iterate over Arrays:
+    let _totals = [];
+    for ( let idx = 0; idx < prices.length; idx++ ){
+        console.log( prices[ idx ] );
+        _totals.push( prices[ idx ] * 1.23 );
+    }
+    console.log( _totals );
+
+    let totalPrices = prices.map( getTotalPrice );
+    
+    // prices.map( function( elem ){
+    //     return elem * 1.23;
+    // });
+
+    document.write( "<br>Length:" + prices.length );
+    document.write( "<br>Length:" + totalPrices.length );
+    document.write( "<br>" + totalPrices );
+
+    // A more complex Array
+    let products = [
+        { name: "iPhone", price: 700 },
+        { name: "Samsung", price: 500 },
+        { name: "Nokia", price: 400 }
+    ];
+    console.log( typeof products ); // "object"
+    // Check to see that products is of type Array:
+    console.log( products instanceof Array ); // true
+
+    // { name: "iPhone", price: 700 },
+    function getTotalObjectPrice( prod ){
+        let finalObj = {
+            name: prod.name,
+            price: prod.price,
+            total: prod.price * 1.23
+        }
+        return finalObj; 
+    }
+
+    let test = getTotalObjectPrice( products[0] );
+    // console.log( test ); // TEST PASSED
+
+    let finalProducts = products.map( getTotalObjectPrice );
+    console.log( finalProducts );
+
+    // EXERCISE: Use map to create a new Array of products
+    // with a special holiday reduced price
+
+    // EXERCISE: Create a new Array with a list of products under
+    // the total price of 600
+    // Reference: function sales( prod ){ return prod.price < 600; }
+
+    </script>
+</body>
+</html>

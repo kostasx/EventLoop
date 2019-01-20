@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array map extras</title>
+</head>
+<body>
+    <h1>Array map() extras:</h1>
+    <h2>Pass extra arguments to the map callback</h2>
+    <p>References:</p>
+    <p>
+            <a href="https://stackoverflow.com/questions/41072951/can-i-pass-additional-parameters-to-javascript-map-callback-function">Can I pass additional parameters to JavaScript map() callback function? [duplicate]</a>
+   
+    </p>
+    <p>
+            <a href="https://www.jstips.co/en/javascript/passing-arguments-to-callback-functions/">Passing arguments to callback functions</a>
+
+    </p>
+    <script>
+        let prices = [ 100, 200, 300 ];
+        let vat = 1.24;
+        let getTotal = function( price, vat ){
+            return price * vat;
+        }
+
+        // 1) Using bind()
+        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind
+        let totals = prices.map( getTotal.bind( this, vat ) ); // this can also be null
+        console.log( "totals:", totals );
+
+        // 2) Using callback function
+        let totals2 = prices.map( function( elem ){
+            return getTotal( elem, vat );
+        });
+        console.log( "totals2:", totals2 );
+
+        // 3) Using the 2nd parameter of map, thisArg
+        function getTotalWithVat( price ){
+            return price * this.vat;
+        }
+        let totals3 = prices.map(
+            getTotalWithVat
+        ,{ vat: vat });
+        console.log( "totals3:", totals3 );
+
+        
+
+
+
+        let products = [
+            { name: "iPhone", price: 700 },
+            { name: "Samsung", price: 500 },
+            { name: "Nokia", price: 400 }
+        ];
+
+
+    </script>
+</body>
+</html>

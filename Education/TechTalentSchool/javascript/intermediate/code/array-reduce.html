@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array reduce</title>
+</head>
+<body>
+    <h1>Array reduce()</h1>
+    <script>
+        let cities = [ 10000, 15000, 13000 ];
+        // value === 10000, 15000, 13000 in 3 iterations
+        function getSum( accumulator, value ){
+            accumulator = accumulator + value;
+            return accumulator;
+        }
+        // 0 ==> Initial accumulator value
+        let population = cities.reduce( getSum, 0 );
+        document.write( "Population:" + population );
+
+        // EXERCISE: Use the reduce method with a more complex
+        // Array structure: Get the total sales of our eshop
+        let products = [
+            { name: "iPhone", price: 700, sales: 10 },
+            { name: "Samsung", price: 500, sales: 5 },
+            { name: "Nokia", price: 400, sales: 23 }
+        ];
+</script>
+    
+</body>
+</html>
