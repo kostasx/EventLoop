@@ -224,13 +224,13 @@ html(lang='en')
                             .column.is-6.is-offset-3
                                 p Open up your terminal and type 
                                 pre
-                                    code.hljs.bash $ node
+                                    code.hljs.bash(data-trim contenteditable) $ node
                                 .linebreak
                                 pre.fragment
-                                    code.hljs.bash &gt; 4+6
+                                    code.hljs.bash(data-trim contenteditable) &gt; 4+6
                                 .linebreak
                                 pre.fragment
-                                    code.hljs.bash 10
+                                    code.hljs.bash(data-trim contenteditable) 10
                     section
                         .columns
                             .column.is-6.is-offset-3
@@ -392,15 +392,15 @@ html(lang='en')
                         .columns
                             .column.is-8.is-offset-2
                                 pre.fragment
-                                    code.hljs.bash app.js:
+                                    code.hljs.bash(data-trim contenteditable) app.js:
                                 .linebreak
                                 pre.fragment
-                                    code.hljs.javascript.
+                                    code.hljs.javascript(data-trim contenteditable).
                                         const fs = require( 'fs' );
                                         const files = fs.readdirSync( './' );
                                 p.small.fragment <code>files</code> will be a String Array
                                 pre.fragment
-                                    code.hljs.javascript.
+                                    code.hljs.javascript(data-trim contenteditable).
                                         console.log( files );
                     section
                         h6 The <strong class="colorful">fs</strong> Built-in Module
@@ -408,10 +408,10 @@ html(lang='en')
                         .columns
                             .column.is-10.is-offset-1
                                 pre.fragment
-                                    code.hljs.bash app.js:
+                                    code.hljs.bash(data-trim contenteditable) app.js:
                                 .linebreak
                                 pre.fragment
-                                    code.hljs.javascript.
+                                    code.hljs.javascript(data-trim contenteditable).
                                         const fs = require( 'fs' );
                                         const files = fs.readdir( './', ( err,files )=>{
 
@@ -431,33 +431,56 @@ html(lang='en')
                         .columns
                             .column.is-10.is-offset-1
                                 pre
-                                    code.hljs.bash app.js:
+                                    code.hljs.bash(data-trim contenteditable) app.js:
                                 .linebreak
                                 pre.fragment
-                                    code.hljs.javascript.
+                                    code.hljs.javascript(data-trim contenteditable).
                                         const fs = require( 'fs' );
                                         let contents = fs.readFileSync( 'app.js' );
                                         console.log( contents );
                                 p.small.fragment What do you see in the console?
                                 p.small.fragment Let's try again with one small addition...
                                 pre.fragment
-                                    code.hljs.javascript.
+                                    code.hljs.javascript(data-trim contenteditable).
                                         contents = fs.readFileSync( 'app.js','utf8' );
                                         console.log( contents );
+                                p.small.fragment(style="font-size:0.5em; opacity:0.6;font-style:italic") *Add some error handling using <strong>try { } catch { }</strong>
                     section
                         h6 The <strong class="colorful">fs</strong> Built-in Module
                         p.small <strong>readFile()</strong> (Asynchronous Code)
                         .columns
                             .column.is-10.is-offset-1
                                 pre
-                                    code.hljs.bash app.js:
+                                    code.hljs.bash(data-trim contenteditable) app.js:
                                 .linebreak
                                 pre.fragment
-                                    code.hljs.javascript.
+                                    code.hljs.javascript(data-trim contenteditable).
                                         const fs = require( 'fs' );
                                         fs.readFile( 'app.js', ( err, buffer )=>{
                                             console.log( buffer.toString() );
                                         });
+                    section
+                        h6 The <strong class="colorful">fs</strong> Built-in Module
+                        p.small <strong>writeFile()</strong> and <strong>writeFileSync</strong>
+                        .columns
+                            .column.is-10.is-offset-1
+                                pre
+                                    code.hljs.bash(data-trim contenteditable) app.js:
+                                .linebreak
+                                pre.fragment
+                                    code.hljs.javascript(data-trim contenteditable).
+                                        const fs = require( 'fs' );
+
+                                        // SYNC:
+                                        fs.writeFileSync( 'test.txt', "TEXT DATA" );
+
+                                        // ASYNC:
+                                        fs.writeFile( 'test.txt', "TEXT DATA",  ( err )=>{
+                                            if ( err ){
+                                                console.log( err.message );
+                                            }
+                                        });
+
 
                 // BUILT-IN MODULES: PATH
                 section.with-tts-right
@@ -466,15 +489,15 @@ html(lang='en')
                         .columns
                             .column.is-10.is-offset-1
                                 pre.fragment
-                                    code.hljs.bash app.js:
+                                    code.hljs.bash(data-trim contenteditable) app.js:
                                 .linebreak
                                 pre.fragment
-                                    code.hljs.javascript.
+                                    code.hljs.javascript(data-trim contenteditable).
                                         const path = require('path'); 
                                         let pathObj = path.parse(__filename);
                                 p.small.fragment <code>__filename</code>: The file name of the current module.
                                 pre.fragment
-                                    code.hljs.json.
+                                    code.hljs.json(data-trim contenteditable).
                                         { 
                                             root: '/',
                                             dir: '/Users/kostasx/Desktop',
@@ -487,10 +510,10 @@ html(lang='en')
                         .columns
                             .column.is-10.is-offset-1
                                 pre.fragment
-                                    code.hljs.bash app.js:
+                                    code.hljs.bash(data-trim contenteditable) app.js:
                                 .linebreak
                                 pre.fragment
-                                    code.hljs.javascript.
+                                    code.hljs.javascript(data-trim contenteditable).
                                         const path = require('path'); 
                                         let arguments = process.argv;
                                         // process.argv == Array of command line arguments
@@ -510,10 +533,10 @@ html(lang='en')
                         .columns
                             .column.is-10.is-offset-1
                                 pre.fragment
-                                    code.hljs.bash app.js:
+                                    code.hljs.bash(data-trim contenteditable) app.js:
                                 .linebreak
                                 pre.fragment
-                                    code.hljs.javascript.
+                                    code.hljs.javascript(data-trim contenteditable).
                                         const os = require('os');
 
                                         os.totalmem();
@@ -522,7 +545,7 @@ html(lang='en')
                                         console.log( `Total Memory: ${os.totalmem()}` );
                         .columns
                             .column.is-8.is-offset-2
-                                p.small.fragment Google for: <code>js convert bytes to gb</code><br/>refactor code to display the total memory in GB
+                                p.small.fragment Google for: <a href="https://stackoverflow.com/questions/15900485/correct-way-to-convert-size-in-bytes-to-kb-mb-gb-in-javascript" target="_blank">js convert bytes to gb</a><br/>refactor code to display the total memory in GB
 
                 // BUILT-IN MODULES: HTTP
                 section.with-tts-right
@@ -534,10 +557,10 @@ html(lang='en')
                         .columns
                             .column.is-12
                                 pre.fragment
-                                    code.hljs.bash app.js:
+                                    code.hljs.bash(data-trim contenteditable) app.js:
                                 .linebreak
                                 pre.fragment
-                                    code.hljs.javascript.
+                                    code.hljs.javascript(data-trim contenteditable).
                                         const https = require('https');
                                         const URL = 'https://api.chucknorris.io/jokes/random';
 
@@ -557,7 +580,7 @@ html(lang='en')
                             .column.is-12
                                 h6 Let's also add some error handling,<br/>just in case...
                                 pre.fragment
-                                    code.hljs.javascript.
+                                    code.hljs.javascript(data-trim contenteditable).
                                         const https = require('https');
                                         const URL = 'https://api.chucknorris.io/jokes/random';
 
@@ -587,7 +610,7 @@ html(lang='en')
                             .column.is-8.is-offset-2
                                 p.small The official package manager for Node and is bundled &amp; installed automatically with the environment.
                                 pre
-                                    code.hljs.bash $ npm --version
+                                    code.hljs.bash(data-trim contenteditable) $ npm --version
                     section
                         h6 Let's see what npm can do:
                         .columns
@@ -634,10 +657,10 @@ html(lang='en')
                             .column.is-10.is-offset-1
                                 h6 Pluralize
                                 pre.fragment
-                                    code.hljs.bash $ npm install pluralize --save
+                                    code.hljs.bash(data-trim contenteditable) $ npm install pluralize --save
                                 <br>
                                 pre.fragment
-                                    code.hljs.javascript.
+                                    code.hljs.javascript(data-trim contenteditable).
                                         const pluralize = require('pluralize');
 
                                         let result = pluralize('test');
@@ -654,10 +677,10 @@ html(lang='en')
                             .column.is-10.is-offset-1
                                 h6 Colors
                                 pre.fragment
-                                    code.hljs.bash $ npm install colors --save
+                                    code.hljs.bash(data-trim contenteditable) $ npm install colors --save
                                 <br>
                                 pre.fragment
-                                    code.hljs.javascript.
+                                    code.hljs.javascript(data-trim contenteditable).
                                         require('colors');
 
                                         console.log('hello'.green); // outputs green text
@@ -673,7 +696,7 @@ html(lang='en')
                                     code.hljs.bash $ npm install convert-units --save
                                 <br>
                                 pre
-                                    code.hljs.javascript.
+                                    code.hljs.javascript(data-trim contenteditable).
                                         const convert = require('convert-units');
 
                                         // Days to Hours
@@ -693,7 +716,7 @@ html(lang='en')
                             .column.is-10.is-offset-1
                                 p.small Putting it all together
                                 pre
-                                    code.hljs.javascript.
+                                    code.hljs.javascript(data-trim contenteditable).
                                         require('colors');
                                         const pluralize = require('pluralize');
                                         const convert = require('convert-units');
@@ -714,7 +737,7 @@ html(lang='en')
                     section
                         p.small Once you have installed Node, let's try building our first web server.<br/>Create a file named "app.js", and paste the following code:
                         pre
-                            code.hljs.javascript.
+                            code.hljs.javascript(data-trim contenteditable).
                                 const http = require('http');
                                 const port = 3000;
                                 const server = http.createServer((request, response) => {
@@ -729,6 +752,10 @@ html(lang='en')
 
                         p.small After that, run your web server using node app.js, visit http://localhost:3000<br>and you will see a message 'Hello World'
 
+                    section
+                        h6 More on Node.JS HTTP(S) Handling
+                        a.small(href="https://nodejs.org/en/docs/guides/anatomy-of-an-http-transaction/" target="_blank") Anatomy of an HTTP Transaction
+
                 // COMBINING THE HTTP SERVER AND NPM PACKAGES
                 section.with-tts-right
                     section
@@ -739,7 +766,7 @@ html(lang='en')
                         .columns
                             .column
                                 pre
-                                    code.hljs.javascript.
+                                    code.hljs.javascript(data-trim contenteditable).
                                         const http = require('http');
                                         const port = 8080;
                                         const server = http.createServer((request, response) => {
@@ -758,7 +785,7 @@ html(lang='en')
                         .columns
                             .column.is-10.is-offset-1
                                 pre
-                                    code.hljs.javascript.
+                                    code.hljs.javascript(data-trim contenteditable).
                                         // Parse URLs
                                         const url = require('url'); 
  
@@ -771,9 +798,9 @@ html(lang='en')
                         .columns
                             .column.is-12
                                 pre
-                                    code.hljs.javascript.
+                                    code.hljs.javascript(data-trim contenteditable).
                                         const server = http.createServer((request, response) => {
-
+                                            // url.parse( urlString, queryString Object)
                                             let parts = url.parse(request.url, true);
                                             let query = parts.query;
                                             console.log( query );
@@ -837,6 +864,9 @@ html(lang='en')
                                     a(href="https://medium.com/@LindaVivah/the-beginners-guide-understanding-node-js-express-js-fundamentals-e15493462be1" target="_blank") THE BEGINNER’S GUIDE: UNDERSTANDING NODE.JS &amp; EXPRESS.JS FUNDAMENTALS
                                 .linebreak
                                 li
+                                    a(href="https://github.com/kostasx/npm-introduction" target="_blank") An introduction to npm
+                                .linebreak
+                                li
                                     a(href="https://blog.bloomca.me/2018/07/09/nodejs-repl-in-depth.html" target="_blank") Node.js REPL in Depth
                                 .linebreak
                                 li
@@ -854,20 +884,6 @@ html(lang='en')
         script(src='../libs/reveal.js/lib/js/head.min.js')
         script(src='../libs/reveal.js/js/reveal.js')
         script.
-            /* SHA */
-            Reveal.configure({
-                keyboard: {
-                // Key: 'e'
-                    69: function () {
-                    /*
-                    IF NOT EXIST
-                    <PRE>.insertAdjacentHTML('afterend', code);
-                    EVALUATE
-                    eval( <PRE>.textContent )
-                    */
-                    }
-                }
-            });
             // More info https://github.com/hakimel/reveal.js#configuration
             Reveal.initialize({
                 history: true,
@@ -882,8 +898,6 @@ html(lang='en')
                 { src: '../libs/reveal.js/plugin/notes/notes.js', async: true }
                 ]
             });
-
-            //- Reveal.addEventListener('data-state-value-here', function (){});
 
             Reveal.addEventListener( 'ready', function( e ) {
 

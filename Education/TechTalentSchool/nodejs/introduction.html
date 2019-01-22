@@ -204,11 +204,11 @@ global.message == undefined
             <div class="columns">
               <div class="column is-6 is-offset-3">
                 <p>Open up your terminal and type </p>
-                <pre><code class="hljs bash">$ node</code></pre>
+                <pre><code class="hljs bash" data-trim contenteditable>$ node</code></pre>
                 <div class="linebreak"></div>
-                <pre class="fragment"><code class="hljs bash">&gt; 4+6</code></pre>
+                <pre class="fragment"><code class="hljs bash" data-trim contenteditable>&gt; 4+6</code></pre>
                 <div class="linebreak"></div>
-                <pre class="fragment"><code class="hljs bash">10</code></pre>
+                <pre class="fragment"><code class="hljs bash" data-trim contenteditable>10</code></pre>
               </div>
             </div>
           </section>
@@ -363,12 +363,12 @@ logger();
             <p class="small">Synchronous Code</p>
             <div class="columns">
               <div class="column is-8 is-offset-2">
-                <pre class="fragment"><code class="hljs bash">app.js:</code></pre>
+                <pre class="fragment"><code class="hljs bash" data-trim contenteditable>app.js:</code></pre>
                 <div class="linebreak"></div>
-                <pre class="fragment"><code class="hljs javascript">const fs = require( 'fs' );
+                <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>const fs = require( 'fs' );
 const files = fs.readdirSync( './' );</code></pre>
                 <p class="small fragment"><code>files</code> will be a String Array</p>
-                <pre class="fragment"><code class="hljs javascript">console.log( files );</code></pre>
+                <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>console.log( files );</code></pre>
               </div>
             </div>
           </section>
@@ -377,9 +377,9 @@ const files = fs.readdirSync( './' );</code></pre>
             <p class="small">Asynchronous Code</p>
             <div class="columns">
               <div class="column is-10 is-offset-1">
-                <pre class="fragment"><code class="hljs bash">app.js:</code></pre>
+                <pre class="fragment"><code class="hljs bash" data-trim contenteditable>app.js:</code></pre>
                 <div class="linebreak"></div>
-                <pre class="fragment"><code class="hljs javascript">const fs = require( 'fs' );
+                <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>const fs = require( 'fs' );
 const files = fs.readdir( './', ( err,files )=>{
 
     if ( err ) {
@@ -399,15 +399,16 @@ const files = fs.readdir( './', ( err,files )=>{
             <p class="small"><strong>readFileSync()</strong> (Synchronous Code)</p>
             <div class="columns">
               <div class="column is-10 is-offset-1">
-                <pre><code class="hljs bash">app.js:</code></pre>
+                <pre><code class="hljs bash" data-trim contenteditable>app.js:</code></pre>
                 <div class="linebreak"></div>
-                <pre class="fragment"><code class="hljs javascript">const fs = require( 'fs' );
+                <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>const fs = require( 'fs' );
 let contents = fs.readFileSync( 'app.js' );
 console.log( contents );</code></pre>
                 <p class="small fragment">What do you see in the console?</p>
                 <p class="small fragment">Let's try again with one small addition...</p>
-                <pre class="fragment"><code class="hljs javascript">contents = fs.readFileSync( 'app.js','utf8' );
+                <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>contents = fs.readFileSync( 'app.js','utf8' );
 console.log( contents );</code></pre>
+                <p class="small fragment" style="font-size:0.5em; opacity:0.6;font-style:italic">*Add some error handling using <strong>try { } catch { }</strong></p>
               </div>
             </div>
           </section>
@@ -416,12 +417,34 @@ console.log( contents );</code></pre>
             <p class="small"><strong>readFile()</strong> (Asynchronous Code)</p>
             <div class="columns">
               <div class="column is-10 is-offset-1">
-                <pre><code class="hljs bash">app.js:</code></pre>
+                <pre><code class="hljs bash" data-trim contenteditable>app.js:</code></pre>
                 <div class="linebreak"></div>
-                <pre class="fragment"><code class="hljs javascript">const fs = require( 'fs' );
+                <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>const fs = require( 'fs' );
 fs.readFile( 'app.js', ( err, buffer )=>{
     console.log( buffer.toString() );
+});</code></pre>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h6>The <strong class="colorful">fs</strong> Built-in Module</h6>
+            <p class="small"><strong>writeFile()</strong> and <strong>writeFileSync</strong></p>
+            <div class="columns">
+              <div class="column is-10 is-offset-1">
+                <pre><code class="hljs bash" data-trim contenteditable>app.js:</code></pre>
+                <div class="linebreak"></div>
+                <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>const fs = require( 'fs' );
+
+// SYNC:
+fs.writeFileSync( 'test.txt', "TEXT DATA" );
+
+// ASYNC:
+fs.writeFile( 'test.txt', "TEXT DATA",  ( err )=>{
+    if ( err ){
+        console.log( err.message );
+    }
 });
+
 </code></pre>
               </div>
             </div>
@@ -433,12 +456,12 @@ fs.readFile( 'app.js', ( err, buffer )=>{
             <h6>The <strong class="colorful">path</strong> Built-in Module</h6>
             <div class="columns">
               <div class="column is-10 is-offset-1">
-                <pre class="fragment"><code class="hljs bash">app.js:</code></pre>
+                <pre class="fragment"><code class="hljs bash" data-trim contenteditable>app.js:</code></pre>
                 <div class="linebreak"></div>
-                <pre class="fragment"><code class="hljs javascript">const path = require('path'); 
+                <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>const path = require('path'); 
 let pathObj = path.parse(__filename);</code></pre>
                 <p class="small fragment"><code>__filename</code>: The file name of the current module.</p>
-                <pre class="fragment"><code class="hljs json">{ 
+                <pre class="fragment"><code class="hljs json" data-trim contenteditable>{ 
     root: '/',
     dir: '/Users/kostasx/Desktop',
     base: 'app.js',
@@ -452,9 +475,9 @@ let pathObj = path.parse(__filename);</code></pre>
             <h6>One step further...</h6>
             <div class="columns">
               <div class="column is-10 is-offset-1">
-                <pre class="fragment"><code class="hljs bash">app.js:</code></pre>
+                <pre class="fragment"><code class="hljs bash" data-trim contenteditable>app.js:</code></pre>
                 <div class="linebreak"></div>
-                <pre class="fragment"><code class="hljs javascript">const path = require('path'); 
+                <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>const path = require('path'); 
 let arguments = process.argv;
 // process.argv == Array of command line arguments
 let pathObj = path.parse( arguments[2] );
@@ -475,9 +498,9 @@ console.log( pathObj );</code></pre>
             <p class="small">Information about Operating System<br><a href="https://nodejs.org/api/os.html#os_os" target="_blank">Documentation</a></p>
             <div class="columns">
               <div class="column is-10 is-offset-1">
-                <pre class="fragment"><code class="hljs bash">app.js:</code></pre>
+                <pre class="fragment"><code class="hljs bash" data-trim contenteditable>app.js:</code></pre>
                 <div class="linebreak"></div>
-                <pre class="fragment"><code class="hljs javascript">const os = require('os');
+                <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>const os = require('os');
 
 os.totalmem();
 os.freemem(); 
@@ -487,7 +510,7 @@ console.log( `Total Memory: ${os.totalmem()}` );</code></pre>
             </div>
             <div class="columns">
               <div class="column is-8 is-offset-2">
-                <p class="small fragment">Google for: <code>js convert bytes to gb</code><br/>refactor code to display the total memory in GB</p>
+                <p class="small fragment">Google for: <a href="https://stackoverflow.com/questions/15900485/correct-way-to-convert-size-in-bytes-to-kb-mb-gb-in-javascript" target="_blank">js convert bytes to gb</a><br/>refactor code to display the total memory in GB</p>
               </div>
             </div>
           </section>
@@ -499,9 +522,9 @@ console.log( `Total Memory: ${os.totalmem()}` );</code></pre>
             <p class="small">Communication over HTTP(S)<br><a href="https://nodejs.org/api/https.html" target="_blank">Documentation</a></p>
             <div class="columns">
               <div class="column is-12">
-                <pre class="fragment"><code class="hljs bash">app.js:</code></pre>
+                <pre class="fragment"><code class="hljs bash" data-trim contenteditable>app.js:</code></pre>
                 <div class="linebreak"></div>
-                <pre class="fragment"><code class="hljs javascript">const https = require('https');
+                <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>const https = require('https');
 const URL = 'https://api.chucknorris.io/jokes/random';
 
 https.get( URL, (response) => {
@@ -522,7 +545,7 @@ https.get( URL, (response) => {
             <div class="columns">
               <div class="column is-12">
                 <h6>Let's also add some error handling,<br/>just in case...</h6>
-                <pre class="fragment"><code class="hljs javascript">const https = require('https');
+                <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>const https = require('https');
 const URL = 'https://api.chucknorris.io/jokes/random';
 
 https.get( URL, (response) => {
@@ -552,7 +575,7 @@ https.get( URL, (response) => {
             <div class="columns">
               <div class="column is-8 is-offset-2">
                 <p class="small">The official package manager for Node and is bundled &amp; installed automatically with the environment.</p>
-                <pre><code class="hljs bash">$ npm --version</code></pre>
+                <pre><code class="hljs bash" data-trim contenteditable>$ npm --version</code></pre>
               </div>
             </div>
           </section>
@@ -607,8 +630,8 @@ https.get( URL, (response) => {
             <div class="columns">
               <div class="column is-10 is-offset-1">
                 <h6>Pluralize</h6>
-                <pre class="fragment"><code class="hljs bash">$ npm install pluralize --save</code></pre><br>
-                <pre class="fragment"><code class="hljs javascript">const pluralize = require('pluralize');
+                <pre class="fragment"><code class="hljs bash" data-trim contenteditable>$ npm install pluralize --save</code></pre><br>
+                <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>const pluralize = require('pluralize');
 
 let result = pluralize('test');
 console.log( "test: ", result );
@@ -625,8 +648,8 @@ console.log( "mummy: ", result );</code></pre>
             <div class="columns">
               <div class="column is-10 is-offset-1">
                 <h6>Colors</h6>
-                <pre class="fragment"><code class="hljs bash">$ npm install colors --save</code></pre><br>
-                <pre class="fragment"><code class="hljs javascript">require('colors');
+                <pre class="fragment"><code class="hljs bash" data-trim contenteditable>$ npm install colors --save</code></pre><br>
+                <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>require('colors');
 
 console.log('hello'.green); // outputs green text
 console.log('i like cake and pies'.underline.red) // outputs red underlined text
@@ -640,7 +663,7 @@ console.log('OMG Rainbows!'.rainbow); // rainbow</code></pre>
               <div class="column is-10 is-offset-1">
                 <h6>Convert-Units</h6>
                 <pre><code class="hljs bash">$ npm install convert-units --save</code></pre><br>
-                <pre><code class="hljs javascript">const convert = require('convert-units');
+                <pre><code class="hljs javascript" data-trim contenteditable>const convert = require('convert-units');
 
 // Days to Hours
 let result = convert(1).from('d').to('h');
@@ -661,7 +684,7 @@ console.log( result );
             <div class="columns">
               <div class="column is-10 is-offset-1">
                 <p class="small">Putting it all together</p>
-                <pre><code class="hljs javascript">require('colors');
+                <pre><code class="hljs javascript" data-trim contenteditable>require('colors');
 const pluralize = require('pluralize');
 const convert = require('convert-units');
 
@@ -684,7 +707,7 @@ console.log( output.red );
           </section>
           <section>
             <p class="small">Once you have installed Node, let's try building our first web server.<br/>Create a file named "app.js", and paste the following code:</p>
-            <pre><code class="hljs javascript">const http = require('http');
+            <pre><code class="hljs javascript" data-trim contenteditable>const http = require('http');
 const port = 3000;
 const server = http.createServer((request, response) => {
     response.statusCode = 200;
@@ -698,6 +721,9 @@ server.listen(port, () => {
 </code></pre>
             <p class="small">After that, run your web server using node app.js, visit http://localhost:3000<br>and you will see a message 'Hello World'</p>
           </section>
+          <section>
+            <h6>More on Node.JS HTTP(S) Handling</h6><a class="small" href="https://nodejs.org/en/docs/guides/anatomy-of-an-http-transaction/" target="_blank">Anatomy of an HTTP Transaction</a>
+          </section>
         </section>
         <!-- COMBINING THE HTTP SERVER AND NPM PACKAGES-->
         <section class="with-tts-right">
@@ -709,7 +735,7 @@ server.listen(port, () => {
             <h6>Step 01</h6>
             <div class="columns">
               <div class="column">
-                <pre><code class="hljs javascript">const http = require('http');
+                <pre><code class="hljs javascript" data-trim contenteditable>const http = require('http');
 const port = 8080;
 const server = http.createServer((request, response) => {
     response.statusCode = 200;
@@ -729,7 +755,7 @@ server.listen(port, () => {
             <p class="small">Add two more modules to our app.js file</p>
             <div class="columns">
               <div class="column is-10 is-offset-1">
-                <pre><code class="hljs javascript">// Parse URLs
+                <pre><code class="hljs javascript" data-trim contenteditable>// Parse URLs
 const url = require('url'); 
 
 // Lets Pluralize!
@@ -743,8 +769,8 @@ const pluralize = require('pluralize');</code></pre>
             <p class="small">Add some more code inside the request handler function: </p>
             <div class="columns">
               <div class="column is-12">
-                <pre><code class="hljs javascript">const server = http.createServer((request, response) => {
-
+                <pre><code class="hljs javascript" data-trim contenteditable>const server = http.createServer((request, response) => {
+    // url.parse( urlString, queryString Object)
     let parts = url.parse(request.url, true);
     let query = parts.query;
     console.log( query );
@@ -808,6 +834,8 @@ const pluralize = require('pluralize');</code></pre>
                 <div class="linebreak"></div>
                 <li><a href="https://medium.com/@LindaVivah/the-beginners-guide-understanding-node-js-express-js-fundamentals-e15493462be1" target="_blank">THE BEGINNER’S GUIDE: UNDERSTANDING NODE.JS &amp; EXPRESS.JS FUNDAMENTALS</a></li>
                 <div class="linebreak"></div>
+                <li><a href="https://github.com/kostasx/npm-introduction" target="_blank">An introduction to npm</a></li>
+                <div class="linebreak"></div>
                 <li><a href="https://blog.bloomca.me/2018/07/09/nodejs-repl-in-depth.html" target="_blank">Node.js REPL in Depth</a></li>
                 <div class="linebreak"></div>
                 <li><a href="https://www.npmjs.com/package/javascripting" target="_blank">LEARN JAVASCRIPT BY ADVENTURING AROUND IN THE TERMINAL</a></li>
@@ -825,20 +853,6 @@ const pluralize = require('pluralize');</code></pre>
     <script src="../libs/reveal.js/lib/js/head.min.js"></script>
     <script src="../libs/reveal.js/js/reveal.js"></script>
     <script>
-      /* SHA */
-      Reveal.configure({
-          keyboard: {
-          // Key: 'e'
-              69: function () {
-              /*
-              IF NOT EXIST
-              <PRE>.insertAdjacentHTML('afterend', code);
-              EVALUATE
-              eval( <PRE>.textContent )
-              */
-              }
-          }
-      });
       // More info https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
           history: true,
@@ -853,8 +867,6 @@ const pluralize = require('pluralize');</code></pre>
           { src: '../libs/reveal.js/plugin/notes/notes.js', async: true }
           ]
       });
-      
-      //- Reveal.addEventListener('data-state-value-here', function (){});
       
       Reveal.addEventListener( 'ready', function( e ) {
       
