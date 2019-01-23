@@ -16,6 +16,18 @@
 ### QUESTIONS
 ### REFERENCES
 ### RESOURCES | TOOLS
+
 - [Visual Studio Code](https://code.visualstudio.com/)
+- [Simple React Snippets (VSCode Extension)](https://marketplace.visualstudio.com/items?itemName=burkeholland.simple-react-snippets)
+- [Create React App](https://github.com/facebook/create-react-app)
+- [React Developer Tools (Chrome Extension)](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)    
+
 ### RESOURCES | LEARNING
+
 - [SoloLearn JavaScript Tutorial](https://www.sololearn.com/Course/JavaScript/)
+- [React, Router, Redux Cheatsheet](./docs/react-redux.pdf)
+- [Introducting JSX](https://reactjs.org/docs/introducing-jsx.html)   
+- [React Components](https://reactjs.org/docs/react-component.html)    
+- [Handling Events](https://reactjs.org/docs/handling-events.html)
+- [Events](https://reactjs.org/docs/events.html)
+    
