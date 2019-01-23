@@ -13,6 +13,8 @@
 - [State & Event Handlers (Zip file)](./code/create-react-app--07-State-and-Event-Handlers.zip)
 - [React Component LifeCycle (Zip file)](./code/create-react-app--08-Lifecycle-and-methods.zip)
 
+__Click the link and then click `Download`. You need a create-react-app environment for the code to run__ 
+
 ### RESOURCES | TOOLS
 
 - [Visual Studio Code](https://code.visualstudio.com/)
