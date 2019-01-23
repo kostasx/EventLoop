@@ -13,8 +13,6 @@
 - [State & Event Handlers](./code/create-react-app--07-State-and-Event-Handlers.zip)
 - [React Component LifeCycle](./code/create-react-app--08-Lifecycle-and-methods.zip)
 
-### QUESTIONS
-### REFERENCES
 ### RESOURCES | TOOLS
 
 - [Visual Studio Code](https://code.visualstudio.com/)
