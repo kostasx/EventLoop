@@ -7,7 +7,7 @@
 - [Hello World (Zip file)](./code/create-react-app--01-hello-world.zip)
 - [JSX (Zip file)](./code/create-react-app--02-JSX-expressions.zip)
 - [Basic App (Zip file)](./code/create-react-app--03-basic-App.zip)
-- [Adding Styling and Medi (Zip file)a](./code/create-react-app--04-reactjs-styling-and-media.zip)
+- [Adding Styling and Media (Zip file)](./code/create-react-app--04-reactjs-styling-and-media.zip)
 - [Props (Zip file)](./code/create-react-app--05--Props.zip)
 - [Props - Children (Zip file)](./code/create-react-app--06--Props-Children.zip)
 - [State & Event Handlers (Zip file)](./code/create-react-app--07-State-and-Event-Handlers.zip)
