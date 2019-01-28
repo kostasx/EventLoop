@@ -1,0 +1,504 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>Object Prototypes and Prototypal Inheritance in JavaScript</title>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+		<!-- Theme used for syntax highlighting of code -->
+		<!-- <link rel="stylesheet" href="lib/css/zenburn.css"> -->
+		<link rel="stylesheet" href="css/highlight-themes/monokai_sublime.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+		<link rel="stylesheet" href="afdemp.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+				<!-- TITLE -->
+				<section>
+					<h3>The Object Prototype<p style="margin:0;padding:0;font-size: 2rem;">&amp;</p>Prototypal Inheritance<br/>in <strong class="colorful">JavaScript</strong></h3>
+					<h6 style="color: rebeccapurple;">A Presentation by Kostas Minaidis</h6>
+				</section>
+				
+				<!-- Chapter 1: THE OBJECT -->
+				<section>
+					<section>
+						<h3>Chapter 1</h3>
+						<h2 class="has-text-weight-normal">The Object</h2>
+					</section>
+
+					<section>
+						<p>An Object is a collection of <strong class="colorful">key/value</strong> pairs,<br/>referred to as the Object's <strong class="colorful">properties</strong>:</p>
+						<div class="columns is-multiline">
+							<div class="column is-6 is-offset-3">
+								<pre class="fragment is-marginless">
+<code class="hljs javascript" trim-data contenteditable>let obj = {
+  key: "value",
+  first_name: "kostas",
+  last_name: "minaidis"
+}</code>
+</pre>
+							</div>
+						</div>
+					</section>
+
+					<section>
+						<h2>Creating an Object<br/>in <strong>JavaScript</strong>:</h2>
+					<div class="columns is-multiline">
+						<div class="column is-6">
+							<pre class="fragment is-marginless"><h2>1) Object Literal:</h2>
+<code class="hljs javascript" trim-data contenteditable>let obj = {
+  first: "kostas",
+  last: "minaidis"
+}</code>
+							</pre>
+
+						</div>
+						<div class="column is-6">
+							<pre class="fragment is-marginless"><h2>2) Object Constructor:</h2>
+<code class="hljs javascript" trim-data contenteditable>let obj = new Object({
+  first: "kostas",
+  last: "minaidis"
+});</code>
+							</pre>
+
+						</div>
+						<div class="fragment column is-12">
+	<pre class="is-marginless has-text-centered"><h2>Both create the following structure:</h2></pre>
+						</div>
+						<div class="fragment column is-6 is-offset-3">
+	<pre class="is-marginless"><code class="hljs javascript" trim-data contenteditable>Object obj {
+  first: "kostas",
+  last: "minaidis",
+  __proto__: Object
+}</code></pre>
+						</div>
+					</div>
+				</section>
+				<section>
+					<h2>Meet the <strong class="colorful">__proto__</strong> property</h2>
+				</section>
+				<section>
+					<div class="columns">
+						<div class="column is-4">
+							<p class="is-size-4 has-text-left">Whenever we create a new Object, a <strong class="colorful">__proto__</strong> property is implicitly attached to it.</p>
+						</div>
+						<div class="column is-1"></div>
+						<div class="column fragment">
+<pre class="is-marginless"><code class="hljs javascript" trim-data contenteditable>
+ Object obj {
+  first: "kostas",
+  last: "minaidis",
+  __proto__: Object
+ }
+
+</code></pre>
+						</div>
+					</div>
+					<div class="columns">
+						<div class="column is-4 fragment">
+							<p class="is-size-4">The <strong class="colorful">__proto__</strong> property is a link that points to: <strong class="colorful">Object.prototype</strong></p>
+						</div>
+						<div class="column is-1"></div>
+						<div class="column fragment">
+<pre class="is-marginless has-text-centered"><code class="hljs javascript" trim-data contenteditable>
+obj.__proto__ === Object.prototype
+
+</code></pre>
+
+						</div>
+					</div>
+					<div class="columns">
+						<div class="column is-4 fragment">
+							<p class="is-size-4 has-text-left">The <strong class="colorful">Object.prototype</strong> is also an object itself and contains a set of helper methods. The role of <strong class="colorful">__proto__</strong> is to implicitly make these methods available to the newly created object.</p>
+						</div>
+						<div class="column is-1"></div>
+						<div class="column fragment">
+<pre class="is-marginless"><code class="hljs javascript" trim-data contenteditable>
+ Object.prototype {
+   constructor: [Function],
+   hasOwnProperty: [Function],
+   toString: [Function],
+   valueOf: [Function],
+   ...
+ }
+
+</code></pre>
+						</div>
+					</div>
+				</section>
+				<section>
+					<h6>Accessing the <strong class="colorful">Object.prototype</strong> methods</h6>
+					<div class="columns">
+						<div class="column">
+<h6 class="has-text-weight-normal">Our obj Object</h6>
+<pre class="is-marginless"><code class="hljs javascript" trim-data contenteditable>let obj = { 
+  key: "value",
+  __proto__: Object.prototype
+}
+</code></pre>
+<p class="has-text-left is-size-4 fragment">Accessing the <strong class="colorful">obj</strong> object's own properties:</p>
+<pre class="is-marginless fragment"><code class="hljs javascript" trim-data contenteditable>obj.key;
+// "value"
+</code></pre>
+<p class="has-text-left is-size-4 fragment">Accessing the prototype's methods:</p>
+<pre class="is-marginless fragment"><code class="hljs javascript" trim-data contenteditable>obj.valueOf();
+// { key: "value" }
+</code></pre>
+<pre class="is-marginless fragment"><code class="hljs javascript" trim-data contenteditable>obj.hasOwnProperty( "key" );
+// true
+</code></pre>
+<pre class="is-marginless fragment"><code class="hljs javascript" trim-data contenteditable>obj.hasOwnProperty( "valueOf" );
+// false
+</code></pre>
+
+						</div>
+						<div class="column">
+							<h6 class="has-text-weight-normal">Object.prototype</h6>
+<pre class="is-marginless"><code class="hljs javascript" trim-data contenteditable>
+ {
+   constructor: [Function],
+   hasOwnProperty: [Function],
+   toString: [Function],
+   valueOf: [Function],
+   ... more methods ...
+ }
+
+</code></pre>
+
+						</div>
+					</div>
+				</section>
+				<section data-background="darkorange">
+					<h3>Accessing an object's own properties:</h3>
+					<div class="columns">
+						<div class="column">
+							<img src="./images/object-own.svg" alt="">
+						</div>
+					</div>
+				</section>
+				<section data-background="darkorange">
+					<h3>Accessing an object's inherited properties:</h3>
+					<div class="columns">
+						<div class="column">
+							<img src="./images/object-proto.svg" alt="">
+						</div>
+					</div>
+				</section>
+				</section>
+
+				<!-- Chapter 2: THE CONSTRUCTOR -->
+			<section>
+				<section>
+					<h3>Chapter 2</h3>
+					<h2 class="has-text-weight-normal">The Constructor</h2>
+				</section>
+
+				<section>
+					<p class="colorful">What is a Constructor?</p>
+					<div class="columns">
+						<div class="column is-10 is-offset-1">
+							<p class="fragment is-size-3">A function called with the new keyword.</p>
+							<p class="fragment is-size-3">A function constructor always returns a new object<br/>whose type depends on the constructor.</p>
+						</div>
+					</div>
+						<div class="columns is-multiline">
+							<div class="fragment column is-8">
+								<h6 class="is-size-4 has-text-weight-normal">Calling builtin functions using the new keyword</h6>
+								<pre class="is-marginless">
+<code class="hljs javascript" trim-data contenteditable>
+  let obj = new Object( { key: "value" } );
+
+  let arr = new Array( 1, 2, 3 );
+
+  let err = new Error( "Whoops!" );
+
+</code>
+</pre>
+							</div>
+							<div class="fragment column">
+								<h6 class="is-size-4 has-text-weight-normal">Produces:</h6>
+								<pre class="is-marginless">
+<code class="hljs javascript" trim-data contenteditable>
+  { key: "value" }
+  
+  [ 1, 2, 3 ]
+  
+  Error: Whoops!
+
+</code>
+</pre>
+							</div>
+							<div class="fragment column is-12">
+								<h6 class="is-size-4 has-text-weight-normal is-italic">*Remember: <strong class="colorful">typeof Object</strong> === <strong class="colorful">typeof Array</strong> === <strong class="colorful">typeof Error</strong> === "function"</h6>
+
+							</div>
+						</div>
+
+				</section>
+				<section>
+					<div class="columns">
+						<div class="column is-10 is-offset-1">
+							<p class="is-size-4">All of our newly created objects contain a <strong class="colorful">__proto__</strong> property<br/>which links them to their constructor's prototype object...</p>
+						</div>
+					</div>
+					<div class="columns">
+						<div class="column is-5">
+<pre class="is-marginless">
+<code class="hljs javascript" trim-data contenteditable>
+  obj { key: "value" }
+  arr [ 1, 2, 3 ]
+  err Error: Whoops!
+
+</code>
+</pre>
+										
+						</div>
+						<div class="column fragment">
+<pre class="is-marginless">
+<code class="hljs javascript" trim-data contenteditable>
+  obj.__proto__ === Object.prototype
+  arr.__proto__ === Array.prototype
+  err.__proto__ === Error.prototype
+
+</code>
+</pre>
+										
+						</div>
+					</div>
+					<div class="columns fragment">
+							<div class="column is-10 is-offset-1">
+								<p class="is-size-4">...and subsequently to the object prototype's inherited methods:</p>
+							</div>
+					</div>
+					<div class="columns fragment">
+						<div class="column is-7">
+<pre class="is-marginless">
+<code class="hljs javascript" trim-data contenteditable>
+  obj.valueOf(); // { key: "value" }
+  arr.reverse(); // [ 3, 2, 1 ]
+  err.message;   // ""
+
+</code>
+</pre>
+										
+						</div>
+						<div class="column">
+<pre class="is-marginless">
+<code class="hljs javascript" trim-data contenteditable>
+  Object.prototype.valueOf
+  Array.prototype.reverse()
+  Error.prototype.message
+
+</code>
+</pre>
+										
+						</div>
+					</div>
+
+
+				</section>
+				<section>
+					<div class="columns">
+						<div class="column is-10 is-offset-1">
+							<p class="is-size-3">By linking object instances to their Constructor prototype object we are conserving memory and gaining speed.</p>
+							<p class="is-size-3 is-marginless">Multiple instances of a Constructor, can share a single set of methods through the prototype object, while maintaining their own unique set of property values:</p><p></p>
+<pre class="is-marginless">
+<code class="hljs javascript" trim-data contenteditable>
+  Array.prototype.sort [Function]
+  Array.prototype.reverse [Function]
+  Array.prototype.map [Function]
+  ...
+</code>
+</pre>
+<pre class="is-marginless">
+<code class="hljs javascript" trim-data contenteditable>// Unique properties:    // Shared methods:
+
+  let arr1 = [1,2,3];     arr1.sort();
+  let arr2 = [4,5,6];     arr2.sort();
+  let arr3 = [7,8,9];     arr3.sort();
+
+</code>
+</pre>
+						</div>
+					</div>
+				</section>
+				<section>
+					<div class="columns">
+						<div class="column is-10 is-offset-1">
+							<i class="fas fa-flask" style="color:orange"></i>
+							<p>We can also create our own Constructors using custom functions and construct custom objects using the new keyword.</p>
+						</div>
+					</div>
+					<div class="columns">
+						<div class="column fragment is-8">
+							<h6 class="is-size-4 has-text-weight-normal">Our Pizza Constructor...</h6>
+<pre class="is-marginless">
+<code class="hljs javascript" trim-data contenteditable>
+function Pizza( sauce, cheese ){
+  this.sauce = sauce;
+  this.cheese = cheese;
+}
+
+let yummy = new Pizza("tomato","mozzarella");
+
+</code>
+</pre>
+										
+						</div>
+						<div class="column fragment ">
+							<h6 class="is-size-4 has-text-weight-normal">...produces:</h6>
+<pre class="is-marginless">
+<code class="hljs javascript" trim-data contenteditable>
+ yummy {
+  sauce: "tomato",
+  cheese: "mozzarella"
+ }
+
+</code>
+</pre>
+										
+						</div>
+					</div>
+					<h6 class="fragment is-size-4 has-text-weight-normal is-italic">*Note: The <strong class="colorful">this</strong> keyword inside a function constructor, refers to the object being constructed.</h6>
+				</section>
+	
+			</section>
+				<!-- Chapter 3: PROTOTYPAL INHERITANCE & -->
+				<section>
+					<section>
+						<h3>Chapter 3</h3>
+						<h2 class="has-text-weight-normal">Prototypal Inheritance</h2>
+					</section>
+					<section>
+						<p>By utilizing JavaScript's prototype object and its underlying linkage mechanism we can implement some powerful object oriented patterns.</p>
+						<br/>
+						<p class="fragment"><i class="fa fas fa-flask"></i> Let's dive into some examples...</p>
+					</section>
+					<section>
+						<p class="is-size-4 is-marginless is-paddingless">Create a Constructor that will create new instances with unique properties:</p>
+<pre>
+	<code class="hljs javascript is-marginless" data-trim contenteditable>
+function User( options ) {
+
+  this.name = options.name;
+  this.surname = options.surname;
+  this.plan = options.plan;
+
+}		
+	</code>
+</pre>
+<p class="fragment is-size-4 is-marginless is-paddingless">Add methods to our Constructor's prototype object.<br/>These methods will be created once but will be shared by all new instances.</p>
+<pre>
+	<code class="fragment hljs javascript is-marginless" data-trim contenteditable>
+User.prototype.getFullName = function(){
+  return this.name + " " + this.surname;
+}
+
+User.prototype.upgradePlan = function(){
+  this.plan = "Premium";
+}
+	</code>
+</pre>						
+					</section>
+					<section>
+<p class="is-size-4 is-marginless is-paddingless">Our newly created instances will be sharing the same set of methods <br/>inherited from their constructor's prototype object:</p>
+<pre>
+	<code class="hljs javascript" data-trim contenteditable>
+
+  let user001 = new User(
+	  { name: "Jane", surname: "Doe", plan: "Basic" }
+  );
+  
+  let user002 = new User(
+	  { name: "John", surname: "Dalton", plan: "Basic" }
+  );
+ 
+  let user003 = new User(
+	  { name: "Rebecca", surname: "Brown", plan: "Basic" }
+  );
+
+  user001.getFullName();  // "Jane Doe";
+  user002.upgradePlan();  // { plan: "Premium", name: "John", ... }
+  user003.getFullName();  // "Rebecca Brown"
+
+</code>
+</pre>						
+
+					</section>
+					<section>
+						<p class="is-size-4 is-marginless is-paddingless">Let's extend our User Object to create a new type of Premium User object</p>
+<pre>
+	<code class="hljs javascript" data-trim contenteditable>
+function PremiumUser( options ){
+  User.call(this, { name: options.name, surname: options.surname });
+  this.plan = "Premium";
+}
+
+PremiumUser.prototype = User.prototype;
+
+PremiumUser.prototype.constructor = PremiumUser;
+
+PremiumUser.prototype.special = function(){
+  return "Premium Specials!";
+}
+// Shadowing / Overriding our Parent's method:
+PremiumUser.prototype.upgradePlan = function(){
+  this.plan = "Golden";
+}
+
+</code>
+</pre>						
+
+					</section>
+					<section>
+						<p class="is-size-4 is-marginless is-paddingless">Let's create our first Premium User instace:</p>
+<pre>
+	<code class="hljs javascript" data-trim contenteditable>
+let prem001 = new Premium({ name: "Clark", surname: "Kent" })
+
+prem001.getFullName();  // "Clark Kent"
+
+prem001.upgradePlan();  // { plan: "Golden", name: ... }
+
+</code>
+</pre>						
+
+					</section>
+					<section data-background="orange">
+						<h4>A stroll down Prototype lane...</h4>
+						<img src="images/object-chain.svg" alt="">
+					</section>
+				</section>
+			
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<!-- CONFIGURATION -->
+		<script>
+			Reveal.initialize({
+				history: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+
+</body>
+</html>

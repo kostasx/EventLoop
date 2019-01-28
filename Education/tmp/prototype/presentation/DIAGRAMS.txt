@@ -1,0 +1,26 @@
+Title: Walking through the Prototype Chain\nof obj { key: "value" }
+obj.key->obj: Is key available?
+obj-->obj.key: Yes, here you are: "value"
+Note over obj,Object.prototype: __proto__
+
+
+Title: Walking through the Prototype Chain\nof obj { key: "value" }
+obj.valueOf()->obj: Is valueOf available?
+Note right of obj: Nope valueOf could not be found.\nLet me check prototype... 
+obj->Object.prototype: Do you have valueOf?
+Object.prototype-->obj: Yes. Here you are: valueOf
+obj-->obj.valueOf(): obj.valueOf
+Note over obj,Object.prototype: __proto__
+
+prem001.getFullName()->prem001: Is .getFullName() available?
+Note right of prem001: No. Checking PremiumUser.prototype. 
+prem001->PremiumUser.prototype: Do you have getFullName()?
+Note right of PremiumUser.prototype: No. Checking User.prototype. 
+prem001-->prem001.getFullName(): .getFullName()
+PremiumUser.prototype->User.prototype: Do you have getFullName()
+User.prototype-->PremiumUser.prototype: Yes. Here you are.
+PremiumUser.prototype-->prem001: getFullName()
+prem001-->prem001.getFullName(): getFullName()
+
+
+

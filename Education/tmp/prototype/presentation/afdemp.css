@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Londrina+Solid:100,300,400,900');
+@import url('https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700,900');
+
+body {
+    background: indigo;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Londrina Solid', cursive !important;
+    font-weight: 100 !important;
+    text-transform: none !important;
+    disabled-font-family: 'Maven Pro', sans-serif !important;
+}
+.reveal strong, .reveal b {
+    font-weight: 300;
+}
+
+.reveal section img {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.colorful {
+    color: darkorange !important;
+}
+
+.reveal pre,
+.reveal code {
+  DISwhite-space: pre-line !important;
+  box-shadow: none;
+}
+
+.reveal .hljs {
+    DISwhite-space: pre-wrap !important;
+}
+
+.reveal .progress {
+    color: rebeccapurple;
+}
+.reveal .controls {
+    color: darkorange;
+}
+/* BULMA OVERRIDES */
+pre {
+    font-size: 1.3rem !important;
+    background: transparent;
+    overflow: hidden;
+}
+strong {
+    color: white;
+}
+/* JS SEQUENCE DIAGRAMS */
+.diagram {
+    background: darkorange;
+}
