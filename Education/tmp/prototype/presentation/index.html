@@ -438,6 +438,27 @@ User.prototype.upgradePlan = function(){
 
 					</section>
 					<section>
+						<h3>Extending Objects</h3>
+						<div class="columns">
+							<div class="column is-10 is-offset-1">
+								<p class="is-size-3 fragment">We can extend Constructors and their prototype object<br/>by using the <strong class="colorful">Object.create()</strong> builtin method.</p>
+<pre>
+	<code class="fragment hljs javascript" data-trim contenteditable>
+let Child = Object.create( Parent );
+</code>
+</pre>						
+<p class="is-size-4 fragment">From MDN: <span class="is-italic"> The <strong>Object.create()</strong> method creates a new object, using an existing object as the prototype of the newly created object.</p>						
+<p class="is-size-4 fragment">We can use the power and flexibility of Object.create() to extend an object's prototype like this:</p>					<pre>
+		<code class="fragment hljs javascript" data-trim contenteditable>
+Child.prototype = Object.create( Parent.prototype );
+	</code>
+	</pre>						
+		
+
+							</div>
+						</div>
+					</section>
+					<section>
 						<p class="is-size-4 is-marginless is-paddingless">Let's extend our User Object to create a new type of Premium User object</p>
 <pre>
 	<code class="hljs javascript" data-trim contenteditable>
@@ -446,8 +467,7 @@ function PremiumUser( options ){
   this.plan = "Premium";
 }
 
-PremiumUser.prototype = User.prototype;
-
+PremiumUser.prototype = Object.create( User.prototype );
 PremiumUser.prototype.constructor = PremiumUser;
 
 PremiumUser.prototype.special = function(){
@@ -459,7 +479,7 @@ PremiumUser.prototype.upgradePlan = function(){
 }
 
 </code>
-</pre>						
+</pre>
 
 					</section>
 					<section>
