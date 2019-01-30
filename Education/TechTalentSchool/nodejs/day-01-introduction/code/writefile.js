@@ -3,7 +3,8 @@ const fs = require( "fs" );
 // SYNC: 
 /*
 try {
-    fs.writeFileSync( "./path/temp.txt", "SOME DATA" );
+    fs.writeFileSync( "./temp.txt", "SOME DATA" );
+                //  ( "./not/temp.txt" ... will not work if dir not exists
 } catch ( err ){
     console.log( err.message );
 }
