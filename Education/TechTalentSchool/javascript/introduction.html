@@ -3765,11 +3765,14 @@ can be placed like this.
           <section>
             <h6>Explicit Coercion (Manual)</h6>
             <pre><code class="hljs javascript" data-trim contenteditable>let strValue = "2";
-let numValue = 2;</code></pre>
+let numValue = 2;
+let floatValue = "3.1415";</code></pre>
             <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>Number( strValue ); 
 //=> 2</code></pre>
             <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>parseInt( strValue, 10 );
 //=> 2</code></pre>
+            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>parseFloat( floatValue, 10 );
+//=> 3.1415</code></pre>
             <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>String( numValue );
 //=> "2"</code></pre>
             <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>""+2
@@ -4578,7 +4581,11 @@ let numValue = 2;</code></pre>
 
         </section>
         <!-- COMPARISON OPERATORS-->
-        <section class="svg_contain"><svg enable-background="new 0 0 1024 768" height="768" viewBox="0 0 1024 768" width="1024" xml:space="preserve"
+        <section>
+          <section>
+            <h3 class="colorful">Comparison Operators</h3>
+          </section>
+          <section class="svg_contain"><svg enable-background="new 0 0 1024 768" height="768" viewBox="0 0 1024 768" width="1024" xml:space="preserve"
     xmlns="http://www.w3.org/2000/svg">
     <path d="m1-2h1023v769h-1023z" fill="#0d2234" />
     <g fill="none" opacity=".1" stroke="#fff" stroke-miterlimit="10">
@@ -4712,9 +4719,8 @@ let numValue = 2;</code></pre>
     </text>
 </svg>
 
-        </section>
-        <!-- COMPARISON OPERATORS-->
-        <section class="svg_contain"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+          </section>
+          <section class="svg_contain"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
     y="0px" width="1024px" height="768px" viewBox="0 0 1024 768" enable-background="new 0 0 1024 768" xml:space="preserve">
     <rect x="1" y="-2" fill="#0D2234" width="1023" height="769" />
     <g opacity="0.1">
@@ -4836,6 +4842,12 @@ let numValue = 2;</code></pre>
     </text>
 </svg>
 
+          </section>
+          <section>
+            <p><strong class="colorful">What's the use?</strong></p>
+            <p class="fragment">They help us switch our code<br/>and add conditional logic</p>
+            <p class="small fragment">( Drawing Board / Conditionals Chart )</p>
+          </section>
         </section>
         <!-- LOGICAL OPERATORS-->
         <section class="svg_contain"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"

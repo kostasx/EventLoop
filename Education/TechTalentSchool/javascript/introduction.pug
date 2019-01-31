@@ -344,6 +344,7 @@ html(lang='en')
                             code.hljs.javascript(data-trim contenteditable).
                                 let strValue = "2";
                                 let numValue = 2;
+                                let floatValue = "3.1415";
                         pre.fragment
                             code.hljs.javascript(data-trim contenteditable).
                                 Number( strValue ); 
@@ -352,6 +353,10 @@ html(lang='en')
                             code.hljs.javascript(data-trim contenteditable).
                                 parseInt( strValue, 10 );
                                 //=> 2
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                parseFloat( floatValue, 10 );
+                                //=> 3.1415
                         pre.fragment
                             code.hljs.javascript(data-trim contenteditable).
                                 String( numValue );
@@ -431,12 +436,17 @@ html(lang='en')
                     include introduction/null-undefined.svg
 
                 // COMPARISON OPERATORS
-                section.svg_contain
-                    include introduction/comparison-operators-001.svg
-
-                // COMPARISON OPERATORS
-                section.svg_contain
-                    include introduction/comparison-operators-002.svg
+                section
+                    section
+                        h3.colorful Comparison Operators
+                    section.svg_contain
+                        include introduction/comparison-operators-001.svg
+                    section.svg_contain
+                        include introduction/comparison-operators-002.svg
+                    section
+                        p <strong class="colorful">What's the use?</strong>
+                        p.fragment They help us switch our code<br/>and add conditional logic
+                        p.small.fragment ( Drawing Board / Conditionals Chart )
 
                 // LOGICAL OPERATORS
                 section.svg_contain
