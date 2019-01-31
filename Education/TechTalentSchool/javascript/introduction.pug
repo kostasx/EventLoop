@@ -83,18 +83,6 @@ html(lang='en')
                 // TTS | INTRO
                 section#tts-intro.tts-title(data-state='tts-intro' data-transition="fade-out")
 
-                //- INTRO
-                    section
-                    h2 JavaScript Fundamentals
-                    h3.colorful Front-end Bootcamp
-                    p
-                        small
-                        | Created by 
-                        a(href='https://github.com/kostasx') Kostas Minaidis
-                        |  | Sep 2018
-                    p
-                        img.tts_logo(style='width:140px; height:94px;' src='../img/tts-logo.png' alt='')
-
                 section(data-state='intro')
                     include introduction/introduction.svg
 
@@ -112,7 +100,10 @@ html(lang='en')
 
                 // JS
                 section
-                    include introduction/js.svg
+                    section
+                        include introduction/js.svg
+                    section
+                        a(href="./introduction/html-css-js.html" target="_blank") HTML + CSS + JS
 
                 // HTML + CSS + JS
                 section
@@ -154,6 +145,23 @@ html(lang='en')
                     // JS Proper Placement of <script>
                     section.svg_contain
                         include introduction/js-includes-best-practices.svg
+
+                    // Practice: Embed JS
+                    section
+                        h6 Let's introduce ourselves to our first JS command<br/> and test all these methods:
+                        .columns
+                            .column.is-6.is-offset-3
+                                pre
+                                    code.htjs.javascript(data-trim contenteditable).
+
+                                        document.write( "Hello JS!" );
+
+                        p.small.fragment - Internal <strong class="colorful">&lt;head&gt;&lt;script&gt;</strong>
+                        p.small.fragment - Internal <strong class="colorful">&lt;/body&gt;&lt;script&gt;</strong>
+                        p.small.fragment - External <strong class="colorful">&lt;script src="app.js"&gt;</strong><br/>( app.js is just a text file with a .js extension )
+                        p.small.fragment - Inline (Should be avoided!)
+                        p.small.fragment
+                            a(href="https://developer.mozilla.org/en-US/docs/Web/API/Document/write" target="_blank") * document.write @ Mozilla Developer Network 
 
                 // JS INTERPRETER #1
                 section.svg_contain(data-transition="fade-out")
@@ -356,13 +364,25 @@ html(lang='en')
                 // VARIABLES
                 section.svg_contain
                     section
+                        h3 Variables
+                        p.fragment ( A dive into our mobile phone's<br/>contacts mechanism )
+                        a.fragment(href="http://www.pythontutor.com/javascript.html#code=let%20kostas%20%3D%206900112233%3B%0Alet%20mary%20%3D%206900445566%3B%0Alet%20george%20%3D%206900778899%3B%0A%0Aconsole.log%28%20%22Let's%20call%20Kostas%3A%20%22,%20kostas%20%29%3B%0Aconsole.log%28%20%22Let's%20text%20Mary%3A%20%22,%20mary%20%29%3B%0Aconsole.log%28%20%22Let's%20ring%20George%3A%20%22,%20george%20%29%3B%0A%0A//%20Oops!%20George%20has%20changed%20his%20number%3A%0A%0Ageorge%20%3D%206911002233%3B%0A%0Aconsole.log%28%20%22Let's%20call%20George%3A%20%22,%20george%20%29%3B%0A&curInstr=8&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D" target="_blank") Visual Representation
+                    section
                         include introduction/variables-001.svg
                     section
                         include introduction/variables-002.svg
                     section
                         h2 Let's see a visualization...
                         a(target="_blank" href="http://www.pythontutor.com/javascript.html#code=let%20someName%20%3D%20%22Kostas%22%3B%0Alet%20someDate%20%3D%202018%3B%0AsomeDate%20%3D%202019%3B%0Aconst%20dateOfBirth%20%3D%201995%3B%0A%0A//%20Access%20%26%20print%20the%20Values%3A%0Aconsole.log%28%20someDate%20%29%3B%0Aconsole.log%28%20dateOfBirth%20%29%3B&curInstr=6&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D") 
-                            h2 https://bit.ly/2AOczXA 
+                            p https://bit.ly/2AOczXA 
+                    section
+                        h6 Variable Naming Rules
+                        .columns
+                            .column.is-8.is-offset-2
+                                ul(style="font-size:2rem")
+                                    li.fragment Variables must not begin with a number: <strong class="colorful">let 3sisters = "Chekhov";</strong>
+                                    li.fragment Only the <strong class="colorful">$</strong> and <strong class="colorful">_</strong> non-alphanumeric characters are allowed
+                                    li.fragment Variables names are case sensitive: <strong class="colorful">myname</strong> is not the same as <strong class="colorful">myName</strong> or <strong class="colorful">MyName</strong>
 
                 // PRACTICE TIME: https://codepen.io/kostasx/pen/QaoRZN
                 section(data-transition="slide" data-background="#F7BE2C" data-background-transition="zoom")
@@ -390,12 +410,11 @@ html(lang='en')
                         include introduction/arrays-003.svg
                     // VISUALIZATION
                     section
-                        h2 Let's some visualizations...
+                        h6 Let's check out some visualizations...
                         a(target="blank" href="http://www.pythontutor.com/javascript.html#code=let%20listOfNames%20%3D%20%5B%20'Abdul',%20'Sofia',%20'Chris'%20%5D%3B%0A%0Aconsole.log%28%20listOfNames%20%29%3B%0A%0AlistOfNames%5B2%5D%20%3D%20'Mary'%3B%0A%0Aconsole.log%28%20listOfNames%5B2%5D%20%29%3B%0A%0Aconsole.log%28%20listOfNames%20%29%3B%0A&curInstr=5&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D")
-                            h2 https://bit.ly/2Ue8btL
-                        .linebreak
+                            p https://bit.ly/2Ue8btL
                         a(href="http://www.pythontutor.com/javascript.html#code=let%20numberList%20%3D%20%5B%201,%202,%203%20%5D%3B%0A%0AnumberList.push%28%204%20%29%3B%0A%0AnumberList.pop%28%204%20%29%3B%0A%0AnumberList.unshift%280%29%3B%0A%0AnumberList.shift%28%29%3B&curInstr=5&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D" target="_blank")
-                            h2 https://bit.ly/2KQCumh
+                            p https://bit.ly/2KQCumh
 
                 // PRACTICE TIME: https://codepen.io/kostasx/pen/ppBGGb
                 section(data-transition="slide" data-background="#F7BE2C" data-background-transition="zoom")
@@ -748,22 +767,51 @@ html(lang='en')
                 // OBJECTS
                 section
                     section
-                        <h3 class="colorful">Objects</h3>
-                        <h5 class="fragment">{ Advanced Data Structures }</h5>
+                        h3.colorful Objects
+                        h5.fragment { Advanced Data Structures }
                     section
-                        <h5>Remember Arrays?</h5>
+                        h5 Remember Arrays?
                         pre
-                            code.hljs(data-trim contenteditable).
+                            code.hljs.javascript(data-trim contenteditable).
                                 let arr = [ "Kosmas", "Kostas", "Chris" ]; 
-                                console.log( arr[0] );
-                        <p><small>Under the hood, this works much like this:</small></p>
-                        pre
+
+                                console.log( arr[0] ); // "Kosmas"
+                        <p class="fragment"><small>Under the hood, this works much like this:</small></p>
+                        pre.fragment
                             code.hljs(data-trim contenteditable).
                                 [ 0: "Kosmas", 1: "Kostas", 2: "Chris" ]
+                        <p class="fragment"><small>Try it on your console!</small></p>
+
+                    // OBJECTS: Objects as Variable Collections
                     section
-                        <p>Declaring an Object:</p>
+                        p Objects as Variable Collections
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                let model = "Nokia";
+                                let color = "Black";
+                                let type  = "X5";
+                        p.fragment Organize:
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                {
+                                    model : "Nokia",
+                                    color : "Black",
+                                    type  : "X5",
+                                }
+                        p.fragment Pack:
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                let nokiaPhone = {
+                                    model : "Nokia",
+                                    color : "Black",
+                                    type  : "X5",
+                                }
+
+                    // OBJECTS: Declaring an Object
+                    section
+                        p Declaring an Object:
                         pre
-                            code.hljs(data-trim contenteditable).
+                            code.hljs.javascript(data-trim contenteditable).
                                 let obj = { 
 
                                     teacher: "Kosmas",
@@ -772,8 +820,10 @@ html(lang='en')
 
                                 }
                         <p><small>In Objects, instead of using a numeric index for each element,<br />we explicitly define a key (String).</small></p>
+
+                    // OBJECTS: Accessing Object Properties
                     section
-                        <p>Accessing an Object Property:</p>
+                        p Accessing an Object Property:
                         pre
                             code.hljs(data-trim contenteditable).
                                 let obj = { teacher: "Kosmas", assistant: "Kostas", founder: "Chris" }
@@ -908,26 +958,29 @@ html(lang='en')
                         .column.is-8.is-offset-2
                             ul(style="font-size: 28px;")
                                 li
-                                    a( href="https://jgthms.com/javascript-in-14-minutes/") JavaScript in 14 minutes
+                                    p Google: <strong class="colorful">mdn js keyword</strong>
                                 li
-                                    a( href="https://www.javascript.com/" ) READY TO TRY JavaScript?
+                                    <a target="_blank" href="https://scrimba.com/g/gintrotojavascript">Scrimba: Introduction to JavaScript</a>
                                 li
-                                    a( href="http://jsforcats.com/" ) JavaScript for Cats: An introduction for new programmers
+                                    <a target="_blank" href="https://www.sololearn.com/">SoloLearn</a>
                                 li
-                                    a( href="https://wsvincent.com/javascript-guide/" ) JavaScript Guide by William S. Vincent
+                                    a( target="_blank" href="https://jgthms.com/javascript-in-14-minutes/") JavaScript in 14 minutes
                                 li
-                                    <a href="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch1.md">You Don't Know JS - Up &amp; Going | Into Programming</a>
+                                    a( target="_blank" href="https://www.javascript.com/" ) READY TO TRY JavaScript?
                                 li
-                                    <a href="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch2.md">You Don't Know JS - Up &amp; Going | Into JavaScript</a>
+                                    a( target="_blank" href="http://jsforcats.com/" ) JavaScript for Cats: An introduction for new programmers
                                 li
-                                    <a href="https://scrimba.com/g/gintrotojavascript">Scrimba: Introduction to JavaScript</a>
+                                    a( target="_blank" href="https://wsvincent.com/javascript-guide/" ) JavaScript Guide by William S. Vincent
                                 li
-                                    <a href="https://javascript.info/first-steps">JavaScript.info: JavaScript Fundamentals</a>
+                                    <a target="_blank" href="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch1.md">You Don't Know JS - Up &amp; Going | Into Programming</a>
                                 li
-                                    <a href="https://www.w3schools.com/js/default.asp">W3Schools: JavaScript</a>
+                                    <a target="_blank" href="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch2.md">You Don't Know JS - Up &amp; Going | Into JavaScript</a>
                                 li
-                                    <a href="https://www.codecademy.com/learn/introduction-to-javascript">Introduction to JavaScript: Learn
-                                        JavaScript fundamentals and build interactive websites and pages.</a>
+                                    <a target="_blank" href="https://javascript.info/first-steps">JavaScript.info: JavaScript Fundamentals</a>
+                                li
+                                    <a target="_blank" href="https://www.w3schools.com/js/default.asp">W3Schools: JavaScript</a>
+                                li
+                                    <a target="_blank" href="https://www.codecademy.com/learn/introduction-to-javascript">Codecademy: Introduction to JavaScript</a>
 
                 // EXERCISES 
                 section
