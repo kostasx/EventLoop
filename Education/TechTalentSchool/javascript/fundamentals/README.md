@@ -47,9 +47,14 @@
 
 ### REFERENCES
 
+- [The `defer` and `async` script attributes](https://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html)
 - [String Methods](https://www.w3schools.com/js/js_string_methods.asp)
 - [Number Methods](https://www.w3schools.com/js/js_number_methods.asp)
 - [Array Methods](https://www.w3schools.com/js/js_array_methods.asp)
+- [Array push()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
+- [Array pop()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)
+- [Array shift()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)
+- [Array.unshift()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift)
 
 </details>
 
@@ -172,6 +177,7 @@ References:<br/>
 - [JavaScript Errors Notifier Extension for Chrome](https://chrome.google.com/webstore/detail/javascript-errors-notifie/jafmfknfnkoekkdocjiaipcnmkklaajd?hl=en)
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Live Server extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+- [Python Tutor Visualizations in JavaScript](http://www.pythontutor.com/javascript.html#mode=edit)
 
 ### RESOURCES | LEARNING
  
