@@ -39,32 +39,11 @@
 
 ### QUESTIONS
 
-***What happens if I omit the ; after a statement? Is it optional?***
-
-- If you omit a semicolon `;` at the end of the statement, JavaScript will try to guess and automatically place the semicolon itself. Most of the times, it does a good job at this, but there are cases where the automatic semicolon placement mechanism will produce undesirable effects. Therefore, we tend to place the semicolons ourselves. Try to get into the habit of placing semicolons at the end of your statements.  
-
 ***How do we clear the console?***
 
 - Click the `Clear Console` Button
 - Press `Ctrl + L`
 - Write `console.clear();`
-
-***Are the `break` and `default` statements optional inside the `switch` statement?***
-
-- Yes, they can be omitted, but make sure to check out the following 2 MDN resources:
-- [_What happens if I forgot a break?_](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch#What_happens_if_I_forgot_a_break)
-- [`Switch` description](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch#Description)
-
-### REFERENCES
-
-- [The `defer` and `async` script attributes](https://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html)
-- [String Methods](https://www.w3schools.com/js/js_string_methods.asp)
-- [Number Methods](https://www.w3schools.com/js/js_number_methods.asp)
-- [Array Methods - Full Reference](https://www.w3schools.com/js/js_array_methods.asp)
-  - [Array push()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
-  - [Array pop()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)
-  - [Array shift()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)
-  - [Array.unshift()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift)
 
 </details>
 
@@ -77,6 +56,16 @@
 - [Arrays](./code/arrays.html)
 
 ### QUESTIONS
+
+***What happens if I omit the ; after a statement? Is it optional?***
+
+- If you omit a semicolon `;` at the end of the statement, JavaScript will try to guess and automatically place the semicolon itself. Most of the times, it does a good job at this, but there are cases where the automatic semicolon placement mechanism will produce undesirable effects. Therefore, we tend to place the semicolons ourselves. Try to get into the habit of placing semicolons at the end of your statements.  
+
+***Are the `break` and `default` statements optional inside the `switch` statement?***
+
+- Yes, they can be omitted, but make sure to check out the following 2 MDN resources:
+- [_What happens if I forgot a break?_](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch#What_happens_if_I_forgot_a_break)
+- [`Switch` description](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch#Description)
 
 ***When we do a string comparison with ==, e.g. "4" == 3, which operand gets converted?***
 
@@ -117,14 +106,19 @@ Using the '\n' escape character.
     - When you want to tweak CSS styling before the body is rendered via a script.
 
 <br/>
-References:<br/>
+### REFERENCES
 
 - [What is the difference between placing <script> in head and before </body>?](https://www.reddit.com/r/javascript/comments/5di1va/what_is_the_difference_between_placing_script_in/)
-
+- [The `defer` and `async` script attributes](https://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html)
 - [Where to place JavaScript in an HTML file?](https://stackoverflow.com/questions/196702/where-to-place-javascript-in-an-html-file)
-
+- [String Methods](https://www.w3schools.com/js/js_string_methods.asp)
+- [Number Methods](https://www.w3schools.com/js/js_number_methods.asp)
+- [Array Methods - Full Reference](https://www.w3schools.com/js/js_array_methods.asp)
+  - [Array push()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
+  - [Array pop()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)
+  - [Array shift()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)
+  - [Array.unshift()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift)
 - [Should I write script in the body or the head of the html? [duplicate]](https://stackoverflow.com/questions/3531314/should-i-write-script-in-the-body-or-the-head-of-the-html)
-
 - [When to use the <script> tag in the head and body section of a html page? ](https://stackoverflow.com/questions/38407962/when-to-use-the-script-tag-in-the-head-and-body-section-of-a-html-page?noredirect=1&lq=1)
 
 ### REFERENCES
