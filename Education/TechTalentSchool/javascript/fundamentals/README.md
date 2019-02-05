@@ -45,6 +45,12 @@
 - Press `Ctrl + L`
 - Write `console.clear();`
 
+***Are the `break` and `default` statements optional inside the `switch` statement?***
+
+- Yes, they can be omitted, but make sure to check out the following 2 MDN resources:
+- [_What happens if I forgot a break?_](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch#What_happens_if_I_forgot_a_break)
+- [`Switch` description](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch#Description)
+
 ### REFERENCES
 
 - [The `defer` and `async` script attributes](https://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html)
