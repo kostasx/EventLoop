@@ -45,6 +45,12 @@
 - Press `Ctrl + L`
 - Write `console.clear();`
 
+### REFERENCES
+
+- [String Methods](https://www.w3schools.com/js/js_string_methods.asp)
+- [Number Methods](https://www.w3schools.com/js/js_number_methods.asp)
+- [Array Methods](https://www.w3schools.com/js/js_array_methods.asp)
+
 </details>
 
 <details>
