@@ -105,7 +105,6 @@ Using the '\n' escape character.
     - When performance/page load times are not considerably affected by the script
     - When you want to tweak CSS styling before the body is rendered via a script.
 
-<br/>
 ### REFERENCES
 
 - [What is the difference between placing <script> in head and before </body>?](https://www.reddit.com/r/javascript/comments/5di1va/what_is_the_difference_between_placing_script_in/)
@@ -120,9 +119,6 @@ Using the '\n' escape character.
   - [Array.unshift()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift)
 - [Should I write script in the body or the head of the html? [duplicate]](https://stackoverflow.com/questions/3531314/should-i-write-script-in-the-body-or-the-head-of-the-html)
 - [When to use the <script> tag in the head and body section of a html page? ](https://stackoverflow.com/questions/38407962/when-to-use-the-script-tag-in-the-head-and-body-section-of-a-html-page?noredirect=1&lq=1)
-
-### REFERENCES
-
 - [Loose Equals == vs. Strict Equals ===](https://github.com/getify/You-Dont-Know-JS/blob/master/types%20%26%20grammar/ch4.md#loose-equals-vs-strict-equals)
 - [The Switch Statement](https://github.com/getify/You-Dont-Know-JS/blob/f0d591b6502c080b92e18fc470432af8144db610/types%20%26%20grammar/ch5.md#switch)
 
