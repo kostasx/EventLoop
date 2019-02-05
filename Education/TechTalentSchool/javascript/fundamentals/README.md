@@ -39,6 +39,10 @@
 
 ### QUESTIONS
 
+***What happens if I omit the ; after a statement? Is it optional?***
+
+- If you omit a semicolon `;` at the end of the statement, JavaScript will try to guess and automatically place the semicolon itself. Most of the times, it does a good job at this, but there are cases where the automatic semicolon placement mechanism will produce undesirable effects. Therefore, we tend to place the semicolons ourselves. Try to get into the habit of placing semicolons at the end of your statements.  
+
 ***How do we clear the console?***
 
 - Click the `Clear Console` Button
