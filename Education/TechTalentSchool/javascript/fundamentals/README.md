@@ -50,11 +50,11 @@
 - [The `defer` and `async` script attributes](https://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html)
 - [String Methods](https://www.w3schools.com/js/js_string_methods.asp)
 - [Number Methods](https://www.w3schools.com/js/js_number_methods.asp)
-- [Array Methods](https://www.w3schools.com/js/js_array_methods.asp)
-- [Array push()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
-- [Array pop()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)
-- [Array shift()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)
-- [Array.unshift()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift)
+- [Array Methods - Full Reference](https://www.w3schools.com/js/js_array_methods.asp)
+  - [Array push()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
+  - [Array pop()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)
+  - [Array shift()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)
+  - [Array.unshift()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift)
 
 </details>
 
