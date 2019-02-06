@@ -104,7 +104,7 @@ html(lang='en')
                         li Async: Callbacks, Promises
                         li JSON &amp; Fetch()
                         li Prototypes &amp; Function Constructors
-                        li ES6: Template Literals, Arrow Functions &amp; Classes
+                        li Understanding `this` &amp; Explicit Binding: call, apply, bind 
 
                 // var, let, const & SCOPE
                 section(data-background='#9cbf3f')
@@ -1591,30 +1591,274 @@ html(lang='en')
                                 <img src="images/advanced/prototype.png" alt="">
                             <a target="_blank" href="https://codepen.io/kostasx/pen/yRLBaZ?editors=0012">Time for a quick CodePen...</a>
 
-                // ES6: CLASSES
+                // this, call, apply, bind
                 section
-                    h2 ES6 Classes
-                    h4 Syntactic Sugar for Prototypal Inheritance
-                    <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes">MDN ES6 Classes</a>
-                    <br>
-                    <p>Time for a CodePen:</p>
-                    <a target="_blank" style="font-size:1.6em;" href="https://bit.ly/2Rl0PU6">https://bit.ly/<strong style="color:white;">2Rl0PU6</strong></a>
-
-                // ES6: TEMPLATE LITERALS
-                section
-                    h2 ES6 Template Literals
-
-                // ES6: ARROW FUNCTIONS
-                section
+                    // INTRODUCTION
                     section
-                        h2 ES6 Arrow Functions
-                        <a href="https://javascript.info/function-expressions-arrows#arrow-functions" target="_blank">JavaScript.info: Arrow Functions</a>
-                        <br>
-                        <a href="https://javascript.info/arrow-functions" target="_blank">JavaScript.info: Arrow Functions Revisited</a>
-                        <hr>
-                        <a href="https://codepen.io/kostasx/pen/LgVdLb?editors=0010" target="_blank">CodePen Time!</a>
-                        <br>
-                        <a target="_blank" href="https://bit.ly/2zIZxLF">https://bit.ly/<strong style="color:white;">2zIZxLF</strong></a>
+                        h3 Understanding <strong class="colorful">this</strong>
+                        .columns
+                            .column.is-10.is-offset-1
+
+                                p.small When a function is invoked an execution context is created which is like a record containing information about where the function was called from (call-stack), how the function was invoked, what parameters were passed, etc. One of the properties of this record is the <strong class="colorful">this</strong> reference which will be used for the duration of that function's execution.
+
+                                p.small.fragment What <strong class="colorful">this</strong> references is determined entirely<br/>by the call-site where the function is called.
+                    // GLOBAL CONTEXT
+                    section
+                        h3 <strong class="colorful">this</strong> in Global Context
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+
+                                console.log( this );
+
+                                function run(){
+                                    console.log( this );
+                                }
+                        .linebreak
+                        p.small.fragment Both functions run within the global <strong class="colorful">(window)</strong> object.
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+
+                                window.console.log( this );
+                                window.run();
+                        p.small.fragment In both cases, <strong class="colorful">this</strong> references the window object (the functions' call-site).
+                    // FUNCTION CONSTRUCTORS + CLASSES
+                    section
+                        h3 <strong class="colorful">this</strong> in Function Constructors
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+
+                                function Person( name ){
+                                    console.log( this );
+                                    this.name = name;
+                                    this.show = function(){
+                                        console.log( this.name );
+                                    }
+                                }
+                        .linebreak
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                let person = new Person( "Kostas" );
+                                person.show();
+                        p.small.fragment <strong class="colorful">this</strong> is a reference to the Object created<br/>by the Function constructor using the <strong class="colorful">new</strong> keyword.
+                        p.small.fragment But...
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                Person( "Mary" );
+                    // ES6 CLASSES
+                    section
+                        h3 <strong class="colorful">this</strong> in ES6 Classes
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+
+                                class Person {
+                                    constructor( name ){
+                                        console.log( this );
+                                        this.name = name;
+                                    }
+                                    show(){
+                                        console.log( this.name );
+                                    }
+                                }
+                        .linebreak
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+
+                                let person = new Person( "Kostas" );
+                                person.show();
+                        p.small.fragment Since ES6 Classes are based on Function Constructors<br/>and Objects, they behave in much the same way.
+                    // OBJECT METHODS
+                    section
+                        h3 <strong class="colorful">this</strong> in Object Methods
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                let person = {
+                                    name: "Kostas",
+                                    show: function(){
+                                        console.log( this, this.name );
+                                    }
+                                }
+                        p.fragment.small When a function is called as a method of an object,<br/>its <strong class="colorful">this</strong> is set to the object the method is called on.
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                person.show();
+                                // person { }, "Kostas"
+                    // OBJECT METHODS #2
+                    section
+                        h3 <strong class="colorful">this</strong> in Object Methods #2
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                let person = {
+                                    name: "Kostas",
+                                    show: function(){
+                                        console.log( this, this.name );
+                                    }
+                                }
+                                let other = {
+                                    name: "Mary"
+                                }
+                                other.show = person.show;
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                other.show();
+                                // other { }, "Mary"
+                        p.fragment.small <strong class="colorful">REMEMBER</strong>: <strong class="colorful">this</strong> is set to the object the method is <strong class="colorful">called on</strong>.
+                    // DOM Event Handlers
+                    section
+                        h3 <strong class="colorful">this</strong> in DOM Event Handlers
+                        button#clickme(style="padding:10px 20px; font-size: 1.5rem") Click Me!
+                        .linebreak
+                        br
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                let $button = document.querySelector("#clickme");
+
+                                $button.addEventListener( "click", function(){
+
+                                    console.log( this );
+
+                                });
+                        p.small.fragment When a function is used as an event handler,<br/>its <strong class="colorful">this</strong> is set to the element the event fired from.
+                    // bind, call, apply
+                    section
+                        h3 Explicit Binding:<br/><strong class="colorful"> bind(), apply(), call()</strong>
+                    // bind
+                    section
+                        h3 <strong class="colorful"> bind()</strong>
+                        p.fragment Bind <strong class="colorful">this</strong> to <strong class="colorful">any</strong> Object explicitly.
+                        button.fragment#somebutton(style="padding:10px 20px; font-size: 1.5rem") Some Button!
+                        .linebreak
+                        br
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                let person = { name: "Kostas" }
+                        .linebreak
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                let $button = document.querySelector("#somebutton");
+                        .linebreak
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                function handleClick(){ console.log( this ); }
+                        .linebreak
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                $button.addEventListener( "click", handleClick.bind( person ) );
+                    // bind #2
+                    section
+                        h3 <strong class="colorful"> bind()</strong> #2
+                        .linebreak
+                        br
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                let person = { name: "Kostas" }
+
+                                function show(){
+                                    console.log( this.name );
+                                }
+
+                                show();
+
+                                let personShow = show.bind( person );
+
+                                personShow();
+                    // call, apply
+                    section
+                        h3 <strong class="colorful"> call(), apply()</strong>
+                        .linebreak
+                        br
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                let person = { 
+                                    name: "Kostas",
+                                    show: function( msg, end ){
+                                        console.log( msg + this.name + end );
+                                    } 
+                                }
+                                person.show( "Hello ", "!" );    // Hello Kostas!
+
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                let other = { name: "Mary" }
+
+                                person.show.call( other, "Hi ", "!" );
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+
+                                person.show.apply( other, [ "Hi ", "!" ] );
+                    // ARROW FUNCTIONS                            
+                    section
+                        h3 <strong class="colorful">this</strong> in Arrow Functions
+                        p.small.fragment Arrow functions don't provide their own this binding<br/>It retains the this value of the enclosing lexical context.
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                let obj = {
+                                    name: "Kostas",
+                                    show: function(){ 
+                                        setTimeout(function(){
+                                         console.log( this.name );
+                                        }, 2000)
+                                    }
+                                } 
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
+                                obj.show();
+                                /// undefined
+                    // ARROW FUNCTIONS #2
+                    section
+                        p.small Remember: setTimeout is called from window and thus<br/>its inner function binds <strong class="colorful">this</strong> to its context (that of the calling site).
+                        pre
+                            code.hljs.javascript(data-trim contenteditable).
+                                let obj = {
+                                    name: "Kostas",
+                                    show: function(){ 
+                                        window.setTimeout(function(){
+                                         console.log( this.name );
+                                        }, 2000)
+                                    }
+                                } 
+                        p.small.fragment How can we change this?
+                    // ARROW FUNCTIONS #3
+                    section
+                        p.small #1 Using bind()
+                        pre
+                            code.hljs.javascript(data-trim contenteditable).
+                                let obj = {
+                                    name: "Kostas",
+                                    show: function(){ 
+                                        window.setTimeout(function(){
+                                         console.log( this.name );
+                                        }.bind( this ), 2000)
+                                    }
+                                } 
+                    // ARROW FUNCTIONS #4
+                    section
+                        p.small #2 Using an Arrow Function
+                        pre
+                            code.hljs.javascript(data-trim contenteditable).
+                                let obj = {
+                                    name: "Kostas",
+                                    show: function(){ 
+                                        window.setTimeout(()=>{
+                                         console.log( this.name );
+                                        }, 2000)
+                                    }
+                                } 
+                    // SUMMARY
+                    section
+                        h3 Summary
+                        p.small.fragment Determining the <strong class="colorful">this</strong> binding for an executing function<br/>requires finding the direct call-site of that function.
+                        p.small.fragment Once examined, four rules can be applied<br/>to the call-site, in this order of precedence:
+                        p.small.fragment - Called with <strong class="colorful">new</strong>? Use the newly constructed object.
+                        p.small.fragment - Called with <strong class="colorful">call</strong> or <strong class="colorful">apply</strong> (or <strong class="colorful">bind</strong>)? Use the specified object.
+                        p.small.fragment - Called with a <strong class="colorful">context object</strong> owning the call? Use that context object.
+                        p.small.fragment <strong class="colorful">- Default</strong>: undefined in strict mode, global object otherwise.
+                    // RECAP
+                    section
+                        h6 Recap...
+                        h6 ...through some examples
+                        a(href="https://www.w3schools.com/js/js_this.asp" target="_blank") W3Schools
+                        br
+                        a.fragment(href="https://codepen.io/kostasx/pen/yGVOKQ?editors=1011" target="_blank") Let's practice a bit...
 
                 // RESOURCES
                 section
@@ -1645,16 +1889,10 @@ html(lang='en')
         script(src='../libs/reveal.js/js/reveal.js')
         script.
 
-            Reveal.configure({
-                keyboard: { 69: function(){} }
-            });
-
-            // More info https://github.com/hakimel/reveal.js#configuration
             Reveal.initialize({
                 maxScale: 1,
                 minScale: 1,
                 history: true,
-                // More info https://github.com/hakimel/reveal.js#dependencies
                 dependencies: [
                     { src: '../libs/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
                     { src: '../libs/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
@@ -1685,6 +1923,5 @@ html(lang='en')
                 }    
             };
 
-            //- Reveal.addEventListener('data-state-value-here', function (){});
             Reveal.addEventListener( 'ready', handleSlideDataChange );
             Reveal.addEventListener( 'slidechanged', handleSlideDataChange );

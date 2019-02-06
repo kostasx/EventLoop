@@ -87,13 +87,16 @@ html(lang='en')
                     ul(style='font-size:0.8em;')
 
                         li Handling Asynchronous code with Async/Await
-                        li Understanding `this` &amp; Explicit Binding: call, apply, bind 
+                        li ES6: Classes
+                        li ES6: Template Literals
+                        li ES6: Arrow Functions
                         li ES6: Default Function Parameters
                         li ES6: Spread Operator &amp; Destructuring Assignments
-                        li ES6: Modules
-                        li Types &amp; Equality
-                        li JS Patterns: The IIFE 
-                        li Regular Expressions
+
+                        //- li ES6: Modules
+                        //- li Types &amp; Equality
+                        //- li JS Patterns: The IIFE 
+                        //- li Regular Expressions
 
                 // ASYNC / AWAIT
                 section
@@ -160,274 +163,30 @@ html(lang='en')
                         a(class="bitly_link" target="_blank" href="https://bit.ly/2No4jlx")
                             span https://bit.ly/<strong>2No4jlx</strong>
 
-                // this, call, apply, bind
+                // ES6: CLASSES
                 section
-                    // INTRODUCTION
+                    h2 ES6 Classes
+                    h4 Syntactic Sugar for Prototypal Inheritance
+                    <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes">MDN ES6 Classes</a>
+                    <br>
+                    <p>Time for a CodePen:</p>
+                    <a target="_blank" style="font-size:1.6em;" href="https://bit.ly/2Rl0PU6">https://bit.ly/<strong style="color:white;">2Rl0PU6</strong></a>
+
+                // ES6: TEMPLATE LITERALS
+                section
+                    h2 ES6 Template Literals
+
+                // ES6: ARROW FUNCTIONS
+                section
                     section
-                        h3 Understanding <strong class="colorful">this</strong>
-                        .columns
-                            .column.is-10.is-offset-1
-
-                                p.small When a function is invoked an execution context is created which is like a record containing information about where the function was called from (call-stack), how the function was invoked, what parameters were passed, etc. One of the properties of this record is the <strong class="colorful">this</strong> reference which will be used for the duration of that function's execution.
-
-                                p.small.fragment What <strong class="colorful">this</strong> references is determined entirely<br/>by the call-site where the function is called.
-                    // GLOBAL CONTEXT
-                    section
-                        h3 <strong class="colorful">this</strong> in Global Context
-                        pre.fragment
-                            code.hljs.javascript(data-trim contenteditable).
-
-                                console.log( this );
-
-                                function run(){
-                                    console.log( this );
-                                }
-                        .linebreak
-                        p.small.fragment Both functions run within the global <strong class="colorful">(window)</strong> object.
-                        pre.fragment
-                            code.hljs.javascript(data-trim contenteditable).
-
-                                window.console.log( this );
-                                window.run();
-                        p.small.fragment In both cases, <strong class="colorful">this</strong> references the window object (the functions' call-site).
-                    // FUNCTION CONSTRUCTORS + CLASSES
-                    section
-                        h3 <strong class="colorful">this</strong> in Function Constructors
-                        pre.fragment
-                            code.hljs.javascript(data-trim contenteditable).
-
-                                function Person( name ){
-                                    console.log( this );
-                                    this.name = name;
-                                    this.show = function(){
-                                        console.log( this.name );
-                                    }
-                                }
-                        .linebreak
-                        pre.fragment
-                            code.hljs.javascript(data-trim contenteditable).
-                                let person = new Person( "Kostas" );
-                                person.show();
-                        p.small.fragment <strong class="colorful">this</strong> is a reference to the Object created<br/>by the Function constructor using the <strong class="colorful">new</strong> keyword.
-                        p.small.fragment But...
-                        pre.fragment
-                            code.hljs.javascript(data-trim contenteditable).
-                                Person( "Mary" );
-                    // ES6 CLASSES
-                    section
-                        h3 <strong class="colorful">this</strong> in ES6 Classes
-                        pre.fragment
-                            code.hljs.javascript(data-trim contenteditable).
-
-                                class Person {
-                                    constructor( name ){
-                                        console.log( this );
-                                        this.name = name;
-                                    }
-                                    show(){
-                                        console.log( this.name );
-                                    }
-                                }
-                        .linebreak
-                        pre.fragment
-                            code.hljs.javascript(data-trim contenteditable).
-
-                                let person = new Person( "Kostas" );
-                                person.show();
-                        p.small.fragment Since ES6 Classes are based on Function Constructors<br/>and Objects, they behave in much the same way.
-                    // OBJECT METHODS
-                    section
-                        h3 <strong class="colorful">this</strong> in Object Methods
-                        pre.fragment
-                            code.hljs.javascript(data-trim contenteditable).
-                                let person = {
-                                    name: "Kostas",
-                                    show: function(){
-                                        console.log( this, this.name );
-                                    }
-                                }
-                        p.fragment.small When a function is called as a method of an object,<br/>its <strong class="colorful">this</strong> is set to the object the method is called on.
-                        pre.fragment
-                            code.hljs.javascript(data-trim contenteditable).
-                                person.show();
-                                // person { }, "Kostas"
-                    // OBJECT METHODS #2
-                    section
-                        h3 <strong class="colorful">this</strong> in Object Methods #2
-                        pre.fragment
-                            code.hljs.javascript(data-trim contenteditable).
-                                let person = {
-                                    name: "Kostas",
-                                    show: function(){
-                                        console.log( this, this.name );
-                                    }
-                                }
-                                let other = {
-                                    name: "Mary"
-                                }
-                                other.show = person.show;
-                        pre.fragment
-                            code.hljs.javascript(data-trim contenteditable).
-                                other.show();
-                                // other { }, "Mary"
-                        p.fragment.small <strong class="colorful">REMEMBER</strong>: <strong class="colorful">this</strong> is set to the object the method is <strong class="colorful">called on</strong>.
-                    // DOM Event Handlers
-                    section
-                        h3 <strong class="colorful">this</strong> in DOM Event Handlers
-                        button#clickme(style="padding:10px 20px; font-size: 1.5rem") Click Me!
-                        .linebreak
-                        br
-                        pre.fragment
-                            code.hljs.javascript(data-trim contenteditable).
-                                let $button = document.querySelector("#clickme");
-
-                                $button.addEventListener( "click", function(){
-
-                                    console.log( this );
-
-                                });
-                        p.small.fragment When a function is used as an event handler,<br/>its <strong class="colorful">this</strong> is set to the element the event fired from.
-                    // bind, call, apply
-                    section
-                        h3 Explicit Binding:<br/><strong class="colorful"> bind(), apply(), call()</strong>
-                    // bind
-                    section
-                        h3 <strong class="colorful"> bind()</strong>
-                        p.fragment Bind <strong class="colorful">this</strong> to <strong class="colorful">any</strong> Object explicitly.
-                        button.fragment#somebutton(style="padding:10px 20px; font-size: 1.5rem") Some Button!
-                        .linebreak
-                        br
-                        pre.fragment
-                            code.hljs.javascript(data-trim contenteditable).
-                                let person = { name: "Kostas" }
-                        .linebreak
-                        pre.fragment
-                            code.hljs.javascript(data-trim contenteditable).
-                                let $button = document.querySelector("#somebutton");
-                        .linebreak
-                        pre.fragment
-                            code.hljs.javascript(data-trim contenteditable).
-                                function handleClick(){ console.log( this ); }
-                        .linebreak
-                        pre.fragment
-                            code.hljs.javascript(data-trim contenteditable).
-                                $button.addEventListener( "click", handleClick.bind( person ) );
-                    // bind #2
-                    section
-                        h3 <strong class="colorful"> bind()</strong> #2
-                        .linebreak
-                        br
-                        pre.fragment
-                            code.hljs.javascript(data-trim contenteditable).
-                                let person = { name: "Kostas" }
-
-                                function show(){
-                                    console.log( this.name );
-                                }
-
-                                show();
-
-                                let personShow = show.bind( person );
-
-                                personShow();
-                    // call, apply
-                    section
-                        h3 <strong class="colorful"> call(), apply()</strong>
-                        .linebreak
-                        br
-                        pre.fragment
-                            code.hljs.javascript(data-trim contenteditable).
-                                let person = { 
-                                    name: "Kostas",
-                                    show: function( msg, end ){
-                                        console.log( msg + this.name + end );
-                                    } 
-                                }
-                                person.show( "Hello ", "!" );    // Hello Kostas!
-
-                        pre.fragment
-                            code.hljs.javascript(data-trim contenteditable).
-                                let other = { name: "Mary" }
-
-                                person.show.call( other, "Hi ", "!" );
-                        pre.fragment
-                            code.hljs.javascript(data-trim contenteditable).
-
-                                person.show.apply( other, [ "Hi ", "!" ] );
-                    // ARROW FUNCTIONS                            
-                    section
-                        h3 <strong class="colorful">this</strong> in Arrow Functions
-                        p.small.fragment Arrow functions don't provide their own this binding<br/>It retains the this value of the enclosing lexical context.
-                        pre.fragment
-                            code.hljs.javascript(data-trim contenteditable).
-                                let obj = {
-                                    name: "Kostas",
-                                    show: function(){ 
-                                        setTimeout(function(){
-                                         console.log( this.name );
-                                        }, 2000)
-                                    }
-                                } 
-                        pre.fragment
-                            code.hljs.javascript(data-trim contenteditable).
-                                obj.show();
-                                /// undefined
-                    // ARROW FUNCTIONS #2
-                    section
-                        p.small Remember: setTimeout is called from window and thus<br/>its inner function binds <strong class="colorful">this</strong> to its context (that of the calling site).
-                        pre
-                            code.hljs.javascript(data-trim contenteditable).
-                                let obj = {
-                                    name: "Kostas",
-                                    show: function(){ 
-                                        window.setTimeout(function(){
-                                         console.log( this.name );
-                                        }, 2000)
-                                    }
-                                } 
-                        p.small.fragment How can we change this?
-                    // ARROW FUNCTIONS #3
-                    section
-                        p.small #1 Using bind()
-                        pre
-                            code.hljs.javascript(data-trim contenteditable).
-                                let obj = {
-                                    name: "Kostas",
-                                    show: function(){ 
-                                        window.setTimeout(function(){
-                                         console.log( this.name );
-                                        }.bind( this ), 2000)
-                                    }
-                                } 
-                    // ARROW FUNCTIONS #4
-                    section
-                        p.small #2 Using an Arrow Function
-                        pre
-                            code.hljs.javascript(data-trim contenteditable).
-                                let obj = {
-                                    name: "Kostas",
-                                    show: function(){ 
-                                        window.setTimeout(()=>{
-                                         console.log( this.name );
-                                        }, 2000)
-                                    }
-                                } 
-                    // SUMMARY
-                    section
-                        h3 Summary
-                        p.small.fragment Determining the <strong class="colorful">this</strong> binding for an executing function<br/>requires finding the direct call-site of that function.
-                        p.small.fragment Once examined, four rules can be applied<br/>to the call-site, in this order of precedence:
-                        p.small.fragment - Called with <strong class="colorful">new</strong>? Use the newly constructed object.
-                        p.small.fragment - Called with <strong class="colorful">call</strong> or <strong class="colorful">apply</strong> (or <strong class="colorful">bind</strong>)? Use the specified object.
-                        p.small.fragment - Called with a <strong class="colorful">context object</strong> owning the call? Use that context object.
-                        p.small.fragment <strong class="colorful">- Default</strong>: undefined in strict mode, global object otherwise.
-                    // RECAP
-                    section
-                        h6 Recap...
-                        h6 ...through some examples
-                        a(href="https://www.w3schools.com/js/js_this.asp" target="_blank") W3Schools
-                        br
-                        a.fragment(href="https://codepen.io/kostasx/pen/yGVOKQ?editors=1011" target="_blank") Let's practice a bit...
+                        h2 ES6 Arrow Functions
+                        <a href="https://javascript.info/function-expressions-arrows#arrow-functions" target="_blank">JavaScript.info: Arrow Functions</a>
+                        <br>
+                        <a href="https://javascript.info/arrow-functions" target="_blank">JavaScript.info: Arrow Functions Revisited</a>
+                        <hr>
+                        <a href="https://codepen.io/kostasx/pen/LgVdLb?editors=0010" target="_blank">CodePen Time!</a>
+                        <br>
+                        <a target="_blank" href="https://bit.ly/2zIZxLF">https://bit.ly/<strong style="color:white;">2zIZxLF</strong></a>
 
                 // ES6: Default Function Parameters
                 section
@@ -637,372 +396,374 @@ html(lang='en')
                         h3 Practice
                         a(href="https://codepen.io/kostasx/pen/VqPZJK?editors=0011" target="_blank") CodePen
 
-                // ES6: Modules
-                section
-
-                    // INTRO
-                    section
-                        h3 <strong class="colorful">ES6</strong> Modules
-                        p.small In ES6, we can use an <strong class="colorful">export</strong> token to export<br/>a module's (modules === JS files) public API
-                        p.small 
-                            strong.colorful lib.js:
-                        pre
-                            code.hljs.javascript(data-trim contenteditable).
-                                // Export the function
-                                export function sayHello(){ console.log('Hello'); }
-
-                                // Do not export the function
-                                function somePrivateFunction(){ ...}
-                        p.small.fragment <strong class="colorful">app.js</strong>: And an <strong class="colorful">import</strong> token to import parts that a module exports:
-                        pre.fragment
-                            code.hljs.javascript(data-trim contenteditable).
-                                import { sayHello } from './lib';
-                                sayHello();  
-                                // => Hello
-
-                    // ALIASES
-                    section
-                        p.small We can even give imports an alias using as:
-                        pre
-                            code.hljs.javascript(data-trim contenteditable).
-                                import { sayHello as say } from './lib';
-                                say();  
-                                // => Hello
-                        p.small.fragment ...or load an entire module at once:
-                        pre.fragment
-                            code.hljs.javascript(data-trim contenteditable).
-                                import * as lib from './lib';
-                                lib.sayHello();  
-                                // => Hello
-
-                    // DEFAULT EXPORTS
+                //- ES6: Modules
+                //-
                     section
 
-                        p.small The format also supports default exports:
-                        pre
-                            code.hljs.javascript(data-trim contenteditable).
-                                // lib.js
-                                // Export default function
-                                export default function sayHello(){ console.log( 'Hello' ); }
+                        // INTRO
+                        section
+                            h3 <strong class="colorful">ES6</strong> Modules
+                            p.small In ES6, we can use an <strong class="colorful">export</strong> token to export<br/>a module's (modules === JS files) public API
+                            p.small 
+                                strong.colorful lib.js:
+                            pre
+                                code.hljs.javascript(data-trim contenteditable).
+                                    // Export the function
+                                    export function sayHello(){ console.log('Hello'); }
 
-                                // Export non-default function
-                                export function sayBye(){ console.log('Bye'); }
-    
-                        p.small.fragment ...which you can import like this:
-                        pre.fragment
-                            code.hljs.javascript(data-trim contenteditable).
-                                import sayHello, { sayBye } from './lib';
-                                sayHello();  
-                                // => Hello
+                                    // Do not export the function
+                                    function somePrivateFunction(){ ...}
+                            p.small.fragment <strong class="colorful">app.js</strong>: And an <strong class="colorful">import</strong> token to import parts that a module exports:
+                            pre.fragment
+                                code.hljs.javascript(data-trim contenteditable).
+                                    import { sayHello } from './lib';
+                                    sayHello();  
+                                    // => Hello
 
-                                sayBye();  
-                                // => Bye
+                        // ALIASES
+                        section
+                            p.small We can even give imports an alias using as:
+                            pre
+                                code.hljs.javascript(data-trim contenteditable).
+                                    import { sayHello as say } from './lib';
+                                    say();  
+                                    // => Hello
+                            p.small.fragment ...or load an entire module at once:
+                            pre.fragment
+                                code.hljs.javascript(data-trim contenteditable).
+                                    import * as lib from './lib';
+                                    lib.sayHello();  
+                                    // => Hello
 
-                    section
-                        p.small You can export not only functions, but anything you like:
+                        // DEFAULT EXPORTS
+                        section
 
-                        pre
-                            code.hljs.javascript(data-trim contenteditable).
-                                // Export simple value
-                                export const apiUrl = '...';
+                            p.small The format also supports default exports:
+                            pre
+                                code.hljs.javascript(data-trim contenteditable).
+                                    // lib.js
+                                    // Export default function
+                                    export default function sayHello(){ console.log( 'Hello' ); }
 
-                                // Export object
-                                export const settings = {  
-                                    debug: true
-                                }
-                    section
-                        h6 Browser Support
-                        p.small The native module format is not yet supported by all browsers.
+                                    // Export non-default function
+                                    export function sayBye(){ console.log('Bye'); }
+        
+                            p.small.fragment ...which you can import like this:
+                            pre.fragment
+                                code.hljs.javascript(data-trim contenteditable).
+                                    import sayHello, { sayBye } from './lib';
+                                    sayHello();  
+                                    // => Hello
 
-                        p.small We can use the ES6 module by using a transpiler like Babel.
-                        
-                    section
-                        p.small Let's dive right into Practice...
+                                    sayBye();  
+                                    // => Bye
 
-                        br
-                        a(href="https://codesandbox.io/s/6ljwk986yk" target="_blank") SandBox demo
+                        section
+                            p.small You can export not only functions, but anything you like:
 
-                        br
-                        a(href="https://codesandbox.io/s/vjqo0komxl" target="_blank") SandBox demo (final)
+                            pre
+                                code.hljs.javascript(data-trim contenteditable).
+                                    // Export simple value
+                                    export const apiUrl = '...';
 
-                // TYPES & EQUALITY
+                                    // Export object
+                                    export const settings = {  
+                                        debug: true
+                                    }
+                        section
+                            h6 Browser Support
+                            p.small The native module format is not yet supported by all browsers.
+
+                            p.small We can use the ES6 module by using a transpiler like Babel.
+                            
+                        section
+                            p.small Let's dive right into Practice...
+
+                            br
+                            a(href="https://codesandbox.io/s/6ljwk986yk" target="_blank") SandBox demo
+
+                            br
+                            a(href="https://codesandbox.io/s/vjqo0komxl" target="_blank") SandBox demo (final)
+
+                //- TYPES & EQUALITY
                 //- section
 
-                // JS PATTERNS: IIFE
-                section
+                //- JS PATTERNS: IIFE
+                //-
                     section
-                        h3 <strong class="colorful">IIFE</strong>
-                        h5 Immediately Invoked Function Expression
-                        .columns
-                            .column.is-8.is-offset-2
-                                pre
-                                    code.hljs.javascript(data-trim contenteditable).
-                                        (function(){
-                                            // ...
-                                        })()
+                        section
+                            h3 <strong class="colorful">IIFE</strong>
+                            h5 Immediately Invoked Function Expression
+                            .columns
+                                .column.is-8.is-offset-2
+                                    pre
+                                        code.hljs.javascript(data-trim contenteditable).
+                                            (function(){
+                                                // ...
+                                            })()
 
-                                p.small.fragment An <strong class="colorful">IIFE</strong> is an anonymous function that is invoked when it is declared.
+                                    p.small.fragment An <strong class="colorful">IIFE</strong> is an anonymous function that is invoked when it is declared.
 
-                                p.small.fragment Notice how the function is surrounded by parentheses. 
+                                    p.small.fragment Notice how the function is surrounded by parentheses. 
 
-                    section
-                        .columns
-                            .column.is-8.is-offset-2
-                                p.small In JavaScript, a line starting with the word function is considered as a function declaration:
-                                pre
-                                    code.hljs.javascript(data-trim contenteditable).
-                                        // Function declaration
-                                        function(){  
-                                            console.log('test');
+                        section
+                            .columns
+                                .column.is-8.is-offset-2
+                                    p.small In JavaScript, a line starting with the word function is considered as a function declaration:
+                                    pre
+                                        code.hljs.javascript(data-trim contenteditable).
+                                            // Function declaration
+                                            function(){  
+                                                console.log('test');
+                                            }
+                                    p.small.fragment Immediately invoking a function declaration<br/>throws an error:
+                                    pre.fragment
+                                        code.hljs.javascript(data-trim contenteditable).
+                                            // Immediately Invoked Function Declaration
+                                            function(){  
+                                                console.log('test');
+                                            }()
+                                            // => Uncaught SyntaxError: Unexpected token )
+
+                        section
+                            .columns
+                                .column.is-10.is-offset-1
+                                    p.small Putting parentheses around the function makes it a function expression:
+
+                                    pre
+                                        code.hljs.javascript(data-trim contenteditable).
+                                            // Function expression
+                                            (function(){
+                                                console.log('test');
+                                            })
+                                            // => returns function(){ console.log('test') }
+
+                        section
+                            .columns
+                                .column.is-8.is-offset-2
+                                    p.small The function expression returns the function, so we can immediately call it:
+                            pre
+                                code.hljs.javascript(data-trim contenteditable).
+                                    // Immediately Invoked Function Expression
+                                    (function(){
+                                        console.log('test');
+                                    })()
+                                    // => writes 'test' to the console and returns undefined
+
+                        section
+                            p.small We can assign the IIFE return value to a variable:
+                            pre
+                                code.hljs.javascript(data-trim contenteditable).
+                                    // Expose module as global variable
+                                    let App = (function(){
+                                        // Inner logic
+                                        function sayHello(){
+                                            console.log('Hello');
                                         }
-                                p.small.fragment Immediately invoking a function declaration<br/>throws an error:
-                                pre.fragment
-                                    code.hljs.javascript(data-trim contenteditable).
-                                        // Immediately Invoked Function Declaration
-                                        function(){  
-                                            console.log('test');
-                                        }()
-                                        // => Uncaught SyntaxError: Unexpected token )
+                                        // Expose API
+                                        return { sayHello: sayHello }
+                                    })();
+                            p.small.fragment We can now access the module's API through the variable:
+                            pre.fragment
+                                code.hljs.javascript(data-trim contenteditable).
+                                    // Access module functionality
+                                    App.sayHello();  
+                                    // => Hello
 
+                        section
+                            .columns
+                                .column.is-8.is-offset-2
+                                    h6 Immediately Invoked Function Expressions allow us to:
+                                    p.small.fragment - encapsulate code complexity inside IIFE so we don't have to understand what the IIFE code does
+                                    p.small.fragment - define variables inside the IIFE so they don't pollute the global scope (var, let, const statements inside the IIFE remain within the IIFE's closure)
+
+                //- REGULAR EXPRESSIONS 
+                //-
+                    style.
+                        .reveal table.regexp {
+                            font-size: 1.5rem;
+                            border: 1px solid white;
+                        }                
+                        .reveal table.regexp td,
+                        .reveal table.regexp th {
+                            border: 1px solid white;
+                        }
+                        .reveal table.regexp th {
+                            background: orange;
+                        }
+                        .reveal table.regexp td {
+                            background: #3b84bd;
+                        }
                     section
-                        .columns
-                            .column.is-10.is-offset-1
-                                p.small Putting parentheses around the function makes it a function expression:
+                        section
+                            h3 Regular Expressions
+                            h5 The Pattern Matching Syntax
+                        section
+                            h6 Basic Syntax: 
+                            p.small PATTERN: of characters defined by / ... /
+                            pre
+                                code.hljs.javascript(data-trim contenteditable).
+                                    let regExp = /PATTERN/;  // Define Regular Expression
+                            br
+                            pre.fragment
+                                code.hljs.javascript(data-trim contenteditable).
+                                    regExp.test( "Text" );  // Tests for PATTERN inside "Text"
+                            br
+                            pre.fragment
+                                code.hljs.javascript(data-trim contenteditable).
+                                    regExp.exec( "Text" ); // Find PATTERN matches in "Text"
+                            br
+                            pre.fragment
+                                code.hljs.javascript(data-trim contenteditable).
+                                    "Text".split( regExp ); // Split 'Text' using regExp
+                            br
+                            pre.fragment
+                                code.hljs.javascript(data-trim contenteditable).
+                                    "Text".replace( regExp, "replacement" ); // Replace pattern in 'Text'
+                        // TABLE
+                        section
+                            h6 PATTERNS can be:
+                            table.regexp
+                                thead
+                                    tr
+                                        th PATTERN
+                                        th MATCHES
+                                        th EXAMPLE
+                                tbody
+                                    tr
+                                        td abc
+                                        td plain text characters
+                                        td 'abc'
+                                    tr
+                                        td [a-z]
+                                        td lowercase group
+                                        td 'abcdef'
+                                    tr
+                                        td \w+
+                                        td word
+                                        td 'Magic'
+                                    tr
+                                        td \d
+                                        td digit
+                                        td 9
+                                    tr
+                                        td \s
+                                        td space
+                                        td ''
+                                    tr
+                                        td .*
+                                        td wildcard
+                                        td 'username74'
+                                    tr
+                                        td + or *
+                                        td greedy mattch
+                                        td 'aaaaaa'
+                                    tr
+                                        td \S
+                                        td NOT space
+                                        td 'no_spaces'
+                                    tr
+                                        td ^, $
+                                        td Start / End of pattern
+                                        td '^Phrase$'
 
-                                pre
-                                    code.hljs.javascript(data-trim contenteditable).
-                                        // Function expression
-                                        (function(){
-                                            console.log('test');
-                                        })
-                                        // => returns function(){ console.log('test') }
+                            p.small More: <a target="_blank" href="https://www.w3schools.com/jsref/jsref_obj_regexp.asp"> W3Schools</a>
 
-                    section
-                        .columns
-                            .column.is-8.is-offset-2
-                                p.small The function expression returns the function, so we can immediately call it:
-                        pre
-                            code.hljs.javascript(data-trim contenteditable).
-                                // Immediately Invoked Function Expression
-                                (function(){
-                                    console.log('test');
-                                })()
-                                // => writes 'test' to the console and returns undefined
+                        // EXAMPLES
+                        section
+                            h6 Examples
+                            p.small Open <a href="https://regex101.com/" target="_blank">regex101.com</a> or <a href="https://www.regexpal.com/" target="_blank">www.regexpal.com</a>
 
-                    section
-                        p.small We can assign the IIFE return value to a variable:
-                        pre
-                            code.hljs.javascript(data-trim contenteditable).
-                                // Expose module as global variable
-                                let App = (function(){
-                                    // Inner logic
-                                    function sayHello(){
-                                        console.log('Hello');
-                                    }
-                                    // Expose API
-                                    return { sayHello: sayHello }
-                                })();
-                        p.small.fragment We can now access the module's API through the variable:
-                        pre.fragment
-                            code.hljs.javascript(data-trim contenteditable).
-                                // Access module functionality
-                                App.sayHello();  
-                                // => Hello
+                            pre
+                                code.hljs.javascript(data-trim contenteditable).
+                                    let regExp = /abc/;
+                                    let match = regExp.exec ("abcd ABCD abcd" );
+                                    console.log( match[0] );
+                            pre.fragment
+                                code.hljs.javascript(data-trim contenteditable).
+                                    let regExp = /[a-c]/;
+                                    match = regExp.exec ("abcd ABCD abcd" );
+                            pre.fragment
+                                code.hljs.javascript(data-trim contenteditable).
+                                    let regExp = /[a-c]+/;
+                                    match = regExp.exec ("abcd ABCD abcd" );
+                            pre.fragment
+                                code.hljs.javascript(data-trim contenteditable).
+                                    let regExp = /[a-zA-Z]+/;
+                                    match = regExp.exec ("abcd ABCD abcd" );
+                            pre.fragment
+                                code.hljs.javascript(data-trim contenteditable).
+                                    let regExp = /[a-z0-9]+/;
+                                    match = regExp.exec ("abcd 1234" );
 
-                    section
-                        .columns
-                            .column.is-8.is-offset-2
-                                h6 Immediately Invoked Function Expressions allow us to:
-                                p.small.fragment - encapsulate code complexity inside IIFE so we don't have to understand what the IIFE code does
-                                p.small.fragment - define variables inside the IIFE so they don't pollute the global scope (var, let, const statements inside the IIFE remain within the IIFE's closure)
+                        section
+                            pre
+                                code.hljs.javascript(data-trim contenteditable).
+                                    let regExp = /\w/;
+                                    regExp.exec ("Some words in here." );
+                            pre.fragment
+                                code.hljs.javascript(data-trim contenteditable).
+                                    let regExp = /\w+/;
+                                    regExp.exec ("Some words in here." );
+                            pre.fragment
+                                code.hljs.javascript(data-trim contenteditable).
+                                    let regExp = /\d+/;
+                                    regExp.exec ("Some digits 123456 in here." );
+                            pre.fragment
+                                code.hljs.javascript(data-trim contenteditable).
+                                    let regExp = /\d{1,3}/;
+                                    regExp.exec ("Some digits 123456 in here." );
+                            pre.fragment
+                                code.hljs.javascript(data-trim contenteditable).
+                                    let regExp = /\d{1,3}/;
+                                    regExp.exec ("Some digits 123456 in here." );
+                            pre.fragment
+                                code.hljs.javascript(data-trim contenteditable).
+                                    let regExp = /^Some|here.$/;
+                                    regExp.exec ("Some digits 123456 in here." );
 
-                // REGULAR EXPRESSIONS 
-                style.
-                    .reveal table.regexp {
-                        font-size: 1.5rem;
-                        border: 1px solid white;
-                    }                
-                    .reveal table.regexp td,
-                    .reveal table.regexp th {
-                        border: 1px solid white;
-                    }
-                    .reveal table.regexp th {
-                        background: orange;
-                    }
-                    .reveal table.regexp td {
-                        background: #3b84bd;
-                    }
+                        // FLAGS
+                        section
+                            h6 Flags
+                            .columns
+                                .column.is-6.is-offset-3
+                                    pre
+                                        code.hljs.javascript(data-trim contenteditable).
+                                            let regExp = /PATTERN/FLAGS;
+                                    p.small.fragment Some basic Flags can be:
+                                    p.small.fragment <strong class="colorful">g:</strong> global match; find all matches rather than stopping after the first match
+                                    p.small.fragment <strong class="colorful">i:</strong> ignore case; 
+                                    p.small.fragment <strong class="colorful">m:</strong> multiline; 
+                                    pre.fragment
+                                        code.hljs.javascript(data-trim contenteditable).
+                                            let regExp = /[a-zA-Z]/gi;
+                        // REGEXP PROPERTIES
+                        section
+                            h6 RegExp Object Properties
+                            pre
+                                code.hljs.javascript(data-trim contenteditable).
+                                    let myRegExp = /example/ig
 
-                section
-                    section
-                        h3 Regular Expressions
-                        h5 The Pattern Matching Syntax
-                    section
-                        h6 Basic Syntax: 
-                        p.small PATTERN: of characters defined by / ... /
-                        pre
-                            code.hljs.javascript(data-trim contenteditable).
-                                let regExp = /PATTERN/;  // Define Regular Expression
-                        br
-                        pre.fragment
-                            code.hljs.javascript(data-trim contenteditable).
-                                regExp.test( "Text" );  // Tests for PATTERN inside "Text"
-                        br
-                        pre.fragment
-                            code.hljs.javascript(data-trim contenteditable).
-                                regExp.exec( "Text" ); // Find PATTERN matches in "Text"
-                        br
-                        pre.fragment
-                            code.hljs.javascript(data-trim contenteditable).
-                                "Text".split( regExp ); // Split 'Text' using regExp
-                        br
-                        pre.fragment
-                            code.hljs.javascript(data-trim contenteditable).
-                                "Text".replace( regExp, "replacement" ); // Replace pattern in 'Text'
-                    // TABLE
-                    section
-                        h6 PATTERNS can be:
-                        table.regexp
-                            thead
-                                tr
-                                    th PATTERN
-                                    th MATCHES
-                                    th EXAMPLE
-                            tbody
-                                tr
-                                    td abc
-                                    td plain text characters
-                                    td 'abc'
-                                tr
-                                    td [a-z]
-                                    td lowercase group
-                                    td 'abcdef'
-                                tr
-                                    td \w+
-                                    td word
-                                    td 'Magic'
-                                tr
-                                    td \d
-                                    td digit
-                                    td 9
-                                tr
-                                    td \s
-                                    td space
-                                    td ''
-                                tr
-                                    td .*
-                                    td wildcard
-                                    td 'username74'
-                                tr
-                                    td + or *
-                                    td greedy mattch
-                                    td 'aaaaaa'
-                                tr
-                                    td \S
-                                    td NOT space
-                                    td 'no_spaces'
-                                tr
-                                    td ^, $
-                                    td Start / End of pattern
-                                    td '^Phrase$'
+                                    // The flags property
+                                    console.log( myRegExp.flags ) // "gi"
 
-                        p.small More: <a target="_blank" href="https://www.w3schools.com/jsref/jsref_obj_regexp.asp"> W3Schools</a>
+                                    // The global property
+                                    console.log( myRegExp.global ) // true
 
-                    // EXAMPLES
-                    section
-                        h6 Examples
-                        p.small Open <a href="https://regex101.com/" target="_blank">regex101.com</a> or <a href="https://www.regexpal.com/" target="_blank">www.regexpal.com</a>
+                                    // The multiline property
+                                    console.log( myRegExp.multiline ) // false
 
-                        pre
-                            code.hljs.javascript(data-trim contenteditable).
-                                let regExp = /abc/;
-                                let match = regExp.exec ("abcd ABCD abcd" );
-                                console.log( match[0] );
-                        pre.fragment
-                            code.hljs.javascript(data-trim contenteditable).
-                                let regExp = /[a-c]/;
-                                match = regExp.exec ("abcd ABCD abcd" );
-                        pre.fragment
-                            code.hljs.javascript(data-trim contenteditable).
-                                let regExp = /[a-c]+/;
-                                match = regExp.exec ("abcd ABCD abcd" );
-                        pre.fragment
-                            code.hljs.javascript(data-trim contenteditable).
-                                let regExp = /[a-zA-Z]+/;
-                                match = regExp.exec ("abcd ABCD abcd" );
-                        pre.fragment
-                            code.hljs.javascript(data-trim contenteditable).
-                                let regExp = /[a-z0-9]+/;
-                                match = regExp.exec ("abcd 1234" );
+                                    // The source property
+                                    console.log( myRegExp.source ) // /example/
 
-                    section
-                        pre
-                            code.hljs.javascript(data-trim contenteditable).
-                                let regExp = /\w/;
-                                regExp.exec ("Some words in here." );
-                        pre.fragment
-                            code.hljs.javascript(data-trim contenteditable).
-                                let regExp = /\w+/;
-                                regExp.exec ("Some words in here." );
-                        pre.fragment
-                            code.hljs.javascript(data-trim contenteditable).
-                                let regExp = /\d+/;
-                                regExp.exec ("Some digits 123456 in here." );
-                        pre.fragment
-                            code.hljs.javascript(data-trim contenteditable).
-                                let regExp = /\d{1,3}/;
-                                regExp.exec ("Some digits 123456 in here." );
-                        pre.fragment
-                            code.hljs.javascript(data-trim contenteditable).
-                                let regExp = /\d{1,3}/;
-                                regExp.exec ("Some digits 123456 in here." );
-                        pre.fragment
-                            code.hljs.javascript(data-trim contenteditable).
-                                let regExp = /^Some|here.$/;
-                                regExp.exec ("Some digits 123456 in here." );
-
-                    // FLAGS
-                    section
-                        h6 Flags
-                        .columns
-                            .column.is-6.is-offset-3
-                                pre
-                                    code.hljs.javascript(data-trim contenteditable).
-                                        let regExp = /PATTERN/FLAGS;
-                                p.small.fragment Some basic Flags can be:
-                                p.small.fragment <strong class="colorful">g:</strong> global match; find all matches rather than stopping after the first match
-                                p.small.fragment <strong class="colorful">i:</strong> ignore case; 
-                                p.small.fragment <strong class="colorful">m:</strong> multiline; 
-                                pre.fragment
-                                    code.hljs.javascript(data-trim contenteditable).
-                                        let regExp = /[a-zA-Z]/gi;
-                    // REGEXP PROPERTIES
-                    section
-                        h6 RegExp Object Properties
-                        pre
-                            code.hljs.javascript(data-trim contenteditable).
-                                let myRegExp = /example/ig
-
-                                // The flags property
-                                console.log( myRegExp.flags ) // "gi"
-
-                                // The global property
-                                console.log( myRegExp.global ) // true
-
-                                // The multiline property
-                                console.log( myRegExp.multiline ) // false
-
-                                // The source property
-                                console.log( myRegExp.source ) // /example/
-
-                    // PRACTICE
-                    section
-                        h3 Practice
-                        a.small(href="https://regexone.com/" target="_blank") https://regexone.com/
-                        br
-                        a.small(href="https://codeburst.io/javascript-learn-regular-expressions-for-beginners-bb6107015d91" target="_blank") JavaScript: Learn Regular Expressions for Beginners 
-                        br
-                        a.small(href="https://alf.nu/RegexGolf" target="_blank") RegexGolf
+                        // PRACTICE
+                        section
+                            h3 Practice
+                            a.small(href="https://regexone.com/" target="_blank") https://regexone.com/
+                            br
+                            a.small(href="https://codeburst.io/javascript-learn-regular-expressions-for-beginners-bb6107015d91" target="_blank") JavaScript: Learn Regular Expressions for Beginners 
+                            br
+                            a.small(href="https://alf.nu/RegexGolf" target="_blank") RegexGolf
 
                 // RESOURCES
                 section
@@ -1035,26 +796,10 @@ html(lang='en')
         script(src='../libs/reveal.js/lib/js/head.min.js')
         script(src='../libs/reveal.js/js/reveal.js')
         script.
-            /* SHA */
-            Reveal.configure({
-                keyboard: {
-                    // Key: 'e'
-                    69: function(){
-                        /*
-                        IF NOT EXIST
-                            <PRE>.insertAdjacentHTML('afterend', code);
-                        EVALUATE 
-                            eval( <PRE>.textContent )
-                        */
-                    }
-                    }
-            });
 
-            // More info https://github.com/hakimel/reveal.js#configuration
             Reveal.initialize({
 
                 history: true,
-                // More info https://github.com/hakimel/reveal.js#dependencies
                 dependencies: [
                     { src: '../libs/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
                     { src: '../libs/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
@@ -1065,8 +810,6 @@ html(lang='en')
                     { src: '../libs/reveal.js/plugin/notes/notes.js', async: true }
                 ]
             });
-
-            //- Reveal.addEventListener('data-state-value-here', function (){});
 
             Reveal.addEventListener( 'ready', function( e ) {
 

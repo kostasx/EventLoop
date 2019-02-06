@@ -81,13 +81,11 @@
           <h3>Agenta</h3>
           <ul style="font-size:0.8em;">
             <li>Handling Asynchronous code with Async/Await</li>
-            <li>Understanding `this` &amp; Explicit Binding: call, apply, bind </li>
+            <li>ES6: Classes</li>
+            <li>ES6: Template Literals</li>
+            <li>ES6: Arrow Functions</li>
             <li>ES6: Default Function Parameters</li>
             <li>ES6: Spread Operator &amp; Destructuring Assignments</li>
-            <li>ES6: Modules</li>
-            <li>Types &amp; Equality</li>
-            <li>JS Patterns: The IIFE </li>
-            <li>Regular Expressions</li>
           </ul>
         </section>
         <!-- ASYNC / AWAIT-->
@@ -133,227 +131,28 @@ async function normal(){ return 42; }
             <h3>Example:</h3><a target="_blank" href="https://codepen.io/kostasx/pen/NONQgL?editors=0011">Hands-on: Bitcoin Wallet</a><br><a class="bitly_link" target="_blank" href="https://bit.ly/2No4jlx"><span>https://bit.ly/<strong>2No4jlx</strong></span></a>
           </section>
         </section>
-        <!-- this, call, apply, bind-->
+        <!-- ES6: CLASSES-->
         <section>
-          <!-- INTRODUCTION-->
+          <h2>ES6 Classes</h2>
+          <h4>Syntactic Sugar for Prototypal Inheritance</h4><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes">MDN ES6 Classes</a>
+<br>
+<p>Time for a CodePen:</p>
+<a target="_blank" style="font-size:1.6em;" href="https://bit.ly/2Rl0PU6">https://bit.ly/<strong style="color:white;">2Rl0PU6</strong></a>
+        </section>
+        <!-- ES6: TEMPLATE LITERALS-->
+        <section>
+          <h2>ES6 Template Literals</h2>
+        </section>
+        <!-- ES6: ARROW FUNCTIONS-->
+        <section>
           <section>
-            <h3>Understanding <strong class="colorful">this</strong></h3>
-            <div class="columns">
-              <div class="column is-10 is-offset-1">
-                <p class="small">When a function is invoked an execution context is created which is like a record containing information about where the function was called from (call-stack), how the function was invoked, what parameters were passed, etc. One of the properties of this record is the <strong class="colorful">this</strong> reference which will be used for the duration of that function's execution.</p>
-                <p class="small fragment">What <strong class="colorful">this</strong> references is determined entirely<br/>by the call-site where the function is called.</p>
-              </div>
-            </div>
-          </section>
-          <!-- GLOBAL CONTEXT-->
-          <section>
-            <h3><strong class="colorful">this</strong> in Global Context</h3>
-            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>console.log( this );
-
-function run(){
-    console.log( this );
-}</code></pre>
-            <div class="linebreak"></div>
-            <p class="small fragment">Both functions run within the global <strong class="colorful">(window)</strong> object.</p>
-            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>window.console.log( this );
-window.run();</code></pre>
-            <p class="small fragment">In both cases, <strong class="colorful">this</strong> references the window object (the functions' call-site).</p>
-          </section>
-          <!-- FUNCTION CONSTRUCTORS + CLASSES-->
-          <section>
-            <h3><strong class="colorful">this</strong> in Function Constructors</h3>
-            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>function Person( name ){
-    console.log( this );
-    this.name = name;
-    this.show = function(){
-        console.log( this.name );
-    }
-}</code></pre>
-            <div class="linebreak"></div>
-            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>let person = new Person( "Kostas" );
-person.show();</code></pre>
-            <p class="small fragment"><strong class="colorful">this</strong> is a reference to the Object created<br/>by the Function constructor using the <strong class="colorful">new</strong> keyword.</p>
-            <p class="small fragment">But...</p>
-            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>Person( "Mary" );</code></pre>
-          </section>
-          <!-- ES6 CLASSES-->
-          <section>
-            <h3><strong class="colorful">this</strong> in ES6 Classes</h3>
-            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>class Person {
-    constructor( name ){
-        console.log( this );
-        this.name = name;
-    }
-    show(){
-        console.log( this.name );
-    }
-}</code></pre>
-            <div class="linebreak"></div>
-            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>let person = new Person( "Kostas" );
-person.show();</code></pre>
-            <p class="small fragment">Since ES6 Classes are based on Function Constructors<br/>and Objects, they behave in much the same way.</p>
-          </section>
-          <!-- OBJECT METHODS-->
-          <section>
-            <h3><strong class="colorful">this</strong> in Object Methods</h3>
-            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>let person = {
-    name: "Kostas",
-    show: function(){
-        console.log( this, this.name );
-    }
-}</code></pre>
-            <p class="fragment small">When a function is called as a method of an object,<br/>its <strong class="colorful">this</strong> is set to the object the method is called on.</p>
-            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>person.show();
-// person { }, "Kostas"</code></pre>
-          </section>
-          <!-- OBJECT METHODS #2-->
-          <section>
-            <h3><strong class="colorful">this</strong> in Object Methods #2</h3>
-            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>let person = {
-    name: "Kostas",
-    show: function(){
-        console.log( this, this.name );
-    }
-}
-let other = {
-    name: "Mary"
-}
-other.show = person.show;</code></pre>
-            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>other.show();
-// other { }, "Mary"</code></pre>
-            <p class="fragment small"><strong class="colorful">REMEMBER</strong>: <strong class="colorful">this</strong> is set to the object the method is <strong class="colorful">called on</strong>.</p>
-          </section>
-          <!-- DOM Event Handlers-->
-          <section>
-            <h3><strong class="colorful">this</strong> in DOM Event Handlers</h3>
-            <button id="clickme" style="padding:10px 20px; font-size: 1.5rem">Click Me!</button>
-            <div class="linebreak"></div><br>
-            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>let $button = document.querySelector("#clickme");
-
-$button.addEventListener( "click", function(){
-
-    console.log( this );
-
-});</code></pre>
-            <p class="small fragment">When a function is used as an event handler,<br/>its <strong class="colorful">this</strong> is set to the element the event fired from.</p>
-          </section>
-          <!-- bind, call, apply-->
-          <section>
-            <h3>Explicit Binding:<br/><strong class="colorful"> bind(), apply(), call()</strong></h3>
-          </section>
-          <!-- bind-->
-          <section>
-            <h3><strong class="colorful"> bind()</strong></h3>
-            <p class="fragment">Bind <strong class="colorful">this</strong> to <strong class="colorful">any</strong> Object explicitly.</p>
-            <button class="fragment" id="somebutton" style="padding:10px 20px; font-size: 1.5rem">Some Button!</button>
-            <div class="linebreak"></div><br>
-            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>let person = { name: "Kostas" }</code></pre>
-            <div class="linebreak"></div>
-            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>let $button = document.querySelector("#somebutton");</code></pre>
-            <div class="linebreak"></div>
-            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>function handleClick(){ console.log( this ); }</code></pre>
-            <div class="linebreak"></div>
-            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>$button.addEventListener( "click", handleClick.bind( person ) );</code></pre>
-          </section>
-          <!-- bind #2-->
-          <section>
-            <h3><strong class="colorful"> bind()</strong> #2</h3>
-            <div class="linebreak"></div><br>
-            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>let person = { name: "Kostas" }
-
-function show(){
-    console.log( this.name );
-}
-
-show();
-
-let personShow = show.bind( person );
-
-personShow();</code></pre>
-          </section>
-          <!-- call, apply-->
-          <section>
-            <h3><strong class="colorful"> call(), apply()</strong></h3>
-            <div class="linebreak"></div><br>
-            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>let person = { 
-    name: "Kostas",
-    show: function( msg, end ){
-        console.log( msg + this.name + end );
-    } 
-}
-person.show( "Hello ", "!" );    // Hello Kostas!
-</code></pre>
-            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>let other = { name: "Mary" }
-
-person.show.call( other, "Hi ", "!" );</code></pre>
-            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>person.show.apply( other, [ "Hi ", "!" ] );</code></pre>
-          </section>
-          <!-- ARROW FUNCTIONS                            -->
-          <section>
-            <h3><strong class="colorful">this</strong> in Arrow Functions</h3>
-            <p class="small fragment">Arrow functions don't provide their own this binding<br/>It retains the this value of the enclosing lexical context.</p>
-            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>let obj = {
-    name: "Kostas",
-    show: function(){ 
-        setTimeout(function(){
-         console.log( this.name );
-        }, 2000)
-    }
-} </code></pre>
-            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>obj.show();
-/// undefined</code></pre>
-          </section>
-          <!-- ARROW FUNCTIONS #2-->
-          <section>
-            <p class="small">Remember: setTimeout is called from window and thus<br/>its inner function binds <strong class="colorful">this</strong> to its context (that of the calling site).</p>
-            <pre><code class="hljs javascript" data-trim contenteditable>let obj = {
-    name: "Kostas",
-    show: function(){ 
-        window.setTimeout(function(){
-         console.log( this.name );
-        }, 2000)
-    }
-} </code></pre>
-            <p class="small fragment">How can we change this?</p>
-          </section>
-          <!-- ARROW FUNCTIONS #3-->
-          <section>
-            <p class="small">#1 Using bind()</p>
-            <pre><code class="hljs javascript" data-trim contenteditable>let obj = {
-    name: "Kostas",
-    show: function(){ 
-        window.setTimeout(function(){
-         console.log( this.name );
-        }.bind( this ), 2000)
-    }
-} </code></pre>
-          </section>
-          <!-- ARROW FUNCTIONS #4-->
-          <section>
-            <p class="small">#2 Using an Arrow Function</p>
-            <pre><code class="hljs javascript" data-trim contenteditable>let obj = {
-    name: "Kostas",
-    show: function(){ 
-        window.setTimeout(()=>{
-         console.log( this.name );
-        }, 2000)
-    }
-} </code></pre>
-          </section>
-          <!-- SUMMARY-->
-          <section>
-            <h3>Summary</h3>
-            <p class="small fragment">Determining the <strong class="colorful">this</strong> binding for an executing function<br/>requires finding the direct call-site of that function.</p>
-            <p class="small fragment">Once examined, four rules can be applied<br/>to the call-site, in this order of precedence:</p>
-            <p class="small fragment">- Called with <strong class="colorful">new</strong>? Use the newly constructed object.</p>
-            <p class="small fragment">- Called with <strong class="colorful">call</strong> or <strong class="colorful">apply</strong> (or <strong class="colorful">bind</strong>)? Use the specified object.</p>
-            <p class="small fragment">- Called with a <strong class="colorful">context object</strong> owning the call? Use that context object.</p>
-            <p class="small fragment"><strong class="colorful">- Default</strong>: undefined in strict mode, global object otherwise.</p>
-          </section>
-          <!-- RECAP-->
-          <section>
-            <h6>Recap...</h6>
-            <h6>...through some examples</h6><a href="https://www.w3schools.com/js/js_this.asp" target="_blank">W3Schools</a><br><a class="fragment" href="https://codepen.io/kostasx/pen/yGVOKQ?editors=1011" target="_blank">Let's practice a bit...</a>
+            <h2>ES6 Arrow Functions</h2><a href="https://javascript.info/function-expressions-arrows#arrow-functions" target="_blank">JavaScript.info: Arrow Functions</a>
+<br>
+<a href="https://javascript.info/arrow-functions" target="_blank">JavaScript.info: Arrow Functions Revisited</a>
+<hr>
+<a href="https://codepen.io/kostasx/pen/LgVdLb?editors=0010" target="_blank">CodePen Time!</a>
+<br>
+<a target="_blank" href="https://bit.ly/2zIZxLF">https://bit.ly/<strong style="color:white;">2zIZxLF</strong></a>
           </section>
         </section>
         <!-- ES6: Default Function Parameters-->
@@ -525,324 +324,6 @@ const clone = { ...first };                    </code></pre>
             <h3>Practice</h3><a href="https://codepen.io/kostasx/pen/VqPZJK?editors=0011" target="_blank">CodePen</a>
           </section>
         </section>
-        <!-- ES6: Modules-->
-        <section>
-          <!-- INTRO-->
-          <section>
-            <h3><strong class="colorful">ES6</strong> Modules</h3>
-            <p class="small">In ES6, we can use an <strong class="colorful">export</strong> token to export<br/>a module's (modules === JS files) public API</p>
-            <p class="small"> <strong class="colorful">lib.js:</strong></p>
-            <pre><code class="hljs javascript" data-trim contenteditable>// Export the function
-export function sayHello(){ console.log('Hello'); }
-
-// Do not export the function
-function somePrivateFunction(){ ...}</code></pre>
-            <p class="small fragment"><strong class="colorful">app.js</strong>: And an <strong class="colorful">import</strong> token to import parts that a module exports:</p>
-            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>import { sayHello } from './lib';
-sayHello();  
-// => Hello
-</code></pre>
-          </section>
-          <!-- ALIASES-->
-          <section>
-            <p class="small">We can even give imports an alias using as:</p>
-            <pre><code class="hljs javascript" data-trim contenteditable>import { sayHello as say } from './lib';
-say();  
-// => Hello</code></pre>
-            <p class="small fragment">...or load an entire module at once:</p>
-            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>import * as lib from './lib';
-lib.sayHello();  
-// => Hello
-</code></pre>
-          </section>
-          <!-- DEFAULT EXPORTS-->
-          <section>
-            <p class="small">The format also supports default exports:</p>
-            <pre><code class="hljs javascript" data-trim contenteditable>// lib.js
-// Export default function
-export default function sayHello(){ console.log( 'Hello' ); }
-
-// Export non-default function
-export function sayBye(){ console.log('Bye'); }
-</code></pre>
-            <p class="small fragment">...which you can import like this:</p>
-            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>import sayHello, { sayBye } from './lib';
-sayHello();  
-// => Hello
-
-sayBye();  
-// => Bye
-</code></pre>
-          </section>
-          <section>
-            <p class="small">You can export not only functions, but anything you like:</p>
-            <pre><code class="hljs javascript" data-trim contenteditable>// Export simple value
-export const apiUrl = '...';
-
-// Export object
-export const settings = {  
-    debug: true
-}</code></pre>
-          </section>
-          <section>
-            <h6>Browser Support</h6>
-            <p class="small">The native module format is not yet supported by all browsers.</p>
-            <p class="small">We can use the ES6 module by using a transpiler like Babel.</p>
-          </section>
-          <section>
-            <p class="small">Let's dive right into Practice...</p><br><a href="https://codesandbox.io/s/6ljwk986yk" target="_blank">SandBox demo</a><br><a href="https://codesandbox.io/s/vjqo0komxl" target="_blank">SandBox demo (final)</a>
-          </section>
-        </section>
-        <!-- TYPES & EQUALITY-->
-        <!-- JS PATTERNS: IIFE-->
-        <section>
-          <section>
-            <h3><strong class="colorful">IIFE</strong></h3>
-            <h5>Immediately Invoked Function Expression</h5>
-            <div class="columns">
-              <div class="column is-8 is-offset-2">
-                <pre><code class="hljs javascript" data-trim contenteditable>(function(){
-    // ...
-})()
-</code></pre>
-                <p class="small fragment">An <strong class="colorful">IIFE</strong> is an anonymous function that is invoked when it is declared.</p>
-                <p class="small fragment">Notice how the function is surrounded by parentheses. </p>
-              </div>
-            </div>
-          </section>
-          <section>
-            <div class="columns">
-              <div class="column is-8 is-offset-2">
-                <p class="small">In JavaScript, a line starting with the word function is considered as a function declaration:</p>
-                <pre><code class="hljs javascript" data-trim contenteditable>// Function declaration
-function(){  
-    console.log('test');
-}</code></pre>
-                <p class="small fragment">Immediately invoking a function declaration<br/>throws an error:</p>
-                <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>// Immediately Invoked Function Declaration
-function(){  
-    console.log('test');
-}()
-// => Uncaught SyntaxError: Unexpected token )
-</code></pre>
-              </div>
-            </div>
-          </section>
-          <section>
-            <div class="columns">
-              <div class="column is-10 is-offset-1">
-                <p class="small">Putting parentheses around the function makes it a function expression:</p>
-                <pre><code class="hljs javascript" data-trim contenteditable>// Function expression
-(function(){
-    console.log('test');
-})
-// => returns function(){ console.log('test') }
-</code></pre>
-              </div>
-            </div>
-          </section>
-          <section>
-            <div class="columns">
-              <div class="column is-8 is-offset-2">
-                <p class="small">The function expression returns the function, so we can immediately call it:</p>
-              </div>
-            </div>
-            <pre><code class="hljs javascript" data-trim contenteditable>// Immediately Invoked Function Expression
-(function(){
-    console.log('test');
-})()
-// => writes 'test' to the console and returns undefined
-</code></pre>
-          </section>
-          <section>
-            <p class="small">We can assign the IIFE return value to a variable:</p>
-            <pre><code class="hljs javascript" data-trim contenteditable>// Expose module as global variable
-let App = (function(){
-    // Inner logic
-    function sayHello(){
-        console.log('Hello');
-    }
-    // Expose API
-    return { sayHello: sayHello }
-})();</code></pre>
-            <p class="small fragment">We can now access the module's API through the variable:</p>
-            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>// Access module functionality
-App.sayHello();  
-// => Hello
-</code></pre>
-          </section>
-          <section>
-            <div class="columns">
-              <div class="column is-8 is-offset-2">
-                <h6>Immediately Invoked Function Expressions allow us to:</h6>
-                <p class="small fragment">- encapsulate code complexity inside IIFE so we don't have to understand what the IIFE code does</p>
-                <p class="small fragment">- define variables inside the IIFE so they don't pollute the global scope (var, let, const statements inside the IIFE remain within the IIFE's closure)</p>
-              </div>
-            </div>
-          </section>
-        </section>
-        <!-- REGULAR EXPRESSIONS -->
-        <style>
-          .reveal table.regexp {
-              font-size: 1.5rem;
-              border: 1px solid white;
-          }                
-          .reveal table.regexp td,
-          .reveal table.regexp th {
-              border: 1px solid white;
-          }
-          .reveal table.regexp th {
-              background: orange;
-          }
-          .reveal table.regexp td {
-              background: #3b84bd;
-          }
-          
-        </style>
-        <section>
-          <section>
-            <h3>Regular Expressions</h3>
-            <h5>The Pattern Matching Syntax</h5>
-          </section>
-          <section>
-            <h6>Basic Syntax: </h6>
-            <p class="small">PATTERN: of characters defined by / ... /</p>
-            <pre><code class="hljs javascript" data-trim contenteditable>let regExp = /PATTERN/;  // Define Regular Expression</code></pre><br>
-            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>regExp.test( "Text" );  // Tests for PATTERN inside "Text"</code></pre><br>
-            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>regExp.exec( "Text" ); // Find PATTERN matches in "Text"</code></pre><br>
-            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>"Text".split( regExp ); // Split 'Text' using regExp</code></pre><br>
-            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>"Text".replace( regExp, "replacement" ); // Replace pattern in 'Text'</code></pre>
-          </section>
-          <!-- TABLE-->
-          <section>
-            <h6>PATTERNS can be:</h6>
-            <table class="regexp">
-              <thead>
-                <tr>
-                  <th>PATTERN</th>
-                  <th>MATCHES</th>
-                  <th>EXAMPLE</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>abc</td>
-                  <td>plain text characters</td>
-                  <td>'abc'</td>
-                </tr>
-                <tr>
-                  <td>[a-z]</td>
-                  <td>lowercase group</td>
-                  <td>'abcdef'</td>
-                </tr>
-                <tr>
-                  <td>\w+</td>
-                  <td>word</td>
-                  <td>'Magic'</td>
-                </tr>
-                <tr>
-                  <td>\d</td>
-                  <td>digit</td>
-                  <td>9</td>
-                </tr>
-                <tr>
-                  <td>\s</td>
-                  <td>space</td>
-                  <td>''</td>
-                </tr>
-                <tr>
-                  <td>.*</td>
-                  <td>wildcard</td>
-                  <td>'username74'</td>
-                </tr>
-                <tr>
-                  <td>+ or *</td>
-                  <td>greedy mattch</td>
-                  <td>'aaaaaa'</td>
-                </tr>
-                <tr>
-                  <td>\S</td>
-                  <td>NOT space</td>
-                  <td>'no_spaces'</td>
-                </tr>
-                <tr>
-                  <td>^, $</td>
-                  <td>Start / End of pattern</td>
-                  <td>'^Phrase$'</td>
-                </tr>
-              </tbody>
-            </table>
-            <p class="small">More: <a target="_blank" href="https://www.w3schools.com/jsref/jsref_obj_regexp.asp"> W3Schools</a></p>
-          </section>
-          <!-- EXAMPLES-->
-          <section>
-            <h6>Examples</h6>
-            <p class="small">Open <a href="https://regex101.com/" target="_blank">regex101.com</a> or <a href="https://www.regexpal.com/" target="_blank">www.regexpal.com</a></p>
-            <pre><code class="hljs javascript" data-trim contenteditable>let regExp = /abc/;
-let match = regExp.exec ("abcd ABCD abcd" );
-console.log( match[0] );</code></pre>
-            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>let regExp = /[a-c]/;
-match = regExp.exec ("abcd ABCD abcd" );</code></pre>
-            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>let regExp = /[a-c]+/;
-match = regExp.exec ("abcd ABCD abcd" );</code></pre>
-            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>let regExp = /[a-zA-Z]+/;
-match = regExp.exec ("abcd ABCD abcd" );</code></pre>
-            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>let regExp = /[a-z0-9]+/;
-match = regExp.exec ("abcd 1234" );
-</code></pre>
-          </section>
-          <section>
-            <pre><code class="hljs javascript" data-trim contenteditable>let regExp = /\w/;
-regExp.exec ("Some words in here." );</code></pre>
-            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>let regExp = /\w+/;
-regExp.exec ("Some words in here." );</code></pre>
-            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>let regExp = /\d+/;
-regExp.exec ("Some digits 123456 in here." );</code></pre>
-            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>let regExp = /\d{1,3}/;
-regExp.exec ("Some digits 123456 in here." );</code></pre>
-            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>let regExp = /\d{1,3}/;
-regExp.exec ("Some digits 123456 in here." );</code></pre>
-            <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>let regExp = /^Some|here.$/;
-regExp.exec ("Some digits 123456 in here." );
-</code></pre>
-          </section>
-          <!-- FLAGS-->
-          <section>
-            <h6>Flags</h6>
-            <div class="columns">
-              <div class="column is-6 is-offset-3">
-                <pre><code class="hljs javascript" data-trim contenteditable>let regExp = /PATTERN/FLAGS;</code></pre>
-                <p class="small fragment">Some basic Flags can be:</p>
-                <p class="small fragment"><strong class="colorful">g:</strong> global match; find all matches rather than stopping after the first match</p>
-                <p class="small fragment"><strong class="colorful">i:</strong> ignore case; </p>
-                <p class="small fragment"><strong class="colorful">m:</strong> multiline; </p>
-                <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>let regExp = /[a-zA-Z]/gi;</code></pre>
-              </div>
-            </div>
-          </section>
-          <!-- REGEXP PROPERTIES-->
-          <section>
-            <h6>RegExp Object Properties</h6>
-            <pre><code class="hljs javascript" data-trim contenteditable>let myRegExp = /example/ig
-
-// The flags property
-console.log( myRegExp.flags ) // "gi"
-
-// The global property
-console.log( myRegExp.global ) // true
-
-// The multiline property
-console.log( myRegExp.multiline ) // false
-
-// The source property
-console.log( myRegExp.source ) // /example/
-</code></pre>
-          </section>
-          <!-- PRACTICE-->
-          <section>
-            <h3>Practice</h3><a class="small" href="https://regexone.com/" target="_blank">https://regexone.com/</a><br><a class="small" href="https://codeburst.io/javascript-learn-regular-expressions-for-beginners-bb6107015d91" target="_blank">JavaScript: Learn Regular Expressions for Beginners </a><br><a class="small" href="https://alf.nu/RegexGolf" target="_blank">RegexGolf</a>
-          </section>
-        </section>
         <!-- RESOURCES-->
         <section>
           <h3>Resources:</h3>
@@ -864,26 +345,9 @@ console.log( myRegExp.source ) // /example/
     <script src="../libs/reveal.js/lib/js/head.min.js"></script>
     <script src="../libs/reveal.js/js/reveal.js"></script>
     <script>
-      /* SHA */
-      Reveal.configure({
-          keyboard: {
-              // Key: 'e'
-              69: function(){
-                  /*
-                  IF NOT EXIST
-                      <PRE>.insertAdjacentHTML('afterend', code);
-                  EVALUATE 
-                      eval( <PRE>.textContent )
-                  */
-              }
-              }
-      });
-      
-      // More info https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
       
           history: true,
-          // More info https://github.com/hakimel/reveal.js#dependencies
           dependencies: [
               { src: '../libs/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
               { src: '../libs/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
@@ -894,8 +358,6 @@ console.log( myRegExp.source ) // /example/
               { src: '../libs/reveal.js/plugin/notes/notes.js', async: true }
           ]
       });
-      
-      //- Reveal.addEventListener('data-state-value-here', function (){});
       
       Reveal.addEventListener( 'ready', function( e ) {
       
