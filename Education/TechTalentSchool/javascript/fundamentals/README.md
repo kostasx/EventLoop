@@ -45,6 +45,13 @@
 - Press `Ctrl + L`
 - Write `console.clear();`
 
+***How do we change the default browser used by the Live Server VSCode extension?***
+
+- Go to `File > Preferences > Settings` and search for `Live Server custom browser`
+- In the `Live Server: Custom Browser` setting select your favorite Browser
+- Note: Settings are saved automatically
+- Note: On Mac you can access the Settings from: `Code > Preferences > Settings`
+
 </details>
 
 <details>
@@ -107,7 +114,7 @@ Using the '\n' escape character.
 
 ### REFERENCES
 
-- [What is the difference between placing <script> in head and before </body>?](https://www.reddit.com/r/javascript/comments/5di1va/what_is_the_difference_between_placing_script_in/)
+- [What is the difference between placing &lt;script&gt; in head and before &lt;/body&gt;?](https://www.reddit.com/r/javascript/comments/5di1va/what_is_the_difference_between_placing_script_in/)
 - [The `defer` and `async` script attributes](https://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html)
 - [Where to place JavaScript in an HTML file?](https://stackoverflow.com/questions/196702/where-to-place-javascript-in-an-html-file)
 - [String Methods](https://www.w3schools.com/js/js_string_methods.asp)
@@ -118,7 +125,7 @@ Using the '\n' escape character.
   - [Array shift()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)
   - [Array.unshift()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift)
 - [Should I write script in the body or the head of the html? [duplicate]](https://stackoverflow.com/questions/3531314/should-i-write-script-in-the-body-or-the-head-of-the-html)
-- [When to use the <script> tag in the head and body section of a html page? ](https://stackoverflow.com/questions/38407962/when-to-use-the-script-tag-in-the-head-and-body-section-of-a-html-page?noredirect=1&lq=1)
+- [When to use the &lt;script&gt; tag in the head and body section of a html page? ](https://stackoverflow.com/questions/38407962/when-to-use-the-script-tag-in-the-head-and-body-section-of-a-html-page?noredirect=1&lq=1)
 - [Loose Equals == vs. Strict Equals ===](https://github.com/getify/You-Dont-Know-JS/blob/master/types%20%26%20grammar/ch4.md#loose-equals-vs-strict-equals)
 - [The Switch Statement](https://github.com/getify/You-Dont-Know-JS/blob/f0d591b6502c080b92e18fc470432af8144db610/types%20%26%20grammar/ch5.md#switch)
 
