@@ -68,6 +68,10 @@
 
 - If you omit a semicolon `;` at the end of the statement, JavaScript will try to guess and automatically place the semicolon itself. Most of the times, it does a good job at this, but there are cases where the automatic semicolon placement mechanism will produce undesirable effects. Therefore, we tend to place the semicolons ourselves. Try to get into the habit of placing semicolons at the end of your statements.  
 
+***Does the semicolons at the end of JavaScript statements work much like the ones in CSS?***
+
+- In a way, they do. Just like we must end each CSS rule with a semicolon; we also have to end each JS statement with a semicolon too, but, unlike CSS, JavaScript can deal with omitted semicolons by placing them automatically. So, most of the time, our statements will work without semicolons at the end, whereas in CSS an omitted semicolon will break subsequent CSS rules.
+
 ***Are the `break` and `default` statements optional inside the `switch` statement?***
 
 - Yes, they can be omitted, but make sure to check out the following 2 MDN resources:
