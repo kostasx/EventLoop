@@ -21,6 +21,8 @@
     - [Skype](https://www.skype.com/en/)
     - [Slack](https://slack.com/)
     - [Visual Studio Code](https://code.visualstudio.com/)
+- [Bookmarklets](https://en.wikipedia.org/wiki/Bookmarklet)
+- [Browser Extensions](https://en.wikipedia.org/wiki/Browser_extension)
 - [Mobile Apps](https://facebook.github.io/react-native/)
 - [Server Applications](https://nodejs.org/en/)
 - [Command Line Tools](https://developer.atlassian.com/blog/2015/11/scripting-with-node/)
