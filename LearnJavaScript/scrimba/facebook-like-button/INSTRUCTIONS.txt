@@ -1,0 +1,25 @@
+Recreate a Facebook Like button with HTML, CSS and JavaScript
+=============================================================
+
+- Get the official Facebook color
+  Go to: https://brandcolors.net/
+  Search for: Facebook
+  Grab the color: #3b5998
+  
+- Include the FontAwesome Icon library in our file
+  Go to: https://fontawesome.com/
+  Click on "Start Using Free"
+  https://fontawesome.com/start
+
+  Copy the link and paste it in the <head> tag of our HTML file
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  
+  - Place a Thumbs up icon (Like) on our page
+    Go to: https://fontawesome.com/
+    Click on Icons
+    https://fontawesome.com/icons?d=gallery
+    Check the "Free" option on the left sidebar
+    Search for: "Thumbs"
+    Click on the Thumbs up button and copy the markup
+    https://fontawesome.com/icons/thumbs-up?style=solid
+    <i class="fas fa-thumbs-up"></i>
