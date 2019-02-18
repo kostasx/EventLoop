@@ -3,7 +3,7 @@
 #### Slides: [(click to open)](https://kostasx.github.io/EventLoop/Education/TechTalentSchool/javascript/reactjs.html#/) 
 
 - Zipped Slides for Offline View:
-	- [( FEB 2019 )](./slides/slides-18.02.2019.zip)
+	- <a href="./slides/slides-18.02.2019.zip" download>( FEB 2019 )</a>
 
 ### CODE (create-react-app environments from Codesandbox.io)
 
