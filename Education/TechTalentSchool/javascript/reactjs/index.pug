@@ -20,26 +20,48 @@ html(lang='en')
         link(rel='stylesheet' href='../../css/reveal-tts.css')
         style.
             a.full-anchor {
-            position: fixed;
-            top     : -50%;
-            left    : -50%;
-            width   : 200vw;
-            height  : 200vh;
-            text-indent: -50000px;
+                position: fixed;
+                top     : -50%;
+                left    : -50%;
+                width   : 200vw;
+                height  : 200vh;
+                text-indent: -50000px;
             }
             .reveal .slide-background {
-            background-size: contain;
+                background-size: contain;
             }
             .svg_contain svg {
-            position:absolute;
-            top     :0;
-            left    :0;
-            width   :100%;
-            height  :auto;"
+                position:absolute;
+                top     :0;
+                left    :0;
+                width   :100%;
+                height  :auto;
             }
+        style#tts.
+
+            .reveal.tts-intro {
+                background-image: url('images/tts-titles-js-reactjs.jpg');
+            }
+            .reveal.tts-outro {
+                background-image: url('images/tts-titles-joinus.jpg');
+            }
+            .reveal.tts-intro,
+            .reveal.tts-outro {
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+            }
+            .reveal.tts-intro .progress,
+            .reveal.tts-outro .progress {
+                display: none !important;
+            }      
+
     body
         .reveal
             .slides
+
+                // TTS | INTRO
+                section#tts-intro.tts-title(data-state='tts-intro' data-transition="fade-out")
 
                 section
                     h2 JavaScript Frameworks
@@ -154,9 +176,9 @@ html(lang='en')
                                     p.small Chrome Extension
 
                 // Prerequisits: ES6 Object Restructuring, Import/Export 
-                <section>
-                    <section>
-                        <h3>Prerequisites:</h3>
+                section
+                    section
+                        h3 Prerequisites:
                         <div class="columns">
                             <div class="column is-8 is-offset-2">
                                 <p>It requires Node.JS and knowledge of ES6</p>
@@ -164,16 +186,14 @@ html(lang='en')
                                 <pre class="fragment"><code>$ node -v</code></pre>
                             </div>
                         </div>
-                    </section>
 
-                    <section>
-                        <p>Prerequisites:</p>
+                    section
+                        p Prerequisites:
                         <h3>ES6 <a href="" target="_blank">Import/Export</a><br>&amp; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Object_destructuring" target="_blank">Object Destructuring</a></h3>
                         <h6 class="fragment">A Quick Tour...</h6>
-                    </section>
 
                     // Object Destructuring 
-                    <section>
+                    section
                         <h3><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Object_destructuring">ES6 Object Destructuring</a></h3>
                         <pre>
                             <code class="hljs" data-trim contenteditable>
@@ -186,10 +206,9 @@ html(lang='en')
                             code(class="hljs" data-trim contenteditable).
                                 Component; // "My Component"		
                         </pre>
-                    </section>
 
                     // ES6 Module 
-                    <section>
+                    section
                         <h3><a target="_blank" href="https://hackernoon.com/import-export-default-require-commandjs-javascript-nodejs-es6-vs-cheatsheet-different-tutorial-example-5a321738b50f">ES6 Modules</a> | Named Exports</h3>
                         <p class="small">lib.js</p>
                         pre
@@ -204,8 +223,7 @@ html(lang='en')
                         pre
                             code.hljs(data-trim contenteditable).
                                 import { square, diag } from 'lib';
-                    </section>					
-                    <section>
+                    section
                         <h3><a target="_blank" href="https://hackernoon.com/import-export-default-require-commandjs-javascript-nodejs-es6-vs-cheatsheet-different-tutorial-example-5a321738b50f">ES6 Modules</a> | Default Exports</h3>
                         <p class="small">(One per module)</p>
                         <p class="small">lib.js</p>
@@ -217,11 +235,9 @@ html(lang='en')
                             code.hljs(data-trim contenteditable).
                                 import myFunc from './lib.js';
                                 myFunc();
-                    </section>
-                </section>
 
                 // CRA & CodeSandbox 
-                <section>
+                section
                     <section>
                         <div class="columns">
                             <div class="column is-8 is-offset-2">
@@ -230,7 +246,6 @@ html(lang='en')
                                     code.hljs.bash(data-trim contenteditable).
                                         $ npm install create-react-app -g
                                 pre.fragment
-
                                     code.hljs.bash(data-trim contenteditable).
                                         $ create-react-app my-app
                                 pre.fragment
@@ -248,10 +263,9 @@ html(lang='en')
                         h5 Let's meet our practice partner:
                         <h3 class="fragment">CodeSandbox</h3>
                         <a class="fragment" style="font-size:1.6em;" target="_blank" href="https://codesandbox.io/">https://codesandbox.io/</a>
-                </section>
 
                 // Code Walkthrough 
-                <section>
+                section
 
                     section
                         <a target="_blank" href="https://codesandbox.io/u/kostasx">Create React App Boilerplate</a>
@@ -338,7 +352,6 @@ html(lang='en')
                                 <a href="https://reactjs.org/docs/react-component.html#the-component-lifecycle" target="_blank">Component Lifecycle</a>
                                 <p class="small">Mounting, Updating, Unmounting</p>
                                 <a href="https://codesandbox.io/s/v828m8j8x0" target="_blank">CodeSandbox</a>
-                </section>
 
                 section
 
@@ -380,41 +393,35 @@ html(lang='en')
                         <div class="column is-8 is-offset-2">
                             
                         ul.small
-                            <li>
+                            li
+                                <a target="_blank" href="https://scrimba.com/g/glearnreact">Scrimba.com: Learn React for Free</a>
+                            li
                                 <a target="_blank" href="https://www.codecademy.com/courses/react-101/">Codecademy: Learn React.JS</a>
-                            </li>
-                            <li>
+                            li
                                 <a href="https://wsvincent.com/react-counter/" target="_blank">React Counter Button Exercise</a>
-                            </li>
-                            <li>
+                            li
                                 <a target="_blank" href="https://reactjs.org/blog/2016/07/22/create-apps-with-no-configuration.html#getting-started">GETTING STARTED WITH CREATE REACT APP</a>
-                            </li>
-                            <li>
+                            li
                                 <a target="_blank" href="https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md">CREATE REACT APP GUIDE</a>
-                            </li>
-                            <li>
+                            li
                                 <a target="_blank" href="https://reactforbeginners.com/">REACT FOR BEGINNERS (Wes Bos)</a>
-                            </li>
-                            <li>
+                            li
                                 <a target="_blank" href="https://medium.com/@JohnAyeni/how-i-learnt-front-end-frameworks-b275aba18a8b">HOW I LEARNT FRONT-END FRAMEWORKS</a>
-                            </li>
-                            <li>
+                            li
                                 <a target="_blank" href="https://www.youtube.com/watch?v=Ke90Tje7VS0">REACT | LEARN REACT - REACT CRASH COURSE 2018 - REACT TUTORIAL WITH EXAMPLES</a>
-                            </li>
-                            <li>
+                            li
                                 <a target="_blank" href="https://reactjs.org/docs/react-component.html">REACT COMPONENT</a>
-                            </li>
-                            <li>
+                            li
                                 <a target="_blank" href="https://stackoverflow.com/questions/36795819/when-should-i-use-curly-braces-for-es6-import/36796281#36796281">WHEN SHOULD I USE CURLY BRACES FOR ES6 IMPORT? (DIFFERENCE BETWEEN DEFAULT AND NAMED EXPORTS)</a>
-                            </li>
-                            <li>
+                            li
                                 <a target="_blank" href="https://stackoverflow.com/questions/48308936/what-does-this-react-scripts-eject-command-do#answer-48309071">REACT EJECT</a>
-                            </li>
-                            <li>
+                            li
                                 <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import">ES6 IMPORTS</a>
-                            </li>
 
                         </div>
+
+                // TTS | OUTRO 
+                section#tts-outro.tts-title(data-state='outro' data-transition="fade-out")
 
         script(src='../../libs/reveal.js/lib/js/head.min.js')
         script(src='../../libs/reveal.js/js/reveal.js')
@@ -433,3 +440,25 @@ html(lang='en')
                 { src: '../../libs/reveal.js/plugin/notes/notes.js', async: true }
                 ]
             });
+
+            /* TTS */
+            function handleSlideDataChange( e ) {
+                let slideState = e.currentSlide.getAttribute('data-state');
+                switch ( slideState ) {
+                    case 'tts-intro':
+                        document.querySelector(".reveal").classList.add("tts-intro")
+                        break;
+                    case 'intro':
+                        document.querySelector(".reveal").classList.remove("tts-intro")
+                        break;
+                    case 'outro':
+                        document.querySelector(".reveal").classList.add("tts-outro")
+                        break;
+                    default:
+                        document.querySelector(".reveal").classList.remove("tts-outro")
+                        document.querySelector(".reveal").classList.remove("tts-intro")
+                }    
+            };
+
+            Reveal.addEventListener( 'ready', handleSlideDataChange );
+            Reveal.addEventListener( 'slidechanged', handleSlideDataChange );
