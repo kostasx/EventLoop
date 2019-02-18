@@ -1,0 +1,43 @@
+.reveal .highlight,
+.reveal p strong {
+  color: #ffa500;
+}
+.reveal pre,
+.reveal code {
+  white-space: pre-line;
+}
+.reveal section img {
+  border: none;
+  background: transparent;
+  margin: 0;
+  box-shadow: none;
+}
+.reveal p.super_heading {
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 0;
+  font-weight: 100;
+}
+.reveal p.small {
+  font-size: 0.6em;
+}
+.reveal p.italics {
+  font-style: italic;
+}
+.reveal .columns.align-items-center {
+  align-items: center;
+}
+.reveal small.attribution a {
+  font-size: 0.7em;
+  opacity: 0.6;
+}
+.reveal sup {
+  vertical-align: super;
+  font-size: 0.6em;
+}
+.reveal a.tiny_lnk {
+  font-size: 0.6em;
+}
+.reveal ul.small {
+  font-size: 0.6em;
+}
+

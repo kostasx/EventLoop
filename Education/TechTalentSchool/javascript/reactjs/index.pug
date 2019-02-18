@@ -23,9 +23,12 @@ html(lang='en')
         link(href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900' rel='stylesheet')
 
         // Theme used for syntax highlighting of code
-        link(rel='stylesheet' href='../../libs/reveal.js/lib/css/monokai-sublime-sha.css')
-        link(rel='stylesheet' href='../../css/reveal-overrides.css')
-        link(rel='stylesheet' href='../../css/reveal-tts.css')
+        //- link(rel='stylesheet' href='../../libs/reveal.js/lib/css/monokai-sublime-sha.css')
+        link(rel='stylesheet' href='./css/monokai-sublime-sha.css')
+        //- link(rel='stylesheet' href='../../css/reveal-overrides.css')
+        link(rel='stylesheet' href='./css/reveal-overrides.css')
+        //- link(rel='stylesheet' href='../../css/reveal-tts.css')
+        link(rel='stylesheet' href='./css/reveal-tts.css')
 
         style.
             a.full-anchor {
@@ -74,7 +77,7 @@ html(lang='en')
 
                 section
                     h2 JavaScript Frameworks
-                    img(src='../images/reactjs/React-icon.svg' width='150' alt='')
+                    img(src='./images/React-icon.svg' width='150' alt='')
                     h3 React.JS
                     p
                         small
@@ -82,7 +85,7 @@ html(lang='en')
                         a(href='https://github.com/kostasx') Kostas Minaidis
                         |  | Jan 2019
                     p
-                        img.tts_logo(style='width:140px; height:94px;' src='../../img/tts-logo.png' alt='')
+                        img.tts_logo(style='width:140px; height:94px;' src='./images/tts-logo.png' alt='')
                     small Front-end Bootcamp
                     // What is React.JS
 
@@ -134,9 +137,9 @@ html(lang='en')
                                     | Breaking down our Web App
                                     br
                                     | into Components
-                            img(src='../images/reactjs/components-planning.jpg' alt='')
+                            img(src='./images/components-planning.jpg' alt='')
                     section
-                        img(src='../images/reactjs/components-sketching.jpg' alt='')
+                        img(src='./images/components-sketching.jpg' alt='')
                     // <section> [ Quick Mention: document.createDocumentFragment ]( https://developer.mozilla.org/en-US/docs/Web/API/Document/createDocumentFragment )</section>
 
                 // General Framework Concepts
@@ -426,21 +429,51 @@ html(lang='en')
                 // TTS | OUTRO 
                 section#tts-outro.tts-title(data-state='outro' data-transition="fade-out")
 
-        script(src='../../libs/reveal.js/lib/js/head.min.js')
-        script(src='../../libs/reveal.js/js/reveal.js')
+        //- script(src='../../libs/reveal.js/lib/js/head.min.js')
+        script(src='./js/head.min.js')
+        //- script(src='../../libs/reveal.js/js/reveal.js')
+        script(src='./js/reveal.js')
         script.
             // More info https://github.com/hakimel/reveal.js#configuration
             Reveal.initialize({
                 history: true,
                 // More info https://github.com/hakimel/reveal.js#dependencies
                 dependencies: [
-                { src: '../../libs/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-                { src: '../../libs/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                { src: '../../libs/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                { src: '../../libs/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-                { src: '../../libs/reveal.js/plugin/search/search.js', async: true },
-                { src: '../../libs/reveal.js/plugin/zoom-js/zoom.js', async: true },
-                { src: '../../libs/reveal.js/plugin/notes/notes.js', async: true }
+                    { 
+                        // src: '../../libs/reveal.js/lib/js/classList.js',
+                        src: './js/classList.js',
+                        condition: function() { return !document.body.classList; } 
+                    },
+                    { 
+                        //- src: '../../libs/reveal.js/plugin/markdown/marked.js',
+                        src: './js/marked.js',
+                        condition: function() { return !!document.querySelector( '[data-markdown]' ); } 
+                    },
+                    { 
+                        //- src: '../../libs/reveal.js/plugin/markdown/markdown.js',
+                        src: './js/markdown.js',
+                        condition: function() { return !!document.querySelector( '[data-markdown]' ); } 
+                    },
+                    { 
+                        //- src: '../../libs/reveal.js/plugin/highlight/highlight.js',
+                        src: './js/highlight.js',
+                        async: true, callback: function() { hljs.initHighlightingOnLoad(); } 
+                    },
+                    { 
+                        //- src: '../../libs/reveal.js/plugin/search/search.js',
+                        src: './js/search.js',
+                        async: true 
+                    },
+                    { 
+                        //- src: '../../libs/reveal.js/plugin/zoom-js/zoom.js',
+                        src: './js/zoom.js',
+                        async: true 
+                    },
+                    { 
+                        //- src: '../../libs/reveal.js/plugin/notes/notes.js',
+                        src: './js/notes.js',
+                        async: true 
+                    }
                 ]
             });
 
