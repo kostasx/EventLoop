@@ -7,17 +7,26 @@ html(lang='en')
         meta(name='apple-mobile-web-app-capable' content='yes')
         meta(name='apple-mobile-web-app-status-bar-style' content='black-translucent')
         meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+
         // Bulma.io | https://cdnjs.com/libraries/bulma
-        link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css')
-        link(rel='stylesheet' href='../../libs/reveal.js/css/reveal.css')
-        link#theme(rel='stylesheet' href='../../libs/reveal.js/css/theme/black-tts.css')
-        link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css')
+        link(rel='stylesheet' href='./css/bulma.min.css')
+        //- link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css')
+        //- link(rel='stylesheet' href='../../libs/reveal.js/css/reveal.css')
+        link(rel='stylesheet' href='./css/reveal.css')
+        //- link#theme(rel='stylesheet' href='../../libs/reveal.js/css/theme/black-tts.css')
+        link#theme(rel='stylesheet' href='./css/black-tts.css')
+
+        link(rel='stylesheet' href='./css/hack.css')
+        //- link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css')
+
         // Roboto | Google Web Fonts
         link(href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900' rel='stylesheet')
+
         // Theme used for syntax highlighting of code
         link(rel='stylesheet' href='../../libs/reveal.js/lib/css/monokai-sublime-sha.css')
         link(rel='stylesheet' href='../../css/reveal-overrides.css')
         link(rel='stylesheet' href='../../css/reveal-tts.css')
+
         style.
             a.full-anchor {
                 position: fixed;
