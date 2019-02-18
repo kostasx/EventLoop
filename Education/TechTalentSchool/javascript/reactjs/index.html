@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>TechTalentSchool | JavaScript Frameworks: React.js</title>
+    <meta name="author" content="Kostas Minaidis">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Bulma.io | https://cdnjs.com/libraries/bulma-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+    <link rel="stylesheet" href="../../libs/reveal.js/css/reveal.css">
+    <link id="theme" rel="stylesheet" href="../../libs/reveal.js/css/theme/black-tts.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css">
+    <!-- Roboto | Google Web Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <!-- Theme used for syntax highlighting of code-->
+    <link rel="stylesheet" href="../../libs/reveal.js/lib/css/monokai-sublime-sha.css">
+    <link rel="stylesheet" href="../../css/reveal-overrides.css">
+    <link rel="stylesheet" href="../../css/reveal-tts.css">
+    <style>
+      a.full-anchor {
+      position: fixed;
+      top     : -50%;
+      left    : -50%;
+      width   : 200vw;
+      height  : 200vh;
+      text-indent: -50000px;
+      }
+      .reveal .slide-background {
+      background-size: contain;
+      }
+      .svg_contain svg {
+      position:absolute;
+      top     :0;
+      left    :0;
+      width   :100%;
+      height  :auto;"
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h2>JavaScript Frameworks</h2><img src="../images/reactjs/React-icon.svg" width="150" alt="">
+          <h3>React.JS</h3>
+          <p><small></small>Created by <a href="https://github.com/kostasx">Kostas Minaidis</a> | Jan 2019</p>
+          <p><img class="tts_logo" style="width:140px; height:94px;" src="../../img/tts-logo.png" alt=""></p><small>Front-end Bootcamp</small>
+          <!-- What is React.JS-->
+        </section>
+        <!-- WHAT IS REACT.JS-->
+        <section>
+          <section>
+            <h3>What is React.JS?</h3>
+            <div class="columns">
+              <div class="column is-10 is-offset-1">
+                <p class="fragment">A JavaScript library for building user interfaces using reusable encapsulated <strong>Components</strong> that manage their own <strong>State</strong>.</p>
+                <p class="fragment">It uses the <strong>Virtual DOM</strong> and <strong>JSX</strong> technologies to accomplish that.</p>
+                <p class="small fragment">React was developed by engineers at Facebook.</p>
+              </div>
+            </div>
+          </section>
+          <section>
+            <p>It is specially for projects which need performant DOM manipulations, like Facebook, AirBnB, etc. where a lot of areas update.</p>
+            <p class="fragment">It is also a way to work by splitting the interface and app features into components.</p>
+          </section>
+          <section>
+            <h3>What the heck is the <strong>VirtualDOM</strong>?</h3>
+            <div class="columns">
+              <div class="column is-8 is-offset-2">
+                <p class="small fragment">Whenever something is needed to be re-rendered, a virtual representation of the updated DOM is generated.</p>
+                <p class="small fragment">The Virtual DOM consists of light representations of elements modeled after the component tree, making the process of generating them much more efficient than generating real DOM elements.</p>
+                <p class="small fragment">Before applying the changes to the real DOM, checks are done to determine where exactly in the component tree the changes happened, a diff is created, and only those specific changes are applied.</p>
+                <p class="small fragment">Source: <a href="https://www.toptal.com/react-native/cold-dive-into-react-native-a-beginners-tutorial" target="_blank">https://www.toptal.com/react-native/cold-dive-into-react-native-a-beginners-tutorial</a></p>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="column">
+              <div class="column is-8 is-offset-2">
+                <h6>Breaking down our Web App<br>into Components</h6>
+              </div><img src="../images/reactjs/components-planning.jpg" alt="">
+            </div>
+          </section>
+          <section><img src="../images/reactjs/components-sketching.jpg" alt=""></section>
+          <!-- <section> [ Quick Mention: document.createDocumentFragment ]( https://developer.mozilla.org/en-US/docs/Web/API/Document/createDocumentFragment )</section>-->
+        </section>
+        <!-- General Framework Concepts-->
+        <section>
+          <h3>General Front-end Framework Concepts</h3>
+          <div class="columns">
+            <div class="column is-8 is-offset-2">
+              <ul class="colorful" style="font-size: 0.6em;">
+                <li class="fragment"><strong>COMPONENTS:</strong> Split UI into independent, isolated, reusable pieces.</li>
+                <li class="fragment"><strong>PROPS:</strong> Data passed into a COMPONENT</li>
+                <li class="fragment"><strong>STATE:</strong> Private COMPONENT data</li>
+                <li class="fragment"><strong>LIFE CYCLE:</strong> Different forms in which a component can exist: mounted, destroyed, etc. 
+                  <ul>
+                    <li class="fragment"><strong>MOUNT:</strong> constructor, render, componentDidMount</li>
+                    <li class="fragment"><strong>UPDATE:</strong> render, componentDidUpdate</li>
+                    <li class="fragment"><strong>UNMOUNT:</strong> componentWillUnmount</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <!-- create-react-app-->
+        <section>
+          <h5>Our Tools</h5>
+          <div class="columns">
+            <div class="column is-8 is-offset-2">
+              <ul>
+                <li><a href="https://github.com/facebook/create-react-app" target="_blank">Create-React-App</a>
+                  <p class="small">Create React apps with no build configuration.</p>
+                </li>
+                <li><a href="https://marketplace.visualstudio.com/items?itemName=burkeholland.simple-react-snippets" target="_blank">Simple React Snippets</a>
+                  <p class="small">Package for Visual Studio Code</p>
+                </li>
+                <li><a href="https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en" target="_blank">React Developer Tools</a>
+                  <p class="small">Chrome Extension</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <!-- Prerequisits: ES6 Object Restructuring, Import/Export --><section>
+<section>
+<h3>Prerequisites:</h3>
+<div class="columns">
+<div class="column is-8 is-offset-2">
+<p>It requires Node.JS and knowledge of ES6</p>
+<p class="fragment">Do you have node?</p>
+<pre class="fragment"><code>$ node -v</code></pre>
+</div>
+</div>
+</section>
+<section>
+<p>Prerequisites:</p>
+<h3>ES6 <a href="" target="_blank">Import/Export</a><br>&amp; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Object_destructuring" target="_blank">Object Destructuring</a></h3>
+<h6 class="fragment">A Quick Tour...</h6>
+</section>
+        <!-- Object Destructuring --><section>
+<h3><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Object_destructuring">ES6 Object Destructuring</a></h3>
+<pre>
+<code class="hljs" data-trim contenteditable>
+        <var>React = { Component: "My Component", Render: "Render!" }</var>
+        <var>{ Component } = React;						</var></code>
+</pre>
+<br>
+<pre class="fragment"><code class="hljs" data-trim contenteditable>Component; // "My Component"		</code></pre>
+</section>
+        <!-- ES6 Module --><section>
+<h3><a target="_blank" href="https://hackernoon.com/import-export-default-require-commandjs-javascript-nodejs-es6-vs-cheatsheet-different-tutorial-example-5a321738b50f">ES6 Modules</a> | Named Exports</h3>
+<p class="small">lib.js</p>
+        <pre><code class="hljs" data-trim contenteditable>export function square(x) {
+    return x * x;
+}
+export function diag(x, y) {
+    return Math.sqrt( Math.sqrt(x) + Math.sqrt(y) );
+}</code></pre><p class="small">main.js</p>
+        <pre><code class="hljs" data-trim contenteditable>import { square, diag } from 'lib';</code></pre></section>					
+<section>
+<h3><a target="_blank" href="https://hackernoon.com/import-export-default-require-commandjs-javascript-nodejs-es6-vs-cheatsheet-different-tutorial-example-5a321738b50f">ES6 Modules</a> | Default Exports</h3>
+<p class="small">(One per module)</p>
+<p class="small">lib.js</p>
+        <pre><code class="hljs" data-trim contenteditable>export default function (){ ... };</code></pre><p class="small">main.js</p>
+        <pre><code class="hljs" data-trim contenteditable>import myFunc from './lib.js';
+myFunc();</code></pre></section>
+</section>
+        <!-- CRA & CodeSandbox --><section>
+<section>
+<div class="columns">
+<div class="column is-8 is-offset-2">
+<h3>Gettings started with<br><strong class="colorful">create-react-app</strong></h3>
+        <pre class="fragment"><code class="hljs bash" data-trim contenteditable>$ npm install create-react-app -g</code></pre>
+        <pre class="fragment"><code class="hljs bash" data-trim contenteditable>$ create-react-app my-app</code></pre>
+        <pre class="fragment"><code class="hljs bash" data-trim contenteditable>$ cd my-app
+$ npm start</code></pre><p class="fragment small">When you are ready for production...</p>
+        <pre class="fragment"><code class="hljs bash" data-trim contenteditable>$ npm run build</code></pre></div>
+</div>
+</section>
+        <section>
+          <h5>Let's meet our practice partner:</h5><h3 class="fragment">CodeSandbox</h3>
+<a class="fragment" style="font-size:1.6em;" target="_blank" href="https://codesandbox.io/">https://codesandbox.io/</a>
+        </section></section>
+        <!-- Code Walkthrough --><section>
+        <section><a target="_blank" href="https://codesandbox.io/u/kostasx">Create React App Boilerplate</a>
+<p class="small">https://codesandbox.io/u/kostasx/</p>
+        </section>
+        <!-- Quick Start -->
+        <section><a href="https://codesandbox.io/s/ov59rpkloz" target="_blank">Quick Start</a>
+          <pre><code data-trim contenteditable>import React from 'react';
+import ReactDOM from 'react-dom';
+
+// Write code here:
+let math = <h1>2 + 3 = 2 + 3</h1>;
+
+ReactDOM.render( math, document.getElementById("app"));
+</code></pre>
+        </section>
+        <!-- Basics -->
+        <section><a href="https://codesandbox.io/s/ryrmo90354" target="_blank">Basics: Our App</a></section>
+        <!-- Basics JSX -->
+        <section><a href="https://codesandbox.io/s/8m7zkjqj0" target="_blank">Basics: JSX</a>
+          <div class="columns"><div class="column is-8 is-offset-2">
+            <p class="small">Smart Syntax using HTML + JS</p><p class="small fragment">JSX elements are treated as JavaScript expressions. They can go anywhere that JavaScript expressions can go.</p>
+<p class="small fragment">That means that a JSX element can be saved in a variable, passed to a function, stored in an object or array...you name it.</p>
+<p class="small fragment">If a JSX expression takes up more than one line, then you must wrap the multi-line JSX expression in parentheses.</p>
+</div>
+          </div>
+        </section>
+        <!-- Basics: Components -->
+        <section><a href="https://codesandbox.io/s/ryrmo90354" target="_blank">Basics: A Component</a>
+<div class="columns">
+<div class="column is-8 is-offset-2">
+<p class="small">Reusable Block</p>
+<p class="small fragment">A component is a small, reusable chunk of code that is responsible for one job. That job is often to render some HTML. Every component must come from a component class.</p>
+<p class="small fragment">A component class is like a factory that creates components. If you have a component class, then you can use that class to produce as many components as you want.</p>
+<p class="small fragment">To make a component class, you use a base class from the React library: <strong>React.Component</strong></p>
+</div>
+</div>									
+        </section>
+        <!-- Basics: Components II -->
+        <section><a href="https://codesandbox.io/s/9ynj104m6r" target="_blank">Basics: Component Styling</a>
+<p class="small">External and Inline CSS Styling. Adding Media.</p>
+        </section>
+        <!-- Basics: Components III -->
+        <section><a href="https://codesandbox.io/s/v31woq1xpy" target="_blank">Basics: Component Props</a>
+<p class="small">Passing data to our Components top-down. (Extras: Children)</p>
+        </section>
+        <!-- Component State -->
+        <section><a href="https://codesandbox.io/s/k3rm7vx057" target="_blank">Basics: Component State</a>
+<p class="small">2 ways to initialize: </p>
+<p class="small"><strong>state = {...}</strong> directly inside the class
+</p><p class="small">Write a constructor and use <strong>this.state = { ... }</strong></p>
+        </section>
+        <!-- Event Handlers -->
+        <section><a href="https://codesandbox.io/s/k3rm7vx057" target="_blank">Basics: Component Event Handlers</a>
+<p class="small">Take care of your class binding:</p>
+<p class="small">(1) Constructor <strong>this.method.bind(this)</strong>
+</p>
+<p class="small"> (2) <strong>method = ()=> { ... }</strong>
+</p>
+<p class="small">Events: <strong>onClick</strong>, <strong>onMouseOver</strong>, etc.</p>
+<h6>Docs</h6>
+<p class="small"><a href="https://reactjs.org/docs/handling-events.html"  target="_blank">Handling Events</a> / <a target="_blank" href="https://reactjs.org/docs/events.html#supported-events">Supported Events</a></p>
+        </section>
+        <!-- Parent/Child Communication & Passing Data from Child Component to Parent Component -->
+        <section><h6>Passing Data from Child Component<br/>to Parent</h6>
+<a href="https://codesandbox.io/s/50kzzknv5n" target="_blank">CodeSandbox</a>
+        </section>
+        <!-- Component Lifecycle -->
+        <section>
+          <ul>
+            <li><a href="https://reactjs.org/docs/react-component.html#the-component-lifecycle" target="_blank">Component Lifecycle</a>
+<p class="small">Mounting, Updating, Unmounting</p>
+<a href="https://codesandbox.io/s/v828m8j8x0" target="_blank">CodeSandbox</a>
+            </li>
+          </ul>
+        </section></section>
+        <section><h5>Hands-on: A Click Counter Button<br/>
+<a href="https://codesandbox.io/s/k3rm7vx057" target="_blank">Click Counter Button</a>
+</h5>
+<h5>Hands-on: Crypto Ticker<br/>
+<a href="https://codesandbox.io/s/x9xy9ov8xw" target="_blank">Click Counter Button</a>
+</h5>
+<h5>CodeSandBox Collection:<br/>
+<a href="https://codesandbox.io/u/kostasx" target="_blank">kostasx</a>
+</h5>
+        </section>
+        <!-- GOTCHAS -->
+        <section>
+          <section><h3>React Gotchas</h3>
+<ul class="colorful">
+<li>Self-closing JSX</li>
+<li>A JSX expression must have exactly one outermost element</li>
+<li>Using <strong>class</strong> instead of <strong>className</strong></li>
+<li>Using <strong>&lt;label for=""</strong> instead of <strong>&lt; label htmlFor=""</strong></li>
+</ul>
+          </section>
+          <section>
+            <ul class="colorful"><li>You cannot inject an <strong>if</strong> statement into a JSX expressions
+<p class="small">Use <strong>logical operators: &amp;&amp;, ||</strong> or <strong>ternary operators: ( condition ) ? then : else ;</strong></p>
+</li>
+<li>Changing the state directly via <strong>this.state</strong> instead of <strong>this.setState</strong> </li>
+<li>Forget to <strong>export</strong> the Component</li>
+            </ul>
+          </section>
+        </section>
+        <!-- RESOURCES -->
+        <section>
+          <h6>Resources</h6>
+          <div class="columns"><div class="column is-8 is-offset-2">
+            <ul class="small"><li>
+<a target="_blank" href="https://www.codecademy.com/courses/react-101/">Codecademy: Learn React.JS</a>
+</li>
+<li>
+<a href="https://wsvincent.com/react-counter/" target="_blank">React Counter Button Exercise</a>
+</li>
+<li>
+<a target="_blank" href="https://reactjs.org/blog/2016/07/22/create-apps-with-no-configuration.html#getting-started">GETTING STARTED WITH CREATE REACT APP</a>
+</li>
+<li>
+<a target="_blank" href="https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md">CREATE REACT APP GUIDE</a>
+</li>
+<li>
+<a target="_blank" href="https://reactforbeginners.com/">REACT FOR BEGINNERS (Wes Bos)</a>
+</li>
+<li>
+<a target="_blank" href="https://medium.com/@JohnAyeni/how-i-learnt-front-end-frameworks-b275aba18a8b">HOW I LEARNT FRONT-END FRAMEWORKS</a>
+</li>
+<li>
+<a target="_blank" href="https://www.youtube.com/watch?v=Ke90Tje7VS0">REACT | LEARN REACT - REACT CRASH COURSE 2018 - REACT TUTORIAL WITH EXAMPLES</a>
+</li>
+<li>
+<a target="_blank" href="https://reactjs.org/docs/react-component.html">REACT COMPONENT</a>
+</li>
+<li>
+<a target="_blank" href="https://stackoverflow.com/questions/36795819/when-should-i-use-curly-braces-for-es6-import/36796281#36796281">WHEN SHOULD I USE CURLY BRACES FOR ES6 IMPORT? (DIFFERENCE BETWEEN DEFAULT AND NAMED EXPORTS)</a>
+</li>
+<li>
+<a target="_blank" href="https://stackoverflow.com/questions/48308936/what-does-this-react-scripts-eject-command-do#answer-48309071">REACT EJECT</a>
+</li>
+<li>
+<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import">ES6 IMPORTS</a>
+</li>
+            </ul></div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="../../libs/reveal.js/lib/js/head.min.js"></script>
+    <script src="../../libs/reveal.js/js/reveal.js"></script>
+    <script>
+      // More info https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+          history: true,
+          // More info https://github.com/hakimel/reveal.js#dependencies
+          dependencies: [
+          { src: '../../libs/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '../../libs/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../../libs/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../../libs/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: '../../libs/reveal.js/plugin/search/search.js', async: true },
+          { src: '../../libs/reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: '../../libs/reveal.js/plugin/notes/notes.js', async: true }
+          ]
+      });
+    </script>
+  </body>
+</html>
