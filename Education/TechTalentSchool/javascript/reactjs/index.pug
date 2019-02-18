@@ -179,58 +179,53 @@ html(lang='en')
                 section
                     section
                         h3 Prerequisites:
-                        <div class="columns">
-                            <div class="column is-8 is-offset-2">
+                        div.columns
+                            div.column.is-8.is-offset-2
                                 <p>It requires Node.JS and knowledge of ES6</p>
                                 <p class="fragment">Do you have node?</p>
                                 <pre class="fragment"><code>$ node -v</code></pre>
-                            </div>
-                        </div>
 
                     section
                         p Prerequisites:
                         <h3>ES6 <a href="" target="_blank">Import/Export</a><br>&amp; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Object_destructuring" target="_blank">Object Destructuring</a></h3>
-                        <h6 class="fragment">A Quick Tour...</h6>
+                        h6.fragment A Quick Tour...
 
                     // Object Destructuring 
                     section
                         <h3><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Object_destructuring">ES6 Object Destructuring</a></h3>
-                        <pre>
-                            <code class="hljs" data-trim contenteditable>
-                            var React = { Component: "My Component", Render: "Render!" }
-                            var { Component } = React;						
-                            </code>
-                        </pre>
+                        pre
+                            code.hljs.javascript(data-trim contenteditable).
+                                let React = { Component: "My Component", Render: "Render!" }
+                                let { Component } = React;						
                         <br>
-                        <pre class="fragment">
-                            code(class="hljs" data-trim contenteditable).
+                        pre.fragment
+                            code.hljs.javascript(data-trim contenteditable).
                                 Component; // "My Component"		
-                        </pre>
 
                     // ES6 Module 
                     section
                         <h3><a target="_blank" href="https://hackernoon.com/import-export-default-require-commandjs-javascript-nodejs-es6-vs-cheatsheet-different-tutorial-example-5a321738b50f">ES6 Modules</a> | Named Exports</h3>
                         <p class="small">lib.js</p>
                         pre
-                            code.hljs(data-trim contenteditable).
+                            code.hljs.javascript(data-trim contenteditable).
                                 export function square(x) {
                                     return x * x;
                                 }
                                 export function diag(x, y) {
                                     return Math.sqrt( Math.sqrt(x) + Math.sqrt(y) );
                                 }
-                        <p class="small">main.js</p>
+                        p.small main.js
                         pre
                             code.hljs(data-trim contenteditable).
                                 import { square, diag } from 'lib';
                     section
                         <h3><a target="_blank" href="https://hackernoon.com/import-export-default-require-commandjs-javascript-nodejs-es6-vs-cheatsheet-different-tutorial-example-5a321738b50f">ES6 Modules</a> | Default Exports</h3>
-                        <p class="small">(One per module)</p>
-                        <p class="small">lib.js</p>
+                        p.small (One per module)
+                        p.small lib.js
                         pre
                             code.hljs(data-trim contenteditable).
                                 export default function (){ ... };
-                        <p class="small">main.js</p>
+                        p.small main.js
                         pre
                             code.hljs(data-trim contenteditable).
                                 import myFunc from './lib.js';
@@ -238,8 +233,8 @@ html(lang='en')
 
                 // CRA & CodeSandbox 
                 section
-                    <section>
-                        <div class="columns">
+                    section
+                        div.columns
                             <div class="column is-8 is-offset-2">
                                 <h3>Gettings started with<br><strong class="colorful">create-react-app</strong></h3>
                                 pre.fragment
@@ -257,11 +252,10 @@ html(lang='en')
                                     code.hljs.bash(data-trim contenteditable).
                                         $ npm run build
                             </div>
-                        </div>
-                    </section>
+                    
                     section
                         h5 Let's meet our practice partner:
-                        <h3 class="fragment">CodeSandbox</h3>
+                        h3.fragment CodeSandbox
                         <a class="fragment" style="font-size:1.6em;" target="_blank" href="https://codesandbox.io/">https://codesandbox.io/</a>
 
                 // Code Walkthrough 

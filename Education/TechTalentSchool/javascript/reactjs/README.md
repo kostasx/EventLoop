@@ -2,6 +2,9 @@
 
 #### Slides: [(click to open)](https://kostasx.github.io/EventLoop/Education/TechTalentSchool/javascript/reactjs.html#/) 
 
+- Zipped Slides for Offline View:
+	- [( FEB 2019 )](./slides/slides-18.02.2019.zip)
+
 ### CODE (create-react-app environments from Codesandbox.io)
 
 - [Hello World (Zip file)](./code/create-react-app--01-hello-world.zip)
