@@ -235,11 +235,11 @@ html(lang='en')
                         .columns
                             .column.is-6.is-offset-3
                                 p Basic REPL commands
-                                pre
-                                    code.hljs.bash &gt; .help
-                                .linebreak
                                 pre.fragment
                                     code.hljs.bash &gt; .exit
+                                .linebreak
+                                pre.fragment
+                                    code.hljs.bash &gt; .help
                                 .linebreak
                                 pre.fragment
                                     code.hljs.bash &gt; .break or .clear
@@ -252,6 +252,10 @@ html(lang='en')
                                 .linebreak
                                 pre.fragment
                                     code.hljs.bash &gt; .load
+                                .linebreak
+                                small.small.fragment How to clear the console?
+                                pre.fragment
+                                    code.hljs.bash &gt; console.clear(); or CTRL+L
 
                 // NODE MODULES
                 section.with-tts-right
@@ -335,7 +339,7 @@ html(lang='en')
                                         const logger = require( './logger.js' );
                                         // We must be on the same folder here
                                         console.log( logger );
-                                        logger();
+                                        logger();   // Custom variable name here
 
                                 p.small.fragment We could have used:
                                 pre.fragment
@@ -480,6 +484,17 @@ html(lang='en')
                                                 console.log( err.message );
                                             }
                                         });
+                    section
+                        p How to append to a file?
+                        a.small.fragment(href="https://nodejs.org/api/fs.html#fs_fs_appendfile_path_data_options_callback" target="_blank") fs.appendFile()
+                        .linebreak
+                        a.small.fragment(href="https://nodejs.org/api/fs.html#fs_fs_appendfilesync_path_data_options" target="_blank") fs.appendFileSync()
+                        .linebreak
+                        small.small.fragment (*Defaults to UTF8 encoding)
+                        p.fragment How to delete a file?
+                        a.small.fragment(href="https://nodejs.org/api/fs.html#fs_fs_unlink_path_callback" target="_blank") fs.unlink()
+                        .linebreak
+                        a.small.fragment(href="https://nodejs.org/api/fs.html#fs_fs_unlinksync_path" target="_blank") fs.unlinkSync()
 
 
                 // BUILT-IN MODULES: PATH

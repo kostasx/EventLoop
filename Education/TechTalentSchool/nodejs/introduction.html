@@ -211,9 +211,9 @@
             <div class="columns">
               <div class="column is-6 is-offset-3">
                 <p>Basic REPL commands</p>
-                <pre><code class="hljs bash">&gt; .help</code></pre>
-                <div class="linebreak"></div>
                 <pre class="fragment"><code class="hljs bash">&gt; .exit</code></pre>
+                <div class="linebreak"></div>
+                <pre class="fragment"><code class="hljs bash">&gt; .help</code></pre>
                 <div class="linebreak"></div>
                 <pre class="fragment"><code class="hljs bash">&gt; .break or .clear</code></pre>
                 <div class="linebreak"></div>
@@ -222,6 +222,8 @@
                 <pre class="fragment"><code class="hljs bash">&gt; .save</code></pre>
                 <div class="linebreak"></div>
                 <pre class="fragment"><code class="hljs bash">&gt; .load</code></pre>
+                <div class="linebreak"></div><small class="small fragment">How to clear the console?</small>
+                <pre class="fragment"><code class="hljs bash">&gt; console.clear(); or CTRL+L</code></pre>
               </div>
             </div>
           </section>
@@ -306,7 +308,7 @@ module.exports = log;</code></pre>
                 <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>const logger = require( './logger.js' );
 // We must be on the same folder here
 console.log( logger );
-logger();
+logger();   // Custom variable name here
 </code></pre>
                 <p class="small fragment">We could have used:</p>
                 <pre class="fragment"><code class="hljs javascript" data-trim contenteditable>require( './folder/logger.js' );</code></pre>
@@ -438,11 +440,16 @@ fs.writeFile( 'test.txt', "TEXT DATA",  ( err )=>{
     if ( err ){
         console.log( err.message );
     }
-});
-
-</code></pre>
+});</code></pre>
               </div>
             </div>
+          </section>
+          <section>
+            <p>How to append to a file?</p><a class="small fragment" href="https://nodejs.org/api/fs.html#fs_fs_appendfile_path_data_options_callback" target="_blank">fs.appendFile()</a>
+            <div class="linebreak"></div><a class="small fragment" href="https://nodejs.org/api/fs.html#fs_fs_appendfilesync_path_data_options" target="_blank">fs.appendFileSync()</a>
+            <div class="linebreak"></div><small class="small fragment">(*Defaults to UTF8 encoding)</small>
+            <p class="fragment">How to delete a file?</p><a class="small fragment" href="https://nodejs.org/api/fs.html#fs_fs_unlink_path_callback" target="_blank">fs.unlink()</a>
+            <div class="linebreak"></div><a class="small fragment" href="https://nodejs.org/api/fs.html#fs_fs_unlinksync_path" target="_blank">fs.unlinkSync()</a>
           </section>
         </section>
         <!-- BUILT-IN MODULES: PATH-->
