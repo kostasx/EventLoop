@@ -39,9 +39,14 @@
   <p>All content and graphics on this web site are the property of the company Refsnes Data.</p>
   <h4>Exercises</h4>
   <ul>
-	  <li><a href="./4.2/class-exercise-5.html/" target="_blank">Class Exercise 5</a>
-	  <li><a href="./4.2/class-exercise-10/" target="_blank">Class Exercise 10</a>
-  </li>
+	  <li>
+      	<a href="./4.2/class-exercise-5.html/" target="_blank">Class Exercise 5</a>
+        <ul>
+        <li><a href="https://codepen.io/kostasx/pen/QoywJQ?editors=0010#" target="_blank">CodePen</a></li>
+        <li><a href="https://gist.github.com/kostasx/3c8c5fa9bee0047f0c7fb18baf50d4bf" target="_blank">Gist</a></li>
+        </ul>
+      </li>
+	  <li><a href="./4.2/class-exercise-10/" target="_blank">Class Exercise 10</a></li>
   </ul>
 </details>
 
