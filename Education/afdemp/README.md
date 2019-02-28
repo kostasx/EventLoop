@@ -37,6 +37,11 @@
 <details open>
   <summary>4.2 HTML</summary>
   <p>All content and graphics on this web site are the property of the company Refsnes Data.</p>
+  <h4>Exercises</h4>
+  <ul>
+  <li><a href="/4.2/class-exercise-10/" target="_blank">Class Exercise 10</a>
+  </li>
+  </ul>
 </details>
 
 <details>
