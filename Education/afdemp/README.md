@@ -51,6 +51,6 @@
 </details>
 
 <details>
-  <summary>4.3</summary>
+  <summary>4.3 Cascading Style Sheets (CSS)​</summary>
   <p></p>
 </details>
