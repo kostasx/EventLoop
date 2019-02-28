@@ -5,15 +5,22 @@
 #### Lesson 1 (Common)
 
 
-<details open>
+<details>
   <summary>Prerequisites: Tools</summary>
   <h5>Editors</h5>
-  <p>
-	  <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a><br/>	
-	  <a href="https://www.sublimetext.com/" target="_blank">Sublime Text</a><br/>	
-	  <a href="https://atom.io/" target="_blank">Atom Editor</a>	
-      
-  </p>
+  <ul>
+	  <li>
+      	<a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a>
+        <ul>
+	        <li>
+            <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer" target="_blank">LiveServer Extension</a></li>
+	        <li>
+            <a href="https://marketplace.visualstudio.com/items?itemName=hdg.live-html-previewer" target="_blank">HTML Live Previewer Extension</a></li>
+        </ul>
+       </li>
+      <li><a href="https://www.sublimetext.com/" target="_blank">Sublime Text</a></li>
+      <li><a href="https://atom.io/" target="_blank">Atom Editor</a></li>
+  </ul>
   <h5>Browsers</h5>
   <p>
   <a href="https://www.google.com/chrome/" target="_blank">Google <strong>Chrome</strong></a><br/>	
@@ -22,8 +29,8 @@
 </details>
 
 
-<details open>
-  <summary>4.1</summary>
+<details>
+  <summary>4.1 Key Concepts and Principles​</summary>
   <p></p>
 </details>
 
