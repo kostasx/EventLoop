@@ -34,9 +34,14 @@
   <p></p>
 </details>
 
-<details open>
+<details>
   <summary>4.2 HTML</summary>
-  <p>All content and graphics on this web site are the property of the company Refsnes Data.</p>
+  <h4>References</h4>
+  <ul>
+  <li>
+  	<a href="https://codepen.io/kostasx/pen/MxKEpR?editors=1000" target="_blank">HTML5 Input Elements</a>
+    </li>
+  </ul>
   <h4>Exercises</h4>
   <ul>
 	  <li>
