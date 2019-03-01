@@ -47,6 +47,13 @@
         </ul>
       </li>
 	  <li><a href="./4.2/class-exercise-10/" target="_blank">Class Exercise 10</a></li>
+	  <li>
+      	<a href="./4.2/class-exercise-11.html/" target="_blank">Class Exercise 11</a>
+        <ul>
+        <li><a href="https://codepen.io/kostasx/pen/drGzVx?editors=0100#" target="_blank">CodePen</a></li>
+        <li><a href="https://gist.github.com/kostasx/5244c8b686e808366f2573f6d71d94a3" target="_blank">Gist</a></li>
+        </ul>
+      </li>
   </ul>
 </details>
 
