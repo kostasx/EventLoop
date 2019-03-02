@@ -34,10 +34,11 @@
   <p></p>
 </details>
 
-<details>
+<details open>
   <summary>4.2 HTML</summary>
   <h4>References</h4>
   <ul>
+  <li><a href="https://www.youtube.com/watch?v=yCf9i8rJvtg&list=PLF308KNnRLF5xGLpd5ewXEPFxkgRQLl4f">A short introduction to the HTML Document</a></li>
   <li>
   	<a href="https://codepen.io/kostasx/pen/MxKEpR?editors=1000" target="_blank">HTML5 Input Elements</a>
     </li>
