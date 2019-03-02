@@ -121,6 +121,12 @@
 			</li>
 		</ul>
 	</li>
+    <li><strong>Styling:</strong>
+    <ul>
+    <li><a href="https://learn.shayhowe.com/html-css/working-with-typography/">Working with (CSS) Typography</a></li>
+    <li><a href="https://css-tricks.com/what-is-vertical-align/">What is Vertical Align?</a></li>
+    </ul>
+    </li>
 	</ul>
 
 </details>
