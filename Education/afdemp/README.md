@@ -29,8 +29,9 @@
 </details>
 
 
-<details>
+<details open>
   <summary>4.1 Key Concepts and Principles​</summary>
+  <p>Syllabus: 4.1.1 ~ 4.1.3</p>
   <h4>References</h4>
   <ul>
   <li><a href="https://marksheet.io/introduction.html">The Web for Absolute Beginners</a></li>
@@ -44,11 +45,31 @@
   <summary>4.2 HTML</summary>
   <h4>References</h4>
   <ul>
-  <li><a href="https://www.youtube.com/watch?v=yCf9i8rJvtg&list=PLF308KNnRLF5xGLpd5ewXEPFxkgRQLl4f">A short introduction to the HTML Document</a></li>
-  <li>
-  	<a href="https://codepen.io/kostasx/pen/MxKEpR?editors=1000" target="_blank">HTML5 Input Elements</a>
+
+<li><strong>HTML: </strong><a href="https://www.youtube.com/watch?v=yCf9i8rJvtg&list=PLF308KNnRLF5xGLpd5ewXEPFxkgRQLl4f">A short introduction to the HTML Document</a></li>
+
+<li>
+	<strong>Tables: </strong>
+  	<a href="https://learn.shayhowe.com/html-css/organizing-data-with-tables/" target="_blank">Organizing Data with Tables</a>
     </li>
-  </ul>
+
+<li>
+<strong>Forms:</strong>
+<ul>
+<li>
+  	<a href="https://learn.shayhowe.com/html-css/building-forms/" target="_blank">Building Forms</a>
+</li>
+
+
+<li>
+  	<a href="https://codepen.io/kostasx/pen/MxKEpR?editors=1000" target="_blank">HTML5 Input Elements</a>
+</li>
+
+</ul>
+</li>
+
+
+</ul>
   <h4>Exercises</h4>
   <ul>
 	  <li>
@@ -69,7 +90,7 @@
   </ul>
 </details>
 
-<details>
+<details open>
   <summary>4.3 Cascading Style Sheets (CSS)​</summary>
   <p></p>
 </details>
