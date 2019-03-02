@@ -90,7 +90,7 @@
   </ul>
 </details>
 
-<details open>
+<details>
   <summary>4.3 Cascading Style Sheets (CSS)​</summary>
   <p>Syllabus:</p>
   <h4>References</h4>
