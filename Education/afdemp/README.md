@@ -29,7 +29,7 @@
 </details>
 
 
-<details open>
+<details>
   <summary>4.1 Key Concepts and Principles​</summary>
   <p>Syllabus: 4.1.1 ~ 4.1.3</p>
   <h4>References</h4>
@@ -41,7 +41,7 @@
 
 </details>
 
-<details open>
+<details>
   <summary>4.2 HTML</summary>
   <h4>References</h4>
   <ul>
@@ -92,5 +92,35 @@
 
 <details open>
   <summary>4.3 Cascading Style Sheets (CSS)​</summary>
-  <p></p>
+  <p>Syllabus:</p>
+  <h4>References</h4>
+  <ul>
+	<li>
+		<strong>CSS Selectors:</strong>
+		<ul>
+			<li>
+			  	<a href="https://marksheet.io/css-selectors.html" target="_blank">How to target HTML Elements (using CSS Selectors)</a>
+			</li>
+			<li>
+			  	<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors" target="_blank">CSS Selectors (Mozilla Developer Network)</a>
+			</li>
+			<li>
+			  	<a href="https://www.w3.org/TR/CSS22/selector.html" target="_blank">CSS Selectors (W3C)</a>
+			</li>
+			<li>
+			  	<a href="https://htmldog.com/references/css/selectors/" target="_blank">CSS Selectors Table</a>
+			</li>
+			<li>
+			  	<a href="https://alligator.io/css/css-selectors/" target="_blank">A CSS Selector Reference (Alligator.io)</a>
+			</li>
+			<li>
+			  	<a href="https://learn.shayhowe.com/advanced-html-css/complex-selectors/" target="_blank">Basic and Complex CSS Selectors</a>
+			</li>
+			<li>
+			  	<a href="https://flukeout.github.io/" target="_blank">CSS Diner: Practice CSS Selectors</a>
+			</li>
+		</ul>
+	</li>
+	</ul>
+
 </details>
