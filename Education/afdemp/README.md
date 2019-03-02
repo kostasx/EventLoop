@@ -31,7 +31,13 @@
 
 <details>
   <summary>4.1 Key Concepts and Principles​</summary>
-  <p></p>
+  <h4>References</h4>
+  <ul>
+  <li><a href="https://marksheet.io/introduction.html">The Web for Absolute Beginners</a></li>
+  <li><a href="https://kostasx.github.io/EventLoop/Education/tmp/WebOversimplified/index.html#/">The Web Oversimplified</a></li>
+
+</ul>
+
 </details>
 
 <details open>
