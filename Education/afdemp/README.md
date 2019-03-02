@@ -122,11 +122,13 @@
 		</ul>
 	</li>
     <li><strong>Styling:</strong>
-    <ul>
-    <li><a href="https://learn.shayhowe.com/html-css/working-with-typography/">Working with (CSS) Typography</a></li>
-    <li><a href="https://css-tricks.com/what-is-vertical-align/">What is Vertical Align?</a></li>
-    </ul>
+	    <ul>
+    	<li><a href="https://learn.shayhowe.com/html-css/working-with-typography/">Working with (CSS) Typography</a></li>
+    	<li><a href="https://codepen.io/kostasx/pen/zpLKaX?editors=1100">The Cascading Effect</a></li>
+    	<li><a href="https://css-tricks.com/what-is-vertical-align/">What is Vertical Align?</a></li>
+	    </ul>
     </li>
+    <li><strong>Box Model:</strong><a href="https://learn.shayhowe.com/html-css/opening-the-box-model/"> Opening the Box Model</a></li>
 	</ul>
 
 </details>
