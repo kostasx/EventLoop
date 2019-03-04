@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>4.2 - Exercise 1</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Personal Data</legend>
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name">
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email">
+        </fieldset>  
+        <br>
+        <fieldset>
+            <legend>Please select a Car:</legend>
+            <select name="cars" id="cars" size="6" multiple>
+                <optgroup label="Swedish Cars">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                </optgroup>
+                <optgroup label="German Cars">
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                </optgroup>
+            </select>
+        </fieldset>
+        <br>
+        <input type="reset">
+        <input type="submit">
+    </form>
+</body>
+</html>
