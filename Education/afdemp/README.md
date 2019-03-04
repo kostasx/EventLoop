@@ -119,6 +119,11 @@
 			<li>
 			  	<a href="https://flukeout.github.io/" target="_blank">CSS Diner: Practice CSS Selectors</a>
 			</li>
+			<li>
+			  	<a href="https://specificity.keegan.st/" target="_blank">Specificity Calculator</a>
+			</li>
+
+
 		</ul>
 	</li>
     <li><strong>Styling:</strong>
