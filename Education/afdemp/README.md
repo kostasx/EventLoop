@@ -44,7 +44,7 @@
 
 </details>
 
-<details>
+<details open>
   <summary>4.2 HTML (HyperText Markup Language)</summary>
   <h4>References</h4>
   <ul>
@@ -92,9 +92,16 @@
         </ul>
       </li>
   </ul>
+
+  <h4>Resources</h4>
+  <ul>
+	  <li>
+      	<a href="https://scrimba.com/g/ghtml" target="_blank">Introduction to HTML (scrimba.com)</a>
+      </li>
+  </ul>
 </details>
 
-<details>
+<details open>
   <summary>4.3 CSS (Cascading Style Sheets)​</summary>
   <p>Syllabus:</p>
   <h4>References</h4>
@@ -147,5 +154,12 @@
     </li>
     <li><strong>Box Model:</strong><a href="https://learn.shayhowe.com/html-css/opening-the-box-model/"> Opening the Box Model</a></li>
 	</ul>
+
+  <h4>Resources</h4>
+  <ul>
+	  <li>
+      	<a href="https://scrimba.com/g/gintrotocss" target="_blank">Introduction to CSS (scrimba.com)</a>
+      </li>
+  </ul>
 
 </details>
