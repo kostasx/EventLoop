@@ -118,6 +118,13 @@ Using the '\n' escape character.
     - When performance/page load times are not considerably affected by the script
     - When you want to tweak CSS styling before the body is rendered via a script.
 
+### VISUALIZATIONS
+
+	- *Arrays:* [Dynamic relationship with variables and values.](https://goo.gl/qvFxGd)
+	- *Arrays:* [push, pop, shift, unshift & length.](https://goo.gl/K28s5m)
+	- *Arrays:* [Change the value of a specific Array element.](https://goo.gl/TkmdNj)
+	- *Arrays:* [Different behaviours with const and array values](https://goo.gl/Diurj7)
+
 ### REFERENCES
 
 - [What is the difference between placing &lt;script&gt; in head and before &lt;/body&gt;?](https://www.reddit.com/r/javascript/comments/5di1va/what_is_the_difference_between_placing_script_in/)
