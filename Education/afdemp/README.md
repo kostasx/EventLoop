@@ -42,10 +42,10 @@
 </details>
 
 <details>
-  <summary>4.2 HTML</summary>
+  <summary>4.2 HTML (HyperText Markup Language)</summary>
   <h4>References</h4>
   <ul>
-  <li><a href="https://htmlreference.io"><strong>HTMLReference.io</strong></a></li>
+	  <li><a href="https://htmlreference.io"><strong>HTMLReference.io</strong></a></li>
 
 <li><strong>HTML: </strong><a href="https://www.youtube.com/watch?v=yCf9i8rJvtg&list=PLF308KNnRLF5xGLpd5ewXEPFxkgRQLl4f">A short introduction to the HTML Document</a></li>
 
@@ -92,7 +92,7 @@
 </details>
 
 <details>
-  <summary>4.3 Cascading Style Sheets (CSS)​</summary>
+  <summary>4.3 CSS (Cascading Style Sheets)​</summary>
   <p>Syllabus:</p>
   <h4>References</h4>
   <ul>
