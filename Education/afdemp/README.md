@@ -90,11 +90,18 @@
   </ul>
 </details>
 
-<details>
+<details open>
   <summary>4.3 Cascading Style Sheets (CSS)​</summary>
   <p>Syllabus:</p>
   <h4>References</h4>
   <ul>
+  <li>
+    	<strong>CSS Layouts</strong> 
+    	<ul>
+    		<li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Introduction">Introduction to CSS Layout</a></li>
+            <li><a href="http://learnlayout.com/">Learn CSS Layout</a></li>
+    	</ul>
+	</li>
 	<li>
 		<strong>CSS Selectors:</strong>
 		<ul>
@@ -124,7 +131,7 @@
 			</li>
 
 
-		</ul>
+</ul>
 	</li>
     <li><strong>Styling:</strong>
 	    <ul>
