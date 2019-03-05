@@ -120,7 +120,7 @@ Using the '\n' escape character.
 
 ### VISUALIZATIONS
 
-- *Arrays:* [Dynamic relationship with variables and values.](https://goo.gl/qvFxGd)
+- *Arrays:* [Dynamic relationship with variables and values.](http://www.pythontutor.com/javascript.html#code=const%20numbers%20%3D%20%5B%200,%201,%202,%203%20%5D%3B%0Alet%20names%20%3D%20%5B%20%22Kostas%22,%20%22Chris%22,%20%22Abdul%22%20%5D%3B%0Alet%20mixed%20%3D%20%5B%20123,%20true,%20%22TEXT%22,%20%5B%201,2,3,4%5D%20%5D%3B%0A%0Aconsole.log%28%20numbers%20%29%3B%0A%0Aconsole.log%28%20typeof%20numbers%20%29%3B&curInstr=0&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
 - *Arrays:* [push, pop, shift, unshift & length.](https://goo.gl/K28s5m)
 - *Arrays:* [Change the value of a specific Array element.](https://goo.gl/TkmdNj)
 - *Arrays:* [Different behaviours with const and array values](https://goo.gl/Diurj7)
