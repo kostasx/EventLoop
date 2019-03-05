@@ -118,6 +118,13 @@ Using the '\n' escape character.
     - When performance/page load times are not considerably affected by the script
     - When you want to tweak CSS styling before the body is rendered via a script.
 
+### VISUALIZATIONS
+
+- *Arrays:* [Dynamic relationship with variables and values.](http://www.pythontutor.com/javascript.html#code=const%20numbers%20%3D%20%5B%200,%201,%202,%203%20%5D%3B%0Alet%20names%20%3D%20%5B%20%22Kostas%22,%20%22Chris%22,%20%22Abdul%22%20%5D%3B%0Alet%20mixed%20%3D%20%5B%20123,%20true,%20%22TEXT%22,%20%5B%201,2,3,4%5D%20%5D%3B%0A%0Aconsole.log%28%20numbers%20%29%3B%0A%0Aconsole.log%28%20typeof%20numbers%20%29%3B&curInstr=0&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
+- *Arrays:* [push, pop, shift, unshift & length.](https://goo.gl/K28s5m)
+- *Arrays:* [Change the value of a specific Array element.](https://goo.gl/TkmdNj)
+- *Arrays:* [Different behaviours with const and array values](https://goo.gl/Diurj7)
+
 ### REFERENCES
 
 - [What is the difference between placing &lt;script&gt; in head and before &lt;/body&gt;?](https://www.reddit.com/r/javascript/comments/5di1va/what_is_the_difference_between_placing_script_in/)
@@ -198,3 +205,9 @@ Using the '\n' escape character.
 - [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS)
 - [JavaScript Tutorial](http://www.javascripttutorial.net/)
 - [The JavaScript Handbook, by Flavio Copes](https://flaviocopes.com/page/ebooks/)
+- [JavaScript 30 - Build 30 things in 30 days with 30 tutorials](https://javascript30.com/)
+- [Introduction to JavaScript](https://scrimba.com/g/gintrotojavascript)
+- [JavaScript Tutorial: Learn JavaScript in 1 Hour [2019]](https://www.youtube.com/watch?v=W6NZfCO5SIk)
+- [FreeCodeCamp](https://www.freecodecamp.org/)
+- [JavaScript Phrasebook](https://www.amazon.com/JavaScript-Phrasebook-Christian-Wenz/dp/0672328801)
+
