@@ -205,3 +205,9 @@ Using the '\n' escape character.
 - [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS)
 - [JavaScript Tutorial](http://www.javascripttutorial.net/)
 - [The JavaScript Handbook, by Flavio Copes](https://flaviocopes.com/page/ebooks/)
+- [JavaScript 30 - Build 30 things in 30 days with 30 tutorials](https://javascript30.com/)
+- [Introduction to JavaScript](https://scrimba.com/g/gintrotojavascript)
+- [JavaScript Tutorial: Learn JavaScript in 1 Hour [2019]](https://www.youtube.com/watch?v=W6NZfCO5SIk)
+- [FreeCodeCamp](https://www.freecodecamp.org/)
+- [JavaScript Phrasebook](https://www.amazon.com/JavaScript-Phrasebook-Christian-Wenz/dp/0672328801)
+
