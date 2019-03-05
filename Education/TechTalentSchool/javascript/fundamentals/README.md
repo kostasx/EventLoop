@@ -120,10 +120,10 @@ Using the '\n' escape character.
 
 ### VISUALIZATIONS
 
-	- *Arrays:* [Dynamic relationship with variables and values.](https://goo.gl/qvFxGd)
-	- *Arrays:* [push, pop, shift, unshift & length.](https://goo.gl/K28s5m)
-	- *Arrays:* [Change the value of a specific Array element.](https://goo.gl/TkmdNj)
-	- *Arrays:* [Different behaviours with const and array values](https://goo.gl/Diurj7)
+- *Arrays:* [Dynamic relationship with variables and values.](https://goo.gl/qvFxGd)
+- *Arrays:* [push, pop, shift, unshift & length.](https://goo.gl/K28s5m)
+- *Arrays:* [Change the value of a specific Array element.](https://goo.gl/TkmdNj)
+- *Arrays:* [Different behaviours with const and array values](https://goo.gl/Diurj7)
 
 ### REFERENCES
 
