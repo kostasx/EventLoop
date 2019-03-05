@@ -45,6 +45,7 @@
   <summary>4.2 HTML</summary>
   <h4>References</h4>
   <ul>
+  <li><a href="https://htmlreference.io"><strong>HTMLReference.io</strong></a></li>
 
 <li><strong>HTML: </strong><a href="https://www.youtube.com/watch?v=yCf9i8rJvtg&list=PLF308KNnRLF5xGLpd5ewXEPFxkgRQLl4f">A short introduction to the HTML Document</a></li>
 
@@ -90,11 +91,12 @@
   </ul>
 </details>
 
-<details open>
+<details>
   <summary>4.3 Cascading Style Sheets (CSS)​</summary>
   <p>Syllabus:</p>
   <h4>References</h4>
   <ul>
+  <li><a href="https://cssreference.io"><strong>CSSReference.io</strong></a></li>
   <li>
     	<strong>CSS Layouts</strong> 
     	<ul>
