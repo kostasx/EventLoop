@@ -163,7 +163,7 @@
       	<a href="https://scrimba.com/g/gintrotocss" target="_blank">Introduction to CSS (scrimba.com)</a>
       </li>
 	  <li>
-      	<a href="https://github.com/jgthms/web-design-in-4-minutes" target="_blank">Learn the basics of web design in 4 minutes</a>
+      	<a href="https://jgthms.com/web-design-in-4-minutes/" target="_blank">Learn the basics of web design in 4 minutes</a>
       </li>
 
   </ul>
