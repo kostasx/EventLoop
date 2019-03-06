@@ -1,0 +1,17 @@
+Certain Factors Affecting Telegraph Speed†
+
+H. Nyquist
+
+Abstract
+
+Synopsis: This paper considers two fundamental factors entering into the maximum speed of transmission of intelligence by telegraph. These factors are signal shaping and choice of codes. The first is concerned with the best wave shape to be impressed on the transmitting medium so as to permit of greater speed without undue interference either in the circuit under consideration or in those adjacent, while the latter deals with the choice of codes which will permit of transmitting a maximum amount of intelligence with a given number of signal elements.
+
+It is shown that the wave shape depends somewhat on the type of circuit over which intelligence is to be transmitted and that for most cases the optimum wave is neither rectangular nor a half cycle sine wave as is frequently used but a wave of special form produced by sending a simple rectangular wave through a suitable network. The impedances usually associated with telegraph circuits are such as to produce a fair degree of signal shaping when a rectangular voltage wave is impressed.
+
+Consideration of the choice of codes show that while it is desirable to use those involving more than two current values, there are limitations which prevent a large number of current values being used. A table of comparisons shows the relative speed efficiencies of various codes proposed. It is shown that no advantages result from the use of a sine wave for telegraph transmission as proposed by Squier and others2 and that their arguments are based on erroneous assumptions.
+
+[1] Tapan K. Sarkar, Magdalena Salazar Palma and Mohammad Najib Abdallah, The Mystery of Wave Propagation and Radiation from an Antenna, The Physics and Mathematics of Electromagnetic Wave Propagation in Cellular Wireless Communication, (1-59), (2018).
+URL: http://math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf
+
+[2] Colin B. Grant, Shannon, Claude, The International Encyclopedia of Communication Theory and Philosophy, (1-5), (2016).
+URL: https://onlinelibrary.wiley.com/doi/book/10.1002/9781118766804
