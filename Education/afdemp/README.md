@@ -110,6 +110,8 @@
   <li>
     	<strong>CSS Layouts</strong> 
     	<ul>
+  		<li><a href="https://www.w3schools.com/css/css_website_layout.asp">CSS Website Layout</a></li>
+   		<li><a href="https://www.w3schools.com/html/html_layout.asp">HTML Layouts</a></li>
     		<li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Introduction">Introduction to CSS Layout</a></li>
             <li><a href="http://learnlayout.com/">Learn CSS Layout</a></li>
     	</ul>
