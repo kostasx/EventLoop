@@ -44,7 +44,7 @@
 
 </details>
 
-<details>
+<details open>
   <summary>4.2 HTML (HyperText Markup Language)</summary>
   <h4>References</h4>
   <ul>
@@ -98,7 +98,16 @@
 	  <li>
       	<a href="https://scrimba.com/g/ghtml" target="_blank">Introduction to HTML (scrimba.com)</a>
       </li>
-  </ul>
+	  <li>
+      	<a href="https://www.youtube.com/watch?v=yCf9i8rJvtg&list=PLF308KNnRLF5xGLpd5ewXEPFxkgRQLl4f" target="_blank">HTML Basics - Simple Document:</a>
+      </li>
+	  <li>
+      	<a href="https://learn.shayhowe.com/html-css/getting-to-know-html/" target="_blank">Getting to know HTML</a>
+      </li>
+	  <li>
+      	<a href="https://marksheet.io/html-basics.html" target="_blank">HTML Basics</a>
+      </li>
+</ul>
 </details>
 
 <details>
