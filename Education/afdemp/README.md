@@ -44,7 +44,7 @@
 
 </details>
 
-<details open>
+<details>
   <summary>4.2 HTML (HyperText Markup Language)</summary>
   <h4>References</h4>
   <ul>
