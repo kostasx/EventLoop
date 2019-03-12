@@ -196,3 +196,26 @@
   </ul>
 
 </details>
+
+<details>
+  <summary>4.6 JavaScript</summary>
+  <p>Syllabus:</p>
+  <h4>References</h4>
+  <ul>
+  <li><a href=""><strong></strong></a></li>
+	</ul>
+
+  <h4>Resources</h4>
+  <ul>
+  <li><a href="https://scrimba.com/g/gintrotojavascript">Introduction to JavaScript (Interactive Screencasts @ scrimba.com)</a></li>
+	  <li>
+      	<a href="https://www.youtube.com/watch?v=W6NZfCO5SIk" target="_blank">JavaScript Tutorial: Learn JavaScript in 1 Hour [2019]</a>
+      </li>
+
+<li>
+<a href="https://learnxinyminutes.com/docs/javascript/">Learn X in Y Minutes: JavaScript</a>
+</li>
+
+  </ul>
+
+</details>
