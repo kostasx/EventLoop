@@ -202,7 +202,7 @@
   <p>Syllabus:</p>
   <h4>References</h4>
   <ul>
-  <li><a href=""><strong></strong></a></li>
+  <li><a href="https://goo.gl/YwAziN"><strong>Variables: </strong> Visualizing variable hoisting, declaration and value assignment</a></li>
 	</ul>
 
   <h4>Resources</h4>
