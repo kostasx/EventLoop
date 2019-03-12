@@ -111,6 +111,18 @@
   <h4>Questions &amp; Answers</h4>
   <ul>
   <li><strong>Question:</strong><em>Which extension should I choose for my HTML files and why, .html or .html?</em><br><strong>Answer:</strong>The short answer. There is none. They are exactly the same.<br><a href="Reference: https://stackoverflow.com/questions/1163738/htm-vs-html">Reference</a></li>
+<br>  
+  <li>
+      <strong>Question:</strong><em> I have the following code: <code> &lt;td rowspan="2"&gt;DATA&lt;/td&gt; </code>
+    How do I change the inline style? Where do I insert the style attribute?</em><br>
+    <strong>Answer:</strong> You can add as many HTML Tag attributes as you like, separated by space:<br><br>
+    <code>&lt;td rowspan="2" style=""&gt;DATA&lt;/td&gt;</code>
+    <br><br>OR (order of attributes does not matter):<br><br>
+    <code>&lt;td style="" rowspan="2"&gt;DATA&lt;/td&gt;</code>
+
+  </li>
+  
+  
   </ul>
 
 </details>
