@@ -215,6 +215,7 @@
 <li>
 <a href="https://learnxinyminutes.com/docs/javascript/">Learn X in Y Minutes: JavaScript</a>
 </li>
+<li><a href="https://jgthms.com/javascript-in-14-minutes/">JavaScript in 14 minutes</a></li>
 
   </ul>
 
