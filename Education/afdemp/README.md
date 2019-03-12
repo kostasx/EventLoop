@@ -110,7 +110,7 @@
 </ul>
   <h4>Questions &amp; Answers</h4>
   <ul>
-  <li><strong>Question:</strong><em>Which extension should I choose for my HTML files and why, .html or .html?</em><br><strong>Answer:</strong>The short answer. There is none. They are exactly the same.<br><a href="Reference: https://stackoverflow.com/questions/1163738/htm-vs-html">Reference</a></li>
+  <li><strong>Question:</strong><em> Which extension should I choose for my HTML files and why, .html or .html?</em><br><strong>Answer:</strong> The short answer. There is none. They are exactly the same.<br><a href="Reference: https://stackoverflow.com/questions/1163738/htm-vs-html">Reference</a></li>
 <br>  
   <li>
       <strong>Question:</strong><em> I have the following code: <code> &lt;td rowspan="2"&gt;DATA&lt;/td&gt; </code>
