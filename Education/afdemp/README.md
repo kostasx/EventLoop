@@ -74,7 +74,7 @@
 
 
 </ul>
-  <h4>Exercises</h4>
+  <h4>Exercises / Practice</h4>
   <ul>
 	  <li>
       	<a href="./4.2/class-exercise-5.html/" target="_blank">Class Exercise 5</a>
@@ -91,6 +91,7 @@
         <li><a href="https://gist.github.com/kostasx/5244c8b686e808366f2573f6d71d94a3" target="_blank">Gist</a></li>
         </ul>
       </li>
+      <li><strong>Forms: </strong><a href="https://codepen.io/kostasx/pen/WmOVmz?editors=1100">Recreating the Wikipedia Login Form</a></li>
   </ul>
 
   <h4>Resources</h4>
