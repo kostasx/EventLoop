@@ -44,7 +44,7 @@
 
 </details>
 
-<details>
+<details open>
   <summary>4.2 HTML (HyperText Markup Language)</summary>
   <h4>References</h4>
   <ul>
@@ -108,6 +108,11 @@
       	<a href="https://marksheet.io/html-basics.html" target="_blank">HTML Basics</a>
       </li>
 </ul>
+  <h4>Questions &amp; Answers</h4>
+  <ul>
+  <li><strong>Question:</strong><em>Which extension should I choose for my HTML files and why, .html or .html?</em><br><strong>Answer:</strong>The short answer. There is none. They are exactly the same.<br><a href="Reference: https://stackoverflow.com/questions/1163738/htm-vs-html">Reference</a></li>
+  </ul>
+
 </details>
 
 <details>
