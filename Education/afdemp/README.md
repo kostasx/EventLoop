@@ -203,6 +203,8 @@
   <h4>References</h4>
   <ul>
   <li><a href="https://goo.gl/YwAziN"><strong>Variables: </strong> Visualizing variable hoisting, declaration and value assignment</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#Table"><strong>Operator Precedence Table</strong> (MDN)</a></li>
+
 	</ul>
 
   <h4>Resources</h4>
