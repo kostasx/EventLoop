@@ -210,6 +210,30 @@
 			 <li><a href="https://goo.gl/ej6etK">Visualizing Object Equality</a></li>
 </ul>
   </li>
+<li>
+    <strong>DOM:</strong>
+    <ul>
+
+
+    <li>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction">Introduction to the DOM (MDN)</a>
+    </li>
+    <li>
+        <a href="https://www.w3schools.com/js/js_htmldom.asp">JavaScript HTML DOM (W3Schools)</a>
+    </li>
+    <li>
+        <a href="https://www.udacity.com/course/javascript-and-the-dom--ud117">JavaScript and the DOM</a>
+    </li>
+    <li>
+        <a href="https://www.digitalocean.com/community/tutorials/introduction-to-the-dom">Introduction to the DOM (Digial Ocean)</a>
+    </li>
+    <li>
+        <a href="https://javascript.info/document">DOM @ javascript.info</a>
+    </li>
+
+</ul>
+</li>
+	  
   </ul>
 
   <h4>Resources</h4>
