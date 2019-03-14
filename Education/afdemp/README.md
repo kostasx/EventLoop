@@ -197,7 +197,7 @@
 
 </details>
 
-<details>
+<details open>
   <summary>4.6 JavaScript</summary>
   <p>Syllabus:</p>
   <h4>References</h4>
@@ -213,8 +213,6 @@
 <li>
     <strong>DOM:</strong>
     <ul>
-
-
     <li>
         <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction">Introduction to the DOM (MDN)</a>
     </li>
