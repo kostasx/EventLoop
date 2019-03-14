@@ -197,7 +197,7 @@
 
 </details>
 
-<details open>
+<details>
   <summary>4.6 JavaScript</summary>
   <p>Syllabus:</p>
   <h4>References</h4>
