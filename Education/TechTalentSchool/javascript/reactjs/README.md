@@ -24,7 +24,8 @@ __Click the link and then click `Download`. You need a create-react-app environm
 - [Simple React Snippets (VSCode Extension)](https://marketplace.visualstudio.com/items?itemName=burkeholland.simple-react-snippets)
 - [Create React App](https://github.com/facebook/create-react-app)
 - [React Developer Tools (Chrome Extension)](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)    
-
+- [Online VSCode Editor and Virtual Environment (Supports React, Vue, Angular)](https://codesandbox.io/)
+    
 ### RESOURCES | LEARNING
 
 - [SoloLearn JavaScript Tutorial](https://www.sololearn.com/Course/JavaScript/)
@@ -34,7 +35,7 @@ __Click the link and then click `Download`. You need a create-react-app environm
 - [React Components](https://reactjs.org/docs/react-component.html)    
 - [Handling Events](https://reactjs.org/docs/handling-events.html)
 - [Events](https://reactjs.org/docs/events.html)
-
+- [Handling Events](https://reactjs.org/docs/handling-events.html)
 - [React Native (Create Native Mobile Apps with React) :iphone:](https://facebook.github.io/react-native/)
     
     
