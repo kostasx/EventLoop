@@ -31,6 +31,7 @@ __Click the link and then click `Download`. You need a create-react-app environm
 - [SoloLearn JavaScript Tutorial](https://www.sololearn.com/Course/JavaScript/)
 - [Learn React - Scrimba Interactive Screencasts Series | :+1:](https://scrimba.com/g/glearnreact)
 - [React, Router, Redux Cheatsheet](./docs/react-redux.pdf)
+- [What is Virtual DOM? (:movie_camera: Video)](https://www.youtube.com/watch?v=jwRAdGLUarw)
 - [Introducting JSX](https://reactjs.org/docs/introducing-jsx.html)   
 - [React Components](https://reactjs.org/docs/react-component.html)    
 - [Handling Events](https://reactjs.org/docs/handling-events.html)
