@@ -86,6 +86,8 @@
 - [Altering the DOM with JavaScript](https://zellwk.com/blog/js-in-dom/)
 - [DOM and Layout Trees](https://github.com/leonardomso/33-js-concepts#13-dom-and-layout-trees)
 - [What’s the difference between Map and ForEach in JavaScript?](https://codeburst.io/javascript-map-vs-foreach-f38111822c0f)
+- [JavaScript Fundamentals: Master the DOM! (Part 1)](https://itnext.io/javascript-fundamentals-master-the-dom-part-1-82433084fb40)
+- [JavaScript Fundamentals: Master the DOM! (Part 2)](https://itnext.io/javascript-fundamentals-master-the-dom-part-2-bef36405598e)
 
 </details>
 
