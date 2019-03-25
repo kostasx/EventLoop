@@ -75,7 +75,8 @@
 - No, JavaScript that runs on the browser has no direct access to our local filesystem for security purposes.
 - We can only selectively upload files on a web page or download files. 
 
-***Can we use Array element values as arguments to the slice() function? Example:***<br>```let arr = ["john","doe","smith"]; arr.slice("doe","smith");```
+***Can we use Array element values as arguments to the slice() function? Example:***
+```let arr = ["john","doe","smith"]; arr.slice("doe","smith");```
 
 - No, the `slice()` function accepts only numeric values as arguments that correspond to Array indices.
 
