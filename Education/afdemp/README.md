@@ -228,6 +228,12 @@
     <li>
         <a href="https://javascript.info/document">DOM @ javascript.info</a>
     </li>
+    <li>
+        <a href="https://itnext.io/javascript-fundamentals-master-the-dom-part-1-82433084fb40">JavaScript Fundamentals: Master the DOM! (Part 1)</a>
+    </li>
+    <li>
+        <a href="https://itnext.io/javascript-fundamentals-master-the-dom-part-2-bef36405598e">JavaScript Fundamentals: Master the DOM! (Part 2)</a>
+    </li>
 
 </ul>
 </li>
