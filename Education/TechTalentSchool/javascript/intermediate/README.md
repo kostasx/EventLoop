@@ -76,6 +76,7 @@
 - We can only selectively upload files on a web page or download files. 
 
 ***Can we use Array element values as arguments to the slice() function? Example:***
+
 ```let arr = ["john","doe","smith"]; arr.slice("doe","smith");```
 
 - No, the `slice()` function accepts only numeric values as arguments that correspond to Array indices.
