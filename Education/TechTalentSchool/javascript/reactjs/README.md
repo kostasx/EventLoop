@@ -37,6 +37,7 @@ __Click the link and then click `Download`. You need a create-react-app environm
 - [Handling Events](https://reactjs.org/docs/handling-events.html)
 - [Events](https://reactjs.org/docs/events.html)
 - [Handling Events](https://reactjs.org/docs/handling-events.html)
+- [Lifecycle Methods: How and When to Use Them](https://blog.bitsrc.io/react-16-lifecycle-methods-how-and-when-to-use-them-f4ad31fb2282)
 - [React Native (Create Native Mobile Apps with React) :iphone:](https://facebook.github.io/react-native/)
     
     
