@@ -63,6 +63,10 @@
   </ul>
   <p>Bad Example:</p>
   <img src="./img/contrast-check-fail.jpg" alt="" >
+  
+  <p>Bad Example:</p>
+  <img src="./img/improper-color-contrast.jpg" alt="" >
+  
 
 </details>
 
