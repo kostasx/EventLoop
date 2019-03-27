@@ -322,7 +322,7 @@
 
 </details>
 
-<details open>
+<details>
 
 <summary><strong>Use short and descriptive names in your submit elements<sup> 19 FORMS</sup></strong></summary>
 
@@ -339,7 +339,7 @@
 
 
 
-<details open>
+<details>
 
 <summary><strong>Study Form Design and User Experience<sup> 20 FORMS</sup></strong></summary>
 
@@ -368,7 +368,7 @@
 </details>
 
 
-<details open>
+<details>
 
 <summary><strong>Use &lt;select&gt; elements for predefined values<sup> 21 FORMS</sup></strong></summary>
 
@@ -377,16 +377,15 @@
 </details>
 
 
-<details open>
+<details>
 
 <summary><strong>Careful planning and consideration for field validations<sup> 22 FORMS</sup></strong></summary>
 
-<p>	Bad examples:
-
-	Using advanced validation patterns without providing the user with proper instructions:
-
-	<input type="text" name="Course Stream" value="" required placeholder="Course Stream" pattern="(#)[A-Z,a-z]{2,20}"><br>
-</p>
+ <p>Bad examples:</p>
+ <p>Using advanced validation patterns without providing the user with proper instructions:</p>
+ <pre>
+  &lt;input type=&quot;text&quot; name=&quot;Course Stream&quot; value=&quot;&quot; required placeholder=&quot;Course Stream&quot; pattern=&quot;(#)[A-Z,a-z]{2,20}&quot;&gt;&#10;</pre>
+ <p>In the example above, the user is stuck with a required field which requires a very specific pattern of characters to be entered. There is no information to inform the user about the required pattern.</p>
 
 </details>
 
