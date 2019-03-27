@@ -133,6 +133,14 @@
 
 </details>
 
+<details>
+
+<summary><strong>Make sure you include proper descriptive Document titles<sup> 02</sup></strong></summary>
+  <p>- Always use a <strong>&lt;title&gt;</strong> element inside the <strong>&lt;head&gt;</strong> tag</p>
+  <p>- Avoid default Document titles placed by HTML Boilerplate files or Emmet abbreviations, like "Document"</p>
+
+</details>
+
 
 
 <details open>
