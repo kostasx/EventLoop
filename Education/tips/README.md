@@ -208,38 +208,13 @@
 
 <details>
 
-<summary><strong>Enclose input fields inside &lt;form&gt; tags<sup> 08 FORMS</sup></strong></summary>
+<summary><strong>Enclose input fields inside &lt;form&gt; tags<sup> 07 FORMS</sup></strong></summary>
   <p>For example, the <strong>&lt;input&gt;</strong> and <strong>&lt;select&gt;</strong> elements must be enclosed inside <strong>&lt;form&gt;</strong> tags.
   </p>
 
 </details>
 
-
-	
-
-
-
-<details open>
-
-<summary><strong><sup> 06</sup></strong></summary>
-  <p></p>
-
-</details>
-
 ## CSS
-
-<details open>
-
-<summary><strong><sup> 01</sup></strong></summary>
-  <p></p>
-
-</details>
 
 ## JAVASCRIPT
 
-<details open>
-
-<summary><strong><sup> 01</sup></strong></summary>
-  <p></p>
-
-</details>
