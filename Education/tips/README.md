@@ -183,14 +183,15 @@
 
 </details>
 
-<details>
+<details open>
 
 <summary><strong>Use Code Formatting<sup> 07</sup></strong></summary>
-  - Use indentation
-  - Reduce/remove unnecessary whitespace (newlines, tabs, etc.)
-  - Strive for consistency
-  - Use automated tools like the **VSCode's** `Format Document` command to format your code
-
+  <ul>
+  <li>Use indentation</li>
+  <li>Reduce/remove unnecessary whitespace (newlines, tabs, etc.)</li>
+  <li>Strive for consistency</li>
+  <li>Use automated tools like the **VSCode's** `Format Document` command to format your code</li>
+  </ul>
 </details>
 
 
