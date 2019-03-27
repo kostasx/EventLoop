@@ -214,6 +214,14 @@
 
 </details>
 
+<details>
+
+<summary><strong>Avoid using HTML Tags for Formatting or Styling Elements<sup> 08</sup></strong></summary>
+  <p>Prefer CSS rules to stylize or format HTML elements</p>
+  <p> Example: Avoid using &lt;br&gt; for spacing. Try using CSS properties like padding, margin, display, etc.</p>
+
+</details>
+
 ## CSS
 
 ## JAVASCRIPT
