@@ -190,7 +190,7 @@
   <li>Use indentation</li>
   <li>Reduce/remove unnecessary whitespace (newlines, tabs, etc.)</li>
   <li>Strive for consistency</li>
-  <li>Use automated tools like the **VSCode's** `Format Document` command to format your code</li>
+	<li>Use automated tools like the <strong>VSCode's</strong> <pre>Format Document</pre> command to format your code</li>
   </ul>
 </details>
 
