@@ -291,6 +291,26 @@
 
 </details>
 
+<details>
+
+<summary><strong>Choose your placeholder attribute values wisely<sup> 17 FORMS</sup></strong></summary>
+
+ <p>Bad Example:</p>
+
+ <pre>
+ &lt;input type=&quot;text&quot; name=&quot;firstname&quot; placeholder=&quot;John&quot; ...&gt;&#10;
+ &lt;input type=&quot;text&quot; name=&quot;lastname&quot; placeholder=&quot;Doe&quot; ...&gt;&#10;
+ </pre>
+
+ <hr>
+ <p>Goog Example:</p>
+
+ <pre>
+    &lt;input type=&quot;text&quot; name=&quot;firstname&quot; placeholder=&quot;First Name&quot; ...&gt;&#10;
+    &lt;input type=&quot;text&quot; name=&quot;lastname&quot; placeholder=&quot;Last Name&quot; ...&gt;&#10;</pre>
+
+</details>
+
 ## CSS
 
 ## JAVASCRIPT
