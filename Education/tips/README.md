@@ -21,24 +21,24 @@
 <details>
 
 <summary><strong>Organize your Project in folders<sup> 02</sup></strong></summary>
+  <p>Place your CSS files in folders named <i>/css</i>, <i>/style</i> or something appropriate. Place your JavaScript files in a folder named <i>/js</i> or <i>/script</i> and your image files in folders named <i>/img</i>, <i>/images</i> or something appropriate.</p>
   <p>Example:</p>
   <ul style="list-style:none; font-weight:bold;">
   <li>/</li>
-  <li>/css<span style="font-weight:normal;padding-left:40px;">Place your CSS files here</span>
+  <li>/css
   </li>
-  <li>/img<span style="font-weight:normal;padding-left:40px;">Place your Image files here</span>
+  <li>/img
   </li>
-  <li>/js <span style="font-weight:normal;padding-left:40px;">Place your JavaScript files here</span>
-  </li>
+  <li>/js</li>
   </ul>
   <p>Example #2:</p>
   <ul style="list-style:none; font-weight:bold;">
   <li>/</li>
-  <li>/style<span style="font-weight:normal;padding-left:40px;">Place your CSS files here</span>
+  <li>/style
   </li>
-  <li>/images<span style="font-weight:normal;padding-left:40px;">Place your Image files here</span>
+  <li>/images
   </li>
-  <li>/scripts <span style="font-weight:normal;padding-left:40px;">Place your JavaScript files here</span>
+  <li>/scripts 
   </li>
   </ul>
 
