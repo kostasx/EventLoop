@@ -2,7 +2,7 @@
 
 ### A Beginner's Checklist
 
-![](img/undraw_done_a34v.svg | width=500)
+<img src="img/undraw_done_a34v.svg" alt="" width="500px">
 
 ## GENERAL
 
