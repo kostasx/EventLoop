@@ -311,7 +311,7 @@
 
 </details>
 
-<details open>
+<details>
 
 <summary><strong>Consider using Semantic HTML Elements<sup> 18</sup></strong></summary>
 
