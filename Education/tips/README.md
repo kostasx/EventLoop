@@ -40,6 +40,22 @@
 
 </details>
 
+<details>
+
+<summary><strong>Choose Proper Color Sets for your Text and Buttons<sup> 04</sup></strong></summary>
+  <p>Contrast and color use are vital to accessibility. Users, including users with visual disabilities, must be able to perceive content on the page.</p>
+  <p><strong>Always check your color sets with one of the available Contrast Checking services:</strong></p>
+  <ul>
+  <li><a href="https://webaim.org/resources/contrastchecker/"><strong>Color Contrast Checker</strong> by WebAIM.org</a></li>
+  <li><a href="https://contrastchecker.com/"><strong>Contrast Checker</strong> by Acart Communications</a></li>
+  <li><a href="http://accessible-colors.com/"><strong>Accessible Colors</strong></a></li>
+  </ul>
+  <p>Bad Example:</p>
+  <img src="./img/contrast-check-fail.jpg" alt="" >
+
+</details>
+
+
 
 ## HTML
 
