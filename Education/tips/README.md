@@ -135,6 +135,14 @@
   <p>Bad code: <code> &lt;a href="#"&gt; &lt;button&gt;Click Me&lt;/button&gt; &lt;/a&gt; </code></p>
   <p><strong>The element button must not appear as a descendant of the a element.</strong><a href="https://stackoverflow.com/questions/6393827/can-i-nest-a-button-element-inside-an-a-using-html5">Reference</a></p>
   </fieldset>
+  
+  <hr>
+  
+  <p>Example output of the the <a href="https://marketplace.visualstudio.com/items?itemName=mkaufman.HTMLHint">HTLMHint VSCode extension</a>:</p>
+  <img src="img/htmlhint-errors.jpg" alt="" width="500px">
+
+
+
 
 </details>
 
