@@ -237,6 +237,40 @@
 
 </details>
 
+<details>
+
+<summary><strong>Avoid using inline Styling<sup> 11</sup></strong></summary>
+  <p>Bad Practice:</p>
+  <code>&lt;element style="rule:value" ... &gt;&lt;/element&gt;</code>
+  <hr>
+  <p>Good Practice:</p>
+  <p>Place your CSS inside <strong>&lt;style&gt;</strong> tags or external CSS files <strong>&lt;link rel="stylesheet"&gt;</strong></p>
+
+</details>
+
+<details>
+
+<summary><strong>Avoid using obsolete HTML5 elements and attributes<sup> 12</sup></strong></summary>
+  <p>Example: Do not use the <strong>cellspacing</strong> and <strong>cellpadding</strong> <strong>&lt;table&gt;</strong> attributes</p>
+  <p><a href="https://stackoverflow.com/questions/6048913/in-html5-with-respect-to-tables-what-replaces-cellpadding-cellspacing-valign">Reference</a>
+</p>
+
+</details>
+
+<details>
+
+<summary><strong>Organize your &lt;table&gt; Elements using &lt;thead&gt;, &lt;tbody&gt; and &lt;tfoot&gt; sections<sup> 13 TABLES</sup></strong></summary>
+  <p></p>
+
+</details>
+
+<details>
+
+<summary><strong>Consider using &lt;label&gt; elements to accompany &lt;input&gt; and &lt;select&gt; form elements<sup> 14 FORMS</sup></strong></summary>
+  <p></p>
+
+</details>
+
 ## CSS
 
 ## JAVASCRIPT
