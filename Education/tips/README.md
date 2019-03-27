@@ -1,3 +1,7 @@
+# TIPS
+
+<img src="img/undraw_done_a34v.svg" alt="">
+
 ## GENERAL
 
 <details>
