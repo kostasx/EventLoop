@@ -206,7 +206,7 @@
   </ul>
 </details>
 
-<details open>
+<details>
 
 <summary><strong>Enclose input fields inside &lt;form&gt; tags<sup> 08 FORMS</sup></strong></summary>
   <p>For example, the <strong>&lt;input&gt;</strong> and <strong>&lt;select&gt;</strong> elements must be enclosed inside <strong>&lt;form&gt;</strong> tags.
