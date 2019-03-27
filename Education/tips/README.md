@@ -222,6 +222,21 @@
 
 </details>
 
+<details>
+
+<summary><strong>Remove unnecessary type="text/javascript" attribute from &lt;script&gt; tags<sup> 09</sup></strong></summary>
+  <p><a href="https://stackoverflow.com/questions/14323376/do-html5-script-tag-need-type-javascript">Reference</a>
+</p>
+
+</details>
+
+<details>
+
+<summary><strong>Consider using the &lt;fieldset&gt; tag to organize your form elements into sections<sup> 10 FORMS</sup></strong></summary>
+  <p><strong>Note:</strong> The &lt;fieldset&gt; elements should preferably be used to group two or more input elements.</p>
+
+</details>
+
 ## CSS
 
 ## JAVASCRIPT
