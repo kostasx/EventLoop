@@ -401,20 +401,19 @@
 
 ## CSS
 
-<details open>
+<details>
 
 <summary><strong>VALIDATE CODE USING W3C CSS Validator<sup> 01</sup></strong></summary>
 
  <p><a href="https://jigsaw.w3.org/css-validator/validator">W3C CSS Validator</a></p>
  <p>Use VSCode to detect CSS Warnings and Errors</p>
  <p>Examples:</p>
- <pre>
- .students {
+<pre>
+.students {
    display-flex: flex;
    flex-direction: column;
-  }
-  </pre>
-  <p>Warning: Unknown property: display-flex</p>
+}</pre>
+  <p><strong>Warning:</strong> Unknown property: display-flex</p>
 
 </details>
 
@@ -484,27 +483,27 @@
 
   <p>Example (Before):</p>
   <pre>
-	label {
-		font-size: 20px;
-	}
+#label {
+  font-size: 20px;
+}
+#input {
+  font-size: 20px;
+}
+select {
+  font-size: 20px;
+}
 
-	input {
-		font-size: 20px;
-	}
-
-	select {
-		font-size: 20px;
-	}
-
-	legend {
-		font-size: 20px;
-	}
+legend {
+  font-size: 20px;
+}
   </pre>
   <p>Example (After):</p<>
   <pre>
-  label, input, select, legend {
+  #label, #input, #select, #legend {
     font-size: 20px;
   }</pre>
+  
+  <p>Alternatively, a single class that contained the CSS rule could be applied to all of these elements</p>
 
 </details>
 
