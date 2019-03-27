@@ -399,6 +399,8 @@
 
 </details>
 
+<img src="img/undraw_accept_request_vdsd.svg" alt="" width="500px">
+
 ## CSS
 
 <details>
@@ -506,6 +508,8 @@ legend {
   <p>Alternatively, a single class that contained the CSS rule could be applied to all of these elements</p>
 
 </details>
+
+<img src="img/undraw_code_typing_7jnv.svg" alt="" width="500px">
 
 ## JAVASCRIPT
 
