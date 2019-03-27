@@ -509,98 +509,93 @@ legend {
 
 ## JAVASCRIPT
 
-<details open>
+<details>
 
 <summary><strong>Prefer the addEventListener() method to add Element Event Handlers<sup> 01</sup></strong></summary>
 
-<p>	Avoid using the HTML inline &lt;element onclick=&quot;&quot;&gt; form.
-	Avoid using the ELEMENT.onclick = function(){} format to add Event Handlers to HTML Elements in your JS code.
-
-	Prefer the ELEMENT.addEventListener( EVENT, FUNCTION ) format.
-</p>
+  <p>Avoid using the HTML inline &lt;element onclick=&quot;&quot;&gt; form.</p>
+  <p>Avoid using the ELEMENT.onclick = function(){} format to add Event Handlers to HTML Elements in your JS code.</p>
+  <p>Prefer the ELEMENT.addEventListener( EVENT, FUNCTION ) format</p>
 
 </details>
 
-
-<details open>
+<details>
 
 <summary><strong>Avoid using inline JavaScript<sup> 02</sup></strong></summary>
 
-<p>Bad example:
-&#9;&lt;element onclick=&quot;function(){}&quot;&gt;</p>
+<p>Bad example:</p>
+<pre>&#9;&lt;element onclick=&quot;function(){}&quot;&gt;</pre>
+<p>Place all your JavaScript code in a &lt;script&gt; Tag or an external .js file</p>
 
 </details>
 
 
-<details open>
+<details>
 
 <summary><strong>Proper Naming for Functions and Variables<sup> 03</sup></strong></summary>
 
-<p>	- Name your variables and functions according to what they do. 
-	- Try to use descriptive names. 
-
-	Bad Examples:
-
-		myFunction(){ ... }
-		myFunction2(){ ... }
-
-	Good Examples:
-
-		function openMenu(){ ... }
-		function closeWindow(){ ... }
-</p>
+  <p>- Name your variables and functions according to what they do.</p> 
+  <p>- Use verbs for functions and nouns for variables</p>
+  <p>- Try to use descriptive names.</p> 
+  <p>Bad Examples:</p>
+  <pre>
+myFunction(){ ... }
+myFunction2(){ ... }
+</pre>
+<p>Good Examples:</p>
+<pre>
+function openMenu(){ ... }
+function closeWindow(){ ... }
+</pre>
 
 </details>
 
 
-<details open>
+<details>
 
 <summary><strong>Avoid using the == and != Operators<sup> 04</sup></strong></summary>
 
-<p>
-	- Prefer using the safer === and !== Operators
-	
-	Be sure to google and find what the exact differences between the two are!
-</p>
+  <p>- Prefer using the safer === and !== Operators</p>
+  <p>Be sure to google and find what the exact differences between the two are!</p>
 
 </details>
 
-<details open>
+<details>
 
 <summary><strong>Strive for Code Readability<sup> 05</sup></strong></summary>
 
-<p>	- Use spaces between parentheses, operands, etc. to boost readability. For example:
+  <p>- Use spaces between parentheses, operands, etc. to boost readability. For example:</p>
+  <pre>
+if(something===1){
+  do("argument");
+}else{
+  apply(2);
+}
+</pre>
+<p>Should preferably look like this:</p>
+<pre>
+if ( something === 1 ){
 
-		if(something===1){
-			do("argument");
-		}else{
-			apply(2);
-		}
+    do( "argument" );
 
-	Should preferably look like this:
+} else {
 
-		if ( something === 1 ){
+    apply( 2 );
 
-			do( "argument" );
-
-		} else {
-
-			apply( 2 );
-
-		}</p>
+}</pre>
 
 </details>
 
 
-<details open>
+<details>
 
-<summary><strong>Avoid using `var` to declare variables. Prefer the `let` and `const` ES6 keywords<sup> 06</sup></strong></summary>
+<summary><strong>Avoid using <strong>var</strong> to declare variables. Prefer the <strong>let</strong> and <strong>const</strong> ES6 keywords<sup> 06</sup></strong></summary>
 
 <p></p>
 
 </details>
 
-<details open>
+<details>
 
 <summary><strong>Use the Browser Developer Console to spot code Errors and Warnings<sup> 07</sup></strong></summary>
 
