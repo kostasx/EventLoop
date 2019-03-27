@@ -281,6 +281,16 @@
 
 </details>
 
+<details>
+
+<summary><strong>Use proper attributes with the &lt;input&gt; elements<sup> 16 FORMS</sup></strong></summary>
+  <p>Examples:</p>
+  <p>The <strong>maxlength</strong> attribute is used only with the following input types: text, email, search, password, tel, or url</p>
+  <p>For other control types, it is ignored.</p>
+  <p><a href="https://stackoverflow.com/questions/18510845/maxlength-ignored-for-input-type-number-in-chrome">References</a></p>
+
+</details>
+
 ## CSS
 
 ## JAVASCRIPT
