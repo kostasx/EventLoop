@@ -55,10 +55,62 @@
 
 </details>
 
+<details>
 
+<summary><strong>Always test your web pages in more than one Browser<sup> 05</sup></strong></summary>
+
+<p>Test with at least two or three different browsers and on several screen sizes.</p>
+<p>Consider testing the web pages using the Browsers' mobile device emulators</p>
+
+</details>
+
+<details>
+
+<summary><strong>Do not use local file paths as links<sup> 06</sup></strong></summary>
+  <p style="color:tomato">Example (wrong):</p>
+  <code>
+  &lt;link href="C:\Users\John\Desktop\css\style.css" ...&gt;
+  </code>
+  <br/>
+  <br/>
+  <p style="color:limegreen">Example (correct):</p>
+  <code>
+  &lt;link href="./css/style.css" ...&gt;
+  </code>
+
+</details>
+
+<details>
+
+<summary><strong>Keep studying the standards, revisit old code and refactor<sup> 07</sup></strong></summary>
+  <p>Make sure that you keep studying the HTML, CSS and JavaScript standards and revisit your old code and try to refactor it using the recently acquired knowledge.</p>
+  <p>Study well-designed forms and interfaces that you commonly use (e.g. Gmail, Search Engines, Contact Forms, etc.) and try to apply the rules and styling guides to your own layouts and web pages.</p>
+
+</details>
 
 ## HTML
 
+<details open>
+
+<summary><strong><sup> 01</sup></strong></summary>
+  <p></p>
+
+</details>
+
 ## CSS
 
+<details open>
+
+<summary><strong><sup> 01</sup></strong></summary>
+  <p></p>
+
+</details>
+
 ## JAVASCRIPT
+
+<details open>
+
+<summary><strong><sup> 01</sup></strong></summary>
+  <p></p>
+
+</details>
