@@ -475,7 +475,11 @@
   <img src="img/css-formatting-before.jpg" alt="">
   <p>After Formatting:</p>
   <img src="img/css-formatting-after.jpg" alt="">
-
+  <hr>
+  <p>Before Formatting:</p>
+  <img src="img/Inline-CSS-before-formatting.jpg" alt="">
+  <p>After Formatting:</p>
+  <img src="img/Inline-CSS-after-formatting.jpg" alt="">
 
 </details>
 
