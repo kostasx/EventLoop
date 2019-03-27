@@ -271,6 +271,15 @@
 
 </details>
 
+<details>
+
+<summary><strong>Always include a name property in your &lt;input&gt; and &lt;select&gt; elements<sup> 15 FORMS</sup></strong></summary>
+  <p>- Otherwise the input field values and selected options will never be send to the server.</p>
+  <p>- Consider going through the documentation to ensure that you are placing the `name` attribute only on the elements that require it.</p>
+  
+  <p>References: <a href="https://html.com/attributes/input-name/">The <strong>name</strong> input attribute</a></p>
+
+</details>
 
 ## CSS
 
