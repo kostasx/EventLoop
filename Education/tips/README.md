@@ -197,7 +197,7 @@
 
 <details>
 
-<summary><strong>Use Code Formatting<sup> 07</sup></strong></summary>
+<summary><strong>Use Code Formatting<sup> 06</sup></strong></summary>
   <ul>
   <li>Use indentation</li>
   <li>Reduce/remove unnecessary whitespace (newlines, tabs, etc.)</li>
