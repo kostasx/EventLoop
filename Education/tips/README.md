@@ -183,6 +183,16 @@
 
 </details>
 
+<details>
+
+<summary><strong>Use Code Formatting<sup> 07</sup></strong></summary>
+  - Use indentation
+  - Reduce/remove unnecessary whitespace (newlines, tabs, etc.)
+  - Strive for consistency
+  - Use automated tools like the **VSCode's** `Format Document` command to format your code
+
+</details>
+
 
 
 	
@@ -191,7 +201,7 @@
 
 <details open>
 
-<summary><strong><sup> 01</sup></strong></summary>
+<summary><strong><sup> 06</sup></strong></summary>
   <p></p>
 
 </details>
