@@ -94,6 +94,8 @@
 
 </details>
 
+<img src="img/drawkit-content.svg" alt="" width="500px">
+
 ## HTML
 
 <details open>
