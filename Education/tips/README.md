@@ -139,7 +139,7 @@
   <hr>
   
   <p>Example output of the the <a href="https://marketplace.visualstudio.com/items?itemName=mkaufman.HTMLHint">HTLMHint VSCode extension</a>:</p>
-  <img src="img/htmlhint-errors.jpg" alt="" width="500px">
+  <img src="img/htmlhint-errors.jpg" alt="" width="700px">
 
 
 
