@@ -98,6 +98,41 @@
 
 ## HTML
 
+<details>
+
+<summary><strong>Always Validate your HTML code<sup> 01</sup></strong></summary>
+
+  <p>- Validate your HTML code using the <a href="https://validator.w3.org/">W3C Validator</a></p>
+  <p>- Use your Code Editor's or IDE built-in validation system or install the appropriate plugins or extensions.</p>
+  <p>- For <a href="https://code.visualstudio.com/">Visual Studio Code</a> you can use the <a href="https://marketplace.visualstudio.com/items?itemName=mkaufman.HTMLHint">HTMLHint Extension</a>.</p>
+  <p><strong>Examples of validation errors:</strong><p>
+
+  <fieldset>
+  <legend>Invalid Tags</legend>
+  <p>Bad code: <code> &lt;/br&gt; </code></p>
+  <p><strong>Invalid <code>&lt;/br&gt;</code> tag.</strong> It should be <code>&lt;br&gt;</code></p>
+  </fieldset>
+
+  <br>
+
+  <fieldset>
+  <legend>Invalid ID names</legend>
+  <p>Bad code: <code> &lt;input id="Date of birth2"&gt; </code></p>
+  <p><strong>An ID must not contain whitespace.</strong></p>
+  </fieldset>
+
+  <br>
+
+  <fieldset>
+  <legend>Invalid Element Nesting</legend>
+  <p>Bad code: <code> &lt;a href="#"&gt; &lt;button&gt;Click Me&lt;/button&gt; &lt;/a&gt; </code></p>
+  <p><strong>The element button must not appear as a descendant of the a element.</strong><a href="https://stackoverflow.com/questions/6393827/can-i-nest-a-button-element-inside-an-a-using-html5">Reference</a></p>
+  </fieldset>
+
+</details>
+
+
+
 <details open>
 
 <summary><strong><sup> 01</sup></strong></summary>
