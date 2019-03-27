@@ -311,7 +311,309 @@
 
 </details>
 
+<details open>
+
+<summary><strong>Consider using Semantic HTML Elements<sup> 18</sup></strong></summary>
+
+<p>Examples of non-semantic elements: &lt;div&gt; - Tells nothing about its content.</p>
+<p>Examples of semantic elements: &lt;form&gt;, &lt;table&gt;, &lt;header&gt;, &lt;footer&gt;, &lt;section&gt; and &lt;article&gt; - Clearly define its content.</p>
+<hr>
+<p><a href="https://www.w3schools.com/html/html5_semantic_elements.asp">References</a></p>
+
+</details>
+
+<details open>
+
+<summary><strong>Use short and descriptive names in your submit elements<sup> 19 FORMS</sup></strong></summary>
+
+<p>Avoid:</p>
+<pre>
+&lt;input type=&quot;submit&quot; value=&quot;Save Changes and Update your Database&quot;&gt;&#10;</pre>
+<p>Instead use a short name and an optional description:</p>
+<pre>
+&lt;input type=&quot;submit&quot; value=&quot;Save&quot;&gt;&#10;&lt;p class=&quot;warning&quot;&gt;Save changes and update your database&lt;/p&gt;
+</pre>
+</p>
+
+</details>
+
+
+
+<details open>
+
+<summary><strong>Study Form Design and User Experience<sup> 20 FORMS</sup></strong></summary>
+
+<p>A quick search for "guide to better html forms" and "html forms user experience" returned the following useful resources for designing and building better HTML Forms:</p>
+
+- <a href="https://esri.github.io/calcite-web/guides/best-practices/forms/">Forms Best Practices:</a>
+
+- <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Styling_HTML_forms">Styling HTML forms</a>
+
+- <a href="https://medium.com/@Vincentxia77/best-practices-of-6-essential-principles-for-web-form-design-f48bed4708fa">Best Practices of 6 Essential Principles for Web Form Design</a>
+
+- <a href="https://medium.freecodecamp.org/a-step-by-step-guide-to-getting-started-with-html-forms-7f77ae4522b5">A step-by-step guide to getting started with HTML forms</a>
+
+- <a href="https://www.crazyegg.com/blog/guides/great-form-ui-and-ux/">The Crazy Egg Guide to Great Form UI and UX</a>
+
+- <a href="https://uxplanet.org/the-18-must-do-principles-in-the-form-design-fe89d0127c92">16 Tips that Will Improve Any Online Form</a>
+
+- <a href="https://www.ventureharbour.com/form-design-best-practices/">58 Form Design Best Practices & Form UX Examples</a>
+
+- <a href="https://ai.googleblog.com/2014/07/simple-is-better-making-your-web-forms.html">Simple is better - Making your web forms easy to use pays off</a>
+
+- <a href="https://uxdesign.cc/the-ux-behind-designing-better-forms-d6ebe7a817d2">The UX behind designing better forms</a>
+
+<p>Conclusion: Keep digging and search for additional resources!</p>
+
+</details>
+
+
+<details open>
+
+<summary><strong>Use &lt;select&gt; elements for predefined values<sup> 21 FORMS</sup></strong></summary>
+
+<p>When specific input fields have predefined values, consider using &lt;select&gt; elements.</p>
+
+</details>
+
+
+<details open>
+
+<summary><strong>Careful planning and consideration for field validations<sup> 22 FORMS</sup></strong></summary>
+
+<p>	Bad examples:
+
+	Using advanced validation patterns without providing the user with proper instructions:
+
+	<input type="text" name="Course Stream" value="" required placeholder="Course Stream" pattern="(#)[A-Z,a-z]{2,20}"><br>
+</p>
+
+</details>
+
+<details open>
+
+<summary><strong>Avoid using &lt;datalist&gt; for predefined option values<sup> 23 FORMS</sup></strong></summary>
+
+<p>	When having a predefined list of options, consider using the &lt;select&gt; element instead of the &lt;datalist&gt;. The &lt;select&gt; element &quot;locks&quot; the users to a specific list of options, whereas the &lt;datalist&gt; enables them to enter arbitrary data and thus be able to submit invalid values.</p>
+<hr>
+<p><strong>When to Use a Datalist</strong></p>
+<p>"Since datalists have no built-in mechanism to require that a user select a provided option, they are well suited for inputs that can accept any value. While the datalist suggests predefined values, the user is free to input any value."</p>
+
+</details>
+
 ## CSS
+
+<details open>
+
+<summary><strong>VALIDATE CODE USING W3C CSS Validator<sup> 01</sup></strong></summary>
+
+<p>	URL: https://jigsaw.w3.org/css-validator/validator
+
+	Use VSCode to detect CSS Warnings and Errors
+
+	Examples: 
+
+	.students {
+		display-flex: flex;
+		flex-direction: column;
+	}
+
+	Warning: Unknown property: display-flex
+</p>
+
+</details>
+
+
+
+<details open>
+
+<summary><strong>Proper Naming for your Selectors, Classes and IDs<sup> 02</sup></strong></summary>
+
+<p>	For example, avoid class names like this:
+
+		.b { ... }
+
+	Instead, use something more descriptive:
+
+		.submit_button { ... }
+
+	Avoid using class names that correspond to HTML Tag names, e.g. 
+	
+	.h2 { ... }
+	.p { ... }
+
+	Classes can and should be used on multiple elements.
+	Classes should either describe the elements' role in the interface or what they do in terms of styling:
+
+	.title { ... }, .submit_button { ... } .article { ... }	etc.
+
+    Bad Example:
+    <input class="button button1">
+
+    Better example:
+    <input class="submit_button button_border">
+</p>
+
+</details>
+
+
+
+<details open>
+
+<summary><strong>Avoid using illegible font families such as cursive<sup> 03</sup></strong></summary>
+
+<p>	- Prefer sans-serif fonts
+	
+	Bad Example: font-family: cursive;
+</p>
+
+</details>
+
+
+<details open>
+
+<summary><strong>Proper Document Formatting<sup> 04</sup></strong></summary>
+
+<p>	- Consider using VSCode's 'Format Document' command to make your code more readable
+
+	VSCode Extensions: https://marketplace.visualstudio.com/items?itemName=lonefy.vscode-JS-CSS-HTML-formatter
+
+	See: 
+	CSS-Formatting-Before.jpg
+	CSS-Formatting-After.jpg
+</p>
+
+</details>
+
+
+
+<details open>
+
+<summary><strong>Use CSS Group Selector to share CSS Rules among multiple elements<sup> 05</sup></strong></summary>
+
+<p>	Example (Before):
+
+	label {
+		font-size: 20px;
+	}
+
+	input {
+		font-size: 20px;
+	}
+
+	select {
+		font-size: 20px;
+	}
+
+	legend {
+		font-size: 20px;
+	}
+
+	Example (After):
+
+	label, input, select, legend {
+		font-size: 20px;
+	}</p>
+
+</details>
 
 ## JAVASCRIPT
 
+<details open>
+
+<summary><strong>Prefer the addEventListener() method to add Element Event Handlers<sup> 01</sup></strong></summary>
+
+<p>	Avoid using the HTML inline &lt;element onclick=&quot;&quot;&gt; form.
+	Avoid using the ELEMENT.onclick = function(){} format to add Event Handlers to HTML Elements in your JS code.
+
+	Prefer the ELEMENT.addEventListener( EVENT, FUNCTION ) format.
+</p>
+
+</details>
+
+
+<details open>
+
+<summary><strong>Avoid using inline JavaScript<sup> 02</sup></strong></summary>
+
+<p>Bad example:
+&#9;&lt;element onclick=&quot;function(){}&quot;&gt;</p>
+
+</details>
+
+
+<details open>
+
+<summary><strong>Proper Naming for Functions and Variables<sup> 03</sup></strong></summary>
+
+<p>	- Name your variables and functions according to what they do. 
+	- Try to use descriptive names. 
+
+	Bad Examples:
+
+		myFunction(){ ... }
+		myFunction2(){ ... }
+
+	Good Examples:
+
+		function openMenu(){ ... }
+		function closeWindow(){ ... }
+</p>
+
+</details>
+
+
+<details open>
+
+<summary><strong>Avoid using the == and != Operators<sup> 04</sup></strong></summary>
+
+<p>
+	- Prefer using the safer === and !== Operators
+	
+	Be sure to google and find what the exact differences between the two are!
+</p>
+
+</details>
+
+<details open>
+
+<summary><strong>Strive for Code Readability<sup> 05</sup></strong></summary>
+
+<p>	- Use spaces between parentheses, operands, etc. to boost readability. For example:
+
+		if(something===1){
+			do("argument");
+		}else{
+			apply(2);
+		}
+
+	Should preferably look like this:
+
+		if ( something === 1 ){
+
+			do( "argument" );
+
+		} else {
+
+			apply( 2 );
+
+		}</p>
+
+</details>
+
+
+<details open>
+
+<summary><strong>Avoid using `var` to declare variables. Prefer the `let` and `const` ES6 keywords<sup> 06</sup></strong></summary>
+
+<p></p>
+
+</details>
+
+<details open>
+
+<summary><strong>Use the Browser Developer Console to spot code Errors and Warnings<sup> 07</sup></strong></summary>
+
+<p>Always work with the Developer Tools console open when working with Web Page that contain JS code, in order to spot JS errors and other warnings.</p>
+
+</details>
