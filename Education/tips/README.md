@@ -1,6 +1,8 @@
-# TIPS
+# TIPS FOR DEVELOPERS
 
-<img src="img/undraw_done_a34v.svg" alt="">
+### A Beginner's Checklist
+
+![](img/undraw_done_a34v.svg | width=500)
 
 ## GENERAL
 
