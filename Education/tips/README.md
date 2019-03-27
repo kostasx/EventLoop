@@ -143,7 +143,7 @@
 
 <details>
 
-<summary><strong>Be consistent with Table Row and Column Data<sup> 03</sup></strong></summary>
+<summary><strong>Be consistent with Table Row and Column Data<sup> 03 FORMS</sup></strong></summary>
   <p>For example, input fields under each column must share common attributes:</p>
   <pre>
 &lt;tr&gt;
@@ -158,7 +158,29 @@
 
 </details>
 
+<details>
 
+<summary><strong>Carefully Group your Form Input Elements<sup> 04 FORMS</sup></strong></summary>
+<p>Recommendend Reading: <a href="https://mattstauffer.com/blog/a-little-trick-for-grouping-fields-in-an-html-form/">A little trick for grouping fields in an HTML form</a></p>
+
+</details>
+
+<details>
+
+<summary><strong>Make sure you have a good understanding of HTML Forms and the rules governing each Form Element<sup> 05 FORMS</sup></strong></summary>
+  <p>Validate your code to ensure you have no errors in your HTML forms:</p>
+  <p>Avoid errors like placing the <strong>&lt;legend&gt;</strong> element outside of a <strong>&lt;fieldset&gt;</strong> element, and so forth.</p>
+  <p><strong>Recommended Reading</strong> (Basics):</p>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">- Form Element </a><br>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">- Input Element </a><br>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label">- Label Element</a><br>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">- Select Element</a><br>
+
+</details>
+
+
+
+	
 
 
 
