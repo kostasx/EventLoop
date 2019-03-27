@@ -104,6 +104,7 @@
 </details>
 
 <img src="img/drawkit-content.svg" alt="" width="500px">
+<hr>
 
 ## HTML
 
@@ -400,6 +401,7 @@
 </details>
 
 <img src="img/undraw_accept_request_vdsd.svg" alt="" width="500px">
+<hr>
 
 ## CSS
 
@@ -510,6 +512,7 @@ legend {
 </details>
 
 <img src="img/undraw_code_typing_7jnv.svg" alt="" width="500px">
+<hr>
 
 ## JAVASCRIPT
 
