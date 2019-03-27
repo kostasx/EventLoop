@@ -260,16 +260,17 @@
 <details>
 
 <summary><strong>Organize your &lt;table&gt; Elements using &lt;thead&gt;, &lt;tbody&gt; and &lt;tfoot&gt; sections<sup> 13 TABLES</sup></strong></summary>
-  <p></p>
+<p>References: <a href="https://css-tricks.com/complete-guide-table-element/">A Complete Guide to the Table Element</a></p>
 
 </details>
 
 <details>
 
 <summary><strong>Consider using &lt;label&gt; elements to accompany &lt;input&gt; and &lt;select&gt; form elements<sup> 14 FORMS</sup></strong></summary>
-  <p></p>
+<p>References: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label">The label Element</a></p>
 
 </details>
+
 
 ## CSS
 
