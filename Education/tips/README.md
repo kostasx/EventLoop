@@ -183,7 +183,7 @@
 
 </details>
 
-<details open>
+<details>
 
 <summary><strong>Use Code Formatting<sup> 07</sup></strong></summary>
   <ul>
