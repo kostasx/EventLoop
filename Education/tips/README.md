@@ -9,6 +9,7 @@
 <details>
 
 <summary><strong>"Your code needs to look like you cared."<sup> 01</sup></strong></summary>
+<br>
   <p>The description says it all.</p>
 
 </details>
