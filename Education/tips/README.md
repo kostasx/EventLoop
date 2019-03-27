@@ -1,8 +1,13 @@
 # TIPS FOR DEVELOPERS
 
+<img src="img/undraw_done_a34v.svg" alt="" width="500px">
+
 ### A Beginner's Checklist
 
-<img src="img/undraw_done_a34v.svg" alt="" width="500px">
+- <a href="#general">General<a><br>
+- <a href="#html">HTML<a><br>
+- <a href="#css">CSS<a><br>
+- <a href="#javascript">JavaScript<a><br>
 
 ## GENERAL
 
