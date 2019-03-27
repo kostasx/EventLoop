@@ -141,6 +141,25 @@
 
 </details>
 
+<details>
+
+<summary><strong>Be consistent with Table Row and Column Data<sup> 03</sup></strong></summary>
+  <p>For example, input fields under each column must share common attributes:</p>
+  <pre>
+&lt;tr&gt;
+	&lt;td&gt;&lt;input type=&quot;text&quot;&gt;&lt;/td&gt;
+	&lt;td&gt;&lt;input type=&quot;number&quot;&gt;&lt;/td&gt;
+&lt;tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;&lt;input type=&quot;number&quot;&gt;&lt;/td&gt;	&lt;!-- This should have a type=&quot;text&quot; --&gt;
+	&lt;td&gt;&lt;input type=&quot;number&quot;&gt;&lt;/td&gt;
+&lt;tr&gt;
+  </pre>
+
+</details>
+
+
+
 
 
 <details open>
