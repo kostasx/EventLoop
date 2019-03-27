@@ -383,13 +383,12 @@
 
  <p>Bad examples:</p>
  <p>Using advanced validation patterns without providing the user with proper instructions:</p>
- <pre>
-  &lt;input type=&quot;text&quot; name=&quot;Course Stream&quot; value=&quot;&quot; required placeholder=&quot;Course Stream&quot; pattern=&quot;(#)[A-Z,a-z]{2,20}&quot;&gt;&#10;</pre>
+ <pre>&lt;input type=&quot;text&quot; name=&quot;Course Stream&quot; required placeholder=&quot;Course Stream&quot; pattern=&quot;(#)[A-Z,a-z]{2,20}&quot;&gt;&#10;</pre>
  <p>In the example above, the user is stuck with a required field which requires a very specific pattern of characters to be entered. There is no information to inform the user about the required pattern.</p>
 
 </details>
 
-<details open>
+<details>
 
 <summary><strong>Avoid using &lt;datalist&gt; for predefined option values<sup> 23 FORMS</sup></strong></summary>
 
@@ -406,92 +405,85 @@
 
 <summary><strong>VALIDATE CODE USING W3C CSS Validator<sup> 01</sup></strong></summary>
 
-<p>	URL: https://jigsaw.w3.org/css-validator/validator
-
-	Use VSCode to detect CSS Warnings and Errors
-
-	Examples: 
-
-	.students {
-		display-flex: flex;
-		flex-direction: column;
-	}
-
-	Warning: Unknown property: display-flex
-</p>
+ <p><a href="https://jigsaw.w3.org/css-validator/validator">W3C CSS Validator</a></p>
+ <p>Use VSCode to detect CSS Warnings and Errors</p>
+ <p>Examples:</p>
+ <pre>
+ .students {
+   display-flex: flex;
+   flex-direction: column;
+  }
+  </pre>
+  <p>Warning: Unknown property: display-flex</p>
 
 </details>
 
 
 
-<details open>
+<details>
 
 <summary><strong>Proper Naming for your Selectors, Classes and IDs<sup> 02</sup></strong></summary>
 
-<p>	For example, avoid class names like this:
-
-		.b { ... }
-
-	Instead, use something more descriptive:
-
-		.submit_button { ... }
-
-	Avoid using class names that correspond to HTML Tag names, e.g. 
-	
-	.h2 { ... }
-	.p { ... }
-
-	Classes can and should be used on multiple elements.
-	Classes should either describe the elements' role in the interface or what they do in terms of styling:
-
-	.title { ... }, .submit_button { ... } .article { ... }	etc.
-
-    Bad Example:
-    <input class="button button1">
-
-    Better example:
-    <input class="submit_button button_border">
-</p>
+  <p>For example, avoid class names like this:</p>
+  <pre>.b { ... }</pre>
+  <p>Instead, use something more descriptive:</p>
+  <pre>.submit_button { ... }</pre>
+  <p>Avoid using class names that correspond to HTML Tag names, e.g.</p>
+  <pre>
+    .h2 { ... }
+    .p { ... }
+   </pre>
+   <p>Classes can and should be used on multiple elements.</p>
+   <p>Classes should either describe the elements' role in the interface or what they do in terms of styling:</p>
+   <pre>
+   .title { ... }
+   .submit_button { ... }
+   .article { ... }
+   </pre>
+   <p>Bad choice of class names:</p>
+   <pre>
+   &lt;input class="button button1"&gt;
+   <pre>
+    <p>Better:</p>
+    <pre>&lt;input class="submit_button button_border"&gt;</pre>
 
 </details>
 
 
 
-<details open>
+<details>
 
-<summary><strong>Avoid using illegible font families such as cursive<sup> 03</sup></strong></summary>
-
-<p>	- Prefer sans-serif fonts
-	
-	Bad Example: font-family: cursive;
-</p>
+  <summary><strong>Avoid using illegible font families such as cursive<sup> 03</sup></strong></summary>
+  <p>Avoid:<pre>font-family: cursive;</pre></p>
+  <p>Prefer sans-serif fonts</p>
 
 </details>
 
 
-<details open>
+<details>
 
 <summary><strong>Proper Document Formatting<sup> 04</sup></strong></summary>
 
-<p>	- Consider using VSCode's 'Format Document' command to make your code more readable
+  <p>- Consider using VSCode's 'Format Document' command to make your code more readable</p>
+  <p>- Use a CSS Formatting Extension:</p>
+  <p>Install: <a href="https://marketplace.visualstudio.com/items?itemName=lonefy.vscode-JS-CSS-HTML-formatter">JS-CSS-HTML Formatter Extension</a></p>
+  <hr>
+  <p>Before Formatting:</p>
+  <img src="img/css-formatting-before.jpg" alt="">
+  <p>After Formatting:</p>
+  <img src="img/css-formatting-after.jpg" alt="">
 
-	VSCode Extensions: https://marketplace.visualstudio.com/items?itemName=lonefy.vscode-JS-CSS-HTML-formatter
-
-	See: 
-	CSS-Formatting-Before.jpg
-	CSS-Formatting-After.jpg
-</p>
 
 </details>
 
 
 
-<details open>
+<details>
 
 <summary><strong>Use CSS Group Selector to share CSS Rules among multiple elements<sup> 05</sup></strong></summary>
 
-<p>	Example (Before):
-
+  <p>Example (Before):</p>
+  <pre>
 	label {
 		font-size: 20px;
 	}
@@ -507,12 +499,12 @@
 	legend {
 		font-size: 20px;
 	}
-
-	Example (After):
-
-	label, input, select, legend {
-		font-size: 20px;
-	}</p>
+  </pre>
+  <p>Example (After):</p<>
+  <pre>
+  label, input, select, legend {
+    font-size: 20px;
+  }</pre>
 
 </details>
 
