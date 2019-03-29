@@ -63,6 +63,9 @@
 <li>
   	<a href="https://learn.shayhowe.com/html-css/building-forms/" target="_blank">Building Forms</a>
 </li>
+<li>
+  	<a href="https://medium.freecodecamp.org/a-step-by-step-guide-to-getting-started-with-html-forms-7f77ae4522b5" target="_blank">A step-by-step guide to getting started with HTML forms</a>
+</li>
 
 
 <li>
