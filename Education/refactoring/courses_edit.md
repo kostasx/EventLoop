@@ -59,7 +59,7 @@ function handleFormSelection ( e ){
 document.forms.myForm.cselect.addEventListener("change", handleFormSelection );
 ```
 ---
-**Refactoring - Step 02: Inside Event handling functions, you can use the `this` keyword or the `event.target` property to access the element that triggered the event. **
+**Refactoring - Step 02: Inside Event handling functions, you can use the `this` keyword or the `event.target` property to access the element that triggered the event.**
 
 ```javascript
 function handleFormSelection ( e ){
@@ -85,6 +85,7 @@ document.forms.myForm.cselect.addEventListener("change", handleFormSelection );
 ```
 ---
 **Refactoring - Step 03: You can use the HTMLSelectElement.form property to access the parent form:**
+
 Pros: In this way you reduce and optimize your code, since you limit the amount of Object property access operations to a minimum.
 [References](https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/form)
 
@@ -110,7 +111,8 @@ function handleFormSelection ( e ){
 document.forms.myForm.cselect.addEventListener("change", handleFormSelection );
 ```
 ---
-**Refactoring - Step 04: Consider caching Element Selectors, Accessed Object Properties and other values derived through various operations by storing them in a variable:***
+**Refactoring - Step 04: Consider caching Element Selectors, Accessed Object Properties and other values derived through various operations by storing them in a variable:**
+
 In this next example, we are reducing the number of redundant `.split()` operations to 1 from the initial 5.
 
 ```javascript
