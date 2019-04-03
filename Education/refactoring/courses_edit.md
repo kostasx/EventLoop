@@ -20,6 +20,27 @@ document.forms.myForm.cselect.addEventListener("change", function (e) {
 
 });
 ```
+
+**HTML**
+
+```html
+    <form name="myForm" id="first">
+        <p>
+            <label for="course-select">Please choose from:</label>
+            <select name="cselect" id="cselect" required>
+                <option value="" disabled selected>--List Of Courses-- </option>
+                <option value="1">1) Coding Bootcamp1, Java FullTime</option>
+                <option value="2">2) Coding Bootcamp1, Java PartTime</option>
+                <option value="3">3) Coding Bootcamp2, C# FullTime</option>
+                <option value="4">4) Coding Bootcamp2, C# PartTime</option>
+            </select>
+
+            ... Code ...
+
+      </form>
+
+```
+
 ---
 **Refactoring - Step 01: Consider declaring a function and passing the function name to the callback argument instead of placing an anonymous function:**
 
