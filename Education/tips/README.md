@@ -520,7 +520,7 @@ legend {
 
 ## JAVASCRIPT
 
-<details>
+<details id="js-event-handlers">
 
 <summary><strong>Prefer the addEventListener() method to add Element Event Handlers<sup> 01</sup></strong></summary>
 
