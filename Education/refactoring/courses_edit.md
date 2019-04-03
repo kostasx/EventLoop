@@ -21,7 +21,7 @@ document.forms.myForm.cselect.addEventListener("change", function (e) {
 });
 ```
 
-*Refactoring - Step 01: Consider declaring a function and passing the function name to the callback argument instead of placing an anonymous function:*
+**Refactoring - Step 01: Consider declaring a function and passing the function name to the callback argument instead of placing an anonymous function:**
 
 Instead of:
 
@@ -38,7 +38,7 @@ Pros:
 
 Refactored code:
 
-```
+```javascript
 function handleFormSelection ( e ){
 
     let selectedIndex = document.forms.myForm.cselect.selectedIndex;
