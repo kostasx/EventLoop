@@ -1,8 +1,8 @@
 ## CODE REFACTORING - Case Study AfDemp - BC_EP001
 
-Code: (student) code that listens for the 'change' event on a <select> element and updates a form's content accordinly:
+Code: (student) code that listens for the 'change' event on a &lt;select&gt; element and updates a form's content accordinly:
 
-```
+```javascript
 document.forms.myForm.cselect.addEventListener("change", function (e) {
 
     let selectedIndex = document.forms.myForm.cselect.selectedIndex;
