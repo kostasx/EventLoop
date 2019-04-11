@@ -261,3 +261,31 @@
   </ul>
 
 </details>
+
+<details open>
+<summary>HTML5 APIs</summary>
+  <p>Syllabus:</p>
+  <h4>References</h4>
+  <ul>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API"><strong>Web APIs</strong></a></li>
+	 <li><strong>Media API:</strong>
+		 <ul>
+          <li><i>The Media API is a JavaScript API that is part of HTML5 that allows you to interact with the audio and video elements.</i></li>
+			 <li>
+               <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">The <strong>&lt;video&gt;</strong> Element</a>
+             </li>
+</ul>
+  </li>
+
+</ul>
+</li>
+	  
+  </ul>
+
+  <h4>Resources</h4>
+  <ul>
+  <li><a href="">...</a></li>
+
+  </ul>
+  
+</details>
