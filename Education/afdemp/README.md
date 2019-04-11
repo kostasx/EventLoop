@@ -276,6 +276,7 @@
           <li><i>The Media API is a JavaScript API that is part of HTML5 that allows you to interact with the audio and video elements.</i></li>
 		   <li>
                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">The <strong>&lt;video&gt;</strong> Element</a>    <ul>
+               <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#Events">Video Element <strong>Events</strong> <i>(play, pause, ended, etc.)</i></a></li>
                <li><strong>Test Videos:</strong></li>
                <li><a href="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4">Big Bunny (format: video/mp4)</a></li>
                <li><a href="http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv">Big Bunny (format: video/ogg)</a></li>
