@@ -267,21 +267,25 @@
   <p>Syllabus:</p>
   <h4>References</h4>
   <ul>
-  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API"><strong>Web APIs</strong></a></li>
-	 <li><strong>Media API:</strong>
-		 <ul>
+    <li>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/API"><strong>Web APIs</strong></a>
+    </li>
+	<li>
+      <strong>Media API:</strong>
+	  <ul>
           <li><i>The Media API is a JavaScript API that is part of HTML5 that allows you to interact with the audio and video elements.</i></li>
-			 <li>
-               <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">The <strong>&lt;video&gt;</strong> Element</a>
-             </li>
+		   <li>
+               <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">The <strong>&lt;video&gt;</strong> Element</a>    <ul>
+               <li><strong>Test Videos:</strong></li>
+               <li><a href="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4">Big Bunny (format: video/mp4)</a></li>
+               <li><a href="http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv">Big Bunny (format: video/ogg)</a></li>
+               <li><a href="http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm">Big Bunny (format: video/webm)</a></li>
+               </ul>
+           </li>
+       </ul>
+     </li>
 </ul>
-  </li>
-
-</ul>
-</li>
 	  
-  </ul>
-
   <h4>Resources</h4>
   <ul>
   <li><a href="">...</a></li>
