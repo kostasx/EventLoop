@@ -262,7 +262,7 @@
 
 </details>
 
-<details open>
+<details>
 <summary>HTML5 APIs</summary>
   <p>Syllabus:</p>
   <h4>References</h4>
@@ -289,8 +289,17 @@
 	  
   <h4>Resources</h4>
   <ul>
-  <li><a href="">...</a></li>
-
+  <li><a href="">Coming soon...</a></li>
   </ul>
   
+</details>
+
+<details>
+<summary>Bootstrap 4</summary>
+
+  <h4>Resources</h4>
+  <ul>
+  <li><a href="https://scrimba.com/g/gbootstrap4">Learn Bootstrap 4 for free (Scrimba Interactive Screencasts)</a></li>
+  </ul>
+
 </details>
