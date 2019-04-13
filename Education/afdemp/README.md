@@ -300,6 +300,8 @@
   <h4>Resources</h4>
   <ul>
   <li><a href="https://scrimba.com/g/gbootstrap4">Learn Bootstrap 4 for free (Scrimba Interactive Screencasts)</a></li>
+  <li><a href="https://hackerthemes.com/bootstrap-cheatsheet/">Bootstrap 4 Cheat Sheet - An interactive list of Bootstrap classes for version 4.3.1</a></li>
+	
   </ul>
 
 </details>
