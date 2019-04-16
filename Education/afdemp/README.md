@@ -134,7 +134,7 @@
 
 </details>
 
-<details>
+<details open>
   <summary>4.3 CSS (Cascading Style Sheets)​</summary>
   <p>Syllabus:</p>
   <h4>References</h4>
@@ -187,8 +187,22 @@
     	<li><a href="https://css-tricks.com/what-is-vertical-align/">What is Vertical Align?</a></li>
 	    </ul>
     </li>
-    <li><strong>Box Model:</strong><a href="https://learn.shayhowe.com/html-css/opening-the-box-model/"> Opening the Box Model</a></li>
-	</ul>
+    <li><strong>Box Model:</strong>
+<ul>
+<li><a href="https://learn.shayhowe.com/html-css/opening-the-box-model/">Opening the Box Model</a></li>
+    </ul>
+</li>
+
+<li><strong>CSS Animations:</strong>
+<ul>
+<li><a href="https://thoughtbot.com/blog/css-animation-for-beginners">CSS Animation for Beginners</a></li>
+<li><a href="https://www.w3schools.com/css/css3_animations.asp">CSS Animations</a></li>
+<li><a href="https://tympanus.net/codrops/css_reference/keyframes/">Keyframes</a></li>
+</ul>
+         
+</li>
+
+</ul>
 
   <h4>Resources</h4>
   <ul>
@@ -198,15 +212,6 @@
 	  <li>
       	<a href="https://jgthms.com/web-design-in-4-minutes/" target="_blank">Learn the basics of web design in 4 minutes</a>
       </li>
-	<li><strong>CSS Animations</strong>
-		<ul>
-    <li><a href="https://thoughtbot.com/blog/css-animation-for-beginners">CSS Animation for Beginners</a></li>
-	    <li><a href="https://www.w3schools.com/css/css3_animations.asp">CSS Animations</a></li>
-	    <li><a href="https://tympanus.net/codrops/css_reference/keyframes/">Keyframes</a></li>
-
-      </ul>
-         
-        </li>
 
   </ul>
 
