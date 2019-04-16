@@ -134,7 +134,7 @@
 
 </details>
 
-<details open>
+<details>
   <summary>4.3 CSS (Cascading Style Sheets)​</summary>
   <p>Syllabus:</p>
   <h4>References</h4>
