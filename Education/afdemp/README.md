@@ -328,3 +328,50 @@
   </ul>
 
 </details>
+
+<details>
+<summary>React.JS</summary>
+
+  <h4>Resources</h4>
+  <ul>
+<li>
+	<a href="https://www.taniarascia.com/getting-started-with-react/">Getting Started with React - An Overview and Walkthrough</a>
+</li>
+
+<li>
+	<a href="https://www.youtube.com/watch?v=Ke90Tje7VS0">(YouTube) Learn React - React Crash Course [2019] - React Tutorial with Examples | Mosh</a>
+</li>
+
+<li>
+	<a href="https://scrimba.com/g/glearnreact">Learn React for free</a>
+</li>
+
+
+<li>
+	<a href="https://www.reddit.com/r/reactjs">React.JS @ Reddit</a>
+</li>
+
+
+<li>
+	<a href="https://medium.freecodecamp.org/what-i-wish-i-knew-when-i-started-to-work-with-react-js-3ba36107fd13">What I wish I knew when I started to work with React.js</a>
+</li>
+
+
+  </ul>
+
+  <h4>Questions</h4>
+  <ul>
+  <li><strong>Question: </strong><i>How can I import multiple image or any other kind of files in React.JS?</i><br><strong>Answer: </strong><a href="https://stackoverflow.com/questions/44607396/importing-multiple-files-in-react">Stackoverflow: Importing multiple files in react</a></li>
+  </ul>
+
+</details>
+
+<details>
+<summary>AngularJS</summary>
+
+  <h4>Resources</h4>
+  <ul>
+    <li><a href="">Soon...</a></li>
+  </ul>
+
+</details>
