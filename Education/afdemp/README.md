@@ -355,7 +355,14 @@
 <li>
 	<a href="https://medium.freecodecamp.org/what-i-wish-i-knew-when-i-started-to-work-with-react-js-3ba36107fd13">What I wish I knew when I started to work with React.js</a>
 </li>
-
+<li>
+<strong>React Routing</strong>
+<ul>
+<li><a href="https://reacttraining.com/react-router/web/guides/quick-start">Quick Start</a></li>
+<li><a href="https://stackoverflow.com/questions/49162311/react-difference-between-route-exact-path-and-route-path">Difference between <code>&lt;Route exact path=“/” /&gt;</code> and <code>&lt;Route path=“/” /&lt;</code>
+</a></li>
+</ul>
+</li>
 
   </ul>
 
