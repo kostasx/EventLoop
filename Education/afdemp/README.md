@@ -362,6 +362,11 @@
   <h4>Questions</h4>
   <ul>
   <li><strong>Question: </strong><i>How can I import multiple image or any other kind of files in React.JS?</i><br><strong>Answer: </strong><a href="https://stackoverflow.com/questions/44607396/importing-multiple-files-in-react">Stackoverflow: Importing multiple files in react</a></li>
+  <br>
+  <li><strong>Question: </strong><i>How do I get the previous value of state?</i><br><strong>Answer: </strong><br><pre> this.setState(function( prevState ){  
+   return { counter: prevState.counter + 1 }
+});
+</pre></li>
   </ul>
 
 </details>
