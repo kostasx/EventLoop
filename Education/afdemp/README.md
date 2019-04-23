@@ -329,6 +329,28 @@
 
 </details>
 
+
+<details>
+<summary>jQuery</summary>
+
+  <h4>Resources</h4>
+  <ul>
+<li>
+    <a href="https://www.w3schools.com/jquery/default.asp" target="_blank">jQuery Tutorial @ w3schools.com</a>
+</li>
+<li>
+    <a href="https://www.w3schools.com/jquery/jquery_fade.asp" target="_blank">fadeIn() / fadeOut() / fadeToggle() / fadeTo()</a>
+</li>
+<li>
+    <a href="https://www.w3schools.com/jquery/jquery_hide_show.asp" target="_blank">show() / hide()</a>
+</li>
+<li>
+    <a href="" target="_blank">To be updated...</a>
+</li>
+  </ul>
+
+</details>
+
 <details>
 <summary>React.JS</summary>
 
