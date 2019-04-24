@@ -25,6 +25,7 @@ __Click the link and then click `Download`. You need a create-react-app environm
 - [Create React App](https://github.com/facebook/create-react-app)
 - [React Developer Tools (Chrome Extension)](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)    
 - [Online VSCode Editor and Virtual Environment (Supports React, Vue, Angular)](https://codesandbox.io/)
+- [Introduction to React by Le Wagon - YouTube Video](https://www.youtube.com/watch?v=_ZTT9kw3PIE)
     
 ### RESOURCES | LEARNING
 
