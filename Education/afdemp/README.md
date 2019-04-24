@@ -337,6 +337,7 @@
   <ul>
 <li>
     <a href="https://books.goalkicker.com/jQueryBook/" target="_blank">jQuery - Notes for Professionals (Free PDF)</a>
+	<a href="https://github.com/kostasx/EventLoop/blob/master/jquery/resources/jQueryNotesForProfessionals.pdf"><strong>[ View PDF ]</strong></a>
 </li>
 <li>
     <a href="https://www.w3schools.com/jquery/default.asp" target="_blank">jQuery Tutorial @ w3schools.com</a>
