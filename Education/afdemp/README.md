@@ -336,7 +336,7 @@
   <h4>Resources</h4>
   <ul>
 <li>
-    <a href="https://books.goalkicker.com/jQueryBook/" target="_blank">jQuery - Notes for Professionals (Free PDF)</a>
+    <a href="https://books.goalkicker.com/jQueryBook/" target="_blank">jQuery - Notes for Professionals (Free PDF)</a> / 
 	<a href="https://github.com/kostasx/EventLoop/blob/master/jquery/resources/jQueryNotesForProfessionals.pdf"><strong>[ View PDF ]</strong></a>
 </li>
 <li>
