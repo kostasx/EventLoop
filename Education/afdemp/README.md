@@ -372,6 +372,10 @@
 	<a href="https://scrimba.com/g/glearnreact">Learn React for free</a>
 </li>
 
+<li>
+	<a href="https://www.youtube.com/watch?v=_ZTT9kw3PIE">Introduction to React by Le Wagon [Video]</a>
+</li>
+
 
 <li>
 	<a href="https://www.reddit.com/r/reactjs">React.JS @ Reddit</a>
