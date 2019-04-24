@@ -336,7 +336,7 @@
   <h4>Resources</h4>
   <ul>
 <li>
-    <a href="https://books.goalkicker.com/jQueryBook/" target="_blank">jQuery - Notes for Professionals (Free PDF) **[&checkmark;]**</a> / 
+    <a href="https://books.goalkicker.com/jQueryBook/" target="_blank">jQuery - Notes for Professionals (Free PDF) <strong>[&checkmark;]</strong></a> / 
 	<a href="https://github.com/kostasx/EventLoop/blob/master/jquery/resources/jQueryNotesForProfessionals.pdf"><strong>[ View PDF ]</strong></a>
 </li>
 <li>
@@ -361,7 +361,7 @@
   <h4>Resources</h4>
   <ul>
 <li>
-	<a href="https://www.taniarascia.com/getting-started-with-react/">Getting Started with React - An Overview and Walkthrough **[&checkmark;]**</a>
+	<a href="https://www.taniarascia.com/getting-started-with-react/">Getting Started with React - An Overview and Walkthrough <strong>[&checkmark;]</strong></a>
 </li>
 
 <li>
@@ -389,7 +389,7 @@
 </a></li>
 
 <li>
- <a href="https://epeak.info/2019/03/26/a-bluffers-information-to-react-router-v4-freecodecamp-org/">A Bluffer's Information to React Router V4 – FreeCodeCamp **[&checkmark;]**</a>
+ <a href="https://epeak.info/2019/03/26/a-bluffers-information-to-react-router-v4-freecodecamp-org/">A Bluffer's Information to React Router V4 – FreeCodeCamp <strong>[&checkmark;]</strong></a>
 </li>
 
 </ul>
