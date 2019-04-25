@@ -373,7 +373,7 @@
 </li>
 
 <li>
-	<a href="https://www.youtube.com/watch?v=_ZTT9kw3PIE">Introduction to React by Le Wagon [Video]</a>
+	<a href="https://www.youtube.com/watch?v=_ZTT9kw3PIE">Introduction to React by Le Wagon [Video] <strong>[&checkmark;]</strong></a>
 </li>
 
 
