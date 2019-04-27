@@ -566,7 +566,7 @@ legend {
 
 <summary><strong>Avoid using inline JavaScript<sup> 02</sup></strong></summary>
 
-<p>Bad example:</p>
+<p>Bad examples:</p>
 <pre>&#9;&lt;element onclick=&quot;function(){}&quot;&gt;</pre>
 <p>Place all your JavaScript code in a &lt;script&gt; Tag or an external .js file</p>
 
@@ -580,15 +580,53 @@ legend {
   <p>- Name your variables and functions according to what they do.</p> 
   <p>- Use verbs for functions and nouns for variables</p>
   <p>- Try to use descriptive names.</p> 
-  <p>Bad Examples:</p>
+  <p style="color:tomato;">Bad:</p>
   <pre>
 myFunction(){ ... }
 myFunction2(){ ... }
 </pre>
-<p>Good Examples:</p>
+<p style="color:limegreen;">Better:</p>
 <pre>
 function openMenu(){ ... }
 function closeWindow(){ ... }
+</pre>
+<p style="color:tomato;">Bad:</p>
+<small>This next function displays a range input field.</small><br><br>
+<pre>function rangeOutput(){ ... }</pre>
+<p style="color:limegreen;">Better:</p>
+<small>It should probably be named using a verb that describes what it does.</small><br><br>
+<pre>function outputRange(){ ... }</pre>
+
+<p style="color:tomato;">Bad:</p>
+<small>Can you guess what does the next function do? The name is too vague and ambiguous.</small><br><br>
+<pre>
+propTypeFunction();
+</pre>
+
+<hr>
+
+<p style="color:tomato;">Bad:</p>
+<pre>
+let sortArray = [ 1, 3, 2 ];
+sortArray.sort();
+</pre>
+
+<p style="color:limegreen;">Better:</p>
+<small>Prefer nouns when naming variables.</small><br><br>
+<pre>
+let sortedArray = [ 1, 3, 2 ];
+sortedArray.sort();
+</pre>
+
+<hr>
+
+<p style="color:tomato;">Bad:</p>
+<small>What does the tempArray hold? Try to be more descriptive.</small><br><br>
+<pre>let tempArray = entries.filter( getOdd );</pre>
+
+<p style="color:limegreen;">Better:</p>
+<pre>
+let oddEntriesArray = entries.filter( getOdd );
 </pre>
 
 </details>
