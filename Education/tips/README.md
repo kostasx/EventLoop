@@ -517,7 +517,7 @@ legend {
 
 </details>
 
-<details>
+<details id="css_clean_up">
 <summary><strong>Remove unused/commented CSS<sup> 06</sup></strong></summary>
 
 <p>Clean your production code from unused or commented CSS rules. Keep commented code or code that belongs to work in progress to a different git branch and keep you production branch clean.</p>
