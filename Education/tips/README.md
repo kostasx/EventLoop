@@ -619,7 +619,12 @@ sortedArray.sort();
 </pre>
 
 <hr>
-
+```diff
++ Better:
+```
+```diff
+- Bad:
+```
 <p style="color:tomato;">Bad:</p>
 <small>What does the tempArray hold? Try to be more descriptive.</small><br><br>
 <pre>let tempArray = entries.filter( getOdd );</pre>
