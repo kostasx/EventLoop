@@ -18,10 +18,10 @@
 
 </details>
 
-<details>
+<details id="organized_structure">
 
 <summary><strong>Organize your Project in folders<sup> 02</sup></strong></summary>
-  <p>Place your CSS files in folders named <i>/css</i>, <i>/style</i> or something appropriate. Place your JavaScript files in a folder named <i>/js</i> or <i>/script</i> and your image files in folders named <i>/img</i>, <i>/images</i> or something appropriate.</p>
+  <p>Place your CSS files in folders named <i>/css</i>, <i>/style</i> or something appropriate. Place your JavaScript files in a folder named <i>/js</i> or <i>/script</i> and your image files in folders named <i>/img</i>, <i>/images</i> or something appropriate. </p>
   <p>Example:</p>
   <ul style="list-style:none; font-weight:bold;">
   <li>/</li>
@@ -41,6 +41,8 @@
   <li>/scripts 
   </li>
   </ul>
+  
+  <p>Carefully consider the naming convention of your files and folders and <strong>stick to it</strong>, e.g. do not mix different naming styles (uppercase/lowercase/camelCase, etc.): /img/, /js/ CSS/, /fontFiles/</p>
 
 </details>
 
