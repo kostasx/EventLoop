@@ -45,6 +45,28 @@
   
   <p>Carefully consider the naming convention of your files and folders and <strong>stick to it</strong>, e.g. do not mix different naming styles (uppercase/lowercase/camelCase, etc.): /img/, /js/ CSS/, /fontFiles/</p>
 
+  <p>Bad:</p>
+  <ul style="list-style:none; font-weight:bold;">
+  <li>/</li>
+  <li>/STYLE <small style="font-weight:normal; font-style:italic;">( Should be lowercase and plural as it contains multiple files )</small>
+  </li>
+  <li>/Image <small style="font-weight:normal; font-style:italic;">( Should be all lowercase )</small>
+  </li>
+  <li>/scripts 
+  </li>
+  </ul>
+
+  <p>Better:</p>
+  <ul style="list-style:none; font-weight:bold;">
+  <li>/</li>
+  <li>/styles 
+  </li>
+  <li>/images 
+  </li>
+  <li>/scripts 
+  </li>
+  </ul>
+
 </details>
 
 <details>
