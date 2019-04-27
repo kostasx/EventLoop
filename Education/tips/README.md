@@ -645,3 +645,11 @@ if ( something === 1 ){
 <p>Always work with the Developer Tools console open when working with Web Page that contain JS code, in order to spot JS errors and other warnings.</p>
 
 </details>
+
+<details id="js_clean_up">
+<summary><strong>Clean up your code from unused variables and functions.</strong></summary>
+</details>
+
+<details id="linting">
+<summary><strong>Use a Linter</strong></summary>
+</details>
