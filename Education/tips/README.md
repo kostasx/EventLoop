@@ -537,7 +537,43 @@ legend {
   }</pre>
   
   <p>Alternatively, a single class that contained the CSS rule could be applied to all of these elements</p>
+  
+  Example No2: (Before):
 
+<pre>
+.searchbar{
+  background-color: #34464f;
+}
+.booking{
+  background-color: #34464f;
+}
+.slide{
+  background-color: #34464f; 
+}
+#photo{
+  background-color: #34464f; 
+}
+.rating{
+  background-color: #34464f; 
+}
+.features{
+  background-color: #34464f; 
+}
+</pre>
+
+  Example No2: (After):
+<pre>
+.searchbar, .booking, .slide, #photo, .rating, .features {
+    background-color: #34464f; 
+}
+</pre>
+ALTERNATIVELY: Create a new class and apply that to the elements:<br><br>
+
+<pre>
+.dark-colored-bg {
+    background-color: #34464f; 
+}
+</pre>
 </details>
 
 <details id="css_clean_up">
