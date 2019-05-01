@@ -25,11 +25,11 @@ __Click the link and then click `Download`. You need a create-react-app environm
 - [Create React App](https://github.com/facebook/create-react-app)
 - [React Developer Tools (Chrome Extension)](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)    
 - [Online VSCode Editor and Virtual Environment (Supports React, Vue, Angular)](https://codesandbox.io/)
-- [Introduction to React by Le Wagon - YouTube Video](https://www.youtube.com/watch?v=_ZTT9kw3PIE) <strong>[&checkmark;]</strong>
     
 ### RESOURCES | LEARNING
 
 - [SoloLearn JavaScript Tutorial](https://www.sololearn.com/Course/JavaScript/)
+- [Getting Started with React - An Overview and Walkthrough](https://www.taniarascia.com/getting-started-with-react/) <strong>[&checkmark;]</strong>
 - [Learn React - Scrimba Interactive Screencasts Series | :+1:](https://scrimba.com/g/glearnreact)
 - [React, Router, Redux Cheatsheet](./docs/react-redux.pdf)
 - [What is Virtual DOM? (:movie_camera: Video)](https://www.youtube.com/watch?v=jwRAdGLUarw)
@@ -40,6 +40,7 @@ __Click the link and then click `Download`. You need a create-react-app environm
 - [Handling Events](https://reactjs.org/docs/handling-events.html)
 - [Lifecycle Methods: How and When to Use Them](https://blog.bitsrc.io/react-16-lifecycle-methods-how-and-when-to-use-them-f4ad31fb2282)
 - [React Native (Create Native Mobile Apps with React) :iphone:](https://facebook.github.io/react-native/)
+- [Introduction to React by Le Wagon - YouTube Video](https://www.youtube.com/watch?v=_ZTT9kw3PIE) <strong>[&checkmark;]</strong>
     
     
 
