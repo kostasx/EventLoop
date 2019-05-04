@@ -30,7 +30,7 @@
 
 
 <details>
-  <summary>4.1 Key Concepts and Principles​</summary>
+  <summary>Key Concepts and Principles​</summary>
   <p>Syllabus: 4.1.1 ~ 4.1.3</p>
   <h4>References</h4>
   <ul>
@@ -45,7 +45,7 @@
 </details>
 
 <details>
-  <summary>4.2 HTML (HyperText Markup Language)</summary>
+  <summary>HTML (HyperText Markup Language)</summary>
   <h4>References</h4>
   <ul>
 	  <li><a href="https://htmlreference.io"><strong>HTMLReference.io</strong></a></li>
@@ -135,7 +135,7 @@
 </details>
 
 <details>
-  <summary>4.3 CSS (Cascading Style Sheets)​</summary>
+  <summary>CSS (Cascading Style Sheets)​</summary>
   <p>Syllabus:</p>
   <h4>References</h4>
   <ul>
@@ -227,7 +227,7 @@
 </details>
 
 <details>
-  <summary>4.6 JavaScript</summary>
+  <summary>JavaScript</summary>
   <p>Syllabus:</p>
   <h4>References</h4>
   <ul>
@@ -283,6 +283,59 @@
 
   </ul>
 
+</details>
+
+<details>
+<summary><strong>Accessibility</strong> | A11Y</summary>
+<h4>Resources</h4>
+  <ul>
+  <li>
+  <a href="https://uxdesign.cc/designing-for-accessibility-is-not-that-hard-c04cc4779d94"><strong>Designing for accessibility is not that hard: </strong>7 easy-to-implement guidelines to design a more accessible web</a>
+  </li>
+
+  <li>
+  <a href="https://blog.prototypr.io/designing-usable-and-accessible-buttons-dffb464d9be2">Designing Usable and Accessible Buttons</a>
+  </li>
+
+  <li>
+  <a href="https://a11yproject.com/checklist.html"><strong>Web Accessibility Checklist: </strong>A beginner's guide to web accessibility
+</a>
+  </li>
+
+  <li>
+  <a href="http://web-accessibility.carnegiemuseums.org/content/buttons/"><strong>Web Accessibility Guidelines v1.0:</strong> Links, Buttons, &amp; Other Clickable Elements</a>
+  </li>
+
+  <li>
+  <a href="https://www.deque.com/blog/accessible-aria-buttons/"><strong>Building Accessible Buttons with ARIA:</strong> A11y Support Series</a>
+  </li>
+  
+  <li>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/forms/Basic_form_hints">Basic form hints
+</a>
+  </li>
+
+  <li>
+  <a href="https://www.w3.org/TR/wai-aria-practices/"><strong>WAI-ARIA Authoring Practices 1.1</strong></a>
+  </li>
+
+  <li>
+  <a href="https://www.w3.org/TR/wai-aria-practices/#button"><strong>WAI-ARIA Authoring Practices 1.1</strong>: Button</a>
+  </li>
+
+  <li>
+  <a href="https://www.w3.org/TR/wai-aria-practices/examples/button/button.html"><strong>WAI-ARIA Authoring Practices 1.1</strong>: Button Examples</a>
+  </li>
+
+  <li>
+  <a href="https://achecker.ca/checker/index.php">Web Accessibility Checker</a>
+  </li>
+
+  <li>
+  <a href="https://www.w3.org/WAI/ER/tools/">Web Accessibility Evaluation Tools List</a>
+  </li>
+
+</ul>
 </details>
 
 <details>
