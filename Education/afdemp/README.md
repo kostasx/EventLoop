@@ -285,7 +285,7 @@
 
 </details>
 
-<details>
+<details id="accessibility">
 <summary><strong>Accessibility</strong> | A11Y</summary>
 <h4>Resources</h4>
   <ul>
