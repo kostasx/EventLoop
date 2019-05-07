@@ -375,7 +375,11 @@
 
   <h4>Resources</h4>
   <ul>
-  <li><a href="https://scrimba.com/g/gbootstrap4">Learn Bootstrap 4 for free (Scrimba Interactive Screencasts)</a></li>
+  <li><a href="https://getbootstrap.com/" target="_blank">Official Bootstrap Site</a></li>
+  <li><a href="https://getbootstrap.com/docs/4.3/getting-started/introduction/" target="_blank">Get Started</a></li>
+  <li><a href="https://www.w3schools.com/bootstrap4/default.asp" target="_blank">Bootstrap 4 at W3Schools.com</a></li>
+  <li><a href="https://scrimba.com/g/gbootstrap4" target="_blank">Learn Bootstrap 4 at scrimba.com</a><span class="colored" style="font-size:1rem;">Highly Recommended</span></li>
+  <li><a href="https://medium.freecodecamp.org/learn-the-bootstrap-4-grid-system-in-10-minutes-e83bfae115da">Learn the Bootstrap 4 Grid System in 10 Minutes</a></li>
   <li><a href="https://hackerthemes.com/bootstrap-cheatsheet/">Bootstrap 4 Cheat Sheet - An interactive list of Bootstrap classes for version 4.3.1</a></li>
 	
   </ul>
