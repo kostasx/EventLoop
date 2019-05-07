@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Bootstrap 4</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		<!-- Roboto | Google Web Fonts-->
+		<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+		<style>
+			.reveal h1, 
+			.reveal h2, 
+			.reveal h3, 
+			.reveal h4, 
+			.reveal h5, 
+			.reveal h6 {
+				font-family: 'Montserrat', sans-serif;
+			}
+			.reveal h1, 
+			.reveal h2, 
+			.reveal h3 {
+				font-weight: 800;
+			}
+			body, section {
+				background-color: #231750;
+				color: white;
+			}
+			.colored {
+				color: #eec31c !important;
+			}
+			.code-time {
+				background-color: #eec31c !important;
+			}
+			.code-time a {
+				color: black;
+				font-weight:700;
+			}
+			.text-medium {
+				font-size: 1.7rem;
+				line-height: 2rem;
+			}
+			.text-small {
+				font-size: 1.4rem;
+			}
+			.block-centered-50 {
+				width: 50%;
+				margin: 0 auto !important;
+			}
+			.block-centered-70 {
+				width: 70%;
+				margin: 0 auto !important;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<!-- INTRODUCTION -->
+				<section>
+					<h3>Bootstrap 4</h3>
+					<p class="colored">Fundamentals</p>
+				</section>
+
+				<!-- CORE -->
+				<section>
+					<h3>Core Principles</h3>
+					<p class="colored text-medium fragment">12-Column Grid <span>&amp; Breakpoints</span></p>
+					<p class="colored text-medium fragment">Helper Classes <span>(Styling)</span></p>
+					<p class="colored text-medium fragment">Components</p>
+					<p class="colored text-medium fragment">Functionality (JavaScript)</p>
+				</section>
+
+				<!-- PROS -->
+				<section>
+					<h3>Pros</h3>
+					<p class="colored text-medium fragment">Quick &amp; Easy Development</p>
+					<p class="colored text-medium fragment">No need to switch to CSS</p>
+					<p class="colored text-medium fragment">Cross Browser</p>
+					<p class="colored text-medium fragment">Common Language</p>
+					<p class="colored text-medium fragment">Excellent Documentation</p>
+					<p class="colored text-medium fragment">Huge Community <br><small>(StackOverflow to the rescue!)</small></p>
+				</section>
+
+				<!-- CORE | MOBILE FIRST -->
+				<section>
+					<p>Core Principles*</p>
+					<h3>Mobile First</h3>
+					<p class="text-medium block-centered-70 fragment"><span class="colored"><em>"Mobile first</span>, as the name suggests, means that we start the product design from the mobile end which has more restrictions, then expand its features to create a tablet or desktop version."</em>
+						<br><br>
+						<small class="fragment">
+							<a href="https://medium.com/@Vincentxia77/what-is-mobile-first-design-why-its-important-how-to-make-it-7d3cf2e29d00">Reference</a> 
+						</small>
+					</p>
+					<!-- <p>"Instead of users’ viewing desktop versions of Web sites on their mobile device with some adjustments, users are now viewing sites that have been created specifically for their mobile device."</p> -->
+				</section>
+
+				<!-- CORE | BREAKPOINTS -->
+				<section>
+					<p>Core Principles*</p>
+					<h3>Resposive Breakpoints</h3>
+					<p class="text-small block-centered-70 fragment">
+						Small devices (landscape phones, 576px+ and up): <span class="colored fragment">.col-sm-*</span>
+					</p>
+					<br>
+					<p class="text-small block-centered-70 fragment">
+
+						Medium devices (tablets, 768px and up): <span class="colored fragment">.col-md-*</span>
+
+					</p>
+					<br>
+					<p class="text-small block-centered-70 fragment">
+
+						Large devices (desktops, 992px and up): <span class="colored fragment">.col-lg-*</span> 
+
+					</p>
+					<br>
+					<p class="text-small block-centered-70 fragment">
+
+						Extra large devices (large desktops, 1200px and up): <span class="colored fragment">.col-xl-*</span>
+										
+					</p>
+					<p class="fragment">
+						<small>
+							<a href="https://getbootstrap.com/docs/4.3/layout/overview/#responsive-breakpoints">Reference</a>
+						</small>
+					</p>
+				</section>
+
+				<!-- CODE -->
+				<section class="code-time">
+					<h3>Code Time!</h3>
+					<p class="text-medium fragment">
+						1) VSCode &gt; File &gt; New Window &gt; New file &gt; Type <strong>!</strong> and press <strong>Tab</strong>
+					</p>
+					<p class="text-medium fragment">
+						2) Include Bootstrap 4 (CDN)
+						<br>
+						<a href="https://getbootstrap.com/docs/4.3/getting-started/introduction/" target="_blank">https://getbootstrap.com &gt; Get Started</a> 
+					</p>
+					<p class="text-medium fragment">
+						3) Open File with <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer" target="_blank">Live Server</a> &gt; <strong>Ctrl + L, Ctrl + O</strong>
+						<br>
+						<small><strong>Cmd + L, Cmd + O</strong> for Mac</small>
+					</p>
+					<p class="text-medium fragment">
+						4) Open Browser Console <strong>F12</strong>
+					</p>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			Reveal.initialize({
+				history: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true },
+					{ src: 'plugin/search/search.js', async: true },
+				    { src: 'plugin/zoom-js/zoom.js', async: true }
+				]
+			});
+
+</script>
+	</body>
+</html>
