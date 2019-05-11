@@ -5403,26 +5403,10 @@ client.getName();</code></pre>
     <script src="../libs/reveal.js/lib/js/head.min.js"></script>
     <script src="../libs/reveal.js/js/reveal.js"></script>
     <script>
-      /* SHA */
-      Reveal.configure({
-          keyboard: {
-          // Key: 'e'
-              69: function () {
-              /*
-              IF NOT EXIST
-              <PRE>.insertAdjacentHTML('afterend', code);
-              EVALUATE
-              eval( <PRE>.textContent )
-              */
-              }
-          }
-      });
-      // More info https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
           maxScale: 1,
           minScale: 1,
           history: true,
-          // More info https://github.com/hakimel/reveal.js#dependencies
           dependencies: [
           { src: '../libs/reveal.js/lib/js/classList.js', condition: function () { return !document.body.classList; } },
           { src: '../libs/reveal.js/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
