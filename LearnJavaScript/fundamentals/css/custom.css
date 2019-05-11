@@ -1,0 +1,55 @@
+.typography * {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+
+/*typography*/
+
+.typography strong {
+    font-weight: 500;
+}
+
+.typography em {
+    font-style: italic;
+}
+
+.typography h1 {
+    font: 700 48px/1.2 "Poppins", sans-serif;
+    margin-bottom: 10px;
+}
+
+.typography h2 {
+    font: 700 32px/1.2 "Poppins", sans-serif;
+    margin-bottom: 10px;
+}
+
+.typography h3 {
+    font: 700 24px/1.2 "Poppins", sans-serif;
+    margin-bottom: 10px;
+}
+
+.typography h4 {
+    font: 700 20px/1.2 "Poppins", sans-serif;
+    margin-bottom: 10px;
+}
+
+.typography h5 {
+    font: 500 18px/1.2 "Poppins", sans-serif;
+    margin-bottom: 10px;
+}
+
+.typography h6 {
+    font: 500 16px/1.2 "Poppins", sans-serif;
+    text-transform: uppercase;
+}
+
+.typography .font-family-medium>* {
+    font-weight: 500;
+}
+
+.typography .font-family-light>* {
+    font-weight: 300;
+}

@@ -1,55 +1,122 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>EventLoop | JavaScript Fundamentals</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/simple.css">
+    <title>EventLoop | JavaScript Fundamentals</title>
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/monokai.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/simple.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-			</div>
-		</div>
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css">
 
-		<script src="js/reveal.js"></script>
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-		<script>
-            // Configure Key Bindings:
-            Reveal.configure({
-                keyboard: {
+    <!-- Poppins Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,500,500i,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/custom.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- INTRO TITLES -->
+            <section>
+                <div class="row">
+                    <div class="col-10 offset-1">
+                        <p class="text-left">EventLoop | <strong>JavaScript Fundamentals</strong></p>
+                        <p class="text-left"><small>By Kostas Minaidis</small></p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="typography">
+                <h6>typography</h6>
+                <div class="font-family">
+                    <div class="font-family-bold">
+                        <h1>Aa</h1>
+                        <h4>Poppins Bold</h4>
+                    </div>
+                    <div class="font-family-medium">
+                        <h1>Aa</h1>
+                        <h4>Poppins Medium</h4>
+                    </div>
+                    <div class="font-family-light">
+                        <h1>Aa</h1>
+                        <h4>Poppins Light</h4>
+                    </div>
+                </div>
+                <div class="font-example">
+                    <div class="font-example__headline">
+                        <h6 class="subheader">Headlines</h6>
+                        <h1>h1 headline</h1>
+                        <h2>h2 headline</h2>
+                        <h3>h3 headline</h3>
+                        <h4>h4 headline</h4>
+                        <h5>h5 headline</h5>
+                        <h6>h6 headline</h6>
+                    </div>
+                    <div class="font-example__bodytext">
+                        <h6 class="subheader">Body Text</h6>
+                        <p>I think we need to start from scratch. Jazz it up a little bit- use a funky color like purple.</p>
+                        <p><strong> Can you add a bit of pastel pink and baby blue because the purple alone looks too fancy.</strong></p>
+                        <p><em> Make the purple more well, purple-er. Try a more powerful colour, it needs to be the same, but totally different.</em></p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="js/reveal.js"></script>
+
+    <script>
+        // Configure Key Bindings:
+        Reveal.configure({
+            keyboard: {
                 // Key: 'e'
-                    69: function(){}
-                }
-            });
-			Reveal.initialize({
-                maxScale: 1,
-                minScale: 1,
-                history: true,
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true }
-				]
-			});
-		</script>
-	</body>
+                69: function() {}
+            }
+        });
+        Reveal.initialize({
+            maxScale: 1,
+            minScale: 1,
+            history: true,
+            dependencies: [{
+                src: 'plugin/markdown/marked.js'
+            }, {
+                src: 'plugin/markdown/markdown.js'
+            }, {
+                src: 'plugin/notes/notes.js',
+                async: true
+            }, {
+                src: 'plugin/highlight/highlight.js',
+                async: true
+            }, {
+                src: 'plugin/search/search.js',
+                async: true
+            }, {
+                src: 'plugin/zoom-js/zoom.js',
+                async: true
+            }]
+        });
+    </script>
+</body>
+
 </html>
