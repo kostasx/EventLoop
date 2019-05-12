@@ -1,19 +1,152 @@
-//- Tech Talent School - Node.JS Advanced - Part I, II & III ( 3 x 4h )
-//-
-//-     - Building our first CLI with Node.JS
-//-         - Parsing Command Line Arguments
-//-         - Introduction to Child Processes
-//-     - Events & Event Emitters
-//-         - Event Module
-//-         - Extending Event Module
-//-     - Buffers & Streams
-//-     - Building a Server with Web Sockets
-//-     - Node.JS Frameworks: Express.JS
-//-         - What is Express.JS?
-//-         - Installing Express.JS
-//-         - Creating a basic web server using Express.JS
-//-         - Creating a basic REST API using Express.JS
-//-     	- Routes
-//- 	    - Responses & Parameter Handling
-//-         - Middlewares
-//- 	    - Basic Authentication
+doctype html
+html(lang='en')
+    //- *** CHANGE INTRO IMAGES ***
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        meta(http-equiv='X-UA-Compatible' content='ie=edge')
+        meta(name='author' content='Kostas Minaidis')
+        meta(name='apple-mobile-web-app-capable' content='yes')
+        meta(name='apple-mobile-web-app-status-bar-style' content='black-translucent')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+
+        link(rel='stylesheet' href='../css/bulma-columns.css')
+        link(rel='stylesheet' href='../libs/reveal.js/css/reveal.css')
+        link#theme(rel='stylesheet' href='../libs/reveal.js/css/theme/black-tts.css')
+        link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css')
+        // Roboto | Google Web Fonts
+        link(href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900' rel='stylesheet')
+        // Theme used for syntax highlighting of code
+        link(rel='stylesheet' href='../libs/reveal.js/lib/css/monokai-sublime-sha.css')
+        link(rel='stylesheet' href='../css/reveal-tts-white.css')
+
+        title TechTalentSchool | Advanced Node.JS
+
+        style#tts.
+            .reveal.tts-intro {
+                background-image: url('images/tts-titles-nodejs-introduction.jpg');
+            }
+            .reveal.tts-outro {
+                background-image: url('images/tts-titles-joinus.jpg');
+            }
+        style.
+            .reveal.tts-intro,
+            .reveal.tts-outro {
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+    body
+
+        // Alt+Click | Zoom
+        // S | Speaker View
+        // B or . | Pause View
+
+        //- Tech Talent School - Node.JS Fundamentals - Part I & II ( 2 x 4h )
+        //-     - Introduction - What is Node.JS?
+        //-     - Installing Node.JS
+        //-     - Our first Hello World Node.JS App
+        //-         - Node REPL
+        //-         - Executing JS Files
+        //-     - Node Modules
+        //-         - What are Node Modules
+        //-         - Create a Module
+        //-         - Loading a Module
+        //-         - Built-in Modules: process
+        //-         - Built-in Modules: fs
+        //-         - Built-in Modules: path
+        //-         - Built-in Modules: os
+        //-         - External Modules & Node Package Manager (npm)
+        //-     - Hello World Server App using the HTTP Module
+        //-     - Developing with Node.JS: nodemon
+        //-     - Creating a basic Web Server
+        //-     - Opening our App to the World via NGROK
+        //-     - Deploying our Node.JS App (Heroku)
+
+        .reveal
+            .slides
+
+                // TTS | INTRO
+                section#tts-intro.tts-title(data-state='tts-intro')
+
+                section.with-tts-right(data-state='intro' data-transition="fade-out")
+                    h3 Advanced Node.JS 
+
+                // TABLE OF CONTENTS
+                section.with-tts-right
+                    h3.colorful Table of Contents
+                    ul
+                        li.small.fragment ...
+
+                        //- Tech Talent School - Node.JS Advanced - Part I, II & III ( 3 x 4h )
+                        //-
+                        //-     - Building our first CLI with Node.JS
+                        //-         - Parsing Command Line Arguments
+                        //-         - Introduction to Child Processes
+                        //-     - Events & Event Emitters
+                        //-         - Event Module
+                        //-         - Extending Event Module
+                        //-     - Buffers & Streams
+                        //-     - Building a Server with Web Sockets
+                        //-     - Node.JS Frameworks: Express.JS
+                        //-         - What is Express.JS?
+                        //-         - Installing Express.JS
+                        //-         - Creating a basic web server using Express.JS
+                        //-         - Creating a basic REST API using Express.JS
+                        //-     	- Routes
+                        //- 	    - Responses & Parameter Handling
+                        //-         - Middlewares
+                        //- 	    - Basic Authentication
+
+                // ...
+                section.with-tts-right
+                    section
+                        h2 What is Node.JS?
+                        .columns
+                            .column.is-8.is-offset-2
+                                p.small A Runtime Environment to run JavaScript outside the Browser. Think: Server-side JavaScript interpreter.
+
+                                p.small It uses Chrome's V8 JavaScript engine to compile JS commands into executable code.
+
+                                p.small It is a free and open source software created in 2009 by Ryan Dahl. 
+                                pre
+                                    code.hljs.bash(data-trim contenteditable) $ node --version
+                                p.small You should see something like this:    
+                                pre
+                                    code.hljs.bash(data-trim contenteditable) v10.13.0
+
+
+                // RESOURCES
+                section
+                    h4 RESOURCES
+                    .columns
+                        .column.is-8.is-offset-2
+                            ul.mid.black-links
+                                li
+                                    a(href="https://www.youtube.com/watch?v=TlB_eWDSMt4" target="_blank") NODE.JS TUTORIAL FOR BEGINNERS: LEARN NODE IN 1 HOUR
+                                .linebreak
+                                li
+                                    a(href="https://medium.freecodecamp.org/the-definitive-node-js-handbook-6912378afc6e" target="_blank") THE DEFINITIVE NODE.JS HANDBOOK
+                                .linebreak
+                                li
+                                    a(href="https://medium.com/@LindaVivah/the-beginners-guide-understanding-node-js-express-js-fundamentals-e15493462be1" target="_blank") THE BEGINNER’S GUIDE: UNDERSTANDING NODE.JS &amp; EXPRESS.JS FUNDAMENTALS
+                                .linebreak
+                                li
+                                    a(href="https://blog.bloomca.me/2018/07/09/nodejs-repl-in-depth.html" target="_blank") Node.js REPL in Depth
+                                .linebreak
+                                li
+                                    a(href="https://www.npmjs.com/package/javascripting" target="_blank") LEARN JAVASCRIPT BY ADVENTURING AROUND IN THE TERMINAL
+                            pre
+                                code.hljs.bash $ npm install javascripting -g
+                            .linebreak
+                            pre
+                                code.hljs.bash $ javascripting
+
+                // TTS | OUTRO 
+                section#tts-outro.tts-title(data-state='outro' data-transition="fade-out")
+
+        //- SCRIPTS
+        script(src='../libs/reveal.js/lib/js/head.min.js')
+        script(src='../libs/reveal.js/js/reveal.js')
+        script.
+
