@@ -15,7 +15,11 @@
     <link rel="stylesheet" href="lib/css/monokai.css">
 
     <!-- Bootstrap 4 -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="./css/bootstrap-grid.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
     <!-- Poppins Font -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,500,500i,700" rel="stylesheet">
@@ -37,55 +41,111 @@
         <div class="slides">
 
             <!-- INTRO TITLES -->
-            <section>
+            <section class="typography">
                 <div class="row">
-                    <div class="col-10 offset-1">
-                        <p class="text-left">EventLoop | <strong>JavaScript Fundamentals</strong></p>
-                        <p class="text-left"><small>By Kostas Minaidis</small></p>
+                    <div class="col-10 offset-1 text-left">
+                        <h1>JavaScript <span class="font-weight-light">Fundamentals</span></h1>
+                        
+                        <p class="text-left text-medium">By Kostas Minaidis | <strong>2019</strong></p>
                     </div>
                 </div>
+            </section>
+
+            <!-- WEB TRIO -->
+            <section class="typography">
+                <section>
+                    <h3 class="font-weight-light pb-5 mb-5">The World Wide Web (www)</h3>
+                    <div class="row mt-5">
+                        <div class="col">
+                            <h3>HTML</h3>
+                        </div>
+                        <div class="col">
+                            <h3>CSS</h3>
+                        </div>
+                        <div class="col">
+                            <h3>JS</h3>
+                        </div>
+                    </div>
+                    <img src="./img/web-trio.svg" alt="">
+                </section>
+                <section>
+                    <div class="row">
+                        <div class="col-10 offset-1">
+                            <p>JavaScript along with HTML and CSS form a triad of cornerstone technologies for creating web pages and web applications.</p>
+                            <img src="./img/web-trio.svg" alt="">
+                        </div>
+                    </div>
+                </section>
             </section>
 
             <section class="typography">
-                <h6>typography</h6>
-                <div class="font-family">
-                    <div class="font-family-bold">
-                        <h1>Aa</h1>
-                        <h4>Poppins Bold</h4>
+                <section>
+                    <h6>typography</h6>
+                    <div class="font-family">
+                        <div class="font-weight-bold">
+                            <h1>Aa</h1>
+                            <h4>Poppins Bold</h4>
+                        </div>
+                        <div class="font-weight-medium">
+                            <h1>Aa</h1>
+                            <h4>Poppins Medium</h4>
+                        </div>
+                        <div class="text-light">
+                            <h1>Aa</h1>
+                            <h4>Poppins Light</h4>
+                        </div>
                     </div>
-                    <div class="font-family-medium">
-                        <h1>Aa</h1>
-                        <h4>Poppins Medium</h4>
+                </section>
+                <section>
+                    <div class="font-example">
+                        <div class="font-example__headline">
+                            <h6 class="subheader">Headlines</h6>
+                            <h1>h1 headline</h1>
+                            <h2>h2 headline</h2>
+                            <h3>h3 headline</h3>
+                            <h4>h4 headline</h4>
+                            <h5>h5 headline</h5>
+                            <h6>h6 headline</h6>
+                        </div>
+                        <div class="font-example__bodytext">
+                            <h6 class="subheader">Body Text</h6>
+                            <p>I think we need to start from scratch. Jazz it up a little bit- use a funky color like purple.</p>
+                            <p class="text-medium"><strong> Can you add a bit of pastel pink and baby blue because the purple alone looks too fancy.</strong></p>
+                            <p class="text-small"><em> Make the purple more well, purple-er. Try a more powerful colour, it needs to be the same, but totally different.</em></p>
+                        </div>
                     </div>
-                    <div class="font-family-light">
-                        <h1>Aa</h1>
-                        <h4>Poppins Light</h4>
-                    </div>
-                </div>
-                <div class="font-example">
-                    <div class="font-example__headline">
-                        <h6 class="subheader">Headlines</h6>
-                        <h1>h1 headline</h1>
-                        <h2>h2 headline</h2>
-                        <h3>h3 headline</h3>
-                        <h4>h4 headline</h4>
-                        <h5>h5 headline</h5>
-                        <h6>h6 headline</h6>
-                    </div>
-                    <div class="font-example__bodytext">
-                        <h6 class="subheader">Body Text</h6>
-                        <p>I think we need to start from scratch. Jazz it up a little bit- use a funky color like purple.</p>
-                        <p><strong> Can you add a bit of pastel pink and baby blue because the purple alone looks too fancy.</strong></p>
-                        <p><em> Make the purple more well, purple-er. Try a more powerful colour, it needs to be the same, but totally different.</em></p>
-                    </div>
-                </div>
+                </section>
             </section>
 
+            <!-- ABOUT ME -->
+            <section class="typography">
+                    <section>
+                        <h6>ABOUT ME</h6>
+                        <div class="row">
+                            <div class="col">
+                                <h4 class="font-weight-medium">
+                                    <a class="btn" href="https://github.com/kostasx/">GitHub</a>
+                                </h4>
+                            </div>
+                            <div class="col">
+                                <h4 class="font-weight-medium">
+                                    <a class="btn" href="https://twitter.com/kostas_mns">Twitter</a>
+                                </h4>
+                            </div>
+                            <div class="col">
+                                <h4 class="font-weight-medium">
+                                    <a class="btn" href="https://www.linkedin.com/in/kostas-minaidis/">Linkedin</a>
+                                </h4>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+    
         </div>
     </div>
 
+    <!-- REVEALJS CONFIGURATION -->
     <script src="js/reveal.js"></script>
-
     <script>
         // Configure Key Bindings:
         Reveal.configure({
@@ -95,28 +155,43 @@
             }
         });
         Reveal.initialize({
+
+            // controls: true,
+            // progress: true,
+            // center: true,
+            // hash: true,
+
+            transition: 'slide', // none/fade/slide/convex/concave/zoom
             maxScale: 1,
             minScale: 1,
             history: true,
-            dependencies: [{
+            dependencies: [
+            {
                 src: 'plugin/markdown/marked.js'
-            }, {
+            },
+            {
                 src: 'plugin/markdown/markdown.js'
-            }, {
+            },
+            {
                 src: 'plugin/notes/notes.js',
                 async: true
-            }, {
+            },
+            {
                 src: 'plugin/highlight/highlight.js',
                 async: true
-            }, {
+            },
+            {
                 src: 'plugin/search/search.js',
                 async: true
-            }, {
+            },
+            {
                 src: 'plugin/zoom-js/zoom.js',
                 async: true
-            }]
+            }
+            ]
         });
     </script>
+
 </body>
 
 </html>
