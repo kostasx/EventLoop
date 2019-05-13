@@ -112,6 +112,44 @@ html(lang='en')
                 section
                     include introduction/html-css.js.svg
 
+                // JS INTERPRETER #1
+                section.svg_contain(data-transition="fade-out")
+                        include introduction/js-interpreter.svg
+
+                // JS INTERPRETER #2
+                section.svg_contain(data-transition="fade-out")
+                        include introduction/js-interpreter-002.svg
+
+                // JS INTERPRETER #3
+                section.svg_contain(data-transition="fade-out")
+                        include introduction/js-interpreter-003.svg
+
+                // JS INTERPRETER #4 (I/O)
+                section.svg_contain(data-transition="fade-out")
+                        include introduction/js-interpreter-004.svg
+
+                // JS INTERPRETER #5 (INPUT)
+                section.svg_contain(data-transition="fade-out")
+                        include introduction/js-interpreter-005.svg
+
+                // JS INTERPRETER #6 (DATA MANIPULATION)
+                section.svg_contain(data-transition="fade-out")
+                        include introduction/js-interpreter-006.svg
+
+                // JS INTERPRETER #7 (DATA MANIPULATION II)
+                section.svg_contain(data-transition="fade-out")
+                        include introduction/js-interpreter-007.svg
+
+                // JS INTERPRETER #8 
+                section.svg_contain(data-transition="fade-out")
+                        include introduction/js-interpreter-008.svg
+
+                // CHATTING WITH JS
+                section.svg_contain
+                    h2.highlight Chatting with JavaScript
+                    p.fragment Open your Browser's Console: F12
+                    p.fragment Ctrl + Shift + J / Cmd + Shift + J
+
                 // CSS INCLUDES
                 section
                     section.svg_contain
@@ -153,11 +191,12 @@ html(lang='en')
                     section
                         h6 Let's introduce ourselves to our first JS command<br/> and test all these methods:
                         .columns
-                            .column.is-6.is-offset-3
+                            .column.is-10.is-offset-1
                                 pre
                                     code.htjs.javascript(data-trim contenteditable).
 
                                         document.write( "Hello JS!" );
+                                        document.write( "<h1>HTML is allowed also!</h1>" );
 
                         p.small.fragment - Internal <strong class="colorful">&lt;head&gt;&lt;script&gt;</strong>
                         p.small.fragment - Internal <strong class="colorful">&lt;/body&gt;&lt;script&gt;</strong>
@@ -165,38 +204,6 @@ html(lang='en')
                         p.small.fragment - Inline (Should be avoided!)
                         p.small.fragment
                             a(href="https://developer.mozilla.org/en-US/docs/Web/API/Document/write" target="_blank") * document.write @ Mozilla Developer Network 
-
-                // JS INTERPRETER #1
-                section.svg_contain(data-transition="fade-out")
-                        include introduction/js-interpreter.svg
-
-                // JS INTERPRETER #2
-                section.svg_contain(data-transition="fade-out")
-                        include introduction/js-interpreter-002.svg
-
-                // JS INTERPRETER #3
-                section.svg_contain(data-transition="fade-out")
-                        include introduction/js-interpreter-003.svg
-
-                // JS INTERPRETER #4 (I/O)
-                section.svg_contain(data-transition="fade-out")
-                        include introduction/js-interpreter-004.svg
-
-                // JS INTERPRETER #5 (INPUT)
-                section.svg_contain(data-transition="fade-out")
-                        include introduction/js-interpreter-005.svg
-
-                // JS INTERPRETER #6 (DATA MANIPULATION)
-                section.svg_contain(data-transition="fade-out")
-                        include introduction/js-interpreter-006.svg
-
-                // JS INTERPRETER #7 (DATA MANIPULATION II)
-                section.svg_contain(data-transition="fade-out")
-                        include introduction/js-interpreter-007.svg
-
-                // JS INTERPRETER #8 
-                section.svg_contain(data-transition="fade-out")
-                        include introduction/js-interpreter-008.svg
 
                 // JS STATEMENTS 
                 section.svg_contain
@@ -223,9 +230,9 @@ html(lang='en')
                     section.svg_contain(data-background='#ffffff' data-transition='fade')
                         img.plain(src='./introduction/DataTypeTalk-005.svg' alt='')
 
-                // JS STATEMENTS (Our first statement)
-                section.svg_contain
-                        include introduction/js-statements-01.svg
+                //- // JS STATEMENTS (Our first statement)
+                //- section.svg_contain
+                //-         include introduction/js-statements-01.svg
 
                 // JS STATEMENTS (Our first statement - II)
                 section.svg_contain
