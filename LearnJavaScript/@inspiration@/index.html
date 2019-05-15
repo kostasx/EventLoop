@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+    <style>
+        body .reveal h3,
+        .reveal p {
+            font-family: Montserrat;
+            color: white !important;
+        }
+        
+        .reveal p {
+            font-size: 2.66rem;
+            margin: 0.25rem auto;
+        }
+        
+        .reveal h3 {
+            text-transform: none;
+            font-size: 4.9rem;
+            font-weight: bold;
+            line-height: 1;
+            margin: 0.5rem auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <section data-background="#03a9fc">
+                <h3>HTML5 APIs</h3>
+                <p>Standard Text</p>
+            </section>
+
+            <section>
+                <pre><code class="hljs" data-trim data-line-numbers="4,8-9">
+	import React, { useState } from 'react';
+	
+	function Example() {
+	  const [count, setCount] = useState(0);
+	
+	  return (
+		&lt;div&gt;
+		  &lt;p&gt;You clicked {count} times&lt;/p&gt;
+		  &lt;button onClick={() =&gt; setCount(count + 1)}&gt;
+			Click me
+		  &lt;/button&gt;
+		&lt;/div&gt;
+	  );
+	}
+						</code></pre>
+			</section>
+			
+			<section>
+					<section data-transition="fade-in fade-out">
+							<pre><code class="hljs" data-trim data-line-numbers="4">
+				import React, { useState } from 'react';
+				
+				function Example() {
+				  const [count, setCount] = useState(0);
+				
+				  return (
+					&lt;div&gt;
+					  &lt;p&gt;You clicked {count} times&lt;/p&gt;
+					  &lt;button onClick={() =&gt; setCount(count + 1)}&gt;
+						Click me
+					  &lt;/button&gt;
+					&lt;/div&gt;
+				  );
+				}
+									</code></pre>
+						</section>
+						<section data-transition="fade-in fade-out">
+								<pre><code class="hljs" data-trim data-line-numbers="8-9">
+					import React, { useState } from 'react';
+					
+					function Example() {
+					  const [count, setCount] = useState(0);
+					
+					  return (
+						&lt;div&gt;
+						  &lt;p&gt;You clicked {count} times&lt;/p&gt;
+						  &lt;button onClick={() =&gt; setCount(count + 1)}&gt;
+							Click me
+						  &lt;/button&gt;
+						&lt;/div&gt;
+					  );
+					}
+										</code></pre>
+							</section>
+							
+			</section>
+
+			<section>
+                <section data-transition="fade-in fade-out">
+                    <pre><code data-trim data-noescape>
+	<mark>defmodule Math do</mark>
+	  def sum(a, b) do
+		a + b
+	  end
+	<mark>end</mark>
+				</code></pre>
+                </section>
+                <section data-transition="fade-in fade-out">
+                    <pre><code data-trim data-noescape>
+	defmodule Math do
+	  <mark>def sum(a, b) do</mark>
+		a + b
+	  <mark>end</mark>
+	end
+				</code></pre>
+                </section>
+                <section data-transition="fade-in fade-out">
+                    <pre><code data-trim data-noescape>
+	defmodule Math do
+	  def sum(a, b) do
+		<mark>a + b</mark>
+	  end
+	end
+				</code></pre>
+                </section>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="js/reveal.js"></script>
+
+    <script>
+        // More info about config & dependencies:
+        // - https://github.com/hakimel/reveal.js#configuration
+        // - https://github.com/hakimel/reveal.js#dependencies
+        Reveal.initialize({
+            dependencies: [{
+                src: 'plugin/markdown/marked.js'
+            }, {
+                src: 'plugin/markdown/markdown.js'
+            }, {
+                src: 'plugin/notes/notes.js',
+                async: true
+            }, {
+                src: 'plugin/highlight/highlight.js',
+                async: true
+            }]
+        });
+    </script>
+</body>
+
+</html>
