@@ -24,10 +24,16 @@
 
 		<hr>
 
-		<button type="button">Increment</button>
+		<button type="button" onclick="model.increment()">Increment</button>
 		<script src="js/NumberModel.js"></script>
+		<script src="js/ElementObserver.js"></script>
 		<script>
 			const model = new NumberModel();
+			const eObs1 = new ElementObserver('elementObserver1');
+
+			model.addObserver( eObs1 );
+
+			model.notifyObservers();
 		</script>
     
     <hr>
