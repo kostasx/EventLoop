@@ -27,11 +27,17 @@
 		<button type="button" onclick="model.increment()">Increment</button>
 		<script src="js/NumberModel.js"></script>
 		<script src="js/ElementObserver.js"></script>
+		<script src="js/ConsoleObserver.js"></script>
+		<script src="js/HistoryObserver.js"></script>
 		<script>
 			const model = new NumberModel();
 			const eObs1 = new ElementObserver('elementObserver1');
+			const consoleObserver = new ConsoleObserver();
+			const historyObserver = new HistoryObserver();
 
 			model.addObserver( eObs1 );
+			model.addObserver( consoleObserver );
+			model.addObserver( historyObserver );
 
 			model.notifyObservers();
 		</script>
