@@ -288,6 +288,14 @@
 
   </ul>
 
+  <h4>Questions &amp; Answers</h4>
+  <ul>
+  <li><strong>Question:</strong><em> How do I combine a checkbox input element with an image?</em><br><strong>Answer:</strong> <a href="https://codepen.io/kostasx/pen/VNGRKJ">Code Solution</a></li>
+<br>  
+  
+  
+  </ul>
+
 </details>
 
 <details id="accessibility">
