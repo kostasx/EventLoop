@@ -101,6 +101,9 @@
 
   <h4>Resources</h4>
   <ul>
+	<li>
+		<a href="https://validator.w3.org/nu/" target="_blank"><strong>W3C HTML Checker</strong></a>
+	</li>
 	  <li>
       	<a href="https://scrimba.com/g/ghtml" target="_blank">Introduction to HTML (scrimba.com)</a>
       </li>
