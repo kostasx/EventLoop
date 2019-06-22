@@ -419,7 +419,16 @@
     <a href="https://www.w3schools.com/jquery/jquery_hide_show.asp" target="_blank">show() / hide()</a>
 </li>
 <li>
-    <a href="" target="_blank">To be updated...</a>
+	<a href="https://scrimba.com/search?q=jquery" target="_blank"><strong>Scrimba Interactive jQuery Screencasts</strong></a>
+</li>
+<li>
+    <a href="https://www.youtube.com/watch?v=i_qE1iAmjFg" target="_blank">10 Things I Learned from the jQuery Source (Paul Irish, Google)</a>
+</li>
+<li>
+    <a href="https://www.youtube.com/watch?v=ARnp9Y8xgR4" target="_blank">11 More Things I Learned from the jQuery Source (Paul Irish, Google)</a>
+</li>
+<li>
+    <a href="http://youmightnotneedjquery.com/" target="_blank">You Might Not Need jQuery</a>
 </li>
   </ul>
 
