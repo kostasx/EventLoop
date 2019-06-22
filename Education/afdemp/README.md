@@ -415,6 +415,11 @@
 </li>
   </ul>
 
+  <h4>Questions &amp; Answers</h4>
+  <ul>
+  <li><strong>Question:</strong><em> How do I select all the elements in a list of elements without including the first one?</em>
+  <br> <strong>Answer:</strong> Google for: <code>jquery select all but first</code><br>You will probably find yourself in <a href="https://stackoverflow.com/questions/2259393/jquery-select-all-except-first" target="_blank">this StackOverflow answer</a>.<br>The code syntax is this:<code>$("div.test:not(:first)").hide();</code></li>  </ul>
+
 </details>
 
 <details>
