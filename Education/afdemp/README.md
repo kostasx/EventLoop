@@ -217,6 +217,9 @@
 	  <li>
       	<a href="https://jgthms.com/web-design-in-4-minutes/" target="_blank">Learn the basics of web design in 4 minutes</a>
       </li>
+	<li>
+		<a href="https://love2dev.com/blog/absolute-centering-css/">Centering Elements in CSS</a>
+	</li>
 
   </ul>
 
