@@ -359,6 +359,12 @@
     <li>
       <a href="https://developer.mozilla.org/en-US/docs/Web/API"><strong>Web APIs</strong></a>
     </li>
+    <li>
+	    <strong>Geolocation API</strong>
+	    <ul>
+		    <li>Simple Example of a Map using Geolocation and the OpenLayers Library: [ <a href="https://github.com/kostasx/EventLoop/blob/master/Education/afdemp/HTML5/geolocation/openlayers-example.html">Code</a> | <a href="https://eventloop.gr/Education/afdemp/HTML5/geolocation/openlayers-example.html">Demo</a> ]</li>
+	    </ul>
+    </li>
 	<li>
       <strong>Media API:</strong>
 	  <ul>
