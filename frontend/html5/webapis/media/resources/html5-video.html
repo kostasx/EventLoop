@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML5 Video Element</title>
+</head>
+<body>
+    
+    <section id="player">​
+
+        <!-- What happens here? There's no way to start playing the video -->
+        <p>Video with no controls:</p>
+        <video src="https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4">​
+        </video>​
+
+        <!-- Let's add some controls and limit the video width: -->
+        <p>Video with controls and specified width:</p>
+        <video controls width="720" src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4">​
+        </video>​
+
+        <!-- What if our browser does not support the MP4 format? -->
+        <p>Video with multiple sources:</p>
+        <video controls width="720">
+
+            <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv" type="video/ogv">
+
+            <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" type="video/mp4">
+
+            Sorry, your browser doesn't support embedded videos.
+
+        </video>
+
+    </section>​
+
+</body>
+</html>
