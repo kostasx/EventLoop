@@ -383,12 +383,15 @@
            </li>
        </ul>
      </li>
-</ul>
-	  
-  <h4>Resources</h4>
+
+  <h4>Questions</h4>
   <ul>
-  <li><a href="">Coming soon...</a></li>
+  <li><strong>Question: </strong><i>What is the difference between .ogg, .ogv and .oga?</i><br><strong>Answer: </strong>There's difference between .ogg and .ogv. Ogg may be used for both audio and video content. Ogv is a video file container. Initially, .ogg format served for both audio and video files.
+    But now (usually) .ogv is used for video files and .ogg or .oga for audio files.</li>
   </ul>
+
+
+</ul>
   
 </details>
 
