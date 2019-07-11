@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML5 Media Elements</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body {
+            transition: all 600ms ease;
+        }
+        #currentTime {
+            color: gray;
+        }
+    </style>
+</head>
+
+<body>
+
+        <div class="container mt-5 shadow p-5">
+            <h5 class="mb-5">HTML5 MediaElement: <code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code></h5>
+            <div class="row">
+                <div class="col p-3 d-flex justify-content-center align-items-center">
+
+                    <!-- An Audio Element -->
+                    <audio src="./audio-sample.ogg" controls autoplay-disabled></audio>
+                    <br>
+
+                </div>
+                <div class="col p-3">
+
+                    <!-- A Video Element -->
+                    <video poster="https://upload.wikimedia.org/wikipedia/commons/8/87/%281916%29_p116_Chaplin_%2814762003256%29.jpg" src="./charlie_chaplin.webm" width="600"></video>
+                
+                    <div id="duration">00:00:00</div>
+                    <div id="currentTime">Current Time: 0</div>
+                    <button class="btn btn-info mt-3">Play</button>
+
+                </div>
+            </div>
+            <h5 class="mt-4"><a href="" target="_blank">Source code</a></h5>
+        </div>
+
+    <script>
+        let $video = document.querySelector("video");
+        let $duration = document.querySelector("#duration");
+        let $currentTime = document.querySelector("#currentTime");
+
+        // NaN but Why? https://bit.ly/2JAv0U4
+        $duration.textContent = $video.duration;
+
+        // "loadedmetadata": https://mzl.la/32hXrPa
+        $video.addEventListener("loadedmetadata", function() {
+
+            let duration = this.duration;
+            let durationInSeconds = duration / 60;
+            $duration.textContent = "Duration: " + durationInSeconds.toFixed(2);
+
+        });
+
+        $video.addEventListener("timeupdate", function() {
+
+            $currentTime.textContent = "Current time: " + this.currentTime.toFixed(2);
+
+        });
+
+        let $button = document.querySelector("button");
+        let isPlaying = false;
+        $button.addEventListener("click", handleMedia);
+
+        // STUDENT CHALLENGE: Can you make the video play/pause when the user clicks on the video screen?
+        $video.addEventListener("click", handleMedia);
+
+        function handleMedia(event) {
+
+            if (isPlaying) {
+
+                $video.pause();
+                $button.textContent = "Play";
+                isPlaying = false;
+
+                // Background Fade Effect: 
+                document.body.style.backgroundColor = "white";
+
+
+            } else {
+
+                $video.play();
+                $button.textContent = "Pause";
+                isPlaying = true;
+
+                // Background Fade Effect:
+                document.body.style.backgroundColor; // GETTER
+                document.body.style.backgroundColor = "black"; // SETTER
+
+            }
+
+        }
+
+        // MEDIA API EVENTS:
+        $video.addEventListener( "pause", function( event ){
+            console.log( "Video triggered the 'pause' event." );
+        });
+
+        $video.addEventListener( "play", function( event ){
+            console.log( "Video triggered the 'play' event." );
+        });
+
+        $video.addEventListener( "ended", function( event ){
+            console.log( "Video triggered the 'ended' event." );
+        });
+
+    </script>
+
+</body>
+
+</html>
