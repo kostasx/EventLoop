@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tasks Board</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .col {
+            min-height: 240px;
+        }
+        .col ul li {
+            cursor: move;
+        }
+    </style>   
+</head>
+<body class="bg-light">
+
+    <div id="tasks-board" class="container mt-4">
+
+        <h3 class="text-center p-5 m-5">The Tasks Board</h3>
+
+        <div class="row shadow bg-white">
+
+            <!-- TODO -->
+            <div class="col p-0 drop-target">
+                <p class="bg-dark p-1 text-white text-center">Tasks</p>
+                <ul class="list-unstyled p-2">
+                    <li id="application-planning" draggable="true" class="border p-2 bg-info text-white">Application Planning</li>
+                    <li id="boilerplate" draggable="true" class="border p-2 bg-info text-white">Boilerplate</li>
+                    <li id="coding" draggable="true" class="border p-2 bg-info text-white">Coding</li>
+                </ul>
+            </div>
+
+            <!-- IN PROGRESS -->
+            <div class="col p-0 drop-target border-right border-left">
+                <p class="bg-warning p-1 text-center">In Progress</p>
+                <ul class="list-unstyled p-2"></ul>
+            </div>
+
+            <!-- DONE -->
+            <div class="col p-0 drop-target">
+                <p class="bg-success p-1 text-white text-center">In Progress</p>
+                <ul class="list-unstyled p-2"></ul>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function initTasksBoard(){
+
+            function handleDragStart( event ){
+                event.dataTransfer.setData( "text/plain", event.currentTarget.id );
+            }
+
+            function preventDefault( event ){
+                event.preventDefault();
+            }
+
+            function handleDrop( event ){
+                let draggedElementId = event.dataTransfer.getData( "text/plain" );
+                let draggedElement = document.querySelector( "#" + draggedElementId );
+                event.currentTarget.querySelector("ul").appendChild( draggedElement );
+            }
+
+            function addDragStartEventListener( el ){
+                el.addEventListener( "dragstart", handleDragStart );
+            }
+
+            function initDrop( el ){
+                el.addEventListener( "dragover", preventDefault );
+                el.addEventListener( "drop", handleDrop );
+            }
+
+            let listItems = document.querySelectorAll("#tasks-board li");
+            let dropTargets = document.querySelectorAll("#tasks-board .drop-target");
+
+            listItems.forEach( addDragStartEventListener );
+            dropTargets.forEach( initDrop );
+
+        }
+
+        window.addEventListener( "DOMContentLoaded", initTasksBoard );
+
+    </script>
+</body>
+</html>
