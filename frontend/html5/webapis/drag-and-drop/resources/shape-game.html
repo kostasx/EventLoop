@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shape Game using Drag and Drop API</title>
+    <style>
+        .container {
+            max-width: 960px;
+            border: 2px solid gray;
+        }
+        .row {
+            display: flex;
+            flex-direction: row;
+        }
+        .row .shape {
+            padding-bottom: 25%;
+            position: relative;
+            width: 25%;
+            height: auto;
+            border: 2px solid transparent;
+        }
+        .row .shape div {
+            transition: all 400ms ease;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+
+        <!-- PLACEHOLDERS -->
+        <div class="row">
+            <div id="box-drop" class="shape">
+                <div style="background-image: url(./images/box-bg.png)"></div>
+            </div>
+            <div id="triangle-drop" class="shape">
+                <div style="background-image: url(./images/triangle-bg.png)"></div>
+            </div>
+            <div id="poly-drop" class="shape">
+                <div style="background-image: url(./images/poly-bg.png)"></div>
+            </div>
+            <div id="circle-drop" class="shape">
+                <div style="background-image: url(./images/circle-bg.png)"></div>
+            </div>
+        </div>
+
+        <!-- DRAGGABLE SHAPES -->
+        <div class="row">
+            <div id="box" class="shape" draggable="true">
+                <div style="background-image: url(./images/box.png)"></div>
+            </div>
+            <div id="triangle" class="shape" draggable="true">
+                <div style="background-image: url(./images/triangle.png)"></div>
+                
+            </div>
+            <div id="poly" class="shape" draggable="true">
+                <div style="background-image: url(./images/poly.png)"></div>
+            </div>
+            <div id="circle" class="shape" draggable="true">
+                <div style="background-image: url(./images/circle.png)"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Select our Shape Elements
+        const box = document.querySelector("#box");
+        const circle = document.querySelector("#circle");
+        const poly = document.querySelector("#poly");
+        const triangle = document.querySelector("#triangle");
+
+        // Select our Drop Target Elements
+        const boxBg = document.querySelector("#box-drop");
+        const circleBg = document.querySelector("#circle-drop");
+        const polyBg = document.querySelector("#poly-drop");
+        const triangleBg = document.querySelector("#triangle-drop");
+
+        // Define Event Handlers
+        function handleDragEnd(e){
+            if ( !e.target.getAttribute( "data-dropped" ) ){
+                e.target.style.opacity = 1;
+            }
+        }
+        function handleDragStart(e){
+            if ( !e.target.getAttribute( "data-dropped" ) ){
+                e.target.style.opacity = 0.01;
+                e.dataTransfer.setData( "text/plain", e.currentTarget.id );
+            }
+        }
+        function handleDragLeave(e){
+            e.preventDefault();
+            e.currentTarget.style.border = "2px solid transparent";
+        }
+        function handleDragOver(e){
+            e.preventDefault();
+            e.currentTarget.style.border = "2px dashed rgba(0,0,0,0.2)";
+        }
+        function handleDrop(e){
+
+            e.preventDefault();
+            e.currentTarget.style.border = "2px solid transparent";
+
+            let draggedElementId = e.dataTransfer.getData("text/plain")
+
+            // Check if the shape fits
+            if( e.currentTarget.id.replace("-drop","") === draggedElementId ){
+
+                // Get the Shape Element
+                let draggedElement = document.querySelector("#" + draggedElementId ); 
+                // Get the Drop Target inner Element (div)
+                let innerDiv = e.currentTarget.querySelector("div");
+                // Set the Background Image
+                innerDiv.style.backgroundImage = "url( images/" + draggedElementId + ".png)";
+                draggedElement.style.opacity = 0;
+                draggedElement.setAttribute( "data-dropped", true );
+
+            }
+
+            // Handling File Drops
+            /*
+            if ( e.dataTransfer.files.length ){
+                Array.prototype.map.call( e.dataTransfer.files, function(file){
+                    console.log( file.name, file.size, file.type );
+                });
+            }
+            */
+        }
+
+        // Add Event Listeners to our Shape Elements
+        box.addEventListener( "dragstart", handleDragStart );
+        box.addEventListener( "dragend", handleDragEnd );
+
+        circle.addEventListener( "dragstart", handleDragStart );
+        circle.addEventListener( "dragend", handleDragEnd );
+
+        poly.addEventListener( "dragstart", handleDragStart );
+        poly.addEventListener( "dragend", handleDragEnd );
+
+        triangle.addEventListener( "dragstart", handleDragStart );
+        triangle.addEventListener( "dragend", handleDragEnd );
+
+        // Add Event Listeners to our Drop Targets
+        boxBg.addEventListener( "dragover", handleDragOver );   // Required
+        boxBg.addEventListener( "drop", handleDrop );
+        boxBg.addEventListener( "dragleave", handleDragLeave );
+
+        circleBg.addEventListener( "dragover", handleDragOver );   // Required
+        circleBg.addEventListener( "drop", handleDrop );
+        circleBg.addEventListener( "dragleave", handleDragLeave );
+
+        polyBg.addEventListener( "dragover", handleDragOver );   // Required
+        polyBg.addEventListener( "drop", handleDrop );
+        polyBg.addEventListener( "dragleave", handleDragLeave );
+
+        triangleBg.addEventListener( "dragover", handleDragOver );   // Required
+        triangleBg.addEventListener( "drop", handleDrop );
+        triangleBg.addEventListener( "dragleave", handleDragLeave );
+
+    </script>
+
+</body>
+</html>
