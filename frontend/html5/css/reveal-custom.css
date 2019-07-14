@@ -36,6 +36,9 @@ hr.limit {
     max-width: 100px;
     margin: 35px 0;
 }
+hr.limit-dark {
+    background: black;
+}
 
 hr.limit-medium {
     height: 3px;
