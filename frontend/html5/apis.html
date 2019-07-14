@@ -1,0 +1,1319 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>HTML5 APIs</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <!-- <link rel="stylesheet" href="css/theme/white.css"> -->
+
+    <!-- Theme used for syntax highlighting of code -->
+    <!-- <link rel="stylesheet" href="lib/css/monokai.css"> -->
+    <link rel="stylesheet" href="lib/css/hybrid.css">
+
+    <!-- <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"
+    >
+    </script> -->
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+    <!-- CUSTOM -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/reveal-custom.css">
+
+    <!-- PLUGINS -->
+    <link rel="stylesheet" href="plugin/fullscreen/fullscreen-img.css">
+
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- Main Title -->
+            <section class="row">
+                <div class="col-6 text-left">
+                    <h1>HTML5 APIs</h1>
+                    <hr class="limit">
+                    <p class="description">An overview of JavaScript powered Web APIs that extend the functionality of the Web Browser</p>
+                    <p>Curated by <strong>Kostas Minaidis</strong> <span class="opaque-40">| Updated: 04/07/2019</span></p>
+                </div>
+            </section>
+
+            <!-- Agenda / ToC -->
+            <section data-background="#000" class="text-white">
+                <div class="row">
+                    <div class="col-6 text-left">
+                        <h1>Agenda</h1>
+                        <hr class="limit limit-small">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 text-left">
+                        <ul class="numlist pl-0">
+                            <li class="fragment fade-in-then-semi-out">
+                                <div>01</div>
+                                <div>
+                                    <span>Media API</span>
+                                    <span>Interact with Video &amp; Audio Elements</span>
+                                </div>
+                            </li>
+                            <li class="fragment fade-in-then-semi-out">
+                                <div>02</div>
+                                <div>
+                                    <span>Drag and Drop API</span>
+                                    <span>All the Web's a Stage</span>
+                                </div>
+                            </li>
+                            <li class="fragment fade-in-then-semi-out">
+                                <div>03</div>
+                                <div>
+                                    <span>Geolocation API</span>
+                                    <span>Where in the World are we?</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6 text-left">
+                        <ul class="numlist pl-0">
+                            <li class="fragment fade-in-then-semi-out">
+                                <div>04</div>
+                                <div>
+                                    <span>Canvas API</span>
+                                    <span>The Web Browser as a Painting Canvas</span>
+                                </div>
+                            </li>
+                            <li class="fragment fade-in-then-semi-out">
+                                <div>05</div>
+                                <div>
+                                    <span>Web Storage API</span>
+                                    <span>Verba volant, (Java)Scripta Manent</span>
+                                </div>
+                            </li>
+                            <li class="fragment">
+                                <div>06</div>
+                                <div>
+                                    <span>Explore further</span>
+                                    <span><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API" target="_blank">Web Sockets</a>, <a href="http://tutorials.jenkov.com/html5/file-api.html" target="_blank">File API</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers" target="_blank">Web Workers</a>, and <a href="https://developer.mozilla.org/en-US/docs/Web/API" target="_blank">many more</a>...</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 01 | Media API -->
+            <section>
+
+                <!-- What are Media Elements? -->
+                <section>
+                    <div class="row text-left align-items-end">
+                        <div class="col-6">
+                            <h1 class="headlight">01</h1>
+                            <hr class="limit limit-medium">
+                            <h2>Media API</h2>
+                            <div class="subnote">The HTML5 Media Elements</div>
+                            <p class="serif fragment">HTML5 can natively render video and audio in web pages using the <strong>&lt;video&gt;</strong> and <strong>&lt;audio&gt;</strong> HTML Media Elements.</p>
+                        </div>
+                        <div class="col-6">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Media Elements -->
+                <section data-background="#000" class="text-white">
+                    <div class="row text-left">
+                        <div class="col-6">
+                            <h2>HTML5<br>Media Elements</h2>
+                            <div class="subnote text-muted">The <span class="highlight">&lt;audio&gt;</span> and <span class="highlight">&lt;video&gt;</span> elements.</div>
+                        </div>
+                        <div class="col-6">
+                            <pre class="fragment">
+                                <h4 class="text-white mb-0">Let's add a video:</h4>
+                                <code class="hljs html" contenteditable data-trim data-line-numbers="1,1-2">
+                                    &lt;video src="trailer.mp4"&gt;&lt;/video&gt;
+                                </code>
+                                <code class="hljs html fragment" contenteditable data-trim data-line-numbers="1,1-2">
+                                    &lt;video src="https://video.com/trailer.mp4"&gt;&lt;/video&gt;
+                                </code>
+                            </pre>
+                            <pre class="fragment">
+                                <h4 class="text-white mb-0">Let's add some music:</h4>
+                                <code class="hljs html" contenteditable data-trim data-line-numbers>
+                                &lt;audio src="mozart.mp3"&gt;&lt;/audio&gt;
+                                </code>
+                                <code class="hljs html fragment" contenteditable data-trim data-line-numbers>
+                                &lt;audio src="https://audio.com/mozart.mp3"&gt;&lt;/audio&gt;
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Live Coding: <audio> -->
+                <section class="w-100 h-100">
+                    <div id="livecode-audio" class="text-left w-100 h-100"></div>
+                    <script src="https://flems.io/flems.html" type="text/javascript" charset="utf-8"></script>
+                    <script>
+                        Flems(document.querySelector("#livecode-audio"), {
+                            console: false,
+                            reloadButton: false,
+                            files: [{
+                                name: 'html5-audio.html',
+                                content: '<!-- Audio: https://upload.wikimedia.org/wikipedia/commons/e/e3/Austria.ogg -->'
+                            }, {
+                                name: 'script.js',
+                                content: 'let p = document.createElement("p"); p.innerHTML = "<strong>Attributes:</strong> src / controls / loop / autoplay / muted"; document.body.appendChild(p);'
+                            }, {
+                                name: 'style.css',
+                                content: '* { font-family: Helvetica, sans-serif; font-size: 1.2rem; }'
+                            }]
+                        })
+                    </script>
+                </section>
+
+                <!-- The Media <source> Element -->
+                <section class="h-100 text-white" data-background="#000">
+                    <div class="row text-left h-100 align-items-center">
+                        <div class="col-6">
+                            <h2>The <span class="highlight">&lt;source&gt;</span><br>Media Element</h2>
+                            <div class="subnote text-muted">Providing multiple media sources for compatibility.</div>
+
+                            <p class="fragment" data-code-block="1" data-code-focus="1">1) Opening &lt;audio&gt; tag
+                            </p>
+                            <p class="fragment" data-code-block="1" data-code-focus="3">2) First audio source: mp3 file with appropriate <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types" class="highlight">MIME type</a> attribute
+                            </p>
+                            <p class="fragment text-muted" data-code-block="1" data-code-focus="3"><em>&quot;A media type (also known as a Multipurpose Internet Mail Extensions or MIME type) is a standard that indicates the nature and format of a document, file, or assortment of bytes.&quot;</em></p>
+                            <p class="fragment" data-code-block="1" data-code-focus="5">3) Second audio source
+                            </p>
+                            <p class="fragment" data-code-block="1" data-code-focus="1-7">4) Ready!</p>
+                        </div>
+                        <div class="col-6">
+                            <pre><code class="hljs html reveal-code" contenteditable data-trim>
+
+                                &lt;audio controls&gt;&#10;&#10;                                    &lt;source src=&quot;audio.mp3&quot; type=&quot;audio/mp3&quot;&gt;&#10;&#10;                                    &lt;source src=&quot;audio.ogg&quot; type=&quot;audio/ogg&quot;&gt;&#10;&#10;                                &lt;/audio&gt;&#10;
+
+                            </code></pre>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Live Coding: <audio> Multiple Sources -->
+                <section data-state="livecode-audio-multiple" class="w-100 h-100">
+                    <div id="livecode-audio-multiple" class="text-left w-100 h-100"></div>
+                    <script src="https://flems.io/flems.html" type="text/javascript" charset="utf-8"></script>
+                    <script>
+                        Flems(document.querySelector("#livecode-audio-multiple"), {
+                            console: false,
+                            reloadButton: false,
+                            files: [{
+                                name: 'html5-audio-multiple-sources.html',
+                                content: '<audio controls>\n\n' +
+                                    '    <source src="https://file-examples.com/wp-content/uploads/2017/11/file_example_MP3_700KB.mp3" type="audio/mp3">\n\n' +
+                                    '    <source src="https://file-examples.com/wp-content/uploads/2017/11/file_example_OOG_1MG.ogg" type="audio/ogg">\n\n' +
+                                    '    Sorry, your browser doesn\'t support embedded audio.\n\n' +
+                                    '</audio>\n' +
+                                    '<!-- type="TYPE/SUBTYPE" -->\n'
+                            }]
+                        })
+                    </script>
+                </section>
+
+                <!-- Live Coding: <video> -->
+                <section class="w-100 h-100">
+                    <div id="livecode-video" class="text-left w-100 h-100"></div>
+                    <script src="https://flems.io/flems.html" type="text/javascript" charset="utf-8"></script>
+                    <script>
+                        Flems(document.querySelector("#livecode-video"), {
+                            console: false,
+                            reloadButton: false,
+                            files: [{
+                                name: 'html5-video.html',
+                                content: '<!-- Video: http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4 -->\n<!-- Image: https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/BBB-Bunny.png/640px-BBB-Bunny.png -->'
+                            }, {
+                                name: 'script.js',
+                                content: 'let p = document.createElement("p"); p.innerHTML = "<strong>Attributes:</strong> src / controls / width / height / poster / loop / autoplay / muted"; document.body.appendChild(p);'
+                            }, {
+                                name: 'style.css',
+                                content: '* { font-family: Helvetica, sans-serif; font-size: 1.2rem; }'
+                            }]
+                        })
+                    </script>
+                </section>
+
+                <!-- Live Coding: <video> Multiple Sources -->
+                <section class="w-100 h-100">
+                    <div id="livecode-video-multiple" class="text-left w-100 h-100"></div>
+                    <script src="https://flems.io/flems.html" type="text/javascript" charset="utf-8"></script>
+                    <script>
+                        Flems(document.querySelector("#livecode-video-multiple"), {
+                            console: false,
+                            reloadButton: false,
+                            files: [{
+                                name: 'html5-video-multiple-sources.html',
+                                content: '<!-- type="TYPE/SUBTYPE" -->\n\n' +
+                                    '<video controls width="640">\n\n' +
+                                    '    <source src="https://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv" type="video/ogv">\n\n' +
+
+                                    '   <source src="https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" type="video/mp4">\n\n' +
+                                    '    Sorry, your browser doesn\'t support embedded videos.\n\n' +
+                                    '</video>'
+                            }]
+                        })
+                    </script>
+                </section>
+
+                <!-- Media API | What is it? | Frame 01 -->
+                <section>
+                    <div class="row text-left align-items-end">
+                        <div class="col-6">
+                            <h2>Media API</h2>
+                            <hr class="limit limit-medium">
+                            <div class="subnote">Controlling Media Elements with JavaScript</div>
+                            <p class="serif fragment">The Media API allows you to interact with the Media Elements. It acts as a middleman, offering a set of commands for observing and controlling the Media elements.</p>
+                        </div>
+                        <div class="col-6">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Media API | What is it? | Frame 02 -->
+                <section>
+                    <div class="row">
+                        <div class="col-8 offset-2">
+                            <img class="img-fluid" src="./img/MediaAPI-01.jpg" alt="">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Media API | What is it? | Frame 03 -->
+                <section>
+                    <div class="row align-items-center">
+                        <div class="col-8 offset-2">
+                            <img class="img-fluid" src="./img/MediaAPI-02.jpg" alt="">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Media API | Functions -->
+                <section>
+                    <div class="row text-left align-items-center">
+                        <div class="col-6">
+                            <h2>Media API</h2>
+                            <h3 class="display-4">Methods &amp; Properties</h3>
+                            <hr class="limit limit-medium">
+                            <h3 class="mb-0">Code Time!</h3>
+                            <h6 class="text-muted-plus fragment mt-3 mb-5">( Class-Practice-01 )</h6>
+                            <p class="serif fragment">1) Create an HTML page</p>
+                            <p class="serif fragment">2) Add a <strong>&lt;video&gt;&lt;/video&gt;</strong> element (Use <a href="https://upload.wikimedia.org/wikipedia/commons/5/5d/Charlie_Chaplin%2C_the_Marriage_Bond.ogv">this source</a>)</p>
+                            <p class="serif fragment">3) Add a <strong>&lt;script&gt;&lt;/script&gt;</strong> tag just before the closing &lt;/body&gt; tag</p>
+                            <p class="serif fragment">4) Use <code>document.querySelector()</code> to target the video element and store it in a variable named <code>video</code></p>
+                            <p class="serif fragment">5) Use Media API methods</p>
+                        </div>
+                        <div class="col-6">
+                            <p class="fragment">Methods:</p>
+                            <code class="hljs fragment mb-4" data-trim contenteditable>video.play();</code>
+                            <code class="hljs fragment mb-4" data-trim contenteditable>video.pause();</code>
+                            <code class="hljs fragment mb-4" data-trim contenteditable>Combine setTimeout and play/pause</code>
+                            <code class="hljs fragment mb-4" data-trim contenteditable>Combine the click event with play/pause </code>
+                            <p class="fragment">Properties:</p>
+                            <code class="hljs html fragment mb-4" data-trim contenteditable>video.duration;</code>
+                            <code class="hljs html fragment mb-4" data-trim contenteditable>video.currentTime; // GET</code>
+                            <code class="hljs html fragment mb-4" data-trim contenteditable>video.currentTime = 100; // SET</code>
+                            <p class="fragment bg-warning rounded py-2 pl-4">Full list of MediaElement <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement#Properties">Properties</a> and <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement#Methods">Methods</a></p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Media API | Events -->
+                <section>
+                    <div class="row text-left align-items-center">
+                        <div class="col-6">
+                            <h2>Media API</h2>
+                            <h3 class="display-4">Events</h3>
+                            <hr class="limit limit-medium">
+                            <h3 class="mb-0">Code Time!</h3>
+                            <h6 class="text-muted-plus fragment mt-3 mb-5">( Class-Practice-02 )</h6>
+                        </div>
+                        <div class="col-6">
+                            <code class="hljs fragment mb-4" data-trim contenteditable>play</code>
+                            <code class="hljs fragment mb-4" data-trim contenteditable>pause</code>
+                            <code class="hljs fragment mb-4" data-trim contenteditable>ended</code>
+                            <code class="hljs fragment mb-4" data-trim contenteditable>loadedmetadata</code>
+                            <p class="fragment">Combine <code>loadedmetadata</code> event with <code>duration</code> property</p>
+                            <code class="hljs fragment mb-4" data-trim contenteditable>timeupdate</code>
+                            <p class="fragment">Combine <code>timeupdate</code> event with <code>currentTime</code> property</p>
+                            <p class="fragment bg-warning rounded py-2 pl-4">Full list of MediaElement Events <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement#Events">here</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#Events"
+                                    target="_blank">here</a>.</p>
+
+                        </div>
+                    </div>
+                </section>
+
+                <!-- References -->
+                <section data-background="yellowgreen" class="references text-white">
+                    <div class="col-8 text-left">
+                        <h2>References &amp; Sources:</h2>
+                        <hr class="limit limit-small">
+                        <ul class="list-unstyled">
+                            <li>&rtrif;
+                                <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio">&lt;audio&gt; - The Audio Embed Element</a>
+                            </li>
+                            <li>&rtrif;
+                                <a target="_blank" href="https://www.w3schools.com/html/html5_audio.asp">HTML5 Audio at w3schools.com</a>
+                            </li>
+                            <li>&rtrif;
+                                <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">&lt;video&gt; - The Video Embed  Element</a>
+                            </li>
+                            <li>&rtrif;
+                                <strong>Video Elements: </strong>[
+                                <a target="_blank" href="https://eventloop.gr/frontend/html5/webapis/media/resources/html5-video.html">Demo</a> |
+                                <a target="_blank" href="https://raw.githubusercontent.com/kostasx/EventLoop/master/frontend/html5/webapis/media/resources/html5-video.html">Source</a> ]
+                            </li>
+                            <li>&rtrif;
+                                <strong>MediaElement API: </strong>[
+                                <a target="_blank" href="https://eventloop.gr/frontend/html5/webapis/media/resources/html5-media-api-demo.html">Demo</a> |
+                                <a target="_blank" href="https://raw.githubusercontent.com/kostasx/EventLoop/master/frontend/html5/webapis/media/resources/html5-media-api-demo.html">Source</a> ]
+                            </li>
+                            <li>&rtrif;
+                                <a target="_blank" href="https://www.w3schools.com/html/html5_video.asp">HTML5 Video at w3schools.com</a>
+                            </li>
+                            <li>&rtrif;
+                                <a target="_blank" href="https://www.html5rocks.com/en/tutorials/video/basics/">HTML5 Video Basics</a>
+                            </li>
+                            <li>&rtrif;
+                                <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME Types</a>
+                            </li>
+                            <li>&rtrif;
+                                <a target="_blank" href="https://scrimba.com/p/pZaVfV/cQrRau3">Interactive Screencast: Embedding Videos in HTML</a>
+                            </li>
+                            <li>&rtrif; Big Buck Bunny in multiple formats:
+                                <a href="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" target="_blank">mp4</a> |
+                                <a href="http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv" target="_blank">ogv</a> |
+                                <a href="http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm" target="_blank">webm</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </section>
+
+            </section>
+
+            <!-- 02 | Drag and Drop API -->
+            <section class="row">
+
+                <!-- Introduction -->
+                <section>
+                    <div class="row align-items-center">
+                        <div class="col-6 text-left">
+                            <h1 class="headlight">02</h1>
+                            <hr class="limit limit-medium">
+                            <h2>Drag &amp; Drop API</h2>
+                            <div class="subnote">Making draggable and droppable elements</div>
+                            <p class="serif fragment">Introduced with the HTML5 specification, the Drag and Drop API gives us the ability to drag elements from one place and drop them on other elements, much like our Operating Systems (Windows, Mac, Linux) and Desktop applications
+                                work.
+                            </p>
+                        </div>
+                        <div class="col-6">
+                            <div class="p-2">
+                                <img class="img-fluid" src="./img/drag-and-drop-example.gif" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Applications -->
+                <section>
+                    <div class="row text-left align-items-start">
+                        <div class="col-6">
+                            <h2>Applications</h2>
+                            <hr class="limit limit-medium">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="fragment text-left">
+                                <h3 class="mb-4">Business</h3>
+                                <a href="https://trello.com/" target="_blank">
+                                    <img class="img-fluid border shadow" src="./img/dnd-applications-applications.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="fragment text-left">
+                                <h3 class="mb-4">Scientific</h3>
+                                <a href="https://codepen.io/kostasx/pen/GbLvMd" target="_blank">
+                                    <img class="img-fluid border shadow" src="./img/dnd-applications-scientific.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="fragment text-left">
+                                <h3 class="mb-4">Games</h3>
+                                <a href="https://codepen.io/kostasx/pen/XLQaVd" target="_blank">
+                                    <img class="img-fluid border shadow" src="./img/dnd-applications-games.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-5 fragment">
+                        <h4>Your imagination is the limit!</h4>
+                    </div>
+                </section>
+
+                <!-- Basics -->
+                <section>
+                    <div class="row text-left align-items-center">
+                        <div class="col-6">
+                            <h2>The Basics</h2>
+                            <hr class="limit limit-medium">
+                        </div>
+                        <div class="col-6">
+                            <h3 class="fragment my-5">1) Create some draggable elements (source)</h3>
+                            <h3 class="fragment my-5">2) Create some droppable elements (target)</h3>
+                            <h3 class="fragment my-5">3) Select a draggable element with a mouse</h3>
+                            <h3 class="fragment my-5">4) Drag the element to a droppable element and release the mouse button</h3>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Basics: Code 1/3 -->
+                <section class="h-100 text-white" data-background="#000">
+                    <div class="row text-left h-100 align-items-center">
+                        <div class="col-4">
+                            <h2>The Code <span class="font-weight-light">- 1/3</span></h2>
+
+                            <div class="subnote text-muted">It's all about specifying <code>draggable</code> and <code>droppable</code> elements, and listening on <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API#Drag_Events" target="_blank">Events</a>.</div>
+
+                            <p class="fragment" data-code-block="1" data-code-focus="1-3">1) Create a draggable Element and a drop target Element</p>
+                            <p class="fragment" data-code-block="1" data-code-focus="1">2) Making an element draggable is as simple as setting the draggable attribute of an element to true
+                            </p>
+                            <p class="fragment" data-code-block="2" data-code-focus="">3) Setting an element as a drop target requires to disable the default <code>dragover</code> behavior.</p>
+
+                            <p class="fragment" data-code-block="2" data-code-focus="1">3.1) Get the drop element.</p>
+                            <p class="fragment" data-code-block="2" data-code-focus="3">3.2) Define a function that will prevent the default dragover behavior.</p>
+                            <p class="fragment" data-code-block="2" data-code-focus="5">3.3) Handle the drop event.</p>
+                        </div>
+                        <div class="col-8">
+                            <p class="text-right">HTML</p>
+                            <pre><code class="hljs html reveal-code" contenteditable data-trim>
+                                &lt;div id="draggable" draggable="true"&gt; Draggable Element &lt;/div&gt;
+
+                                &lt;div id="drop-target"&gt; Drop Target &lt;/div&gt;
+                            </code></pre>
+                            <p class="text-right">JavaScript</p>
+                            <pre><code class="hljs javascript reveal-code" contenteditable data-trim>
+                                let dropTarget = document.querySelector("#drop-target");
+
+                                function handleDragOver( event ){ event.preventDefault(); }
+                                
+                                dropTarget.addEventListener( "dragover",handleDragOver );
+                            </code></pre>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Basics: Code 2/3 -->
+                <section class="h-100 text-white" data-background="#000">
+                    <div class="row text-left h-100 align-items-center">
+                        <div class="col-4">
+                            <h2>The Code <span class="font-weight-light">- 2/3</span></h2>
+                            <div class="subnote text-muted">A simple drag and drop communication requires the <code>dragstart</code> and <code>drop</code> events to be handled.</div>
+                            <p class="fragment" data-code-block="1" data-code-focus="1-3">1) Store a reference of the draggable element in a variable</p>
+                            <p class="fragment" data-code-block="1" data-code-focus="3-7">2) Handle the <code>dragstart</code> event of the draggable element</p>
+                            <p class="fragment" data-code-block="1" data-code-focus="8-14">2) Handle the <code>drop</code> event of the drop element</p>
+                        </div>
+                        <div class="col-8">
+                            <p class="text-right">JavaScript</p>
+                            <pre><code class="hljs javascript reveal-code" contenteditable data-trim>
+                            // ...Code from Part 1/2
+                            let draggable = document.querySelector("#draggable");
+
+                            draggable.addEventListener( "dragstart", handleDragStart );
+
+                            function handleDragStart(e){
+                                console.log( e );
+                            }
+
+                            dropTarget.addEventListener( "drop", handleDrop );
+
+                            function handleDrop(e){
+                                console.log( e );
+                            }
+
+                        </code></pre>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- The Data Transfer Object -->
+                <section>
+                    <div class="row text-left align-items-center">
+                        <div class="col-6">
+                            <h2>The DataTransfer Object</h2>
+                            <hr class="limit limit-medium">
+                            <div class="subnote text-muted">
+                                <p class="fragment">The <code>DataTransfer</code> object holds the data that is being dragged during a drag and drop operation.</p>
+                                <p class="fragment">It holds one or more data items, each of one or more data types.</p>
+                                <p class="fragment">In its simplest form, transfering data from a draggable element to a drop target is a 2-step process:</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <img src="img/dnd-datatransfer.jpg" class="img-fluid text-center w-75 fragment">
+                            <h3 class="fragment my-5">Step 1) Set data on <code>dragstart</code> event using <a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/setData" target="_blank">dataTransfer.setData( format, data )</a></h3>
+                            <h3 class="fragment my-5">Step 2) Read data on <code>drop</code> event using <a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/getData" target="_blank">dataTransfer.getData( format )</a></h3>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Basics: Code 3/3 -->
+                <section class="h-100 text-white" data-background="#000">
+                    <div class="row text-left h-100 align-items-center">
+                        <div class="col-4">
+                            <h2>The Code <span class="font-weight-light">- 3/3</span></h2>
+                            <div class="subnote text-muted"></div>
+                            <p class="fragment" data-code-block="1" data-code-focus="1-3">1) Set some simple text data when the drag starts.</p>
+                            <p class="fragment" data-code-block="1" data-code-focus="5-8">2) Access the data on the drop event.</p>
+                        </div>
+                        <div class="col-8">
+                            <p class="text-right">JavaScript</p>
+                            <pre><code class="hljs javascript reveal-code" contenteditable data-trim>
+                                // ...Code from Part 2/2
+                                function handleDragStart(e){
+                                    e.dataTransfer.setData( "text/plain", "Some data" );
+                                }
+    
+                                function handleDrop(e){
+                                    let data = e.dataTransfer.getData( "text/plain" );
+                                }
+    
+                            </code></pre>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Let's Code! -->
+                <section data-background="indigo">
+                    <div class="row text-white p-5">
+                        <div class="col text-center">
+                            <div class="subnote mt-0">ENOUGH THEORY</div>
+                            <h2>Let's Code!</h2>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- TASKS BOARD -->
+                <section class="h-100">
+                    <style>
+                        #tasks-board .col {
+                            min-height: 240px;
+                        }
+                        
+                        #tasks-board .col ul li {
+                            cursor: move;
+                            margin: 4px;
+                        }
+                    </style>
+                    <h3 class="m-5 pb-5 pb-3">Let's build a Tasks Board</h3>
+                    <div id="tasks-board" class="container shadow mt-4">
+
+                        <div class="row align-items-start">
+
+                            <!-- TODO -->
+                            <div class="col p-0 drop-target">
+                                <p class="bg-dark p-1 text-white text-center">Tasks</p>
+                                <ul class="list-unstyled p-2">
+                                    <li id="application-planning" draggable="true" class="border p-2 bg-info text-white">Application Planning</li>
+                                    <li id="boilerplate" draggable="true" class="p-2 bg-info text-white">Boilerplate</li>
+                                    <li id="coding" draggable="true" class="p-2 bg-info text-white">Coding</li>
+                                </ul>
+                            </div>
+
+                            <!-- IN PROGRESS -->
+                            <div class="col p-0 drop-target border-right border-left">
+                                <p class="bg-warning p-1 text-center">In Progress</p>
+                                <ul class="list-unstyled p-2"></ul>
+                            </div>
+
+                            <!-- DONE -->
+                            <div class="col p-0 drop-target">
+                                <p class="bg-success p-1 text-white text-center">Done</p>
+                                <ul class="list-unstyled p-2"></ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <script>
+                        function initTasksBoard() {
+
+                            function handleDragStart(event) {
+                                event.dataTransfer.setData("text/plain", event.currentTarget.id);
+                            }
+
+                            function preventDefault(event) {
+                                event.preventDefault();
+                            }
+
+                            function handleDrop(event) {
+                                let draggedElementId = event.dataTransfer.getData("text/plain");
+                                let draggedElement = document.querySelector("#" + draggedElementId);
+                                event.currentTarget.querySelector("ul").appendChild(draggedElement);
+                            }
+
+                            function addDragStartEventListener(el) {
+                                el.addEventListener("dragstart", handleDragStart);
+                            }
+
+                            function initDrop(el) {
+                                el.addEventListener("dragover", preventDefault);
+                                el.addEventListener("drop", handleDrop);
+                            }
+
+                            let listItems = document.querySelectorAll("#tasks-board li");
+                            let dropTargets = document.querySelectorAll("#tasks-board .drop-target");
+
+                            listItems.forEach(addDragStartEventListener);
+                            dropTargets.forEach(initDrop);
+
+                        }
+
+                        window.addEventListener("DOMContentLoaded", initTasksBoard);
+                    </script>
+                    <p class="mt-5">
+                        <a href="https://raw.githubusercontent.com/kostasx/EventLoop/master/frontend/html5/webapis/drag-and-drop/resources/tasks-board-initial.html" class="text-muted" target="_blank">Initial Souce Code</a>
+                    </p>
+                </section>
+
+                <!-- Summary -->
+                <section data-background="#1a0838" class="text-white">
+                    <h2 class="mb-5">Summing-Up</h2>
+                    <hr class="limit limit-medium limit-centered limit-indigo">
+                    <div class="row text-left align-items-start">
+                        <div class="col-6">
+                            <h3 class="my-5 fragment">1) Create a draggable element</h3>
+                            <h3 class="my-5 fragment">2) Listen on the dragstart event</h3>
+                            <h3 class="my-5 fragment">3) Set some transfer data</h3>
+                        </div>
+                        <div class="col-6">
+                            <h3 class="my-5 fragment">4) Create a droppable element</h3>
+                            <h3 class="my-5 fragment">5) Prevent default behavior on the dragover<br>event and listen on the drop event</h3>
+                            <h3 class="my-5 fragment">6) Get the transfer data</h3>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- References -->
+                <section data-background="yellowgreen" class="references text-white">
+                    <div class="col-8 text-left">
+                        <h2>References &amp; Sources:</h2>
+                        <hr class="limit limit-small">
+                        <ul class="list-unstyled">
+                            <li>&rtrif;
+                                <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API">HTML Drag and Drop API | MDN</a>
+                            </li>
+                            <li>&rtrif;
+                                <a target="_blank" href="https://www.w3schools.com/html/html5_draganddrop.asp">HTML5 Drag and Drop | W3Schools.com</a>
+                            </li>
+                            <li>&rtrif;
+                                <a target="_blank" href="https://www.youtube.com/watch?v=C22hQKE_32c">Drag & Drop With Vanilla JS | <i class="fab fa-youtube"></i> YouTube </a>
+                            </li>
+                            <li>&rtrif;
+                                <a target="_blank" href="https://medium.com/backticks-tildes/drag-and-drop-with-html5-368a1bb72881">Drag and Drop with HTML5</a>
+                            </li>
+                            <li>&rtrif;
+                                <a target="_blank" href="https://www.html5rocks.com/en/tutorials/dnd/basics/">Native HTML5 Drag and Drop</a>
+                            </li>
+                            <li>&rtrif;
+                                <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API#Drag_Events">Drag and Drop Events</a>
+                            </li>
+                            <li>&rtrif;
+                                <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">dataTransfer data formats</a>
+                            </li>
+                            <li>&rtrif;
+                                <a target="_blank" href="https://html.spec.whatwg.org/dev/dnd.html#dnd">The W3C Specification</a>
+                            </li>
+                            <li>&rtrif; The Tasks Board App: [ <a target="_blank" href="https://kostasx.github.io/EventLoop/frontend/html5/webapis/drag-and-drop/resources/tasks-board.html">DEMO</a> | <a target="_blank" href="https://raw.githubusercontent.com/kostasx/EventLoop/master/frontend/html5/webapis/drag-and-drop/resources/tasks-board.html">SOURCE</a>                                ]
+                            </li>
+                            <li>&rtrif; The Kid's Shape Sorting Game: [ <a target="_blank" href="https://kostasx.github.io/EventLoop/frontend/html5/webapis/drag-and-drop/resources/shape-game.html">DEMO</a> | <a target="_blank" href="https://raw.githubusercontent.com/kostasx/EventLoop/master/frontend/html5/webapis/drag-and-drop/resources/shape-game.html">SOURCE</a>                                ]
+                            </li>
+                        </ul>
+                    </div>
+
+                </section>
+
+            </section>
+
+            <!-- 03 | Geolocation API -->
+            <section>
+
+                <!-- Introduction -->
+                <section>
+                    <div class="row align-items-center">
+                        <div class="col-6 text-left">
+                            <h1 class="headlight">03</h1>
+                            <hr class="limit limit-medium">
+                            <h2>Geolocation API</h2>
+                            <div class="subnote">Where in the World are we?</div>
+                            <p class="serif fragment">An easy to use API for accessing the browser's location.
+                            </p>
+                            <p class="serif fragment">For <code>privacy</code> reasons, the user is asked for permission to report location information.
+                            </p>
+                        </div>
+                        <div class="col-3 offset-1">
+                            <img class="img-fluid" src="img/geolocation-globe.png" alt="">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Latitude and Longitude -->
+                <section>
+                    <div class="row align-items-center">
+                        <div class="col-5 text-left">
+                            <h2>Geographical Coordinates</h2>
+                            <hr class="limit limit-medium">
+                            <h3>A Primer on Latitude &amp; Longitude</h3>
+                            <p class="serif mt-4 fragment"><em>&quot;Cartographers and geographers trace horizontal and vertical lines called latitudes and longitudes across Earth's surface to locate points on the globe.&quot;</em>
+                            </p>
+                            <p class="serif mt-4 fragment"><em>&quot;Together, they form the Earth’s geographical coordinates, and represent the angular distance of any location from the center of the Earth.&quot;</em>
+                            </p>
+                            <p class="serif mt-4 fragment">
+                                <a class="text-muted" href="https://www.timeanddate.com/geography/longitude-latitude.html" target="_blank">[ Source ]</a>
+                            </p>
+                        </div>
+                        <div class="col-3 offset-2">
+                            <img class="img-fluid" src="img/latlon.jpg" alt="">
+                            <br>
+                            <img class="img-fluid fragment" src="img/latlon.gif" alt="">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Basics: Code 1/X -->
+                <section class="h-100 text-white" data-background="#000">
+                    <div class="row text-left h-100 align-items-center">
+                        <div class="col-4">
+
+                            <h2>The Code <span class="font-weight-light"></span></h2>
+
+                            <div class="subnote text-muted"></div>
+
+                            <p class="fragment" data-code-block="1" data-code-focus="1-3"><code>1)</code> Define a callback function that will handle the successful Geolocation retrieval</p>
+
+                            <p class="fragment" data-code-block="1" data-code-focus="4-7"><code>2)</code> Define a callback function that will handle errors</p>
+
+                            <p class="fragment" data-code-block="1" data-code-focus="8-10"><code>3)</code> Check to see if our browser supports the Geolocation API</p>
+
+                            <p class="fragment" data-code-block="1" data-code-focus="10-12"><code>4)</code> Use the <code>getCurrentPosition</code> method to initiate the geolocation retrieval process</p>
+                            <p class="fragment" data-code-block="1" data-code-focus="10-12">
+                                <span class="mt-4 bg-warning text-dark round p-1">Remember:</span> <code>getCurrentPosition()</code> is an asynchronous function
+                            </p>
+
+                            <p class="fragment" data-code-block="1" data-code-focus="13-18"><code>5)</code> Handle browsers that do not support Geolocation</p>
+
+                            <p class="fragment" data-code-block="1" data-code-focus="1-18"></p>
+
+                        </div>
+                        <div class="col-8">
+                            <p class="text-right">JavaScript</p>
+                            <pre><code class="hljs javascript reveal-code" contenteditable data-trim>
+                            function geoSuccess( position ){
+                                console.log( position );
+                            }
+                            
+                            function geoError( error ){
+                                console.log( error.message );
+                            }
+                            
+                            if ( navigator.geolocation ) {
+                            
+                                navigator.geolocation.getCurrentPosition( geoSuccess, geoError );
+                            
+                            } else {
+
+                                // Geolocation API Not Supported
+
+                            }</code></pre>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- The Data & Error Objects -->
+                <section class="h-100 text-white" data-background="#000">
+                    <div class="row text-left h-100 align-items-center">
+                        <div class="col-5">
+
+                            <h2>The Data<br>&amp; Error Objects<span class="font-weight-light"></span></h2>
+                            <hr class="limit limit-medium">
+
+                            <div class="subnote text-muted"></div>
+
+                            <p class="fragment" data-code-block="1" data-code-focus="1-14"><code>geoSuccess( </code>position<code> ){ ... }</code> </p>
+
+                            <p class="fragment" data-code-block="1" data-code-focus="2"></p>
+
+                            <p class="fragment" data-code-block="1" data-code-focus="3-12"></p>
+
+                            <p class="fragment" data-code-block="2" data-code-focus="1-14"><code>geoError( </code>error<code> ){ ... }</code> </p>
+
+                        </div>
+                        <div class="col-7">
+                            <p><span class="bg-success p-2 rounded rounded-pill"><a class="text-white" href="https://developer.mozilla.org/en-US/docs/Web/API/Position" target="_blank">On Success <i class="fas fa-link"></i></a></span></p>
+                            <pre><code class="hljs json reveal-code" contenteditable data-trim>
+                                position: Object {
+                                    timestamp: [ date/time of the Response ],
+                                
+                                    coords: {
+                                
+                                        latitude: [ Latitude as decimal ],
+                                        longitude: [ Longitude as decimal ],
+                                        accuracy: [ Accuracy of position ],
+                                        altitude: [ Altitude in meters above sea level ],
+                                        speed: [ Speed in meters/second ],
+                                
+                                    }
+                                }                                    
+                            </code></pre>
+                            <p><span class="bg-danger p-2 rounded rounded-pill"><a target="_blank" class="text-white" href="https://developer.mozilla.org/en-US/docs/Web/API/PositionError#Properties">On Error <i class="fas fa-link"></i></a></span></p>
+                            <pre><code class="hljs json reveal-code" contenteditable data-trim>
+                                error: Object {
+                                    code: [ 1-3 ],
+                                    message: [ String Error Description ]
+                                }                                    
+                            </code></pre>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Let's Code! -->
+                <section data-background="indigo">
+                    <div class="row text-white p-5">
+                        <div class="col text-center">
+                            <div class="subnote mt-0">ENOUGH THEORY</div>
+                            <h2>Let's Code!</h2>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Code: Display a Map -->
+                <section>
+                    <div class="row align-items-center">
+                        <div class="col-6 text-left">
+                            <h2>Display Browser's Geolocation on a Map</h2>
+                            <hr class="limit limit-medium">
+                            <h3>Using Open Street Maps &amp; OpenLayers</h3>
+                            <p class="serif mt-4 fragment"><a target="_blank" href="https://www.openstreetmap.org/#map=19/37.99361/23.72722&layers=N">OpenStreetMap (OSM):</a><em>&quot;A collaborative project to create a free editable map of the world. The data is free, and free of legal and technical restrictions.&quot;</em>
+                            </p>
+                            <p class="serif mt-4 fragment"><a href="https://openlayers.org/" target="_blank">OpenLayers:</a> <em>&quot;OpenLayers is a JavaScript library which implements an API for developing dynamic map widgets on the web.&quot;</em>
+                            </p>
+                        </div>
+                        <div class="col-6">
+                            <div class="fragment border p-5 m-5 shadow">
+                                <h3><a href="https://openlayers.org/en/latest/doc/quickstart.html" target="_blank"><i class="fas fa-map-marked-alt"></i> <br>OpenLayers Quickstart</a></h3>
+                                <h4>Click, Copy &amp; Paste!</h4>  
+                            </div>
+                            <p class="fragment">Notable method: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/watchPosition" target="_blank">watchPosition()</a></p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Summary -->
+                <section data-background="#1a0838" class="text-white">
+                    <h2 class="mb-5">Summing-Up</h2>
+                    <hr class="limit limit-medium limit-centered limit-indigo">
+                    <div class="row align-items-start">
+                        <div class="col">
+                            <h3 class="my-5 fragment">1) Check if the Browser supports the Geolocation API</h3>
+                            <h3 class="my-5 fragment">2) Call the getCurrentPosition() method to asynchronously get the position data</h3>
+                            <h3 class="my-5 fragment">3) Handle errors</h3>
+                            <h3 class="my-5 fragment">4) Use the data accordingly</h3>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- References -->
+                <section data-background="yellowgreen" class="references text-white">
+                    <div class="col-8 text-left">
+                        <h2>References &amp; Sources:</h2>
+                        <hr class="limit limit-small">
+                        <ul class="list-unstyled">
+                            <li>&rtrif;
+                                <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API"> Geolocation API | MDN</a>
+                            </li>
+                            <li>&rtrif;
+                                <a target="_blank" href="https://www.w3schools.com/html/html5_geolocation.asp"> HTML5 Geolocation | W3Schools.com</a>
+                            </li>
+                            <li>&rtrif;
+                                <a target="_blank" href="https://www.w3.org/TR/geolocation-API/"> Geolocation API Specification [ Technical ] | W3C</a>
+                            </li>
+                            <li>&rtrif;
+                                <a target="_blank" href="https://www.youtube.com/watch?v=PnTiwcHM828"> HTML5 Geolocation API 5-minutes Tutorial | <i class="fab fa-youtube"></i> YouTube </a>
+                            </li>
+                            <li>&rtrif;
+                                <a target="_blank" href="https://stackshare.io/stackups/leaflet-vs-openlayers-vs-openstreetmap">Mapping APIs</a>
+                            </li>
+                        </ul>
+                        <h3><i class="fas fa-code"></i> Code</h3>
+                        <ul class="list-unstyled">
+                            <li>&rtrif;
+                                <a target="_blank" href="https://raw.githubusercontent.com/kostasx/EventLoop/master/frontend/html5/webapis/geolocation/resources/geolocation-quickstart.html">Geolocation API Quickstart</a>
+                            </li>
+                            <li>&rtrif;
+                                <a target="_blank" href="https://raw.githubusercontent.com/kostasx/EventLoop/master/frontend/html5/webapis/geolocation/resources/geolocation-mapping-openlayers-initial.html">OpenLayers Quickstart</a>
+                            </li>
+                            <li>&rtrif;
+                                <a target="_blank" href="https://raw.githubusercontent.com/kostasx/EventLoop/master/frontend/html5/webapis/geolocation/resources/geolocation-mapping-openlayers.html">OpenLayers &amp; Geolocation API</a>
+                            </li>
+                            <li>&rtrif;
+                                <a target="_blank" href="https://raw.githubusercontent.com/kostasx/EventLoop/master/frontend/html5/webapis/geolocation/resources/geolocation-mapping-openlayers-with-marker.html">OpenLayers with Marker &amp; Geolocation API</a>
+                            </li>
+                            <li>&rtrif;
+                                <a target="_blank" href="https://raw.githubusercontent.com/kostasx/EventLoop/master/frontend/html5/webapis/geolocation/resources/geolocation-mapping-openlayers-custom-marker.html">OpenLayers with Custom Marker &amp; Geolocation API</a>
+                            </li>
+                            <li>&rtrif;
+                                <a target="_blank" href="https://raw.githubusercontent.com/kostasx/EventLoop/master/frontend/html5/webapis/geolocation/resources/geolocation-mapping-google.html">Google Maps &amp; Geolocation API</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </section>
+
+            </section>
+
+            <!-- 04 | Canvas API -->
+            <section>
+                <!-- Introduction -->
+                <section>
+                    <div class="row align-items-center">
+                        <div class="col-6 text-left">
+                            <h1 class="headlight">04</h1>
+                            <hr class="limit limit-medium">
+                            <h2>Canvas API</h2>
+                            <div class="subnote">The Picasso in the Browser</div>
+                            <p class="serif fragment">...</p>
+                        </div>
+                        <div class="col-6">
+                            <div class="p-2">
+                                <img class="img-fluid" src="./img/drag-and-drop-example.gif" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </section>
+
+            <!-- 05 | Web Storage API -->
+            <section>
+                <!-- Introduction -->
+                <section>
+                    <div class="row align-items-center">
+                        <div class="col-6 text-left">
+                            <h1 class="headlight">05</h1>
+                            <hr class="limit limit-medium">
+                            <h2>Web Storage API</h2>
+                            <div class="subnote">Persistent Browser Data</div>
+                            <p class="serif fragment">...</p>
+                        </div>
+                        <div class="col-6">
+                            <div class="p-2">
+                                <img class="img-fluid" src="./img/drag-and-drop-example.gif" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </section>
+
+            <!-- /// EXPERIMENTAL SECTIONS /// -->
+
+            <!-- QUIZ TIME! -->
+            <!--
+            <section>
+                <script data-quiz>
+                    // https://gitlab.com/schaepermeier/reveal.js-quiz
+                    quiz = {
+                        "info": {
+                            "name": "Test Your Knowledge!!",
+                            "main": "Think you're smart enough to be on Jeopardy? Find out with this super crazy knowledge quiz!",
+                            "level1": "Jeopardy Ready",
+                            "level2": "Jeopardy Contender",
+                            "level3": "Jeopardy Amateur",
+                            "level4": "Jeopardy Newb",
+                            "level5": "Stay in school, kid..." // no comma here
+                        },
+                        "questions": [{ // Question 1 - Multiple Choice, Single True Answer
+                                "q": "What number is the letter A in the English alphabet?",
+                                "a": [{
+                                        "option": "8",
+                                        "correct": false
+                                    }, {
+                                        "option": "14",
+                                        "correct": false
+                                    }, {
+                                        "option": "1",
+                                        "correct": true
+                                    }, {
+                                        "option": "23",
+                                        "correct": false
+                                    } // no comma here
+                                ],
+                                "correct": "<p><span>That's right!</span> The letter A is the first letter in the alphabet!</p>",
+                                "incorrect": "<p><span>Uhh no.</span> It's the first letter of the alphabet. Did you actually <em>go</em> to kindergarden?</p>" // no comma here
+                            },
+                            // more questions here
+                        ]
+                    }
+                </script>
+
+            </section>
+            -->
+
+            <!-- Full Screen Image -->
+            <!--
+            <section fullscreen-img="img/MediaAPI-02.jpg">
+                <h1>A Fantastic Title</h1>
+                <h2>Interesting subtitle</h2>
+            </section>
+            -->
+
+            <!-- Full Screen Image: Contain -->
+            <!-- 
+            <section fullscreen-img="img/MediaAPI-02.jpg" fullscreen-size="contain">
+                <h1>A Fantastic Title</h1>
+                <h2>Interesting subtitle</h2>
+            </section>
+            -->
+
+            <!-- About the Author -->
+            <!--
+            <section data-background="#f5f5f5" class="row">
+                <div class="col-4 text-left">
+                    <h2>About the Author</h2>
+                    <hr class="limit limit-small">
+                    <p class="serif">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque ipsa sint vel explicabo inventore iste, reprehenderit magnam voluptatem labore, doloremque consequuntur facere tenetur repellat asperiores, maiores dignissimos recusandae?
+                        Vero, quisquam!</p>
+                </div>
+            </section>
+            -->
+
+        </div>
+    </div>
+
+    <script src="js/reveal.js"></script>
+
+    <script>
+        function typedCode(editor, text, ms) {
+
+            let next;
+            let isTyping = false;
+            ms = ms || 80;
+            text = text.split("");
+            let content = [];
+
+            function startTyping() {
+
+                console.log("startTyping() :1: started");
+                next = text.shift();
+                if (!next) {
+                    isTyping = false;
+                    console.log("startTyping() :2: stopped");
+                    clearInterval(interval);
+                    return interval = null;
+                }
+                isTyping = true;
+                content.push(next);
+                editor.setValue(content.join(""));
+
+                if (next === "\n") {
+                    isTyping = false;
+                    console.log("startTyping() :3: stopped");
+                    return clearInterval(interval);
+                }
+
+            }
+
+            let interval = setInterval(startTyping, ms);
+
+            document.body.addEventListener("mousedown", function(e) {
+
+                if (e.which === 1 && interval) {
+                    if (isTyping) {
+                        console.log("startTyping() :4: stopped");
+                        clearInterval(interval);
+                        isTyping = false;
+                        console.log("mousedown::isTyping:true");
+                    } else {
+                        console.log("startTyping() :5: started");
+                        interval = setInterval(startTyping, ms);
+                        console.log("mousedown::isTyping:false");
+                    }
+                }
+
+            });
+
+        }
+
+        function execOnAudioMultiple(e) {
+
+            let isKeyC = (e.key === "t" && e.type === "keyup");
+
+            if (isKeyC || e.type === "dblclick") {
+
+                let selector = "#livecode-audio-multiple .CodeMirror";
+                let codeEditor = document.querySelector(selector).CodeMirror;
+
+                if (!codeEditor) {
+                    return false;
+                }
+
+                let editorContent = '<audio controls>\n\n' +
+                    '    <source src="https://file-examples.com/wp-content/uploads/2017/11/file_example_MP3_700KB.mp3" type="audio/mp3">\n\n' +
+                    '    <source src="https://file-examples.com/wp-content/uploads/2017/11/file_example_OOG_1MG.ogg" type="audio/ogg">\n\n' +
+                    '    Sorry, your browser doesn\'t support embedded audio.\n\n' +
+                    '</audio>\n' +
+                    '<!-- type="TYPE/SUBTYPE" -->\n';
+
+                typedCode(codeEditor, editorContent);
+
+            }
+
+        }
+
+        // Execute Functions on Specific Slides: "<ID>": functionReference
+        const RevealEvents = {
+            // "livecode-audio-multiple": execOnAudioMultiple
+        }
+
+        Reveal.configure({
+            keyboard: {
+                // Key: 'e'
+                69: function() {}
+            }
+        });
+
+        Reveal.addEventListener('slidechanged', function(e) {
+            let slideState = e.currentSlide.getAttribute('data-state');
+        });
+
+        function initCodeOnSection(slide, state, code) {
+            if (state) {
+
+            }
+        }
+
+        function getCurrentDataState(currentSlide) {
+
+            if (!currentSlide) {
+                return false;
+            }
+            let currentDataState = currentSlide.getAttribute('data-state');
+            return currentDataState ? currentDataState : false;
+
+        }
+
+        function getCurrentSlide() {
+
+            let currentSlide = document.querySelector("section.stack.present");
+            if (!currentSlide) {
+                return false
+            }
+            let innerSlide;
+            if (innerSlide = currentSlide.querySelector("section.present")) {
+                currentSlide = innerSlide;
+            }
+            return currentSlide;
+
+        }
+
+        function initSlideCode(e) {
+
+            let currentSlide = getCurrentSlide();
+            let currentDataState = getCurrentDataState(currentSlide);
+            if (RevealEvents[currentDataState]) {
+
+                RevealEvents[currentDataState](e);
+
+            }
+
+        }
+
+        document.body.addEventListener("dblclick", initSlideCode);
+        document.body.addEventListener("keyup", initSlideCode);
+
+        // More info about config & dependencies:
+        // - https://github.com/hakimel/reveal.js#configuration
+        // - https://github.com/hakimel/reveal.js#dependencies
+        Reveal.initialize({
+            hash: true,
+            // maxScale: 1,
+            // minScale: 1,
+            history: true,
+
+            spotlight: {
+                toggleSpotlightOnMouseDown: false
+            },
+
+            keyboard: {
+                // 's' === 91
+                67: function() {
+                    RevealSpotlight.toggleSpotlight()
+                }
+            },
+
+            dependencies: [
+
+                {
+                    src: 'plugin/markdown/marked.js'
+                }, {
+                    src: 'plugin/markdown/markdown.js'
+                }, {
+                    src: 'plugin/notes/notes.js',
+                    async: true
+                }, {
+                    src: 'plugin/highlight/highlight.js',
+                    async: true
+                },
+                // ORIGINAL Highlight.js
+                // { src: 'plugin/highlight-original/highlight.pack.js', async: true },
+
+                // PLUGINS
+                {
+                    src: 'plugin/fullscreen/fullscreen-img.js'
+                }, {
+                    src: 'plugin/spotlight/spotlight.js'
+                }, {
+                    src: 'plugin/quiz/js/quiz.js',
+                    async: true,
+                    callback: function() {
+                        prepareQuizzes({});
+                    }
+                }, {
+                    src: 'plugin/reveal-code-focus/reveal-code-focus.js',
+                    async: true,
+                    callback: function() {
+                        RevealCodeFocus();
+                    }
+                },
+
+            ]
+        });
+    </script>
+</body>
+
+</html>
