@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Geolocation API</title>
+</head>
+
+<body>
+
+    <h1>Geolocation API</h1>
+    <div id="output"></div>
+
+    <script>
+
+        let output = document.querySelector('#output');
+
+        function geoSuccess( position ){
+            output.innerHTML = "Lat: " + position.coords.latitude + " / Lon: " + position.coords.longitude;            
+        }
+
+        function geoError( error ){
+            output.innerHTML = "Error code " + error.code + ": " + error.message;
+        }
+
+        if ( navigator.geolocation ) {
+
+            navigator.geolocation.getCurrentPosition( geoSuccess, geoError );
+
+        } else {
+
+            output.innerHTML = "Geolocation API Not Supported";
+
+        }
+
+    </script>
+</body>
+
+</html>
