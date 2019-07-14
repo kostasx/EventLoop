@@ -362,6 +362,10 @@
     <li>
       <a href="https://developer.mozilla.org/en-US/docs/Web/API"><strong>Web APIs</strong></a>
     </li>
+	  <li><strong>Drag and Drop API</strong></li>
+	  <ul>
+		  <li><a href="https://javascript.info/mouse-drag-and-drop">Drag'n'Drop with mouse events | JavaScript.info</a></li>
+	  </ul>
     <li>
 	    <strong>Geolocation API</strong>
 	    <ul>
