@@ -1053,13 +1053,201 @@
 
                 <!-- Basics -->
                 <section>
+                    <h2>The Basics</h2>
+                    <hr class="limit limit-medium limit-centered">
                     <div class="row text-left align-items-center">
-                        <div class="col-6">
-                            <h2>The Basics</h2>
+                        <div class="col-4 fragment">
+                            <img src="img/canvas-canvas.jpg" class="img-fluid">
+                            <h3>
+                                1) Add a <code>&lt;canvas&gt;</code> element in the webpage
+                            </h3>
+                        </div>
+                        <div class="col-4 fragment">
+                            <img src="img/canvas-context.jpg" class="img-fluid">
+                            <h3>
+                                2) Get access to the <code>&lt;canvas&gt;</code> drawing <code>context</code> (2D,3D)
+                            </h3>
+                        </div>
+                        <div class="col-4 fragment">
+                            <img src="img/canvas-rendering.jpg" class="img-fluid">
+                            <h3>3) Use the <code>context</code> Object <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D" target="_blank">methods and properties</a> to paint on the <code>canvas</code></h3>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Basics: Code -->
+                <section class="h-100 text-white" data-background="#000">
+                    <div class="row text-left h-100 align-items-center">
+                        <div class="col-4">
+                            <h2>The Code <span class="font-weight-light"></span></h2>
+
+                            <div class="subnote text-muted"></div>
+
+                            <h4 class="fragment mb-4" data-code-block="1" data-code-focus="1-3">1) Place a <code>&lt;canvas&gt;</code> element in your webpage</h4>
+
+                            <h4 class="fragment mb-4" data-code-block="2" data-code-focus="1">2) Get a reference to the canvas element via JavaScript</h4>
+
+                            <h4 class="fragment mb-4" data-code-block="2" data-code-focus="2">3) Get a reference to the canvas 2D Context</h4>
+
+                            <h4 class="fragment mb-4" data-code-block="2" data-code-focus="3">4) Start drawing using the 2D Context</h4>
+
+                            <h4 class="fragment mb-4" data-code-block="2" data-code-focus="1-3"></h4>
+
+                        </div>
+                        <div class="col-8">
+                            <p class="text-right">HTML</p>
+                            <pre><code class="hljs html reveal-code" contenteditable data-trim>
+                                    &lt;canvas id="canvas" width="200" height="100"&gt;&lt;/canvas&gt;
+    
+                                </code></pre>
+                            <p class="text-right">JavaScript</p>
+                            <pre><code class="hljs javascript reveal-code" contenteditable data-trim>
+                            const canvas = document.querySelector("#canvas");
+                            const context = canvas.getContext("2d");
+                            context.fillRect( 0, 0, 200, 100 );
+                            </code></pre>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Live Coding: <canvas> -->
+                <section class="w-100 h-100">
+                    <div id="livecode-canvas" class="text-left w-100 h-100"></div>
+                    <script src="https://flems.io/flems.html" type="text/javascript" charset="utf-8"></script>
+                    <script>
+                        Flems(document.querySelector("#livecode-canvas"), {
+                            console: false,
+                            reloadButton: false,
+                            files: [{
+                                name: 'html5-canvas.html',
+                                content: ''
+                            }, {
+                                name: 'style.css',
+                                content: 'canvas { border: 1px solid black; }'
+                            }, {
+                                name: 'script.js',
+                                content: ''
+                            }]
+                        })
+                    </script>
+                </section>
+
+                <!-- Coordinates -->
+                <section>
+                    <div class="row w-75 mx-auto">
+                        <div class="col">
+                            <img class="img-fluid" src="img/canvas-fillRect.jpg" alt="">
+                        </div>
+                    </div>
+                </section> 
+                    
+                <!-- Context Methods & Properties -->
+                <section>
+                    <div class="row text-left">
+                        <div class="col">
+                            <h2>Our Drawing Tools</h2>
                             <hr class="limit limit-medium">
+                            <h3>2D Context Methods &amp; Properties</h3>
+                            <hr>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D" target="_blank">MDN Reference</a>
+                        </div>
+                    </div>
+                    <div class="row text-left align-items-start">
+                        <div class="col-6">
+                            <ul class="fragment mb-3 mt-3 fade-in-then-semi-out">
+                                <li>
+                                    <h3>
+                                        <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle" target="_blank">context.fillStyle = &lt;COLOR&gt;
+                                        </a>
+                                    </h3></li>
+                                <li>
+                                    <h3>
+                                        <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fillRect" target="_blank">context.fillRect( x, y, width, height )
+                                        </a>
+                                    </h3></li>
+                                <li>
+                                    <h3>
+                                        <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/clearRect" target="_blank">context.clearRect( x, y, width, height )
+                                        </a>
+                                    </h3></li>
+                            </ul><ul class="fragment mb-3 mt-3 fade-in-then-semi-out">
+                                <li>
+                                    <h3>
+                                        <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/strokeStyle" target="_blank">context.strokeStyle = &lt;COLOR&gt;
+                                        </a>
+                                    </h3></li>
+                                <li>
+                                    <h3>
+                                        <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/strokeRect" target="_blank">context.strokeRect( x, y, width, height )
+                                        </a>
+                                    </h3></li>
+                            </ul><ul class="fragment mb-3 mt-3 fade-in-then-semi-out">
+                                <li>
+                                    <h3>
+                                        <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fillText" target="_blank">context.fillText( text, x, y )
+                                        </a>
+                                    </h3></li>
+                                <li>
+                                    <h3>
+                                        <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/strokeText" target="_blank">context.strokeText( text, x, y )
+                                        </a>
+                                    </h3>
+                                </li>
+                                <li>
+                                    <h3>
+                                        <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/font" target="_blank">context.font = "20px Arial"
+                                        </a>
+                                    </h3>
+                                </li>
+                            </ul>  
                         </div>
                         <div class="col-6">
-                            <h3 class="fragment my-5">1) ...</h3>
+                            <ul class="fragment mb-3 mt-3 fade-in-then-semi-out">
+                                <li>
+                                    <h3>
+                                        <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/beginPath" target="_blank">context.beginPath()
+                                        </a>
+                                    </h3></li>
+                                <li>
+                                    <h3>
+                                        <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineWidth" target="_blank">context.lineWidth = &lt;VALUE&gt;
+                                        </a>
+                                    </h3></li>
+                                <li>
+                                    <h3>
+                                        <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/moveTo" target="_blank">context.moveTo( x, y )
+                                        </a>
+                                    </h3></li>
+                                <li>
+                                    <h3>
+                                        <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineTo" target="_blank">context.lineTo( x, y )
+                                        </a>
+                                    </h3>
+                                </li>
+                                <li>
+                                    <h3>
+                                        <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fill" target="_blank">context.fill()
+                                        </a>
+                                    </h3>
+                                </li>
+                                <li>
+                                    <h3>
+                                        <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/stroke" target="_blank">context.stroke()
+                                        </a>
+                                    </h3>
+                                </li>
+                                <li>
+                                    <h3>
+                                        <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/closePath" target="_blank">context.closePath()
+                                        </a>
+                                    </h3></li>
+                            </ul><ul class="fragment mb-3 mt-3 fade-in-then-
+                            semi
+                            -out">
+                                <li><h3><a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/arc" target="_blank">context.arc( x, y, radius, startAngle, endAngle )
+                                    </a>
+                                </h3></li>
+                            </ul>  
                         </div>
                     </div>
                 </section>
@@ -1074,16 +1262,55 @@
                     </div>
                 </section>
 
+                <!-- Jamaica -->
+                <section>
+                    <h3><a href="https://en.wikipedia.org/wiki/Flag_of_Jamaica#/media/File:Flag_of_Jamaica.svg" target="_blank">Jamaica, Jamaica!</a></h3>
+                    <div class="container mx-auto text-center">
+                        <canvas id="jamaica" width="960" height="580"></canvas>
+                    </div>  
+                    <script>
+                        const canvas = document.querySelector("#jamaica");
+                        const ctx = canvas.getContext("2d");
+                        ctx.fillStyle = "#019b3a";
+                        ctx.fillRect(0,0,960,580);
+                        ctx.beginPath();
+                        ctx.moveTo(0,0);
+                        ctx.strokeStyle = "#fed114";
+                        ctx.lineWidth = 100;
+                        ctx.lineTo(960,580);
+                        ctx.stroke();
+                        ctx.moveTo(960,0);
+                        ctx.lineTo(0,580);
+                        ctx.stroke();
+                        ctx.closePath();
+
+                        ctx.beginPath();
+                        ctx.fillStyle = "black";
+                        ctx.moveTo(0,30);
+                        ctx.lineTo(420,280);
+                        ctx.lineTo(0,550);
+                        ctx.fill();
+                        ctx.closePath();
+
+                        ctx.beginPath();
+                        ctx.fillStyle = "black";
+                        ctx.moveTo(960,30);
+                        ctx.lineTo(540,280);
+                        ctx.lineTo(960,550);
+                        ctx.fill();
+                        ctx.closePath();
+                    </script>
+                </section>
+
                 <!-- Summary -->
                 <section data-background="#1a0838" class="text-white">
                     <h2 class="mb-5">Summing-Up</h2>
                     <hr class="limit limit-medium limit-centered limit-indigo">
                     <div class="row text-left align-items-start">
-                        <div class="col-6">
-                            <h3 class="my-5 fragment">1) ...</h3>
-                        </div>
-                        <div class="col-6">
-                            <h3 class="my-5 fragment">4) ...</h3>
+                        <div class="col-6 offset-3 text-center">
+                            <h3 class="my-5 fragment">1) Place Canvas</h3>
+                            <h3 class="my-5 fragment">2) Get Context</h3>
+                            <h3 class="my-5 fragment">2) Start Drawing!</h3>
                         </div>
                     </div>
                 </section>
@@ -1095,10 +1322,13 @@
                         <hr class="limit limit-small">
                         <ul class="list-unstyled">
                             <li>&rtrif;
-                                <a target="_blank" href="">... API | MDN</a>
+                                <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas API | MDN</a>
                             </li>
                             <li>&rtrif;
-                                <a target="_blank" href="">... | <i class="fab fa-youtube"></i> YouTube </a>
+                                <a target="_blank" href="https://www.w3schools.com/tags/ref_canvas.asp">HTML Canvas Reference | W3Schools.com</a>
+                            </li>
+                            <li>&rtrif;
+                                <a target="_blank" href="https://codepen.io/kostasx/pen/qwZXBW">Drawing the PacMan Figure using Canvas API</a>
                             </li>
                         </ul>
                     </div>
@@ -1117,12 +1347,10 @@
                             <hr class="limit limit-medium">
                             <h2>Web Storage API</h2>
                             <div class="subnote">Persistent Browser Data</div>
-                            <p class="serif fragment">...</p>
+                            <p class="serif"></p>
                         </div>
                         <div class="col-6">
-                            <div class="p-2">
-                                <img class="img-fluid" src="./img/drag-and-drop-example.gif" alt="">
-                            </div>
+                            <div class="p-2"></div>
                         </div>
                     </div>
                 </section>
