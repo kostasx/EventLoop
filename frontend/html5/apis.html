@@ -1139,8 +1139,8 @@
                             <img class="img-fluid" src="img/canvas-fillRect.jpg" alt="">
                         </div>
                     </div>
-                </section> 
-                    
+                </section>
+
                 <!-- Context Methods & Properties -->
                 <section>
                     <div class="row text-left">
@@ -1159,34 +1159,42 @@
                                     <h3>
                                         <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle" target="_blank">context.fillStyle = &lt;COLOR&gt;
                                         </a>
-                                    </h3></li>
+                                    </h3>
+                                </li>
                                 <li>
                                     <h3>
                                         <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fillRect" target="_blank">context.fillRect( x, y, width, height )
                                         </a>
-                                    </h3></li>
+                                    </h3>
+                                </li>
                                 <li>
                                     <h3>
                                         <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/clearRect" target="_blank">context.clearRect( x, y, width, height )
                                         </a>
-                                    </h3></li>
-                            </ul><ul class="fragment mb-3 mt-3 fade-in-then-semi-out">
+                                    </h3>
+                                </li>
+                            </ul>
+                            <ul class="fragment mb-3 mt-3 fade-in-then-semi-out">
                                 <li>
                                     <h3>
                                         <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/strokeStyle" target="_blank">context.strokeStyle = &lt;COLOR&gt;
                                         </a>
-                                    </h3></li>
+                                    </h3>
+                                </li>
                                 <li>
                                     <h3>
                                         <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/strokeRect" target="_blank">context.strokeRect( x, y, width, height )
                                         </a>
-                                    </h3></li>
-                            </ul><ul class="fragment mb-3 mt-3 fade-in-then-semi-out">
+                                    </h3>
+                                </li>
+                            </ul>
+                            <ul class="fragment mb-3 mt-3 fade-in-then-semi-out">
                                 <li>
                                     <h3>
                                         <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fillText" target="_blank">context.fillText( text, x, y )
                                         </a>
-                                    </h3></li>
+                                    </h3>
+                                </li>
                                 <li>
                                     <h3>
                                         <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/strokeText" target="_blank">context.strokeText( text, x, y )
@@ -1199,7 +1207,7 @@
                                         </a>
                                     </h3>
                                 </li>
-                            </ul>  
+                            </ul>
                         </div>
                         <div class="col-6">
                             <ul class="fragment mb-3 mt-3 fade-in-then-semi-out">
@@ -1207,17 +1215,20 @@
                                     <h3>
                                         <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/beginPath" target="_blank">context.beginPath()
                                         </a>
-                                    </h3></li>
+                                    </h3>
+                                </li>
                                 <li>
                                     <h3>
                                         <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineWidth" target="_blank">context.lineWidth = &lt;VALUE&gt;
                                         </a>
-                                    </h3></li>
+                                    </h3>
+                                </li>
                                 <li>
                                     <h3>
                                         <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/moveTo" target="_blank">context.moveTo( x, y )
                                         </a>
-                                    </h3></li>
+                                    </h3>
+                                </li>
                                 <li>
                                     <h3>
                                         <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineTo" target="_blank">context.lineTo( x, y )
@@ -1240,14 +1251,18 @@
                                     <h3>
                                         <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/closePath" target="_blank">context.closePath()
                                         </a>
-                                    </h3></li>
-                            </ul><ul class="fragment mb-3 mt-3 fade-in-then-
+                                    </h3>
+                                </li>
+                            </ul>
+                            <ul class="fragment mb-3 mt-3 fade-in-then-
                             semi
                             -out">
-                                <li><h3><a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/arc" target="_blank">context.arc( x, y, radius, startAngle, endAngle )
+                                <li>
+                                    <h3><a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/arc" target="_blank">context.arc( x, y, radius, startAngle, endAngle )
                                     </a>
-                                </h3></li>
-                            </ul>  
+                                    </h3>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </section>
@@ -1267,36 +1282,36 @@
                     <h3><a href="https://en.wikipedia.org/wiki/Flag_of_Jamaica#/media/File:Flag_of_Jamaica.svg" target="_blank">Jamaica, Jamaica!</a></h3>
                     <div class="container mx-auto text-center">
                         <canvas id="jamaica" width="960" height="580"></canvas>
-                    </div>  
+                    </div>
                     <script>
                         const canvas = document.querySelector("#jamaica");
                         const ctx = canvas.getContext("2d");
                         ctx.fillStyle = "#019b3a";
-                        ctx.fillRect(0,0,960,580);
+                        ctx.fillRect(0, 0, 960, 580);
                         ctx.beginPath();
-                        ctx.moveTo(0,0);
+                        ctx.moveTo(0, 0);
                         ctx.strokeStyle = "#fed114";
                         ctx.lineWidth = 100;
-                        ctx.lineTo(960,580);
+                        ctx.lineTo(960, 580);
                         ctx.stroke();
-                        ctx.moveTo(960,0);
-                        ctx.lineTo(0,580);
+                        ctx.moveTo(960, 0);
+                        ctx.lineTo(0, 580);
                         ctx.stroke();
                         ctx.closePath();
 
                         ctx.beginPath();
                         ctx.fillStyle = "black";
-                        ctx.moveTo(0,30);
-                        ctx.lineTo(420,280);
-                        ctx.lineTo(0,550);
+                        ctx.moveTo(0, 30);
+                        ctx.lineTo(420, 280);
+                        ctx.lineTo(0, 550);
                         ctx.fill();
                         ctx.closePath();
 
                         ctx.beginPath();
                         ctx.fillStyle = "black";
-                        ctx.moveTo(960,30);
-                        ctx.lineTo(540,280);
-                        ctx.lineTo(960,550);
+                        ctx.moveTo(960, 30);
+                        ctx.lineTo(540, 280);
+                        ctx.lineTo(960, 550);
                         ctx.fill();
                         ctx.closePath();
                     </script>
@@ -1325,10 +1340,16 @@
                                 <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas API | MDN</a>
                             </li>
                             <li>&rtrif;
-                                <a target="_blank" href="https://www.w3schools.com/tags/ref_canvas.asp">HTML Canvas Reference | W3Schools.com</a>
+                                <a target="_blank" href="https://www.w3schools.com/html/html5_canvas.asp">HTML Canvas | W3Schools.com</a>
                             </li>
-                            <li>&rtrif;
-                                <a target="_blank" href="https://codepen.io/kostasx/pen/qwZXBW">Drawing the PacMan Figure using Canvas API</a>
+                            <li>&rtrif; Drawing the PacMan Figure using Canvas API [
+                                <a target="_blank" href="https://codepen.io/kostasx/pen/XQdaKQ">Start</a> | <a target="_blank" href="https://codepen.io/kostasx/pen/qwZXBW?editors=0010">Finished</a> ]
+                            </li>
+                            <li>&rtrif; <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas tutorial</a>
+                            </li>
+                            <li>&rtrif; <a target="_blank" href="https://www.html5canvastutorials.com/">HTML5 Canvas Tutorials</a>
+                            </li>
+                            <li>&rtrif; <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes">Drawing shapes with canvas</a>
                             </li>
                         </ul>
                     </div>
@@ -1350,10 +1371,69 @@
                             <p class="serif"></p>
                         </div>
                         <div class="col-6">
-                            <div class="p-2"></div>
+                            <div class="p-2 text-left">
+                                <h3 class="mb-4 fragment">1) <strong>sessionStorage:</strong> Storage for each given origin available as long as the browser is open, including page reloads.</h3>
+                                <h3 class="mb-4 fragment">2) <strong>localStorage:</strong> Just like sessionStorage, but persists when the browser is closed and reopened.</h3>
+                                <h4 class="bg-warning py-2 px-4 fragment">Data gets cleared only through JavaScript. No expiration date.</h4>
+                                <h4 class="bg-warning py-2 px-4 fragment">Data is <strong>never</strong> transferred to the Server</h4>
+                            </div>
                         </div>
                     </div>
                 </section>
+
+                <!-- Basics: Code 1/X -->
+                <section class="h-100 text-white" data-background="#000">
+                    <div class="row text-left h-100 align-items-center">
+                        <div class="col-4">
+
+                            <h2>The Code <span class="font-weight-light"></span></h2>
+
+                            <div class="subnote text-muted"></div>
+
+                            <p class="fragment" data-code-block="1" data-code-focus="1"><code>1)</code> Check if <code>localStorage</code> is supported</p>
+
+                            <p class="fragment" data-code-block="1" data-code-focus="3"><code>2)</code> Store a key, value pair</p>
+
+                            <p class="fragment" data-code-block="1" data-code-focus="5"><code>3)</code> Retrieve a key value</p>
+
+                            <p class="fragment" data-code-block="1" data-code-focus="7"><code>4)</code> Get number of key/value pairs stored</p>
+
+                            <p class="fragment" data-code-block="1" data-code-focus="9"><code>5)</code> Get key value using index number</p>
+
+                            <p class="fragment" data-code-block="1" data-code-focus="11"><code>6)</code> Clear key/value pair</p>
+
+                            <p class="fragment" data-code-block="1" data-code-focus="13"><code>7)</code> Clear all key/value pairs</p>
+
+                            <p class="fragment" data-code-block="1" data-code-focus="16-20"><code>8)</code> Same rules apply for sessionStorage</p>
+
+                        </div>
+                        <div class="col-8">
+                            <p class="text-right">JavaScript</p>
+                            <pre><code class="hljs javascript reveal-code" contenteditable data-trim>
+                                if ( localStorage ){
+
+                                    localStorage.setItem( key, value );
+
+                                    localStorage.getItem( key );
+
+                                    localStorage.length;
+
+                                    localStorage.key( index );
+
+                                    localStorage.clearItem( key );
+
+                                    localStorage.clear();
+
+                                }
+
+                                if ( sessionStorage ){ 
+                                    sessionStorage.setItem( key, value ); 
+                                }
+                            </code></pre>
+                        </div>
+                    </div>
+                </section>
+
 
                 <!-- Basics -->
                 <section>
@@ -1399,7 +1479,7 @@
                         <hr class="limit limit-small">
                         <ul class="list-unstyled">
                             <li>&rtrif;
-                                <a target="_blank" href="">... API | MDN</a>
+                                <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API">Web Storage API | MDN</a>
                             </li>
                             <li>&rtrif;
                                 <a target="_blank" href="">... | <i class="fab fa-youtube"></i> YouTube </a>
