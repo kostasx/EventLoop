@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML5 APIs</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+    video, #current-time {
+        width: 100%;
+    }
+    </style>
+</head>
+<body class="bg-dark">
+    <div class="container border shadow mt-5 bg-white">
+        <div class="row">
+            <div class="col-6 border-right p-5">
+                <video class="border" controls poster="https://upload.wikimedia.org/wikipedia/commons/8/87/%281916%29_p116_Chaplin_%2814762003256%29.jpg" src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Charlie_Chaplin%2C_the_Marriage_Bond.ogv">
+                </video>
+                <p id="current-time" class="border p-3 mt-2 bg-info text-white">00:00</p>
+            </div>
+            <div class="col-6 p-5 d-flex justify-content-center align-content-center bg-light">
+                <canvas id="duration" width="400" height="400"></canvas>
+            </div>
+        </div>
+    </div>
+    <script>
+        let video = document.querySelector('video');
+        let currentTimeEl = document.querySelector("#current-time");
+
+        function padNumber( number ){
+
+            return ( number < 10 ) ? "0" + number : number;            
+
+        }
+
+        function handleTimeUpdate( event ){
+
+            let currentTime = this.currentTime.toFixed();
+            let minutes = Math.floor( currentTime / 60 );
+            let seconds = currentTime % 60;
+            let time = padNumber( minutes ) + ":" + padNumber( seconds ); 
+            currentTimeEl.innerHTML = time;
+            if ( localStorage ){
+                localStorage.setItem( "currentTime", this.currentTime );
+            }
+
+            drawProgress( this.currentTime / this.duration, time );
+
+        }
+
+        function handleVideoLoad(){
+
+            if ( localStorage ){
+                let currentTime = localStorage.getItem( "currentTime" );
+                if ( currentTime ){
+                    video.currentTime = currentTime;
+                }
+                
+            }
+
+        }
+
+        function drawProgress( part, time ){
+
+            let canvas = document.querySelector("#duration");
+            let ctx = canvas.getContext("2d");
+            let fullCircle = 2 * Math.PI;
+            ctx.clearRect( 0, 0, 400, 400 );
+            ctx.lineWidth = 40;
+            ctx.beginPath();
+            ctx.strokeStyle = "#f0f0f0";
+            ctx.arc( 200, 200, 100, 0, fullCircle * 1 );
+            ctx.stroke();
+            ctx.closePath();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "indigo";
+            ctx.arc( 200, 200, 100, 0, fullCircle * part );
+            ctx.stroke();
+            ctx.closePath();
+
+            ctx.font = "24px Arial";
+            ctx.textAlign = "left";
+            ctx.fillText( time, 170, 200 );
+
+
+        }
+
+        video.addEventListener( "timeupdate", handleTimeUpdate );
+
+        video.addEventListener( "loadedmetadata", handleVideoLoad );
+
+</script>
+</body>
+</html>
