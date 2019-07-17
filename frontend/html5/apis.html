@@ -322,7 +322,8 @@
                             <h3 class="mb-0">Code Time!</h3>
                             <h6 class="text-muted-plus fragment mt-3 mb-5">( Class-Practice-01 )</h6>
                             <p class="serif fragment">1) Create an HTML page</p>
-                            <p class="serif fragment">2) Add a <strong>&lt;video&gt;&lt;/video&gt;</strong> element (Use <a href="https://upload.wikimedia.org/wikipedia/commons/5/5d/Charlie_Chaplin%2C_the_Marriage_Bond.ogv">this source</a>)</p>
+                            <p class="serif fragment">2) Add a <strong>&lt;video&gt;&lt;/video&gt;</strong> element (Use <a target="_blank" href="https://upload.wikimedia.org/wikipedia/commons/5/5d/Charlie_Chaplin%2C_the_Marriage_Bond.ogv">this source</a>)</p>
+                            <p class="serif fragment">2.1) Add a poster attribute. (Use <a target="_blank" href="https://upload.wikimedia.org/wikipedia/commons/8/87/%281916%29_p116_Chaplin_%2814762003256%29.jpg">this source</a>)</p>
                             <p class="serif fragment">3) Add a <strong>&lt;script&gt;&lt;/script&gt;</strong> tag just before the closing &lt;/body&gt; tag</p>
                             <p class="serif fragment">4) Use <code>document.querySelector()</code> to target the video element and store it in a variable named <code>video</code></p>
                             <p class="serif fragment">5) Use Media API methods</p>
@@ -333,6 +334,8 @@
                             <code class="hljs fragment mb-4" data-trim contenteditable>video.pause();</code>
                             <code class="hljs fragment mb-4" data-trim contenteditable>Combine setTimeout and play/pause</code>
                             <code class="hljs fragment mb-4" data-trim contenteditable>Combine the click event with play/pause </code>
+                            <p class="fragment bg-warning rounded py-2 pl-4">Challenge #1: apply background fade effect on play/pause</p>
+                            <p class="fragment bg-warning rounded py-2 pl-4">Challenge #2: Attach Play/Pause events directly on the video</p>
                             <p class="fragment">Properties:</p>
                             <code class="hljs html fragment mb-4" data-trim contenteditable>video.duration;</code>
                             <code class="hljs html fragment mb-4" data-trim contenteditable>video.currentTime; // GET</code>
@@ -1442,6 +1445,25 @@
                         <div class="col text-center">
                             <div class="subnote mt-0">ENOUGH THEORY</div>
                             <h2>Let's Code!</h2>
+                        </div>
+                    </div>
+                </section>
+                    
+                <!-- Exercise -->
+                <section>
+                    <div class="row">
+                        <div class="col-6 text-left">
+                            <h3>1) Get video element</h3>
+                            <h3>2) Get Current Time element</h3>
+                            <h3>3) Make the &lt;video&gt; listen on the timeupdated event</h3>
+                            <h3>4) Get currentTime </h3>
+                            <h3>5) Set Current time element innerHTML </h3>
+                            <h3>6) Store currentTime in localStorage</h3>
+                            <h3>7) When page loads, get currentTime from localStorage</h3>
+                            <h3>8) Set currentTime</h3>
+                        </div>
+                        <div class="col-6">
+                            <img class="img-fluid" src="img/video-panel.jpg"> 
                         </div>
                     </div>
                 </section>
