@@ -32,6 +32,12 @@
 <details>
   <summary>Key Concepts and Principles​</summary>
   <p>Syllabus: 4.1.1 ~ 4.1.3</p>
+
+  <h4>Resources</h4>
+  <ul>
+	<li><a href="https://codeburst.io/10-steps-to-solving-a-programming-problem-8a32d1e96d74">10 Steps to Solving a Programming Problem</a></li>
+  </ul>
+
   <h4>References</h4>
   <ul>
   <li><a href="https://marksheet.io/introduction.html">The Web for Absolute Beginners</a></li>
