@@ -411,7 +411,7 @@
   <ul>
   <li><strong>Question: </strong><i>What is the difference between .ogg, .ogv and .oga?</i><br><strong>Answer: </strong>There's difference between .ogg and .ogv. Ogg may be used for both audio and video content. Ogv is a video file container. Initially, .ogg format served for both audio and video files.
     But now (usually) .ogv is used for video files and .ogg or .oga for audio files.</li>
-  <li><strong>Question: </strong><i>How to get the current cursor position in an iframe?</i><br><strong>Answer: </strong> You can use the postMessage API to send data from the iframe to the parent page or vice versa. Here's a simple example:
+  <li id="how-to-get-the-current-cursor-position-in-an-iframe"><strong>Question: </strong><i>How to get the current cursor position in an iframe?</i><br><strong>Answer: </strong> You can use the postMessage API to send data from the iframe to the parent page or vice versa. Here's a simple example:
   
   <code>parent.html:</code>
   <pre><code>&lt;html&gt;&#10;&lt;head&gt;
