@@ -200,8 +200,18 @@
     </li>
     <li><strong>Box Model:</strong>
 <ul>
-<li><a href="https://learn.shayhowe.com/html-css/opening-the-box-model/">Opening the Box Model</a></li>
-    </ul>
+  <li><a href="https://learn.shayhowe.com/html-css/opening-the-box-model/">Opening the Box Model</a></li>
+  <li><a href="https://www.youtube.com/watch?v=d601NaSSqSE">Box Model Review | NetNinja Video</a></li>
+  <li><a href="https://www.youtube.com/watch?v=l8NH6YppJFA">Normal Document Flow</a></li>
+  </ul>
+</li>
+<li><strong>CSS Positioning:</strong>
+  <ul>
+    <li><a href="https://www.youtube.com/watch?v=YBJqKWXL2vg">CSS Position Relative | NetNinja Video</a></li>
+    <li><a href="https://www.youtube.com/watch?v=2JMGG_8T-vY">CSS Absolute Position | NetNinja Video</a></li>
+    <li><a href="https://www.youtube.com/watch?v=8fQWx-d5qc8">CSS Fixed Position | NetNinja Video</a></li>
+    <li><a href="https://www.youtube.com/watch?v=VwxGKpvW8Zk">CSS Floating Elements | NetNinja Video</a></li>
+  </ul>
 </li>
 
 <li><strong>CSS Animations:</strong>
