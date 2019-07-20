@@ -221,6 +221,9 @@
       	<a href="https://scrimba.com/g/gintrotocss" target="_blank">Introduction to CSS (scrimba.com)</a>
       </li>
 	  <li>
+      	<a href="https://www.youtube.com/playlist?list=PL4cUxeGkcC9gQeDH6xYhmO-db2mhoTSrT" target="_blank">CSS Tutorials For Beginners (YouTube Video Playlist)</a>
+      </li>
+	  <li>
       	<a href="https://jgthms.com/web-design-in-4-minutes/" target="_blank">Learn the basics of web design in 4 minutes</a>
       </li>
 	<li>
