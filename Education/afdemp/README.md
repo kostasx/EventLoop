@@ -411,6 +411,34 @@
   <ul>
   <li><strong>Question: </strong><i>What is the difference between .ogg, .ogv and .oga?</i><br><strong>Answer: </strong>There's difference between .ogg and .ogv. Ogg may be used for both audio and video content. Ogv is a video file container. Initially, .ogg format served for both audio and video files.
     But now (usually) .ogv is used for video files and .ogg or .oga for audio files.</li>
+  <li><strong>Question: </strong><i>How to get the current cursor position in an iframe?</i><br><strong>Answer: </strong> You can use the postMessage API to send data from the iframe to the parent page or vice versa. Here's a simple example:
+  
+  <code>parent.html:</code>
+  <pre><code>&lt;html&gt;&#10;&lt;head&gt;
+    &lt;title&gt;Parent&lt;/title&gt;&#10;&lt;/head&gt;&#10;&lt;body&gt;&#10;
+&lt;h1&gt;Parent&lt;/h1&gt;&#10;
+&lt;iframe src=&quot;child.html&quot; frameborder=&quot;1&quot;&gt;&lt;/iframe&gt;&#10;
+&lt;script&gt;&#10;
+window.addEventListener(&quot;message&quot;, function(e) {&#10;
+    console.log( &quot;Cursor X and Y from iframe: &quot;, e.data );&#10;
+});&#10;
+&lt;/script&gt;&#10;&lt;/body&gt;&#10;&lt;/html&gt;
+</code></pre>
+<code>child.html:</code><br><br>
+<pre><code>&lt;html&gt;&#10;&lt;head&gt;
+    &lt;title&gt;Child&lt;/title&gt;&#10;&lt;/head&gt;&#10;&lt;body&gt;&#10;
+&lt;h1&gt;Child&lt;/h1&gt;&#10;
+&lt;script&gt;&#10;
+document.body.addEventListener(&quot;mousemove&quot;, function(e) {&#10;
+    window.parent.postMessage({
+      x: e.clientX,
+      y: e.clientY
+   }, &quot;*&quot;);&#10;
+});&#10;
+&lt;/script&gt;&#10;&lt;/body&gt;&#10;&lt;/html&gt;</code></pre>
+
+</li>
+
   </ul>
 
 
