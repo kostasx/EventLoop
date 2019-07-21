@@ -1,0 +1,172 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Open Sans Condensed', Impact, Helvetica, Arial, Sans-serif;
+}
+
+h1 {
+    font-size: 5rem;
+    line-height: 6rem;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 3.2rem;
+    line-height: 3.8rem;
+    font-weight: 600;
+}
+
+.headlight {
+    font-size: 6rem;
+    font-weight: 100;
+}
+
+p.description {
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+
+hr.limit {
+    background: #DB2B7B;
+    background: orange;
+    height: 10px;
+    max-width: 100px;
+    margin: 35px 0;
+}
+hr.limit-dark {
+    background: black;
+}
+
+hr.limit-medium {
+    height: 3px;
+    max-width: 80px;
+    margin: 30px 0;
+}
+
+hr.limit-small {
+    height: 4px;
+    max-width: 50px;
+    margin: 30px 0;
+}
+
+hr.limit-centered {
+    margin: 30px auto;
+}
+
+hr.limit-indigo {
+    background: #b968ae;
+}
+
+.numlist {
+    list-style: none;
+}
+
+.numlist li {
+    display: flex;
+    align-items: center;
+}
+
+.numlist li div:first-child {
+    font-family: 'Open Sans Condensed', Impact, Helvetica, Arial, Sans-serif;
+    font-size: 6rem;
+    font-weight: 100;
+    line-height: 7rem;
+    margin-right: 16px;
+}
+
+.numlist li div:last-child {
+    font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+    font-size: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    font-weight: 100;
+}
+
+.numlist li div:last-child span:first-child {
+    font-weight: 600;
+}
+
+.subnote {
+    font-size: 1rem;
+    margin: 16px 0;
+}
+
+.serif {
+    font-size: 1.125rem;
+    font-weight: 100;
+    font-family: Georgia, serif;
+}
+
+.serif strong {
+    font-weight: bold;
+}
+
+.thin {
+    font-weight: 100 !important;
+}
+
+.hljs--DISABLED {
+    white-space: nowrap;
+}
+.flems-code {
+    width: 100vw;
+    height: 100vh;
+}
+.highlight {
+    color: orange;
+}
+
+.references ul {
+    font-size: 1.2rem;
+}
+.references hr.limit {
+    background-color: #52750c;
+}
+.references ul li a,
+.references ul li {
+    color:black;
+}
+.references ul li a {
+    font-weight: bold;
+}
+
+.opaque-40 { opacity: .4 }
+.opaque-50 { opacity: .5 }
+
+/* REVEAL CODE FOCUS PLUGIN */
+.reveal-code .line { 
+    display: block;
+    opacity: 0.3;
+}
+.reveal-code .line.focus { opacity: 1; }
+
+.text-muted-plus {
+    color: #bfbfbf!important;
+}
+.has-dark-background a {
+    color: orange;
+}
+
+h3 code {
+    font-family: 'Open Sans Condensed', Impact, Helvetica, Arial, sans-serif;
+}
+
+/* Added in React.JS */
+.bg-center-x {
+    background-position: 50% 0 !important
+}
+.bg-center-y {
+    background-position: 0 50% !important
+}
+.bg-center {
+    background-position: 50% 50% !important
+}
+.white-space-pre-line {
+    white-space: pre-line;
+}
+.font-size-100 {
+    font-size: 100% !important;
+}

@@ -1,0 +1,1118 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>ReactJS | Fundamentals</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reveal.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/hybrid.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+    <!-- CUSTOM -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/reveal-custom.css">
+
+    <!-- PLUGINS -->
+    <link rel="stylesheet" href="plugin/fullscreen/fullscreen-img.css">
+
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- Main Title -->
+            <section class="row" data-background="#272c34" style="background-image:url(img/reactjs-logo.svg); background-repeat:no-repeat; background-position: 100% 0;">
+                <div class="col-6 text-left text-white">
+                    <h1 style="color:#61dafb">ReactJS</h1>
+                    <hr class="limit" style="background-color: #247c94">
+                    <h2 class="font-weight-light mb-5">Fundamentals</h2>
+                    <p class="description"></p>
+                    <p>Curated by <strong>Kostas Minaidis</strong> <span class="opaque-40">| Updated: 21/07/2019</span></p>
+                </div>
+            </section>
+
+            <!-- Agenda / ToC -->
+            <section data-background="#000" class="text-white">
+                <div class="row">
+                    <div class="col-6 text-left">
+                        <h1>Agenda</h1>
+                        <hr class="limit limit-small">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 text-left">
+                        <ul class="numlist pl-0">
+
+                            <!-- border -->
+                            <li class="fragment fade-in-then-semi-out">
+                                <div>01</div>
+                                <div>
+                                    <span>What is React.JS?</span>
+                                    <span></span>
+                                </div>
+                            </li>
+
+                            <!-- width/height -->
+                            <li class="fragment fade-in-then-semi-out">
+                                <div>02</div>
+                                <div>
+                                    <span>Prerequisites: ES6 &amp; Create React App</span>
+                                    <span></span>
+                                </div>
+                            </li>
+
+                            <!-- float / clear -->
+                            <li class="fragment fade-in-then-semi-out">
+                                <div>03</div>
+                                <div>
+                                    <span>JSX</span>
+                                    <span></span>
+                                </div>
+                            </li>
+
+                            <!-- display -->
+                            <li class="fragment fade-in-then-semi-out">
+                                <div>04</div>
+                                <div>
+                                    <span>Components</span>
+                                    <span></span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6 text-left">
+                        <ul class="numlist pl-0">
+
+                            <!-- list-style -->
+                            <li class="fragment fade-in-then-semi-out">
+                                <div>05</div>
+                                <div>
+                                    <span>Form Handling</span>
+                                    <span></span>
+                                </div>
+                            </li>
+
+                            <!-- pseudo classes -->
+                            <li class="fragment fade-in-then-semi-out">
+                                <div>06</div>
+                                <div>
+                                    <span>Routing</span>
+                                    <span></span>
+                                </div>
+                            </li>
+
+                            <!-- animations & sprites -->
+                            <li class="fragment fade-in-then-semi-out">
+                                <div>07</div>
+                                <div>
+                                    <span>React Hooks</span>
+                                    <span></span>
+                                </div>
+                            </li>
+
+                            <!-- menus -->
+                            <li class="fragment">
+                                <div>08</div>
+                                <div>
+                                    <span>Resources</span>
+                                    <span></span>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- What is React.JS -->
+            <section>
+
+                <!-- What is React.JS? -->
+                <section>
+                    <div class="row text-left align-items-end">
+                        <div class="col-6">
+                            <h1 class="headlight">01</h1>
+                            <hr class="limit limit-medium">
+                            <h2>What is React.JS?</h2>
+                            <div class="subnote"></div>
+                        </div>
+                        <div class="col-6">
+                            <p class="serif fragment">A JavaScript library for building user interfaces using <a href="https://reactjs.org/docs/components-and-props.html" target="_blank">Components</a> that manage their own <span class="fragment highlight-red">State</span>.</p>
+                            <p class="serif fragment">Components let you split the UI into <span class="fragment highlight-red">independent</span>, <span class="fragment highlight-red">reusable</span> pieces, and think about each piece in isolation.</p>
+                            <p class="serif fragment">It uses the <a href="https://reactjs.org/docs/faq-internals.html#what-is-the-virtual-dom" target="_blank">Virtual DOM</a> and <a href="https://reactjs.org/docs/introducing-jsx.html" target="_blank">JSX</a> technologies to accomplish
+                                that.
+                            </p>
+                            <p class="serif fragment">React was developed by engineers at Facebook.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Breaking down our App into Components 1/3 -->
+                <section data-background="indigo">
+                    <div class="row text-white">
+                        <div class="col-8 offset-2">
+                            <h2>
+                                Breaking down our Web App<br>into Components
+                                <br>
+                                <i class="mt-5 fas fa-chevron-circle-down"></i>
+                            </h2>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Breaking down our App into Components 2/3 -->
+                <section>
+                    <div class="row text-center">
+                        <div class="col-10 offset-1 text-center">
+                            <img class="img-fluid" src="img/components-planning.jpg" alt="">
+                            <p class="font-italic mt-3 text-muted text-center">Image courtesy of <a href="https://www.youtube.com/watch?v=_ZTT9kw3PIE" target="_blank">Le Wagon</a></p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Breaking down our App into Components 3/3 -->
+                <section>
+                    <div class="row text-center">
+                        <div class="text-center">
+                            <img class="img-fluid" src="img/components-sketching.jpg" alt="">
+                            <p class="font-italic mt-3 text-muted text-center">Image courtesy of <a href="https://www.youtube.com/watch?v=_ZTT9kw3PIE" target="_blank">Le Wagon</a></p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Why React.JS? -->
+                <section>
+                    <div class="row text-left align-items-end">
+                        <div class="col-6">
+                            <h1 class="headlight"></h1>
+                            <h2>Why React.JS?</h2>
+                            <hr class="limit limit-medium">
+                            <div class="subnote"></div>
+                        </div>
+                        <div class="col-6">
+                            <p class="serif fragment">It's mostly targeted at projects which need performant DOM manipulations, like Facebook, AirBnB, etc. where a lot of areas update constantly.</p>
+                            <p class="serif fragment">It is also a way to work by splitting the interface and app features into components.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- What is VirtualDOM? 1/3 -->
+                <section>
+                    <div class="row text-left align-items-end">
+                        <div class="col-6">
+                            <h1 class="headlight"></h1>
+                            <h2>What the heck is VirtualDOM?</h2>
+                            <hr class="limit limit-medium">
+                            <div class="subnote"></div>
+                        </div>
+                        <div class="col-6"></div>
+                    </div>
+                </section>
+
+                <!-- What is VirtualDOM? 2/3 -->
+                <section>
+                    <div class="row text-center">
+                        <div class="col">
+                            <iframe width="960" height="540" src="https://www.youtube.com/embed/jwRAdGLUarw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- What is VirtualDOM? 3/3 -->
+                <section>
+                    <div class="row text-left align-items-end">
+                        <div class="col-6">
+                            <h1 class="headlight"></h1>
+                            <h2>VirtualDOM<br>in a nutshell</h2>
+                            <hr class="limit limit-medium">
+                            <div class="subnote"></div>
+                        </div>
+                        <div class="col-6">
+                            <p class="serif fragment">Whenever something needs to be re-rendered, a virtual representation of the updated DOM is generated.</p>
+                            <p class="serif fragment">The Virtual DOM consists of light representations of elements modeled after the component tree, making the process of generating them much more efficient than generating real DOM elements.</p>
+                            <p class="serif fragment">Before applying the changes to the real DOM, checks are done to determine where exactly in the component tree the changes happened, a diff is created, and only those specific changes are applied.</p>
+                            <p class="serif fragment">Source: <a href="https://www.toptal.com/react-native/cold-dive-into-react-native-a-beginners-tutorial" target="_blank">TopTal</a></p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- References -->
+                <section data-background="yellowgreen" class="references text-white">
+                    <div class="col-8 text-left">
+                        <h2>References &amp; Sources:</h2>
+                        <hr class="limit limit-small">
+                        <ul class="list-unstyled">
+                            <li>&rtrif;
+                                <a target="_blank" href="https://bitsofco.de/understanding-the-virtual-dom/">Understanding the Virtual DOM</a>
+                            </li>
+                            <li>&rtrif;
+                                <a target="_blank" href="https://reactjs.org/docs/faq-internals.html#what-is-the-virtual-dom">What is the Virtual DOM?</a>
+                            </li>
+                            <li>&rtrif;
+                                <a target="_blank" href="https://www.youtube.com/watch?v=jwRAdGLUarw">Virtual DOM | Codecademy YouTube Video</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </section>
+
+            </section>
+
+            <!-- General Front-end Framework Concepts -->
+            <section>
+                <div class="row text-left align-items-end">
+                    <div class="col-5">
+                        <h2>Front-end Frameworks</h2>
+                        <div class="subnote"></div>
+                        <hr class="limit limit-medium">
+                        <h3>General Concepts</h3>
+                    </div>
+                    <div class="col-7">
+                        <ul>
+                            <li class="fragment">
+                                <h3><strong>COMPONENTS:</strong> Split UI into independent, isolated, reusable pieces.</h3>
+                            </li>
+                            <li class="fragment">
+                                <h3><strong>PROPS:</strong> Data passed into a COMPONENT</h3>
+                            </li>
+                            <li class="fragment">
+                                <h3><strong>STATE:</strong> Private COMPONENT data</h3>
+                            </li>
+                            <li class="fragment">
+                                <a href="img/props-vs-state.jpg" target="_blank">Props vs State</a>
+                            </li>
+                            <li class="fragment">
+                                <h3><strong>LIFE CYCLE:</strong> Different forms in which a component can exist: mounted, destroyed, etc.</h3>
+                                <ul class="ml-4">
+                                    <li class="fragment">
+                                        <h3><strong>MOUNT:</strong> constructor, render, componentDidMount</h3>
+                                    </li>
+                                    <li class="fragment">
+                                        <h3><strong>UPDATE:</strong> render, componentDidUpdate</h3>
+                                    </li>
+                                    <li class="fragment">
+                                        <h3><strong>UNMOUNT:</strong> componentWillUnmount</h3>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Our Tools -->
+            <section data-background="#000" class="text-white">
+                <div class="row text-left align-items-start">
+                    <div class="col-6">
+                        <h2>Our Tools</h2>
+                        <div class="subnote"></div>
+                        <hr class="limit limit-medium">
+                        <h3></h3>
+                    </div>
+                    <div class="col-6">
+                        <ul>
+                            <li class="fragment mb-3">
+                                <h3><a href="https://github.com/facebook/create-react-app" target="_blank">Create-React-App</a></h3>
+                                <h4>Create React apps with no build configuration.</h4>
+                            </li>
+                            <li class="fragment mb-3">
+                                <h3><a href="https://marketplace.visualstudio.com/items?itemName=burkeholland.simple-react-snippets" target="_blank">Simple React Snippets</a></h3>
+                                <h4>Package for Visual Studio Code</h4>
+                            </li>
+                            <li class="fragment mb-3">
+                                <h3><a href="https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en" target="_blank">React Developer Tools</a></h3>
+                                <h4>Chrome Extension</h4>
+                            </li>
+                            <li class="fragment mb-3">
+                                <h3><a href="https://codesandbox.io/" target="_blank">Code Sandbox</a></h3>
+                                <h4>Virtual Environment</h4>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ES6 & create-react-app -->
+            <section>
+
+                <!-- ES6 1/2 -->
+                <section>
+                    <div class="row text-left align-items-end">
+                        <div class="col-6">
+                            <h1 class="headlight">02</h1>
+                            <hr class="limit limit-medium">
+                            <h2>Prerequisites: ES6<br>&amp; setting up CRA</h2>
+                            <div class="subnote"></div>
+                        </div>
+                        <div class="col-6">
+                            <p class="serif fragment">Before moving forward, ensure that you have <a href="https://nodejs.org/en/" target="_blank">Node.JS</a> installed on your computer.</p>
+                            <p class="serif">
+                                <pre>
+                                    <code class="fragment hljs shell">$ node --version</code>
+                                    <code class="fragment hljs shell">v12.4.0</code>
+                                </pre>
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ES6 2/2 -->
+                <section>
+                    <div class="row text-left align-items-end">
+                        <div class="col-6">
+                            <h2>ES6 Modules &amp; Destructuring Assignment</h2>
+                            <hr class="limit limit-medium">
+                            <h3>A Quick Tour...</h3>
+                        </div>
+                        <div class="col-6">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Destructuring Assignemnt -->
+                <section data-background="#000" class="text-white">
+                    <div class="row text-left">
+                        <div class="col-4">
+                            <h2>Destructuring Assignment</h2>
+                            <div class="subnote text-muted">Object <span class="highlight">destructuring</span></div>
+                        </div>
+                        <div class="col-8">
+                            <pre class="fragment my-0 white-space-pre-line">
+                                <code class="hljs javascript my-0" contenteditable data-trim data-line-numbers>
+                                    let React = { Component: "My Component", Render: "Render!" }
+                                    let { Component } = React;
+                                    console.log( Component );
+                                </code>
+                                <code class="hljs javascript my-0 fragment" contenteditable data-trim>
+                                    =&gt; "My Component"
+                                </code>
+                                <code class="hljs javascript my-0 fragment" contenteditable data-trim data-line-numbers="1,1-2">
+                                    const { Component, Render } = React;
+                                    console.log( Component, Render );
+                                </code>
+                                <code class="hljs javascript my-0 fragment" contenteditable data-trim>
+                                    =&gt; "My Component", "Render!"
+                                </code>
+                                <h3 class="fragment text-white">Custom Names:</h3>
+                                <code class="hljs javascript fragment" contenteditable data-trim data-line-numbers>
+                                    let { Component:customName } = React;
+                                    console.log( customName );
+                                </code>
+                                <code class="hljs javascript fragment" contenteditable data-trim>
+                                    =&gt; "My Component"
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Default Exports -->
+                <section data-background="#000" class="text-white">
+                    <div class="row text-left">
+                        <div class="col-4">
+                            <h2>ES6 Modules</h2>
+                            <h3>Default Exports: <span class="highlight">one per module</span></h3>
+                        </div>
+                        <div class="col-8">
+                            <h3 class="fragment text-white">lib.js:</h3>
+                            <pre class="fragment my-0">
+                                    <code class="hljs javascript my-0" contenteditable data-trim data-line-numbers>
+                                        function myApp(){ 
+                                            console.log( "Bingo!" );
+                                        }
+                                        export default myApp;
+                                    </code>
+                            </pre>
+                            <h3 class="fragment text-white">main.js:</h3>
+                            <pre>
+                                <code class="hljs javascript fragment" contenteditable data-trim data-line-numbers>
+                                    import importedApp from './lib.js';
+                                    importedApp(); 
+                                </code>
+                                <code class="hljs javascript fragment" contenteditable data-trim>
+                                    =&gt; "Bingo!"
+                                </code>
+                            </pre>
+                            <p class="fragment"><a target="_blank" href="https://codesandbox.io/s/es6-modules-default-exports-e7c1k">[ Demo ]</a></p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Named Exports -->
+                <section data-background="#000" class="text-white">
+                    <div class="row text-left">
+                        <div class="col-4">
+                            <h2>ES6 Modules</h2>
+                            <h3>Named Exports: <span class="highlight">Many per module</span></h3>
+                            <p class="subnotes text-muted">You cannot assign to imported variables, no matter how you declare the corresponding variables in the module.</p>
+                        </div>
+                        <div class="col-8">
+                            <h3 class="fragment text-white">lib.js:</h3>
+                            <pre class="fragment my-0">
+                                    <code class="hljs javascript my-0" contenteditable data-trim data-line-numbers>
+                                    function myApp() {
+                                        console.log("Bingo!");
+                                    }
+                                    const message = "Message!";
+                                    export { myApp, message };
+                                    export let moduleKey = 12345;
+                                    </code>
+                            </pre>
+                            <h3 class="fragment text-white">main.js:</h3>
+                            <pre>
+                                <code class="hljs javascript fragment" contenteditable data-trim data-line-numbers>
+                                import { moduleKey, myApp, message } from "./lib.js";
+                                myApp();
+                                console.log(message);
+                                console.log(moduleKey);
+                                </code>
+                                <code class="hljs javascript fragment" contenteditable data-trim>
+                                    =&gt; "Bingo!"
+                                    =&gt; "Message!"
+                                    =&gt; 12345
+                                </code>
+                            </pre>
+                            <p class="fragment">
+                                <a target="_blank" href="https://codesandbox.io/s/es6-modules-named-exports-llcmb">[ Demo ]</a>
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- References -->
+                <section data-background="yellowgreen" class="references text-white">
+                    <div class="col-8 text-left">
+                        <h2>References &amp; Sources:</h2>
+                        <hr class="limit limit-small">
+                        <ul class="list-unstyled">
+                            <li>&rtrif;
+                                <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export">export | MDN</a>
+                            </li>
+                            <li>&rtrif;
+                                <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import">import | MDN</a>
+                            </li>
+                            <li>&rtrif;
+                                <a target="_blank" href="https://exploringjs.com/es6/ch_modules.html#sec_basics-of-es6-modules">ES6 Modules | ExploringJS</a>
+                            </li>
+                            <li>&rtrif;
+                                <a target="_blank" href="https://medium.com/@etherealm/named-export-vs-default-export-in-es6-affb483a0910">Named Export vs Default Export in ES6</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </section>
+
+
+            </section>
+
+            <!-- JSX -->
+            <section>
+
+                <!-- JSX -->
+                <section>
+                    <div class="row text-left align-items-center">
+                        <div class="col-6">
+                            <h1 class="headlight">03</h1>
+                            <hr class="limit limit-medium">
+                            <h2>JSX: JavaScript XML</h2>
+                            <div class="subnote"></div>
+                        </div>
+                        <div class="col-6">
+                            <h4 class="fragment"><i class="fas fa-caret-right"></i> Smart Syntax using HTML + JS: JSX elements are treated as JavaScript expressions. </h4>
+                            <pre class="white-space-pre-line">
+                                <code class="hljs javascript fragment" contenteditable data-trim>
+                                    let jsx = &lt;h1&gt;Title&lt;/h1&gt;;
+                                </code>
+                            </pre>
+                            <h4 class="fragment mt-0"><i class="fas fa-caret-right"></i> JSX elements can be saved in variables, passed to a function, stored in an object or array...you name it.</h4>
+                            <pre class="white-space-pre-line">
+                                <code class="hljs html fragment" contenteditable data-trim>
+                                    let elements = [ &lt;h1&gt;Title&lt;/h1&gt;, &lt;p&gt;Text&lt;/p&gt; ];
+                                </code>
+                            </pre>
+                            <h4 class="fragment"><i class="fas fa-caret-right"></i> If a JSX expression takes up more than one line, you must wrap it in parentheses.</h4>
+                            <pre class="">
+                                <code class="hljs html fragment" contenteditable data-trim>
+                                    let header = (
+                                        &lt;h1&gt;Title&lt;/h1&gt;
+                                        &lt;h2&gt;Subtitle&lt;/h2&gt;
+                                    );
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Codesandbox Link -->
+                <section data-background="indigo">
+                    <div class="row text-white p-5">
+                        <div class="col text-center">
+                            <div class="subnote mt-0 text-uppercase">Practice Online</div>
+                            <h2>
+                                <a href="https://codesandbox.io/u/kostasx/" target="_blank">Codesandbox</a>
+                            </h2>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Quickstart -->
+                <section class="h-100 text-white" data-background="#000">
+                    <div class="row text-left h-100 align-items-center">
+                        <div class="col-4">
+                            <h2>Quickstart:</h2>
+                            <div class="subnote text-muted"></div>
+
+                            <p class="fragment" data-code-block="1" data-code-focus="1"><code>1)</code> Import the React library (core)</p>
+                            <p class="fragment" data-code-block="1" data-code-focus="2"><code>2)</code> Import the ReactDOM library, responsible for the DOM</p>
+                            <p class="fragment" data-code-block="1" data-code-focus="5"><code>3)</code> Store a JSX expression in a variable</p>
+                            <p class="fragment" data-code-block="1" data-code-focus="7"><code>4)</code> Use ReactDOM to render the JSX expression into an HTML DOM element</p>
+                            <p class="fragment" data-code-block="1" data-code-focus="1-7">Ready!</p>
+                        </div>
+                        <div class="col-8">
+                            <pre><code class="hljs javascript reveal-code" contenteditable data-trim>
+    
+                            import React from 'react';
+                            import ReactDOM from 'react-dom';
+                            
+                            // Write code here:
+                            let math = <h1>2 + 3 = 2 + 3</h1>;
+                            
+                            ReactDOM.render( math, document.getElementById("app") );
+            
+                            </code></pre>
+                        </div>
+                    </div>
+                </section>
+
+            </section>
+
+            <!-- Components -->
+            <section>
+
+                <!-- Components: Basics -->
+                <section>
+                    <div class="row text-left align-items-center">
+                        <div class="col-6">
+                            <h1 class="headlight">04</h1>
+                            <hr class="limit limit-medium">
+                            <h2>Components</h2>
+                            <h3>Reusable Blocks</h3>
+                        </div>
+                        <div class="col-6">
+
+                            <h4 class="fragment"><i class="fas fa-caret-right"></i> A component is a small, reusable chunk of code that is responsible for one job. That job is often to render some HTML.</h4>
+
+                            <pre class="mb-0">
+                                <code class="hljs html fragment" contenteditable data-trim>
+                                    &lt;App&gt;
+                                        &lt;Player&gt;&lt;/Player&gt;
+                                        &lt;Player&gt;&lt;/Player&gt;
+                                    &lt;/App&gt;
+                                </code>
+                            </pre>
+
+                            <h4 class="fragment mt-0"><i class="fas fa-caret-right"></i> Every component must come from a component class, which like a factory can produce as many components as you want.</h4>
+
+                            <pre class="white-space-pre-line">
+                                <code class="hljs javascript fragment" contenteditable data-trim>
+                                    class App extends React.Component { ... }
+                                </code>
+                            </pre>
+
+                            <h4 class="fragment"><i class="fas fa-caret-right"></i> To make a component class, you use a base class from the React library: <a href="https://reactjs.org/docs/react-component.html" target="_blank">React.Component</a></h4>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Codesandbox Link -->
+                <section data-background="indigo">
+                    <div class="row text-white p-5">
+                        <div class="col text-center">
+                            <div class="subnote mt-0 text-uppercase">Practice Online</div>
+                            <h2>
+                                <a href="https://codesandbox.io/s/ryrmo90354" target="_blank">Codesandbox</a>
+                            </h2>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Styling -->
+                <section>
+                    <h1>Styling</h1>
+                    <!-- Basics: Component Styling
+                    External and Inline CSS Styling. Adding Media.
+                    https://codesandbox.io/s/9ynj104m6r -->
+                </section>
+
+                <!-- Props -->
+                <section>
+                    <h1>Props</h1>
+                    <!-- Basics: Component Props
+                    Passing data to our Components top-down. (Extras: Children)
+                    https://codesandbox.io/s/v31woq1xpy -->
+                </section>
+                
+                <!-- State -->
+                <section>
+                    <h1>State</h1>
+                    <!-- 2 ways to initialize:
+                    state = {...} directly inside the class
+                    Write a constructor and use this.state = { ... }
+                    https://codesandbox.io/s/k3rm7vx057 -->
+                </section>
+                
+                <!-- Event Handlers -->
+                <section>
+                    <h1>Event Handlers</h1>
+                    <!-- Take care of your class binding:
+                    (1) Constructor this.method.bind(this)
+                    (2) method = ()=> { ... }
+                    Events: onClick, onMouseOver, etc.
+                    
+                    https://codesandbox.io/s/k3rm7vx057
+                
+                    Docs:
+                    Handling Events / Supported Events
+                    https://reactjs.org/docs/handling-events.html
+                    https://reactjs.org/docs/events.html#supported-events -->
+                </section>
+
+                <!-- Component Lifecycle -->
+                <section>
+                    <h1>Component Lifecycle</h1>
+                    <!-- Component Lifecycle
+                    Mounting, Updating, Unmounting
+                    https://reactjs.org/docs/react-component.html#the-component-lifecycle
+                    
+                    CodeSandbox
+                    https://codesandbox.io/s/v828m8j8x0 -->
+                </section>
+
+            </section>
+
+            <!-- Passing Data from Child Components to Parent  -->
+            <section>
+                <h1>Passing Data from Child Component to Parent</h1>
+                <!-- Passing Data from Child Component to Parent
+                https://codesandbox.io/s/50kzzknv5n -->
+            </section>
+
+            <!-- Hands-on -->
+            <section>
+                <h1>Hands On</h1>
+                <!-- Hands-on: A Click Counter Button
+                Click Counter Button: https://codesandbox.io/s/k3rm7vx057
+                
+                Hands-on: Crypto Ticker
+                Click Counter Button: https://codesandbox.io/s/x9xy9ov8xw
+                
+                CodeSandBox Collection:
+                kostasx: https://codesandbox.io/u/kostasx -->
+            </section>
+
+            <!-- 05 - Form Handling -->
+            <section>
+                <h1>Form Handling</h1>
+            </section>
+
+            <!-- 06 - Routing -->
+            <section>
+                <h1>Routing</h1>
+            </section>
+
+            <!-- 07 - React Hooks -->
+            <section>
+                <h1>React Hooks</h1>
+            </section>
+
+            <!--//// SECTIONS TO USE ////-->
+
+            <!-- Media API | Functions -->
+            <!--
+            <section>
+                <div class="row text-left align-items-center">
+                    <div class="col-6">
+                        <h2>Media API</h2>
+                        <h3 class="display-4">Methods &amp; Properties</h3>
+                        <hr class="limit limit-medium">
+                        <h3 class="mb-0">Code Time!</h3>
+                        <h6 class="text-muted-plus fragment mt-3 mb-5">( Class-Practice-01 )</h6>
+                        <p class="serif fragment">1) Create an HTML page</p>
+                        <p class="serif fragment">2) Add a <strong>&lt;video&gt;&lt;/video&gt;</strong> element (Use <a target="_blank" href="https://upload.wikimedia.org/wikipedia/commons/5/5d/Charlie_Chaplin%2C_the_Marriage_Bond.ogv">this source</a>)</p>
+                        <p class="serif fragment">2.1) Add a poster attribute. (Use <a target="_blank" href="https://upload.wikimedia.org/wikipedia/commons/8/87/%281916%29_p116_Chaplin_%2814762003256%29.jpg">this source</a>)</p>
+                        <p class="serif fragment">3) Add a <strong>&lt;script&gt;&lt;/script&gt;</strong> tag just before the closing &lt;/body&gt; tag</p>
+                        <p class="serif fragment">4) Use <code>document.querySelector()</code> to target the video element and store it in a variable named <code>video</code></p>
+                        <p class="serif fragment">5) Use Media API methods</p>
+                    </div>
+                    <div class="col-6">
+                        <p class="fragment">Methods:</p>
+                        <code class="hljs fragment mb-4" data-trim contenteditable>video.play();</code>
+                        <code class="hljs fragment mb-4" data-trim contenteditable>video.pause();</code>
+                        <code class="hljs fragment mb-4" data-trim contenteditable>Combine setTimeout and play/pause</code>
+                        <code class="hljs fragment mb-4" data-trim contenteditable>Combine the click event with play/pause </code>
+                        <p class="fragment bg-warning rounded py-2 pl-4">Challenge #1: apply background fade effect on play/pause</p>
+                        <p class="fragment bg-warning rounded py-2 pl-4">Challenge #2: Attach Play/Pause events directly on the video</p>
+                        <p class="fragment">Properties:</p>
+                        <code class="hljs html fragment mb-4" data-trim contenteditable>video.duration;</code>
+                        <code class="hljs html fragment mb-4" data-trim contenteditable>video.currentTime; // GET</code>
+                        <code class="hljs html fragment mb-4" data-trim contenteditable>video.currentTime = 100; // SET</code>
+                        <p class="fragment bg-warning rounded py-2 pl-4">Full list of MediaElement <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement#Properties">Properties</a> and <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement#Methods">Methods</a></p>
+                    </div>
+                </div>
+            </section>
+            -->
+
+            <!-- Basics: Code 1/3 -->
+            <!--
+            <section class="h-100 text-white" data-background="#000">
+                <div class="row text-left h-100 align-items-center">
+                    <div class="col-4">
+                        <h2>The Code <span class="font-weight-light">- 1/3</span></h2>
+
+                        <div class="subnote text-muted">It's all about specifying <code>draggable</code> and <code>droppable</code> elements, and listening on <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API#Drag_Events" target="_blank">Events</a>.</div>
+
+                        <p class="fragment" data-code-block="1" data-code-focus="1-3">1) Create a draggable Element and a drop target Element</p>
+                        <p class="fragment" data-code-block="1" data-code-focus="1">2) Making an element draggable is as simple as setting the draggable attribute of an element to true
+                        </p>
+                        <p class="fragment" data-code-block="2" data-code-focus="">3) Setting an element as a drop target requires to disable the default <code>dragover</code> behavior.</p>
+
+                        <p class="fragment" data-code-block="2" data-code-focus="1">3.1) Get the drop element.</p>
+                        <p class="fragment" data-code-block="2" data-code-focus="3">3.2) Define a function that will prevent the default dragover behavior.</p>
+                        <p class="fragment" data-code-block="2" data-code-focus="5">3.3) Handle the drop event.</p>
+                    </div>
+                    <div class="col-8">
+                        <p class="text-right">HTML</p>
+                        <pre><code class="hljs html reveal-code" contenteditable data-trim>
+                                &lt;div id="draggable" draggable="true"&gt; Draggable Element &lt;/div&gt;
+
+                                &lt;div id="drop-target"&gt; Drop Target &lt;/div&gt;
+                            </code></pre>
+                        <p class="text-right">JavaScript</p>
+                        <pre><code class="hljs javascript reveal-code" contenteditable data-trim>
+                                let dropTarget = document.querySelector("#drop-target");
+
+                                function handleDragOver( event ){ event.preventDefault(); }
+                                
+                                dropTarget.addEventListener( "dragover",handleDragOver );
+                            </code></pre>
+                    </div>
+                </div>
+            </section>
+            -->
+
+            <!-- Let's Code! -->
+            <!--
+            <section data-background="indigo">
+                <div class="row text-white p-5">
+                    <div class="col text-center">
+                        <div class="subnote mt-0">ENOUGH THEORY</div>
+                        <h2>Let's Code!</h2>
+                    </div>
+                </div>
+            </section>
+            -->
+            
+            <!--//// SECTIONS TO USE ////-->
+
+            <!-- Summary | Gotchas -->
+            <section data-background="#1a0838" class="text-white">
+                <h2 class="mb-5">Gotchas</h2>
+                <hr class="limit limit-medium limit-centered limit-indigo">
+                <div class="row text-left align-items-start">
+                    <div class="col-10 offset-1">
+
+                        <h3 class="my-5 fragment">You cannot inject an if statement into a JSX expressions. Use the logical operators instead: <code class="font-size-100">&&, ||</code> or ternary operators: <code class="font-size-100">( condition ) ? then : else ;</code>
+                            </h3>
+
+                        <h3 class="my-5 fragment">Avoid Changing the state directly via <code class="font-size-100">this.state</code>. Use <code class="font-size-100">this.setState()</code> instead.</h3>
+
+                        <h3 class="my-5 fragment">Don't forget to export the Component.</h3>
+
+                        </div>
+                </div>
+            </section>
+
+            <!-- References -->
+            <section data-background="yellowgreen" class="references text-white">
+                <div class="col-8 text-left">
+                    <h2>References &amp; Sources:</h2>
+                    <hr class="limit limit-small">
+                    <ul class="list-unstyled">
+
+                        <li>&rtrif;
+                            <a target="_blank" href="https://scrimba.com/g/glearnreact">Scrimba.com: Learn React for Free</a>
+                        </li>
+
+                        <li>&rtrif;
+                            <a target="_blank" href="https://www.codecademy.com/courses/react-101/">Codecademy: Learn React.JS</a>
+                        </li>
+                        
+                        <li>&rtrif;
+                            <a href="https://wsvincent.com/react-counter/" target="_blank">React Counter Button Exercise</a>
+                        </li>
+                        
+                        <li>&rtrif;
+                            <a target="_blank" href="https://reactjs.org/blog/2016/07/22/create-apps-with-no-configuration.html#getting-started">Getting started with create-react-app</a>
+                        </li>
+
+                        <li>&rtrif;
+                            <a target="_blank" href="https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md">Create-React-App Guide</a>
+                        </li>
+                        
+                        <li>&rtrif;
+                            <a target="_blank" href="https://reactforbeginners.com/">React for Beginners (Wes Bos)</a>
+                        </li>
+
+                        <li>&rtrif;
+                            <a target="_blank" href="https://medium.com/@JohnAyeni/how-i-learnt-front-end-frameworks-b275aba18a8b">How I learnt Front-end Frameworks</a>
+                        </li>
+                        
+                        <li>&rtrif;
+                            <a target="_blank" href="https://www.youtube.com/watch?v=Ke90Tje7VS0">Learn React: React Crash Course 2018 - Tutorial with Examples</a>
+                        </li>
+                        
+                        <li>&rtrif;
+                            <a target="_blank" href="https://reactjs.org/docs/react-component.html">React Components</a>
+                        </li>
+                        
+                        <li>&rtrif;
+                            <a target="_blank" href="https://stackoverflow.com/questions/36795819/when-should-i-use-curly-braces-for-es6-import/36796281#36796281">When should I use curly braces for ES6 Import? (Default vs Named Exports)</a>
+                        </li>
+                        
+                        <li>&rtrif;
+                            <a target="_blank" href="https://stackoverflow.com/questions/48308936/what-does-this-react-scripts-eject-command-do#answer-48309071">React Eject</a>
+                        </li>
+
+                        <li>&rtrif;
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import">ES6 Imports</a>
+                        </li>
+
+
+                    </ul>
+                </div>
+
+            </section>
+
+        </div>
+    </div>
+
+    <script src="js/reveal.js"></script>
+
+    <script>
+        function typedCode(editor, text, ms) {
+
+            let next;
+            let isTyping = false;
+            ms = ms || 80;
+            text = text.split("");
+            let content = [];
+
+            function startTyping() {
+
+                console.log("startTyping() :1: started");
+                next = text.shift();
+                if (!next) {
+                    isTyping = false;
+                    console.log("startTyping() :2: stopped");
+                    clearInterval(interval);
+                    return interval = null;
+                }
+                isTyping = true;
+                content.push(next);
+                editor.setValue(content.join(""));
+
+                if (next === "\n") {
+                    isTyping = false;
+                    console.log("startTyping() :3: stopped");
+                    return clearInterval(interval);
+                }
+
+            }
+
+            let interval = setInterval(startTyping, ms);
+
+            document.body.addEventListener("mousedown", function(e) {
+
+                if (e.which === 1 && interval) {
+                    if (isTyping) {
+                        console.log("startTyping() :4: stopped");
+                        clearInterval(interval);
+                        isTyping = false;
+                        console.log("mousedown::isTyping:true");
+                    } else {
+                        console.log("startTyping() :5: started");
+                        interval = setInterval(startTyping, ms);
+                        console.log("mousedown::isTyping:false");
+                    }
+                }
+
+            });
+
+        }
+
+        function execOnAudioMultiple(e) {
+
+            let isKeyC = (e.key === "t" && e.type === "keyup");
+
+            if (isKeyC || e.type === "dblclick") {
+
+                let selector = "#livecode-audio-multiple .CodeMirror";
+                let codeEditor = document.querySelector(selector).CodeMirror;
+
+                if (!codeEditor) {
+                    return false;
+                }
+
+                let editorContent = '<audio controls>\n\n' +
+                    '    <source src="https://file-examples.com/wp-content/uploads/2017/11/file_example_MP3_700KB.mp3" type="audio/mp3">\n\n' +
+                    '    <source src="https://file-examples.com/wp-content/uploads/2017/11/file_example_OOG_1MG.ogg" type="audio/ogg">\n\n' +
+                    '    Sorry, your browser doesn\'t support embedded audio.\n\n' +
+                    '</audio>\n' +
+                    '<!-- type="TYPE/SUBTYPE" -->\n';
+
+                typedCode(codeEditor, editorContent);
+
+            }
+
+        }
+
+        // Execute Functions on Specific Slides: "<ID>": functionReference
+        const RevealEvents = {
+            // "livecode-audio-multiple": execOnAudioMultiple
+        }
+
+        Reveal.configure({
+            keyboard: {
+                // Key: 'e'
+                69: function() {}
+            }
+        });
+
+        Reveal.addEventListener('slidechanged', function(e) {
+            let slideState = e.currentSlide.getAttribute('data-state');
+        });
+
+        function initCodeOnSection(slide, state, code) {
+            if (state) {
+
+            }
+        }
+
+        function getCurrentDataState(currentSlide) {
+
+            if (!currentSlide) {
+                return false;
+            }
+            let currentDataState = currentSlide.getAttribute('data-state');
+            return currentDataState ? currentDataState : false;
+
+        }
+
+        function getCurrentSlide() {
+
+            let currentSlide = document.querySelector("section.stack.present");
+            if (!currentSlide) {
+                return false
+            }
+            let innerSlide;
+            if (innerSlide = currentSlide.querySelector("section.present")) {
+                currentSlide = innerSlide;
+            }
+            return currentSlide;
+
+        }
+
+        function initSlideCode(e) {
+
+            let currentSlide = getCurrentSlide();
+            let currentDataState = getCurrentDataState(currentSlide);
+            if (RevealEvents[currentDataState]) {
+
+                RevealEvents[currentDataState](e);
+
+            }
+
+        }
+
+        document.body.addEventListener("dblclick", initSlideCode);
+        document.body.addEventListener("keyup", initSlideCode);
+
+        // More info about config & dependencies:
+        // - https://github.com/hakimel/reveal.js#configuration
+        // - https://github.com/hakimel/reveal.js#dependencies
+        Reveal.initialize({
+            hash: true,
+            // maxScale: 1,
+            // minScale: 1,
+            history: true,
+
+            spotlight: {
+                toggleSpotlightOnMouseDown: false
+            },
+
+            keyboard: {
+                // 's' === 91
+                67: function() {
+                    RevealSpotlight.toggleSpotlight()
+                }
+            },
+
+            dependencies: [
+
+                {
+                    src: 'plugin/markdown/marked.js'
+                }, {
+                    src: 'plugin/markdown/markdown.js'
+                }, {
+                    src: 'plugin/notes/notes.js',
+                    async: true
+                }, {
+                    src: 'plugin/highlight/highlight.js',
+                    async: true
+                },
+                // ORIGINAL Highlight.js
+                // { src: 'plugin/highlight-original/highlight.pack.js', async: true },
+
+                // PLUGINS
+                {
+                    src: 'plugin/fullscreen/fullscreen-img.js'
+                }, {
+                    src: 'plugin/spotlight/spotlight.js'
+                }, {
+                    src: 'plugin/quiz/js/quiz.js',
+                    async: true,
+                    callback: function() {
+                        prepareQuizzes({});
+                    }
+                }, {
+                    src: 'plugin/reveal-code-focus/reveal-code-focus.js',
+                    async: true,
+                    callback: function() {
+                        RevealCodeFocus();
+                    }
+                },
+
+            ]
+        });
+    </script>
+</body>
+
+</html>
