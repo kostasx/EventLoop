@@ -291,7 +291,7 @@
                                 <h3><strong>COMPONENTS:</strong> Split UI into independent, isolated, reusable pieces.</h3>
                             </li>
                             <li class="fragment">
-                                <h3><strong>PROPS:</strong> Data passed into a COMPONENT</h3>
+                                <h3><strong>PROPS:</strong> Data passed into a COMPONENT as input</h3>
                             </li>
                             <li class="fragment">
                                 <h3><strong>STATE:</strong> Private COMPONENT data</h3>
@@ -657,47 +657,84 @@
                 <!-- Styling -->
                 <section>
                     <h1>Styling</h1>
-                    <!-- Basics: Component Styling
-                    External and Inline CSS Styling. Adding Media.
-                    https://codesandbox.io/s/9ynj104m6r -->
+                    <div class="row mt-5">
+                        <div class="col-6 offset-3">
+                            <h3><a href="https://codesandbox.io/s/9ynj104m6r">Sandbox Practice</a></h3>
+                        </div>
+                    </div>
                 </section>
 
                 <!-- Props -->
                 <section>
-                    <h1>Props</h1>
-                    <!-- Basics: Component Props
-                    Passing data to our Components top-down. (Extras: Children)
-                    https://codesandbox.io/s/v31woq1xpy -->
+                    <h1>Props &amp; Children Props</h1>
+                    <div class="row mt-5">
+                        <div class="col-6 offset-3">
+                            <h3><a href="https://codesandbox.io/s/v31woq1xpy" target="_blank">Sandbox Practice</a></h3>
+                        </div>
+                    </div>
                 </section>
-                
-                <!-- State -->
-                <section>
-                    <h1>State</h1>
-                    <!-- 2 ways to initialize:
-                    state = {...} directly inside the class
-                    Write a constructor and use this.state = { ... }
-                    https://codesandbox.io/s/k3rm7vx057 -->
-                </section>
-                
+
                 <!-- Event Handlers -->
                 <section>
                     <h1>Event Handlers</h1>
-                    <!-- Take care of your class binding:
-                    (1) Constructor this.method.bind(this)
-                    (2) method = ()=> { ... }
-                    Events: onClick, onMouseOver, etc.
-                    
-                    https://codesandbox.io/s/k3rm7vx057
-                
-                    Docs:
-                    Handling Events / Supported Events
-                    https://reactjs.org/docs/handling-events.html
-                    https://reactjs.org/docs/events.html#supported-events -->
+                    <div class="row mt-5">
+                        <div class="col-6 offset-3">
+                            <h3>
+                                <a href="https://codesandbox.io/s/k3rm7vx057" target="_blank">Sandbox Practice: onClick, onMouseOver, etc.</a>
+                            </h3>
+                            <br>
+                            <p>
+                                <a href="https://reactjs.org/docs/handling-events.html" target="_blank">Handling Events</a> / <a href="https://reactjs.org/docs/events.html#supported-events" target="_blank">Supported Events</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="col-6 offset-3">
+                            <p class="bg-warning p-2 rounded">WARNING: </span> Take care of your Class binding:</p>
+                            <p>
+                                <code>constructor(){ this.method.bind(this); }</code>
+                                <br>and<br>
+                                <code>method = ()=> { ... }</code>
+                            </p>
+                        </div>
+                    </div>
                 </section>
 
+                <!-- State -->
+                <section>
+                    <h1>State</h1>
+                    <h3 class="mt-4"><code>state = { ... }</code><br>and<br><code>constructor(){ this.state = { ... } }</code></h3>
+                    <div class="row mt-5">
+                        <div class="col-6 offset-3">
+                            <h3><a href="https://codesandbox.io/s/k3rm7vx057" target="_blank">Sandbox Practice</a></h3>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Passing Data from Child Components to Parent  -->
+                <section>
+                    <h1>Passing Data from Child Component to Parent</h1>
+                    <div class="row mt-5">
+                        <div class="col-6 offset-3">
+                            <h3>
+                                <a href="https://codesandbox.io/s/50kzzknv5n" target="_blank">
+                                Passing Data from Child Component to Parent
+                                </a>
+                            </h3>                            
+                        </div>
+                    </div>
+                </section>
+                    
                 <!-- Component Lifecycle -->
                 <section>
                     <h1>Component Lifecycle</h1>
+                    <div class="fragment row mt-5">
+                        <div class="col-6 offset-3">
+                            <p>Each component has several “lifecycle methods” that you can override to run code at particular times in the process.</p>
+                            <p><a href="https://codesandbox.io/s/v828m8j8x0" target="_blank">CodeSandBox Demo</a></p>
+                        </div>
+                    </div>
+                    <img class="fragment img-fluid" src="img/component-lifecycle.png" />
                     <!-- Component Lifecycle
                     Mounting, Updating, Unmounting
                     https://reactjs.org/docs/react-component.html#the-component-lifecycle
@@ -708,24 +745,22 @@
 
             </section>
 
-            <!-- Passing Data from Child Components to Parent  -->
-            <section>
-                <h1>Passing Data from Child Component to Parent</h1>
-                <!-- Passing Data from Child Component to Parent
-                https://codesandbox.io/s/50kzzknv5n -->
-            </section>
-
             <!-- Hands-on -->
             <section>
                 <h1>Hands On</h1>
-                <!-- Hands-on: A Click Counter Button
-                Click Counter Button: https://codesandbox.io/s/k3rm7vx057
-                
-                Hands-on: Crypto Ticker
-                Click Counter Button: https://codesandbox.io/s/x9xy9ov8xw
-                
-                CodeSandBox Collection:
-                kostasx: https://codesandbox.io/u/kostasx -->
+                <div class="row mt-5">
+                    <div class="col-6 offset-3">
+                        <h3>
+                            <a href="https://codesandbox.io/s/k3rm7vx057" target="_blank">Hands-on: A Click Counter Button</a>
+                        </h3>                        
+                        <h3>
+                            <a href="https://codesandbox.io/s/x9xy9ov8xw" target="_blank">Hands-on: Crypto Ticker</a>
+                        </h3>                        
+                        <h3>
+                            <a href="https://codesandbox.io/u/kostasx" target="_blank">CodeSandBox Collection:</a>
+                        </h3>                        
+                    </div>
+                </div>
             </section>
 
             <!-- 05 - Form Handling -->
@@ -829,7 +864,7 @@
                 </div>
             </section>
             -->
-            
+
             <!--//// SECTIONS TO USE ////-->
 
             <!-- Summary | Gotchas -->
@@ -840,13 +875,13 @@
                     <div class="col-10 offset-1">
 
                         <h3 class="my-5 fragment">You cannot inject an if statement into a JSX expressions. Use the logical operators instead: <code class="font-size-100">&&, ||</code> or ternary operators: <code class="font-size-100">( condition ) ? then : else ;</code>
-                            </h3>
+                        </h3>
 
                         <h3 class="my-5 fragment">Avoid Changing the state directly via <code class="font-size-100">this.state</code>. Use <code class="font-size-100">this.setState()</code> instead.</h3>
 
                         <h3 class="my-5 fragment">Don't forget to export the Component.</h3>
 
-                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -864,11 +899,11 @@
                         <li>&rtrif;
                             <a target="_blank" href="https://www.codecademy.com/courses/react-101/">Codecademy: Learn React.JS</a>
                         </li>
-                        
+
                         <li>&rtrif;
                             <a href="https://wsvincent.com/react-counter/" target="_blank">React Counter Button Exercise</a>
                         </li>
-                        
+
                         <li>&rtrif;
                             <a target="_blank" href="https://reactjs.org/blog/2016/07/22/create-apps-with-no-configuration.html#getting-started">Getting started with create-react-app</a>
                         </li>
@@ -876,7 +911,7 @@
                         <li>&rtrif;
                             <a target="_blank" href="https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md">Create-React-App Guide</a>
                         </li>
-                        
+
                         <li>&rtrif;
                             <a target="_blank" href="https://reactforbeginners.com/">React for Beginners (Wes Bos)</a>
                         </li>
@@ -884,19 +919,19 @@
                         <li>&rtrif;
                             <a target="_blank" href="https://medium.com/@JohnAyeni/how-i-learnt-front-end-frameworks-b275aba18a8b">How I learnt Front-end Frameworks</a>
                         </li>
-                        
+
                         <li>&rtrif;
                             <a target="_blank" href="https://www.youtube.com/watch?v=Ke90Tje7VS0">Learn React: React Crash Course 2018 - Tutorial with Examples</a>
                         </li>
-                        
+
                         <li>&rtrif;
                             <a target="_blank" href="https://reactjs.org/docs/react-component.html">React Components</a>
                         </li>
-                        
+
                         <li>&rtrif;
                             <a target="_blank" href="https://stackoverflow.com/questions/36795819/when-should-i-use-curly-braces-for-es6-import/36796281#36796281">When should I use curly braces for ES6 Import? (Default vs Named Exports)</a>
                         </li>
-                        
+
                         <li>&rtrif;
                             <a target="_blank" href="https://stackoverflow.com/questions/48308936/what-does-this-react-scripts-eject-command-do#answer-48309071">React Eject</a>
                         </li>
