@@ -565,7 +565,8 @@ document.body.addEventListener(&quot;mousemove&quot;, function(e) {&#10;
 
   <h4>Resources</h4>
   <ul>
-    <li><a href="">Soon...</a></li>
+    <li><a href="https://www.youtube.com/watch?v=TRrL5j3MIvo">Introduction to Angular.js in 50 Examples (part 1)</a></li>
+    <li><a href="https://www.youtube.com/watch?v=6J08m1H2BME">Introduction to Angular.js in 50 Examples (part 2)</a></li>
   </ul>
 
 </details>
