@@ -1,0 +1,7 @@
+Mathematical Theory of Communication
+
+"A Mathematical Theory of Communication" is an article by mathematician Claude E. Shannon [1] published in Bell System Technical Journal in 1948. It was renamed The Mathematical Theory of Communication in the book of the same name, a small but significant title change after realizing the generality of this work.
+
+References:
+
+[1] Claude Shannon: [GITHUB/EVENTLOOP/claude-shannon.txt]
