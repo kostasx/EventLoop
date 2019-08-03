@@ -545,8 +545,33 @@ document.body.addEventListener(&quot;mousemove&quot;, function(e) {&#10;
 
 </ul>
 </li>
-
+<li id="react-state-management">
+<strong>State Management:</strong>
+<ul>
+<li>
+  Using the native <a href="https://reactjs.org/docs/context.html">Context API</a> (React 16.3+)
+  <ul>
+  <li><em>&quot;Context provides a way to pass data through the component tree without having to pass props down manually at every level.&quot;</em></li>
+  <li><a href="https://www.youtube.com/watch?v=yzQ_XulhQFw">Introducing the React Context API</a> (YouTube)</li>
+  <li><a href="https://codesandbox.io/s/reactjs-context-api-peflc">Simple example using Context API</a> (Codesandbox)</li>
   </ul>
+</li>
+<li>
+  Using the <a href="http://robertmarkbramprogrammer.blogspot.com/2019/02/using-pubsubjs-in-react.html">PubSub</a> (Publish/Subscribe) pattern | <a href="https://codesandbox.io/s/reactjs-pubsub-fjwdj">( Codesandbox Demo )</a>
+  </li>
+<li>
+  Using <a href="https://facebook.github.io/flux/">Flux</a> for unidirectional data flow
+  </li>
+<li>
+  Using <a href="https://react-redux.js.org/">Redux</a>
+  </li>
+<li>
+  Using <a href="https://mobx.js.org/">MobX</a>
+  </li>
+</ul>
+</li>
+
+</ul>
 
   <h4>Questions</h4>
   <ul>
