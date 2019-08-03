@@ -4,5 +4,8 @@ Claude Elwood Shannon (April 30, 1916 – February 24, 2001) was an American mat
 
 References:
 
-[1] Information Theory: [GITHUB/EVENTLOOP/information-theory.txt]
-[2] A Mathematical Theory of Communication: [GITHUB/EVENTLOOP/mathematical-theory-of-communication.txt]
+[1] Information Theory: [http://eventloop.gr/learn/html/resources/information-theory.txt]
+[2] A Mathematical Theory of Communication: [http://eventloop.gr/learn/html/resources/mathematical-theory-of-communication.txt]
+
+
+

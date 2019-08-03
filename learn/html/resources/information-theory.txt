@@ -4,5 +4,5 @@ Information theory studies the quantification, storage, and communication of inf
 
 References:
 
-[1] Claude Shannon: [GITHUB/EVENTLOOP/claude-shannon.txt]
-[2] A Mathematical Theory of Communication: [GITHUB/EVENTLOOP/mathematical-theory-of-communication.txt]
+[1] Claude Shannon: [http://eventloop.gr/learn/html/resources/claude-shannon.txt]
+[2] A Mathematical Theory of Communication: [http://eventloop.gr/learn/html/resources/mathematical-theory-of-communication.txt]

@@ -4,4 +4,4 @@ Mathematical Theory of Communication
 
 References:
 
-[1] Claude Shannon: [GITHUB/EVENTLOOP/claude-shannon.txt]
+[1] Claude Shannon: [http://eventloop.gr/learn/html/resources/claude-shannon.txt]
