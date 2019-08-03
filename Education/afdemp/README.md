@@ -581,6 +581,7 @@ document.body.addEventListener(&quot;mousemove&quot;, function(e) {&#10;
    return { counter: prevState.counter + 1 }
 });
 </pre></li>
+  <li><strong>Question: </strong><i>How do I pass data between components in a unidirectional way?</i><br><strong>Answer:</strong> Please checkout the various ways available in the <a href="#react-state-management">State Management section</a><br></li>
   </ul>
 
 </details>
