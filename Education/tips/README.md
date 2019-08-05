@@ -726,3 +726,8 @@ if ( something === 1 ){
 <details id="linting">
 <summary><strong>Use a Linter</strong></summary>
 </details>
+
+<details id="linting">
+  <summary><strong>Use <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Destructuring Assignment</a> to make your code more readable</strong></summary>
+  <img src="img/before-after-object-destructuring.jpg" alt="object-destructuring">
+</details>
