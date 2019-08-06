@@ -258,6 +258,7 @@
   <p>Syllabus:</p>
   <h4>References</h4>
   <ul>
+  <li><a href="https://vanillajstoolkit.com/reference/"><strong>Reference Guide:</strong> A quick reference for commonly used JavaScript methods and browser APIs.</a></li>
   <li><a href="https://goo.gl/YwAziN"><strong>Variables: </strong> Visualizing variable hoisting, declaration and value assignment</a></li>
   <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#Table"><strong>Operator Precedence Table</strong> (MDN)</a></li>
 	  <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error"><strong>Errors</strong></a></li>
