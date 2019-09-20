@@ -17,8 +17,8 @@ We are passionate about technology
     <li>
       <a href="http://eventloop.gr/Education/tmp/prototype/presentation/index.html#/">The Object Prototype &amp; Prototypal Inheritance in JavaScript</a>
     </li>
-
-
-    
+    <li>
+      <a href="http://eventloop.gr/Education/afdemp/Bootstrap/index.html#/7">Bootstrap v4</a>
+    </li>
 </ul>
 </details>
