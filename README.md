@@ -14,5 +14,11 @@ We are passionate about technology
     <li>
       <a href="http://eventloop.gr/frontend/html5/apis.html#/">HTML5 APIs</a>
     </li>
-  </ul>
+    <li>
+      <a href="http://eventloop.gr/Education/tmp/prototype/presentation/index.html#/">The Object Prototype &amp; Prototypal Inheritance in JavaScript</a>
+    </li>
+
+
+    
+</ul>
 </details>
