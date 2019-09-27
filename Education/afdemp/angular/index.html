@@ -57,6 +57,43 @@
                 </div>
             </section>
 
+            <!-- SPA -->
+            <section>
+                <div class="row">
+                    <div class="col-6 text-left">
+                        <h2>SPA</h2>
+                        <h4>Single Page Application</h4>
+                        <p>A web application that fits on a single page</p>
+                    </div>
+                    <div class="col-6">
+                        <ul class="xxsmall">
+                            <li class="fragment">General Concepts:
+                                <ul class="tiny">
+                                    <li class="fragment">All necessary code can be retrieved in a single page load or dynamically loaded as necessary.</li>
+                                    <li class="fragment">As the user interacts with the Application, data is sent and received from the Server using Ajax requests or WebSockets.</li>
+                                    <li class="fragment">Templating is often used in SPAs.</li>
+                                    <li class="fragment">Routing: client-side routing dynamically loads a piece of the application without reloading: <code>https://spa.com/<strong>#/about</strong></code>
+                                    <small class="print-only font-italic"><br/>*Routes are commonly placed in the fragment identifier section of the URL: <strong>https://spa.com/#/about</strong></small>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <!-- Advantages:
+                    
+                        - Improved performance
+                        - Fluid user experience
+                        - Reduced page loads and smaller server transactions
+                    
+                        Drawbacks
+                    
+                        - SEO
+                        - Browser History -->
+                    
+                    </div>
+                </div>
+            </section>
+
             <!-- PREREQUISITES -->
             <section>
                 <!-- KNOWLEDGE -->
@@ -176,34 +213,87 @@
 			
 			<!-- GETTING SETUP -->
 			<section>
-                <h4>Quickstart</h4>
-                <div class="row">
-                    <div class="col-8 offset-2">
-                        <p class="fragment">
-                            <small class="xxsmall print-only">1) Install the Angular CLI globally. You will need to execute this command only once on your system:<br/></small>
-                            <code class="xsmall">$ npm install -g @angular/cli</code>
-                        </p>
-                        <p class="fragment">
-                            <small class="xxsmall print-only">2) Use the newly installed CLI tool to create a new Angular App:</small>
-                            <code class="xsmall">$ ng new my-app</code>
-                            <small class="xxsmall print-only">
-                            <strong>Would you like to add Angular routing? (y/N)</strong><br/>Press y, to enable Routing and press Enter.</small>
-                            <small class="xxsmall print-only">
-                            <strong>Which stylesheet format would you like to use?</strong><br/>Hit enter to go with the default CSS format.</small>
-                        </p>
-                        <p class="fragment">
-                            <small class="xxsmall print-only">3) Change into the newly created App directory:</small>
-                            <code class="xsmall">$ cd my-app</code>
-                        </p>
-                        <p class="fragment">
-                            <small class="xxsmall print-only">4) Start the development server<br/>and watch the App running on your browser:</small>
-                            <code class="xsmall">$ ng serve --open</code>
-                        </p>  
-                        <!-- Source: https://angular.io/guide/quickstart
-                        vim ./src/app/app.component.ts -->
+
+                <!-- Quickstart Commands -->
+                <section>
+                    <h4>Quickstart</h4>
+                    <div class="row">
+                        <div class="col-8 offset-2">
+                            <p class="fragment">
+                                <small class="xxsmall print-only">1) Install the Angular CLI globally. You will need to execute this command only once on your system:<br/></small>
+                                <code class="xsmall">$ npm install -g @angular/cli</code>
+                            </p>
+                            <p class="fragment">
+                                <small class="xxsmall print-only">2) Use the newly installed CLI tool to create a new Angular App:</small>
+                                <code class="xsmall">$ ng new my-app</code>
+                                <small class="xxsmall print-only">
+                                <strong>Would you like to add Angular routing? (y/N)</strong><br/>Press y, to enable Routing and press Enter.</small>
+                                <small class="xxsmall print-only">
+                                <strong>Which stylesheet format would you like to use?</strong><br/>Hit enter to go with the default CSS format.</small>
+                            </p>
+                            <p class="fragment">
+                                <small class="xxsmall print-only">3) Change into the newly created App directory:</small>
+                                <code class="xsmall">$ cd my-app</code>
+                            </p>
+                            <p class="fragment">
+                                <small class="xxsmall print-only">4) Start the development server<br/>and watch the App running on your browser:</small>
+                                <code class="xsmall">$ ng serve --open</code>
+                            </p>  
+                            <p class="fragment">
+                                <a class="text-muted xxsmall" href="https://angular.io/guide/quickstart">Source: <strong>https://angular.io/guide/quickstart</strong></a>
+                            </p>
+                            <!-- Source: 
+                            vim ./src/app/app.component.ts -->
+                        </div>
                     </div>
-                </div>
-			</section>
+                </section>
+
+                <!-- Start screen -->
+                <section>
+                    <div class="row">
+                        <div class="col-10 offset-1">
+                            <div class="row">
+                                <div class="col-8 offset-2">
+                                    <small class="xxsmall">This is the screen that you should be seeing in your browser, once all the steps have been completed successfully:</small>
+                                </div>
+                            </div>
+                            <img src="./images/angular-8.2.8--start-screen.jpg" alt="">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- First Edit -->
+                <section>
+                    <div class="row">
+                        <div class="col-5">
+                            <p>Let's complete our Quickstart guide, by editing the main App page:</p>
+                        </div>
+                        <div class="col-7">
+                            <p class="fragment">
+                                1) Open the following file in your editor:<br>
+                                <code>/my-app/src/app/app.component.ts</code>
+                            </p>
+                            <p class="fragment">
+                                2) Find and replace the following line:<br>
+                                <code>title = 'my-app';</code>
+                                <br/>With:<br/>
+                                <code>title = 'Hello World';</code>
+                            </p>
+                            <p class="fragment">
+                                3) Watch how the Browser automatically
+                                <br/>reloads the page with the updated title:
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Start screen edited -->
+                <section>
+                    <img src="./images/angular-8.2.8--start-screen-updated.jpg" alt="">
+                </section>
+
+            </section>
+
         </div>
     </div>
 

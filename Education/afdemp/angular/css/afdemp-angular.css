@@ -90,14 +90,23 @@
     .reveal h2 {
         font-family: 'Lato', sans-serif;
     }
+    .reveal p {
+        font-size: 24px;
+    }
     .xsmall {
         font-size: 1.75rem !important;
     }
     .xxsmall {
         font-size: 1.45rem !important;
     }
+    .tiny {
+        font-size: 1.2rem !important;
+    }
     .letter-spacing {
         letter-spacing: 0.7rem;
+    }
+    ul li {
+        margin-top: 1rem;
     }
     /* @Override */
     .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
