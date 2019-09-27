@@ -1,0 +1,239 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Angular | Alliance for Digital Employability</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/white.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css">
+
+    <!-- Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 4-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Custom CSS | Angular -->
+    <link rel="stylesheet" href="./css/afdemp-angular.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+
+<body>
+
+    <!-- <div class="bottom-left-logo"></div>
+		<div class="top-right-logo"></div> -->
+
+    <!-- Print PDF: ?print-pdf -->
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- TITLES -->
+            <section>
+                <div class="row">
+                    <div class="col align-items-center justify-content-center d-flex flex-column">
+                        <h2 class="mb-0 thin-typo">Angular</h2>
+                        <p class="mt-0 xsmall letter-spacing">FUNDAMENTALS</p>
+                        <img style="height:200px;" class="img-fluid" src="./images/angular.svg" alt="Angular Logo">
+                        <p class="xxsmall">Alliance for Digital Employability &copy; 2019</p>
+                        <p class="my-0">
+                            <small style="font-size:1rem;" class="text-muted">[ Updated: 24/09/2019 | Curated by <a class="text-decoration-none text-dark" href="https://github.com/kostasx/">Kostas Minaidis</a> ]</small>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PREREQUISITES -->
+            <section>
+                <!-- KNOWLEDGE -->
+                <section>
+                    <div class="row">
+                        <div class="col-6">
+                            <h4>
+                                Prerequisites
+                                <br><small class="xxsmall text-muted">(Background knowledge)</small>
+                            </h4>
+                        </div>
+                        <div class="col-6 text-left">
+                            <ul class="afdemp-list">
+                                <li class="fragment">
+                                    <p class="mt-0">Moderate knowledge of<br> <strong>HTML</strong>, <strong>CSS</strong>, &amp; <strong>JavaScript</strong>
+                                    </p>
+                                </li>
+                                <li class="fragment">
+                                    <p class="mt-0"><strong>TypeScript</strong> (Basics)
+                                    </p>
+                                </li>
+                                <li class="fragment">
+                                    <p class="mt-0">Basic <strong>MVC<span class="text-muted">*</span> concepts</strong><br><small>*Model-View-Controller</small></p>
+                                </li>
+                                <li class="fragment">
+                                    <p class="mt-0">Basic <strong>OOP<span class="text-muted">*</span> concepts</strong><br><small>*Object Oriented Programming</small></p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </section>
+
+                <!-- SOFTWARE -->
+                <section>
+                    <div class="row">
+                        <div class="col-6">
+                            <h4>
+                                Prerequisites
+                                <br><small class="xxsmall text-muted">(Software)</small>
+                            </h4>
+                        </div>
+                        <div class="col-6">
+                            <ul class="afdemp-list">
+                                <li class="fragment">
+                                    <a target="_blank" href="https://nodejs.org/en/">Node.JS v10.9.0 or later </a>
+                                </li>
+                                <li class="fragment">
+                                    <p class="mb-0">
+                                        Node Package Manager (npm)
+                                        <small>Comes pre-installed with Node.JS </small>
+                                    </p>
+                                </li>
+                                <li class="fragment">
+                                    <p class="mt-0">Angular CLI:<br>
+                                        <code class="xxsmall">npm install -g @angular/cli</code>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </section>
+
+                <!-- STUDENT NOTES -->
+                <section class="student-notes">
+					<h4 class="text-left">Resources</h4>
+                    <div class="row">
+						<div class="col-6">
+								<hr>
+								<ul class="afdemp-list xxsmall">
+									<li>
+										<strong>Basics</strong>
+										<ul class="afdemp-list xxsmall">
+											<li>
+												<a href="https://angular.io/guide/setup-local#setting-up-the-local-environment-and-workspace" target="_blank">Setting up the Local Environment &amp; Workspace</a>
+											</li>
+											<li>
+												<a href="https://youtu.be/E7Voso411Vs?t=168" target="_blank">MVC Architectural Pattern | Mosh</a>
+											</li>
+											<li>
+												<a href="https://www.youtube.com/watch?v=PFmuCDHHpwk" target="_blank">Object-oriented Programming in JavaScript: Made Super Simple | Mosh</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+		
+						<div class="col-6 text-left">
+							<hr>
+                            <ul class="afdemp-list xxsmall">
+                                <li>
+                                    <strong>TypeScript</strong>
+                                    <ul class="afdemp-list xxsmall">
+                                        <li>
+                                            <a href="https://www.youtube.com/watch?v=NjN00cM18Z4" target="_blank">TypeScript Tutorial for Angular &amp; React Developers | Mosh</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.youtube.com/watch?v=-PR_XqW9JJU" target="_blank">TypeScript Tutorial | Derek Banas</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://codeburst.io/understanding-typescript-basics-e003dbad2191" target="_blank">Understanding TypeScript Basics</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html" target="_blank">TypeScript in 5 minutes</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.freecodecamp.org/news/learn-typescript-in-5-minutes-13eda868daeb/" target="_blank">Learn TypeScript in 5 minutes<br><small>A tutorial for beginners</small></a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+						</div>
+                    </div>
+                </section>
+			</section>
+			
+			<!-- GETTING SETUP -->
+			<section>
+                <h4>Quickstart</h4>
+                <div class="row">
+                    <div class="col-8 offset-2">
+                        <p class="fragment">
+                            <small class="xxsmall print-only">1) Install the Angular CLI globally. You will need to execute this command only once on your system:<br/></small>
+                            <code class="xsmall">$ npm install -g @angular/cli</code>
+                        </p>
+                        <p class="fragment">
+                            <small class="xxsmall print-only">2) Use the newly installed CLI tool to create a new Angular App:</small>
+                            <code class="xsmall">$ ng new my-app</code>
+                            <small class="xxsmall print-only">
+                            <strong>Would you like to add Angular routing? (y/N)</strong><br/>Press y, to enable Routing and press Enter.</small>
+                            <small class="xxsmall print-only">
+                            <strong>Which stylesheet format would you like to use?</strong><br/>Hit enter to go with the default CSS format.</small>
+                        </p>
+                        <p class="fragment">
+                            <small class="xxsmall print-only">3) Change into the newly created App directory:</small>
+                            <code class="xsmall">$ cd my-app</code>
+                        </p>
+                        <p class="fragment">
+                            <small class="xxsmall print-only">4) Start the development server<br/>and watch the App running on your browser:</small>
+                            <code class="xsmall">$ ng serve --open</code>
+                        </p>  
+                        <!-- Source: https://angular.io/guide/quickstart
+                        vim ./src/app/app.component.ts -->
+                    </div>
+                </div>
+			</section>
+        </div>
+    </div>
+
+    <script src="js/reveal.js"></script>
+
+    <script>
+        // More info about config & dependencies:
+        // - https://github.com/hakimel/reveal.js#configuration
+        // - https://github.com/hakimel/reveal.js#dependencies
+        Reveal.initialize({
+
+            // Print one page for separate slide fragments:
+            pdfSeparateFragments: false,
+
+            history: true,
+
+            dependencies: [{
+                src: 'plugin/markdown/marked.js'
+            }, {
+                src: 'plugin/markdown/markdown.js'
+            }, {
+                src: 'plugin/notes/notes.js',
+                async: true
+            }, {
+                src: 'plugin/highlight/highlight.js',
+                async: true
+            }]
+        });
+    </script>
+    <script src="./js/afdemp-angular.js"></script>
+</body>
+
+</html>

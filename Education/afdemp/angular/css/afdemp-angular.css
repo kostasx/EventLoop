@@ -1,0 +1,124 @@
+/* GENERAL */
+    body {
+        background: #f0f0f0;
+    }
+    .reveal section img {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+    }
+    /* .bottom-left-logo */
+    body::before {
+        content: "";
+        display: block;
+        position: fixed;
+        bottom: 0;
+        left: -1px;
+        height: 400px;
+        width: 200px;
+        margin: 0;
+        padding: 0;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url("../images/2_mainBody_LeftElement-fit@2x.png");
+        z-index: 1001;  /* Make this element be displayed on the Print PDF*/
+    }
+    /* .top-right-logo */
+    body::after {
+        display: block;
+        content: "";
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 200px;
+        width: 150px;
+        margin: 0;
+        padding: 0;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url("../images/afdemp-logo.png");
+    }
+    .top-right-logo {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 200px;
+        width: 150px;
+        margin: 0;
+        padding: 0;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url("../images/afdemp-logo.png");
+    }
+    .bottom-left-logo {
+        position: fixed;
+        bottom: 0;
+        left: -1px;
+        height: 400px;
+        width: 200px;
+        margin: 0;
+        padding: 0;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url("../images/2_mainBody_LeftElement-fit@2x.png");
+    }
+    .afdemp-list {
+        font-size: 1.75rem !important;
+    }
+/* PRINT */
+
+    .print-only {
+        display: none !important;
+    }
+
+    @media print {
+        .print-only {
+            display: block !important;
+        }
+        html, body {
+            width: 210mm;
+            height: 297mm;
+            }
+        @page {
+            size: 210mm 297mm;
+            size: landscape;
+        }
+    }    
+
+/* TYPOGRAPHY */
+
+    .reveal h2 {
+        font-family: 'Lato', sans-serif;
+    }
+    .xsmall {
+        font-size: 1.75rem !important;
+    }
+    .xxsmall {
+        font-size: 1.45rem !important;
+    }
+    .letter-spacing {
+        letter-spacing: 0.7rem;
+    }
+    /* @Override */
+    .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+        text-transform: none;
+    }
+    /* @Override */
+    .reveal a {
+        color: #ed106e;
+    }
+    /* @Override */
+    .reveal pre {
+        box-shadow: none !important;
+        margin: 0;
+    }
+    /* @Override */
+    .reveal pre code {
+        white-space: pre-line;
+    }
+    /* @Override */
+    @media print {
+        pre {
+            border: none;
+        }
+    }
