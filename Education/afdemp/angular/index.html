@@ -59,39 +59,73 @@
 
             <!-- SPA -->
             <section>
-                <div class="row">
-                    <div class="col-6 text-left">
-                        <h2>SPA</h2>
-                        <h4>Single Page Application</h4>
-                        <p>A web application that fits on a single page</p>
-                    </div>
-                    <div class="col-6">
-                        <ul class="xxsmall">
-                            <li class="fragment">General Concepts:
-                                <ul class="tiny">
-                                    <li class="fragment">All necessary code can be retrieved in a single page load or dynamically loaded as necessary.</li>
-                                    <li class="fragment">As the user interacts with the Application, data is sent and received from the Server using Ajax requests or WebSockets.</li>
-                                    <li class="fragment">Templating is often used in SPAs.</li>
-                                    <li class="fragment">Routing: client-side routing dynamically loads a piece of the application without reloading: <code>https://spa.com/<strong>#/about</strong></code>
-                                    <small class="print-only font-italic"><br/>*Routes are commonly placed in the fragment identifier section of the URL: <strong>https://spa.com/#/about</strong></small>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
+                <section>
+                    <div class="row">
+                        <div class="col-6 text-left d-flex flex-column justify-content-center">
+                            <div>
+                                <h2 class="mb-0">SPA</h2>
+                                <h4 class="mb-0">Single Page Application</h4>
+                                <p class="xxsmall">A web application that fits on a single page</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <ul class="xxsmall">
+                                <li class="fragment">General Concepts:
+                                    <ul class="tiny fragment-opacity">
+                                        <li class="fragment">All necessary code can be retrieved in a single page load or dynamically loaded as necessary.</li>
+                                        <li class="fragment">As the user interacts with the Application, data is sent and received from the Server using Ajax requests or WebSockets.</li>
+                                        <li class="fragment">Templating is often used in SPAs.</li>
+                                        <li class="fragment">Routing: client-side routing dynamically loads a piece of the application without reloading: <code>https://spa.com/<strong>#/about</strong></code>
+                                            <small class="print-only font-italic"><br/>*Routes are commonly placed in the fragment identifier section of the URL: <strong>https://spa.com/#/about</strong></small>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="fragment">Advantages:
+                                    <ul class="tiny fragment-opacity">
+                                        <li class="fragment">Improved performance</li>
+                                        <li class="fragment">Fluid user experience</li>
+                                        <li class="fragment">Reduced page loads &amp; smaller server transactions</li>
+                                    </ul>
+                                </li>
+                            </ul>
 
-                        <!-- Advantages:
-                    
-                        - Improved performance
-                        - Fluid user experience
-                        - Reduced page loads and smaller server transactions
-                    
-                        Drawbacks
-                    
-                        - SEO
-                        - Browser History -->
-                    
+                            <!-- 
+                            Drawbacks:
+                                - SEO
+                                - Browser History 
+                            -->
+
+                        </div>
                     </div>
-                </div>
+                </section>
+
+                <!-- SPA Resources -->
+                <section>
+                    <h4 class="text-left">SPA Resources</h4>
+                    <div class="row">
+                        <div class="col-6">
+                            <hr>
+                            <ul class="afdemp-list xxsmall">
+                                <li>
+                                    <a href="https://blog.angular-university.io/why-a-single-page-application-what-are-the-benefits-what-is-a-spa/">Angular Single Page Applications (SPA):<br/>What are the Benefits?</a>
+                                </li>
+                                <li>
+                                    <a href="https://codeburst.io/angular-spas-168a94a0959a">Are Angular applications SPAs?</a>
+                                </li>
+                                <li>
+                                    <a href="https://stackoverflow.com/questions/51094830/why-angular-is-called-single-page-application">Why angular is called single page application
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.quora.com/What-is-SPA-in-AngularJS">What is SPA in AngularJS?</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </section>
+
             </section>
 
             <!-- PREREQUISITES -->
@@ -100,6 +134,7 @@
                 <section>
                     <div class="row">
                         <div class="col-6">
+                            <h2>Angular</h2>
                             <h4>
                                 Prerequisites
                                 <br><small class="xxsmall text-muted">(Background knowledge)</small>
@@ -160,30 +195,30 @@
 
                 <!-- STUDENT NOTES -->
                 <section class="student-notes">
-					<h4 class="text-left">Resources</h4>
+                    <h4 class="text-left">Resources</h4>
                     <div class="row">
-						<div class="col-6">
-								<hr>
-								<ul class="afdemp-list xxsmall">
-									<li>
-										<strong>Basics</strong>
-										<ul class="afdemp-list xxsmall">
-											<li>
-												<a href="https://angular.io/guide/setup-local#setting-up-the-local-environment-and-workspace" target="_blank">Setting up the Local Environment &amp; Workspace</a>
-											</li>
-											<li>
-												<a href="https://youtu.be/E7Voso411Vs?t=168" target="_blank">MVC Architectural Pattern | Mosh</a>
-											</li>
-											<li>
-												<a href="https://www.youtube.com/watch?v=PFmuCDHHpwk" target="_blank">Object-oriented Programming in JavaScript: Made Super Simple | Mosh</a>
-											</li>
-										</ul>
-									</li>
-								</ul>
-							</div>
-		
-						<div class="col-6 text-left">
-							<hr>
+                        <div class="col-6">
+                            <hr>
+                            <ul class="afdemp-list xxsmall">
+                                <li>
+                                    <strong>Basics</strong>
+                                    <ul class="afdemp-list xxsmall">
+                                        <li>
+                                            <a href="https://angular.io/guide/setup-local#setting-up-the-local-environment-and-workspace" target="_blank">Setting up the Local Environment &amp; Workspace</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://youtu.be/E7Voso411Vs?t=168" target="_blank">MVC Architectural Pattern | Mosh</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.youtube.com/watch?v=PFmuCDHHpwk" target="_blank">Object-oriented Programming in JavaScript: Made Super Simple | Mosh</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 text-left">
+                            <hr>
                             <ul class="afdemp-list xxsmall">
                                 <li>
                                     <strong>TypeScript</strong>
@@ -206,13 +241,13 @@
                                     </ul>
                                 </li>
                             </ul>
-						</div>
+                        </div>
                     </div>
                 </section>
-			</section>
-			
-			<!-- GETTING SETUP -->
-			<section>
+            </section>
+
+            <!-- GETTING SETUP -->
+            <section>
 
                 <!-- Quickstart Commands -->
                 <section>
@@ -238,7 +273,7 @@
                             <p class="fragment">
                                 <small class="xxsmall print-only">4) Start the development server<br/>and watch the App running on your browser:</small>
                                 <code class="xsmall">$ ng serve --open</code>
-                            </p>  
+                            </p>
                             <p class="fragment">
                                 <a class="text-muted xxsmall" href="https://angular.io/guide/quickstart">Source: <strong>https://angular.io/guide/quickstart</strong></a>
                             </p>

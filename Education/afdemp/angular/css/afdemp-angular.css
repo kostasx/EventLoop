@@ -30,8 +30,8 @@
         position: fixed;
         top: 0;
         right: 0;
-        height: 200px;
-        width: 150px;
+        height: 180px;
+        width: 120px;
         margin: 0;
         padding: 0;
         background-repeat: no-repeat;
@@ -84,6 +84,22 @@
             size: landscape;
         }
     }    
+
+/* HELPERS */
+
+    .reveal .slides section .fragment-opacity .fragment.visible {
+        opacity: 0.3;
+    }
+
+    .reveal .slides section .fragment-opacity .fragment.visible.current-fragment {
+        opacity: 1;
+    }
+
+    @media print {
+        .reveal .slides section .fragment-opacity .fragment.visible {
+            opacity: 1;
+        }
+    }
 
 /* TYPOGRAPHY */
 
