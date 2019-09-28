@@ -87,6 +87,10 @@
 
 /* HELPERS */
 
+    .afdemp {
+        color: #ed106e;
+    }
+
     .reveal .slides section .fragment-opacity .fragment.visible {
         opacity: 0.3;
     }
@@ -123,6 +127,9 @@
     }
     ul li {
         margin-top: 1rem;
+    }
+    ul.m-0 li {
+        margin-top: 0rem;
     }
     /* @Override */
     .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
