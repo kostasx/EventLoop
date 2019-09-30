@@ -90,6 +90,9 @@
     .afdemp {
         color: #ed106e;
     }
+    .bg-afdemp {
+        background-color: #ed106e;
+    }
 
     .reveal .slides section .fragment-opacity .fragment.visible {
         opacity: 0.3;

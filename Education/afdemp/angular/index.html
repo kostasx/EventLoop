@@ -262,6 +262,9 @@
                                             <a href="https://www.youtube.com/watch?v=NjN00cM18Z4" target="_blank">TypeScript Tutorial for Angular &amp; React Developers | Mosh</a>
                                         </li>
                                         <li>
+                                            <a href="https://scrimba.com/g/gintrototypescript" target="_blank">Introduction to TypeScript | Interactive Screencasts <small>( 55 minutes )</small></a>
+                                        </li>
+                                        <li>
                                             <a href="https://www.youtube.com/watch?v=-PR_XqW9JJU" target="_blank">TypeScript Tutorial | Derek Banas</a>
                                         </li>
                                         <li>
@@ -368,9 +371,6 @@
             <section>
                 <section>
                     <h4>Workspace <span class="text-muted">&amp;</span><br/>Project File Structure</h4>
-                    <h5>
-                        <a href="https://angular.io/guide/file-structure#workspace-and-project-file-structure">Official Reference</a>
-                    </h5>
                     <ul class="tiny m-0">
                         <li class="fragment">.editorconfig</li>
                         <li class="fragment">.gitignore</li>
@@ -381,28 +381,82 @@
                         <li class="fragment">tsconfig.json</li>
                         <li class="fragment">tslint.json</li>
                         <li class="fragment">node_modules/</li>
-                        <li class="afdemp fragment">src/</li>
+                        <li class="fragment"><span class="afdemp font-weight-bold">src/</span><br/><span class="print-only text-muted">*This is the folder where we will<br/>be spending most of our time.</span></li>
                     </ul>
+                    <hr>
+                    <h5 class="fragment">
+                        <a target="_blank" href="https://angular.io/guide/file-structure#workspace-and-project-file-structure">Official Reference</a> / <a target="_blank" href="https://scrimba.com/p/pQxesM/cpb4zCV">Interactive Overview</a>
+                    </h5>
                 </section>
+            </section>
+
+            <!-- ANGULAR ROADMAP -->
+            <section>
+                <h4><strong>Angular</strong> <span class="font-weight-light">Roadmap</span></h4>
+                <div class="row">
+                    <div class="col-8 offset-2">
+                        <div class="row">
+                            <div class="col fragment text-center bg-afdemp text-white mx-3 my-3 p-4">
+                                <p>Modules</p>
+                            </div>
+                            <div style="background: yellowgreen" class=" fragment col text-center text-white mx-3 my-3 p-4">
+                                <p>Components</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div style="background: orange" class=" fragment col text-center text-white mx-3 my-3 p-4">
+                                <p>Services</p>
+                            </div>
+                            <div style="background: skyblue" class=" fragment col text-center text-white mx-3 my-3 p-4">
+                                <p>Routing</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <!-- BASICS: COMPONENTS -->
             <section>
-                <section></section>
+                <section>
+<pre><code class="hljs" data-trim data-line-numbers="4,8-11">
+    import React, { useState } from 'react';
+    
+    function Example() {
+        const [count, setCount] = useState(0);
+    
+        return (
+        &lt;div&gt;
+            &lt;p&gt;You clicked {count} times&lt;/p&gt;
+            &lt;button onClick={() =&gt; setCount(count + 1)}&gt;
+            Click me
+            &lt;/button&gt;
+        &lt;/div&gt;
+        );
+    }
+                        </code></pre>
+                        
+                </section>
             </section>
 
             <!-- REFERENCES & RESOURCES -->
             <section>
                 <section>
                     <h4>Resources</h4>
-                    <ul>
-                        <li>
-                            <a href="https://angular.io/docs">Angular (Official) Documentation</a>
-                        </li>
-                        <li>
-                            <a href="https://angular.io/guide/glossary#glossary">Glossary of Terms</a>
-                        </li>
-                    </ul>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="xsmall">
+                                <li>
+                                    <a href="https://angular.io/docs">Angular (Official) Documentation</a>
+                                </li>
+                                <li>
+                                    <a href="https://angular.io/guide/glossary#glossary">Glossary of Terms</a>
+                                </li>
+                                <li class="font-weight-bold">
+                                    <a href="https://scrimba.com/g/gyourfirstangularapp">Build your first Angular app<br/>Interactive Screencasts <small>( 3 hours )</small></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </section>
             </section>
 
