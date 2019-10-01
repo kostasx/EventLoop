@@ -148,9 +148,7 @@
         margin: 0;
     }
     /* @Override */
-    .reveal pre code {
-        white-space: pre-line;
-    }
+    .reveal pre code {}
     /* @Override */
     @media print {
         pre {
