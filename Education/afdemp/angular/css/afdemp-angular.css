@@ -106,6 +106,10 @@
         .reveal .slides section .fragment-opacity .fragment.visible {
             opacity: 1;
         }
+        .reveal .px-print-5 {
+            padding-left: 3rem!important;
+            padding-right: 3rem!important;
+        }
     }
 
 /* TYPOGRAPHY */
@@ -146,13 +150,14 @@
     .reveal pre {
         box-shadow: none !important;
         margin: 0;
+        font-size: 0.5em;
     }
-    /* @Override */
-    .reveal pre code {}
-
     /* @Override */
     @media print {
         pre {
             border: none;
+        }
+        .reveal pre {
+            font-size: 0.4em;
         }
     }
