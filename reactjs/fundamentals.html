@@ -1057,22 +1057,6 @@
 
         }
 
-        // Execute Functions on Specific Slides: "<ID>": functionReference
-        const RevealEvents = {
-            // "livecode-audio-multiple": execOnAudioMultiple
-        }
-
-        Reveal.configure({
-            keyboard: {
-                // Key: 'e'
-                69: function() {}
-            }
-        });
-
-        Reveal.addEventListener('slidechanged', function(e) {
-            let slideState = e.currentSlide.getAttribute('data-state');
-        });
-
         function initCodeOnSection(slide, state, code) {
             if (state) {
 
@@ -1115,6 +1099,22 @@
 
         }
 
+        // Execute Functions on Specific Slides: "<ID>": functionReference
+            const RevealEvents = {
+            // "livecode-audio-multiple": execOnAudioMultiple
+        }
+
+        Reveal.configure({
+            keyboard: {
+                // Key: 'e'
+                69: function() {}
+            }
+        });
+
+        Reveal.addEventListener('slidechanged', function(e) {
+            let slideState = e.currentSlide.getAttribute('data-state');
+        });
+
         document.body.addEventListener("dblclick", initSlideCode);
         document.body.addEventListener("keyup", initSlideCode);
 
@@ -1122,6 +1122,10 @@
         // - https://github.com/hakimel/reveal.js#configuration
         // - https://github.com/hakimel/reveal.js#dependencies
         Reveal.initialize({
+
+            // Print one page for separate slide fragments:
+            pdfSeparateFragments: false,
+
             hash: true,
             // maxScale: 1,
             // minScale: 1,
