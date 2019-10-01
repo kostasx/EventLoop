@@ -72,7 +72,8 @@
                         <div class="col-8 text-left print-only">
                             <hr>
                             <h4>Architecture:</h4>
-                            <p>The basic building blocks of an Angular application are <a target="_blank" href="https://angular.io/guide/architecture-modules">NgModules</a>, which provide a compilation context for a set of components and is dedicated to an application domain, a workflow, or a closely related set of capabilities.</p>
+                            <p>The basic building blocks of an Angular application are <a target="_blank" href="https://angular.io/guide/architecture-modules">NgModules</a>, which provide a compilation context for a set of components and is dedicated to
+                                an application domain, a workflow, or a closely related set of capabilities.</p>
                         </div>
 
                     </div>
@@ -396,45 +397,204 @@
                 <div class="row">
                     <div class="col-8 offset-2">
                         <div class="row">
-                            <div class="col fragment text-center bg-afdemp text-white mx-3 my-3 p-4">
+                            <div class="col fragment text-center bg-afdemp text-white mx-3 my-3 p-4 rounded shadow">
                                 <p>Modules</p>
+                                <p class="tiny text-white-50" >Blocks of code dedicated to a specific set of capabilities.
+                                </p>
                             </div>
-                            <div style="background: yellowgreen" class=" fragment col text-center text-white mx-3 my-3 p-4">
+                            <div style="background: yellowgreen" class=" fragment col text-center text-white mx-3 my-3 p-4 rounded shadow">
                                 <p>Components</p>
+                                <p class="tiny text-white-50" >UI Code / MVC Views</p>
                             </div>
                         </div>
                         <div class="row">
-                            <div style="background: orange" class=" fragment col text-center text-white mx-3 my-3 p-4">
+                            <div style="background: orange" class=" fragment col text-center text-white mx-3 my-3 p-4 rounded shadow">
                                 <p>Services</p>
+                                <p class="tiny text-white-50" >Reusable Code of Business Logic.</p>
                             </div>
-                            <div style="background: skyblue" class=" fragment col text-center text-white mx-3 my-3 p-4">
+                            <div style="background: skyblue" class=" fragment col text-center text-white mx-3 my-3 p-4 rounded shadow">
                                 <p>Routing</p>
+                                <p class="tiny text-white-50" >Handles multiple page Views.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
+            <!-- MODULES -->
+            <section>
+                <!-- INTRO -->
+                <section>
+                    <h3>Modules</h3>
+                    <div class="row">
+                        <div class="col-5 text-left">
+                            <p class="fragment">A <strong>Module</strong> is a piece of software that is grouped by responsibility.</p>
+                            <p class="fragment">It encapsulates a defined set of functionality and provides a well-defined interface for using this module.<br><small class="mt-3 text-muted font-italic float-right">Source: Michał Michałowski</small></p>
+                        </div>
+                        <div class="col-5 offset-1 text-left">
+                            <p class="fragment"><code>Angular</code> apps are <strong>modular</strong> and Angular has its own modularity system called <code>NgModules</code>.</p>
+                            <p class="fragment">NgModules are containers for a cohesive block of code dedicated to an application domain, a workflow, or a closely related set of capabilities.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SAMPLE MODULE -->
+                <section>
+                    <pre><code class="hljs javascript" data-trim disabled-data-line-numbers="4,8-11">
+                            import { BrowserModule } from '@angular/platform-browser';
+                            import { NgModule } from '@angular/core';
+                            import { AppComponent } from './app.component';
+                            
+                            @NgModule({
+                              declarations: [ AppComponent ],
+                              imports: [ BrowserModule, AppRoutingModule ],
+                              providers: [],
+                              bootstrap: [ AppComponent ]
+                            })
+                            export class AppModule{ }
+                    </code></pre>
+                            
+                </section>
+
+            </section>
+
+            <!-- COMPONENTS -->
+            <section>
+                <!-- INTRO -->
+                <section>
+                    <div class="row">
+                        <div class="col-6 text-left">
+                            <h3>Components</h3>
+                            <p class="fragment">Help us break down an Application's Interface into <strong>individual parts</strong>.</p>
+                            <p class="fragment">Components can be <strong>re-used</strong> and allow us to work efficiently, especially with complex applications, large codebases and large developer teams.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ADVANTAGES -->
+                <section>
+                    <h4>Advantages</h4>
+                    <div class="row px-5 mx-5">
+                        <div class="col-4 tiny">
+                            <div class="fragment col-12 p-5 bg-afdemp text-white m-4">
+                                Encapsulation
+                            </div>
+                        </div>
+                        <div class="col-4 tiny">
+                            <div class="fragment col-12 p-5 bg-afdemp text-white m-4">
+                                Templating
+                            </div>
+                        </div>
+                        <div class="col-4 tiny">
+                            <div class="fragment col-12 p-5 bg-afdemp text-white m-4">
+                                Reusability
+                            </div>
+                        </div>
+                        <div class="col-4 tiny">
+                            <div class="fragment col-12 p-5 bg-afdemp text-white m-4">
+                                Composability
+                            </div>
+                        </div>
+                        <div class="col-4 tiny">
+                            <div class="fragment col-12 p-5 bg-afdemp text-white m-4">
+                                Extensibility
+                            </div>
+                        </div>
+                        <div class="col-4 tiny">
+                            <div class="fragment col-12 p-5 bg-afdemp text-white m-4">
+                                Efficiency
+                            </div>
+                        </div>
+                        <div class="fragment col-12">
+                            <p>
+                                <a target="_blank" href="https://blog.revillweb.com/why-web-components-are-so-important-66ad0bd4807a#af6d">Reference</a>
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ADVANTAGES | PRINT NOTES-->
+                <section class="print-only">
+                    <h4>Why Components at all?</h4>
+                    <div class="row">
+                        <div class="col-6">
+                            <p class="tiny text-left border p-5 shadow">
+                                <strong>Encapsulation: </strong>A component should be completely separate from the main application. This increases reusability, testability and reliability because the component is only responsible for its internals and
+                                shouldn’t be concerned with the state of the application, only its own. Both the component author and user can upgrade the component without fear of affecting the rest of the application.
+                            </p>
+                        </div>
+                        <div class="col-6">
+                            <p class="tiny text-left border p-5 shadow">
+                                <strong>Composability: </strong>It should be possible to create more complex components or even entire applications from a collection of components. The decreases the need for “global” logic providing a better defined architecture
+                                and less chance of bugs because each individual part of the application (or composite component) is better defined.
+                            </p>
+                        </div>
+                        <div class="col-6">
+                            <p class="tiny text-left border p-5 shadow">
+                                <strong>Extensibility: </strong>Components should be able to extend each other and in the case of web components other DOM elements. This means that a component author doesn’t need to reinvent the wheel and can easily reuse
+                                functionality.
+                            </p>
+                        </div>
+                        <div class="col-6">
+                            <p class="tiny text-left border p-5 shadow">
+                                <strong>Reusability: </strong>The big one. With all of the above a component should be easily reusable with minimal dependencies and a clearly defined API.
+                            </p>
+                        </div>
+                        <div class="col-12 tiny text-center">
+                            <a target="_blank" href="https://blog.revillweb.com/why-web-components-are-so-important-66ad0bd4807a#af6d">Reference</a> | By <a href="https://twitter.com/revillweb">Leon Revill</a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- BREAKING DOWN AN APP - 00 -->
+                <section>
+                    <h4>Breaking down an Application<br/>into Components</h4>
+                </section>
+                <!-- BREAKING DOWN AN APP - 01 -->
+                <section>
+                    <div class="row">
+                        <div class="col-8 offset-2">
+                            <img class="img-fluid" src="./images/app-breakdown-01.jpg" alt="">
+                        </div>
+                    </div>
+                </section>
+                <!-- BREAKING DOWN AN APP - 02 -->
+                <section>
+                    <div class="row">
+                        <div class="col-8 offset-2">
+                            <img class="img-fluid" src="./images/app-breakdown-02.jpg" alt="">
+                        </div>
+                    </div>
+                </section>
+                <!-- BREAKING DOWN AN APP - 03 -->
+                <section>
+                    <div class="row">
+                        <div class="col-8 offset-2">
+                            <img class="img-fluid" src="./images/app-breakdown-03.jpg" alt="">
+                        </div>
+                    </div>
+                </section>
+                <!-- BREAKING DOWN AN APP - 04 -->
+                <section>
+                    <div class="row">
+                        <div class="col-8 offset-2">
+                            <img class="img-fluid" src="./images/app-breakdown-04.jpg" alt="">
+                        </div>
+                    </div>
+                </section>
+                <!-- BREAKING DOWN AN APP - 05 -->
+                <section>
+                    <div class="row">
+                        <div class="col-8 offset-2">
+                            <img class="img-fluid" src="./images/app-breakdown-05.jpg" alt="">
+                        </div>
+                    </div>
+                </section>
+            </section>
+
             <!-- BASICS: COMPONENTS -->
             <section>
                 <section>
-<pre><code class="hljs" data-trim data-line-numbers="4,8-11">
-    import React, { useState } from 'react';
-    
-    function Example() {
-        const [count, setCount] = useState(0);
-    
-        return (
-        &lt;div&gt;
-            &lt;p&gt;You clicked {count} times&lt;/p&gt;
-            &lt;button onClick={() =&gt; setCount(count + 1)}&gt;
-            Click me
-            &lt;/button&gt;
-        &lt;/div&gt;
-        );
-    }
-                        </code></pre>
-                        
                 </section>
             </section>
 
@@ -466,6 +626,16 @@
     <script src="js/reveal.js"></script>
 
     <script>
+        // REMOVE PRINT ONLY SLIDES
+        Reveal.addEventListener('ready', function(event) {
+            if (document.location.search.slice(1).match("print-pdf")) {
+                return false;
+            }
+            const printOnlySections = document.querySelectorAll("section.print-only");
+            Array.from(printOnlySections).forEach((section) => section.remove());
+            Reveal.sync();
+        });
+
         // More info about config & dependencies:
         // - https://github.com/hakimel/reveal.js#configuration
         // - https://github.com/hakimel/reveal.js#dependencies
