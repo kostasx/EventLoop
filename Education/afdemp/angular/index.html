@@ -223,8 +223,8 @@
 
                 </section>
 
-                <!-- STUDENT NOTES -->
-                <section class="student-notes">
+                <!-- RESOURCES -->
+                <section>
                     <h4 class="text-left">Resources</h4>
                     <div class="row">
                         <div class="col-6">
@@ -438,24 +438,135 @@
                     </div>
                 </section>
 
-                <!-- SAMPLE MODULE -->
                 <section>
-                    <pre><code class="hljs javascript" data-trim disabled-data-line-numbers="4,8-11">
+                    <h4>NgModule Walkthrough:<br><code>/src/app/app.module.ts</code></h4>
+                </section>
+    
+                <!-- app.module.ts -->
+                <section>
+                    <div class="px-print-5">
+                        <pre><code class="hljs typescript" data-trim data-line-numbers>
                             import { BrowserModule } from '@angular/platform-browser';
                             import { NgModule } from '@angular/core';
                             import { AppComponent } from './app.component';
                             
                             @NgModule({
-                              declarations: [ AppComponent ],
-                              imports: [ BrowserModule, AppRoutingModule ],
-                              providers: [],
-                              bootstrap: [ AppComponent ]
+                                declarations: [ AppComponent ],
+                                imports: [ BrowserModule ],
+                                providers: [],
+                                bootstrap: [ AppComponent ]
                             })
-                            export class AppModule{ }
-                    </code></pre>
+                            export class AppModule { }
+                        </code></pre>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                    </div> 
+                </section>
+    
+                <!-- app.module.ts - Part 001 -->
+                <section>
+                    <div class="px-print-5">
+                        <pre><code class="hljs typescript" data-trim data-line-numbers="1">
+                            import { BrowserModule } from '@angular/platform-browser';
+                            import { NgModule } from '@angular/core';
+                            import { AppComponent } from './app.component';
                             
+                            @NgModule({
+                                declarations: [ AppComponent ],
+                                imports: [ BrowserModule ],
+                                providers: [],
+                                bootstrap: [ AppComponent ]
+                            })
+                            export class AppModule { }
+                        </code></pre>
+                        <p class="text-left"><a href="https://angular.io/api/platform-browser/BrowserModule" target="_blank">BrowserModule</a> provides services that are essential to launch and run a browser app.</p>
+                        <p>&nbsp;</p>
+                    </div>
                 </section>
 
+                <!-- app.module.ts - Part 002 -->
+                <section>
+                    <div class="px-print-5">
+                        <pre><code class="hljs typescript" data-trim data-line-numbers="2">
+                            import { BrowserModule } from '@angular/platform-browser';
+                            import { NgModule } from '@angular/core';
+                            import { AppComponent } from './app.component';
+                            
+                            @NgModule({
+                                declarations: [ AppComponent ],
+                                imports: [ BrowserModule ],
+                                providers: [],
+                                bootstrap: [ AppComponent ]
+                            })
+                            export class AppModule { }
+                        </code></pre>
+                        <p class="text-left">The <a href="https://angular.io/api/core/NgModule" target="_blank">NgModule Decorator</a> <span class="text-muted font-italic">(used on line #5)</span> is imported from the <a target="_blank" href="https://angular.io/api/core">Angular Core</a> library.</p>
+                        <p>&nbsp;</p>
+                    </div>
+                </section>
+
+                <!-- app.module.ts - Part 003 -->
+                <section>
+                    <div class="px-print-5">
+                        <pre><code class="hljs typescript" data-trim data-line-numbers="3">
+                            import { BrowserModule } from '@angular/platform-browser';
+                            import { NgModule } from '@angular/core';
+                            import { AppComponent } from './app.component';
+                            
+                            @NgModule({
+                                declarations: [ AppComponent ],
+                                imports: [ BrowserModule ],
+                                providers: [],
+                                bootstrap: [ AppComponent ]
+                            })
+                            export class AppModule { }
+                        </code></pre>
+                        <p class="text-left">We import the <span class="afdemp">AppComponent</span> components to our Module.</p>
+                        <p>&nbsp;</p>
+                    </div>
+                </section>
+
+                <!-- app.module.ts - Part 004 -->
+                <section>
+                    <div class="px-print-5">
+                        <pre><code class="hljs typescript" data-trim data-line-numbers="5-10">
+                            import { BrowserModule } from '@angular/platform-browser';
+                            import { NgModule } from '@angular/core';
+                            import { AppComponent } from './app.component';
+                            
+                            @NgModule({
+                                declarations: [ AppComponent ],
+                                imports: [ BrowserModule ],
+                                providers: [],
+                                bootstrap: [ AppComponent ]
+                            })
+                            export class AppModule { }
+                        </code></pre>
+                        <p class="text-left">We use the <a href="https://angular.io/api/core/NgModule" target="_blank">@NgModule</a> decorator <span class="text-muted font-italic">(imported on line #2)</span> and the supplied metadata <span class="text-muted font-italic">( the object argument )</span> to mark the <span class="afdemp">AppModule</span> class as an NgModule.</p>
+                    </div>
+                </section>
+
+                <!-- app.module.ts - Part 005 -->
+                <section>
+                    <div class="px-print-5">
+                        <pre><code class="hljs typescript" data-trim data-line-numbers="11">
+                            import { BrowserModule } from '@angular/platform-browser';
+                            import { NgModule } from '@angular/core';
+                            import { AppComponent } from './app.component';
+                            
+                            @NgModule({
+                                declarations: [ AppComponent ],
+                                imports: [ BrowserModule ],
+                                providers: [],
+                                bootstrap: [ AppComponent ]
+                            })
+                            export class AppModule { }
+                        </code></pre>
+                        <p class="text-left">We are ready to export our <span class="afdemp">AppModule</span> to the world.</p>
+                        <p>&nbsp;</p>
+                    </div>
+                </section>
+    
             </section>
 
             <!-- COMPONENTS -->
@@ -476,32 +587,32 @@
                     <h4>Advantages</h4>
                     <div class="row px-5 mx-5">
                         <div class="col-4 tiny">
-                            <div class="fragment col-12 p-5 bg-afdemp text-white m-4">
+                            <div class="fragment col-12 shadow rounded p-5 bg-afdemp text-white m-4">
                                 Encapsulation
                             </div>
                         </div>
                         <div class="col-4 tiny">
-                            <div class="fragment col-12 p-5 bg-afdemp text-white m-4">
+                            <div class="fragment col-12 shadow rounded p-5 bg-afdemp text-white m-4">
                                 Templating
                             </div>
                         </div>
                         <div class="col-4 tiny">
-                            <div class="fragment col-12 p-5 bg-afdemp text-white m-4">
+                            <div class="fragment col-12 shadow rounded p-5 bg-afdemp text-white m-4">
                                 Reusability
                             </div>
                         </div>
                         <div class="col-4 tiny">
-                            <div class="fragment col-12 p-5 bg-afdemp text-white m-4">
+                            <div class="fragment col-12 shadow rounded p-5 bg-afdemp text-white m-4">
                                 Composability
                             </div>
                         </div>
                         <div class="col-4 tiny">
-                            <div class="fragment col-12 p-5 bg-afdemp text-white m-4">
+                            <div class="fragment col-12 shadow rounded p-5 bg-afdemp text-white m-4">
                                 Extensibility
                             </div>
                         </div>
                         <div class="col-4 tiny">
-                            <div class="fragment col-12 p-5 bg-afdemp text-white m-4">
+                            <div class="fragment col-12 shadow rounded p-5 bg-afdemp text-white m-4">
                                 Efficiency
                             </div>
                         </div>
@@ -515,33 +626,35 @@
 
                 <!-- ADVANTAGES | PRINT NOTES-->
                 <section class="print-only">
-                    <h4>Why Components at all?</h4>
-                    <div class="row">
-                        <div class="col-6">
-                            <p class="tiny text-left border p-5 shadow">
-                                <strong>Encapsulation: </strong>A component should be completely separate from the main application. This increases reusability, testability and reliability because the component is only responsible for its internals and
-                                shouldn’t be concerned with the state of the application, only its own. Both the component author and user can upgrade the component without fear of affecting the rest of the application.
-                            </p>
-                        </div>
-                        <div class="col-6">
-                            <p class="tiny text-left border p-5 shadow">
-                                <strong>Composability: </strong>It should be possible to create more complex components or even entire applications from a collection of components. The decreases the need for “global” logic providing a better defined architecture
-                                and less chance of bugs because each individual part of the application (or composite component) is better defined.
-                            </p>
-                        </div>
-                        <div class="col-6">
-                            <p class="tiny text-left border p-5 shadow">
-                                <strong>Extensibility: </strong>Components should be able to extend each other and in the case of web components other DOM elements. This means that a component author doesn’t need to reinvent the wheel and can easily reuse
-                                functionality.
-                            </p>
-                        </div>
-                        <div class="col-6">
-                            <p class="tiny text-left border p-5 shadow">
-                                <strong>Reusability: </strong>The big one. With all of the above a component should be easily reusable with minimal dependencies and a clearly defined API.
-                            </p>
-                        </div>
-                        <div class="col-12 tiny text-center">
-                            <a target="_blank" href="https://blog.revillweb.com/why-web-components-are-so-important-66ad0bd4807a#af6d">Reference</a> | By <a href="https://twitter.com/revillweb">Leon Revill</a>
+                    <div class="px-5">
+                        <h4>Why Components at all?</h4>
+                        <div class="row">
+                            <div class="col-6">
+                                <p class="tiny text-left border p-3 shadow">
+                                    <strong>Encapsulation: </strong>A component should be completely separate from the main application. This increases reusability, testability and reliability because the component is only responsible for its internals and
+                                    shouldn’t be concerned with the state of the application, only its own. Both the component author and user can upgrade the component without fear of affecting the rest of the application.
+                                </p>
+                            </div>
+                            <div class="col-6">
+                                <p class="tiny text-left border p-3 shadow">
+                                    <strong>Composability: </strong>It should be possible to create more complex components or even entire applications from a collection of components. The decreases the need for “global” logic providing a better defined architecture
+                                    and less chance of bugs because each individual part of the application (or composite component) is better defined.
+                                </p>
+                            </div>
+                            <div class="col-6">
+                                <p class="tiny text-left border p-3 shadow">
+                                    <strong>Extensibility: </strong>Components should be able to extend each other and in the case of web components other DOM elements. This means that a component author doesn’t need to reinvent the wheel and can easily reuse
+                                    functionality.
+                                </p>
+                            </div>
+                            <div class="col-6">
+                                <p class="tiny text-left border p-3 shadow">
+                                    <strong>Reusability: </strong>The big one. With all of the above a component should be easily reusable with minimal dependencies and a clearly defined API.
+                                </p>
+                            </div>
+                            <div class="col-12 tiny text-center">
+                                <a target="_blank" href="https://blog.revillweb.com/why-web-components-are-so-important-66ad0bd4807a#af6d">Reference</a> | By <a href="https://twitter.com/revillweb">Leon Revill</a>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -598,134 +711,6 @@
                 </section>
             </section>
 
-            <!-- NgModules -->
-            <section>
-
-                <section>
-                    <h4>NgModule Walkthrough:<br><code>/src/app/app.module.ts</code></h4>
-                </section>
-
-                <!-- app.module.ts -->
-                <section>
-                    <div class="px-print-5">
-                        <pre><code class="hljs typescript" data-trim data-line-numbers>
-                            import { BrowserModule } from '@angular/platform-browser';
-                            import { NgModule } from '@angular/core';
-                            import { AppComponent } from './app.component';
-                            
-                            @NgModule({
-                              declarations: [ AppComponent ],
-                              imports: [ BrowserModule ],
-                              providers: [],
-                              bootstrap: [ AppComponent ]
-                            })
-                            export class AppModule { }
-                        </code></pre>
-                    </div> 
-                </section>
-
-                <!-- app.module.ts - Part 001 -->
-                <section>
-                    <div class="px-print-5">
-                        <pre><code class="hljs typescript" data-trim data-line-numbers="1">
-                            import { BrowserModule } from '@angular/platform-browser';
-                            import { NgModule } from '@angular/core';
-                            import { AppComponent } from './app.component';
-                            
-                            @NgModule({
-                                declarations: [ AppComponent ],
-                                imports: [ BrowserModule ],
-                                providers: [],
-                                bootstrap: [ AppComponent ]
-                            })
-                            export class AppModule { }
-                        </code></pre>
-                        <p class="text-left"><a href="https://angular.io/api/platform-browser/BrowserModule" target="_blank">BrowserModule</a> provides services that are essential to launch and run a browser app.</p>
-                    </div>
-                </section>
-
-                <!-- app.module.ts - Part 002 -->
-                <section>
-                    <div class="px-print-5">
-                        <pre><code class="hljs typescript" data-trim data-line-numbers="2">
-                            import { BrowserModule } from '@angular/platform-browser';
-                            import { NgModule } from '@angular/core';
-                            import { AppComponent } from './app.component';
-                            
-                            @NgModule({
-                              declarations: [ AppComponent ],
-                              imports: [ BrowserModule ],
-                              providers: [],
-                              bootstrap: [ AppComponent ]
-                            })
-                            export class AppModule { }
-                        </code></pre>
-                        <p class="text-left">The <a href="https://angular.io/api/core/NgModule" target="_blank">NgModule Decorator</a> <span class="text-muted font-italic">(used on line #5)</span> is imported from the <a target="_blank" href="https://angular.io/api/core">Angular Core</a> library.</p>
-                    </div>
-                </section>
-
-                <!-- app.module.ts - Part 003 -->
-                <section>
-                    <div class="px-print-5">
-                        <pre><code class="hljs typescript" data-trim data-line-numbers="3">
-                            import { BrowserModule } from '@angular/platform-browser';
-                            import { NgModule } from '@angular/core';
-                            import { AppComponent } from './app.component';
-                            
-                            @NgModule({
-                              declarations: [ AppComponent ],
-                              imports: [ BrowserModule ],
-                              providers: [],
-                              bootstrap: [ AppComponent ]
-                            })
-                            export class AppModule { }
-                        </code></pre>
-                        <p class="text-left">We import the <span class="afdemp">AppComponent</span> components to our Module.</p>
-                    </div>
-                </section>
-
-                <!-- app.module.ts - Part 004 -->
-                <section>
-                    <div class="px-print-5">
-                        <pre><code class="hljs typescript" data-trim data-line-numbers="5-10">
-                            import { BrowserModule } from '@angular/platform-browser';
-                            import { NgModule } from '@angular/core';
-                            import { AppComponent } from './app.component';
-                            
-                            @NgModule({
-                              declarations: [ AppComponent ],
-                              imports: [ BrowserModule ],
-                              providers: [],
-                              bootstrap: [ AppComponent ]
-                            })
-                            export class AppModule { }
-                        </code></pre>
-                        <p class="text-left">We use the <a href="https://angular.io/api/core/NgModule" target="_blank">@NgModule</a> decorator <span class="text-muted font-italic">(imported on line #2)</span> and the supplied metadata <span class="text-muted font-italic">( the object argument )</span> to mark the <span class="afdemp">AppModule</span> class as an NgModule.</p>
-                    </div>
-                </section>
-
-                <!-- app.module.ts - Part 005 -->
-                <section>
-                    <div class="px-print-5">
-                        <pre><code class="hljs typescript" data-trim data-line-numbers="11">
-                            import { BrowserModule } from '@angular/platform-browser';
-                            import { NgModule } from '@angular/core';
-                            import { AppComponent } from './app.component';
-                            
-                            @NgModule({
-                              declarations: [ AppComponent ],
-                              imports: [ BrowserModule ],
-                              providers: [],
-                              bootstrap: [ AppComponent ]
-                            })
-                            export class AppModule { }
-                        </code></pre>
-                        <p class="text-left">We are ready to export our <span class="afdemp">AppModule</span> to the world.</p>
-                    </div>
-                </section>
-
-            </section>
-
             <!-- REFERENCES & RESOURCES -->
             <section>
                 <section>
@@ -752,41 +737,6 @@
     </div>
 
     <script src="js/reveal.js"></script>
-
-    <script>
-        // REMOVE PRINT ONLY SLIDES
-        Reveal.addEventListener('ready', function(event) {
-            if (document.location.search.slice(1).match("print-pdf")) {
-                return false;
-            }
-            const printOnlySections = document.querySelectorAll("section.print-only");
-            Array.from(printOnlySections).forEach((section) => section.remove());
-            Reveal.sync();
-        });
-
-        // More info about config & dependencies:
-        // - https://github.com/hakimel/reveal.js#configuration
-        // - https://github.com/hakimel/reveal.js#dependencies
-        Reveal.initialize({
-
-            // Print one page for separate slide fragments:
-            pdfSeparateFragments: false,
-
-            history: true,
-
-            dependencies: [{
-                src: 'plugin/markdown/marked.js'
-            }, {
-                src: 'plugin/markdown/markdown.js'
-            }, {
-                src: 'plugin/notes/notes.js',
-                async: true
-            }, {
-                src: 'plugin/highlight/highlight.js',
-                async: true
-            }]
-        });
-    </script>
     <script src="./js/afdemp-angular.js"></script>
 </body>
 

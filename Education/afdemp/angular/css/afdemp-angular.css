@@ -72,6 +72,10 @@
     }
 
     @media print {
+        .shadow {
+            -webkit-print-color-adjust:exact;
+            -webkit-filter:opacity(1);
+        }
         .print-only {
             display: block !important;
         }
@@ -151,6 +155,10 @@
         box-shadow: none !important;
         margin: 0;
         font-size: 0.5em;
+    }
+    /* @Override */
+    .reveal .hljs[data-line-numbers]:not([data-line-numbers=""]) tr:not(.highlight-line) {
+        opacity: 0.2;
     }
     /* @Override */
     @media print {
