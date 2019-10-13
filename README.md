@@ -21,6 +21,9 @@ We are passionate about technology
       <a href="http://eventloop.gr/Education/afdemp/Bootstrap/index.html#/">Bootstrap v4</a>
     </li>
     <li>
+      <a href="http://eventloop.gr//Education/TechTalentSchool/javascript/introduction.html#/">Introduction to JavaScript - JavaScript Fundamentals</a>
+    </li>
+    <li>
       <a href="http://eventloop.gr/Education/TechTalentSchool/javascript/reactjs/index.html#/">React.JS</a>
     </li>
 </ul>
