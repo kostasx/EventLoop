@@ -440,6 +440,49 @@ document.body.addEventListener(&quot;mousemove&quot;, function(e) {&#10;
 
 </li>
 
+  <li>
+    <strong>Question: </strong><i>Do we need a closing <code>source</code> tag?</i>
+    <br>
+    <strong>Answer: </strong>No, there's no need for either a closing &lt;/source&gt; tag or even a self-closing slash (optional): &lt;source src=&quot;&quot; /&gt;, as &lt;source src=&quot;&quot;&gt; will suffice. The &lt;source&gt; tag belongs to the family of HTML tags that accept no content, also known as "void" tags.<br>
+    <p>References:</p>
+    <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source#Usage_notes">1</a></p>
+    <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source">2</a></p>
+    <p><a href="https://html.spec.whatwg.org/#the-source-element">3</a></p>
+    <p><a href="https://html.spec.whatwg.org/multipage/syntax.html#elements-2">Void Elements</a></p>
+  </li>
+
+  <li>
+    <strong>Question: </strong><i>Can the &lt;video&gt; element accept a height setting that will distort (stretch) the video being displayed?</i>
+    <br>
+    <strong>Answer: </strong>Yes, you can use the CSS object-fit rule for that. <a href="https://codepen.io/kostasx/pen/MWWjrJo">Click for example code</a>
+    <p><strong>NOTE:</strong> Keep in mind that object-fit is <a href="https://caniuse.com/#search=object-fit">not supported</a> by IE11</p>
+
+  </li>
+
+  <li>
+    <strong>Question: </strong><i>Can I use a specific frame of a &lt;video&gt; element as its poster image?</i>
+    <br>
+    <strong>Answer: </strong>No, you can just grab a screenshot of a specific video frame, save it as a file and use it in the `poster` attribute as a value.
+  </li>
+
+  <li>
+    <strong>Question: </strong><i>When I try to display the duration property of a &lt;video&gt; element, I get <strong>NaN</strong>.</i>
+    <br>
+    <strong>Answer: </strong>This means that the video metadata (which includes the duration value) has not yet loaded. You can use an event listener in the 'loadedmetadata' event to run any commands that will be using the duration property. <a href="https://codepen.io/kostasx/pen/QWWKagG?editors=1111">Example Code</a>
+  </li>
+
+  <li>
+    <strong>Question: </strong><i>An element is not made draggable in FireFox, event when the draggable="true" attribute is set.</i>
+    <br>
+    <strong>Answer: </strong>Due to some browser vendor inconsistencies, you need to set a "dragstart" event handler and set some data on the dataTransfer object in order for the element to become draggable. <a href="https://stackoverflow.com/questions/3977596/how-to-make-divs-in-html5-draggable-for-firefox">Reference</a>
+  </li>
+
+  <li>
+    <strong>Question: </strong><i>How can I change the appearance of a draggable element during the drag operation?</i>
+    <br>
+    <strong>Answer: </strong>You can use the <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API#Define_the_drag_effect">dropEffect</a> for that.
+  </li>
+
   </ul>
 
 
