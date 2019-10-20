@@ -12,10 +12,16 @@
 	  <li>
       	<a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a>
         <ul>
+		<li>
+			<a href="https://docs.emmet.io/" target="_blank">Emmet Documentation</a>
+		</li>
 	        <li>
             <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer" target="_blank">LiveServer Extension</a></li>
 	        <li>
             <a href="https://marketplace.visualstudio.com/items?itemName=hdg.live-html-previewer" target="_blank">HTML Live Previewer Extension</a></li>
+		<li>
+			<a href="https://vscodecandothat.com/" target="_blank">All the best things about Visual Studio Code that nobody ever bothered to tell you</a>
+		</li>
         </ul>
        </li>
       <li><a href="https://www.sublimetext.com/" target="_blank">Sublime Text</a></li>
