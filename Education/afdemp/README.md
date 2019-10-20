@@ -297,6 +297,16 @@
     <li>
         <a href="https://itnext.io/javascript-fundamentals-master-the-dom-part-2-bef36405598e">JavaScript Fundamentals: Master the DOM! (Part 2)</a>
     </li>
+    <li>
+	    <a href="https://www.youtube.com/watch?v=F1anRyL37lE"><strong>Events</strong> | JavaScript Event Capture, Propagation and Bubbling (9 min)</a>
+    </li>
+    <li>
+	    <a href="https://www.youtube.com/watch?v=SqQZ8SttQsI"><strong>Events</strong> | Event Bubbling (8 min)</a>
+    </li>
+    <li>
+	    <a href="https://www.youtube.com/watch?v=BtOrr7oTH_8"><strong>Events</strong> | Event Propagation Explained (w Bubbling and Capturing)
+ (20 min)</a>
+    </li>
 
 </ul>
 </li>
@@ -320,6 +330,7 @@
   <h4>Questions &amp; Answers</h4>
   <ul>
   <li><strong>Question:</strong><em> How do I combine a checkbox input element with an image?</em><br><strong>Answer:</strong> <a href="https://codepen.io/kostasx/pen/VNGRKJ">Code Solution</a></li>
+	<li><strong>Question:</strong><em> What exactly is the <strong>bubbles</strong> property of the Event Object?</em><br><strong>Answer:</strong> <em>The <strong>bubbles</strong> property contains a Boolean value that indicates whether the current event can propagate up the DOM hierarchy or not. There are two types of events, one propagates up the DOM hierarchy, the other does not.</em><br><a href="http://help.dottoro.com/ljghpfmx.php">Reference</a><br>Also see the <strong>Event Propagation Explained</strong> and <strong>JavaScript Event Capture, Propagation and Bubbling </strong> videos in the section above in order to understand how Events propagate in the DOM.</li>
 <br>  
   
   
