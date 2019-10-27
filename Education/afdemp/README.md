@@ -36,7 +36,7 @@
 
 
 <details>
-  <summary>Key Concepts and Principles​</summary>
+  <summary>Key Concepts and Principles</summary>
   <p>Syllabus: 4.1.1 ~ 4.1.3</p>
 
   <h4>Resources</h4>
@@ -58,7 +58,7 @@
 
 </details>
 
-<details>
+<details id="html">
   <summary>HTML (HyperText Markup Language)</summary>
   <h4>References</h4>
   <ul>
@@ -151,7 +151,7 @@
 
 </details>
 
-<details>
+<details id="css">
   <summary>CSS (Cascading Style Sheets)​</summary>
   <p>Syllabus:</p>
   <h4>References</h4>
@@ -259,7 +259,7 @@
 
 </details>
 
-<details>
+<details id="javascript">
   <summary>JavaScript</summary>
   <p>Syllabus:</p>
   <h4>References</h4>
@@ -273,7 +273,15 @@
 			 <li><a href="https://goo.gl/ej6etK">Visualizing Object Equality</a></li>
 </ul>
   </li>
-<li>
+  <li id="this-keyword">
+	  <strong>The <code>this</code> keyword in JS</strong>
+          <ul>
+		  <li><a href="https://www.youtube.com/watch?v=gvicrj31JOM" target="_blank">JavaScript this Keyword | Mosh (9 min)</a></li>
+		  <li><a href="https://www.youtube.com/watch?v=zE9iro4r918" target="_blank">WTF is THIS: Understanding the "this" keyword in JavaScript (14 min)</a></li>
+		  <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this" target="_blank">this @ MDN <strong>(MUST READ)</strong></a></li>
+	  </ul>
+  </li>
+  <li>
     <strong>DOM:</strong>
     <ul>
     <li>
@@ -563,7 +571,7 @@ document.body.addEventListener(&quot;mousemove&quot;, function(e) {&#10;
 
 </details>
 
-<details>
+<details id="reactjs>
 <summary>React.JS</summary>
 
   <h4>Resources</h4>
@@ -574,6 +582,10 @@ document.body.addEventListener(&quot;mousemove&quot;, function(e) {&#10;
 
 <li>
 	<a href="https://www.youtube.com/watch?v=Ke90Tje7VS0">(YouTube) Learn React - React Crash Course [2019] - React Tutorial with Examples | Mosh</a>
+</li>
+
+<li>
+	<a href="https://ihatetomatoes.net/get-react-101/">React 101 - Learn how to build 3 practical React components from scratch!</a>
 </li>
 
 <li>
