@@ -571,7 +571,7 @@ document.body.addEventListener(&quot;mousemove&quot;, function(e) {&#10;
 
 </details>
 
-<details id="reactjs>
+<details id="reactjs">
 <summary>React.JS</summary>
 
   <h4>Resources</h4>
