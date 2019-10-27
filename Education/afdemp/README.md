@@ -618,6 +618,13 @@ document.body.addEventListener(&quot;mousemove&quot;, function(e) {&#10;
 
 </ul>
 </li>
+<li id="react-hooks">
+  <strong>React Hooks:</strong>
+  <ul>
+	  <li><a href="https://wattenberger.com/blog/react-hooks" target="_blank">Thinking in React Hooks</a></li>
+  </ul>
+</li>
+
 <li id="react-state-management">
 <strong>State Management:</strong>
 <ul>
