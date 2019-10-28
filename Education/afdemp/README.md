@@ -585,6 +585,10 @@ document.body.addEventListener(&quot;mousemove&quot;, function(e) {&#10;
 </li>
 
 <li>
+	<a href="https://www.freecodecamp.org/news/learning-react-roadmap-from-scratch-to-advanced-bff7735531b6/">How to Learn React — A roadmap from beginner to advanced (2018)</a>
+</li>
+
+<li>
 	<a href="https://ihatetomatoes.net/get-react-101/">React 101 - Learn how to build 3 practical React components from scratch!</a>
 </li>
 
