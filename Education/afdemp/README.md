@@ -597,6 +597,12 @@ document.body.addEventListener(&quot;mousemove&quot;, function(e) {&#10;
 </li>
 
 <li>
+	<a href="https://twitter.com/chrisachard/status/1175022111758442497">Learn React in 10 tweets (with hooks)</a>
+</li>
+
+
+
+<li>
 	<a href="https://www.youtube.com/watch?v=_ZTT9kw3PIE">Introduction to React by Le Wagon [Video] <strong>[&checkmark;]</strong></a>
 </li>
 
