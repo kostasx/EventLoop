@@ -35,7 +35,7 @@
   <h4>Questions &amp; Answers</h4>
   <ul>
   <li><strong>Question:</strong><em> The VSCode command <code>code .</code> is not working.</em>
-  <br> <strong>Answer:</strong>Open the Command Palette (Ctrl+P or Cmd+P (Mac)), type <code>shell command</code> and select <code>Shell Command: Install 'code' command in PATH </code></li>  </ul>
+  <br> <strong>Answer:</strong> Open the Command Palette (Ctrl+P or Cmd+P (Mac)), type <code>shell command</code> and select <code>Shell Command: Install 'code' command in PATH </code></li>  </ul>
 
 </details>
 
