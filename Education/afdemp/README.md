@@ -351,6 +351,16 @@
 
 </details>
 
+<details id="json">
+<summary>JSON</summary>
+<h4>Resources</h4>
+  <ul>
+  <li>
+  <a href="https://www.youtube.com/embed/EcXc7OFV0_4?start=38&end=141&version=3"><strong>What is JSON?</strong></a>
+  </li>
+</ul>
+</details>
+
 <details id="accessibility">
 <summary><strong>Accessibility</strong> | A11Y</summary>
 <h4>Resources</h4>
