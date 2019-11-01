@@ -32,6 +32,11 @@
   <a href="https://www.google.com/chrome/" target="_blank">Google <strong>Chrome</strong></a><br/>	
   <a href="https://www.mozilla.org/en-US/firefox/" target="_blank">Mozilla <strong>FireFox</strong></a>	
   </p>
+  <h4>Questions &amp; Answers</h4>
+  <ul>
+  <li><strong>Question:</strong><em> The VSCode command <code>code .</code> is not working.</em>
+  <br> <strong>Answer:</strong>Open the Command Palette (Ctrl+P or Cmd+P (Mac)), type <code>shell command</code> and select <code>Shell Command: Install 'code' command in PATH </code></li>  </ul>
+
 </details>
 
 
