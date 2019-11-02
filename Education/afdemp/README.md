@@ -631,6 +631,12 @@ document.body.addEventListener(&quot;mousemove&quot;, function(e) {&#10;
 	<a href="https://medium.freecodecamp.org/what-i-wish-i-knew-when-i-started-to-work-with-react-js-3ba36107fd13">What I wish I knew when I started to work with React.js</a>
 </li>
 <li>
+	<strong>Create React App</strong>
+	<ul>
+		<li><a href="https://create-react-app.dev/docs/updating-to-new-releases/">How to Update to New Versions?</a></li>
+	</ul>
+</li>
+<li>
 <strong>React Routing</strong>
 <ul>
 <li><a href="https://reacttraining.com/react-router/web/guides/quick-start">Quick Start</a></li>
