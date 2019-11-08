@@ -707,6 +707,7 @@ document.body.addEventListener(&quot;mousemove&quot;, function(e) {&#10;
     <li><a href="https://docs.angularjs.org/api/ng/service/$http#$http-methods">$http Methods</a></li>
     <li><a href="https://www.youtube.com/watch?v=TRrL5j3MIvo">Introduction to Angular.js in 50 Examples (part 1)</a></li>
     <li><a href="https://www.youtube.com/watch?v=6J08m1H2BME">Introduction to Angular.js in 50 Examples (part 2)</a></li>
+    <li><a href="https://www.airpair.com/angularjs/posts/top-10-mistakes-angularjs-developers-make">The Top 10 Mistakes AngularJS Developers Make</a></li>
   </ul>
 
   <h4>Questions</h4>
