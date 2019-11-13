@@ -44,6 +44,7 @@ We are passionate about technology
 
 <details>
   <summary>Miscellaneous</summary>
+  <br>
   <ul>
     <li><a href="https://github.com/kostasx/EventLoop/tree/master/Education/tips">Tips for Developers</a></li>
   </ul>
