@@ -8,7 +8,7 @@ __[&checkmark;]__ : Student Approved Resource
 
 <h4>Resources</h4>
 <ul>
-	<li><a href="https://www.youtube.com/user/javaboynavin/search?query=java">Various Java Tutorials (YouTube Videos)</a> __[&checkmark;]__</li>
+	<li><a href="https://www.youtube.com/user/javaboynavin/search?query=java">Java Tutorials (YouTube Videos)</a> <strong>&checkmark;</strong></li>
 </ul>
 
 
