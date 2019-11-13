@@ -733,3 +733,12 @@ document.body.addEventListener(&quot;mousemove&quot;, function(e) {&#10;
   </ul>
 
 </details>
+
+
+<details>
+  <summary>XML</summary>
+  <h4>Resources</h4>
+  <ul>
+    <li><a href="https://www.youtube.com/watch?v=n-y-YHVZSwk">XML Tutorial for Beginners Theory</a></li>
+  </ul>
+</details>
