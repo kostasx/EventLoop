@@ -1,9 +1,19 @@
 ## Coding Bootcamp
 
+#### NOTES
+
+__[&checkmark;]__ : Student Approved Resource
+
+### Java (Back End)
+
+<h4>Resources</h4>
+<ul>
+	<li><a href="https://www.youtube.com/user/javaboynavin/search?query=java">Various Java Tutorials (YouTube Videos)</a> __[&checkmark;]__</li>
+</ul>
+
+
+
 ### Web Design and Development Fundamentals (Front End)
-
-#### Lesson 1 (Common)
-
 
 <details>
   <summary>Prerequisites: Tools</summary>
@@ -723,7 +733,3 @@ document.body.addEventListener(&quot;mousemove&quot;, function(e) {&#10;
   </ul>
 
 </details>
-
-#### NOTES
-
-__[&checkmark;]__ : Student Approved Resource
