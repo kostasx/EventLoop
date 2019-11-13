@@ -63,6 +63,8 @@ __[&checkmark;]__ : Student Approved Resource
   <ul>
   <li><a href="https://marksheet.io/introduction.html">The Web for Absolute Beginners</a></li>
   <li><a href="https://kostasx.github.io/EventLoop/Education/tmp/WebOversimplified/index.html#/">The Web Oversimplified</a></li>
+  <li><a href="https://computer.howstuffworks.com/web-server.htm">How Web Servers Work</a></li>
+  <li><a href="https://www.oreilly.com/library/view/http-the-definitive/1565925092/ch01s02.html">Web Clients and Servers</a></li>
   <li><a href="https://learn.onemonth.com/understanding-http-basics/">Understanding HTTP Basics</a></li>
   <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME Types</a></li>
   <li><a href="https://httpstatuses.com/">HTTP Status Codes</a></li>
