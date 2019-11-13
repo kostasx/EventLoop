@@ -41,3 +41,10 @@ We are passionate about technology
     </li>
 </ul>
 </details>
+
+<details>
+  <summary>Miscellaneous</summary>
+  <ul>
+    <li><a href="https://github.com/kostasx/EventLoop/tree/master/Education/tips">Tips for Developers</a></li>
+  </ul>
+</details>
