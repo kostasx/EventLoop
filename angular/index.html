@@ -1,0 +1,743 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Angular | Alliance for Digital Employability</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/white.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css">
+
+    <!-- Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 4-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Custom CSS | Angular -->
+    <link rel="stylesheet" href="./css/afdemp-angular.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+
+<body>
+
+    <!-- <div class="bottom-left-logo"></div>
+		<div class="top-right-logo"></div> -->
+
+    <!-- Print PDF: ?print-pdf -->
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- TITLES -->
+            <section>
+                <div class="row">
+                    <div class="col align-items-center justify-content-center d-flex flex-column">
+                        <h2 class="mb-0 thin-typo">Angular</h2>
+                        <p class="print-only xxsmall text-muted">8.2.8</p>
+                        <p class="mt-0 xsmall letter-spacing">FUNDAMENTALS</p>
+                        <img style="height:200px;" class="img-fluid" src="./images/angular.svg" alt="Angular Logo">
+                        <p class="xxsmall">Alliance for Digital Employability &copy; 2019</p>
+                        <p class="my-0">
+                            <small style="font-size:1rem;" class="text-muted">[ Updated: 28/09/2019 | Curated by <a class="text-decoration-none text-dark" href="https://github.com/kostasx/">Kostas Minaidis</a> &amp; <a class="text-decoration-none text-dark" href="https://github.com/bampakoa">Aristeidis Bampakos</a> ]</small>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- What is Angular? -->
+            <section>
+
+                <section>
+                    <div class="row">
+                        <div class="col-8 text-left">
+                            <h4 class="text-left">What is Angular?</h4>
+                        </div>
+                        <div class="col-8 text-left">
+                            <p>Angular is a platform and framework for building client applications in <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a> and <a target="_blank" href="https://www.typescriptlang.org/index.html">TypeScript</a>.</p>
+                        </div>
+                        <div class="col-8 text-left print-only">
+                            <hr>
+                            <h4>Architecture:</h4>
+                            <p>The basic building blocks of an Angular application are <a target="_blank" href="https://angular.io/guide/architecture-modules">NgModules</a>, which provide a compilation context for a set of components and is dedicated to
+                                an application domain, a workflow, or a closely related set of capabilities.</p>
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </section>
+
+            <!-- SPA -->
+            <section>
+                <section>
+                    <div class="row">
+                        <div class="col-6 text-left d-flex flex-column justify-content-center">
+                            <div>
+                                <h2 class="mb-0">SPA</h2>
+                                <h4 class="mb-0">Single Page Application</h4>
+                                <p class="xxsmall">A web application that fits on a single page</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <ul class="xxsmall">
+                                <li class="fragment">General Concepts:
+                                    <ul class="tiny fragment-opacity">
+                                        <li class="fragment">All necessary code can be retrieved in a single page load or dynamically loaded as necessary.</li>
+                                        <li class="fragment">As the user interacts with the Application, data is sent and received from the Server using Ajax requests or WebSockets.</li>
+                                        <li class="fragment">Templating is often used in SPAs.</li>
+                                        <li class="fragment">Routing: client-side routing dynamically loads a piece of the application without reloading: <code>https://spa.com/<strong>#/about</strong></code>
+                                            <small class="print-only font-italic"><br/>*Routes are commonly placed in the fragment identifier section of the URL: <strong>https://spa.com/#/about</strong></small>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="fragment">Advantages:
+                                    <ul class="tiny fragment-opacity">
+                                        <li class="fragment">Improved performance</li>
+                                        <li class="fragment">Fluid user experience</li>
+                                        <li class="fragment">Reduced page loads &amp; smaller server transactions</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <!-- 
+                            Drawbacks:
+                                - SEO
+                                - Browser History 
+                            -->
+
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SPA Resources -->
+                <section>
+                    <h4 class="text-left">SPA Resources</h4>
+                    <div class="row">
+                        <div class="col-6">
+                            <hr>
+                            <ul class="afdemp-list xxsmall">
+                                <li>
+                                    <a href="https://blog.angular-university.io/why-a-single-page-application-what-are-the-benefits-what-is-a-spa/">Angular Single Page Applications (SPA):<br/>What are the Benefits?</a>
+                                </li>
+                                <li>
+                                    <a href="https://codeburst.io/angular-spas-168a94a0959a">Are Angular applications SPAs?</a>
+                                </li>
+                                <li>
+                                    <a href="https://stackoverflow.com/questions/51094830/why-angular-is-called-single-page-application">Why angular is called single page application
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.quora.com/What-is-SPA-in-AngularJS">What is SPA in AngularJS?</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </section>
+
+            <!-- PREREQUISITES -->
+            <section>
+                <!-- KNOWLEDGE -->
+                <section>
+                    <div class="row">
+                        <div class="col-6">
+                            <h2>Angular</h2>
+                            <h4>
+                                Prerequisites
+                                <br><small class="xxsmall text-muted">(Background knowledge)</small>
+                            </h4>
+                        </div>
+                        <div class="col-6 text-left">
+                            <ul class="afdemp-list">
+                                <li class="fragment">
+                                    <p class="mt-0">Moderate knowledge of<br> <strong>HTML</strong>, <strong>CSS</strong>, &amp; <strong>JavaScript</strong>
+                                    </p>
+                                </li>
+                                <li class="fragment">
+                                    <p class="mt-0">Basic concepts of <strong>ES6</strong>
+                                        <br><small>*Modern JavaScript</small>
+                                    </p>
+                                </li>
+                                <li class="fragment">
+                                    <p class="mt-0"><strong>TypeScript</strong> (Basics)
+                                    </p>
+                                </li>
+                                <li class="fragment">
+                                    <p class="mt-0">Basic <strong>MVC<span class="text-muted">*</span> concepts</strong><br><small>*Model-View-Controller</small></p>
+                                </li>
+                                <li class="fragment">
+                                    <p class="mt-0">Basic <strong>OOP<span class="text-muted">*</span> concepts</strong><br><small>*Object Oriented Programming</small></p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </section>
+
+                <!-- SOFTWARE -->
+                <section>
+                    <div class="row">
+                        <div class="col-6">
+                            <h4>
+                                Prerequisites
+                                <br><small class="xxsmall text-muted">(Software)</small>
+                            </h4>
+                        </div>
+                        <div class="col-6">
+                            <ul class="afdemp-list">
+                                <li class="fragment">
+                                    <a target="_blank" href="https://nodejs.org/en/">Node.JS v10.9.0 or later </a>
+                                </li>
+                                <li class="fragment">
+                                    <p class="mb-0">
+                                        Node Package Manager (npm)
+                                        <small>Comes pre-installed with Node.JS </small>
+                                    </p>
+                                </li>
+                                <li class="fragment">
+                                    <p class="mt-0">Angular CLI:<br>
+                                        <code class="xxsmall">npm install -g @angular/cli</code>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </section>
+
+                <!-- RESOURCES -->
+                <section>
+                    <h4 class="text-left">Resources</h4>
+                    <div class="row">
+                        <div class="col-6">
+                            <hr>
+                            <ul class="afdemp-list xxsmall">
+                                <li>
+                                    <strong>Basics</strong>
+                                    <ul class="afdemp-list xxsmall">
+                                        <li>
+                                            <a href="https://angular.io/guide/setup-local#setting-up-the-local-environment-and-workspace" target="_blank">Setting up the Local Environment &amp; Workspace</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://scrimba.com/g/gintrotoes6" target="_blank">Introduction to ES6+</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://scrimba.com/g/ges6" target="_blank">Learn modern JavaScript</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://youtu.be/E7Voso411Vs?t=168" target="_blank">MVC Architectural Pattern | Mosh</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.youtube.com/watch?v=PFmuCDHHpwk" target="_blank">Object-oriented Programming in JavaScript: Made Super Simple | Mosh</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 text-left">
+                            <hr>
+                            <ul class="afdemp-list xxsmall">
+                                <li>
+                                    <strong>TypeScript</strong>
+                                    <ul class="afdemp-list xxsmall">
+                                        <li>
+                                            <a href="https://www.youtube.com/watch?v=NjN00cM18Z4" target="_blank">TypeScript Tutorial for Angular &amp; React Developers | Mosh</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://scrimba.com/g/gintrototypescript" target="_blank">Introduction to TypeScript | Interactive Screencasts <small>( 55 minutes )</small></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.youtube.com/watch?v=-PR_XqW9JJU" target="_blank">TypeScript Tutorial | Derek Banas</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://codeburst.io/understanding-typescript-basics-e003dbad2191" target="_blank">Understanding TypeScript Basics</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html" target="_blank">TypeScript in 5 minutes</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.freecodecamp.org/news/learn-typescript-in-5-minutes-13eda868daeb/" target="_blank">Learn TypeScript in 5 minutes<br><small>A tutorial for beginners</small></a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <!-- GETTING SETUP -->
+            <section>
+
+                <!-- Quickstart Commands -->
+                <section>
+                    <h4>Quickstart</h4>
+                    <div class="row">
+                        <div class="col-8 offset-2">
+                            <p class="fragment">
+                                <small class="xxsmall print-only">1) Install the Angular CLI globally. You will need to execute this command only once on your system:<br/></small>
+                                <code class="xsmall">$ npm install -g @angular/cli</code>
+                            </p>
+                            <p class="fragment">
+                                <small class="xxsmall print-only">2) Use the newly installed CLI tool to create a new Angular App:</small>
+                                <code class="xsmall">$ ng new my-app</code>
+                                <small class="xxsmall print-only">
+                                <strong>Would you like to add Angular routing? (y/N)</strong><br/>Press y, to enable Routing and press Enter.</small>
+                                <small class="xxsmall print-only">
+                                <strong>Which stylesheet format would you like to use?</strong><br/>Hit enter to go with the default CSS format.</small>
+                            </p>
+                            <p class="fragment">
+                                <small class="xxsmall print-only">3) Change into the newly created App directory:</small>
+                                <code class="xsmall">$ cd my-app</code>
+                            </p>
+                            <p class="fragment">
+                                <small class="xxsmall print-only">4) Start the development server<br/>and watch the App running on your browser:</small>
+                                <code class="xsmall">$ ng serve --open</code>
+                            </p>
+                            <p class="fragment">
+                                <a class="text-muted xxsmall" href="https://angular.io/guide/quickstart">Source: <strong>https://angular.io/guide/quickstart</strong></a>
+                            </p>
+                            <!-- Source: 
+                            vim ./src/app/app.component.ts -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Start screen -->
+                <section>
+                    <div class="row">
+                        <div class="col-10 offset-1">
+                            <div class="row">
+                                <div class="col-8 offset-2">
+                                    <small class="xxsmall">This is the screen that you should be seeing in your browser, once all the steps have been completed successfully:</small>
+                                </div>
+                            </div>
+                            <img src="./images/angular-8.2.8--start-screen.jpg" alt="">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- First Edit -->
+                <section>
+                    <div class="row">
+                        <div class="col-5">
+                            <p>Let's complete our Quickstart guide, by editing the main App page:</p>
+                        </div>
+                        <div class="col-7">
+                            <p class="fragment">
+                                1) Open the following file in your editor:<br>
+                                <code>/my-app/src/app/app.component.ts</code>
+                            </p>
+                            <p class="fragment">
+                                2) Find and replace the following line:<br>
+                                <code>title = 'my-app';</code>
+                                <br/>With:<br/>
+                                <code>title = 'Hello World';</code>
+                            </p>
+                            <p class="fragment">
+                                3) Watch how the Browser automatically
+                                <br/>reloads the page with the updated title:
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Start screen edited -->
+                <section>
+                    <img src="./images/angular-8.2.8--start-screen-updated.jpg" alt="">
+                </section>
+
+            </section>
+
+            <!-- BASICS: FOLDER STRUCTURE -->
+            <section>
+                <section>
+                    <h4>Workspace <span class="text-muted">&amp;</span><br/>Project File Structure</h4>
+                    <ul class="tiny m-0">
+                        <li class="fragment">.editorconfig</li>
+                        <li class="fragment">.gitignore</li>
+                        <li class="fragment">README.md</li>
+                        <li class="fragment">angular.json</li>
+                        <li class="fragment">package.json</li>
+                        <li class="fragment">package-lock.json</li>
+                        <li class="fragment">tsconfig.json</li>
+                        <li class="fragment">tslint.json</li>
+                        <li class="fragment">node_modules/</li>
+                        <li class="fragment"><span class="afdemp font-weight-bold">src/</span><br/><span class="print-only text-muted">*This is the folder where we will<br/>be spending most of our time.</span></li>
+                    </ul>
+                    <hr>
+                    <h5 class="fragment">
+                        <a target="_blank" href="https://angular.io/guide/file-structure#workspace-and-project-file-structure">Official Reference</a> / <a target="_blank" href="https://scrimba.com/p/pQxesM/cpb4zCV">Interactive Overview</a>
+                    </h5>
+                </section>
+            </section>
+
+            <!-- ANGULAR ROADMAP -->
+            <section>
+                <h4><strong>Angular</strong> <span class="font-weight-light">Roadmap</span></h4>
+                <div class="row">
+                    <div class="col-8 offset-2">
+                        <div class="row">
+                            <div class="col fragment text-center bg-afdemp text-white mx-3 my-3 p-4 rounded shadow">
+                                <p>Modules</p>
+                                <p class="tiny text-white-50" >Blocks of code dedicated to a specific set of capabilities.
+                                </p>
+                            </div>
+                            <div style="background: yellowgreen" class=" fragment col text-center text-white mx-3 my-3 p-4 rounded shadow">
+                                <p>Components</p>
+                                <p class="tiny text-white-50" >UI Code / MVC Views</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div style="background: orange" class=" fragment col text-center text-white mx-3 my-3 p-4 rounded shadow">
+                                <p>Services</p>
+                                <p class="tiny text-white-50" >Reusable Code of Business Logic.</p>
+                            </div>
+                            <div style="background: skyblue" class=" fragment col text-center text-white mx-3 my-3 p-4 rounded shadow">
+                                <p>Routing</p>
+                                <p class="tiny text-white-50" >Handles multiple page Views.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MODULES -->
+            <section>
+                <!-- INTRO -->
+                <section>
+                    <h3>Modules</h3>
+                    <div class="row">
+                        <div class="col-5 text-left">
+                            <p class="fragment">A <strong>Module</strong> is a piece of software that is grouped by responsibility.</p>
+                            <p class="fragment">It encapsulates a defined set of functionality and provides a well-defined interface for using this module.<br><small class="mt-3 text-muted font-italic float-right">Source: Michał Michałowski</small></p>
+                        </div>
+                        <div class="col-5 offset-1 text-left">
+                            <p class="fragment"><code>Angular</code> apps are <strong>modular</strong> and Angular has its own modularity system called <code>NgModules</code>.</p>
+                            <p class="fragment">NgModules are containers for a cohesive block of code dedicated to an application domain, a workflow, or a closely related set of capabilities.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h4>NgModule Walkthrough:<br><code>/src/app/app.module.ts</code></h4>
+                </section>
+    
+                <!-- app.module.ts -->
+                <section>
+                    <div class="px-print-5">
+                        <pre><code class="hljs typescript" data-trim data-line-numbers>
+                            import { BrowserModule } from '@angular/platform-browser';
+                            import { NgModule } from '@angular/core';
+                            import { AppComponent } from './app.component';
+                            
+                            @NgModule({
+                                declarations: [ AppComponent ],
+                                imports: [ BrowserModule ],
+                                providers: [],
+                                bootstrap: [ AppComponent ]
+                            })
+                            export class AppModule { }
+                        </code></pre>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                    </div> 
+                </section>
+    
+                <!-- app.module.ts - Part 001 -->
+                <section>
+                    <div class="px-print-5">
+                        <pre><code class="hljs typescript" data-trim data-line-numbers="1">
+                            import { BrowserModule } from '@angular/platform-browser';
+                            import { NgModule } from '@angular/core';
+                            import { AppComponent } from './app.component';
+                            
+                            @NgModule({
+                                declarations: [ AppComponent ],
+                                imports: [ BrowserModule ],
+                                providers: [],
+                                bootstrap: [ AppComponent ]
+                            })
+                            export class AppModule { }
+                        </code></pre>
+                        <p class="text-left"><a href="https://angular.io/api/platform-browser/BrowserModule" target="_blank">BrowserModule</a> provides services that are essential to launch and run a browser app.</p>
+                        <p>&nbsp;</p>
+                    </div>
+                </section>
+
+                <!-- app.module.ts - Part 002 -->
+                <section>
+                    <div class="px-print-5">
+                        <pre><code class="hljs typescript" data-trim data-line-numbers="2">
+                            import { BrowserModule } from '@angular/platform-browser';
+                            import { NgModule } from '@angular/core';
+                            import { AppComponent } from './app.component';
+                            
+                            @NgModule({
+                                declarations: [ AppComponent ],
+                                imports: [ BrowserModule ],
+                                providers: [],
+                                bootstrap: [ AppComponent ]
+                            })
+                            export class AppModule { }
+                        </code></pre>
+                        <p class="text-left">The <a href="https://angular.io/api/core/NgModule" target="_blank">NgModule Decorator</a> <span class="text-muted font-italic">(used on line #5)</span> is imported from the <a target="_blank" href="https://angular.io/api/core">Angular Core</a> library.</p>
+                        <p>&nbsp;</p>
+                    </div>
+                </section>
+
+                <!-- app.module.ts - Part 003 -->
+                <section>
+                    <div class="px-print-5">
+                        <pre><code class="hljs typescript" data-trim data-line-numbers="3">
+                            import { BrowserModule } from '@angular/platform-browser';
+                            import { NgModule } from '@angular/core';
+                            import { AppComponent } from './app.component';
+                            
+                            @NgModule({
+                                declarations: [ AppComponent ],
+                                imports: [ BrowserModule ],
+                                providers: [],
+                                bootstrap: [ AppComponent ]
+                            })
+                            export class AppModule { }
+                        </code></pre>
+                        <p class="text-left">We import the <span class="afdemp">AppComponent</span> components to our Module.</p>
+                        <p>&nbsp;</p>
+                    </div>
+                </section>
+
+                <!-- app.module.ts - Part 004 -->
+                <section>
+                    <div class="px-print-5">
+                        <pre><code class="hljs typescript" data-trim data-line-numbers="5-10">
+                            import { BrowserModule } from '@angular/platform-browser';
+                            import { NgModule } from '@angular/core';
+                            import { AppComponent } from './app.component';
+                            
+                            @NgModule({
+                                declarations: [ AppComponent ],
+                                imports: [ BrowserModule ],
+                                providers: [],
+                                bootstrap: [ AppComponent ]
+                            })
+                            export class AppModule { }
+                        </code></pre>
+                        <p class="text-left">We use the <a href="https://angular.io/api/core/NgModule" target="_blank">@NgModule</a> decorator <span class="text-muted font-italic">(imported on line #2)</span> and the supplied metadata <span class="text-muted font-italic">( the object argument )</span> to mark the <span class="afdemp">AppModule</span> class as an NgModule.</p>
+                    </div>
+                </section>
+
+                <!-- app.module.ts - Part 005 -->
+                <section>
+                    <div class="px-print-5">
+                        <pre><code class="hljs typescript" data-trim data-line-numbers="11">
+                            import { BrowserModule } from '@angular/platform-browser';
+                            import { NgModule } from '@angular/core';
+                            import { AppComponent } from './app.component';
+                            
+                            @NgModule({
+                                declarations: [ AppComponent ],
+                                imports: [ BrowserModule ],
+                                providers: [],
+                                bootstrap: [ AppComponent ]
+                            })
+                            export class AppModule { }
+                        </code></pre>
+                        <p class="text-left">We are ready to export our <span class="afdemp">AppModule</span> to the world.</p>
+                        <p>&nbsp;</p>
+                    </div>
+                </section>
+    
+            </section>
+
+            <!-- COMPONENTS -->
+            <section>
+                <!-- INTRO -->
+                <section>
+                    <div class="row">
+                        <div class="col-6 text-left">
+                            <h3>Components</h3>
+                            <p class="fragment">Help us break down an Application's Interface into <strong>individual parts</strong>.</p>
+                            <p class="fragment">Components can be <strong>re-used</strong> and allow us to work efficiently, especially with complex applications, large codebases and large developer teams.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ADVANTAGES -->
+                <section>
+                    <h4>Advantages</h4>
+                    <div class="row px-5 mx-5">
+                        <div class="col-4 tiny">
+                            <div class="fragment col-12 shadow rounded p-5 bg-afdemp text-white m-4">
+                                Encapsulation
+                            </div>
+                        </div>
+                        <div class="col-4 tiny">
+                            <div class="fragment col-12 shadow rounded p-5 bg-afdemp text-white m-4">
+                                Templating
+                            </div>
+                        </div>
+                        <div class="col-4 tiny">
+                            <div class="fragment col-12 shadow rounded p-5 bg-afdemp text-white m-4">
+                                Reusability
+                            </div>
+                        </div>
+                        <div class="col-4 tiny">
+                            <div class="fragment col-12 shadow rounded p-5 bg-afdemp text-white m-4">
+                                Composability
+                            </div>
+                        </div>
+                        <div class="col-4 tiny">
+                            <div class="fragment col-12 shadow rounded p-5 bg-afdemp text-white m-4">
+                                Extensibility
+                            </div>
+                        </div>
+                        <div class="col-4 tiny">
+                            <div class="fragment col-12 shadow rounded p-5 bg-afdemp text-white m-4">
+                                Efficiency
+                            </div>
+                        </div>
+                        <div class="fragment col-12">
+                            <p>
+                                <a target="_blank" href="https://blog.revillweb.com/why-web-components-are-so-important-66ad0bd4807a#af6d">Reference</a>
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ADVANTAGES | PRINT NOTES-->
+                <section class="print-only">
+                    <div class="px-5">
+                        <h4>Why Components at all?</h4>
+                        <div class="row">
+                            <div class="col-6">
+                                <p class="tiny text-left border p-3 shadow">
+                                    <strong>Encapsulation: </strong>A component should be completely separate from the main application. This increases reusability, testability and reliability because the component is only responsible for its internals and
+                                    shouldn’t be concerned with the state of the application, only its own. Both the component author and user can upgrade the component without fear of affecting the rest of the application.
+                                </p>
+                            </div>
+                            <div class="col-6">
+                                <p class="tiny text-left border p-3 shadow">
+                                    <strong>Composability: </strong>It should be possible to create more complex components or even entire applications from a collection of components. The decreases the need for “global” logic providing a better defined architecture
+                                    and less chance of bugs because each individual part of the application (or composite component) is better defined.
+                                </p>
+                            </div>
+                            <div class="col-6">
+                                <p class="tiny text-left border p-3 shadow">
+                                    <strong>Extensibility: </strong>Components should be able to extend each other and in the case of web components other DOM elements. This means that a component author doesn’t need to reinvent the wheel and can easily reuse
+                                    functionality.
+                                </p>
+                            </div>
+                            <div class="col-6">
+                                <p class="tiny text-left border p-3 shadow">
+                                    <strong>Reusability: </strong>The big one. With all of the above a component should be easily reusable with minimal dependencies and a clearly defined API.
+                                </p>
+                            </div>
+                            <div class="col-12 tiny text-center">
+                                <a target="_blank" href="https://blog.revillweb.com/why-web-components-are-so-important-66ad0bd4807a#af6d">Reference</a> | By <a href="https://twitter.com/revillweb">Leon Revill</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- BREAKING DOWN AN APP - 00 -->
+                <section>
+                    <h4>Breaking down an Application<br/>into Components</h4>
+                </section>
+                <!-- BREAKING DOWN AN APP - 01 -->
+                <section>
+                    <div class="row">
+                        <div class="col-8 offset-2">
+                            <img class="img-fluid" src="./images/app-breakdown-01.jpg" alt="">
+                        </div>
+                    </div>
+                </section>
+                <!-- BREAKING DOWN AN APP - 02 -->
+                <section>
+                    <div class="row">
+                        <div class="col-8 offset-2">
+                            <img class="img-fluid" src="./images/app-breakdown-02.jpg" alt="">
+                        </div>
+                    </div>
+                </section>
+                <!-- BREAKING DOWN AN APP - 03 -->
+                <section>
+                    <div class="row">
+                        <div class="col-8 offset-2">
+                            <img class="img-fluid" src="./images/app-breakdown-03.jpg" alt="">
+                        </div>
+                    </div>
+                </section>
+                <!-- BREAKING DOWN AN APP - 04 -->
+                <section>
+                    <div class="row">
+                        <div class="col-8 offset-2">
+                            <img class="img-fluid" src="./images/app-breakdown-04.jpg" alt="">
+                        </div>
+                    </div>
+                </section>
+                <!-- BREAKING DOWN AN APP - 05 -->
+                <section>
+                    <div class="row">
+                        <div class="col-8 offset-2">
+                            <img class="img-fluid" src="./images/app-breakdown-05.jpg" alt="">
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <!-- BASICS: COMPONENTS -->
+            <section>
+                <section>
+                </section>
+            </section>
+
+            <!-- REFERENCES & RESOURCES -->
+            <section>
+                <section>
+                    <h4>Resources</h4>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="xsmall">
+                                <li>
+                                    <a href="https://angular.io/docs">Angular (Official) Documentation</a>
+                                </li>
+                                <li>
+                                    <a href="https://angular.io/guide/glossary#glossary">Glossary of Terms</a>
+                                </li>
+                                <li class="font-weight-bold">
+                                    <a href="https://scrimba.com/g/gyourfirstangularapp">Build your first Angular app<br/>Interactive Screencasts <small>( 3 hours )</small></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="js/reveal.js"></script>
+    <script src="./js/afdemp-angular.js"></script>
+</body>
+
+</html>
