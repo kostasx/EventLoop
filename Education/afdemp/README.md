@@ -1,9 +1,19 @@
 ## Coding Bootcamp
 
+#### NOTES
+
+__[&checkmark;]__ : Student Approved Resource
+
+### Java (Back End)
+
+<h4>Resources</h4>
+<ul>
+	<li><a href="https://www.youtube.com/user/javaboynavin/search?query=java">Java Tutorials (YouTube Videos)</a> <strong>&checkmark;</strong></li>
+</ul>
+
+
+
 ### Web Design and Development Fundamentals (Front End)
-
-#### Lesson 1 (Common)
-
 
 <details>
   <summary>Prerequisites: Tools</summary>
@@ -53,6 +63,8 @@
   <ul>
   <li><a href="https://marksheet.io/introduction.html">The Web for Absolute Beginners</a></li>
   <li><a href="https://kostasx.github.io/EventLoop/Education/tmp/WebOversimplified/index.html#/">The Web Oversimplified</a></li>
+  <li><a href="https://computer.howstuffworks.com/web-server.htm">How Web Servers Work</a></li>
+  <li><a href="https://www.oreilly.com/library/view/http-the-definitive/1565925092/ch01s02.html">Web Clients and Servers</a></li>
   <li><a href="https://learn.onemonth.com/understanding-http-basics/">Understanding HTTP Basics</a></li>
   <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME Types</a></li>
   <li><a href="https://httpstatuses.com/">HTTP Status Codes</a></li>
@@ -68,6 +80,7 @@
   <h4>References</h4>
   <ul>
 	  <li><a href="https://htmlreference.io"><strong>HTMLReference.io</strong></a></li>
+	  <li><a href="https://www.poormansstyleguide.com/"><strong>A frontend styleguide for the pragmatic</strong></a></li>
 
 <li><strong>HTML: </strong><a href="https://www.youtube.com/watch?v=yCf9i8rJvtg&list=PLF308KNnRLF5xGLpd5ewXEPFxkgRQLl4f">A short introduction to the HTML Document</a></li>
 
@@ -325,7 +338,10 @@
 </li>
 	  
   </ul>
-
+  <h4>Async Programming</h4>
+  <ul>
+	<li><a href="https://www.youtube.com/watch?v=NsQ2QIrQShU">Modern Concurrency In JavaScript: From Callbacks, to Promises to Async/Await (30 min)</a></li>
+  </ul>
   <h4>Resources</h4>
   <ul>
   <li><a href="https://scrimba.com/g/gintrotojavascript">Introduction to JavaScript (Interactive Screencasts @ scrimba.com)</a></li>
@@ -596,6 +612,10 @@ document.body.addEventListener(&quot;mousemove&quot;, function(e) {&#10;
 </li>
 
 <li>
+	<a href="https://reactjs.org/docs/thinking-in-react.html"><strong>Thinking in React</strong></a>
+</li>
+
+<li>
 	<a href="https://www.youtube.com/watch?v=Ke90Tje7VS0">(YouTube) Learn React - React Crash Course [2019] - React Tutorial with Examples | Mosh</a>
 </li>
 
@@ -703,12 +723,29 @@ document.body.addEventListener(&quot;mousemove&quot;, function(e) {&#10;
 
   <h4>Resources</h4>
   <ul>
+    <li><a href="https://www.c-sharpcorner.com/blogs/list-of-angularjs-directives">List of AngularJS Directives</a></li>
+    <li><a href="https://docs.angularjs.org/api/ng/service/$http#$http-methods">$http Methods</a></li>
     <li><a href="https://www.youtube.com/watch?v=TRrL5j3MIvo">Introduction to Angular.js in 50 Examples (part 1)</a></li>
     <li><a href="https://www.youtube.com/watch?v=6J08m1H2BME">Introduction to Angular.js in 50 Examples (part 2)</a></li>
+    <li><a href="https://www.airpair.com/angularjs/posts/top-10-mistakes-angularjs-developers-make">The Top 10 Mistakes AngularJS Developers Make</a></li>
+  </ul>
+
+  <h4>Questions</h4>
+  <ul>
+	<li><strong>Question: </strong><i>Do we use ng-model only on input tags?</i><br><strong>Answer: </strong>The ngModel directive binds an input, select or textarea (or custom form control) to a property on the scope.</li>	
+	<li><strong>Question: </strong><i>Is there an ng-id directive to change the HTML id attribute, much like the ng-class changes the class?</i><br><strong>Answer: </strong>There isn't any such directive but you can achieve this by following the answer <a href="https://stackoverflow.com/questions/36308167/how-to-conditional-set-the-id-attribute-of-a-html-element-with-angular-js/36308341">here</a>.</li>
+  <li><strong>Question: </strong><i>Why do we need to call <code>$scope.$apply()</code> inside a <code>setTimeout</code> function? When do we need to call <code>$scope.apply()</code> in general and why?</i><br><strong>Answer: </strong><p>In order to understand the need for $scope.$apply(), we first need to understand the <strong>two-way data binding mechanism</strong> of AngularJS.</p><p>Data binding means that when you change something in the view (for example through an input element with the ng-model directive set) the scope model automagically updates. Similarly, whenever the scope model changes, the view updates itself with the new value.</p><p>The underlying mechanism, responsible for this is called the Angular Digest Cycle. When you write an expression {{ value }}, AngularJS sets up watcher on the scope model, which updates the view whenever the model changes. The digest cycle, often seen as $digest, runs whenever a model value is expected to update, checks the previous value and if it is different, triggers the appropriate listener. This update happens only withing the AngularJS scope.</p><p>When you do something outside of the Angular framework, e.g execute a setTimeout() or fetch() command, you need to manually let AngularJS know that you changed a model value using the $scope.$apply() method.</p><p>So, when you use AngularJS directives or commands such as ng-click, ng-model, $timeout, $http, etc. the digest cycle automatically checks and updates the view/model.</p><p>Scope does not update automatically, when a command that is outside the scope of the AngularJS app executes at some point in the future. For example, the following commands will not update the scope automatically:</p><p><code>window.fetch(), window.setTimeout(), window.setInterval(), window.ELEMENT.addEventListener(), jQuery</code> commands, etc.</p><p>These commands will happen at some point in the future and AngularJS hasn't been instructed to wait on these commands and update the scope.</p><p>References and further reading:</p><p><a href="https://blog.cloudboost.io/angular-timeout-vs-window-settimeout-1571b73625e9">AngularJS $timeout vs window.setTimeout</a></p><p><a href="http://jimhoskins.com/2012/12/17/angularjs-and-apply.html">AngularJS and scope.$apply</a></p><p><a href="https://stackoverflow.com/questions/15112584/how-do-i-use-scope-watch-and-scope-apply-in-angularjs">How do I use $scope.$watch and $scope.$apply in AngularJS?</a></p><p><a href="https://www.sitepoint.com/understanding-angulars-apply-digest/">Understanding Angular’s $apply() and $digest()</a></p><p><a href="http://tutorials.jenkov.com/angularjs/watch-digest-apply.html">AngularJS $watch() , $digest() and $apply()</a></p>
+</li>
+  <br>
   </ul>
 
 </details>
 
-#### NOTES
 
-__[&checkmark;]__ : Student Approved Resource
+<details>
+  <summary>XML</summary>
+  <h4>Resources</h4>
+  <ul>
+    <li><a href="https://www.youtube.com/watch?v=n-y-YHVZSwk">XML Tutorial for Beginners Theory</a></li>
+  </ul>
+</details>
