@@ -19,6 +19,14 @@ __[&checkmark;]__ : Student Approved Resource
 			<li>4. Check if java is installed in your system</li>
 		</ul>
 	</li>
+	<li>
+		<ul>
+			<li>Guides:</li>
+			<li><a href="https://itsfoss.com/install-java-ubuntu/">Ubuntu</a> (<em>If installed with java-8-oracle, check /etc/profile.d/jdk.sh for environmental variables</em>)</li>
+			<li><a href="https://www3.ntu.edu.sg/home/ehchua/programming/howto/JDK_Howto.html">Mac</a></li>
+			<li><a href="https://www3.ntu.edu.sg/home/ehchua/programming/howto/JDK_Howto.html">Windows</a></li>
+		</ul>
+	</li>
 </ul>
 
 <h4>Resources</h4>
