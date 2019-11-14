@@ -779,3 +779,10 @@ document.body.addEventListener(&quot;mousemove&quot;, function(e) {&#10;
     <li><a href="https://www.youtube.com/watch?v=n-y-YHVZSwk">XML Tutorial for Beginners Theory</a></li>
   </ul>
 </details>
+
+### Software Design
+
+<h4>Software Design Principles</h4>
+<ul>
+	<li><a href="https://dev.to/pluralsight/my-5-favorite-software-design-principles-4ech">My 5 Favorite Software Design Principles</a></li>
+</ul>
