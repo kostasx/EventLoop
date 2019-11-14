@@ -181,7 +181,10 @@ __[&checkmark;]__ : Student Approved Resource
 	  <li>
       	<a href="https://marksheet.io/html-basics.html" target="_blank">HTML Basics</a>
       </li>
-	  <li>
+      <li>
+      	<a href="https://learn.freecodecamp.org/responsive-web-design/basic-html-and-html5/" target="_blank">Introduction to Basic HTML & HTML5 (FreeCodeCamp)</a>
+      </li>
+      <li>
       	<a href="http://tutorials.codebar.io/" target="_blank">Codebar Tutorials</a>
       </li>
 </ul>
