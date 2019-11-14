@@ -664,6 +664,21 @@ sortedArray.sort();
 let oddEntriesArray = entries.filter( getOdd );
 </pre>
 
+<hr>
+<p style="color:tomato;">Bad:</p>
+<small>What kind of <code>object</code> does the variable hold?</small><br><br>
+<pre>
+let object = new Category( categoryId, $categoryName );
+// OR:
+let object = new Article( articleId,  text);
+</pre>
+
+<p style="color:limegreen;">Better:</p>
+<pre>
+let category = new Category( categoryId, categoryName );
+let article = new Article( articleId, text );
+</pre>
+
 </details>
 
 
