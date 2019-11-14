@@ -4,6 +4,8 @@
 
 __[&checkmark;]__ : Student Approved Resource
 
+----
+
 ### Java (Back End)
 
 <details>
@@ -41,7 +43,7 @@ __[&checkmark;]__ : Student Approved Resource
 	<li><a href="https://www.youtube.com/user/javaboynavin/search?query=java">Java Tutorials (YouTube Videos)</a> <strong>&checkmark;</strong></li>
 </ul>
 
-
+----
 
 ### Web Design and Development Fundamentals (Front End)
 
@@ -779,6 +781,8 @@ document.body.addEventListener(&quot;mousemove&quot;, function(e) {&#10;
     <li><a href="https://www.youtube.com/watch?v=n-y-YHVZSwk">XML Tutorial for Beginners Theory</a></li>
   </ul>
 </details>
+
+----
 
 ### Software Design
 
