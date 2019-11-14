@@ -80,6 +80,7 @@ __[&checkmark;]__ : Student Approved Resource
   <h4>References</h4>
   <ul>
 	  <li><a href="https://htmlreference.io"><strong>HTMLReference.io</strong></a></li>
+	  <li><a href="https://www.poormansstyleguide.com/"><strong>A frontend styleguide for the pragmatic</strong></a></li>
 
 <li><strong>HTML: </strong><a href="https://www.youtube.com/watch?v=yCf9i8rJvtg&list=PLF308KNnRLF5xGLpd5ewXEPFxkgRQLl4f">A short introduction to the HTML Document</a></li>
 
