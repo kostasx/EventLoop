@@ -611,6 +611,10 @@ document.body.addEventListener(&quot;mousemove&quot;, function(e) {&#10;
 </li>
 
 <li>
+	<a href="https://reactjs.org/docs/thinking-in-react.html"><strong>Thinking in React</strong></a>
+</li>
+
+<li>
 	<a href="https://www.youtube.com/watch?v=Ke90Tje7VS0">(YouTube) Learn React - React Crash Course [2019] - React Tutorial with Examples | Mosh</a>
 </li>
 
