@@ -113,6 +113,7 @@ __[&checkmark;]__ : Student Approved Resource
   <ul>
 	  <li><a href="https://htmlreference.io"><strong>HTMLReference.io</strong></a></li>
 	  <li><a href="https://www.poormansstyleguide.com/"><strong>A frontend styleguide for the pragmatic</strong></a></li>
+	  <li><a href="https://books.goalkicker.com/HTML5Book/">HTML5 - Notes for Professionals</a></li>
 
 <li><strong>HTML: </strong><a href="https://www.youtube.com/watch?v=yCf9i8rJvtg&list=PLF308KNnRLF5xGLpd5ewXEPFxkgRQLl4f">A short introduction to the HTML Document</a></li>
 
@@ -286,6 +287,7 @@ __[&checkmark;]__ : Student Approved Resource
 	  <li>
       	<a href="https://scrimba.com/g/gintrotocss" target="_blank">Introduction to CSS (scrimba.com)</a>
       </li>
+	<li><a href="https://books.goalkicker.com/CSSBook/">CSS - Notes for Professionals</a></li>
 	  <li>
       	<a href="https://www.youtube.com/playlist?list=PL4cUxeGkcC9gQeDH6xYhmO-db2mhoTSrT" target="_blank">CSS Tutorials For Beginners (YouTube Video Playlist)</a>
       </li>
