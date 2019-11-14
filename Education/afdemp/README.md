@@ -6,28 +6,35 @@ __[&checkmark;]__ : Student Approved Resource
 
 ### Java (Back End)
 
-<h4>Installation</h4>
-
-<ul>
-	<li>
-		<strong>Installing JDK for Java version 8 and NetBeans 8.2</strong> (By Anastasios Lelakis)
-		<ul>
-			<li>Steps:</li>
-			<li>1. Follow a guide</li>
-			<li>2. Install  JDK 8u211</li>
-			<li>3. Set environmental variables JAVA_HOME, PATH</li>
-			<li>4. Check if java is installed in your system</li>
-		</ul>
-	</li>
-	<li>
-		<ul>
-			<li>Guides:</li>
-			<li><a href="https://itsfoss.com/install-java-ubuntu/">Ubuntu</a> (<em>If installed with java-8-oracle, check /etc/profile.d/jdk.sh for environmental variables</em>)</li>
-			<li><a href="https://www3.ntu.edu.sg/home/ehchua/programming/howto/JDK_Howto.html">Mac</a></li>
-			<li><a href="https://www3.ntu.edu.sg/home/ehchua/programming/howto/JDK_Howto.html">Windows</a></li>
-		</ul>
-	</li>
-</ul>
+<details>
+	<summary><strong>Installation</strong></summary>
+	<ul>
+		<li>
+			<strong>Installing JDK for Java version 8 and NetBeans 8.2</strong> (By Anastasios Lelakis)
+			<ul>
+				<li>Steps:</li>
+				<li>1. Follow a guide</li>
+				<li>2. Install  JDK 8u211</li>
+				<li>3. Set environmental variables JAVA_HOME, PATH</li>
+				<li>4. Check if java is installed in your system</li>
+			</ul>
+		</li>
+		<li>
+			<ul>
+				<li><strong>Guides:</strong></li>
+				<li><a href="https://itsfoss.com/install-java-ubuntu/">Ubuntu</a> (<em>If installed with java-8-oracle, check /etc/profile.d/jdk.sh for environmental variables</em>)</li>
+				<li><a href="https://www3.ntu.edu.sg/home/ehchua/programming/howto/JDK_Howto.html">Mac</a></li>
+				<li><a href="https://www3.ntu.edu.sg/home/ehchua/programming/howto/JDK_Howto.html">Windows</a></li>
+			</ul>
+		</li>
+		<li>
+			<ul>
+				<li><strong>NetBeans 8.2:</strong></li>
+				<li>Go to <a href="https://netbeans.org/downloads/8.2/">https://netbeans.org/downloads/8.2/</a> and download the "ALL" version (214 MB) for YOUR SYSTEM (WINDOWS, MAC, LINUX)</li>
+			</ul>
+		</li>
+	</ul>
+</details>
 
 <h4>Resources</h4>
 <ul>
