@@ -125,6 +125,16 @@ __[&checkmark;]__ : Student Approved Resource
     </li>
 
 <li>
+
+<strong>Semantic HTML Elements:</strong>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=rCznFsaRVv0" target="_blank">Introduction to HTML - Semantic Tags (Video: 06:00')</a></li>
+	<li><a href="https://html.com/semantic-markup/" target="_blank">Secrets To Writing Semantic Markup</a></li>
+	<li><a href="https://www.pluralsight.com/guides/semantic-html" target="_blank">Semantic HTML (PluralSight)</a></li>
+	<li><a href="https://www.w3schools.com/html/html5_semantic_elements.asp" target="_blank">W3Schools</a></li>
+	<li><a href="https://codepen.io/mi-lee/post/an-overview-of-html5-semantics" target="_blank">Overview of HTML5 Semantics</a></li>
+</ul>
+
 <strong>Forms:</strong>
 <ul>
 <li>
