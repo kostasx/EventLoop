@@ -112,6 +112,7 @@ __[&checkmark;]__ : Student Approved Resource
   <h4>References</h4>
   <ul>
 	  <li><a href="https://htmlreference.io"><strong>HTMLReference.io</strong></a></li>
+	  <li><a href="https://html.com/"><strong>HTML for Absolute Beginners</strong></a></li>
 	  <li><a href="https://www.poormansstyleguide.com/"><strong>A frontend styleguide for the pragmatic</strong></a></li>
 	  <li><a href="https://dev.to/ceeoreo/html-101-what-you-need-to-know-to-get-started-5bmo">HTML 101: What You Need to Know to Get Started</a></li>
 	  <li><a href="https://books.goalkicker.com/HTML5Book/">HTML5 - Notes for Professionals</a></li>
