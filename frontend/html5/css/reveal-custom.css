@@ -153,3 +153,16 @@ hr.limit-indigo {
 h3 code {
     font-family: 'Open Sans Condensed', Impact, Helvetica, Arial, sans-serif;
 }
+
+.gravatar {
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    margin-left: -10px;
+    border: 10px solid #fff;
+}
+
+.author a {
+    text-decoration: none;
+    color: black;
+}
