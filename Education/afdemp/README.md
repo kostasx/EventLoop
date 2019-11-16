@@ -6,6 +6,18 @@ __[&checkmark;]__ : Student Approved Resource
 
 ----
 
+### Version Control
+
+  <h4>Resources</h4>
+  <ul>
+	<li>
+		<a href="https://github.com/foundersandcoders/git-workflow-workshop-for-two"><strong>Git Workflow Workshop for Two Programmers</strong>
+		</a>
+	</li>
+  </ul>
+
+----
+
 ### Java (Back End)
 
 <details>
