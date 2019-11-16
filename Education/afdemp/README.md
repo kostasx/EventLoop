@@ -50,6 +50,10 @@ __[&checkmark;]__ : Student Approved Resource
   <h4>Resources</h4>
   <ul>
 	<li>
+		<a href="https://www.youtube.com/embed/v_hR4K4auoQ?start=45&end=161"><strong>Relational Databases in a Nutshell</strong>
+		</a>
+	</li>
+	<li>
 		<a href="https://www.red-gate.com/simple-talk/sql/database-administration/ten-common-database-design-mistakes/"><strong>Ten Common Database Design Mistakes</strong>
 		</a>
 	</li>
