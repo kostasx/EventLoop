@@ -45,6 +45,18 @@ __[&checkmark;]__ : Student Approved Resource
 
 ----
 
+### Databases
+
+  <h4>Resources</h4>
+  <ul>
+	<li>
+		<a href="https://www.red-gate.com/simple-talk/sql/database-administration/ten-common-database-design-mistakes/"><strong>Ten Common Database Design Mistakes</strong>
+		</a>
+	</li>
+  </ul>
+
+----
+
 ### Web Design and Development Fundamentals (Front End)
 
 <details>
