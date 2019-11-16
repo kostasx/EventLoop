@@ -57,6 +57,10 @@ __[&checkmark;]__ : Student Approved Resource
 		<a href="https://www.red-gate.com/simple-talk/sql/database-administration/ten-common-database-design-mistakes/"><strong>Ten Common Database Design Mistakes</strong>
 		</a>
 	</li>
+	<li>
+		<a href="https://github.com/foundersandcoders/intro-to-databases"><strong>Introduction to Databases</strong>
+		</a>
+	</li>
   </ul>
 
 ----
