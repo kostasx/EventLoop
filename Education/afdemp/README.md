@@ -461,6 +461,9 @@ __[&checkmark;]__ : Student Approved Resource
   <li>
   <a href="https://www.youtube.com/embed/EcXc7OFV0_4?start=38&end=141&version=3"><strong>What is JSON?</strong></a>
   </li>
+  <li>
+  <a href="https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa"><strong>JSON Formatter Extension for Chrome</strong></a>
+  </li>
 </ul>
 </details>
 
