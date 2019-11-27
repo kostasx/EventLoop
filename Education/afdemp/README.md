@@ -440,7 +440,7 @@ __[&checkmark;]__ : Student Approved Resource
 <a href="https://learnxinyminutes.com/docs/javascript/">Learn X in Y Minutes: JavaScript</a>
 </li>
 <li><a href="https://jgthms.com/javascript-in-14-minutes/">JavaScript in 14 minutes</a></li>
-<li><a href="https://github.com/ryanmcdermott/clean-code-javascript">Clean Code concepts adapted for JavaScript</a></li>
+<li><a href="https://github.com/ryanmcdermott/clean-code-javascript"><strong>Clean Code concepts adapted for JavaScript</strong></a></li>
 
   </ul>
 
