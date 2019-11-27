@@ -307,6 +307,7 @@ __[&checkmark;]__ : Student Approved Resource
   <li><a href="https://learn.shayhowe.com/html-css/opening-the-box-model/">Opening the Box Model</a></li>
   <li><a href="https://www.youtube.com/watch?v=d601NaSSqSE">Box Model Review | NetNinja Video</a></li>
   <li><a href="https://www.youtube.com/watch?v=l8NH6YppJFA">Normal Document Flow</a></li>
+  <li><a href="https://www.smashingmagazine.com/2019/07/margins-in-css/">Everything You Need To Know About CSS Margins</a></li>
   </ul>
 </li>
 <li><strong>CSS Positioning:</strong>
