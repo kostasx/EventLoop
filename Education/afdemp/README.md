@@ -4,6 +4,8 @@
 
 __[&checkmark;]__ : Student Approved Resource
 
+**Don't forget** to `Star`, `Like` and `Subscribe` the links that helped you!
+
 ----
 
 ### Version Control
