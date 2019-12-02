@@ -53,6 +53,7 @@ __[&checkmark;]__ : Student Approved Resource
 <h4>Resources</h4>
 <ul>
 	<li><a href="https://www.youtube.com/user/javaboynavin/search?query=java">Java Tutorials (YouTube Videos)</a> <strong>&checkmark;</strong></li>
+	<li><a href="https://www.youtube.com/watch?v=1yynLCFRuAk"><strong>StringBuilder</strong> Class</a> (Video: 6 min)</li>
 </ul>
 
 ----
