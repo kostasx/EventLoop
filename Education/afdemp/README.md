@@ -341,6 +341,14 @@ __[&checkmark;]__ : Student Approved Resource
 	  <li>
       	<a href="https://scrimba.com/g/gintrotocss" target="_blank">Introduction to CSS (scrimba.com)</a>
       </li>
+
+	  <li>
+      	<a href="https://jigsaw.w3.org/css-validator/validator" target="_blank">Online W3C CSS Validator</a>
+      </li>
+	  <li>
+      	<a href="http://csslint.net/" target="_blank">Online CSS Linter</a>
+      </li>
+
 	<li><a href="https://books.goalkicker.com/CSSBook/">CSS - Notes for Professionals</a></li>
 	  <li>
       	<a href="https://www.youtube.com/playlist?list=PL4cUxeGkcC9gQeDH6xYhmO-db2mhoTSrT" target="_blank">CSS Tutorials For Beginners (YouTube Video Playlist)</a>
