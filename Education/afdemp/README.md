@@ -338,28 +338,15 @@ __[&checkmark;]__ : Student Approved Resource
 
   <h4>Resources</h4>
   <ul>
-	  <li>
-      	<a href="https://scrimba.com/g/gintrotocss" target="_blank">Introduction to CSS (scrimba.com)</a>
-      </li>
-
-	  <li>
-      	<a href="https://jigsaw.w3.org/css-validator/validator" target="_blank">Online W3C CSS Validator</a>
-      </li>
-	  <li>
-      	<a href="http://csslint.net/" target="_blank">Online CSS Linter</a>
-      </li>
-
-	<li><a href="https://books.goalkicker.com/CSSBook/">CSS - Notes for Professionals</a></li>
-	  <li>
+  <li><a href="https://scrimba.com/g/gintrotocss" target="_blank">Introduction to CSS (scrimba.com)</a></li>
+  <li><a href="https://jigsaw.w3.org/css-validator/validator" target="_blank">Online W3C CSS Validator</a></li>
+  <li><a href="http://csslint.net/" target="_blank">Online CSS Linter</a></li>
+  <li><a href="https://books.goalkicker.com/CSSBook/">CSS - Notes for Professionals</a></li>
+  <li>
       	<a href="https://www.youtube.com/playlist?list=PL4cUxeGkcC9gQeDH6xYhmO-db2mhoTSrT" target="_blank">CSS Tutorials For Beginners (YouTube Video Playlist)</a>
       </li>
-	  <li>
-      	<a href="https://jgthms.com/web-design-in-4-minutes/" target="_blank">Learn the basics of web design in 4 minutes</a>
-      </li>
-	<li>
-		<strong>Centering Elements in CSS: </strong><a href="https://css-tricks.com/centering-css-complete-guide/">Link 1</a> | <a href="https://love2dev.com/blog/absolute-centering-css/">Link 2</a>
-	</li>
-
+  <li><a href="https://jgthms.com/web-design-in-4-minutes/" target="_blank">Learn the basics of web design in 4 minutes</a></li>
+  <li><strong>Centering Elements in CSS: </strong><a href="https://css-tricks.com/centering-css-complete-guide/">Link 1</a> | <a href="https://love2dev.com/blog/absolute-centering-css/">Link 2</a></li>
   </ul>
 
   <h4>Questions &amp; Answers</h4>
