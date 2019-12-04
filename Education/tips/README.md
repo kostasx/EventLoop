@@ -432,10 +432,14 @@
 
 <details>
 
-<summary><strong>VALIDATE CODE USING W3C CSS Validator<sup> 01</sup></strong></summary>
+<summary><strong>VALIDATE YOUR CODE<sup> 01</sup></strong></summary>
 
+ <br>
+ <p>Online Validators (use in conjuction for optimal results):</p>
  <p><a href="https://jigsaw.w3.org/css-validator/validator">W3C CSS Validator</a></p>
+ <p><a href="http://csslint.net/">CSS Lint</a></p>
  <p>Use VSCode to detect CSS Warnings and Errors</p>
+ <hr>
  <p>Examples:</p>
 <pre>
 .students {
