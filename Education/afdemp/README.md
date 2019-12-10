@@ -834,6 +834,33 @@ document.body.addEventListener(&quot;mousemove&quot;, function(e) {&#10;
 
 </details>
 
+<details>
+<summary>TypeScript</summary>
+
+  <h4>Resources</h4>
+  <ul>
+    <li><a href="https://www.typescriptlang.org/">TypeScript Official Site</a></li>
+    <li><a href="https://www.youtube.com/watch?v=NjN00cM18Z4">TypeScript Tutorial for Angular and React Developers | Mosh (Video)</a></li>
+    <li><a href="https://www.youtube.com/watch?v=-PR_XqW9JJU">TypeScript Tutorial | Derek Banas (Video)</a></li>
+    <li><a href="https://scrimba.com/g/gintrototypescript">Introduction to TypeScript | Scrimba Interactive Screencasts</a></li>
+    <li><a href="http://www.typescriptlang.org/docs/tutorial.html">Getting started with TypeScript</a></li>
+  </ul>
+
+</details>
+
+
+<details>
+<summary>Angular</summary>
+
+  <h4>Resources</h4>
+  <ul>
+    <li><a href="https://books.goalkicker.com/Angular2Book/">Angular 2+ Notes for Professionals book</a></li>
+    <li><a href="https://www.youtube.com/watch?v=KhzGSHNhnbI">Angular In 60 Minutes (Video)</a></li>
+    <li><a href="https://www.youtube.com/watch?v=k5E2AVpwsko">Angular Tutorial for Beginners: Learn Angular from Scratch | Mosh (2h)</a></li>
+    <li><a href="https://scrimba.com/g/gyourfirstangularapp">Build your first Angular app (Scrimba Interactive Screencasts)</a></li>
+  </ul>
+
+</details>
 
 <details>
   <summary>XML</summary>
