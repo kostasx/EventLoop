@@ -859,7 +859,8 @@ document.body.addEventListener(&quot;mousemove&quot;, function(e) {&#10;
     <li><a href="https://www.youtube.com/watch?v=k5E2AVpwsko">Angular Tutorial for Beginners: Learn Angular from Scratch | Mosh (2h)</a></li>
     <li><a href="https://scrimba.com/g/gyourfirstangularapp">Build your first Angular app (Scrimba Interactive Screencasts)</a></li>
     <li><a href="https://youtu.be/qQGPpUmDSPI?t=4508">Build an Image Search App using Angular</a></li>
-    <li><a href="https://malcoded.com/angular-cheat-sheet/">Angular Cheat Sheet</a></li>
+    <li><a href="https://angular.io/guide/cheatsheet">Angular Cheat Sheet</a></li>
+    <li><a href="https://malcoded.com/angular-cheat-sheet/">Angular Cheat Sheet (By @Malcoded)</a></li>
   </ul>
 
 </details>
