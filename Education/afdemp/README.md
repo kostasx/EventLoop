@@ -869,14 +869,13 @@ document.body.addEventListener(&quot;mousemove&quot;, function(e) {&#10;
         <li><a href="https://angular.io/api/core/Input">@Input Decorator</a></li>
         </ul>
     </li> 
-    <li><strong>Components: @Output
+    <li><strong>Components: @Output</strong>
         <ul>
         <li><a href="https://angular.io/guide/component-interaction#parent-listens-for-child-event">Parent listens for child event</a></li>
         <li><a href="https://itnext.io/angular-input-output-f0418ab4cc91">Angular-Inputs and Outputs</a></li>
         <li><a href="https://ultimatecourses.com/blog/component-events-event-emitter-output-angular-2">Component events with EventEmitter and @Output in Angular</a></li>
         <li><a href="https://angular.io/api/core/Output">@Output Decorator</a></li>
         </ul>
-    </strong>
     </li> 
   </ul>
 
