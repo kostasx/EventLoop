@@ -861,6 +861,23 @@ document.body.addEventListener(&quot;mousemove&quot;, function(e) {&#10;
     <li><a href="https://youtu.be/qQGPpUmDSPI?t=4508">Build an Image Search App using Angular</a></li>
     <li><a href="https://angular.io/guide/cheatsheet">Angular Cheat Sheet</a></li>
     <li><a href="https://malcoded.com/angular-cheat-sheet/">Angular Cheat Sheet (By @Malcoded)</a></li>
+    <li><strong>Components: @Input</strong>
+        <ul>
+        <li><a href="https://angular.io/guide/component-interaction#pass-data-from-parent-to-child-with-input-binding">Pass data from parent to child with input binding</a></li>
+        <li><a href="https://itnext.io/angular-input-output-f0418ab4cc91">Angular-Inputs and Outputs</a></li>
+        <li><a href="https://ultimatecourses.com/blog/passing-data-angular-2-components-input">Passing data into Angular components with @Input</a></li>
+        <li><a href="https://angular.io/api/core/Input">@Input Decorator</a></li>
+        </ul>
+    </li> 
+    <li><strong>Components: @Output
+        <ul>
+        <li><a href="https://angular.io/guide/component-interaction#parent-listens-for-child-event">Parent listens for child event</a></li>
+        <li><a href="https://itnext.io/angular-input-output-f0418ab4cc91">Angular-Inputs and Outputs</a></li>
+        <li><a href="https://ultimatecourses.com/blog/component-events-event-emitter-output-angular-2">Component events with EventEmitter and @Output in Angular</a></li>
+        <li><a href="https://angular.io/api/core/Output">@Output Decorator</a></li>
+        </ul>
+    </strong>
+    </li> 
   </ul>
 
 </details>
