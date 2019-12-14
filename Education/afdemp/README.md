@@ -875,8 +875,12 @@ document.body.addEventListener(&quot;mousemove&quot;, function(e) {&#10;
         <li><a href="https://itnext.io/angular-input-output-f0418ab4cc91">Angular-Inputs and Outputs</a></li>
         <li><a href="https://ultimatecourses.com/blog/component-events-event-emitter-output-angular-2">Component events with EventEmitter and @Output in Angular</a></li>
         <li><a href="https://angular.io/api/core/Output">@Output Decorator</a></li>
+        <li><a href="https://www.pluralsight.com/guides/angular-data-binding-overview">Angular Data Binding Overview</a></li>
         <li><a href="https://www.pluralsight.com/guides/property-binding-angular">Property Binding in Angular</a></li>
         <li><a href="https://www.pluralsight.com/guides/angular-event-binding">Event Binding in Angular</a></li>
+        <li><a href="https://www.pluralsight.com/guides/attribute-class-style-bindings-angular">Attribute, Class, and Style Bindings in Angular</a></li>
+	<li><a href="https://angular.io/api/common/NgStyle">The <strong>ngStyle</strong> Directive</a></li>
+	<li><a href="https://www.pluralsight.com/guides/one-and-two-way-data-binding-angular#module-twowaydatabindinginangular-anchor">Two-way Data Binding in Angular</a></li>
         </ul>
     </li> 
   </ul>
