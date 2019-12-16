@@ -39,7 +39,7 @@ We are passionate about technology
 </details>
 
 <details>
-  <summary>Tutorials</summary>
+  <summary>Tutorials & Videos</summary>
   <br>
   <ul>
     <li>
@@ -48,8 +48,12 @@ We are passionate about technology
     <li>
       <a href="https://www.youtube.com/watch?v=yB_oh7WgRU8">Web Scraping with JavaScript for the lazy developer</a>
     </li>
-
-
+    <li>
+      <a href="https://www.youtube.com/watch?v=Hy0pQXVm52k">DOM Manipulation and Performance in JavaScript: Optimizing Loops</a>
+    </li>
+    <li>
+      <a href="https://www.youtube.com/watch?v=a0ySy_u5uo8">Creating a Movies JSON API Server using Express.JS</a>
+    </li>
 </ul>
 </details>
 
