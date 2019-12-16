@@ -45,6 +45,11 @@ We are passionate about technology
     <li>
       <a href="https://scrimba.com/c/cz6vpwTw">Facebook Like Button with HTML, CSS and JavaScript | Interactive Screencast @ Scrimba.com </a>[ Ελληνικά ]
     </li>
+    <li>
+      <a href="https://www.youtube.com/watch?v=yB_oh7WgRU8">Web Scraping with JavaScript for the lazy developer</a>
+    </li>
+
+
 </ul>
 </details>
 
