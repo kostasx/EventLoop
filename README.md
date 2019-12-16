@@ -27,7 +27,13 @@ We are passionate about technology
       <a href="http://eventloop.gr/Education/TechTalentSchool/javascript/intermediate.html#/">Intermediate JavaScript</a>
     </li>
     <li>
+      <a href="http://eventloop.gr/Education/TechTalentSchool/javascript/advanced.html#/">Advanced JavaScript <em>(Work in progress)</em></a>
+    </li>
+    <li>
       <a href="http://eventloop.gr/Education/TechTalentSchool/javascript/reactjs/index.html#/">React.JS</a>
+    </li>
+    <li>
+      <a href="http://eventloop.gr/Education/TechTalentSchool/nodejs/introduction.html#">Introduction to Node.JS</a>
     </li>
 </ul>
 </details>
