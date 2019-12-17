@@ -1,5 +1,5 @@
 # EventLoop
-We are passionate about technology
+Passionate about Technology & Tech Education
 
 <details>
   <summary>Presentations</summary>
