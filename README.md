@@ -58,6 +58,14 @@ We are passionate about technology
 </details>
 
 <details>
+  <summary>Educational Resources</summary>
+  <br>
+  <ul>
+    <li><a href="https://github.com/kostasx/EventLoop/tree/master/Education/afdemp">Resources for the AFDEMP* Coding Bootcamp</a> (<a href="https://www.afdemp.org/bootcamp/">*Alliance for Digital Employability</a>)</li>
+  </ul>
+</details>
+
+<details>
   <summary>Miscellaneous</summary>
   <br>
   <ul>
