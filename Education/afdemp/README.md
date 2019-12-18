@@ -884,7 +884,7 @@ document.body.addEventListener(&quot;mousemove&quot;, function(e) {&#10;
 	<li><a href="https://www.pluralsight.com/guides/one-and-two-way-data-binding-angular#module-twowaydatabindinginangular-anchor">Two-way Data Binding in Angular</a></li>
         </ul>
     </li> 
-    <li><strong>Components: @Output</strong>
+    <li><strong>Dependency Injection (DI)</strong>
 	    <ul>
 		    <li><a href="https://www.youtube.com/watch?v=LUDsfWF-VGo">Understanding dependency injection</a></li>
 	    </ul>
