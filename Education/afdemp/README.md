@@ -856,6 +856,7 @@ document.body.addEventListener(&quot;mousemove&quot;, function(e) {&#10;
   <ul>
     <li><a href="https://books.goalkicker.com/Angular2Book/">Angular 2+ Notes for Professionals book</a></li>
     <li><a href="https://www.youtube.com/watch?v=KhzGSHNhnbI">Angular In 60 Minutes (Video)</a></li>
+    <li><a href="https://programmingwithmosh.com/angular/angular-4-tutorial/">Angular 4 in 20 minutes (Mosh Hamedani)</a></li>
     <li><a href="https://www.youtube.com/watch?v=k5E2AVpwsko">Angular Tutorial for Beginners: Learn Angular from Scratch | Mosh (2h)</a></li>
     <li><a href="https://scrimba.com/g/gyourfirstangularapp">Build your first Angular app (Scrimba Interactive Screencasts)</a></li>
     <li><a href="https://youtu.be/qQGPpUmDSPI?t=4508">Build an Image Search App using Angular</a></li>
