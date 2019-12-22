@@ -520,6 +520,14 @@ __[&checkmark;]__ : Student Approved Resource
   <a href="https://www.w3.org/WAI/ER/tools/">Web Accessibility Evaluation Tools List</a>
   </li>
 
+  <li>
+  <a href="https://www.edx.org/course/web-accessibility-introduction"><strong>W3C - Introduction to Web Accessibility</strong> (edX: Free Course)</a>
+  </li>
+
+  <li>
+	<a href="https://www.udacity.com/course/web-accessibility--ud891"><strong>Web Accessibility by Google</strong> (Udacity: Free course)</a>
+  </li>
+
 </ul>
 </details>
 
