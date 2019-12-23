@@ -8,6 +8,18 @@ __[&checkmark;]__ : Student Approved Resource
 
 ----
 
+### Server & *nix Systems 
+
+  <h4>Resources</h4>
+  <ul>
+	<li>
+		<a href="https://developer.ibm.com/tutorials/l-lpic1-map/"><strong>Learn Linux, 101: A roadmap for LPIC-1</strong>
+		</a>
+	</li>
+  </ul>
+
+----
+
 ### Version Control
 
   <h4>Resources</h4>
