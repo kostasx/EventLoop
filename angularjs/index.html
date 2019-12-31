@@ -1,0 +1,606 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>AngularJS | Fundamentals</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <!-- <link rel="stylesheet" href="css/theme/white.css"> -->
+
+    <!-- Theme used for syntax highlighting of code -->
+    <!-- <link rel="stylesheet" href="lib/css/monokai.css"> -->
+    <link rel="stylesheet" href="lib/css/hybrid.css">
+
+    <!-- <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"
+    >
+    </script> -->
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+    <!-- CUSTOM -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/reveal-custom.css">
+
+    <!-- PLUGINS -->
+    <link rel="stylesheet" href="plugin/fullscreen/fullscreen-img.css">
+
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- Main Title -->
+            <section class="row" data-background="#de0932">
+                <div class="col-6 text-left text-white">
+                    <h1>AngularJS</h1>
+                    <hr class="limit" style="background-color: #940c26">
+                    <h2 class="font-weight-light mb-5">Fundamentals</h2>
+                    <h2>[Work in Progress...]</h2>
+                    <p class="description"></p>
+                    <p>Curated by <strong>Kostas Minaidis</strong> <span class="opaque-40">| Updated: 17/07/2019</span></p>
+                </div>
+            </section>
+
+            <!-- Agenda / ToC -->
+            <section data-background="#000" class="text-white">
+                <div class="row">
+                    <div class="col-6 text-left">
+                        <h1>Agenda</h1>
+                        <hr class="limit limit-small">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 text-left">
+                        <ul class="numlist pl-0">
+
+                            <!-- border -->
+                            <li class="fragmentDISABLED fade-in-then-semi-out">
+                                <div>01</div>
+                                <div>
+                                    <span>border &amp; border-radius</span>
+                                    <span>Set an element's border</span>
+                                </div>
+                            </li>
+
+                            <!-- width/height -->
+                            <li class="fragmentDISABLED fade-in-then-semi-out">
+                                <div>02</div>
+                                <div>
+                                    <span>width &amp; height / overflow</span>
+                                    <span>Set an element's dimensions</span>
+                                </div>
+                            </li>
+
+                            <!-- float / clear -->
+                            <li class="fragmentDISABLED fade-in-then-semi-out">
+                                <div>03</div>
+                                <div>
+                                    <span>float / clear</span>
+                                    <span>Remove an element from the normal page flow</span>
+                                </div>
+                            </li>
+
+                            <!-- display -->
+                            <li class="fragmentDISABLED fade-in-then-semi-out">
+                                <div>04</div>
+                                <div>
+                                    <span>display</span>
+                                    <span>Specify an element's display behavior</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6 text-left">
+                        <ul class="numlist pl-0">
+
+                            <!-- list-style -->
+                            <li class="fragmentDISABLED fade-in-then-semi-out">
+                                <div>05</div>
+                                <div>
+                                    <span>list-style</span>
+                                    <span>Styling lists</span>
+                                </div>
+                            </li>
+
+                            <!-- pseudo classes -->
+                            <li class="fragmentDISABLED fade-in-then-semi-out">
+                                <div>06</div>
+                                <div>
+                                    <span>Pseudo Classes</span>
+                                    <span>Target elements based on their state</span>
+                                </div>
+                            </li>
+
+                            <!-- animations & sprites -->
+                            <li class="fragmentDISABLED fade-in-then-semi-out">
+                                <div>07</div>
+                                <div>
+                                    <span>Animation & Sprites</span>
+                                    <span>Add animation to the elements</span>
+                                </div>
+                            </li>
+
+                            <!-- menus -->
+                            <li class="fragmentDISABLED">
+                                <div>08</div>
+                                <div>
+                                    <span>Menus</span>
+                                    <span>Creating website menus</span>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 01 | ... -->
+            <section>
+
+                <!-- What are Media Elements? -->
+                <section>
+                    <div class="row text-left align-items-end">
+                        <div class="col-6">
+                            <h1 class="headlight">01</h1>
+                            <hr class="limit limit-medium">
+                            <h2>border &amp; border-radius</h2>
+                            <div class="subnote">...</div>
+                            <p class="serif fragment"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae autem voluptates illum, ducimus beatae commodi voluptatum dolor, totam esse vel eum repudiandae libero aliquam laudantium quasi adipisci perferendis, assumenda tempora? </p>
+                        </div>
+                        <div class="col-6">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Media Elements -->
+                <section data-background="#000" class="text-white">
+                    <div class="row text-left">
+                        <div class="col-6">
+                            <h2>HTML5<br>Media Elements</h2>
+                            <div class="subnote text-muted">The <span class="highlight">&lt;audio&gt;</span> and <span class="highlight">&lt;video&gt;</span> elements.</div>
+                        </div>
+                        <div class="col-6">
+                            <pre class="fragment">
+                                <h4 class="text-white mb-0">Let's add a video:</h4>
+                                <code class="hljs html" contenteditable data-trim data-line-numbers="1,1-2">
+                                    &lt;video src="trailer.mp4"&gt;&lt;/video&gt;
+                                </code>
+                                <code class="hljs html fragment" contenteditable data-trim data-line-numbers="1,1-2">
+                                    &lt;video src="https://video.com/trailer.mp4"&gt;&lt;/video&gt;
+                                </code>
+                            </pre>
+                            <pre class="fragment">
+                                <h4 class="text-white mb-0">Let's add some music:</h4>
+                                <code class="hljs html" contenteditable data-trim data-line-numbers>
+                                &lt;audio src="mozart.mp3"&gt;&lt;/audio&gt;
+                                </code>
+                                <code class="hljs html fragment" contenteditable data-trim data-line-numbers>
+                                &lt;audio src="https://audio.com/mozart.mp3"&gt;&lt;/audio&gt;
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- The Media <source> Element -->
+                <section class="h-100 text-white" data-background="#000">
+                    <div class="row text-left h-100 align-items-center">
+                        <div class="col-6">
+                            <h2>The <span class="highlight">&lt;source&gt;</span><br>Media Element</h2>
+                            <div class="subnote text-muted">Providing multiple media sources for compatibility.</div>
+
+                            <p class="fragment" data-code-block="1" data-code-focus="1">1) Opening &lt;audio&gt; tag
+                            </p>
+                            <p class="fragment" data-code-block="1" data-code-focus="3">2) First audio source: mp3 file with appropriate <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types" class="highlight">MIME type</a> attribute
+                            </p>
+                            <p class="fragment text-muted" data-code-block="1" data-code-focus="3"><em>&quot;A media type (also known as a Multipurpose Internet Mail Extensions or MIME type) is a standard that indicates the nature and format of a document, file, or assortment of bytes.&quot;</em></p>
+                            <p class="fragment" data-code-block="1" data-code-focus="5">3) Second audio source
+                            </p>
+                            <p class="fragment" data-code-block="1" data-code-focus="1-7">4) Ready!</p>
+                        </div>
+                        <div class="col-6">
+                            <pre><code class="hljs html reveal-code" contenteditable data-trim>
+
+                                &lt;audio controls&gt;&#10;&#10;                                    &lt;source src=&quot;audio.mp3&quot; type=&quot;audio/mp3&quot;&gt;&#10;&#10;                                    &lt;source src=&quot;audio.ogg&quot; type=&quot;audio/ogg&quot;&gt;&#10;&#10;                                &lt;/audio&gt;&#10;
+
+                            </code></pre>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Live Coding: <video> Multiple Sources -->
+                <section class="w-100 h-100">
+                    <div id="livecode-video-multiple" class="text-left w-100 h-100"></div>
+                    <script src="https://flems.io/flems.html" type="text/javascript" charset="utf-8"></script>
+                    <script>
+                        Flems(document.querySelector("#livecode-video-multiple"), {
+                            console: false,
+                            reloadButton: false,
+                            files: [{
+                                name: 'html5-video-multiple-sources.html',
+                                content: '<!-- type="TYPE/SUBTYPE" -->\n\n' +
+                                    '<video controls width="640">\n\n' +
+                                    '    <source src="https://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv" type="video/ogv">\n\n' +
+
+                                    '   <source src="https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" type="video/mp4">\n\n' +
+                                    '    Sorry, your browser doesn\'t support embedded videos.\n\n' +
+                                    '</video>'
+                            }]
+                        })
+                    </script>
+                </section>
+
+                <!-- Media API | What is it? | Frame 01 -->
+                <section>
+                    <div class="row text-left align-items-end">
+                        <div class="col-6">
+                            <h2>Media API</h2>
+                            <hr class="limit limit-medium">
+                            <div class="subnote">Controlling Media Elements with JavaScript</div>
+                            <p class="serif fragment">The Media API allows you to interact with the Media Elements. It acts as a middleman, offering a set of commands for observing and controlling the Media elements.</p>
+                        </div>
+                        <div class="col-6">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Media API | What is it? | Frame 02 -->
+                <section>
+                    <div class="row">
+                        <div class="col-8 offset-2">
+                            <img class="img-fluid" src="./img/MediaAPI-01.jpg" alt="">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Media API | What is it? | Frame 03 -->
+                <section>
+                    <div class="row align-items-center">
+                        <div class="col-8 offset-2">
+                            <img class="img-fluid" src="./img/MediaAPI-02.jpg" alt="">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Media API | Functions -->
+                <section>
+                    <div class="row text-left align-items-center">
+                        <div class="col-6">
+                            <h2>Media API</h2>
+                            <h3 class="display-4">Methods &amp; Properties</h3>
+                            <hr class="limit limit-medium">
+                            <h3 class="mb-0">Code Time!</h3>
+                            <h6 class="text-muted-plus fragment mt-3 mb-5">( Class-Practice-01 )</h6>
+                            <p class="serif fragment">1) Create an HTML page</p>
+                            <p class="serif fragment">2) Add a <strong>&lt;video&gt;&lt;/video&gt;</strong> element (Use <a target="_blank" href="https://upload.wikimedia.org/wikipedia/commons/5/5d/Charlie_Chaplin%2C_the_Marriage_Bond.ogv">this source</a>)</p>
+                            <p class="serif fragment">2.1) Add a poster attribute. (Use <a target="_blank" href="https://upload.wikimedia.org/wikipedia/commons/8/87/%281916%29_p116_Chaplin_%2814762003256%29.jpg">this source</a>)</p>
+                            <p class="serif fragment">3) Add a <strong>&lt;script&gt;&lt;/script&gt;</strong> tag just before the closing &lt;/body&gt; tag</p>
+                            <p class="serif fragment">4) Use <code>document.querySelector()</code> to target the video element and store it in a variable named <code>video</code></p>
+                            <p class="serif fragment">5) Use Media API methods</p>
+                        </div>
+                        <div class="col-6">
+                            <p class="fragment">Methods:</p>
+                            <code class="hljs fragment mb-4" data-trim contenteditable>video.play();</code>
+                            <code class="hljs fragment mb-4" data-trim contenteditable>video.pause();</code>
+                            <code class="hljs fragment mb-4" data-trim contenteditable>Combine setTimeout and play/pause</code>
+                            <code class="hljs fragment mb-4" data-trim contenteditable>Combine the click event with play/pause </code>
+                            <p class="fragment bg-warning rounded py-2 pl-4">Challenge #1: apply background fade effect on play/pause</p>
+                            <p class="fragment bg-warning rounded py-2 pl-4">Challenge #2: Attach Play/Pause events directly on the video</p>
+                            <p class="fragment">Properties:</p>
+                            <code class="hljs html fragment mb-4" data-trim contenteditable>video.duration;</code>
+                            <code class="hljs html fragment mb-4" data-trim contenteditable>video.currentTime; // GET</code>
+                            <code class="hljs html fragment mb-4" data-trim contenteditable>video.currentTime = 100; // SET</code>
+                            <p class="fragment bg-warning rounded py-2 pl-4">Full list of MediaElement <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement#Properties">Properties</a> and <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement#Methods">Methods</a></p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Basics: Code 1/3 -->
+                <section class="h-100 text-white" data-background="#000">
+                    <div class="row text-left h-100 align-items-center">
+                        <div class="col-4">
+                            <h2>The Code <span class="font-weight-light">- 1/3</span></h2>
+
+                            <div class="subnote text-muted">It's all about specifying <code>draggable</code> and <code>droppable</code> elements, and listening on <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API#Drag_Events" target="_blank">Events</a>.</div>
+
+                            <p class="fragment" data-code-block="1" data-code-focus="1-3">1) Create a draggable Element and a drop target Element</p>
+                            <p class="fragment" data-code-block="1" data-code-focus="1">2) Making an element draggable is as simple as setting the draggable attribute of an element to true
+                            </p>
+                            <p class="fragment" data-code-block="2" data-code-focus="">3) Setting an element as a drop target requires to disable the default <code>dragover</code> behavior.</p>
+
+                            <p class="fragment" data-code-block="2" data-code-focus="1">3.1) Get the drop element.</p>
+                            <p class="fragment" data-code-block="2" data-code-focus="3">3.2) Define a function that will prevent the default dragover behavior.</p>
+                            <p class="fragment" data-code-block="2" data-code-focus="5">3.3) Handle the drop event.</p>
+                        </div>
+                        <div class="col-8">
+                            <p class="text-right">HTML</p>
+                            <pre><code class="hljs html reveal-code" contenteditable data-trim>
+                                    &lt;div id="draggable" draggable="true"&gt; Draggable Element &lt;/div&gt;
+    
+                                    &lt;div id="drop-target"&gt; Drop Target &lt;/div&gt;
+                                </code></pre>
+                            <p class="text-right">JavaScript</p>
+                            <pre><code class="hljs javascript reveal-code" contenteditable data-trim>
+                                    let dropTarget = document.querySelector("#drop-target");
+    
+                                    function handleDragOver( event ){ event.preventDefault(); }
+                                    
+                                    dropTarget.addEventListener( "dragover",handleDragOver );
+                                </code></pre>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Let's Code! -->
+                <section data-background="indigo">
+                    <div class="row text-white p-5">
+                        <div class="col text-center">
+                            <div class="subnote mt-0">ENOUGH THEORY</div>
+                            <h2>Let's Code!</h2>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Summary -->
+                <section data-background="#1a0838" class="text-white">
+                    <h2 class="mb-5">Summing-Up</h2>
+                    <hr class="limit limit-medium limit-centered limit-indigo">
+                    <div class="row text-left align-items-start">
+                        <div class="col-6">
+                            <h3 class="my-5 fragment">1) Create a draggable element</h3>
+                            <h3 class="my-5 fragment">2) Listen on the dragstart event</h3>
+                            <h3 class="my-5 fragment">3) Set some transfer data</h3>
+                        </div>
+                        <div class="col-6">
+                            <h3 class="my-5 fragment">4) Create a droppable element</h3>
+                            <h3 class="my-5 fragment">5) Prevent default behavior on the dragover<br>event and listen on the drop event</h3>
+                            <h3 class="my-5 fragment">6) Get the transfer data</h3>
+                        </div>
+                    </div>
+                </section>
+
+
+                <!-- References -->
+                <section data-background="yellowgreen" class="references text-white">
+                    <div class="col-8 text-left">
+                        <h2>References &amp; Sources:</h2>
+                        <hr class="limit limit-small">
+                        <ul class="list-unstyled">
+                            <li>&rtrif;
+                                <a target="_blank" href="">LINK</a>
+                            </li>
+                            <li>&rtrif;
+                                <strong>LINK: </strong>[
+                                <a target="_blank" href="">Demo</a> |
+                                <a target="_blank" href="">Source</a> ]
+                            </li>
+                        </ul>
+                    </div>
+
+                </section>
+
+            </section>
+
+        </div>
+    </div>
+
+    <script src="js/reveal.js"></script>
+
+    <script>
+        function typedCode(editor, text, ms) {
+
+            let next;
+            let isTyping = false;
+            ms = ms || 80;
+            text = text.split("");
+            let content = [];
+
+            function startTyping() {
+
+                console.log("startTyping() :1: started");
+                next = text.shift();
+                if (!next) {
+                    isTyping = false;
+                    console.log("startTyping() :2: stopped");
+                    clearInterval(interval);
+                    return interval = null;
+                }
+                isTyping = true;
+                content.push(next);
+                editor.setValue(content.join(""));
+
+                if (next === "\n") {
+                    isTyping = false;
+                    console.log("startTyping() :3: stopped");
+                    return clearInterval(interval);
+                }
+
+            }
+
+            let interval = setInterval(startTyping, ms);
+
+            document.body.addEventListener("mousedown", function(e) {
+
+                if (e.which === 1 && interval) {
+                    if (isTyping) {
+                        console.log("startTyping() :4: stopped");
+                        clearInterval(interval);
+                        isTyping = false;
+                        console.log("mousedown::isTyping:true");
+                    } else {
+                        console.log("startTyping() :5: started");
+                        interval = setInterval(startTyping, ms);
+                        console.log("mousedown::isTyping:false");
+                    }
+                }
+
+            });
+
+        }
+
+        function execOnAudioMultiple(e) {
+
+            let isKeyC = (e.key === "t" && e.type === "keyup");
+
+            if (isKeyC || e.type === "dblclick") {
+
+                let selector = "#livecode-audio-multiple .CodeMirror";
+                let codeEditor = document.querySelector(selector).CodeMirror;
+
+                if (!codeEditor) {
+                    return false;
+                }
+
+                let editorContent = '<audio controls>\n\n' +
+                    '    <source src="https://file-examples.com/wp-content/uploads/2017/11/file_example_MP3_700KB.mp3" type="audio/mp3">\n\n' +
+                    '    <source src="https://file-examples.com/wp-content/uploads/2017/11/file_example_OOG_1MG.ogg" type="audio/ogg">\n\n' +
+                    '    Sorry, your browser doesn\'t support embedded audio.\n\n' +
+                    '</audio>\n' +
+                    '<!-- type="TYPE/SUBTYPE" -->\n';
+
+                typedCode(codeEditor, editorContent);
+
+            }
+
+        }
+
+        // Execute Functions on Specific Slides: "<ID>": functionReference
+        const RevealEvents = {
+            // "livecode-audio-multiple": execOnAudioMultiple
+        }
+
+        Reveal.configure({
+            keyboard: {
+                // Key: 'e'
+                69: function() {}
+            }
+        });
+
+        Reveal.addEventListener('slidechanged', function(e) {
+            let slideState = e.currentSlide.getAttribute('data-state');
+        });
+
+        function initCodeOnSection(slide, state, code) {
+            if (state) {
+
+            }
+        }
+
+        function getCurrentDataState(currentSlide) {
+
+            if (!currentSlide) {
+                return false;
+            }
+            let currentDataState = currentSlide.getAttribute('data-state');
+            return currentDataState ? currentDataState : false;
+
+        }
+
+        function getCurrentSlide() {
+
+            let currentSlide = document.querySelector("section.stack.present");
+            if (!currentSlide) {
+                return false
+            }
+            let innerSlide;
+            if (innerSlide = currentSlide.querySelector("section.present")) {
+                currentSlide = innerSlide;
+            }
+            return currentSlide;
+
+        }
+
+        function initSlideCode(e) {
+
+            let currentSlide = getCurrentSlide();
+            let currentDataState = getCurrentDataState(currentSlide);
+            if (RevealEvents[currentDataState]) {
+
+                RevealEvents[currentDataState](e);
+
+            }
+
+        }
+
+        document.body.addEventListener("dblclick", initSlideCode);
+        document.body.addEventListener("keyup", initSlideCode);
+
+        // More info about config & dependencies:
+        // - https://github.com/hakimel/reveal.js#configuration
+        // - https://github.com/hakimel/reveal.js#dependencies
+        Reveal.initialize({
+            hash: true,
+            // maxScale: 1,
+            // minScale: 1,
+            history: true,
+
+            spotlight: {
+                toggleSpotlightOnMouseDown: false
+            },
+
+            keyboard: {
+                // 's' === 91
+                67: function() {
+                    RevealSpotlight.toggleSpotlight()
+                }
+            },
+
+            dependencies: [
+
+                {
+                    src: 'plugin/markdown/marked.js'
+                }, {
+                    src: 'plugin/markdown/markdown.js'
+                }, {
+                    src: 'plugin/notes/notes.js',
+                    async: true
+                }, {
+                    src: 'plugin/highlight/highlight.js',
+                    async: true
+                },
+                // ORIGINAL Highlight.js
+                // { src: 'plugin/highlight-original/highlight.pack.js', async: true },
+
+                // PLUGINS
+                {
+                    src: 'plugin/fullscreen/fullscreen-img.js'
+                }, {
+                    src: 'plugin/spotlight/spotlight.js'
+                }, {
+                    src: 'plugin/quiz/js/quiz.js',
+                    async: true,
+                    callback: function() {
+                        prepareQuizzes({});
+                    }
+                }, {
+                    src: 'plugin/reveal-code-focus/reveal-code-focus.js',
+                    async: true,
+                    callback: function() {
+                        RevealCodeFocus();
+                    }
+                },
+
+            ]
+        });
+    </script>
+</body>
+
+</html>
