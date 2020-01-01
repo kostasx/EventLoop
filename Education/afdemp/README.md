@@ -334,6 +334,8 @@ __[&checkmark;]__ : Student Approved Resource
     <li><a href="https://www.youtube.com/watch?v=2JMGG_8T-vY">CSS Absolute Position | NetNinja Video</a></li>
     <li><a href="https://www.youtube.com/watch?v=8fQWx-d5qc8">CSS Fixed Position | NetNinja Video</a></li>
     <li><a href="https://www.youtube.com/watch?v=VwxGKpvW8Zk">CSS Floating Elements | NetNinja Video</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">The stacking context</a></li>
+    <li><a href="https://vanseodesign.com/css/css-positioning/">How Well Do You Understand CSS Positioning?</a></li>
   </ul>
 </li>
 
