@@ -134,6 +134,7 @@ __[&checkmark;]__ : Student Approved Resource
 
 <details>
   <summary>Key Concepts and Principles</summary>
+  <br>
   <p>Syllabus: 4.1.1 ~ 4.1.3</p>
 
   <h4>Resources</h4>
@@ -152,6 +153,7 @@ __[&checkmark;]__ : Student Approved Resource
   <li><a href="https://httpstatuses.com/">HTTP Status Codes</a></li>
   <li><a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">HTTP Status Code Definitions</a></li>
   <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods">HTTP Request Methods</a></li>
+  <li><a href="https://www.freecodecamp.org/news/http-and-everything-you-need-to-know-about-it/">An introduction to HTTP: everything you need to know</a></li>
 
 </ul>
 
