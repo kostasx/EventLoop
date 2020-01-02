@@ -584,11 +584,8 @@ __[&checkmark;]__ : Student Approved Resource
       <strong>Fetch API:</strong>
 	  <ul>
           <li><i>The Fetch API provides an interface for fetching resources (including across the network)</i></li>
-		   <li>
-               <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API"><strong>Fetch API</strong> (MDN)</a>    <ul>
-               <li><a href="https://javascript.info/fetch-progress">Track Download progress using the Fetch API</a></li>
-               </ul>
-           </li>
+	   <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API"><strong>Fetch API</strong> (MDN)</a></li>                  
+	   <li><a href="https://javascript.info/fetch-progress">Track Download progress using the Fetch API</a></li>
        </ul>
      </li>
 
