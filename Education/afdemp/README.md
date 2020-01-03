@@ -832,6 +832,7 @@ document.body.addEventListener(&quot;mousemove&quot;, function(e) {&#10;
   <strong>React &amp; Java:</strong>
   <ul>
 	  <li><a href="https://www.youtube.com/watch?v=P6rwKHnXUJI" target="_blank">Bootiful Development with Spring Boot and React - Matt Raible</a></li>
+	  <li><a href="https://www.youtube.com/watch?v=7XxH-G9ckeU" target="_blank">Spring Boot with ReactJS using Maven plugins</a></li>
   </ul>
 </li>
 
