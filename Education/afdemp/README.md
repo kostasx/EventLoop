@@ -394,6 +394,7 @@ __[&checkmark;]__ : Student Approved Resource
 <li><strong>Objects:</strong>
 		 <ul>
 			 <li><a href="https://goo.gl/ej6etK">Visualizing Object Equality</a></li>
+			 <li><a href="https://dev.to/lydiahallie/javascript-visualized-prototypal-inheritance-47co">Function Prototype and Prototypal Inheritance</a></li>
 </ul>
   </li>
   <li id="this-keyword">
