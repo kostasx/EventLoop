@@ -330,6 +330,7 @@ __[&checkmark;]__ : Student Approved Resource
     <li><strong>Box Model:</strong>
 <ul>
   <li><a href="https://learn.shayhowe.com/html-css/opening-the-box-model/">Opening the Box Model</a></li>
+  <li><a href="https://uxengineer.com/padding-vs-margin/">Padding vs Margin: The Definitive Guide</a></li>
   <li><a href="https://www.youtube.com/watch?v=d601NaSSqSE">Box Model Review | NetNinja Video</a></li>
   <li><a href="https://www.youtube.com/watch?v=l8NH6YppJFA">Normal Document Flow</a></li>
   <li><a href="https://www.smashingmagazine.com/2019/07/margins-in-css/">Everything You Need To Know About CSS Margins</a></li>
