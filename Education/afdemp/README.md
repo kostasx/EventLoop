@@ -5,6 +5,7 @@
 __[&checkmark;]__ : Student Approved Resource
 
 **Don't forget** to `Star`, `Like` and `Subscribe` the links that helped you!
+**Don't forget** to check out the [**Tips for Developers**](https://github.com/kostasx/EventLoop/tree/master/Education/tips);
 
 ----
 
@@ -234,6 +235,9 @@ __[&checkmark;]__ : Student Approved Resource
 	  <li>
       	<a href="https://scrimba.com/g/ghtml" target="_blank">Introduction to HTML (scrimba.com)</a>
       </li>
+	<li>
+		<a href="https://css-tricks.com/what-beautiful-html-code-looks-like/" target="_blank"><strong>What Beautiful HTML Code Looks Like</strong></a>
+	</li>
 	  <li>
       	<a href="https://www.youtube.com/watch?v=yCf9i8rJvtg&list=PLF308KNnRLF5xGLpd5ewXEPFxkgRQLl4f" target="_blank">HTML Basics - Simple Document:</a>
       </li>
