@@ -5,6 +5,7 @@
 __[&checkmark;]__ : Student Approved Resource
 
 **Don't forget** to `Star`, `Like` and `Subscribe` the links that helped you!
+
 **Don't forget** to check out the [**Tips for Developers**](https://github.com/kostasx/EventLoop/tree/master/Education/tips);
 
 ----
