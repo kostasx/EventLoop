@@ -72,7 +72,6 @@ __[&checkmark;]__ : Student Approved Resource
 	<li><a href="https://www.youtube.com/watch?v=1yynLCFRuAk"><strong>StringBuilder</strong> Class</a> (Video: 6 min)</li>
 	<li><a href="https://goalkicker.com/JavaBook/JavaNotesForProfessionals.pdf">Java Notes for Professionals</a> (PDF)</li>
 	<li><a href="https://dzone.com/articles/visual-studio-code-for-java-the-ultimate-guide-201">Visual Studio Code for Java: The Ultimate Guide 2019</a></li>
-
 	<li><a href="https://www.youtube.com/watch?v=RJIfsSmU9zk">Developing Java Applications with Visual Studio Code</a></li>
 	
 </ul>
