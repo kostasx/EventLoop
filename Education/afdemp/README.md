@@ -856,7 +856,16 @@ document.body.addEventListener(&quot;mousemove&quot;, function(e) {&#10;
 });
 </pre></li>
   <li><strong>Question: </strong><i>How do I pass data between components in a unidirectional way?</i><br><strong>Answer:</strong> Please checkout the various ways available in the <a href="#react-state-management">State Management section</a><br></li>
-  </ul>
+
+  <li>
+	<strong>Question: </strong><i>How do I pass data between components in a unidirectional way?</i><br>
+	<details>
+		<summary><strong>Answer:</strong></summary>
+		<br><p>Please checkout the various ways available in the <a href="#react-state-management">State Management section</a></p>
+	</details>
+</li>
+
+</ul>
 
 </details>
 
