@@ -855,15 +855,26 @@ document.body.addEventListener(&quot;mousemove&quot;, function(e) {&#10;
    return { counter: prevState.counter + 1 }
 });
 </pre></li>
-  <li><strong>Question: </strong><i>How do I pass data between components in a unidirectional way?</i><br><strong>Answer:</strong> Please checkout the various ways available in the <a href="#react-state-management">State Management section</a><br></li>
 
   <li>
-	<strong>Question: </strong><i>How do I pass data between components in a unidirectional way?</i><br>
+	<strong>Question: </strong><i>How do I pass data between components in a unidirectional way?</i>
 	<details>
-		<summary><strong>Answer:</strong></summary>
-		<br><p>Please checkout the various ways available in the <a href="#react-state-management">State Management section</a></p>
+	<summary><strong>Answer:</strong></summary>
+	<br><p>Please checkout the various ways available in the <a href="#react-state-management">State Management section</a></p>
 	</details>
 </li>
+
+
+  <li>
+	<strong>Question: </strong><i>How do I unmount a Component?</i>
+	<details>
+	<summary><strong>Answer:</strong></summary>
+		<p><code>ReactDOM.render(<App />, div);</code></p>
+		<p><code>ReactDOM.unmountComponentAtNode(div);</code></p>
+		<p><strong>Note:</strong> React docs recommend you unmount a child from the parent via state / props</p>
+	</details>
+</li>
+
 
 </ul>
 
