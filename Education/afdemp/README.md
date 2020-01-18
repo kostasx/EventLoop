@@ -157,6 +157,7 @@ __[&checkmark;]__ : Student Approved Resource
   <li><a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">HTTP Status Code Definitions</a></li>
   <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods">HTTP Request Methods</a></li>
   <li><a href="https://www.freecodecamp.org/news/http-and-everything-you-need-to-know-about-it/">An introduction to HTTP: everything you need to know</a></li>
+  <li><a href="https://www.ntu.edu.sg/home/ehchua/programming/webprogramming/HTTP_Basics.html">Introduction to HTTP Basics</a></li>
 
 </ul>
 
