@@ -288,7 +288,7 @@ __[&checkmark;]__ : Student Approved Resource
    		<li><a href="https://www.w3schools.com/html/html_layout.asp">HTML Layouts</a></li>
     		<li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Introduction">Introduction to CSS Layout</a></li>
             <li><a href="http://learnlayout.com/">Learn CSS Layout</a></li>
-	    <li><a href="https://medium.com/@js_tut/the-complete-css-flex-box-tutorial-d17971950bdc"><strong>The Complete CSS Flex Box Tutorial</strong></a> <strong>&checkmark;</strong></li>
+	    <li><a href="https://medium.com/@js_tut/the-complete-css-flex-box-tutorial-d17971950bdc"><strong>The Complete CSS Flex Box Tutorial</strong></a> <strong>[&checkmark;]</strong></li>
 	    <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/"><strong>A Complete Guide to Flexbox</strong></a></li>
     	</ul>
 	</li>
