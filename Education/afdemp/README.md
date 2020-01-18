@@ -509,6 +509,10 @@ __[&checkmark;]__ : Student Approved Resource
 <h4>Resources</h4>
   <ul>
   <li>
+  <a href="https://webaim.org/resources/designers/media/designers.png"><strong>Web Accessibility for Designer <mark>Cheatsheet</mark></strong></a>
+  </li>
+
+  <li>
   <a href="https://uxdesign.cc/designing-for-accessibility-is-not-that-hard-c04cc4779d94"><strong>Designing for accessibility is not that hard: </strong>7 easy-to-implement guidelines to design a more accessible web</a>
   </li>
 
