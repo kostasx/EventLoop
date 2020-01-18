@@ -406,7 +406,13 @@ __[&checkmark;]__ : Student Approved Resource
 			 <li><a href="https://dev.to/lydiahallie/javascript-visualized-prototypal-inheritance-47co">Function Prototype and Prototypal Inheritance</a></li>
 </ul>
   </li>
-  <li id="this-keyword">
+<li><strong>Arrays:</strong>
+	 <ul>
+	 <li><a href="https://medium.com/@js_tut/map-filter-and-reduce-animated-7fe391a35a47">Map, Filter and Reduce – Animated</a> <strong>[&checkmark;]</strong></li>
+	</ul>
+</li>
+
+<li id="this-keyword">
 	  <strong>The <code>this</code> keyword in JS</strong>
           <ul>
 		  <li><a href="https://www.youtube.com/watch?v=gvicrj31JOM" target="_blank">JavaScript this Keyword | Mosh (9 min)</a></li>
