@@ -8,6 +8,7 @@
 - <a href="#html">HTML<a><br>
 - <a href="#css">CSS<a><br>
 - <a href="#javascript">JavaScript<a><br>
+- <a href="#junior-must-know">12 Things Every Junior Developer Should Learn<a><br>
 
 ## GENERAL
 
@@ -750,3 +751,20 @@ if ( something === 1 ){
   <summary><strong>Use <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Destructuring Assignment</a> to make your code more readable</strong></summary>
   <img src="img/before-after-object-destructuring.jpg" alt="object-destructuring">
 </details>
+
+## 12 Things Every Junior Developer Should Learn
+
+  - Learn how a relational database works (this is always useful)
+  - Learn how HTTP works in general
+  - Learn how to debug code in one language (it's pretty much the same in others, you can recycle most of the knowledge)
+  - Be familiar with the command line
+  - Know how to find code (either using your IDE or grep on the command line)
+  - Knowing the basics of regular expressions will get you far (also to find code in the previous point)
+  - Know how to find solutions using a search engine
+  - Know how to operate git (I would say any source control but git is the de facto standard so you might as well start with that)
+  - Ask questions, especially if you think they're not worth being asked
+  - Learn how timezones work (not kidding, lots of devs are still fuzzy on these)
+  - Learn how unicode and utf-8 work (same reason for timezones)
+  - Have a general idea of how caching (CPU, in memory, disk, HTTP) works as a concept
+
+  [Source](https://dev.to/ben/12-things-every-junior-developer-should-learn-lco)
