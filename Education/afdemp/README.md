@@ -821,6 +821,7 @@ document.body.addEventListener(&quot;mousemove&quot;, function(e) {&#10;
 <li id="react-hooks">
   <strong>React Hooks:</strong>
   <ul>
+	  <li><a href="https://medium.com/@pomber/react-hooks-tl-dr-a5bfdd9189cb" target="_blank"><strong>React Hooks TL;DR</strong></a></li>
 	  <li><a href="https://wattenberger.com/blog/react-hooks" target="_blank">Thinking in React Hooks</a></li>
   </ul>
 </li>
