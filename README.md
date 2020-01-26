@@ -64,7 +64,7 @@ Passionate about Technology & Tech Education
 
   <li><a href="https://github.com/kostasx/LearnJavascript/blob/master/README.md"><strong>Learn JavaScript</strong>: A list of suggestions &  resources</a></li>
     
-  <li><a href="https://github.com/kostasx/EventLoop/tree/master/Education/afdemp">List of Resources for Web Developers (from the AFDEMP* Coding Bootcamp</a> [<a href="https://www.afdemp.org/bootcamp/">*Alliance for Digital Employability</a>])</li>
+  <li><a href="https://github.com/kostasx/EventLoop/tree/master/Education/afdemp">List of Resources for Web Developers</a> (from the AFDEMP* Coding Bootcamp [<a href="https://www.afdemp.org/bootcamp/">*Alliance for Digital Employability</a>])</li>
   </ul>
 </details>
 
