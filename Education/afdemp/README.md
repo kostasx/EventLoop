@@ -812,6 +812,7 @@ document.body.addEventListener(&quot;mousemove&quot;, function(e) {&#10;
 <li><a href="https://reacttraining.com/react-router/web/guides/quick-start">Quick Start</a></li>
 <li><a href="https://stackoverflow.com/questions/49162311/react-difference-between-route-exact-path-and-route-path">Difference between <code>&lt;Route exact path=“/” /&gt;</code> and <code>&lt;Route path=“/” /&lt;</code>
 </a></li>
+<li><a href="https://www.codingame.com/playgrounds/6517/react-router-tutorial">React Router Tutorial</a></li>
 
 <li>
  <a href="https://epeak.info/2019/03/26/a-bluffers-information-to-react-router-v4-freecodecamp-org/">A Bluffer's Information to React Router V4 – FreeCodeCamp <strong>[&checkmark;]</strong></a>
