@@ -395,6 +395,7 @@ __[&checkmark;]__ : Student Approved Resource
   <li><a href="https://vanillajstoolkit.com/reference/"><strong>Reference Guide:</strong> A quick reference for commonly used JavaScript methods and browser APIs.</a></li>
   <li><a href="https://justjavascript.com/"><strong>Just JavaScript</strong></a> by <a href="https://twitter.com/dan_abramov">Dan Abramov</a>. Beautiful illustrations by <a href="https://twitter.com/Mappletons">Maggie Appleton</a></li>
   <li><a href="https://goo.gl/YwAziN"><strong>Variables: </strong> Visualizing variable hoisting, declaration and value assignment</a></li>
+  <li><a href="https://www.youtube.com/watch?v=5LEuJNLfLN0"><strong>Scope in JavaScript</strong> (HTTP 203)</a></li>
   <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#Table"><strong>Operator Precedence Table</strong> (MDN)</a></li>
 	  <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error"><strong>Errors</strong></a></li>
 	  <li><strong>Loading JavaScript</strong>
