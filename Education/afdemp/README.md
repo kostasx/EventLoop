@@ -283,6 +283,7 @@ __[&checkmark;]__ : Student Approved Resource
   <h4>References</h4>
   <ul>
   <li><a href="https://cssreference.io"><strong>CSSReference.io</strong></a></li>
+  <li><a href="https://www.web4college.com/css-play/index.php"><strong>A list of 300+ CSS properties</strong></a></li>
   <li>
     	<strong>CSS Layouts</strong> 
     	<ul>
