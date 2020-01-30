@@ -766,6 +766,9 @@ document.body.addEventListener(&quot;mousemove&quot;, function(e) {&#10;
 <li>
 	<a href="https://www.taniarascia.com/getting-started-with-react/">Getting Started with React - An Overview and Walkthrough <strong>[&checkmark;]</strong></a>
 </li>
+<li>
+	<a href="https://www.freecodecamp.org/news/the-react-cheatsheet-for-2020/"><strong>The React Cheatsheet for 2020</strong>  (+ real-world examples)</a>
+</li>
 
 <li>
 	<a href="https://reactjs.org/docs/thinking-in-react.html"><strong>Thinking in React</strong></a>
