@@ -84,6 +84,16 @@ __[&checkmark;]__ : Student Approved Resource
 
 ----
 
+### C# (Back End: C-Sharp)
+
+<h4>Misc</h4>
+<ul>
+	<li><a href="https://www.codejourney.net/2018/11/10-most-shocking-javascript-features-for-csharp-developers/"><strong>10 Most Shocking JavaScript Features for C# Developers</strong></a></li>
+	
+</ul>
+
+----
+
 ### Databases
 
   <h4>Resources</h4>
