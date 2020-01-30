@@ -76,6 +76,12 @@ __[&checkmark;]__ : Student Approved Resource
 	
 </ul>
 
+<h4>Misc</h4>
+<ul>
+	<li><a href="https://www.tjvantoll.com/speaking/slides/javascript-for-the-java-developer/okemos/#1"><strong>JavaScript for the Java Developer</strong></a></li>
+	
+</ul>
+
 ----
 
 ### Databases
