@@ -89,6 +89,7 @@ __[&checkmark;]__ : Student Approved Resource
 <h4>Misc</h4>
 <ul>
 	<li><a href="https://www.codejourney.net/2018/11/10-most-shocking-javascript-features-for-csharp-developers/"><strong>10 Most Shocking JavaScript Features for C# Developers</strong></a></li>
+	<li><a href="https://www.pluralsight.com/courses/js4cs"><strong>JavaScript for C# Developers</strong> (*Paid course, available for <strong>free</strong> through the 10-Day free trial)</a></li>
 	
 </ul>
 
