@@ -353,13 +353,18 @@ __[&checkmark;]__ : Student Approved Resource
   </ul>
 </li>
 
+<li><strong>Pseudo Elements:</strong>
+<ul>
+<li><a href="https://www.tjvantoll.com/2013/04/15/list-of-pseudo-elements-to-style-form-controls/">List of Pseudo-Elements to Style Form Controls</a></li>
+</ul>
+</li>
+
 <li><strong>CSS Animations:</strong>
 <ul>
 <li><a href="https://thoughtbot.com/blog/css-animation-for-beginners">CSS Animation for Beginners</a></li>
 <li><a href="https://www.w3schools.com/css/css3_animations.asp">CSS Animations</a></li>
 <li><a href="https://tympanus.net/codrops/css_reference/keyframes/">Keyframes</a></li>
 </ul>
-         
 </li>
 
 </ul>
