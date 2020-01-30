@@ -217,12 +217,12 @@ __[&checkmark;]__ : Student Approved Resource
 <li>
   	<a href="https://medium.freecodecamp.org/a-step-by-step-guide-to-getting-started-with-html-forms-7f77ae4522b5" target="_blank">A step-by-step guide to getting started with HTML forms</a>
 </li>
-
-
 <li>
   	<a href="https://codepen.io/kostasx/pen/MxKEpR?editors=1000" target="_blank">HTML5 Input Elements</a>
 </li>
-
+<li>
+	<a href="https://www.tjvantoll.com/speaking/slides/constraint-validation/san-francisco/#/" target="_blank"><strong>Constraint Validation</strong> Native Client Side Validation for Web Forms</a>
+</li>
 </ul>
 </li>
 
