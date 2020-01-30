@@ -484,6 +484,11 @@ __[&checkmark;]__ : Student Approved Resource
 
 </ul>
 </li>
+<li><strong>Performance:</strong>
+	 <ul>
+		 <li><a href="https://www.tjvantoll.com/speaking/slides/efficiency-top-ten/okemos/#/"><strong>Front End Web Efficiency</strong> - The Top Ten</a></li>
+	</ul>
+</li>
 	  
   </ul>
   <h4>Async Programming</h4>
