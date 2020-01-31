@@ -86,11 +86,19 @@ __[&checkmark;]__ : Student Approved Resource
 
 ### C# (Back End: C-Sharp)
 
+<h4>Resources</h4>
+<ul>
+	<li><a href="https://www.youtube.com/watch?v=gfkTfcpWqAY"><strong>C# Tutorial For Beginners</strong>  - Learn C# Basics in 1 Hour by Mosh Hamedani</a></li>
+	<li><a href="https://www.youtube.com/playlist?list=PLTjRvDozrdlz3_FPXwb6lX_HoGXa09Yef"><strong>C#.NET Tutorials</strong> (Programming with Mosh)</a></li>
+</ul>
+
 <h4>Misc</h4>
 <ul>
 	<li><a href="https://www.codejourney.net/2018/11/10-most-shocking-javascript-features-for-csharp-developers/"><strong>10 Most Shocking JavaScript Features for C# Developers</strong></a></li>
 	<li><a href="https://www.pluralsight.com/courses/js4cs"><strong>JavaScript for C# Developers</strong> (*Paid course, available for <strong>free</strong> through the 10-Day free trial)</a></li>
-	
+	<li><a href="https://www.macworld.co.uk/how-to/mac-software/code-c-sharp-mac-3640347/">How to code in C# on Mac</a></li>
+	<li><a href="https://www.youtube.com/watch?v=r5dtl9Uq9V0">Intro to VSCode for C# Developers - From Installation to Debugging</a></li>
+	<li><a href="https://dev.to/shoupn/using-vscode-with-dotnet-core-mjp">Using VSCode with Dotnet Core</a></li>
 </ul>
 
 ----
