@@ -30,7 +30,18 @@ __[&checkmark;]__ : Student Approved Resource
 		<a href="https://github.com/foundersandcoders/git-workflow-workshop-for-two"><strong>Git Workflow Workshop for Two Programmers</strong>
 		</a>
 	</li>
+	<li><a href="https://www.youtube.com/watch?v=1ffBJ4sVUb4">Git For Ages 4 And Up</a></li>
+	<li><a href="http://archaeogeek.github.io/foss4gukdontbeafraid/git/stages.html">The three stages of Git</a></li>
+	<li><a href="https://www.codementor.io/@victor_hazbun/professional-git-workflow-reek8ckv8">Professional Git Workflow</a></li>
+	<li><a href="https://backlog.com/git-tutorial/git-workflow/">Git workflow</a></li>
+	<li><a href="https://nvie.com/posts/a-successful-git-branching-model/"><strong>A successful Git branching model</strong> (Vincent Driessen model)</a></li>
+	<li><a href="https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow"><strong>Gitflow Workflow</strong> (Vincent Driessen model)</a></li>
+		
   </ul>
+
+![Git Stages](https://backlog.com/app/themes/backlog-child/assets/img/guides/git/basics/git_workflow_002.png)
+
+> The three file states for Git: modified, staged, and commited.
 
 ----
 
