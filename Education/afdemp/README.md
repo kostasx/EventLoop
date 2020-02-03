@@ -513,6 +513,7 @@ __[&checkmark;]__ : Student Approved Resource
   <h4>Async Programming</h4>
   <ul>
 	<li><a href="https://www.youtube.com/watch?v=NsQ2QIrQShU">Modern Concurrency In JavaScript: From Callbacks, to Promises to Async/Await (30 min)</a></li>
+	<li><a href="https://eloquentjavascript.net/11_async.html">Asynchronous Programming</a></li>
   </ul>
   <h4>Resources</h4>
   <ul>
