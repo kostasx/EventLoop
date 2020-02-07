@@ -416,6 +416,8 @@ __[&checkmark;]__ : Student Approved Resource
       </li>
   <li><a href="https://jgthms.com/web-design-in-4-minutes/" target="_blank">Learn the basics of web design in 4 minutes</a></li>
   <li><strong>Centering Elements in CSS: </strong><a href="https://css-tricks.com/centering-css-complete-guide/">Link 1</a> | <a href="https://love2dev.com/blog/absolute-centering-css/">Link 2</a></li>
+	<li><a href="https://csslayout.io/"><strong>CSSLayout.io</strong> A collection of popular layouts and patterns made with CSS
+</a></li>
   </ul>
 
   <h4>Questions &amp; Answers</h4>
