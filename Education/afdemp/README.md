@@ -481,6 +481,9 @@ __[&checkmark;]__ : Student Approved Resource
         <a href="https://www.udacity.com/course/javascript-and-the-dom--ud117">JavaScript and the DOM</a>
     </li>
     <li>
+        <a href="https://webplatformcourse.com/preview/1-dom-part-1/">DOM at the Web Platform Course</a>
+    </li>
+    <li>
         <a href="https://www.digitalocean.com/community/tutorials/introduction-to-the-dom">Introduction to the DOM (Digial Ocean)</a>
     </li>
     <li>
