@@ -962,6 +962,51 @@ document.body.addEventListener(&quot;mousemove&quot;, function(e) {&#10;
 
 </ul>
 
+<h4>Resources</h4>
+<h5>State vs Props</h5>
+<em>Adapted from <a href="https://stackoverflow.com/questions/27991366/what-is-the-difference-between-state-and-props-in-react#answer-40330195">this StackOverflow answer</a></em>
+<table>
+    <thead>
+        <tr>
+            <th></th>
+            <th style="text-align:center">Props</th>
+            <th style="text-align:right">State</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Can get initial value from parent Component?</td>
+            <td style="text-align:center">Yes</td>
+            <td style="text-align:right">Yes</td>
+        </tr>
+        <tr>
+            <td>Can be changed by parent Component?</td>
+            <td style="text-align:center">Yes</td>
+            <td style="text-align:right">No</td>
+        </tr>
+        <tr>
+            <td>Can set default values inside Component?</td>
+            <td style="text-align:center">Yes</td>
+            <td style="text-align:right">Yes</td>
+        </tr>
+        <tr>
+            <td>Can change inside Component?</td>
+            <td style="text-align:center">No</td>
+            <td style="text-align:right">Yes</td>
+        </tr>
+        <tr>
+            <td>Can set initial value for child Components?</td>
+            <td style="text-align:center">Yes</td>
+            <td style="text-align:right">Yes</td>
+        </tr>
+        <tr>
+            <td>Can change in child Components?</td>
+            <td style="text-align:center">Yes</td>
+            <td style="text-align:right">No</td>
+        </tr>
+    </tbody>
+</table>
+
 </details>
 
 <details>
