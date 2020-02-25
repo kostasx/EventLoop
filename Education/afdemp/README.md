@@ -1058,8 +1058,8 @@ document.body.addEventListener(&quot;mousemove&quot;, function(e) {&#10;
 
 ----
 
-### Say Thank
+### Say Thank You
 
-Don't forget to `star`, `like`, `follow` or `subscribe` to the people that helped you through your journey in learning Software Development.
+Don't forget to `star`, `like`, `follow` or `subscribe` to the people that helped you through your journey in learning Software Development. Feel free to contribute by opening Pull Requests or leaving a comment.
 
 - [Selectors Explained](https://github.com/HugoGiraudel/selectors-explained) *Star GitHub repo*
