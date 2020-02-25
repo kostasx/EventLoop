@@ -338,7 +338,7 @@ __[&checkmark;]__ : Student Approved Resource
 			  	<a href="https://marksheet.io/css-selectors.html" target="_blank">How to target HTML Elements (using CSS Selectors)</a>
 			</li>
 			<li>
-				<a href="https://hugogiraudel.github.io/selectors-explained/"><strong>CSS Selectors explained in plaing english</strong></a>
+				<a href="https://hugogiraudel.github.io/selectors-explained/"><strong>CSS Selectors explained in plain english</strong> (Must check!)</a>
 			</li>
 			<li>
 			  	<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors" target="_blank">CSS Selectors (Mozilla Developer Network)</a>
