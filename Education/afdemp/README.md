@@ -338,6 +338,9 @@ __[&checkmark;]__ : Student Approved Resource
 			  	<a href="https://marksheet.io/css-selectors.html" target="_blank">How to target HTML Elements (using CSS Selectors)</a>
 			</li>
 			<li>
+				<a href="https://hugogiraudel.github.io/selectors-explained/"><strong>CSS Selectors explained in plaing english</strong></a>
+			</li>
+			<li>
 			  	<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors" target="_blank">CSS Selectors (Mozilla Developer Network)</a>
 			</li>
 			<li>
@@ -1052,3 +1055,11 @@ document.body.addEventListener(&quot;mousemove&quot;, function(e) {&#10;
 <ul>
 	<li><a href="https://dev.to/pluralsight/my-5-favorite-software-design-principles-4ech">My 5 Favorite Software Design Principles</a></li>
 </ul>
+
+----
+
+### Say Thank
+
+Don't forget to `star`, `like`, `follow` or `subscribe` to the people that helped you through your journey in learning Software Development.
+
+- [Selectors Explained](https://github.com/HugoGiraudel/selectors-explained) *Star GitHub repo*
