@@ -866,6 +866,13 @@ document.body.addEventListener(&quot;mousemove&quot;, function(e) {&#10;
 	</ul>
 </li>
 <li>
+	<strong>State &amp; Props</strong>
+	<ul>
+		<li><a href="https://stackoverflow.com/questions/27991366/what-is-the-difference-between-state-and-props-in-react#answer-50229738">Understand State vs Props by relating it to Plain JS functions.</a></li>
+	</ul>
+</li>
+
+<li>
 <strong>React Routing</strong>
 <ul>
 <li><a href="https://reacttraining.com/react-router/web/guides/quick-start">Quick Start</a></li>
