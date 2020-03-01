@@ -859,6 +859,11 @@ document.body.addEventListener(&quot;mousemove&quot;, function(e) {&#10;
 <li>
 	<a href="https://medium.freecodecamp.org/what-i-wish-i-knew-when-i-started-to-work-with-react-js-3ba36107fd13">What I wish I knew when I started to work with React.js</a>
 </li>
+
+<li>
+	<a href="https://www.youtube.com/watch?v=YaZg8wg39QQ"><strong>React Component Patterns</strong> by Michael Chan</a>
+</li>
+
 <li>
 	<strong>Create React App</strong>
 	<ul>
