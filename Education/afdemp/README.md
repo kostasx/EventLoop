@@ -30,6 +30,7 @@ __[&checkmark;]__ : Student Approved Resource
 		<a href="https://github.com/foundersandcoders/git-workflow-workshop-for-two"><strong>Git Workflow Workshop for Two Programmers</strong>
 		</a>
 	</li>
+	<li><a href="https://www.youtube.com/watch?v=hwP7WQkmECE"><strong>Git Explained in 100 seconds</strong></a></li>
 	<li><a href="https://www.youtube.com/watch?v=1ffBJ4sVUb4">Git For Ages 4 And Up</a></li>
 	<li><a href="http://archaeogeek.github.io/foss4gukdontbeafraid/git/stages.html">The three stages of Git</a></li>
 	<li><a href="https://www.codementor.io/@victor_hazbun/professional-git-workflow-reek8ckv8">Professional Git Workflow</a></li>
