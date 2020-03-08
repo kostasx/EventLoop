@@ -1,7 +1,7 @@
 # Machine Learning (Work in Progress)
 
 <details>
-    <summary><h2 style="display:inline-block">&nbsp;COURSES</h2></summary>
+    <summary><strong>&nbsp;COURSES</strong></summary>
     <ul>
         <li></li>
     </ul>
