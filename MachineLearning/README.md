@@ -1,20 +1,20 @@
-# Machine Learning
+# Machine Learning (Work in Progress)
 
-<details open>
+<details>
     <summary><h2 style="display:inline-block">&nbsp;COURSES</h2></summary>
     <ul>
         <li></li>
     </ul>
 </details>
 
-<details open>
+<details>
     <summary><h2 style="display:inline-block">&nbsp;FRAMEWORKS &amp; LIBRARIES</h2></summary>
     <ul>
         <li></li>
     </ul>
 </details>
 
-<details open>
+<details>
     <summary><h2 style="display:inline-block">&nbsp;TENSORFLOW</h2></summary>
     <ul>
         <li></li>
@@ -106,14 +106,14 @@
     </ul>
 </details>
 
-<details open>
+<details>
     <summary><h2 style="display:inline-block">&nbsp;NEWSLETTERS</h2></summary>
     <ul>
         <li></li>
     </ul>
 </details>
 
-<details open>
+<details>
     <summary><h2 style="display:inline-block">&nbsp;PEOPLE</h2></summary>
     <p>
         <table>
@@ -137,7 +137,7 @@
     </p>
 </details>
 
-<details open>
+<details>
     <summary><h2 style="display:inline-block">&nbsp;CONTRIBUTORS</h2></summary>
     <ul>
         <li></li>
