@@ -17,7 +17,7 @@
 </details>
 
 <details>
-    <summary><strong>&nbsp;TENSORFLOW</strong></summary>
+    <summary><strong>&nbsp;FRAMEWORKS &amp; LIBRARIES: TENSORFLOW</strong></summary>
     <br>
     <ul>
         <li></li>
