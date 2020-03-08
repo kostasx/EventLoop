@@ -8,21 +8,21 @@
 </details>
 
 <details>
-    <summary><h2 style="display:inline-block">&nbsp;FRAMEWORKS &amp; LIBRARIES</h2></summary>
+    <summary><strong>&nbsp;FRAMEWORKS &amp; LIBRARIES</strong></summary>
     <ul>
         <li></li>
     </ul>
 </details>
 
 <details>
-    <summary><h2 style="display:inline-block">&nbsp;TENSORFLOW</h2></summary>
+    <summary><strong>&nbsp;TENSORFLOW</strong></summary>
     <ul>
         <li></li>
     </ul>
 </details>
 
 <details open>
-    <summary><h2 style="display:inline-block">&nbsp;ONLINE RESOURCES</h2></summary>
+    <summary><strong>&nbsp;ONLINE RESOURCESstrongh2></summary>
     <ul>
         <li>
             <form action="https://www.youtube.com/user/Udacity/search">
@@ -41,7 +41,7 @@
 </details>
 
 <details open>
-    <summary><h2 style="display:inline-block">&nbsp;BOOKS</h2></summary>
+    <summary><strong>&nbsp;BOOKS</strong></summary>
     <ul>
         <li><strong><a href="http://www.deeplearningbook.org/">Deep Learning Book</a></strong>, by Ian Goodfellow, Yoshua Bengio, Aaron Courville</li>
         <li><strong><a href="http://neuralnetworksanddeeplearning.com/">Neural Networks and Deep Learning</a> (ONLINE)</strong>, by Michael Nielseon</li>
@@ -49,7 +49,7 @@
 </details>
 
 <details open>
-    <summary><h2 style="display:inline-block">&nbsp;VIDEOS</h2></summary>
+    <summary><strong>&nbsp;VIDEOS</strong></summary>
     <ul>
         <li>
             <a href="https://www.youtube.com/playlist?list=PLAwxTw4SYaPnIRwl6rad_mYwEk4Gmj7Mx"><strong>Udacity: Machine Learning for Trading</strong> - YouTube Video Playlist from the now defunct online course</a>
@@ -58,7 +58,7 @@
 </details>
 
 <details open>
-    <summary><h2 style="display:inline-block">&nbsp;TERMINOLOGY</h2></summary>
+    <summary><strong>&nbsp;TERMINOLOGY</strong></summary>
     <ul>
         <li>
             <strong>U</strong>
@@ -107,14 +107,14 @@
 </details>
 
 <details>
-    <summary><h2 style="display:inline-block">&nbsp;NEWSLETTERS</h2></summary>
+    <summary><strong>&nbsp;NEWSLETTERS</strong></summary>
     <ul>
         <li></li>
     </ul>
 </details>
 
 <details>
-    <summary><h2 style="display:inline-block">&nbsp;PEOPLE</h2></summary>
+    <summary><strong>&nbsp;PEOPLE</strong></summary>
     <p>
         <table>
         <thead>
@@ -138,7 +138,7 @@
 </details>
 
 <details>
-    <summary><h2 style="display:inline-block">&nbsp;CONTRIBUTORS</h2></summary>
+    <summary><strong>&nbsp;CONTRIBUTORS</strong></summary>
     <ul>
         <li></li>
     </ul>
