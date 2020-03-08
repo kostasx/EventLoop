@@ -2,6 +2,7 @@
 
 <details>
     <summary><strong>&nbsp;COURSES</strong></summary>
+    <br>
     <ul>
         <li></li>
     </ul>
@@ -9,6 +10,7 @@
 
 <details>
     <summary><strong>&nbsp;FRAMEWORKS &amp; LIBRARIES</strong></summary>
+    <br>
     <ul>
         <li></li>
     </ul>
@@ -16,13 +18,15 @@
 
 <details>
     <summary><strong>&nbsp;TENSORFLOW</strong></summary>
+    <br>
     <ul>
         <li></li>
     </ul>
 </details>
 
 <details open>
-    <summary><strong>&nbsp;ONLINE RESOURCESstrongh2></summary>
+    <summary><strong>&nbsp;ONLINE RESOURCES</strongh></summary>
+    <br>
     <ul>
         <li>
             <form action="https://www.youtube.com/user/Udacity/search">
@@ -42,6 +46,7 @@
 
 <details open>
     <summary><strong>&nbsp;BOOKS</strong></summary>
+    <br>
     <ul>
         <li><strong><a href="http://www.deeplearningbook.org/">Deep Learning Book</a></strong>, by Ian Goodfellow, Yoshua Bengio, Aaron Courville</li>
         <li><strong><a href="http://neuralnetworksanddeeplearning.com/">Neural Networks and Deep Learning</a> (ONLINE)</strong>, by Michael Nielseon</li>
@@ -50,6 +55,7 @@
 
 <details open>
     <summary><strong>&nbsp;VIDEOS</strong></summary>
+    <br>
     <ul>
         <li>
             <a href="https://www.youtube.com/playlist?list=PLAwxTw4SYaPnIRwl6rad_mYwEk4Gmj7Mx"><strong>Udacity: Machine Learning for Trading</strong> - YouTube Video Playlist from the now defunct online course</a>
@@ -59,6 +65,7 @@
 
 <details open>
     <summary><strong>&nbsp;TERMINOLOGY</strong></summary>
+    <br>
     <ul>
         <li>
             <strong>U</strong>
@@ -108,6 +115,7 @@
 
 <details>
     <summary><strong>&nbsp;NEWSLETTERS</strong></summary>
+    <br>
     <ul>
         <li></li>
     </ul>
@@ -115,6 +123,7 @@
 
 <details>
     <summary><strong>&nbsp;PEOPLE</strong></summary>
+    <br>
     <p>
         <table>
         <thead>
@@ -139,6 +148,7 @@
 
 <details>
     <summary><strong>&nbsp;CONTRIBUTORS</strong></summary>
+    <br>
     <ul>
         <li></li>
     </ul>
