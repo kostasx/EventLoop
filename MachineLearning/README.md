@@ -25,7 +25,7 @@
 </details>
 
 <details open>
-    <summary><strong>&nbsp;ONLINE RESOURCES</strongh></summary>
+    <summary><strong>&nbsp;ONLINE RESOURCES</strong></summary>
     <br>
     <ul>
         <li>
