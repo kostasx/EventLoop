@@ -17,6 +17,17 @@
 </details>
 
 <details>
+    <summary><strong>&nbsp;DATASETS</strong></summary>
+    <br>
+    <ul>
+        <li>
+            <a href="https://rajpurkar.github.io/SQuAD-explorer/">SQuAD2.0 - The Stanford Question Answering Dataset</a>
+            <small>A reading comprehension dataset, consisting of questions posed by crowdworkers on a set of Wikipedia articles, where the answer to every question is a segment of text, or span, from the corresponding reading passage, or the question might be unanswerable.</small>
+        </li>
+    </ul>
+</details>
+
+<details>
     <summary><strong>&nbsp;FRAMEWORKS &amp; LIBRARIES: TENSORFLOW</strong></summary>
     <br>
     <ul>
