@@ -24,6 +24,21 @@
             <a href="https://rajpurkar.github.io/SQuAD-explorer/"><strong>SQuAD2.0 - The Stanford Question Answering Dataset</strong></a>
             <small> | A reading comprehension dataset, consisting of questions posed by crowdworkers on a set of Wikipedia articles, where the answer to every question is a segment of text, or span, from the corresponding reading passage, or the question might be unanswerable.</small>
         </li>
+        <li>
+            <a href="http://lib.stat.cmu.edu/datasets/boston"><strong>Boston Neighborhood Housing Prices Dataset
+</strong></a>
+            <small> | Median home values of Boston with associated home and neighborhood attributes.</small>
+        </li>
+        <li>
+            <a href="https://en.wikipedia.org/wiki/List_of_datasets_for_machine-learning_research"><strong>List of datasets for machine-learning research <em>(Wikipedia)</em></strong></a>
+            <small> | Datasets that are used for machine-learning research and have been cited in peer-reviewed academic journals.</small>
+        </li>
+        <li>
+            <a href="https://datasetsearch.research.google.com/"><strong>Google Dataset Search Engine</strong></a>
+        </li>
+        <li>
+            <a href="http://deeplearning.net/datasets/"><strong>List of Datasets from <em>deeplearning.net</em></strong></a>
+        </li>
     </ul>
 </details>
 
