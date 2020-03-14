@@ -526,18 +526,14 @@ __[&checkmark;]__ : Student Approved Resource
   </ul>
   <h4>Resources</h4>
   <ul>
-  <li><a href="https://scrimba.com/g/gintrotojavascript">Introduction to JavaScript (Interactive Screencasts @ scrimba.com)</a></li>
-	  <li>
-      	<a href="https://www.youtube.com/watch?v=W6NZfCO5SIk" target="_blank">JavaScript Tutorial: Learn JavaScript in 1 Hour [2019]</a>
+    <li><a href="https://scrimba.com/g/gintrotojavascript">Introduction to JavaScript (Interactive Screencasts @ scrimba.com)</a></li>
+    <li><a href="https://www.youtube.com/watch?v=W6NZfCO5SIk" target="_blank">JavaScript Tutorial: Learn JavaScript in 1 Hour [2019]</a>
       </li>
-
-<li>
-<a href="https://learnxinyminutes.com/docs/javascript/">Learn X in Y Minutes: JavaScript</a>
-</li>
-<li><a href="https://jgthms.com/javascript-in-14-minutes/">JavaScript in 14 minutes</a></li>
-<li><a href="https://overreacted.io/what-is-javascript-made-of/">What Is JavaScript Made Of?</a></li>
-<li><a href="https://github.com/ryanmcdermott/clean-code-javascript"><strong>Clean Code concepts adapted for JavaScript</strong></a></li>
-
+    <li><a href="https://learnxinyminutes.com/docs/javascript/">Learn X in Y Minutes: JavaScript</a></li>
+    <li><a href="https://jgthms.com/javascript-in-14-minutes/">JavaScript in 14 minutes</a></li>
+    <li><a href="https://overreacted.io/what-is-javascript-made-of/">What Is JavaScript Made Of?</a></li>
+    <li><a href="https://github.com/ryanmcdermott/clean-code-javascript"><strong>Clean Code concepts adapted for JavaScript</strong></a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model"><strong>Class-based (e.g. Java, C#) vs. prototype-based languages (JavaScript)</strong></a></li>
   </ul>
 
   <h4>Questions &amp; Answers</h4>
