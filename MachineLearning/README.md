@@ -43,6 +43,19 @@
 </details>
 
 <details>
+    <summary><strong>&nbsp;DATA MANIPULATION</strong></summary>
+    <br>
+    <ul>
+        <li>
+            <a href="https://www.machinelearningplus.com/python/101-numpy-exercises-python/">101 NumPy Exercises for Data Analysis <strong>(Python)</strong></a>
+        </li>
+        <li>
+            <a href="https://www.machinelearningplus.com/python/101-pandas-exercises-python/">101 Pandas Exercises for Data Analysis <strong>(Python)</strong></a>
+        </li>
+    </ul>
+</details>
+
+<details>
     <summary><strong>&nbsp;FRAMEWORKS &amp; LIBRARIES: TENSORFLOW</strong></summary>
     <br>
     <ul>
