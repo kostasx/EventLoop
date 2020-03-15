@@ -243,6 +243,10 @@ __[&checkmark;]__ : Student Approved Resource
 <li>
 	<a href="https://www.tjvantoll.com/speaking/slides/constraint-validation/san-francisco/#/" target="_blank"><strong>Constraint Validation</strong> Native Client Side Validation for Web Forms</a>
 </li>
+<li>
+	<a href="https://dev.to/sidthesloth92/understanding-html-form-encoding-url-encoded-and-multipart-forms-3lpa" target="_blank"><strong>Understanding HTML Form Encoding:</strong>  URL Encoded and Multipart Forms</a>
+</li>
+	
 </ul>
 </li>
 
