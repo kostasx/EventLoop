@@ -63,7 +63,7 @@
     </ul>
 </details>
 
-<details open>
+<details>
     <summary><strong>&nbsp;ONLINE RESOURCES</strong></summary>
     <br>
     <ul>
@@ -71,10 +71,18 @@
             <form action="https://www.youtube.com/user/Udacity/search">
                 <label for="query">Search Udacity's YouTube Channel: </label>
                 <input id="query" name="query" placeholder="e.g. Word2Vec, SVM...">
-                <button>Search</button>
             </form>
             <ul>
                 <li>For example, here's a search on <a href="https://www.youtube.com/user/Udacity/search?query=one+hot+encoding">'One Hot Encoding'</a>.</li>
+            </ul>
+        </li>
+        <li>
+            <form action="https://www.youtube.com/user/stanfordonline/search">
+                <label for="query">Search Stanford's Online YouTube Channel: </label>
+                <input id="query" name="query" placeholder="e.g. Word2Vec, SVM...">
+            </form>
+            <ul>
+                <li>For example, here's a search on <a href="https://www.youtube.com/user/stanfordonline/search?query=machine+learning">'Machine Learning'</a>.</li>
             </ul>
         </li>
         <li>
