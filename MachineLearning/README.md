@@ -12,6 +12,8 @@
     </ul>
 </details>
 
+<!-- F R A M E W O R K S -->
+
 <details>
     <summary><strong>&nbsp;FRAMEWORKS &amp; LIBRARIES</strong></summary>
     <br>
@@ -20,6 +22,18 @@
         <li><a href="https://pytorch.org/"><strong>PyTorch</strong></a> | Tensors and neural networks in Python with strong hardware acceleration.</li>
     </ul>
 </details>
+
+<!-- T E N S O R F L O W -->
+
+<details>
+    <summary><strong>&nbsp;FRAMEWORKS &amp; LIBRARIES: TENSORFLOW</strong></summary>
+    <br>
+    <ul>
+        <li></li>
+    </ul>
+</details>
+
+<!-- D A T A S E T S -->
 
 <details>
     <summary><strong>&nbsp;DATASETS</strong></summary>
@@ -64,13 +78,7 @@
     </ul>
 </details>
 
-<details>
-    <summary><strong>&nbsp;FRAMEWORKS &amp; LIBRARIES: TENSORFLOW</strong></summary>
-    <br>
-    <ul>
-        <li></li>
-    </ul>
-</details>
+<!-- O N L I N E  R E S O U R C E S -->
 
 <details>
     <summary><strong>&nbsp;ONLINE RESOURCES</strong></summary>
