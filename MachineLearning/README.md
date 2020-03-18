@@ -95,7 +95,7 @@
     </ul>
 </details>
 
-<details open>
+<details>
     <summary><strong>&nbsp;BOOKS</strong></summary>
     <br>
     <ul>
