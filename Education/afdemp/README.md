@@ -120,6 +120,9 @@ __[&checkmark;]__ : Student Approved Resource
   <h4>Resources</h4>
   <ul>
 	<li>
+		<a href="https://www.youtube.com/watch?v=27axs9dO7AE"><strong>What is SQL?</strong> [in 4 minutes for beginners] <strong>[&checkmark;]</strong></a>
+	</li>
+	<li>
 		<a href="https://www.youtube.com/embed/v_hR4K4auoQ?start=45&end=161"><strong>Relational Databases in a Nutshell</strong>
 		</a>
 	</li>
