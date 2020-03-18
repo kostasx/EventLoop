@@ -34,6 +34,10 @@
             <small> | Datasets that are used for machine-learning research and have been cited in peer-reviewed academic journals.</small>
         </li>
         <li>
+            <a href="https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic)"><strong>Breast Cancer Wisconsin (Diagnostic) Data Set</strong></a><br>
+            <small>See a classification example using TensorFlow and the dataset <a href="https://www.youtube.com/watch?v=_VTtrSDHPwU">here.</a></small>
+        </li>
+        <li>
             <a href="https://datasetsearch.research.google.com/"><strong>Google Dataset Search Engine</strong></a>
         </li>
         <li>
@@ -100,7 +104,7 @@
     </ul>
 </details>
 
-<details open>
+<details>
     <summary><strong>&nbsp;VIDEOS</strong></summary>
     <br>
     <ul>
@@ -110,7 +114,7 @@
     </ul>
 </details>
 
-<details open>
+<details>
     <summary><strong>&nbsp;TERMINOLOGY</strong></summary>
     <br>
     <ul>
