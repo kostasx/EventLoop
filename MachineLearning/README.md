@@ -4,7 +4,11 @@
     <summary><strong>&nbsp;COURSES</strong></summary>
     <br>
     <ul>
-        <li></li>
+        <li>
+            <a href="https://course.fast.ai/">Practical Deep Learning for Coders</a>
+            <br/>
+            <small>Learn how to train <a href="https://pytorch.org/">PyTorch<a> models using the <a href="https://docs.fast.ai/">fastai</a> library</small>
+        </li>
     </ul>
 </details>
 
@@ -12,7 +16,8 @@
     <summary><strong>&nbsp;FRAMEWORKS &amp; LIBRARIES</strong></summary>
     <br>
     <ul>
-        <li><a href=""><strong>Tensorflow</strong></a> | An end-to-end open source platform for machine learning by Google.</li>
+        <li><a href="https://www.tensorflow.org/"><strong>Tensorflow</strong></a> | An end-to-end open source platform for machine learning by Google.</li>
+        <li><a href="https://pytorch.org/"><strong>PyTorch</strong></a> | Tensors and neural networks in Python with strong hardware acceleration.</li>
     </ul>
 </details>
 
