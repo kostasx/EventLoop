@@ -65,6 +65,8 @@
     </ul>
 </details>
 
+<!-- D A T A  M A N I P U L A T I O N -->
+
 <details>
     <summary><strong>&nbsp;DATA MANIPULATION</strong></summary>
     <br>
@@ -108,6 +110,8 @@
     </ul>
 </details>
 
+<!-- B O O K S -->
+
 <details>
     <summary><strong>&nbsp;BOOKS</strong></summary>
     <br>
@@ -117,6 +121,8 @@
     </ul>
 </details>
 
+<!-- V I D E O S -->
+
 <details>
     <summary><strong>&nbsp;VIDEOS</strong></summary>
     <br>
@@ -124,8 +130,13 @@
         <li>
             <a href="https://www.youtube.com/playlist?list=PLAwxTw4SYaPnIRwl6rad_mYwEk4Gmj7Mx"><strong>Udacity: Machine Learning for Trading</strong> - YouTube Video Playlist from the now defunct online course</a>
         </li>
+        <li>
+            <a href="http://videolectures.net/deeplearning2017_precup_machine_learning/"><strong>Introduction to Machine Learning [Level: Advanced]</strong> Doina Precup, McGill University (2017)</a>
+        </li>
     </ul>
 </details>
+
+<!-- T E R M I N O L O G Y -->
 
 <details>
     <summary><strong>&nbsp;TERMINOLOGY</strong></summary>
