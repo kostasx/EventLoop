@@ -1,5 +1,28 @@
 # Machine Learning (Work in Progress)
 
+<!-- P R E R E Q U I S I T E S -->
+
+<details>
+    <summary><strong>&nbsp;PREREQUISITES</strong></summary>
+    <br>
+    <ul>
+        <li>
+        <strong>The Math Behind Machine Learning</strong>
+        <ul>
+        <li>
+          <strong>Linear Algebra</strong>
+          <ul>
+          <li><a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab"><strong>Essence of Linear Algebra</strong></a>, by <a href="https://www.3blue1brown.com/">3Blue1Brown</a></li>
+          </ul>
+        </li>
+        </ul>
+        </li>
+    </ul>
+</details>
+
+
+<!-- C O U R S E S -->
+
 <details>
     <summary><strong>&nbsp;COURSES</strong></summary>
     <br>
@@ -196,6 +219,8 @@
     </ul>
 </details>
 
+<!-- P E O P L E -->
+
 <details>
     <summary><strong>&nbsp;PEOPLE</strong></summary>
     <br>
@@ -220,6 +245,8 @@
         </table>
     </p>
 </details>
+
+<!-- C O N T R I B U T O R S -->
 
 <details>
     <summary><strong>&nbsp;CONTRIBUTORS</strong></summary>
