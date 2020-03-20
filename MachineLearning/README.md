@@ -219,6 +219,16 @@
     </ul>
 </details>
 
+<!-- C E R T I F I C A T E S -->
+
+<details>
+    <summary><strong>&nbsp;CERTIFICATES</strong></summary>
+    <br>
+    <ul>
+        <li><a href="https://www.tensorflow.org/certificate"><strong>TensorFlow Developer Certificate</strong></a></li>
+    </ul>
+</details>
+
 <!-- P E O P L E -->
 
 <details>
