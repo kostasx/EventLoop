@@ -47,6 +47,23 @@
     </ul>
 </details>
 
+<!-- A L G O R I T H M S -->
+
+<details>
+    <summary><strong>&nbsp;ALGORITHMS</strong></summary>
+    <br>
+    <ul>
+        <li>
+            <a href=""><strong>Neural Networks</strong></a>
+            <!--
+            <ul>
+                <li><a href=""></a></li>
+            </ul>
+            -->
+        </li>
+    </ul>
+</details>
+
 <!-- F R A M E W O R K S -->
 
 <details>
