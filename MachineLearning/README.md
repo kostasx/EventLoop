@@ -24,6 +24,9 @@
           <li><a href="https://www.youtube.com/playlist?list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7"><strong>Multivariable Calculus</strong> (Khan Academy)</a></li>
           </ul>
         </li>
+        <li>
+          <strong>Graph Theory</strong>
+        </li>
        </ul>
       </li>
    </ul>
