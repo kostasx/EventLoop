@@ -55,11 +55,9 @@
     <ul>
         <li>
             <a href=""><strong>Neural Networks</strong></a>
-            <!--
             <ul>
-                <li><a href=""></a></li>
+                <li><a href="https://www.youtube.com/watch?v=ZzWaow1Rvho&list=PLxt59R_fWVzT9bDxA76AHm3ig0Gg9S3So"><strong>Beginner Introduction to Neural Networks</strong> (YouTube Playlist)</a> [Level: Beginner]</li>
             </ul>
-            -->
         </li>
     </ul>
 </details>
