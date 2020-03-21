@@ -265,7 +265,7 @@
         <table>
         <thead>
             <tr>
-                <th>DEVELOPER</th>
+                <th>NAME/HANDLE</th>
                 <th>WEBSITE</th>
                 <th>VIDEO CHANNEL</th>
                 <th>TWITTER</th>
@@ -273,10 +273,10 @@
         </thead>
         <tbody>
             <tr>
-                <td>Fullname</td>
-                <td><a href="#">---</a></td>
-                <td><a href="#">---</a></td>
-                <td><a href="#">---</a></td>
+                <td>Michael Nielsen</td>
+                <td><a href="http://michaelnielsen.org/">http://michaelnielsen.org/</a></td>
+                <td><a href="https://www.youtube.com/channel/UCoSlN8Gh4W8sfgB-Sf_cG4Q">YouTube Channel</a></td>
+                <td><a href="https://twitter.com/michael_nielsen">@michael_nielsen</a></td>
             </tr>
         </tbody>
         </table>
