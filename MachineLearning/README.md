@@ -15,9 +15,15 @@
           <li><a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab"><strong>Essence of Linear Algebra</strong></a>, by <a href="https://www.3blue1brown.com/">3Blue1Brown</a></li>
           </ul>
         </li>
-        </ul>
+        <li>
+          <strong>Calculus</strong>
+          <ul>
+          <li><a href="https://www.youtube.com/playlist?list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7"><strong>Multivariable Calculus</strong> (Khan Academy)</a></li>
+          </ul>
         </li>
-    </ul>
+       </ul>
+      </li>
+   </ul>
 </details>
 
 
