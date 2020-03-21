@@ -10,6 +10,9 @@
         <strong>The Math Behind Machine Learning</strong>
         <ul>
         <li>
+          <strong>Probability &amp; Statistics</strong>
+        </li>
+        <li>
           <strong>Linear Algebra</strong>
           <ul>
           <li><a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab"><strong>Essence of Linear Algebra</strong></a>, by <a href="https://www.3blue1brown.com/">3Blue1Brown</a></li>
