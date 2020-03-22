@@ -46,6 +46,21 @@
             <small>Learn how to train <a href="https://pytorch.org/">PyTorch<a> models using the <a href="https://docs.fast.ai/">fastai</a> library</small>
         </li>
     </ul>
+    <hr>
+    <h4>Paid</h4>
+    <ul>
+        <li>
+            <a href="https://www.udacity.com/course/intro-to-machine-learning-with-tensorflow-nanodegree--nd230"><strong>Intro to Machine Learning with TensorFlow</strong> (Udacity, 3-months)</a>
+            <br/>
+            <small>Learn foundational machine learning techniques - from data manipulation to unsupervised and supervised algorithms.</small>
+        </li>
+        <li>
+            <a href=""><strong></strong></a>
+            <br/>
+            <small></small>
+        </li>
+    </ul>
+
 </details>
 
 <!-- A L G O R I T H M S -->
