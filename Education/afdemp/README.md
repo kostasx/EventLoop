@@ -115,12 +115,17 @@ __[&checkmark;]__ : Student Approved Resource
 
 ----
 
+<!-- D A T A B A S E S -->
+
 ### Databases
 
   <h4>Resources</h4>
   <ul>
 	<li>
 		<a href="https://www.youtube.com/watch?v=27axs9dO7AE"><strong>What is SQL?</strong> [in 4 minutes for beginners] <strong>[&checkmark;]</strong></a>
+	</li>
+	<li>
+		<a href="https://dev.to/helenanders26/sql-series-from-a-to-z-2pk9"><strong>SQL 101: Concepts from A to Z</strong></a>
 	</li>
 	<li>
 		<a href="https://www.youtube.com/embed/v_hR4K4auoQ?start=45&end=161"><strong>Relational Databases in a Nutshell</strong>
@@ -174,6 +179,7 @@ __[&checkmark;]__ : Student Approved Resource
 
 </details>
 
+<!-- K E Y  C O N C E P T S -->
 
 <details>
   <summary>Key Concepts and Principles</summary>
@@ -203,6 +209,8 @@ __[&checkmark;]__ : Student Approved Resource
 </ul>
 
 </details>
+
+<!-- H T M L -->
 
 <details id="html">
   <summary>HTML (HyperText Markup Language)</summary>
@@ -301,6 +309,10 @@ __[&checkmark;]__ : Student Approved Resource
       <li>
       	<a href="http://tutorials.codebar.io/" target="_blank">Codebar Tutorials</a>
       </li>
+      <li>
+      <a href="https://github.com/hail2u/html-best-practices" target="_blank"><strong>HTML Best Practices</strong></a>
+      </li>
+	
 </ul>
   <h4>Questions &amp; Answers</h4>
   <ul>
