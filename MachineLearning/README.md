@@ -55,9 +55,9 @@
             <small>Learn foundational machine learning techniques - from data manipulation to unsupervised and supervised algorithms.</small>
         </li>
         <li>
-            <a href=""><strong></strong></a>
+            <a href="https://www.udacity.com/course/machine-learning-engineer-nanodegree--nd009t"><strong>Become a Machine Learning Engineer</strong> (Udacity, 3-months)</a>
             <br/>
-            <small></small>
+            <small>Learn advanced machine learning techniques and algorithms -- including how to package and deploy your models to a production environment.</small>
         </li>
     </ul>
 
