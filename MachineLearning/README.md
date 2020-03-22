@@ -22,6 +22,7 @@
           <strong>Calculus</strong>
           <ul>
           <li><a href="https://www.youtube.com/playlist?list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7"><strong>Multivariable Calculus</strong> (Khan Academy)</a></li>
+          <li><a href="#"><strong>Chain Rule</strong></a></li>
           </ul>
         </li>
         <li>
