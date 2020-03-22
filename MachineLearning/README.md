@@ -192,6 +192,34 @@
     <summary><strong>&nbsp;TERMINOLOGY</strong></summary>
     <br>
     <ul>
+        <!--
+        <li>
+            <strong>LETTER</strong>
+            <ul>
+                <li>
+                    <p><strong>TERM: </strong> Explanation</p>
+                    <p>Sources:
+                        <ul>
+                            <li><a href=""></a></li>
+                        </ul>
+                    </p>
+                </li>
+            </ul>
+        </li>
+        -->
+        <li>
+            <strong>B</strong>
+            <ul>
+                <li>
+                    <p><strong>Back Propagation</strong></p>
+                    <p>Sources:
+                        <ul>
+                            <li><a href="https://www.youtube.com/watch?v=Ilg3gGewQ5U"><strong>What is backpropagation really doing?<strong> | Deep learning</a>, By 3Blue1Brown</li>
+                        </ul>
+                    </p>
+                </li>
+            </ul>
+        </li>
         <li>
             <strong>U</strong>
             <ul>
