@@ -199,6 +199,9 @@
         <li>
             <a href="http://videolectures.net/deeplearning2017_precup_machine_learning/"><strong>Introduction to Machine Learning [Level: Advanced]</strong> Doina Precup, McGill University (2017)</a>
         </li>
+        <li>
+            <a href="https://www.youtube.com/watch?v=lphd4v-hnkQ">Rob Fergus - Deep Learning and Artificial Intelligence Symposium | Duration: 25 min</a> [Level: Intermediate]
+        </li>
     </ul>
 </details>
 
@@ -321,6 +324,12 @@
                 <td><a href="http://michaelnielsen.org/">http://michaelnielsen.org/</a></td>
                 <td><a href="https://www.youtube.com/channel/UCoSlN8Gh4W8sfgB-Sf_cG4Q">YouTube Channel</a></td>
                 <td><a href="https://twitter.com/michael_nielsen">@michael_nielsen</a></td>
+            </tr>
+            <tr>
+                <td>Yann LeCun, Facebook AI Research & New York University</td>
+                <td><a href="http://yann.lecun.com/">Homepage</a></td>
+                <td><a href="#">-</a></td>
+                <td><a href="#">-</a></td>
             </tr>
         </tbody>
         </table>
