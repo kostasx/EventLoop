@@ -319,6 +319,14 @@
             </tr>
         </thead>
         <tbody>
+            
+            
+            <tr>
+                <td>Melanie Mitchell</td>
+                <td><a href="https://melaniemitchell.me/">Homepage</a></td>
+                <td><a href="#">-</a></td>
+                <td><a href="https://twitter.com/MelMitchell1">@MelMitchell1</a></td>
+            </tr>
             <tr>
                 <td>Michael Nielsen</td>
                 <td><a href="http://michaelnielsen.org/">http://michaelnielsen.org/</a></td>
