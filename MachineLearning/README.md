@@ -319,8 +319,6 @@
             </tr>
         </thead>
         <tbody>
-            
-            
             <tr>
                 <td>Melanie Mitchell</td>
                 <td><a href="https://melaniemitchell.me/">Homepage</a></td>
