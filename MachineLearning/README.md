@@ -95,7 +95,10 @@
     <summary><strong>&nbsp;FRAMEWORKS &amp; LIBRARIES: TENSORFLOW</strong></summary>
     <br>
     <ul>
-        <li></li>
+        <li><a href="https://www.youtube.com/watch?v=mWl45NkFBOc">TensorFlow: Machine Learning for Everyone</a></li>
+        <li><a href="https://www.youtube.com/watch?v=Y_hzMnRXjhI&list=PLQY2H8rRoyvwLbzbnKJ59NkZvQAW9wLbx">Coding TensorFlow | YouTube Playlist</a> [Level: Beginner]</li>
+        <li><a href="https://www.youtube.com/watch?v=inN8seMm7UI&list=PLQY2H8rRoyvyK5aEDAI3wUUqC_F0oEroL">Get started with Google Colaboratory (Coding TensorFlow)</a> | YouTube Playlist [Level: Beginner]</li>
+        <li><a href="https://www.youtube.com/playlist?list=PLQY2H8rRoyvxso6rsvcDeMzekGuLxbTEB">TensorFlow Tip of the Week</a> | (YouTube Playlist) [Level: Intermediate]</li>
     </ul>
 </details>
 
