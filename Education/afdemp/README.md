@@ -456,6 +456,10 @@ __[&checkmark;]__ : Student Approved Resource
 
 </details>
 
+
+<!-- J A V A S C R I P T -->
+
+
 <details id="javascript">
   <summary>JavaScript</summary>
   <p>Syllabus:</p>
@@ -568,6 +572,10 @@ __[&checkmark;]__ : Student Approved Resource
 
 </details>
 
+
+<!-- J S O N -->
+
+
 <details id="json">
 <summary>JSON</summary>
 <h4>Resources</h4>
@@ -645,6 +653,10 @@ __[&checkmark;]__ : Student Approved Resource
 
 </ul>
 </details>
+
+
+<!-- H T M L 5  A P I S -->
+
 
 <details>
 <summary>HTML5 APIs</summary>
@@ -770,6 +782,10 @@ document.body.addEventListener(&quot;mousemove&quot;, function(e) {&#10;
   
 </details>
 
+
+<!-- B O O T S T R A P  4 -->
+
+
 <details>
 <summary>Bootstrap 4</summary>
 
@@ -786,6 +802,11 @@ document.body.addEventListener(&quot;mousemove&quot;, function(e) {&#10;
 
 </details>
 
+
+<!-- B O O T S T R A P  5 -->
+
+
+<!-- J Q U E R Y -->
 
 <details>
 <summary>jQuery</summary>
@@ -825,6 +846,10 @@ document.body.addEventListener(&quot;mousemove&quot;, function(e) {&#10;
   <br> <strong>Answer:</strong> Google for: <code>jquery select all but first</code><br>You will probably find yourself in <a href="https://stackoverflow.com/questions/2259393/jquery-select-all-except-first" target="_blank">this StackOverflow answer</a>.<br>The code syntax is this:<code>$("div.test:not(:first)").hide();</code></li>  </ul>
 
 </details>
+
+
+<!-- R E A C T -->
+
 
 <details id="reactjs">
 <summary>React.JS</summary>
@@ -942,6 +967,14 @@ document.body.addEventListener(&quot;mousemove&quot;, function(e) {&#10;
   Using <a href="https://mobx.js.org/">MobX</a>
   </li>
 </ul>
+</li>
+
+<li id="react-csharp">
+  <strong>React &amp; C#:</strong>
+  <ul>
+	<li><a href="https://www.youtube.com/watch?v=MpmORt3Y6Pg&feature=youtu.be">Launch an ASP.NET Core Web app with React.JS in 5 minutes
+</a></li>
+  </ul>
 </li>
 
 <li id="react-java">
