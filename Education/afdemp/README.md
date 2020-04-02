@@ -102,7 +102,7 @@ __[&checkmark;]__ : Student Approved Resource
 <ul>
 	<li><a href="https://www.youtube.com/watch?v=gfkTfcpWqAY"><strong>C# Tutorial For Beginners</strong>  - Learn C# Basics in 1 Hour by Mosh Hamedani</a></li>
 	<li><a href="https://www.youtube.com/playlist?list=PLTjRvDozrdlz3_FPXwb6lX_HoGXa09Yef"><strong>C#.NET Tutorials</strong> (Programming with Mosh)</a></li>
-	<li><a href="https://www.youtube.com/watch?v=MpmORt3Y6Pg&feature=youtu.be">Launch a ASP.NET Core Web app with React.JS in 5 minutes
+	<li><a href="https://www.youtube.com/watch?v=MpmORt3Y6Pg&feature=youtu.be">Launch an ASP.NET Core Web app with React.JS in 5 minutes
 </a></li>
 </ul>
 
