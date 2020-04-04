@@ -46,6 +46,11 @@
             <br/>
             <small>Learn how to train <a href="https://pytorch.org/">PyTorch<a> models using the <a href="https://docs.fast.ai/">fastai</a> library</small>
         </li>
+        <li>
+            <a href=""><strong>Machine Intelligence</strong> - University of Waterloo</a>
+            <br/>
+            <small>SYDE 522, Winter 2019, University of Waterloo [Level: Beginner to Intermediate]</small>
+        </li>
     </ul>
     <hr>
     <h4>Paid</h4>
