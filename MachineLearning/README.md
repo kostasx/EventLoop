@@ -79,6 +79,10 @@
             <a href=""><strong>Neural Networks</strong></a>
             <ul>
                 <li><a href="https://www.youtube.com/watch?v=ZzWaow1Rvho&list=PLxt59R_fWVzT9bDxA76AHm3ig0Gg9S3So"><strong>Beginner Introduction to Neural Networks</strong> (YouTube Playlist)</a> [Level: Beginner]</li>
+                <li>
+                    <a href="https://brilliant.org/courses/artificial-neural-networks/"><strong>Artificial Neural Networks</strong> - A quick dive into a cutting-edge computational method for learning.</a> [Level: Beginner]<br/>
+                    <small>This is a paid course, but <strong>the first 3 videos are free for you to watch</strong> and will introduce you to the basic concepts of Neural Networks.</small>
+                </li>
             </ul>
         </li>
     </ul>
