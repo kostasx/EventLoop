@@ -22,6 +22,8 @@
         <li>
           <strong>Calculus</strong>
           <ul>
+          <li><a href="https://www.youtube.com/watch?v=tt2DGYOi3hc"><strong>Introduction to Calculus</strong>  (1 of 2: Seeing the big picture)</a> [LEVEL: BEGINNER]</li>
+          <li><a href="https://www.youtube.com/watch?v=50Bda5VKbqA"><strong>Introduction to Calculus</strong>  (2 of 2: First Principles)</a> [LEVEL: BEGINNER]</li>
           <li><a href="https://www.youtube.com/playlist?list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7"><strong>Multivariable Calculus</strong> (Khan Academy)</a></li>
           <li><a href="#"><strong>Chain Rule</strong></a></li>
           </ul>
