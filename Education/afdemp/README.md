@@ -124,6 +124,9 @@ __[&checkmark;]__ : Student Approved Resource
   <h4>Resources</h4>
   <ul>
 	<li>
+		<a href="https://www.youtube.com/playlist?list=PL5KkMZvBpo5BBLJdnhvFFbjkiK3JLBfeD"><strong>Database Systems</strong>, by Eddie Woo [STRONGLY RECOMMENDED]</a>
+	</li>
+	<li>
 		<a href="https://www.youtube.com/watch?v=27axs9dO7AE"><strong>What is SQL?</strong> [in 4 minutes for beginners] <strong>[&checkmark;]</strong></a>
 	</li>
 	<li>
