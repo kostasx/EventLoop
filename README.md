@@ -72,5 +72,6 @@ Passionate about Technology & Tech Education
   <br>
   <ul>
     <li><a href="https://github.com/kostasx/EventLoop/tree/master/Education/tips">Tips for Developers</a></li>
+    <li><a href="https://andreasbm.github.io/web-skills/"><strong>A visual overview of useful skills to learn as a web developer</strong></a></li>
   </ul>
 </details>
