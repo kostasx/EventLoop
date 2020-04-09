@@ -859,7 +859,10 @@ document.body.addEventListener(&quot;mousemove&quot;, function(e) {&#10;
 
   <h4>Resources</h4>
   <ul>
-<li>
+	<li>
+	<a href="https://www.youtube.com/embed/Ke90Tje7VS0/?start=75&end=286"><strong>Quick React.JS Overview</strong></a>
+	</li>
+	<li>
 	<a href="https://www.taniarascia.com/getting-started-with-react/">Getting Started with React - An Overview and Walkthrough <strong>[&checkmark;]</strong></a>
 </li>
 <li>
