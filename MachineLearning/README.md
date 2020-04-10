@@ -304,7 +304,7 @@
     <summary><strong>&nbsp;NEWSLETTERS</strong></summary>
     <br>
     <ul>
-        <li></li>
+        <li><a href="https://www.datasciencecentral.com/page/newsletter">Data Science Central</a></li>
     </ul>
 </details>
 
