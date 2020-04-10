@@ -839,6 +839,9 @@ document.body.addEventListener(&quot;mousemove&quot;, function(e) {&#10;
     <a href="https://www.youtube.com/watch?v=ARnp9Y8xgR4" target="_blank">11 More Things I Learned from the jQuery Source (Paul Irish, Google)</a>
 </li>
 <li>
+    <a href="https://www.youtube.com/playlist?list=PLqGj3iMvMa4KOekRWjjajinzlRK879Ksn" target="_blank"><strong>Learn jQuery in 15 minutes</strong></a>
+</li>
+<li>
     <a href="http://youmightnotneedjquery.com/" target="_blank">You Might Not Need jQuery</a>
 </li>
   </ul>
