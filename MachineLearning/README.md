@@ -1,5 +1,5 @@
 # Machine Learning (Work in Progress)
-### [Updated: 25.03.2020]
+##### [Updated: 25.03.2020]
 
 <!-- P R E R E Q U I S I T E S -->
 
@@ -420,3 +420,5 @@
 ---
 
 ### Levels: Beginner | Intermediate | Advanced
+
+Photo by [Franck V.](https://unsplash.com/@franckinjapan) on [Unsplash](https://unsplash.com/)
