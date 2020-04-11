@@ -98,6 +98,56 @@
     <ul>
         <li><a href="https://www.tensorflow.org/"><strong>Tensorflow</strong></a> | An end-to-end open source platform for machine learning by Google.</li>
         <li><a href="https://pytorch.org/"><strong>PyTorch</strong></a> | Tensors and neural networks in Python with strong hardware acceleration.</li>
+        <li>
+            <h4>JavaScript</h4>
+            <ul>
+                <li>
+                    <a href="https://www.tensorflow.org/js">
+                        <strong>TensorFlow.js</strong></a>
+                        | A library for machine learning in JavaScript<strong>[ Node.js ][ Browser ]</strong>
+                </li>
+                <li>
+                    <a href="https://github.com/BrainJS/brain.js">
+                        <strong>brain.js</strong></a>
+                        | A GPU accelerated library for Neural Networks written in JavaScript <strong>[ Node.js ][ Browser ]</strong>
+                </li>
+                <li>
+                    <a href="http://caza.la/synaptic">
+                        <strong>Synaptic.js</strong></a>
+                        | Architecture-free neural network library<strong>[ Node.js ][ Browser ]</strong>
+                </li>
+                <li>
+                    <a href="https://github.com/karpathy/convnetjs">
+                        <strong>ConvNetJS</strong></a>
+                        | Javascript implementation of Neural networks<strong>[ Node.js ][ Browser ]</strong>
+                </li>
+                <li>
+                    <a href="https://github.com/stevenmiller888/mind">
+                        <strong>Mind.js</strong></a>
+                        | A flexible neural network library<strong>[ Node.js ][ Browser ]</strong>
+                </li>
+                <li>
+                    <a href="https://github.com/antoniodeluca/dn2a">
+                        <strong>DN2A</strong></a>
+                        | Digital Neural Networks Architecture<strong>[ Node.js ][ Browser ]</strong>
+                </li>
+                <li>
+                    <a href="https://github.com/karpathy/svmjs">
+                        <strong>svmjs</strong></a>
+                        | A lightweight implementation of the SMO algorithm to train a binary Support Vector Machine<strong>[ Node.js ][ Browser ]</strong>
+                </li>
+                <li>
+                    <a href="https://github.com/nicolaspanel/node-svm">
+                        <strong>node-svm</strong></a>
+                        | Support Vector Machine (SVM) library<strong>[ Node.js ]</strong>
+                </li>
+                <li>
+                    <a href="https://github.com/harthur/brain">
+                        <strong>Brain</strong></a>
+                        | JavaScript neural network library [ UNMAINTAINED ]<strong>[ Node.js ][ Browser ]</strong>
+                </li>
+            </ul>
+        </li>
     </ul>
 </details>
 
