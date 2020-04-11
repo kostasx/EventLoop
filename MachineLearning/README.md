@@ -1,4 +1,7 @@
 # Machine Learning (Work in Progress)
+
+![MachineLearning](https://raw.githubusercontent.com/kostasx/EventLoop/master/MachineLearning/images/franck-v-jIBMSMs4_kA-unsplash.jpg)
+
 ##### [Updated: 11.04.2020]
 
 <!-- P R E R E Q U I S I T E S -->
