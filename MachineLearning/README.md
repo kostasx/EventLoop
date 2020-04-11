@@ -16,6 +16,9 @@
         <ul>
         <li>
           <strong>Probability &amp; Statistics</strong>
+          <ul>
+            <li><a href="https://mlfromscratch.com/probability-distributions-and-densities/#/"><strong>Probability Distributions and Maximum Likelihood Estimation (MLE)</strong></a></li>
+          </ul>
         </li>
         <li>
           <strong>Linear Algebra</strong>
@@ -82,13 +85,19 @@
     <br>
     <ul>
         <li>
-            <a href=""><strong>Neural Networks</strong></a>
+            <a href="#neural-networks"><strong>Neural Networks</strong></a>
             <ul>
                 <li><a href="https://www.youtube.com/watch?v=ZzWaow1Rvho&list=PLxt59R_fWVzT9bDxA76AHm3ig0Gg9S3So"><strong>Beginner Introduction to Neural Networks</strong> (YouTube Playlist)</a> [Level: Beginner]</li>
                 <li>
                     <a href="https://brilliant.org/courses/artificial-neural-networks/"><strong>Artificial Neural Networks</strong> - A quick dive into a cutting-edge computational method for learning.</a> [Level: Beginner]<br/>
                     <small>This is a paid course, but <strong>the first 3 videos are free for you to watch</strong> and will introduce you to the basic concepts of Neural Networks.</small>
                 </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#convolutional-neural-networks"><strong>Convolutional Neural Networks</strong></a>
+            <ul>
+                <li><a href="http://brohrer.github.io/how_convolutional_neural_networks_work.html"><strong>How do Convolutional Neural Networks work?</strong></a></li>
             </ul>
         </li>
     </ul>
