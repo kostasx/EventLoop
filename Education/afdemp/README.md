@@ -879,6 +879,9 @@ document.body.addEventListener(&quot;mousemove&quot;, function(e) {&#10;
 <li>
 	<a href="https://www.youtube.com/watch?v=Ke90Tje7VS0">(YouTube) Learn React - React Crash Course [2019] - React Tutorial with Examples | Mosh</a>
 </li>
+<li>
+	<a href="https://www.youtube.com/playlist?list=PLC3y8-rFHvwgg3vaYJgHGnModB54rxOk3"><strong>ReactJS Tutorial for Beginners</strong> [YouTube Playlist]</a>
+</li>
 
 <li>
 	<a href="https://www.freecodecamp.org/news/learning-react-roadmap-from-scratch-to-advanced-bff7735531b6/">How to Learn React — A roadmap from beginner to advanced (2018)</a>
