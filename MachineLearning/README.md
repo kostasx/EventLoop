@@ -1,4 +1,5 @@
-# Machine Learning (Work in Progress)
+# Machine Learning 
+### Learning Resources _(Work in Progress)_
 
 ![MachineLearning](https://raw.githubusercontent.com/kostasx/EventLoop/master/MachineLearning/images/franck-v-jIBMSMs4_kA-unsplash.jpg)
 
