@@ -1186,4 +1186,4 @@ Don't forget to `star`, `like`, `follow` or `subscribe` to the people that helpe
 
 A big thanks to the following people who help me maintain these resources:
 
-- [Gratsiella Kalfakakou](https://github.com/GratsiellaKalf)
+- [Gratsiella Kalfakakou](https://github.com/Gratsiella)
