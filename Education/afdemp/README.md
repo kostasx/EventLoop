@@ -436,7 +436,7 @@ __[&checkmark;]__ : Student Approved Resource
   <h4>Resources</h4>
   <ul>
   <li><a href="https://scrimba.com/g/gintrotocss" target="_blank">Introduction to CSS (scrimba.com)</a></li>
-  <li><a href="https://jigsaw.w3.org/css-validator/validator" target="_blank">Online W3C CSS Validator</a></li>
+  <li><a href="https://jigsaw.w3.org/css-validator/" target="_blank">Online W3C CSS Validator</a></li>
   <li><a href="http://csslint.net/" target="_blank">Online CSS Linter</a></li>
   <li><a href="https://books.goalkicker.com/CSSBook/">CSS - Notes for Professionals</a></li>
   <li>
@@ -1178,8 +1178,12 @@ document.body.addEventListener(&quot;mousemove&quot;, function(e) {&#10;
 
 ----
 
-### Say Thank You
+### Say Thank You / Contributors
 
 Don't forget to `star`, `like`, `follow` or `subscribe` to the people that helped you through your journey in learning Software Development. Feel free to contribute by opening Pull Requests or leaving a comment.
 
 - [Selectors Explained](https://github.com/HugoGiraudel/selectors-explained) *Star GitHub repo*
+
+A big thanks to the following people who help me maintain these resources:
+
+- [Gratsiella Kalfakakou](https://github.com/GratsiellaKalf)
