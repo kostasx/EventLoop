@@ -118,6 +118,9 @@
                     <a href="https://www.tensorflow.org/js">
                         <strong>TensorFlow.js</strong></a>
                         | A library for machine learning in JavaScript<strong>[ Node.js ][ Browser ]</strong>
+                    <ul>
+                        <li><a href="https://www.youtube.com/watch?v=WYvgP9LfvTg">Getting Started with TensorFlow.js (AI Adventures)</a></li>
+                    </ul>
                 </li>
                 <li>
                     <a href="https://github.com/BrainJS/brain.js">
