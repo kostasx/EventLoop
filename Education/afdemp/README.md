@@ -1115,6 +1115,8 @@ document.body.addEventListener(&quot;mousemove&quot;, function(e) {&#10;
 </details>
 
 
+<!-- A N G U L A R -->
+
 <details>
 <summary>Angular</summary>
 
@@ -1174,6 +1176,15 @@ document.body.addEventListener(&quot;mousemove&quot;, function(e) {&#10;
 <h4>Software Design Principles</h4>
 <ul>
 	<li><a href="https://dev.to/pluralsight/my-5-favorite-software-design-principles-4ech">My 5 Favorite Software Design Principles</a></li>
+</ul>
+
+----
+
+### TERMINOLOGY
+
+<h4>Common Terms</h4>
+<ul>
+	<li><a href="https://www.gatsbyjs.org/docs/glossary/"><strong>Glossary of Common Web Development terms</strong> (Gatsby)</a></li>
 </ul>
 
 ----
