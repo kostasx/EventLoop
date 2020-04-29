@@ -540,6 +540,19 @@ __[&checkmark;]__ : Student Approved Resource
 
 </ul>
 </li>
+
+<!-- J A V A S C R I P T  ES6 -->
+
+<li id="es6"><strong>ES6:</strong>
+	 <ul>
+ 		 <li><a href="https://flaviocopes.com/javascript-arrow-functions/">A tutorial to JavaScript Arrow Functions<strong> (Flavio Copes)</a></li>
+		 <li><a href="https://javascript.info/arrow-functions-basics">Arrow functions, the basics<strong> (JavaScript.info)</a></li>
+		 <li><a href="https://javascript.info/arrow-functions">Arrow functions revisited<strong></a> (JavaScript.info)</li>
+	</ul>
+</li>
+
+<!-- J A V A S C R I P T  P E R F O R M A N C E -->
+
 <li><strong>Performance:</strong>
 	 <ul>
 		 <li><a href="https://www.tjvantoll.com/speaking/slides/efficiency-top-ten/okemos/#/"><strong>Front End Web Efficiency</strong> - The Top Ten</a></li>
