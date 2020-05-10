@@ -1,3 +1,9 @@
+# LEARN REACT.JS
+
+![React](./img/MetaphorsofReact_2.0.012.jpg)
+
+_Illustration by [Maggie Appleton](https://maggieappleton.com/)_
+
 <h2>HOW TO SECTION</h2>
 
   <details>
