@@ -8,6 +8,7 @@ _Illustration by [Maggie Appleton](https://maggieappleton.com/)_
 
   <details>
     <summary><strong>HOW TO | IMPORT CDN RESOURCES</strong></summary>
+    <br/>
 
   > **Way #1 - Import the resources in the `index.html` file**:
 
