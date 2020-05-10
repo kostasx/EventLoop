@@ -1,6 +1,8 @@
 # EventLoop
 Passionate about Technology & Tech Education
 
+![EventLoop Logo](./assets/img/logo.jpg)
+
 <details>
   <summary>Presentations</summary>
   <br>
