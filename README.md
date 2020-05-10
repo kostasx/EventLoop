@@ -1,5 +1,5 @@
 # EventLoop
-Passionate about Technology & Tech Education
+:heart: **Passionate about Technology & Tech Education**
 
 ![EventLoop Logo](./assets/img/logo.jpg)
 
