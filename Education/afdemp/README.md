@@ -1165,6 +1165,13 @@ document.body.addEventListener(&quot;mousemove&quot;, function(e) {&#10;
 	<li><a href="https://www.pluralsight.com/guides/one-and-two-way-data-binding-angular#module-twowaydatabindinginangular-anchor">Two-way Data Binding in Angular</a></li>
         </ul>
     </li> 
+    <!-- S E R V I C E S -->
+    <li><strong>Services: HttpClient</strong>
+	    <ul>
+		    <li><a href="https://blog.angular-university.io/angular-http/">Angular HTTP Client - Quickstart Guide</a></li>
+	    </ul>
+    </li>
+    <!-- D E P E N D E N C Y  I N J E C T I O N -->
     <li><strong>Dependency Injection (DI)</strong>
 	    <ul>
 		    <li><a href="https://www.youtube.com/watch?v=LUDsfWF-VGo">Understanding dependency injection</a></li>
