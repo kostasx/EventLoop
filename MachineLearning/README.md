@@ -194,8 +194,7 @@
             <small> | A reading comprehension dataset, consisting of questions posed by crowdworkers on a set of Wikipedia articles, where the answer to every question is a segment of text, or span, from the corresponding reading passage, or the question might be unanswerable.</small>
         </li>
         <li>
-            <a href="http://lib.stat.cmu.edu/datasets/boston"><strong>Boston Neighborhood Housing Prices Dataset
-</strong></a>
+            <a href="http://lib.stat.cmu.edu/datasets/boston"><strong>Boston Neighborhood Housing Prices Dataset</strong></a>
             <small> | Median home values of Boston with associated home and neighborhood attributes.</small>
         </li>
         <li>
@@ -310,6 +309,7 @@
             </ul>
         </li>
         -->
+        <!-- B -->
         <li>
             <strong>B</strong>
             <ul>
@@ -323,6 +323,35 @@
                 </li>
             </ul>
         </li>
+        <!-- C -->
+        <li>
+            <strong>C</strong>
+            <ul>
+                <li>
+                    <p><strong>Convolutional Neural Network: </strong> A <a href="#">Neural Network</a> with at least one <a href="">Convolutional Layer</a>. Convolutional Neural Networks (CNNs or ConvNets) are extremely powerful in image recognition tasks. </p>
+                    <p>Sources:
+                        <ul>
+                            <li><a href="https://www.youtube.com/embed/rtGXv88UQ-c?start=197&end=369">Geoffrey Hinton explains what is a CNN.</a></li>
+                        </ul>
+                    </p>
+                </li>
+            </ul>
+        </li>
+        <!-- N -->
+        <li>
+            <strong>N</strong>
+            <ul>
+                <li>
+                    <p><strong>Neural Network: </strong></p>
+                    <p>Sources:
+                        <ul>
+                            <li><a href="https://www.youtube.com/embed/rtGXv88UQ-c?start=94&end=182">Geoffrey Hinton explains what is a Neural Network.</a></li>
+                        </ul>
+                    </p>
+                </li>
+            </ul>
+        </li>
+        <!-- U -->
         <li>
             <strong>U</strong>
             <ul>
