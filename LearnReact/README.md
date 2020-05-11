@@ -6,6 +6,31 @@ _Illustration by [Maggie Appleton](https://maggieappleton.com/)_
 
 <h2>HOW TO SECTION</h2>
 
+  <!--
+  <details>
+    <summary><strong>HOW TO | DESCRIPTION</strong></summary>
+    <br/>
+
+  > **INSTRUCTIONS**:
+
+  > **DEMO**: [CODESANDBOX]()
+
+  > **REFERENCES & SOURCES**:
+
+  - []()
+
+  </details>
+  -->
+  <details>
+    <summary><strong>HOW TO | AUTOMATICALLY CONVERT HTML TO JSX</strong></summary>
+    <br/>
+
+  > **(1) Using a (free) online tool**: [HTML-to-JSX](https://transform.tools/html-to-jsx)
+
+  > **(2) Using a VSCode Extension**: [HTML-to-JSX](https://marketplace.visualstudio.com/items?itemName=riazxrazor.html-to-jsx)
+
+  </details>
+
   <details>
     <summary><strong>HOW TO | IMPORT CDN RESOURCES</strong></summary>
     <br/>
