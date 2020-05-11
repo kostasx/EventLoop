@@ -93,3 +93,7 @@ _Illustration by [Maggie Appleton](https://maggieappleton.com/)_
   - [https://stackoverflow.com/questions/23116591/how-to-include-a-font-awesome-icon-in-reacts-render](https://stackoverflow.com/questions/23116591/how-to-include-a-font-awesome-icon-in-reacts-render)
 
   </details>
+
+### Suggestions / Requests / Comments / Feedback
+
+Do you want to see someting in the list? Let me know, by opening an Issue.
