@@ -85,6 +85,39 @@ __[&checkmark;]__ : Student Approved Resource
 	<li><a href="https://goalkicker.com/JavaBook/JavaNotesForProfessionals.pdf">Java Notes for Professionals</a> (PDF)</li>
 	<li><a href="https://dzone.com/articles/visual-studio-code-for-java-the-ultimate-guide-201">Visual Studio Code for Java: The Ultimate Guide 2019</a></li>
 	<li><a href="https://www.youtube.com/watch?v=RJIfsSmU9zk">Developing Java Applications with Visual Studio Code</a></li>
+    <li><strong>Spring Framework</strong><br/>
+      <ul>
+      <li><details><summary>AntPathMatcher:</summary>
+	  <br/>The mapping matches URLs using the following rules:<br/><br/>
+      <pre>
+   +-----------------+---------------------------------------------------------+
+   | Wildcard        |            Description                                  |
+   +-----------------+---------------------------------------------------------+
+   | ?               | Matches exactly one character.                          |
+   | *               | Matches zero or more characters.                        |
+   | **              | Matches zero or more 'directories' in a path            |
+   | {spring:[a-z]+} | Matches regExp [a-z]+ as a path variable named "spring" |
+   +-----------------+---------------------------------------------------------+
+   </pre>
+
+   Some examples:
+	<pre>
+   +------------------------------+--------------------------------------------------------+
+   | Example                      | Matches:                                               |
+   +------------------------------+--------------------------------------------------------+
+   | com/t?st.jsp                 | com/test.jsp but also com/tast.jsp or com/txst.jsp     |
+   | com/*.jsp                     | All .jsp files in the com directory                    |
+   | com/**/test.jsp                | All test.jsp files underneath the com path             |
+   | org/springframework/**/*.jsp    | All .jsp files underneath the org/springframework path |
+   | org/**/servlet/bla.jsp       | org/springframework/servlet/bla.jsp                    |
+   |                       also:  | org/springframework/testing/servlet/bla.jsp            |
+   |                       also:  | org/servlet/bla.jsp                                    |
+   | com/{filename:\\w+}.jsp       | com/test.jsp & assign value test to filename variable  |
+   +------------------------------+--------------------------------------------------------+
+      </pre>
+      </details></li>
+      </ul>
+    </li>
 	
 </ul>
 
