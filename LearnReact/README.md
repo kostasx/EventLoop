@@ -21,6 +21,59 @@ _Illustration by [Maggie Appleton](https://maggieappleton.com/)_
 
   </details>
   -->
+
+  <details>
+    <summary><strong>HOW TO | INTEGRATE SEMANTIC UI</strong></summary>
+    <br/>
+
+  > **INSTRUCTIONS**:
+
+  1) Using [sematic-ui-css](https://github.com/Semantic-Org/Semantic-UI-CSS):
+
+  ```bash
+  npm install sematic-ui-css  
+  ```
+
+  OR:
+
+  ```bash
+  yarn add sematic-ui-css
+  ```
+
+  ```jsx
+  import 'semantic-ui-css/semantic.min.css';
+
+  <button class="ui primary basic button">Primary</button>
+  <button class="ui secondary basic button">Secondary</button>
+  <button class="ui positive basic button">Positive</button>
+  <button class="ui negative basic button">Negative</button>
+  ```
+
+  2) Using: [semantic-ui-react](https://react.semantic-ui.com/): 
+
+  ```bash
+  npm install semantic-ui-react
+  ```
+
+  OR:
+
+  ```bash
+  yarn add semantic-ui-react
+  ```
+
+  ```jsx
+  import { Button } from 'semantic-ui-react';
+
+  <Button primary>Primary</Button>
+  <Button secondary>Secondary</Button>
+  <Button positive>Positive</Button>
+  <Button negative>Negative</Button>
+  ```
+
+  > **DEMO**: [CODESANDBOX](https://codesandbox.io/s/reactjs-import-semantic-ui-m80x9)
+
+  </details>
+
   <details>
     <summary><strong>HOW TO | AUTOMATICALLY CONVERT HTML TO JSX</strong></summary>
     <br/>
