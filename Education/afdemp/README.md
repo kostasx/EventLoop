@@ -718,6 +718,7 @@ __[&checkmark;]__ : Student Approved Resource
 	  <li><strong>Drag and Drop API</strong></li>
 	  <ul>
 		  <li><a href="https://javascript.info/mouse-drag-and-drop">Drag'n'Drop with mouse events | JavaScript.info</a></li>
+		  <li><a href="https://github.com/seanhess/html5-drag-drop-anything">HTML5 Drag and Drop Anything</a></li>
 	  </ul>
     <li>
 	    <strong>Geolocation API</strong>
