@@ -555,6 +555,9 @@ __[&checkmark;]__ : Student Approved Resource
         <a href="https://javascript.info/document">DOM @ javascript.info</a>
     </li>
     <li>
+	<a href="https://htmldom.dev/"><strong>How to manage HTML DOM with vanilla JavaScript only?</strong></a>
+    </li>
+    <li>
         <a href="https://itnext.io/javascript-fundamentals-master-the-dom-part-1-82433084fb40">JavaScript Fundamentals: Master the DOM! (Part 1)</a>
     </li>
     <li>
