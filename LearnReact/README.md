@@ -21,6 +21,45 @@ _Illustration by [Maggie Appleton](https://maggieappleton.com/)_
 
   </details>
   -->
+  
+  <details>
+    <summary><strong>HOW TO | ROUTING | Navigate Programmatically</strong></summary>
+    <br/>
+
+  > **INSTRUCTIONS**:
+
+  Class Components:
+
+  ```jsx
+  class HomePage extends Component {
+
+    redirectClickHandler(){
+
+      this.props.history.push("/products");
+
+    }
+
+  }
+  ```
+
+  Functional Components:
+
+  ```jsx
+  function HomePage( props ){
+
+    redirectClickHandler(){
+
+      props.history.push("/products");
+
+    }
+
+  }
+  ```
+
+  > **DEMO**: [CODESANDBOX](https://codesandbox.io/s/reactjs-routing-navigate-programmatically-7lilk)
+
+  </details>
+
 
   <details>
     <summary><strong>HOW TO | INTEGRATE SEMANTIC UI</strong></summary>
