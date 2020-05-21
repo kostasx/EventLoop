@@ -23,7 +23,7 @@ _Illustration by [Maggie Appleton](https://maggieappleton.com/)_
   -->
 
   <details>
-    <summary><strong>HOW TO | LAUNCH CREATE-REACT_APP DEVELOPMENT SERVER IN HTTPS</strong></summary>
+    <summary><strong>HOW TO | LAUNCH CREATE-REACT-APP DEVELOPMENT SERVER IN HTTPS</strong></summary>
     <br/>
 
   > **INSTRUCTIONS**:
