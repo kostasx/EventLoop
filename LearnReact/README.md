@@ -21,6 +21,20 @@ _Illustration by [Maggie Appleton](https://maggieappleton.com/)_
 
   </details>
   -->
+
+  <details>
+    <summary><strong>HOW TO | LAUNCH CREATE-REACT_APP DEVELOPMENT SERVER IN HTTPS</strong></summary>
+    <br/>
+
+  > **INSTRUCTIONS**:
+
+  Create or Edit the file **.env** and add the following line:
+
+  ```
+  HTTPS=true
+  ```
+
+  </details>
   
   <details>
     <summary><strong>HOW TO | ROUTING | Navigate Programmatically</strong></summary>
