@@ -204,7 +204,7 @@ _Illustration by [Maggie Appleton](https://maggieappleton.com/)_
 
 <h2>EXAMPLES SECTION</h2>
 
-- Avoid re-rendering of Child Components when Parent state/props change using **shouldComponentUpdate()** 
+#### Avoid re-rendering of Child Components when Parent state/props change using **shouldComponentUpdate()** 
   - [![Open in CodeSandbox](https://img.shields.io/badge/Open%20in-CodeSandbox-blue?style=flat-square&logo=codesandbox)](https://githubbox.com/kostasx/EventLoop/tree/master/LearnReact/examples/shouldcomponentupdate)
 
 ---
