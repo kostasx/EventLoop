@@ -6,10 +6,10 @@ import ReactDOM from "react-dom";
 // (2) Uncomment shouldComponentUpdate() and check again
 class Child extends React.Component {
 
-  __shouldComponentUpdate__( nextProps, nextState ){
-    console.log( "Child::shouldComponentUpdate()" );
-    return false;
-  }
+  // shouldComponentUpdate( nextProps, nextState ){
+  //   console.log( "Child::shouldComponentUpdate()" );
+  //   return false;
+  // }
 
   render(){
     console.log("Child::render()")
