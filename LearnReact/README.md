@@ -207,6 +207,9 @@ _Illustration by [Maggie Appleton](https://maggieappleton.com/)_
 #### Avoid re-rendering of Child Components when Parent state/props change using **shouldComponentUpdate()** 
   - [![Open in CodeSandbox](https://img.shields.io/badge/Open%20in-CodeSandbox-blue?style=flat-square&logo=codesandbox)](https://githubbox.com/kostasx/EventLoop/tree/master/LearnReact/examples/shouldcomponentupdate)
 
+#### Class [1] vs Functional [2] React Components: Same state [1] causes / [2] does not cause re-render 
+  - [![Open in CodeSandbox](https://img.shields.io/badge/Open%20in-CodeSandbox-blue?style=flat-square&logo=codesandbox)](https://githubbox.com/kostasx/EventLoop/tree/master/LearnReact/examples/functional-vs-class-state-updates)
+
 ---
 
 ### Suggestions / Requests / Comments / Feedback
