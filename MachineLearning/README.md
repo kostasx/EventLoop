@@ -1,9 +1,11 @@
 # Machine Learning 
 ### Learning Resources _(Work in Progress)_
 
+_Wait, what?_ If you are really **new to Machine Learning** or even haven't heard about it, this [**54 minutes course**](https://newsinitiative.withgoogle.com/training/course/introduction-to-machine-learning) is the best place to start.
+
 ![MachineLearning](https://raw.githubusercontent.com/kostasx/EventLoop/master/MachineLearning/images/franck-v-jIBMSMs4_kA-unsplash.jpg)
 
-##### [Updated: 11.04.2020]
+##### [Updated: 25.05.2020]
 
 <!-- P R E R E Q U I S I T E S -->
 
@@ -53,6 +55,11 @@
     <summary><strong>&nbsp;COURSES</strong></summary>
     <br>
     <ul>
+        <li>
+            <a href="https://newsinitiative.withgoogle.com/training/course/introduction-to-machine-learning"><strong>Introduction to Machine Learning</strong> - Google New Initiative (54 minutes)</a>
+            <br/>
+            <small>An excellent introduction to people with absolutely no knowledge about the field [Level: Beginner]</small>
+        </li>
         <li>
             <a href="https://course.fast.ai/">Practical Deep Learning for Coders</a>
             <br/>
