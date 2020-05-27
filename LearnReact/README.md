@@ -22,6 +22,54 @@ _Illustration by [Maggie Appleton](https://maggieappleton.com/)_
   </details>
   -->
 
+  <!-- INTEGRATE BOOTSTRAP -->
+
+  <details>
+    <summary><strong>HOW TO | INTEGRATE BOOTSTRAP</strong></summary>
+    <br/>
+
+  > **INSTRUCTIONS**:
+
+  Way #1) Using the CSS library
+
+  `index.js:`
+
+  ```jsx
+  import 'bootstrap/dist/css/bootstrap.css'
+  ```
+
+  [Reference](https://create-react-app.dev/docs/adding-bootstrap/)
+
+  ---
+  Way 2.1) Using Components: [react-strap](https://reactstrap.github.io/)
+
+  ```bash
+  npm install --save reactstrap
+  ```
+
+  ```jsx
+  import { Button } from 'reactstrap';
+
+  <Button color="danger">Danger!</Button>
+  ```
+
+  ---
+  Way 2.2) Using Components: [react-boostrap](https://react-bootstrap.github.io/)
+
+  ```bash
+  npm install react-bootstrap bootstrap
+  ```
+
+  ```jsx
+  import { Button } from 'react-bootstrap';
+
+  <Button variant="danger">Danger</Button>
+  ```
+
+  </details>
+
+  <!-- LAUNCH CREATE-REACT-APP DEVELOPMENT SERVER IN HTTPS -->
+
   <details>
     <summary><strong>HOW TO | LAUNCH CREATE-REACT-APP DEVELOPMENT SERVER IN HTTPS</strong></summary>
     <br/>
