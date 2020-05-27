@@ -4,7 +4,7 @@
 
 _Illustration by [Maggie Appleton](https://maggieappleton.com/)_
 
-<h2>HOW TO SECTION</h2>
+<h2>HOW TO SECTION <em>(TL;DR)</em></h2>
 
   <!--
   <details>
