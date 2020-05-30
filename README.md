@@ -67,6 +67,7 @@
     <li><a href="https://github.com/kostasx/EventLoop/tree/master/Education/afdemp">List of Resources for Web Developers</a> (from the AFDEMP* Coding Bootcamp [<a href="https://www.afdemp.org/bootcamp/">*Alliance for Digital Employability</a>])</li>
     <li><a href="https://github.com/kostasx/EventLoop/tree/master/LearnReact"><strong>Learn React.JS</strong></a> <strong>(Work in progress)</strong></li>
     <li><a href="https://github.com/kostasx/EventLoop/tree/master/MachineLearning"><strong>Learn Machine Learning</strong>: A list of resources <strong>(Work in progress)</strong> </a></li>
+    <li><a href="https://github.com/kostasx/EventLoop/tree/master/LearnFabricJS">Learn Fabric.JS</a> (Coming soon...)</li>
   </ul>
 </details>
 
