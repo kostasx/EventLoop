@@ -1246,6 +1246,34 @@ document.body.addEventListener(&quot;mousemove&quot;, function(e) {&#10;
 
 ----
 
+### FAQ
+
+<details>
+  <summary><strong>React or Angular?</strong> (greek/ελληνικά)</summary>
+  <br/>
+  <p><strong>Question: </strong><em>Θέλω να να μαθω περισσοτερα για καποιο απο τα δυο front end frameworks. (1) Ποια κατευθυνση ειναι πιο χρησιμη αυτη την στιγμη, React η Αngular; (2) Υπαρχει καποια συγκεκριμενη προταση για καποιο online σεμιναριο τυπου udemy για καποιο απο τα δυο."
+</em></p>
+  <p><strong>Answer (31.05.2020): </strong>(1) Σχετικά με το 1ο ερώτημα, και οι δυο κατευθύνσεις είναι εξίσου χρήσιμες ή για να το θέσουμε πιο σωστά, και τα 2 frameworks είναι εξίσου επίκαιρα, δημοφιλή και ανταγωνιστικά στην αγορά.<br/>Αυτό που θα πρέπει να κάνει κάποιος που θέλει να αποφασίσει αν θα κατευθυνθεί προς το ένα ή το άλλο framework, είναι να πάρει κάποιες βασικές γνώσεις και να φτιάξει μια απλή εφαρμογή και με τα 2 frameworks. Από εκεί και πέρα, αξιολογώντας τα υπέρ και τα κατά μέσα από την προσωπική εμπειρία, θα επιλέξει το framework της αρεσκείας του και θα εμβαθύνει σε αυτό. Από εκεί και πέρα, ένας developer με αρκετή εμπειρία σε κάποιο front-end framework, μπορεί σχετικά εύκολα να μεταπηδήσει σε κάποιο άλλο, αφού τα περισσότερα από αυτά ακολουθούν παρόμοια λογική (Components, Modularization, State, Data Binding, etc.).</p>
+  <p>(2) Σχετικά με το 2ο ερώτημα, ο ενδιαφερόμενος μπορεί να αρχίσει παρακολουθώντας ένα interactive screencast course μέσα από το εξαιρετικό scrimba.com, και στη συνέχεια να μεταπηδήσει σε ένα course σε κάποιο από τα 3 κορυφαία online education platforms: Udacity, Coursera, edX. Αυτά παρέχουν αξιοπιστία και ποιοτικό περιεχόμενο, προερχόμενο τις περισσότερες φορές από μεγάλα πανεπιστήμια και εταιρείες τεχνολογίας. Το Udemy, το αφήνω στο τέλος, γιατί το επίπεδο και η ποιότητα, είναι δυσεύρετα στην εν λόγω πλατφόρμα.</p>
+  <p>Παραθέτω τα 2 scrimba.com courses:</p>
+  <ul>
+    <li><a href="https://scrimba.com/course/gyourfirstangularapp">Angular @ Scrimba</a></li>
+    <li><a href="https://scrimba.com/course/glearnreact">React @ Scrimba</a></li>
+  </ul>
+  <p>Επίσης, τα 2 αντίστοιχα 2ωρα introductory tutorials από τον εκπληκτικό Mosh Hamedani</p>
+  <ul>
+    <li><a href="https://www.youtube.com/watch?v=k5E2AVpwsko">Angular</a></li>
+    <li><a href="https://www.youtube.com/watch?v=Ke90Tje7VS0">React</a></li>
+  </ul>
+  <p>Η καλύτερη συμβουλή που μπορώ να δώσω είναι η εξής: επιλέξτε το framework, ξεκινήστε να παρακολουθείτε κάποιο online course, και μοιράστε το χρόνο σας ως εξής, 20% θεωρία 
+και 80% γράφοντας κώδικα.</p>
+  <p>Αφού ολοκληρώσετε το ή τα courses, ξεκινήστε να χτίζετε μια πραγματική εφαρμογή. 
+ΜΟΝΟ ΕΤΣΙ ΘΑ ΜΑΘΕΤΕ. Εάν δεν έχετε κάτι κατά νου, ρωτήστε γνωστούς και φίλους, εάν έχουν ιδέες για εφαρμογές ή την ανάγκη για κάποια εφαρμογή, έτσι ώστε να μπείτε στα βαθιά και να σφυρηλατήσετε τις γνώσεις σας στην τεχνολογία της επιλογής σας.</p>
+<p>Παράλληλα με την ανάπτυξη της εφαρμογής, αφιερώστε χρόνο για να μάθετε τα διάφορα concepts του framework που έχετε επιλέξει, π.χ. για την React τα Hooks, State Management, κλπ. για την Angular, Directives, Modules, Services, Dependency Injection, κλπ.</p>
+</details>
+
+----
+
 ### Say Thank You / Contributors
 
 Don't forget to `star`, `like`, `follow` or `subscribe` to the people that helped you through your journey in learning Software Development. Feel free to contribute by opening Pull Requests or leaving a comment.
