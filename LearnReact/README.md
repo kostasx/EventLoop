@@ -22,6 +22,34 @@ _Illustration by [Maggie Appleton](https://maggieappleton.com/)_
   </details>
   -->
 
+  <!-- SUPRESS BROWSER ERRORS -->
+
+  <details>
+    <summary><strong>HOW TO | SUPPRESS BROWSER ERRORS IN DEVELOPMENT MODE</strong></summary>
+    <br/>
+
+  > **INSTRUCTIONS**:
+  
+  Add the following code snippet in the <head> section of the /public/index.html file:
+
+  ```html
+  <script>
+    window.addEventListener('error', function(e){
+	e.stopImmediatePropagation();	// prevent React's listener from firing
+	e.preventDefault();				// prevent the browser's console error message 
+    });
+  </script>
+  </head>
+  ```
+  > **DEMO**: [CODESANDBOX](https://codesandbox.io/s/reactjs-disable-browser-errors-nql4d)
+
+  > **REFERENCES & SOURCES**:
+
+  - [Source](https://stackoverflow.com/questions/46589819/disable-error-overlay-in-development-mode)
+
+  </details>
+
+
   <!-- INTEGRATE BOOTSTRAP -->
 
   <details>
