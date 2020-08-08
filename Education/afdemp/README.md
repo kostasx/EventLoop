@@ -609,6 +609,7 @@ __[&checkmark;]__ : Student Approved Resource
     <li><a href="https://learnxinyminutes.com/docs/javascript/">Learn X in Y Minutes: JavaScript</a></li>
     <li><a href="https://jgthms.com/javascript-in-14-minutes/">JavaScript in 14 minutes</a></li>
     <li><a href="https://overreacted.io/what-is-javascript-made-of/">What Is JavaScript Made Of?</a></li>
+	<li><a href="https://1loc.dev/">211 Favorite JavaScript Utilities in single line of code!<a/></li>
     <li><a href="https://github.com/ryanmcdermott/clean-code-javascript"><strong>Clean Code concepts adapted for JavaScript</strong></a></li>
     <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model"><strong>Class-based (e.g. Java, C#) vs. prototype-based languages (JavaScript)</strong></a></li>
   </ul>
