@@ -129,6 +129,18 @@
 
 </details>
 
+<details>
+
+<summary><strong>Make sure to do a hard reload after changing your CSS/JS</strong></summary>
+  <p>References:</p>
+  <ul>
+  <li><a href="https://yodiz.com/help/hard-refresh-on-different-browsers/">Why Hard Refresh is required?</a></li>
+  <li><a href="https://developers.google.com/web/updates/2015/05/hard-reload">Hard reload (Chrome)</a></li>
+  </ul>
+  
+
+</details>
+
 <img src="img/drawkit-content.svg" alt="" width="500px">
 <hr>
 
