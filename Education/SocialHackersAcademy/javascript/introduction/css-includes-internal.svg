@@ -1,0 +1,61 @@
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+    y="0px" width="1024px" height="768px" viewBox="0 0 1024 768" enable-background="new 0 0 1024 768" xml:space="preserve">
+
+    <text transform="matrix(1 0 0 1 602.3867 141.5)" opacity="0.25" fill="#F7BE2C" font-family="'Roboto'" font-size="41.9282">JavaScript</text>
+    <text transform="matrix(1 0 0 1 308.8369 141.5)" fill="#00ABDD" font-family="'Roboto'" font-size="41.9282">CSS</text>
+    <text transform="matrix(1 0 0 1 438.7539 61.5059)" fill="#FFFFFF" font-family="'Hack'" font-size="24">index.html</text>
+    <text transform="matrix(1 0 0 1 109.6455 201.1777)">
+        <tspan x="0" y="0" fill="#F9672E" font-family="'Hack'" font-size="24">&lt;html&gt;</tspan>
+        <tspan x="0" y="73.534" fill="#FFFFFF" font-family="'Hack'" font-size="24"> </tspan>
+        <tspan x="35.417" y="73.534" fill="#F9672E" font-family="'Hack'" font-size="24">&lt;head&gt;</tspan>
+        <tspan x="0" y="110.301" fill="#F9672E" font-family="'Hack'" font-size="24"> </tspan>
+        <tspan x="35.417" y="110.301" fill="#F9672E" font-family="'Hack'" font-size="24" letter-spacing="-9"> </tspan>
+        <tspan x="44.121" y="110.301" fill="#F9672E" font-family="'Hack'" font-size="24" letter-spacing="26"> </tspan>
+        <tspan x="88.241" y="110.301" fill="#F9672E" font-family="'Hack'" font-size="24">&lt;link rel=”stylesheet”
+            href=”style.css” /&gt;</tspan>
+        <tspan x="0" y="183.834" fill="#FFFFFF" font-family="'Hack'" font-size="24"> </tspan>
+        <tspan x="35.417" y="183.834" fill="#FFFFFF" font-family="'Hack'" font-size="24" letter-spacing="-9"> </tspan>
+        <tspan x="44.121" y="183.834" fill="#FFFFFF" font-family="'Hack'" font-size="24" letter-spacing="26"> </tspan>
+        <tspan x="88.241" y="183.834" fill="#00ABDD" font-family="'Hack'" font-size="24">&lt;style&gt;</tspan>
+        <tspan x="0" y="220.602" fill="#00ABDD" font-family="'Hack'" font-size="24"> </tspan>
+        <tspan x="88.542" y="220.602" fill="#00ABDD" font-family="'Hack'" font-size="24" letter-spacing="26"> </tspan>
+        <tspan x="132.361" y="220.602" fill="#FFFFFF" font-family="'Hack'" font-size="24">p { color: red; }</tspan>
+        <tspan x="0" y="257.368" fill="#00ABDD" font-family="'Hack'" font-size="24"> </tspan>
+        <tspan x="35.417" y="257.368" fill="#00ABDD" font-family="'Hack'" font-size="24" letter-spacing="-9"> </tspan>
+        <tspan x="44.121" y="257.368" fill="#00ABDD" font-family="'Hack'" font-size="24" letter-spacing="26"> </tspan>
+        <tspan x="88.241" y="257.368" fill="#00ABDD" font-family="'Hack'" font-size="24">&lt;/style&gt;</tspan>
+        <tspan x="0" y="294.135" fill="#FFFFFF" font-family="'Hack'" font-size="24"> </tspan>
+        <tspan x="35.417" y="294.135" fill="#F9672E" font-family="'Hack'" font-size="24">&lt;/head&gt;</tspan>
+        <tspan x="0" y="367.669" fill="#F9672E" font-family="'Hack'" font-size="24"> &lt;body&gt;</tspan>
+        <tspan x="0" y="404.436" fill="#F9672E" font-family="'Hack'" font-size="24"> </tspan>
+        <tspan x="35.417" y="404.436" fill="#F9672E" font-family="'Hack'" font-size="24" letter-spacing="-9"> </tspan>
+        <tspan x="44.121" y="404.436" fill="#F9672E" font-family="'Hack'" font-size="24" letter-spacing="26"> </tspan>
+        <tspan x="88.241" y="404.436" fill="#F9672E" font-family="'Hack'" font-size="24">&lt;p style=”color:red;”&gt;
+            Text &lt;/p&gt;</tspan>
+        <tspan x="0" y="441.202" fill="#F9672E" font-family="'Hack'" font-size="24"> &lt;/body&gt;</tspan>
+        <tspan x="0" y="514.736" fill="#F9672E" font-family="'Hack'" font-size="24">&lt;/html&gt;</tspan>
+    </text>
+    <path fill="none" d="M348.855,472.992c0.063-0.156,0.13-0.315,0.193-0.466C348.98,472.681,348.916,472.82,348.855,472.992z" />
+    <path fill="none" d="M348.377,474.229l0.159-0.407C348.479,473.945,348.427,474.087,348.377,474.229z" />
+    <path fill="none" d="M349.422,471.659c0.076-0.163,0.154-0.325,0.234-0.485C349.591,471.338,349.51,471.497,349.422,471.659z" />
+    <path fill="none" d="M349.994,470.554c0.126-0.239,0.256-0.476,0.389-0.708C350.25,470.078,350.12,470.314,349.994,470.554z" />
+    <path fill="none" d="M351.349,468.248c0.215-0.33,0.436-0.654,0.665-0.976C351.784,467.591,351.563,467.916,351.349,468.248z" />
+    <path fill="none" d="M350.733,469.229c0.109-0.184,0.22-0.365,0.335-0.545C350.953,468.863,350.843,469.045,350.733,469.229z" />
+    <path fill="none" d="M347.939,475.561c0.021-0.086,0.051-0.176,0.075-0.262C347.986,475.385,347.961,475.47,347.939,475.561z" />
+    <path fill="none" d="M347.26,478.246l0.025-0.131L347.26,478.246z" />
+    <path fill="none" d="M347.002,479.75c0.018-0.113,0.035-0.229,0.055-0.347C347.037,479.506,347.02,479.622,347.002,479.75z" />
+    <path fill="none" d="M347.56,476.92l0.095-0.378L347.56,476.92z" />
+    <path fill="none" d="M353.963,464.811c0.187-0.212,0.377-0.408,0.573-0.627C354.34,464.391,354.149,464.599,353.963,464.811z" />
+    <path fill="none" d="M346.727,482.641c0-0.11,0-0.225,0-0.336C346.735,482.416,346.73,482.53,346.727,482.641z" />
+    <path fill="none" d="M352.906,466.073c0.328-0.414,0.67-0.823,1.021-1.223C353.576,465.247,353.234,465.654,352.906,466.073z" />
+    <path fill="none" d="M356.57,462.223c-0.662,0.58-1.297,1.187-1.904,1.827C355.273,463.409,355.908,462.803,356.57,462.223z" />
+    <path fill="none" d="M352.245,466.942c0.147-0.2,0.297-0.399,0.448-0.595C352.543,466.543,352.393,466.742,352.245,466.942z" />
+    <path fill="none" d="M346.836,481.051" />
+    <g>
+        <text transform="matrix(1 0 0 1 702.751 429.0537)" fill="#FFFFFF" font-family="'Hack'" font-size="26">Internal</text>
+        <g>
+            <circle fill="#FFFFFF" cx="676.704" cy="420.11" r="14.61" />
+            <text transform="matrix(1 0 0 1 669.3926 429.0537)" font-family="'Roboto'" font-size="24.7523">2</text>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,45 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
+
+.colorful-svg path {
+	fill: #f7be2c;
+}
+
+img.tts_logo {
+	
+	background-color: #bd2b39 !important;
+	width     : 250px;
+	text-align: center;
+	margin    : 0 auto;
+	padding   : 20px;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+
+	font-family: 'Montserrat', sans-serif;
+
+}
+
+h1.big, h2.big, h3.big, h4.big, h5.big, h6.big {
+
+	font-weight: 700;
+
+}
+
+h3.big { font-size: 3em; }
+
+.reveal strong {
+    color: inherit;
+}
+
+.reveal a.bitly_link strong,
+.reveal a.bitly_link {
+	color: white;
+}
+
+li p.small {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+ul.colorful li strong { color: orange; }

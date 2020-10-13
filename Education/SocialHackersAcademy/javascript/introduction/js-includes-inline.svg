@@ -1,0 +1,61 @@
+<svg enable-background="new 0 0 1024 768" height="768" viewBox="0 0 1024 768" width="1024" xml:space="preserve"
+    xmlns="http://www.w3.org/2000/svg">
+
+    <text fill="#f7be2c" font-family="'Roboto'" font-size="41.9282" transform="translate(602.3867 141.5)">JavaScript</text>
+    <text fill="#00abdd" font-family="'Roboto'" font-size="41.9282" opacity=".25" transform="translate(308.8369 141.5)">CSS</text>
+    <text fill="#fff" font-family="'Hack'" font-size="24" transform="translate(438.7539 61.5059)">index.html</text>
+    <g fill="none">
+        <path d="m348.855 472.992c.063-.156.13-.315.193-.466-.068.155-.132.294-.193.466z" />
+        <path d="m348.377 474.229.159-.407c-.057.123-.109.265-.159.407z" />
+        <path d="m349.422 471.659c.076-.163.154-.325.234-.485-.065.164-.146.323-.234.485z" />
+        <path d="m349.994 470.554c.126-.239.256-.476.389-.708-.133.232-.263.468-.389.708z" />
+        <path d="m351.349 468.248c.215-.33.436-.654.665-.976-.23.319-.451.644-.665.976z" />
+        <path d="m350.733 469.229c.109-.184.22-.365.335-.545-.115.179-.225.361-.335.545z" />
+        <path d="m347.939 475.561c.021-.086.051-.176.075-.262-.028.086-.053.171-.075.262z" />
+        <path d="m347.26 478.246.025-.131z" />
+        <path d="m347.002 479.75c.018-.113.035-.229.055-.347-.02.103-.037.219-.055.347z" />
+        <path d="m347.56 476.92.095-.378z" />
+        <path d="m353.963 464.811c.187-.212.377-.408.573-.627-.196.207-.387.415-.573.627z" />
+        <path d="m346.727 482.641c0-.11 0-.225 0-.336.008.111.003.225 0 .336z" />
+        <path d="m352.906 466.073c.328-.414.67-.823 1.021-1.223-.351.397-.693.804-1.021 1.223z" />
+        <path d="m356.57 462.223c-.662.58-1.297 1.187-1.904 1.827.607-.641 1.242-1.247 1.904-1.827z" />
+        <path d="m352.245 466.942c.147-.2.297-.399.448-.595-.15.196-.3.395-.448.595z" />
+    </g>
+    <text transform="translate(109.6455 201.1777)">
+        <tspan fill="#f9672e" font-family="'Hack'" font-size="29.4135" x="0" y="0">&lt;html&gt;</tspan>
+        <tspan fill="#fff" font-family="'Hack'" font-size="29.4135" x="0" y="73.534"></tspan>
+        <tspan fill="#f9672e" font-family="'Hack'" font-size="29.4135" x="35.417" y="73.534">&lt;head&gt;</tspan>
+        <tspan fill="#00abdd" font-family="'Hack'" font-size="29.4135" x="0" y="110.301"></tspan>
+        <tspan fill="#00abdd" font-family="'Hack'" font-size="29.4135" letter-spacing="-9" x="35.417" y="110.301"></tspan>
+        <tspan fill="#00abdd" font-family="'Hack'" font-size="29.4135" letter-spacing="26" x="44.121" y="110.301"></tspan>
+        <tspan fill="#f9672e" font-family="'Hack'" font-size="29.4135" x="88.241" y="110.301">&lt;script
+            src=”script.js”&gt;&lt;/script&gt;</tspan>
+        <tspan fill="#f9672e" font-family="'Hack'" font-size="29.4135" x="0" y="183.834"></tspan>
+        <tspan fill="#f9672e" font-family="'Hack'" font-size="29.4135" letter-spacing="-9" x="35.417" y="183.834"></tspan>
+        <tspan fill="#f9672e" font-family="'Hack'" font-size="29.4135" letter-spacing="26" x="44.121" y="183.834"></tspan>
+        <tspan fill="#f9672e" font-family="'Hack'" font-size="29.4135" x="88.241" y="183.834">&lt;script&gt;</tspan>
+        <tspan fill="#f9672e" font-family="'Hack'" font-size="29.4135" x="0" y="220.602"></tspan>
+        <tspan fill="#f9672e" font-family="'Hack'" font-size="29.4135" letter-spacing="-9" x="35.417" y="220.602"></tspan>
+        <tspan fill="#f9672e" font-family="'Hack'" font-size="29.4135" letter-spacing="26" x="44.121" y="220.602"></tspan>
+        <tspan fill="#f9672e" font-family="'Hack'" font-size="29.4135" x="132.361" y="220.602">alert(’Hello’);</tspan>
+        <tspan fill="#f9672e" font-family="'Hack'" font-size="29.4135" x="0" y="257.368"></tspan>
+        <tspan fill="#f9672e" font-family="'Hack'" font-size="29.4135" letter-spacing="-9" x="35.417" y="257.368"></tspan>
+        <tspan fill="#f9672e" font-family="'Hack'" font-size="29.4135" letter-spacing="26" x="44.121" y="257.368"></tspan>
+        <tspan fill="#f9672e" font-family="'Hack'" font-size="29.4135" x="88.241" y="257.368">&lt;/script&gt;</tspan>
+        <tspan fill="#fff" font-family="'Hack'" font-size="29.4135" x="0" y="294.135"></tspan>
+        <tspan fill="#f9672e" font-family="'Hack'" font-size="29.4135" x="35.417" y="294.135">&lt;/head&gt;</tspan>
+        <tspan fill="#f9672e" font-family="'Hack'" font-size="29.4135" x="0" y="367.669"> &lt;body&gt;</tspan>
+        <tspan fill="#f9672e" font-family="'Hack'" font-size="29.4135" x="0" y="404.436"></tspan>
+        <tspan fill="#f9672e" font-family="'Hack'" font-size="29.4135" letter-spacing="-9" x="35.417" y="404.436"></tspan>
+        <tspan fill="#f9672e" font-family="'Hack'" font-size="29.4135" letter-spacing="26" x="44.121" y="404.436"></tspan>
+        <tspan fill="#e6e6e6" font-family="'Hack'" font-size="29.4135" x="88.241" y="404.436">&lt;p </tspan>
+        <tspan fill="#f7be2c" font-family="'Hack'" font-size="29.4135" x="141.366" y="404.436">onclick=”alert(’Hello’);”</tspan>
+        <tspan fill="#e6e6e6" font-family="'Hack'" font-size="29.4135" x="584.073" y="404.436">&gt; Text &lt;/p&gt;</tspan>
+        <tspan fill="#f9672e" font-family="'Hack'" font-size="29.4135" x="0" y="441.202"> &lt;/body&gt;</tspan>
+        <tspan fill="#f9672e" font-family="'Hack'" font-size="29.4135" x="0" y="514.736">&lt;/html&gt;</tspan>
+    </text>
+    <text fill="#fff" font-family="'Hack'" font-size="26" transform="translate(613.751 541.0537)">Inline</text>
+    <circle cx="587.704" cy="532.11" fill="#fff" r="14.61" />
+    <text font-family="'Roboto'" font-size="24.7523" transform="translate(580.3926 541.0537)">3</text>
+
+</svg>
