@@ -71,11 +71,9 @@ _Wait, what?_ If you are really **new to Machine Learning** or even haven't hear
             <small>SYDE 522, Winter 2019, University of Waterloo [Level: Beginner to Intermediate]</small>
         </li>
             <li><strong>Tensorflow</strong>
-            <li>
-                <ul>
-                    <li><a href="https://www.coursera.org/specializations/tensorflow-advanced-techniques">TensorFlow: Advanced Techniques Specialization (Free)</a></li>
-                </ul>
-            </li>
+            <ul>
+                <li><a href="https://www.coursera.org/specializations/tensorflow-advanced-techniques">TensorFlow: Advanced Techniques Specialization (Free)</a></li>
+            </ul>
         </li>
     </ul>
     <hr>
