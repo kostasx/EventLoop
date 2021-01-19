@@ -35,7 +35,7 @@
       <a href="http://eventloop.gr/Education/TechTalentSchool/javascript/reactjs/index.html#/">React.JS</a>
     </li>
     <li>
-      <a href="http://eventloop.gr/Education/TechTalentSchool/nodejs/introduction.html#">Introduction to Node.JS</a>
+      <a href="http://eventloop.gr/Education/SocialHackersAcademy/nodejs/introduction.html#">Introduction to Node.JS</a>
     </li>
 </ul>
 </details>
