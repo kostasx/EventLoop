@@ -290,6 +290,12 @@ _Illustration by [Maggie Appleton](https://maggieappleton.com/)_
 #### Class [1] vs Functional [2] React Components: Same state [1] causes / [2] does not cause re-render 
   - [![Open in CodeSandbox](https://img.shields.io/badge/Open%20in-CodeSandbox-blue?style=flat-square&logo=codesandbox)](https://githubbox.com/kostasx/EventLoop/tree/master/LearnReact/examples/functional-vs-class-state-updates)
 
+#### React Redux Basic CRUD Store
+
+- [React | Redux | Basic CRUD Store | **Codesandbox**]()
+- [React | Redux | Basic CRUD Store | **GitHub Dev**]()
+- [React | Redux | Basic CRUD Store | **GitHub Repo**]()
+
 ---
 
 ### Suggestions / Requests / Comments / Feedback
