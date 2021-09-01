@@ -37,6 +37,9 @@
     <li>
       <a href="http://eventloop.gr/Education/SocialHackersAcademy/nodejs/introduction.html#">Introduction to Node.JS</a>
     </li>
+    <li>
+      <a href="https://eventloop.gr/Education/git/index.html#/"><strong>Git 101</strong> | A Gentle Introduction to Version Control, Git & GitHub</a>
+    </li>
 </ul>
 </details>
 
