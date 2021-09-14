@@ -14,3 +14,6 @@ _"Define a one-to-many dependency between objects so that when one object change
   
   Code for video: [Observer.zip](https://github.com/kostasx/EventLoop/raw/master/javascript/design-patterns/Observer/Observer.zip)
   
+---
+
+[Illustrations by **Undraw**](https://undraw.co/)
