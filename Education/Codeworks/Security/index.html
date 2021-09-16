@@ -1,0 +1,235 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+		<link rel="stylesheet" href="./codeworks.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<!-- INTRO -->
+				<section>
+					<h1>Security</h1>
+					<img width="200" src="./assets/codeworks-logo.png" alt="">
+					<p>
+						<small>
+							<strong>Minaidis Kostas</strong> | Instructor | Codeworks
+						</small>
+					</p>
+				</section>
+
+				<!-- WHAT IS SECURITY? -->
+				<section>
+					<h2>What is Security?</h2>
+					<hr>
+					<h3 class="fragment">
+						Mentality Shift. 
+						<span class="fragment">From kid to grown-up</span>
+					</h3>
+					<p class="fragment">It's a wild (web) world out there!</p>
+					<p class="fragment">Security considerations should always accompany your coding habits from now on.</p>
+					<p class="fragment">
+						<small>...along with performance and readability of course.</small>
+					</p>
+				</section>
+
+				<!-- BROAD SUBJECT | WHAT TO KEEP IN MIND -->
+				<section>
+					<h2>Security is a very broad field</h2>
+					<p class="fragment">Becoming a Security Expert/Specialist requires lots of time, training, experience and certifications.</p>
+					<p class="fragment">The terminology (XSS, CSRF, DDoS, etc.) can be intimidating and oftentimes confusing.</p>
+					<small class="fragment">...don't worry too much about this, in the beginning.</small>
+				</section>
+
+				<!-- WHAT TO KEEP IN MIND -->
+				<section>
+					<section>
+						<h2>What you need to keep in mind</h2>
+						<small class="fragment">Repeat after me...</small>
+						<ul class="small">
+							<li class="fragment fade-in-then-semi-out">
+								<h3>
+									<span title="Think: guilty, until proven acceptable.">
+										All user input is
+										<span class="evil">evil.</span>
+									</span> 
+									Act accordingly:<br><span class="font-weight-normal">Restrict / Validate / Sanitize. <span title="Think about the pandemic!" class="pointer">*</span></span>
+								</h3>
+							</li>
+							<li class="fragment fade-in-then-semi-out">
+								<h3 class="font-weight-normal">Security: must <strong>always</strong> be implemented on <strong>both ends</strong>: Frontend/Backend 
+								</h3>
+							</li>
+							<li class="fragment fade-in-then-semi-out">
+								<h3 class="font-weight-normal">
+									<strong>Start with 0 or minimal privileges</strong> and increase moderately and cautiously.
+								</h3>
+							</li>
+							<li class="fragment fade-in-then-semi-out">
+								<h3 class="font-weight-normal">
+									Same goes for (sensitive) data: <strong>share as less as possible</strong>
+								</h3>
+							</li>
+						</ul>
+					</section>
+
+					<!-- USER INPUT -->
+					<section>
+						<h2>User Input</h2>
+						<p>Guilty until proven... acceptable</p>
+						<hr>
+						<h6 class="fragment">⚠️ Security Checklist ⚠️</h6>
+						<ul class="small">
+							<li class="fragment">Is the input going to be stored somewhere? (Database, localStorage, server, etc.)</li>
+							<li class="fragment">Is the input going to be processed/parsed/displayed at some other level?</li>
+						</ul>
+					</section>
+
+					<!-- BOTH WAYS 1/2 -->
+					<section>
+						<h2>Frontend/Backend</h2>
+						<p>Look both ways before crossing</p>
+						<hr>
+						<p class="fragment small">There's no point in enforcing a strong password policy on the Frontend, if the same policy has not been implemented on the Backend as well.</p>
+						<p class="fragment small">
+							<strong>Remember:</strong> users can view and manipulate Frontend code.
+						</p>
+					</section>
+
+					<!-- BOTH WAYS 2/2 -->
+					<section>
+						<p class="small">
+							The following <span class="evil">maxlength</span> property won't protect our "back".
+						</p>
+						<pre class="html">
+							<code data-trim>
+								<form>
+									<input type="text" name="username" maxlength="8">
+								</form>
+							</code>
+						</pre>
+						<img width="65%" src="./assets/buffer-overflow-example.svg" alt="">
+						<div class="tiny mute"><a href="https://www.cloudflare.com/en-gb/learning/security/threats/buffer-overflow/">Image by Cloudflare</a></div>
+					</section>
+
+					<!-- STRICT POLICY -->
+					<section>
+						<h2>Prefer a Strict Access Policy</h2>
+						<hr>
+						<h6 class="fragment">⚠️ Security Checklist ⚠️</h6>
+						<ul class="small">
+							<li class="fragment">
+								<strong>Start with 0 or minimal access</strong>, and gradually open the doors to features and functionality on a <strong>as-needed basis</strong>. 
+							</li>
+							<li class="fragment">
+								Give your server and services <strong>minimum privileges</strong>. Grant higher privileges with <strong>caution</strong> and only if needed. 
+							</li>
+							<li class="fragment">
+								Does your server or services really require <strong>root/administrator</strong> privileges? If not, <strong>turn them off</strong>.
+							</li>
+							<li class="fragment">
+								Do your users need to be <strong>authenticated</strong> for a particular feature/functionality?
+							</li>
+							<li class="fragment">
+								Do your authenticated users need <strong>special roles</strong> for a particular feature/functionality?
+							</li>
+						</ul>
+					</section>
+
+					<!-- RESTRICT & PROTECT SENSITIVE DATA -->
+					<section>
+						<h2>Protect your Data</h2>
+						<hr>
+						<h6 class="fragment">⚠️ Security Checklist ⚠️</h6>
+						<ul class="small">
+							<li class="fragment">
+								<strong>Don't share sensitive information</strong> <em>(e.g. API keys and secrets, passwords, Error messages, etc.)</em> in public-facing apps and web sites and try to avoid storing them on the client-side unencrypted (cache, cookies, etc.)
+							</li>
+							<li class="fragment">
+								Are you using <strong>secure channels</strong> to send or receive sensitive information (HTTPS/TLS vs HTTP)?
+							</li>
+							<li class="fragment">Are you doing everything you can to <strong>protect your stored data</strong>: Validate / Encrypt / Backup?</li>
+						</ul>
+
+					</section>
+
+				</section>
+
+				<!-- I AM OVERWHELMED! -->
+				<section>
+					<h2>Bottom Line</h2>
+					<hr>
+					<h6 class="fragment">
+						You're an adult coder now. 
+					</h6>
+					<ul class="small">
+						<li class="fragment">
+							Security and Accessibility are not an afterthought.
+						</li>
+						<li class="fragment">
+							They should always accompany your code.
+						</li>
+						<li class="fragment">
+							Badly written code (no linters, no standards, no best practices, etc.) is prone to security vulnerabilities.
+						</li>
+						<li class="fragment">
+							Keep learning and studying the field of Web Security. There's more ground to explore.
+						</li>
+						<li class="fragment">
+							Don't reinvent the (security) wheel. Use well-trusted, broadly used and up-to-date security libraries and frameworks to secure your apps.
+						</li>
+					</ul>
+				</section>
+
+				<!-- RESOURCES / REFERENCES -->
+				<section>
+					<h2>References & Resources</h2>
+					<p class="small">(For further study)</p>
+					<hr>
+					<ul class="small">
+						<li><a href="https://www.youtube.com/watch?v=qFiAJ1sgYNU" target="_blank">Harvard CS50 2020 - Security (60')</a></li>
+						<li>
+							<a href="https://github.com/0xRadi/OWASP-Web-Checklist" target="_blank">OWASP Web Application Security Testing Checklist</a>
+						</li>
+						<li>
+							<a href="https://www.slideshare.net/petrosdemetrakopoulos/security-in-nodejs-and-express" target="_blank">Security in Node.JS and Express</a>
+						</li>
+						<li>
+							<a href="https://medium.com/@nodepractices/were-under-attack-23-node-js-security-best-practices-e33c146cb87d" target="_blank">We’re under attack! 23+ Node.js security best practices</a>
+						</li>
+						<li>
+							<a href="https://medium.com/insiden26/web-security-at-n26-d1b4644c32fb" target="_blank">Web security at N26</a>
+						</li>
+					</ul>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>

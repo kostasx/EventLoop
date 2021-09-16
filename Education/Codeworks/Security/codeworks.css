@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900');      /* SHA */
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,600,700'); /* SHA */
+
+.reveal {
+  font-family: 'Roboto', sans-serif;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  font-family: 'Roboto', sans-serif;
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+    text-transform: none;
+}
+
+.small {
+  font-size: 0.75em;
+}
+.tiny {
+  font-size: 0.4em;
+}
+.mute {
+  opacity: 0.5;
+}
+.mute:hover {
+  opacity: 1;
+}
+.evil {
+  color: tomato;
+}
+.font-weight-normal {
+  font-weight: normal !important;
+}
+.pointer {
+  cursor: pointer;
+}
