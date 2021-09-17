@@ -1,6 +1,7 @@
 # What is this all about?
 
 > Requirements: jQuery
+> Level: EASY
 
 Fix the code, so that the input is displayed in the div.
 
