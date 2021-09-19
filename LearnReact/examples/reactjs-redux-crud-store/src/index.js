@@ -6,7 +6,7 @@ import { createStore } from "redux";
 const store = createStore(reducer);
 let idCounter = 0;
 
-function reducer(state = [], action) {
+function reducer( state = [] /* <-- Set initial state */, action ) {
   switch (action.type) {
     case "CREATE":
       return [...state, { id: ++idCounter, ...action.payload }];
