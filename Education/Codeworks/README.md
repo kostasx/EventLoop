@@ -3,9 +3,14 @@
 ### SECURITY & AUTHENTICATION
 
 - [**Security Presentation**](https://kostasx.github.io/EventLoop/Education/Codeworks/presentations/security/)
+
+TIP: For any kind of attack (XSS, CSRF), it might help you google for the term, and then switch to the `Images` Search tab. Most of the times, you'll find really helpful infographics or diagrams, depicting these attacks. They will nicely accompany the articles and documentation and give you a visual overview of the concepts.
+
+Example: https://www.google.com/search?q=csrf&source=lnms&tbm=isch&sa=X
+
 ---
 
-#### RECOMMENCED READING 
+#### RESOURCES 
 
 - [What is a Cryptographic Nonce? (Wikipedia)](https://en.wikipedia.org/wiki/Cryptographic_nonce?oldformat=true)
 
@@ -24,3 +29,18 @@
 - [Cookies vs. Tokens: The Definitive Guide](https://dzone.com/articles/cookies-vs-tokens-the-definitive-guide)
 
 - [Cookie vs Token authentication](https://www.section.io/engineering-education/cookie-vs-token-authentication/)
+
+- [Access-Control-Allow-Credentials](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Credentials)
+
+- [Method Override Header: x-method-override or X-HTTP-Method-Override](https://www.hanselman.com/blog/http-put-or-delete-not-allowed-use-xhttpmethodoverride-for-your-rest-service-with-aspnet-web-api)
+
+    - "In certain situations (for example, when the service or its consumers are behind an overzealous corporate firewall, or if the main consumer is a web page), only the GET and POST HTTP methods might be available. In such a case, it is possible to emulate the missing verbs by passing a custom header in the requests." ~ [Source](https://www.oreilly.com/library/view/building-a-restful/9781785285714/ch05s05.html)
+
+- [What is CSRF? (3 minutes)](https://www.youtube.com/watch?v=MBOMBZS2u-I)
+
+- [Preventing CSRF](https://www.hacksplaining.com/prevention/csrf)
+
+- [Cross Site Request Forgery (CSRF or XSRF)(3 min)](https://www.youtube.com/watch?v=m0EHlfTgGUU)
+
+- [Cross-Site Request Forgery (CSRF) Explained (15 min)](https://www.youtube.com/watch?v=eWEgUcHPle0)
+
