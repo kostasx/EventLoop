@@ -74,7 +74,7 @@ store.dispatch(
     content: "Ada Lovelace..."
   })
 );
-store.dispatch(actions.UPDATE({ id: 2, author: "Hannah Fry" }));
+store.dispatch(actions.UPDATE({ id: 3, author: "Hannah Fry" }));
 store.dispatch(actions.DELETE(1));
 
 function App() {
