@@ -55,7 +55,7 @@ store.dispatch({
   payload: {
     author: "Kyle Simpson",
     title: "YDKJS",
-    content: "Collest JS book ever!"
+    content: "Coolest JS book ever!"
   }
 });
 
