@@ -1,0 +1,294 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/white.css">
+    <link rel="stylesheet" href="../codeworks.css">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- INTRO -->
+            <section>
+                <h1>Docker</h1>
+                <p><small>13.10.2021</small></p>
+                <img width="200" src="./assets/codeworks-logo.png" alt="">
+                <p>
+                    <small>
+						<strong>Minaidis Kostas</strong> | Instructor | Codeworks
+					</small>
+                </p>
+            </section>
+
+			<section data-background-color="#2496ed">
+                <section>
+                    <h2>Docker in a Nutshell</h2>
+                    <img width="200" src="./assets/docker-logo-white.png" alt="">
+                </section>
+                <section>
+                    <h2>What is Docker?</h2>
+                    <p class="fragment">Docker Engine (or simply Docker) is a software that creates and manages Docker Containers (or simply Containers).</p>
+                    <p class="fragment">It was created by Docker, Inc. San Francisco, a company specializing in cloud based technologies.</p>
+                </section>
+                <section>
+                    <h2>Fair enough. What are Containers then?</h2>
+                    <p class="fragment">Docker Containers contain applications. They are a piece of software that lets you package your application code and all its dependencies in a single unit so that it can quickly and reliably run on any computer environment.</p>
+                </section>
+                <section>
+                    <p>Applications contained in such a manner are called <strong>Containerized Applications</strong> as Virtual OS Environments, made for hosting and running applications.</p>
+                    <p class="fragment">They are similar to Virtual Machines, but much faster, more lightweight and extremely efficient.</p>
+                </section>
+                <section>
+                    <h2>What are the benefits of using Containers?</h2>
+                    <p class="fragment">
+                        You can quickly test your applications in development with exactly the same setup as in QA, Test or Production environments. 
+                    </p>
+                    <p class="fragment">You can also share this environment with other developers and ensure that you are working on exactly the same setup.</p>
+                </section>
+                <section>
+                    <p>No more OS compatibility issues, missing dependencies or version mismatches.</p>
+                    <p class="fragment">You can also do cool things like `diff`-ing Containers and be able to debug your applications by comparing different running environments.</p>
+                </section>
+            </section>
+
+            <!-- LIFECYCLE -->
+            <section>
+                <section data-background-image="./assets/69116-steps-in-design-process.gif">
+                    <h2 style="color: white; text-shadow: 0 0 10px #3739f7, 0 0 4px black, 0 0 48px #4ef381">The Lifecycle of a Container</h2>
+                    <img width="50%" src="./assets/" alt="">
+                </section>
+                <section>
+                    <p><strong>Step 1) Setting up our application.</strong></p>
+                    <p class="fragment"><small>This is what we were already doing during our usual application development cycle: writing code, downloading dependencies and so forth.</small></p>
+                </section>
+                <section>
+                    <p><strong>Step 2) Dockerfile: the instructions for building a Docker Image.</strong></p>
+                    <p class="fragment"><small>The contents of a Dockerfile contain instructions so that Docker can know how to download and install our application's dependencies, copy our files and folders that contain our application's code and also how to initialize and run our application. A programmer can think of Dockerfiles as the source code.</small></p>
+                </section>
+                <section>
+                    <p><strong>Step 3) Docker Image: an object that contains all the necessary files and folders for our application to run.</strong></p>
+                    <p class="fragment">
+                        <small>It is (a Container) in a stopped/sleep state though. A programmer can think of Images as Classes waiting to be instantiated.</small>
+                    </p>
+                </section>
+                <section>
+                    <p>
+                        <strong>Step 4) Container: This is when we use a Docker Image to run our application.</strong>
+                        <p class="fragment"><small>The Image is used to spawn instances of our running application. A programmer can think of Containers as the instances of Classes: new DockerImage();</small></p>
+                    </p>
+                </section>
+                <section>
+                    <p>A bit more about the Docker concepts mentioned in the steps above...</p>
+                </section>
+                <section>
+                    <h2>Docker Images<br>(Container Templates)</h2>
+                    <p class="fragment">You can think of Images as a package that contains an OS filesystem, our application and all its dependencies, waiting to be instantiated.</p>
+                    <p class="fragment">We can share Docker Images with anyone by uploading them to the Docker Registry (Hub) and we can also download (pull) Images and use them in our own environment. Images tend to be small in size.</p>
+                </section>
+                <section>
+                    <h2>Docker Container</h2>
+                    <p class="fragment">
+                        A Docker Image is actually a stopped Container. A Container is a running Image and it's all about making apps simple to build, share, ship and run. 
+                    </p>
+                    <p class="fragment">Of course, you'll need the Docker software in order to run a Docker Container.</p>
+                </section>
+            </section>
+
+            <!-- HANDONS: NODE -->
+            <section>
+                <section>
+                    <div style="display:flex; justify-content: center; align-items: center;">
+                        <img width="50%" src="./assets/73303-coding.gif" alt="">
+                        <div>
+                            <h3>HANDS-ON</h3>
+                            <p><small>Containerizing a Node.JS App</small></p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- NODE APP -->
+                <section>
+                    <p>Just a basic Node.JS app.</p>
+                    <p>./app.js</p>
+                    <pre>
+                        <code data-trim data-noescape>
+                            require("http").createServer((req,res)=>{
+
+                                res.end("Welcome to Node Web Server!");
+                          
+                            }).listen("8080", ()=>{
+                          
+                                console.log("Server listening on 8080");
+                          
+                            });
+                        </code>
+                    </pre>
+                    <p>
+                        <small>Quick test: <strong>node app.js</strong></small>
+                    </p>
+                </section>
+
+                <!-- DOCKERFILE -->
+                <section>
+                    <p>Our <strong>Dockerfile</strong></p>
+                    <p><small>(Will be used as a template for our Docker Image)</small></p>
+                    <pre class="bash"><code data-line-numbers="1-4|1|2|3|4|1-4" data-trim data-noescape>
+                    FROM mhart/alpine-node
+                    COPY app.js .
+                    EXPOSE 8080
+                    CMD node app.js
+                  </code></pre>
+                </section>
+
+                <!-- BUILD + TEST -->
+                <section>
+                    <pre class="bash"><code data-line-numbers="1-8|1|2|4|5|6|7|8|9|1-9" data-trim data-noescape>  
+                    docker build -t mynodeapp . 
+                    docker images
+                    #          -p hostPort:containerPort
+                    docker run -p 8080:8080 mynodeapp 
+                    docker ps -a
+                    docker stop [ContainerID]
+                    docker run -p 9000:8080 mynodeapp
+                    docker stop [ContainerID]
+                    docker exec -it [ContainerID] /bin/sh
+                      </code></pre>
+                </section>
+
+                <!-- EXPRESSJS APP -->
+                <section>
+                    <p>Just a basic Express.JS app.</p>
+                    <p>./express.js</p>
+                    <pre>
+                        <code data-trim data-noescape>
+                            require("express")().get("/", (req,res)=>{
+
+                                res.send("So Expresso!");
+                            
+                            }).listen(8080, ()=>{
+                            
+                                console.log("Express listening on 8080");
+                            
+                            });
+                        </code>
+                    </pre>
+                    <p>
+                        <small>Quick test: <strong>node express.js</strong></small>
+                    </p>
+                </section>
+
+                <!-- DOCKERFILE -->
+                <section>
+                    <p>Our <strong>Dockerfile</strong></p>
+                    <p><small>(Will be used as a template for our Docker Image)</small></p>
+                    <pre class="bash"><code data-line-numbers="1-6|1|2|3|4|5|6|1-6" data-trim data-noescape>
+                    FROM mhart/alpine-node
+                    COPY package.json package.json  # ADDITIONS
+                    RUN npm install                 # ADDITIONS
+                    COPY express.js .
+                    EXPOSE 8080
+                    CMD ["npm","start"]  
+                  </code></pre>
+                </section>
+
+                <!-- BUILD + TEST -->
+                <section>
+                    <pre class="bash"><code data-line-numbers="1-2|1|2|1-2" data-trim data-noescape>  
+                    docker build -t expressapp . 
+                    docker run -d -p 8080:8080 expressapp 
+                    </code></pre>
+                </section>
+                
+            </section>
+
+			<!-- DOCKER COMPOSE -->
+			<section>
+                <section>
+                    <h2>Docker Compose</h2>
+                    <p>
+                        <small>(quick mention)</small>
+                    </p>
+                    <img width="50%" src="./assets/docker-compose.png" alt="">
+                </section>
+                <section>
+                    <p>Typical applications consist of a mixture of multiple components such as backend, frontend, database, web server or another stand-alone app dependency etc..</p>
+                    <p class="fragment">In order to manage a full-fledged application, we need to create and maintain many separate Dockerfiles.</p>
+                </section>
+                <section>
+                    <p>Here, docker-compose comes to the rescue. With the help of docker-compose, we can define a multi-container application (all complex stack) in one single file and run it with a single command.</p>
+                    <p><strong>docker-compose up</strong></p>
+                </section>
+                <section>
+                    <p>Sample Docker Compose YAML</p>
+                    <p><small>docker-compose.yml</small></p>
+                    <pre style="font-size: 1rem;"><code data-noescape data-trim>
+                    version: '3.1'
+
+                    services:
+                        postgres_db:
+                        container_name: postgres_db
+                        image: postgres:latest
+                        environment:
+                            - POSTGRES_PASSWORD=root
+                            - POSTGRES_USER=root
+                            - POSTGRES_DB=users-db
+                        ports:
+                            - 5432:5432
+                        my-webapp:
+                        container_name: app-springboot-postgresql
+                        image: app-springboot-postgresql
+                        build: ./
+                        depends_on:
+                            - postgres_db
+                        ports:
+                            - 8088:8088</code></pre>
+                </section>
+            </section>
+
+            <!-- REFERENCES -->
+			<section data-background-color="#2496ed">
+                <section>
+                    <img width="100" src="./assets/docker-logo-white.png" alt="">
+                    <h2>Resources</h2>
+                    <ul>
+                        <li><a style="color:white;" href="https://www.freecodecamp.org/news/docker-simplified-96639a35ff36/">Docker Simplified: A Hands-On Guide for Absolute Beginners</a></li>
+                        <li><a style="color:white;" href="https://medium.com/dev-jam/docker-in-a-nutshell-f2e315211195">Docker in a Nutshell
+                        </a></li>
+                        <li><a style="color:white;" href="https://www.optimadata.nl/blogs/3/n8dyr5-how-to-run-postgres-on-docker-part-1">How to run Postgres on Docker</a></li>
+                    </ul>
+                </section>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
+    </script>
+</body>
+
+</html>
