@@ -280,6 +280,12 @@ _Illustration by [Maggie Appleton](https://maggieappleton.com/)_
 
 <h2>EXAMPLES SECTION</h2>
 
+#### React: Fetch from API and update View
+
+- [React | Fetch and Update View | **Codesandbox**](https://codesandbox.io/s/github/kostasx/EventLoop/tree/master/LearnReact/examples/fetch-and-update-view)
+- [React | Fetch and Update View | **GitHub Dev**](https://github.dev/kostasx/EventLoop/tree/master/LearnReact/examples/fetch-and-update-view)
+- [React | Fetch and Update View | **GitHub Repo**](https://github.com/kostasx/EventLoop/tree/master/LearnReact/examples/fetch-and-update-view)
+
 #### Component Lifecycle 
   - [CodeSandbox](https://codesandbox.io/s/v828m8j8x0)
   - [![Open in CodeSandbox](https://img.shields.io/badge/Open%20in-CodeSandbox-blue?style=flat-square&logo=codesandbox)](https://githubbox.com/kostasx/EventLoop/tree/master/LearnReact/examples/lifecycle)
