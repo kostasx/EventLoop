@@ -4,8 +4,7 @@
 
 ### Connect to PostgreSQL (via __pg__)
 
-- [ Node | Postgres | Connect to PostgreSQL via __pg__ package | **GitHub Repo**](https://github.com/kostasx/EventLoop/tree/master/LearnNode/examples/postgres-connect)
-- [ Node | Postgres | Connect to PostgreSQL via __pg__ package | **GitHub Dev**](https://github.dev/kostasx/EventLoop/tree/master/LearnNode/examples/postgres-connect)
+- [ Node | Postgres | Connect to PostgreSQL via __pg__ package | **GitHub Repo**](https://github.com/kostasx/EventLoop/blob/master/LearnNode/examples/postgres-connect/postgres-connect.js)
 
 
 ---
