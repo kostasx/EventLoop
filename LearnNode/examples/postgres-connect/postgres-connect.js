@@ -1,6 +1,6 @@
 const { Client, Pool } = require('pg'); // <-- npm install pg
 
-// CONNECTION CONFUGIRATION
+// CONNECTION CONFIGURATION
 config = {
     user    : "postgres",  // default process.env.PGUSER 
     password: "password",   // default process.env.PGPASSWORD
