@@ -1,5 +1,4 @@
-const { Client } = require('pg');
-const { Pool }   = require('pg'); 
+const { Client, Pool } = require('pg'); // <-- npm install pg
 
 // CONNECTION CONFUGIRATION
 config = {

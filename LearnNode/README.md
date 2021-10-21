@@ -6,6 +6,10 @@
 
 - [ Node | Postgres | Connect to PostgreSQL via __pg__ package | **GitHub Repo**](https://github.com/kostasx/EventLoop/blob/master/LearnNode/examples/postgres-connect/postgres-connect.js)
 
+### Connect to PostgreSQL with Sequelize ORM
+
+- [ Node | Postgres | Connect to PostgreSQL with Sequelize ORM | **GitHub Repo**](https://github.com/kostasx/EventLoop/blob/master/LearnNode/examples/postgres-connect/postgres-connect-sequelize.js)
+
 
 ---
 
