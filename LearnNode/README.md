@@ -8,7 +8,7 @@
 
 ### Connect to PostgreSQL with Sequelize ORM
 
-- [ Node | Postgres | Connect to PostgreSQL with Sequelize ORM | **GitHub Repo**](https://github.com/kostasx/EventLoop/blob/master/LearnNode/examples/postgres-connect/postgres-connect-sequelize.js)
+- [ Node | Postgres | Connect to PostgreSQL with Sequelize ORM | **GitHub Repo**](https://github.com/kostasx/EventLoop/blob/master/LearnNode/examples/postgres-connect-sequelize/postgres-connect-sequelize.js)
 
 
 ---
