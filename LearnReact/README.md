@@ -286,6 +286,12 @@ _Illustration by [Maggie Appleton](https://maggieappleton.com/)_
 - [React | Redux | useSelector & useDispatch | **GitHub Dev**](https://github.dev/kostasx/EventLoop/tree/master/LearnReact/examples/useselector-usedispatch)
 - [React | Redux | useSelector & useDispatch | **GitHub Repo**](https://github.com/kostasx/EventLoop/tree/master/LearnReact/examples/useselector-usedispatch)
 
+#### React: Context API
+
+- [React | Context API | **Codesandbox**](https://codesandbox.io/s/github/kostasx/EventLoop/tree/master/LearnReact/examples/context-api)
+- [React | Context API | **GitHub Dev**](https://github.dev/kostasx/EventLoop/tree/master/LearnReact/examples/context-api)
+- [React | Context API | **GitHub Repo**](https://github.com/kostasx/EventLoop/tree/master/LearnReact/examples/context-api)
+
 #### React: Fetch from API and update View
 
 - [React | Fetch and Update View | **Codesandbox**](https://codesandbox.io/s/github/kostasx/EventLoop/tree/master/LearnReact/examples/fetch-and-update-view)
