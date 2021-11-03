@@ -4,6 +4,10 @@
 
 _Illustration by [Maggie Appleton](https://maggieappleton.com/)_
 
+<h2>DIVE INTO REACT <em>(THE ESSENTIALS)</em></h2>
+
+- [**What is JSX?** by Kent C. Dodds](https://kentcdodds.com/blog/what-is-jsx)
+
 <h2>HOW TO SECTION <em>(TL;DR)</em></h2>
 
   <!--
