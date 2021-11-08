@@ -31,3 +31,17 @@ Interview questions
 https://www.toptal.com/javascript/interview-questions
 https://frontendinterviewhandbook.com/javascript-questions/
 https://edabit.com/challenges
+
+#### INTERVIEW QUESTIONS | SECURITY
+
+Make sure you are familiar with the basic security terms and feel comfortable to answer the following questions.
+
+- What is an XSS? Can you describe an example of an attack and its prevention?
+- What is CSRF? Can you describe an example of an attack and its prevention?
+- Why should we use HTTPS?
+- What is SQL Injection?
+- What is a DDoS?
+- Why do we hash passwords?
+- What is a Man-in-the-Middle Attack? How can we prevent such attacks?
+- Why do we need strong passwords?
+- What is a Rainbow Table (and a Rainbow Table attack)?
