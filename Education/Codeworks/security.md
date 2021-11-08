@@ -41,3 +41,11 @@ Example: https://www.google.com/search?q=csrf&source=lnms&tbm=isch&sa=X
 - [Cross Site Request Forgery (CSRF or XSRF)(3 min)](https://www.youtube.com/watch?v=m0EHlfTgGUU)
 
 - [Cross-Site Request Forgery (CSRF) Explained (15 min)](https://www.youtube.com/watch?v=eWEgUcHPle0)
+
+- **Reflected XSS vs Stored XSS**
+
+    - **Stored XSS (Persistent XSS)**: Attacker injects malicious content (payload, e.g. JavaScript code) into the target application, for example through an non-validated blog comment input field. The victim opens the affected target application and the attack payload is executed on the victim's browser.
+
+    - **Reflected XSS (Non-persistent XSS)**: In this case, the attacker’s payload has to be a part of the request that is sent to the web server. It is then reflected back in such a way that the HTTP response includes the payload from the HTTP request. Attackers use malicious links, phishing emails, and other social engineering techniques to lure the victim into making a request to the server. The reflected XSS payload is then executed in the user’s browser. Reflected XSS is not a persistent attack, so the attacker needs to deliver the payload to each victim. These attacks are often made using social networks.
+
+    - [(Source)](https://www.acunetix.com/websitesecurity/xss/)
