@@ -2,8 +2,7 @@
 
 ### SOLO PROJECT ORIENTATION GUIDELINES, SUGGESTIONS, TIPS AND RESOURCES
 
-- 1) Start by sketching out your application in a notebook or a whiteboard. This high level overview will help you define the different parts of the app and their responsibilities using a high level of abstraction. At this point, you shouldn't be thinking in code. Plain logic and common sense is all you need to set up a basic diagram/skeleton for your app.
-- You can use Excalidraw for creating and sharing this diagram: https://excalidraw.com/   
+- 1) Start by sketching out your application in a notebook or a whiteboard. This high level overview will help you define the different parts of the app and their responsibilities using a high level of abstraction. At this point, you shouldn't be thinking in code. Plain logic and common sense is all you need to set up a basic diagram/skeleton for your app. You can use Excalidraw for creating and sharing this diagram: https://excalidraw.com/   
 - 1.1) Once you've passed this stage, you are ready to think in terms of Modules/Components that make up the parts of your application and organize them in files and folders.
 - 1.2) At an even lower level, you will go into these Modules/Components and start writing the code to implement their functionality. You might split these parts into even smaller, simpler and more manageable parts to keep things simple. Remember: Complexity is your enemy. Whatever reduces complexity, makes your life easier and reduces the possibility of introducing bugs, security issues and unintended side-effects.
 
