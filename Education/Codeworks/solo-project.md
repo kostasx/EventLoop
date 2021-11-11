@@ -13,8 +13,8 @@
   - https://app.dbdesigner.net/
   - https://app.sqldbm.com/
   - https://www.lucidchart.com/pages/
-  3.1 For relational databases, make sure your database enforces the basic normalization rules (1NF, 2NF, 3NF). You can study more about Database Normalization here: https://www.geeksforgeeks.org/introduction-of-database-normalization/
-  3.2 Designing your Database
+  1. For relational databases, make sure your database enforces the basic normalization rules (1NF, 2NF, 3NF). You can study more about Database Normalization here: https://www.geeksforgeeks.org/introduction-of-database-normalization/
+  2. Designing your Database
     - Read: [The 4 Phases of designing a  Database](https://www.linkedin.com/pulse/4-phases-create-database-design-martin-tolovski/)
     - [Watch 7min (for Relational DB's)](https://www.youtube.com/watch?v=cepspxPAUTA) 
     - [Watch 5min (for Relational DB's)](https://www.youtube.com/watch?v=wR0jg0eQsZA)  
