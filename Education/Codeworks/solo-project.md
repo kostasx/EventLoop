@@ -2,7 +2,7 @@
 
 ### SOLO PROJECT ORIENTATION GUIDELINES, SUGGESTIONS, TIPS AND RESOURCES
 
-> Version: 1.0
+> Version: 1.0.1
 
 **DESIGN PROCESS**
 
@@ -69,3 +69,6 @@ And some awesome animations available from [https://lottiefiles.com](https://lot
 
 2. Make use of CSS UI Kits like `Material Design` to quickly have a beautiful frontend setup, if you need to invest time on the actual functionality. You can customize the CSS as much as you can, once you have the basic MVP functionality on schedule. For example, see: [https://mdbootstrap.com](https://mdbootstrap.com)
 
+**PERFORMANCE**
+
+1. Use a Tool like [ImageOptim (Mac)](https://imageoptim.com/mac) or [Bamboo](https://christopherwk210.github.io/bamboo/), or a free service like [TinyPNG](https://tinypng.com/) to decrease the file size of your images.
