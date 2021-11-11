@@ -14,6 +14,12 @@
   - https://app.sqldbm.com/
   - https://www.lucidchart.com/pages/
   3.1 For relational databases, make sure your database enforces the basic normalization rules (1NF, 2NF, 3NF). You can study more about Database Normalization here: https://www.geeksforgeeks.org/introduction-of-database-normalization/
+  3.2 Designing your Database
+    - Read: [The 4 Phases of designing a  Database](https://www.linkedin.com/pulse/4-phases-create-database-design-martin-tolovski/)
+    - [Watch 7min (for Relational DB's)](https://www.youtube.com/watch?v=cepspxPAUTA) 
+    - [Watch 5min (for Relational DB's)](https://www.youtube.com/watch?v=wR0jg0eQsZA)  
+    - Extra: [Watch 7min (for Relational DB's and ERD Diagrams)](https://www.youtube.com/watch?v=QpdhBUYk7Kk)
+
 
 4. Prefer libraries/frameworks/technologies we have covered in the lectures. Strengthen your skills on these technologies and let us help and support you in the most efficient manner. If you feel adventurous, don't stray too much from the course stack. You might pick a new CSS library or a third-party React component, but switching to a stack that is completely different from the course (e.g. Vue.JS + Next.JS + Firebase) is not recommended.
   4.1 When picking a third-party module, library, plugin, npm package, make sure to check:
