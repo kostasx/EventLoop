@@ -1,5 +1,7 @@
 ## CODEWORKS | EXTRA RESOURCES + NOTES
 
+![](./LOGO.small.png)
+
 ### [=> SECURITY](./security.md)
 
 ### [=> SOLO PROJECT ORIENTATION](./solo-project.md)
