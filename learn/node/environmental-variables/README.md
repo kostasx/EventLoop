@@ -6,7 +6,7 @@ Environmental Variables allow us to configure various values (ports, DB connecti
 
 This repo uses the [Codetour VSCode extension](https://marketplace.visualstudio.com/items?itemName=vsls-contrib.codetour), so make sure to **install it** before downloading and opening the repo.
 
-To download and see the tour, follow the steps below:
+To download and see the tour, follow the steps below (or watch this [video](https://www.youtube.com/watch?v=ykF8k2f8epk)):
 
 1) Install the `Codetour` VSCode extension
 
