@@ -2,15 +2,21 @@
 
 ## HOW TO SECTION _(TL;DR;)_
 
-### Connect to PostgreSQL (using __pg__)
+#### Setting up Environmental variables for development/production environments
+
+- [ Node | Setting up environmental variables | **GitHub Repo**](https://github.com/kostasx/EventLoop/blob/master/learn/node/environmental-variables/)
+
+### DATABASES
+
+#### PostgreSQL: Connect using __pg__
 
 - [ Node | Postgres | Connect to PostgreSQL using __pg__ package | **GitHub Repo**](https://github.com/kostasx/EventLoop/blob/master/learn/node/postgres-connect/postgres-connect.js)
 
-### Connect to PostgreSQL with Sequelize ORM
+#### PostgreSQL: Connect with Sequelize ORM
 
 - [ Node | Postgres | Connect to PostgreSQL with Sequelize ORM | **GitHub Repo**](https://github.com/kostasx/EventLoop/blob/master/learn/node/postgres-connect-sequelize/postgres-connect-sequelize.js)
 
-### PostgreSQL Simple CRUD (Table Create/Read/Update/Delete) (using __pg__ module)
+#### PostgreSQL: Simple CRUD (Table Create/Read/Update/Delete) (using __pg__ module)
 
 - [ Node | Postgres | PostgreSQL Simple CRUD () (using __pg__ module) | **GitHub Repo**](https://github.com/kostasx/EventLoop/blob/master/learn/node/postgres-crud/postgres-crud.js)
 
