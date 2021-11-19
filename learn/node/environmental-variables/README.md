@@ -1,15 +1,11 @@
-- Environmental Variables allow us to configure various values (ports, DB connections, host, etc.) for our application for multiple environments (dev, test, stage, production).
+Environmental Variables allow us to configure various values (ports, DB connections, host, etc.) for our application for multiple environments (dev, test, stage, production).
 
-## QUICKSTART (Using dotenv)
+## QUICKSTART (Using dotenv) WITH [CODETOUR](https://marketplace.visualstudio.com/items?itemName=vsls-contrib.codetour)
 
-npm init -y
+`npm init -y`
 
-npm install express dotenv
-npm install cross-env -D
-
-touch app.js
-touch env.production
-touch env.development
+`npm install express dotenv`
+`npm install cross-env -D`
 
 ## REFERENCES
 
