@@ -10,7 +10,7 @@
     {
       "file": "package.json",
       "description": "Here, we set a different enviromental value depending on the environment we are about to run (dev for development, prod for production).\n\nOf course, these scripts can be executed via the `npm run dev` and `npm run prod` commands, and can also take custom names, \ne.g. `\"development\" : \"cross-env ...\"`",
-      "line": 7
+      "line": 8
     },
     {
       "file": "app.js",
@@ -19,13 +19,13 @@
     },
     {
       "file": "app.js",
-      "description": "We can read the environmental variables via the `process.env` object.\n\nFor example, an environmental variable found in our .env file like this:\n\nAPI=https://codeworks.me\n\n...can be acccessed in our JS code, like this:\n\n`console.log( process.env.API );`\n",
+      "description": "We can read the environmental variables via the `process.env` object.\n\nFor example, an environmental variable found in our .env file like this:\n\nAPI=https://codeworks.me\n\n...can be acccessed in our JS code, like this:\n\n`console.log( process.env.API );`\n\nThe value of `environment` will be `production` for `npm start prod` and `development` for `npm start dev`.\n",
       "line": 5
     },
     {
       "file": "app.js",
       "description": "By default, the `dotenv` configuration loads the `.env` file, but we need to declare and use 2 different environmental files using \nthe config options shown in the next step.",
-      "line": 9
+      "line": 8
     },
     {
       "file": "app.js",
@@ -34,8 +34,8 @@
     },
     {
       "file": "app.js",
-      "description": "Depending on the script we are running (`npm run dev`, `npm run prod`) we are going to read different values for the `process.env.API` variable, hitting a different API endpoint in each case.",
-      "line": 24
+      "description": "Depending on the script we are running (`npm run dev`, `npm run prod`) we are going to read different values for the `process.env.API` variable, hitting a different API endpoint in each case.\n",
+      "line": 19
     },
     {
       "file": "app.js",
