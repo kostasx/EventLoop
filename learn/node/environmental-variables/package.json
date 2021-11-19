@@ -1,0 +1,21 @@
+{
+  "name": "environments",
+  "version": "1.0.0",
+  "description": "- Environmental Variables allow us to configure various values (ports, DB connections, host, etc.) for our application for multiple environments (dev, test, stage, production).",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development node app.js",
+    "prod": "cross-env NODE_ENV=production node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}
