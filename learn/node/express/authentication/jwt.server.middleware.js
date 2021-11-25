@@ -12,6 +12,9 @@ app.post("/login", (req,res)=>{
         const token = jwt.sign({ username }, secret_key );
         // (2) SEND TOKEN TO CLIENT
         return res.json({ token });
+        // CLIENT will send this token to the backend as an authorization header
+        // on each subsequent request. The preferred form is:
+        // Authorization: Bearer <TOKEN>
     } 
     res.send("AUTH FAILED");
 });
