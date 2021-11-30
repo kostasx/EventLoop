@@ -286,43 +286,43 @@ _Illustration by [Maggie Appleton](https://maggieappleton.com/)_
 
 #### React/Redux: useSelector and useDispatch
 
-- [React | Redux | useSelector & useDispatch | **Codesandbox**](https://codesandbox.io/s/github/kostasx/EventLoop/tree/master/LearnReact/examples/useselector-usedispatch)
-- [React | Redux | useSelector & useDispatch | **GitHub Dev**](https://github.dev/kostasx/EventLoop/tree/master/LearnReact/examples/useselector-usedispatch)
-- [React | Redux | useSelector & useDispatch | **GitHub Repo**](https://github.com/kostasx/EventLoop/tree/master/LearnReact/examples/useselector-usedispatch)
+- [React | Redux | useSelector & useDispatch | **Codesandbox**](https://codesandbox.io/s/github/kostasx/EventLoop/tree/master/learn/react/examples/useselector-usedispatch)
+- [React | Redux | useSelector & useDispatch | **GitHub Dev**](https://github.dev/kostasx/EventLoop/tree/master/learn/react/examples/useselector-usedispatch)
+- [React | Redux | useSelector & useDispatch | **GitHub Repo**](https://github.com/kostasx/EventLoop/tree/master/learn/react/examples/useselector-usedispatch)
 
 #### React: Context API
 
-- [React | Context API | **Codesandbox**](https://codesandbox.io/s/github/kostasx/EventLoop/tree/master/LearnReact/examples/context-api)
-- [React | Context API | **GitHub Dev**](https://github.dev/kostasx/EventLoop/tree/master/LearnReact/examples/context-api)
-- [React | Context API | **GitHub Repo**](https://github.com/kostasx/EventLoop/tree/master/LearnReact/examples/context-api)
+- [React | Context API | **Codesandbox**](https://codesandbox.io/s/github/kostasx/EventLoop/tree/master/learn/react/examples/context-api)
+- [React | Context API | **GitHub Dev**](https://github.dev/kostasx/EventLoop/tree/master/learn/react/examples/context-api)
+- [React | Context API | **GitHub Repo**](https://github.com/kostasx/EventLoop/tree/master/learn/react/examples/context-api)
 
 #### React: Fetch from API and update View
 
-- [React | Fetch and Update View | **Codesandbox**](https://codesandbox.io/s/github/kostasx/EventLoop/tree/master/LearnReact/examples/fetch-and-update-view)
-- [React | Fetch and Update View | **GitHub Dev**](https://github.dev/kostasx/EventLoop/tree/master/LearnReact/examples/fetch-and-update-view)
-- [React | Fetch and Update View | **GitHub Repo**](https://github.com/kostasx/EventLoop/tree/master/LearnReact/examples/fetch-and-update-view)
+- [React | Fetch and Update View | **Codesandbox**](https://codesandbox.io/s/github/kostasx/EventLoop/tree/master/learn/react/examples/fetch-and-update-view)
+- [React | Fetch and Update View | **GitHub Dev**](https://github.dev/kostasx/EventLoop/tree/master/learn/react/examples/fetch-and-update-view)
+- [React | Fetch and Update View | **GitHub Repo**](https://github.com/kostasx/EventLoop/tree/master/learn/react/examples/fetch-and-update-view)
 
 #### Component Lifecycle 
   - [CodeSandbox](https://codesandbox.io/s/v828m8j8x0)
-  - [![Open in CodeSandbox](https://img.shields.io/badge/Open%20in-CodeSandbox-blue?style=flat-square&logo=codesandbox)](https://githubbox.com/kostasx/EventLoop/tree/master/LearnReact/examples/lifecycle)
+  - [![Open in CodeSandbox](https://img.shields.io/badge/Open%20in-CodeSandbox-blue?style=flat-square&logo=codesandbox)](https://githubbox.com/kostasx/EventLoop/tree/master/learn/react/examples/lifecycle)
 
 #### Avoid re-rendering of Child Components when Parent state/props change using **shouldComponentUpdate()** 
-  - [![Open in CodeSandbox](https://img.shields.io/badge/Open%20in-CodeSandbox-blue?style=flat-square&logo=codesandbox)](https://githubbox.com/kostasx/EventLoop/tree/master/LearnReact/examples/shouldcomponentupdate)
+  - [![Open in CodeSandbox](https://img.shields.io/badge/Open%20in-CodeSandbox-blue?style=flat-square&logo=codesandbox)](https://githubbox.com/kostasx/EventLoop/tree/master/learn/react/examples/shouldcomponentupdate)
 
 #### Class [1] vs Functional [2] React Components: Same state [1] causes / [2] does not cause re-render 
-  - [![Open in CodeSandbox](https://img.shields.io/badge/Open%20in-CodeSandbox-blue?style=flat-square&logo=codesandbox)](https://githubbox.com/kostasx/EventLoop/tree/master/LearnReact/examples/functional-vs-class-state-updates)
+  - [![Open in CodeSandbox](https://img.shields.io/badge/Open%20in-CodeSandbox-blue?style=flat-square&logo=codesandbox)](https://githubbox.com/kostasx/EventLoop/tree/master/learn/react/examples/functional-vs-class-state-updates)
 
 #### React Redux Basic CRUD Store
 
-- [React | Redux | Basic CRUD Store | **Codesandbox**](https://codesandbox.io/s/github/kostasx/EventLoop/tree/master/LearnReact/examples/reactjs-redux-crud-store)
-- [React | Redux | Basic CRUD Store | **GitHub Dev**](https://github.dev/kostasx/EventLoop/tree/master/LearnReact/examples/reactjs-redux-crud-store)
-- [React | Redux | Basic CRUD Store | **GitHub Repo**](https://github.com/kostasx/EventLoop/tree/master/LearnReact/examples/reactjs-redux-crud-store)
+- [React | Redux | Basic CRUD Store | **Codesandbox**](https://codesandbox.io/s/github/kostasx/EventLoop/tree/master/learn/react/examples/reactjs-redux-crud-store)
+- [React | Redux | Basic CRUD Store | **GitHub Dev**](https://github.dev/kostasx/EventLoop/tree/master/learn/react/examples/reactjs-redux-crud-store)
+- [React | Redux | Basic CRUD Store | **GitHub Repo**](https://github.com/kostasx/EventLoop/tree/master/learn/react/examples/reactjs-redux-crud-store)
 
 #### React + Redux: Get Initial State from  API
 
-- [React | Redux | Basic CRUD Store | **Codesandbox**](https://codesandbox.io/s/github/kostasx/EventLoop/tree/master/LearnReact/examples/redux-initial-state-from-api)
-- [React | Redux | Basic CRUD Store | **GitHub Dev**](https://github.dev/kostasx/EventLoop/tree/master/LearnReact/examples/redux-initial-state-from-api)
-- [React | Redux | Basic CRUD Store | **GitHub Repo**](https://github.com/kostasx/EventLoop/tree/master/LearnReact/examples/redux-initial-state-from-api)
+- [React | Redux | Basic CRUD Store | **Codesandbox**](https://codesandbox.io/s/github/kostasx/EventLoop/tree/master/learn/react/examples/redux-initial-state-from-api)
+- [React | Redux | Basic CRUD Store | **GitHub Dev**](https://github.dev/kostasx/EventLoop/tree/master/learn/react/examples/redux-initial-state-from-api)
+- [React | Redux | Basic CRUD Store | **GitHub Repo**](https://github.com/kostasx/EventLoop/tree/master/learn/react/examples/redux-initial-state-from-api)
 
 ---
 
