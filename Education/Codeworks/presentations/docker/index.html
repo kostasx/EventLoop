@@ -238,22 +238,22 @@
 
                     services:
                         postgres_db:
-                        container_name: postgres_db
-                        image: postgres:latest
-                        environment:
-                            - POSTGRES_PASSWORD=root
-                            - POSTGRES_USER=root
-                            - POSTGRES_DB=users-db
-                        ports:
-                            - 5432:5432
+                            container_name: postgres_db
+                            image: postgres:latest
+                            environment:
+                                - POSTGRES_PASSWORD=root
+                                - POSTGRES_USER=root
+                                - POSTGRES_DB=users-db
+                            ports:
+                                - 5432:5432
                         my-webapp:
-                        container_name: app-springboot-postgresql
-                        image: app-springboot-postgresql
-                        build: ./
-                        depends_on:
-                            - postgres_db
-                        ports:
-                            - 8088:8088</code></pre>
+                            container_name: app-springboot-postgresql
+                            image: app-springboot-postgresql
+                            build: ./
+                            depends_on:
+                                - postgres_db
+                            ports:
+                                - 8088:8088</code></pre>
                 </section>
             </section>
 
