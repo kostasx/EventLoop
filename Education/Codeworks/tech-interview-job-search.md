@@ -1,5 +1,9 @@
 ## TECH INTERVIEW & JOB SEARCH
 
+#### CV & RESUME RESOURCES
+
+- [Build a job-winning resume for free using **flowcv.io**](https://flowcv.io/)
+
 #### INTERVIEW FEEDBACK AND TIPS 
 
 In general, the company is interviewing you as much as you are interviewing them. If you don't leave the interview knowing all the useful extra info about the company, you did not do a good enough job.
@@ -49,3 +53,9 @@ Make sure you are familiar with the basic security terms and feel comfortable to
 - What is a Man-in-the-Middle Attack? How can we prevent such attacks?
 - Why do we need strong passwords?
 - What is a Rainbow Table (and a Rainbow Table attack)?
+
+---
+
+## CONTRIBUTORS
+
+- [**Eugen Nikolajev** for suggesting the *FlowCV* resume building app](https://github.com/zenicek)
