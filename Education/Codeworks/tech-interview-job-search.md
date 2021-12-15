@@ -18,19 +18,23 @@ Things that you might want to ask about the company:
 
 ---
 
+Watch [How to Prepare for Technical Interviews (CS50)](https://www.youtube.com/watch?v=QDC1Ik-SeOI)
+
 Watch the mock tech interview parts on "How to Prepare for Technical Interviews":
 
-https://youtu.be/TzdajQHS7xA?t=4156 (Mock Interview 1)
-https://youtu.be/TzdajQHS7xA?t=5682 (Mock Interview 2)
+- [Mock Interview 1](https://youtu.be/TzdajQHS7xA?t=4156)  
+- [Mock Interview 2](https://youtu.be/TzdajQHS7xA?t=5682) 
 
-Search for sets of questions at Quizlet for various subjects, e.g. HTML, CSS, JS, React, etc.
-> https://quizlet.com/subject/react-interview/
+**Interview questions**
 
-Interview questions
-
-https://www.toptal.com/javascript/interview-questions
-https://frontendinterviewhandbook.com/javascript-questions/
-https://edabit.com/challenges
+- [TOPTAL JS QUESTIONS](https://www.toptal.com/javascript/interview-questions)
+- [Frontend Interview Handbook](https://frontendinterviewhandbook.com/javascript-questions/)
+- Search for sets of questions at [**Quizlet**](https://quizlet.com) for various subjects, e.g. HTML, CSS, JS, React, etc.
+  - [Quizlet: React Interview Questions](https://quizlet.com/subject/react-interview/)
+- [React Interview Questions and Answers](https://dev.to/javascriptacademy/react-interview-questions-answered-and-explained-1-1b95)
+- [https://www.toptal.com/javascript/interview-questions](https://www.toptal.com/javascript/interview-questions)
+- [https://frontendinterviewhandbook.com/javascript-questions/](https://frontendinterviewhandbook.com/javascript-questions/)
+- [https://edabit.com/challenges](https://edabit.com/challenges)
 
 #### INTERVIEW QUESTIONS | SECURITY
 
