@@ -58,4 +58,4 @@ Make sure you are familiar with the basic security terms and feel comfortable to
 
 ## CONTRIBUTORS
 
-- [**Eugen Nikolajev** for suggesting the *FlowCV* resume building app](https://github.com/zenicek)
+- [**Eugen Nikolajev**](https://github.com/zenicek) for suggesting the *FlowCV* resume building app
