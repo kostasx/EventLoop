@@ -58,6 +58,26 @@ Make sure you are familiar with the basic security terms and feel comfortable to
 
 - [Wolt Engineering Challenge](https://github.com/woltapp/summer2020)
 
+<details>
+    <summary>Roman Numerals</summary>
+    <br>
+    <h5>Real-life take-home technical assignment/problem</h5>
+    <p>In whatever language you prefer, write a class that implements the following interface (example given in Java):</p>
+    <pre><code>
+        public interface RomanNumeralGenerator {
+            public String generate(int number); 
+        }
+    </code></pre>
+    <p>For example, see the following sample inputs and outputs:</p>
+    <pre>
+        1 = “I” 
+        5 = “V” 
+        10 = “X” 
+        20 = “XX” 
+        3999 = “MMMCMXCIX”
+    </pre>
+</details>    
+
 ---
 
 ## CONTRIBUTORS
