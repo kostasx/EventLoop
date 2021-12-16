@@ -54,8 +54,15 @@ Make sure you are familiar with the basic security terms and feel comfortable to
 - Why do we need strong passwords?
 - What is a Rainbow Table (and a Rainbow Table attack)?
 
+#### CODING CHALLENGES
+
+- [Wolt Engineering Challenge](https://github.com/woltapp/summer2020)
+
 ---
 
 ## CONTRIBUTORS
 
 - [**Eugen Nikolajev**](https://github.com/zenicek) for suggesting the *FlowCV* resume building app
+
+---
+_Updated: 16.12.2021_
