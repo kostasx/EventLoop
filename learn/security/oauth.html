@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EventLoop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <!-- Cabin | Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Merriweather-Regular';
+            src: url('../../assets/fonts/Merriweather-Regular.woff2') format('woff2');
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Cabin', sans-serif !important;
+        }
+        
+        p,
+        li,
+        strong {
+            font-family: 'Merriweather-Regular', serif;
+            line-height: 1.6;
+            font-size: 17px;
+            color: #333;
+            text-rendering: optimizeLegibility;
+        }
+        
+        strong {
+            color: black;
+        }
+    </style>
+
+    <!-- Bootstrap 4 -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+
+</head>
+
+<body>
+
+    <!-- Theme based on https://github.com/tailwindtoolbox/Minimal-Blog -->
+
+    <body class="bg-gray-100 font-sans leading-normal tracking-normal">
+
+        <!-- NAVIGATION -->
+        <nav id="header" class="fixed w-full z-10 top-0">
+
+            <div id="progress" class="h-1 z-20 top-0" style="background:linear-gradient(to right, #4dc0b5 var(--scroll), transparent 0);"></div>
+
+            <div class="w-full md:max-w-4xl mx-auto flex flex-wrap items-center justify-between mt-0 py-3">
+
+                <div class="pl-4">
+                    <a class="text-gray-900 text-base no-underline hover:no-underline font-extrabold text-xl" href="#">
+                        EventLoop.gr
+                    </a>
+                </div>
+
+                <!-- MOBILE MENU (DEACTIVATED)-->
+                <div class="hidden Dblock lg:hidden pr-4">
+                    <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-900 hover:border-green-500 appearance-none focus:outline-none">
+                        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <title>Menu</title>
+                            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- (DEACTIVATED) -->
+                <div class="Dlg:block Dlg:flex hidden w-full flex-grow lg:items-center lg:w-auto mt-2 lg:mt-0 bg-gray-100 md:bg-transparent z-20" id="nav-content">
+                    <ul class="list-reset lg:flex justify-end flex-1 items-center">
+                        <li class="mr-3">
+                            <a class="inline-block py-2 px-4 text-gray-900 font-bold no-underline" href="#">Active</a>
+                        </li>
+                        <li class="mr-3">
+                            <a class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-2 px-4" href="#">link</a>
+                        </li>
+                        <li class="mr-3">
+                            <a class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-2 px-4" href="#">link</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!--Container-->
+        <div class="container w-full md:max-w-3xl mx-auto pt-20">
+
+            <div class="w-full px-4 md:px-6 text-xl text-gray-800 leading-normal" style="font-family:Georgia,serif;">
+
+                <!--Title-->
+                <div class="font-sans">
+                    <!-- BACK TO BLOG -->
+                    <!--/ BACK TO BLOG -->
+                    <h1 class="font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-3xl md:text-4xl">The OAuth 2.0 Authorization Framework</h1>
+                    <h2 class="text-2xl mb-4 text-blue-600">
+                        <a href="https://datatracker.ietf.org/doc/html/rfc6749">RFC 6749 
+                        </a>
+                    </h2>
+
+                    <!-- DATE -->
+                    <p class="text-sm md:text-base font-normal text-gray-600">Published 14 December 2021</p>
+                </div>
+
+
+                <!--Post Content-->
+                <p class="py-6">
+                    <img src="./assets/img/undraw_secure_login_pdn4.svg" width="60%" alt="oauth">
+                </p>
+
+
+                <!--Lead Para-->
+                <h2 class="py-4 text-2xl">Abstract</h2>
+                <p class="py-4">
+                    The OAuth 2.0 authorization framework enables a third-party application to obtain limited access to an HTTP service, either on behalf of a resource owner by orchestrating an approval interaction between the resource owner and the HTTP service, or by allowing
+                    the third-party application to obtain access on its own behalf.
+                </p>
+                <h2 class="py-4 text-2xl">Introduction</h2>
+                <p>
+                    In the traditional client-server authentication model, the client requests an access-restricted resource (protected resource) on the server by authenticating with the server using the resource owner's credentials. In order to provide third-party applications
+                    access to restricted resources, the resource owner shares its credentials with the third party. This creates several problems and limitations:
+
+                    <ul class="text-lg ml-8 mt-4 list-disc">
+                        <li>
+                            Third-party applications are required to store the resource owner's credentials for future use, typically a password in clear-text.
+                        </li>
+                        <li>
+                            Servers are required to support password authentication, despite the security weaknesses inherent in passwords.
+                        </li>
+                        <li>
+                            Third-party applications gain overly broad access to the resource owner's protected resources, leaving resource owners without any ability to restrict duration or access to a limited subset of resources.
+                        </li>
+                        <li>
+                            Resource owners cannot revoke access to an individual third party without revoking access to all third parties, and must do so by changing the third party's password.
+                        </li>
+                        <li>
+                            Compromise of any third-party application results in compromise of the end-user's password and all of the data protected by that password.
+                        </li>
+                    </ul>
+                </p>
+                <p class="py-4">
+                    OAuth addresses these issues by introducing an authorization layer and separating the role of the client from that of the resource owner. In OAuth, the client requests access to resources controlled by the resource owner and hosted by the resource server,
+                    and is issued a different set of credentials than those of the resource owner.
+                </p>
+                <p class="py-4">
+                    Instead of using the resource owner's credentials to access protected resources, the client obtains an access token -- a string denoting a specific scope, lifetime, and other access attributes. Access tokens are issued to third-party clients by an authorization
+                    server with the approval of the resource owner. The client uses the access token to access the protected resources hosted by the resource server.
+                </p>
+                <p class="py-4">
+                    For example, an end-user (resource owner) can grant a printing service (client) access to her protected photos stored at a photo-sharing service (resource server), without sharing her username and password with the printing service. Instead, she authenticates
+                    directly with a server trusted by the photo-sharing service (authorization server), which issues the printing service delegation-specific credentials (access token). [This process requires that the client has already registered with the authorization server. During this process the authorization server issues a unique public identifier for the client.][Author]
+                </p>
+                <p class="py-4">
+                    This specification is designed for use with HTTP.
+                </p>
+                <h2 class="py-4 text-2xl">Terminology: Roles</h2>
+                <p class="py-4">
+                    OAuth defines four roles:
+                    <ul class="text-lg ml-8 mt-4 list-disc">
+                        <li>
+                            <strong>resource owner:</strong> An entity capable of granting access to a protected resource. When the resource owner is a person, it is referred to as an end-user.
+                        </li>
+                        <li>
+                            <strong>resource server:</strong> The server hosting the protected resources, capable of accepting and responding to protected resource requests using access tokens.
+                        </li>
+                        <li>
+                            <strong>client:</strong> An application making protected resource requests on behalf of the resource owner and with its authorization. The term "client" does not imply any particular implementation characteristics (e.g., whether
+                            the application executes on a server, a desktop, or other devices).
+                        </li>
+                        <li>
+                            <strong>authorization server:</strong> The server issuing access tokens to the client after successfully authenticating the resource owner and obtaining authorization.
+                        </li>
+                    </ul>
+                </p>
+                <p class="py-4">
+                    The authorization server may be the same server as the resource server or a separate entity. A single authorization server may issue access tokens accepted by multiple resource servers.
+                </p>
+                <hr class="text-gray-300 mt-6">
+                <p class="mt-4">
+                    Source: <a class="text-green-500 no-underline hover:underline" target="_blank" href="https://datatracker.ietf.org/doc/html/rfc6749">IETF - RFC 6749</a>
+                </p>
+
+                <!--/ Post Content-->
+
+            </div>
+
+            <!--Author-->
+            <div class="flex w-full items-center font-sans px-4 py-12">
+                <img class="w-10 h-10 rounded-full mr-4" src="http://www.gravatar.com/avatar/9dbc477e6826297e6cc1d4aad5509be2.jpg?s=80" alt="Avatar of Author">
+                <div class="flex-1 px-2">
+                    <p class="text-base font-bold text-base md:text-xl leading-none mb-2">Kostas Minaidis</p>
+                    <p class="text-gray-600 text-xs md:text-base">Software Developer &amp; Tech Educator</p>
+                </div>
+                <!-- DEACTIVATED -->
+                <div class="hidden justify-end">
+                    <button class="bg-transparent border border-gray-500 hover:border-green-500 text-xs text-gray-500 hover:text-green-500 font-bold py-2 px-4 rounded-full">Read More</button>
+                </div>
+            </div>
+            <!--/Author-->
+
+            <!--Divider-->
+
+            <!--Next & Prev Links-->
+            <!--/Next & Prev Links-->
+
+        </div>
+        <!--/container-->
+
+        <!-- DEACTIVATED -->
+        <footer class="hidden bg-white border-t border-gray-400 shadow">
+            <div class="container max-w-4xl mx-auto flex py-8">
+
+                <div class="w-full mx-auto flex flex-wrap">
+                    <div class="flex w-full md:w-1/2 ">
+                        <div class="px-8">
+                            <h3 class="font-bold text-gray-900">About</h3>
+                            <p class="py-4 text-gray-600 text-sm">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel mi ut felis tempus commodo nec id erat. Suspendisse consectetur dapibus velit ut lacinia.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex w-full md:w-1/2">
+                        <div class="px-8">
+                            <h3 class="font-bold text-gray-900">Social</h3>
+                            <ul class="list-reset items-center text-sm pt-3">
+                                <li>
+                                    <a class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-1" href="#">Add social link</a>
+                                </li>
+                                <li>
+                                    <a class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-1" href="#">Add social link</a>
+                                </li>
+                                <li>
+                                    <a class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-1" href="#">Add social link</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </footer>
+
+        <script>
+            /* Progress bar */
+            //Source: https://alligator.io/js/progress-bar-javascript-css-variables/
+            var h = document.documentElement,
+                b = document.body,
+                st = 'scrollTop',
+                sh = 'scrollHeight',
+                progress = document.querySelector('#progress'),
+                scroll;
+            var scrollpos = window.scrollY;
+            var header = document.getElementById("header");
+            var navcontent = document.getElementById("nav-content");
+
+            document.addEventListener('scroll', function() {
+
+                /*Refresh scroll % width*/
+                scroll = (h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight) * 100;
+                progress.style.setProperty('--scroll', scroll + '%');
+
+                /*Apply classes for slide in bar*/
+                scrollpos = window.scrollY;
+
+                if (scrollpos > 10) {
+                    header.classList.add("bg-white");
+                    header.classList.add("shadow");
+                    navcontent.classList.remove("bg-gray-100");
+                    navcontent.classList.add("bg-white");
+                } else {
+                    header.classList.remove("bg-white");
+                    header.classList.remove("shadow");
+                    navcontent.classList.remove("bg-white");
+                    navcontent.classList.add("bg-gray-100");
+
+                }
+
+            });
+
+
+            //Javascript to toggle the menu
+            document.getElementById('nav-toggle').onclick = function() {
+                document.getElementById("nav-content").classList.toggle("hidden");
+            }
+        </script>
+
+    </body>
+</body>
+
+</html>
