@@ -57,6 +57,7 @@ Make sure you are familiar with the basic security terms and feel comfortable to
 #### CODING CHALLENGES
 
 - [Wolt Engineering Challenge](https://github.com/woltapp/summer2020)
+- [Recreate a Word Puzzle (coding challenge requested by a fintech company)](https://lovattspuzzles.com/online-puzzles-competitions/play-daily-word-search-puzzle-online/)
 
 <details>
     <summary>Roman Numerals</summary>
