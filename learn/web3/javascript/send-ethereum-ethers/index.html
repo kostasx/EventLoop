@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethers + Metamask</title>
+    <script src="https://unpkg.com/ethers@5.5.2/dist/ethers.umd.min.js"></script>
+</head>
+<body>
+
+    <form>
+        <input id="eth" name="eth" type="number" value="0.01">
+        <input id="recipient" name="recipient" type="text" value="0xb794f5ea0ba39494ce839613fffba74279579268">
+        <button>Send Ethereum</button>
+    </form>
+
+    <script>
+        (async function init(){ 
+
+            if ( !window.ethereum ){
+                throw new Error("No crypto wallet found!");
+            }
+
+            const form = document.querySelector("form");
+
+            form.addEventListener("submit", async (e)=>{
+
+                e.preventDefault();
+
+                try {
+                    await window.ethereum.send("eth_requestAccounts");
+                    const provider = new ethers.providers.Web3Provider(window.ethereum);
+                    const signer = provider.getSigner();
+                    const recipient = ethers.utils.getAddress(form.recipient.value);
+                    const tx = await signer.sendTransaction({
+                        to: recipient,
+                        value: ethers.utils.parseEther(form.eth.value)
+                    });
+                    console.log({ from: tx.from, to: tx.to, hash: tx.hash });
+
+                } catch(e){
+
+                    console.error(e.message);
+
+                }
+            });
+
+        }());
+    </script>
+</body>
+</html>
