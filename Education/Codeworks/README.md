@@ -1,11 +1,9 @@
-## CODEWORKS | EXTRA RESOURCES + NOTES
+## CODEWORKS | EXTRA RESOURCES
 
-![](./LOGO.small.png)
+<img src="./LOGO.small.png" width="160" />
 
-### [=> SECURITY](./security.md)
-
-### [=> SOLO PROJECT](./solo-project.md)
-
-### [=> TECH INTERVIEW / JOB SEARCH](./tech-interview-job-search.md)
+#### [**SECURITY**](./security.md)
+#### [**SOLO PROJECT**](./solo-project.md)
+#### [**TECH INTERVIEW / JOB SEARCH**](./tech-interview-job-search.md)
 
 

@@ -17,7 +17,7 @@ Example: https://www.google.com/search?q=csrf&source=lnms&tbm=isch&sa=X
 
 - [Passwords and Hacking: the Jargon of Hashing, Salting and SHA-2 explained](https://www.theguardian.com/technology/2016/dec/15/passwords-hacking-hashing-salting-sha-2)
 
-- [Session vs Token Authentication in 100 Seconds](https://www.youtube.com/watch?v=UBUNrFtufWo)
+- [Session vs Token Authentication in 100 Seconds (YouTube)](https://www.youtube.com/watch?v=UBUNrFtufWo)
 
 - [Is an HTTPS query string secure?](https://stackoverflow.com/questions/323200/is-an-https-query-string-secure)
     - "URLs are stored in web server logs - typically the whole URL of each request is stored in a server log. This means that any sensitive data in the URL (e.g. a password) is being saved in clear text on the server" ~ [StackOverflow](https://stackoverflow.com/questions/2629222/are-querystring-parameters-secure-in-https-http-ssl)
@@ -34,13 +34,13 @@ Example: https://www.google.com/search?q=csrf&source=lnms&tbm=isch&sa=X
 
     - "In certain situations (for example, when the service or its consumers are behind an overzealous corporate firewall, or if the main consumer is a web page), only the GET and POST HTTP methods might be available. In such a case, it is possible to emulate the missing verbs by passing a custom header in the requests." ~ [Source](https://www.oreilly.com/library/view/building-a-restful/9781785285714/ch05s05.html)
 
-- [What is CSRF? (3 minutes)](https://www.youtube.com/watch?v=MBOMBZS2u-I)
+- [What is CSRF? (YouTube: 3 minutes)](https://www.youtube.com/watch?v=MBOMBZS2u-I)
 
 - [Preventing CSRF](https://www.hacksplaining.com/prevention/csrf)
 
-- [Cross Site Request Forgery (CSRF or XSRF)(3 min)](https://www.youtube.com/watch?v=m0EHlfTgGUU)
+- [Cross Site Request Forgery (CSRF or XSRF)(YouTube: 3 min)](https://www.youtube.com/watch?v=m0EHlfTgGUU)
 
-- [Cross-Site Request Forgery (CSRF) Explained (15 min)](https://www.youtube.com/watch?v=eWEgUcHPle0)
+- [Cross-Site Request Forgery (CSRF) Explained (YouTube: 15 min)](https://www.youtube.com/watch?v=eWEgUcHPle0)
 
 - **Reflected XSS vs Stored XSS**
 

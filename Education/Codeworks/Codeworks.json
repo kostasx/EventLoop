@@ -1,3 +1,4 @@
 {
+    "layout": "codeworks.njk",
     "permalink": "/{{ page.fileSlug }}.html"
 }
