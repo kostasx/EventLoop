@@ -1,3 +1,7 @@
+---
+frontmatter: true
+---
+
 ## CODEWORKS | EXTRA RESOURCES + NOTES
 
 ![](./LOGO.small.png)
