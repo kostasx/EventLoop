@@ -326,6 +326,15 @@ _Illustration by [Maggie Appleton](https://maggieappleton.com/)_
 
 ---
 
+<h2>REACT APPLICATIONS</h2>
+
+#### MarkUpsAndDowns: Convert HTML to Markdown and vice-versa
+
+- [Application](https://markupdown.netlify.app/)
+- [Source Code](https://github.dev/kostasx/MarkUpsAndDowns)
+
+---
+
 ### Suggestions / Requests / Comments / Feedback
 
 Do you want to see something specific in the list? Let me know, by opening an Issue.

@@ -54,6 +54,9 @@
       <a href="https://www.youtube.com/watch?v=yB_oh7WgRU8">Web Scraping with JavaScript for the lazy developer</a>
     </li>
     <li>
+      <a href="https://youtu.be/eDn663zhdhY">Web Scraping with JavaScript #2: Scraping an HTML table of german words to a JSON file</a>
+    </li>
+    <li>
       <a href="https://www.youtube.com/watch?v=Hy0pQXVm52k">DOM Manipulation and Performance in JavaScript: Optimizing Loops</a>
     </li>
     <li>
