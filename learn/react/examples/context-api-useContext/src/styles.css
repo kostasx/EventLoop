@@ -1,0 +1,25 @@
+section {
+  border: 2px solid indigo;
+  padding: 5px;
+  margin: 10px 5px;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+}
+section button {
+  background-color: orange;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: opacity 200ms ease;
+}
+section button:hover {
+  opacity: 0.8;
+}
+section > section {
+  border-color: orange;
+}
+section > section > section button {
+  background-color: skyblue;
+}
+section > section > section {
+  border-color: skyblue;
+}
