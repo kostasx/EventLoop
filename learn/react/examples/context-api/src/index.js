@@ -26,13 +26,11 @@ function GrandChild() {
     <MyContext.Consumer>
       {(contextValue) => {
         return (
-          <div className="grandchild">
+          <div 
+            className="grandchild" 
+            onClick={() => contextValue.setCounter(contextValue.counter + 1)}>
             <h3>GrandChild</h3>
-            <p
-              onClick={() => contextValue.setCounter(contextValue.counter + 1)}
-            >
-              {contextValue.counter}
-            </p>
+            {contextValue.counter}
           </div>
         );
       }}
@@ -45,7 +43,7 @@ function App() {
   return (
     <MyContext.Provider value={{ counter, setCounter }}>
       <div className="parent">
-        <h3>Parent</h3>
+        <h3>Parent counter: {counter}</h3>
         <Child />
         <Child />
       </div>
