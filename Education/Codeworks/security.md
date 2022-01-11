@@ -1,4 +1,4 @@
-## SECURITY
+# SECURITY
 
 - [**Security Presentation**](https://kostasx.github.io/EventLoop/Education/Codeworks/presentations/security/)
 
@@ -49,3 +49,7 @@ Example: https://www.google.com/search?q=csrf&source=lnms&tbm=isch&sa=X
     - **Reflected XSS (Non-persistent XSS)**: In this case, the attacker’s payload has to be a part of the request that is sent to the web server. It is then reflected back in such a way that the HTTP response includes the payload from the HTTP request. Attackers use malicious links, phishing emails, and other social engineering techniques to lure the victim into making a request to the server. The reflected XSS payload is then executed in the user’s browser. Reflected XSS is not a persistent attack, so the attacker needs to deliver the payload to each victim. These attacks are often made using social networks.
 
     - [(Source)](https://www.acunetix.com/websitesecurity/xss/)
+
+- **CSRF Protection** using [csurf npm](https://www.npmjs.com/package/csurf)
+    - [How csurf middleware validates tokens?](https://stackoverflow.com/questions/57812757/how-csurf-middleware-validates-tokens#answer-57815590)
+    - [CSURF Tutorial for Express and Postman](https://www.youtube.com/watch?v=VrFNbqSUVP0)
