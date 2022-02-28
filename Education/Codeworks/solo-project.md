@@ -6,7 +6,7 @@
 
 **DESIGN PROCESS**
 
-1. Start by sketching out your application in a notebook or a whiteboard. This high level overview will help you define the different parts of the app and their responsibilities using a high level of abstraction. At this point, you shouldn't be thinking in code. Plain logic and common sense is all you need to set up a basic diagram/skeleton for your app. You can use Excalidraw for creating and sharing this diagram: https://excalidraw.com/   
+1. Start by sketching out your application in a notebook or a whiteboard. This high level overview will help you define the different parts of the app and their responsibilities using a high level of abstraction. At this point, you shouldn't be thinking in code. Plain logic and common sense is all you need to set up a basic diagram/skeleton for your app. You can use Excalidraw for creating and sharing this diagram: https://excalidraw.com/. Other alternatives, include [Figma](https://www.figma.com/), [Sketch](https://www.sketch.com/), [InVision](https://www.invisionapp.com/) and others.   
 
 2. Once you've passed this stage, you are ready to think in terms of Modules/Components that make up the parts of your application and organize them in files and folders.
 
@@ -67,7 +67,7 @@ Cool illustrations from: [Undraw](https://undraw.co/)
 
 And some awesome animations available from [https://lottiefiles.com](https://lottiefiles.com)
 
-2. Make use of CSS UI Kits like `Material Design` to quickly have a beautiful frontend setup, if you need to invest time on the actual functionality. You can customize the CSS as much as you can, once you have the basic MVP functionality on schedule. For example, see: [https://mdbootstrap.com](https://mdbootstrap.com)
+2. Make use of CSS libraries like [Bootstrap](https://getbootstrap.com/) and [Tailwind](https://tailwindcss.com/) or CSS UI Kits like `Material Design` to quickly have a beautiful frontend setup, if you need to invest time on the actual functionality. You can customize the CSS as much as you can, once you have the basic MVP functionality on schedule. For example, see: [https://mdbootstrap.com](https://mdbootstrap.com)
 
 **PERFORMANCE**
 
