@@ -21,9 +21,9 @@
 **DATABASE**
 
 1. Create a diagram of your Database (entities, relationships, table or document structure) with one of these tools. It will help us review the database design and schemas and it will help you go from these ERD diagram straight into code much easier.
-  - https://app.dbdesigner.net/
-  - https://app.sqldbm.com/
-  - https://www.lucidchart.com/pages/
+  - [https://app.dbdesigner.net/](https://app.dbdesigner.net/)
+  - [https://app.sqldbm.com/](https://app.sqldbm.com/)
+  - [https://www.lucidchart.com/pages/](https://www.lucidchart.com/pages/)
 
 2. For relational databases, make sure your database enforces the basic normalization rules (1NF, 2NF, 3NF). You can study more about Database Normalization here: https://www.geeksforgeeks.org/introduction-of-database-normalization/
 
@@ -50,6 +50,8 @@
     - ...you get the idea
   If your implementation does not work, put the documentation examples side by side with your code and check to see if there's a mismatch.
   Start by copying and running the exact same code that you'll find in the documentation (almost all of the packages include a quickstart or basic example snippet), and once it's working, try refactoring (in a step-by-step-and-test process) the example code to fit your needs.
+
+3. Leverage the power of third-party React/Angular Components if you want to easily implement certain features, e.g. [charts](https://react-charts.tanstack.com/), [maps](https://blog.bitsrc.io/top-5-map-libraries-for-react-in-2021-20a37ff5234), [tag-inputs](https://stackblitz.com/edit/react-tag-input-1nelrc), [carousels](https://swiperjs.com/react), etc.
 
 **PRODUCTIVITY**
 
