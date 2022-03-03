@@ -53,6 +53,14 @@
 
 3. Leverage the power of third-party React/Angular Components if you want to easily implement certain features, e.g. [charts](https://react-charts.tanstack.com/), [maps](https://blog.bitsrc.io/top-5-map-libraries-for-react-in-2021-20a37ff5234), [tag-inputs](https://stackblitz.com/edit/react-tag-input-1nelrc), [carousels](https://swiperjs.com/react), etc.
 
+**REACT**
+
+- If you are working with React Router:
+  - Use the latest version: **v6**
+  - Make sure you know about advanced routing options such as `(1) Nested Routes` and `(2) Protected Routes` that will help you (1) structure your routes in an organized and efficient way and also (2) divide your routes between public and private pages
+  - This [YouTube video](https://www.youtube.com/watch?v=0cSVuySEB0A) provides a nice reference. **Scroll down to the comments** to find a `Table of Contents` (by the user `Rahul Rawat`) which you can use to quickly jump to the section of interest. Bookmark this video for future reference also.
+  - When searching on the Internet, add the `+v6` keyword to ensure that you are seeing results for the latest version and not v5 which include breaking changes
+
 **PRODUCTIVITY**
 
 1. Use the Pomodoro Technique to keep track of the time it takes to complete each task
