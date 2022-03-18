@@ -86,3 +86,11 @@
     <li><a href="https://andreasbm.github.io/web-skills/"><strong>A visual overview of useful skills to learn as a web developer</strong></a></li>
   </ul>
 </details>
+
+<details>
+  <summary>Tools</summary>
+  <br>
+  <ul>
+    <li><a href='javascript:void function(){(function(){if(document.querySelector("%23sozen-style"))return document.querySelector("%23sozen-style").remove();const a=document.createElement("style");a.setAttribute("id","sozen-style"),a.textContent=`.accepted-answer{border: 6px solid %2362b47d;padding: 32px;border-radius: 32px;}.js-post-comments-component {opacity: 0.25;transition: opacity 200ms ease;}.js-post-comments-component:hover {opacity: 1;}.js-bookmark-btn,.bottom-notice,iframe,footer,%23post-form,.js-add-link,.js-post-menu,.user-action-time,%23left-sidebar,header,.aside-cta,%23sidebar,.bounty-link,.js-sort-preference-change{display: none;}`,document.head.appendChild(a)})()}();'>StackOverflow Zen Viewer Bookmarklet</a></li>
+  </ul>
+</details>
