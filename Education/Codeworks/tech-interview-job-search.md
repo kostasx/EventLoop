@@ -56,8 +56,10 @@ Make sure you are familiar with the basic security terms and feel comfortable to
 
 #### CODING CHALLENGES
 
-- [Wolt Engineering Challenge](https://github.com/woltapp/summer2020)
+- [Wolt Engineering Challenge #1](https://github.com/woltapp/summer2020)
+- [Wolt Engineering Challenge #2](https://github.com/woltapp/engineering-summer-intern-2022)
 - [Recreate a Word Puzzle (coding challenge requested by a fintech company)](https://lovattspuzzles.com/online-puzzles-competitions/play-daily-word-search-puzzle-online/)
+- [Software Engineering Task](https://ciklum-digital.github.io/internship/#/pages/finaltask)
 
 <details>
     <summary>Roman Numerals</summary>
@@ -86,4 +88,4 @@ Make sure you are familiar with the basic security terms and feel comfortable to
 - [**Eugen Nikolajev**](https://github.com/zenicek) for suggesting the *FlowCV* resume building app
 
 ---
-_Updated: 16.12.2021_
+_Updated: 05.04.2022_
