@@ -24,6 +24,8 @@ Things that you might want to ask about the company:
 
 Watch [How to Prepare for Technical Interviews (CS50)](https://www.youtube.com/watch?v=QDC1Ik-SeOI)
 
+Practice and improve your coding and problem solving skills on a daily basis through platforms like [https://exercism.org/]
+
 Watch the mock tech interview parts on "How to Prepare for Technical Interviews":
 
 - [Mock Interview 1](https://youtu.be/TzdajQHS7xA?t=4156)  
