@@ -24,7 +24,7 @@ Things that you might want to ask about the company:
 
 Watch [How to Prepare for Technical Interviews (CS50)](https://www.youtube.com/watch?v=QDC1Ik-SeOI)
 
-Practice and improve your coding and problem solving skills on a daily basis through platforms like [https://exercism.org/]
+Practice and improve your coding and problem solving skills on a daily basis through platforms like [https://exercism.org/](https://exercism.org/)
 
 Watch the mock tech interview parts on "How to Prepare for Technical Interviews":
 
@@ -63,7 +63,7 @@ Make sure you are familiar with the basic security terms and feel comfortable to
 - [Recreate a Word Puzzle (coding challenge requested by a fintech company)](https://lovattspuzzles.com/online-puzzles-competitions/play-daily-word-search-puzzle-online/)
 - [Software Engineering Task](https://ciklum-digital.github.io/internship/#/pages/finaltask)
 
-<details>
+<details open>
     <summary>Roman Numerals</summary>
     <br>
     <h5>Real-life take-home technical assignment/problem</h5>
@@ -82,6 +82,8 @@ Make sure you are familiar with the basic security terms and feel comfortable to
         3999 = “MMMCMXCIX”
     </pre>
 </details>    
+
+<div style="page-break-before:always"></div>
 
 ---
 
