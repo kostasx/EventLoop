@@ -7,6 +7,7 @@ _Illustration by [Maggie Appleton](https://maggieappleton.com/)_
 <h2>DIVE INTO REACT <em>(THE ESSENTIALS)</em></h2>
 
 - [**What is JSX?** by Kent C. Dodds](https://kentcdodds.com/blog/what-is-jsx)
+- [**Deconstructing React (⭐⭐⭐⭐⭐ Pure gold!)**, Tejas Kumar | 40min](https://www.youtube.com/watch?v=f2mMOiCSj5c)
 
 <h2>HOW TO SECTION <em>(TL;DR)</em></h2>
 
