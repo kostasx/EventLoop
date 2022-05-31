@@ -89,13 +89,14 @@ const tableCreate = function () {
 			`INSERT INTO messages (uid,message) VALUES (1, '${message}');`
 		);
 	
-		// A) >> CORRECT: PREPARED STATEMENTS/ESCAPING/FILTERING
+		//>> A) CORRECT: PREPARED STATEMENTS/ESCAPING/FILTERING
 		// execEditorContents(
 		// 	`INSERT INTO messages (uid,message) VALUES (1, $msg);`, 
 		// 	{ $msg: message }
 		// 	// B) >>
 		// 	// { $msg: escapeHtml(message) }
 		// );
+		//>> REF: https://stackoverflow.com/questions/8263371/how-can-prepared-statements-protect-from-sql-injection-attacks#answer-8265319
 	}
 
 	function execEditorContents( sql, params = {} ) {
