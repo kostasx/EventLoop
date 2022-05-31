@@ -149,3 +149,6 @@ table.sql-tables th {
 	margin-top: 6px;
 	border-radius:16px;
 }
+.hidden {
+	display: none;
+}

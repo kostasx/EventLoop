@@ -1,6 +1,7 @@
 const execBtn = document.getElementById( "execute" );
 const outputElm = document.getElementById( 'output' );
 const messageText = document.getElementById( "message" );
+const toggle = document.getElementById("toggle");
 const trimmer = str => str.split( "\n" ).filter( line => line ).map( line => line.trim() ).join( "\n" );
 let initialSQL = trimmer(`
 	DROP TABLE IF EXISTS employees;
@@ -472,5 +473,10 @@ const tableCreate = function () {
 
 	// Show Database BUTTON:
 	document.getElementById("show_db").addEventListener("click", showDatabases );
+
+	// Toggle SQL
+	toggle.addEventListener("click", e =>{
+		document.getElementById("sql").classList.toggle("hidden");
+	});
 
 }());
