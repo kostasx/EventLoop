@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf8">
+    <title>sql.js demo: Online SQL interpreter</title>
+    <link rel="stylesheet" href="style.css">
+    <script src='./src/sql-wasm-debug.js'></script>
+  </head>
+
+  <body>
+    <main>
+      <div id="sql"></div>
+      <button id="execute" class="button">Execute <small>(Alt+Enter)</small></button>
+      <button id="show_db" class="button">Show Database</button>
+      
+      <section class="panels">
+        <div>
+          <form>
+            <textarea id="message"></textarea>
+            <button class="button">Save Message</button>
+            <button type="button" id="load" class="button">Load Messages</button>
+          </form>
+          <div id="render"></div>
+        </div>
+        <div id="output" class="">Results will be displayed here</div>
+      </section>
+
+      <section class="panels">
+        <span style="width:100%"><strong>Server-side code:</strong> <code>execSQL(`INSERT INTO messages (uid,message) VALUES (1, '${message}');`)</code></span>
+      </section>
+
+      <section id="evil">
+        <div class="malicious">SQL Injection: <pre>'); UPDATE employees SET role='admin' WHERE email='adagmail.com';</pre><button class="copy_clipboard">Copy</button></div>
+        <div class="malicious">SQL Injection: <pre>'); DROP TABLE messages;</pre><button class="copy_clipboard">Copy</button></div>
+        <div class="malicious">XSS: <pre>&lt;img src="#" onerror=alert(1) /&gt;</pre><button class="copy_clipboard">Copy</button></div>
+      </section>
+
+    </main>
+
+    <!-- MONACO -->
+    <script>var require = { paths: { vs: "./src/vs" } };</script>
+    <script src="./src/vs/loader.js"></script>
+    <script src="./src/vs/editor/editor.main.nls.js"></script>
+    <script src="./src/vs/editor/editor.main.js"></script>
+    <!-- MONACO -->
+    <script src="./src/app.js"></script>
+
+  </body>
+
+</html>

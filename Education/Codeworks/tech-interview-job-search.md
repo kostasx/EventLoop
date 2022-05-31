@@ -22,6 +22,8 @@ Things that you might want to ask about the company:
 
 ---
 
+#### TECHNICAL INTERVIEWS
+
 Watch [How to Prepare for Technical Interviews (CS50)](https://www.youtube.com/watch?v=QDC1Ik-SeOI)
 
 Practice and improve your coding and problem solving skills on a daily basis through platforms like [https://exercism.org/](https://exercism.org/)
@@ -42,6 +44,8 @@ Watch the mock tech interview parts on "How to Prepare for Technical Interviews"
 - [https://frontendinterviewhandbook.com/javascript-questions/](https://frontendinterviewhandbook.com/javascript-questions/)
 - [https://edabit.com/challenges](https://edabit.com/challenges)
 
+<div style="page-break-before:always"></div>
+
 #### INTERVIEW QUESTIONS | SECURITY
 
 Make sure you are familiar with the basic security terms and feel comfortable to answer the following questions.
@@ -60,7 +64,7 @@ Make sure you are familiar with the basic security terms and feel comfortable to
 
 - [Wolt Engineering Challenge #1](https://github.com/woltapp/summer2020)
 - [Wolt Engineering Challenge #2](https://github.com/woltapp/engineering-summer-intern-2022)
-- [Recreate a Word Puzzle (coding challenge requested by a fintech company)](https://lovattspuzzles.com/online-puzzles-competitions/play-daily-word-search-puzzle-online/)
+- [Recreate a Word Puzzle from this page(coding challenge requested by a fintech company)](https://lovattspuzzles.com/online-puzzles-competitions/play-daily-word-search-puzzle-online/)
 - [Software Engineering Task](https://ciklum-digital.github.io/internship/#/pages/finaltask)
 
 <details open>
@@ -82,6 +86,16 @@ Make sure you are familiar with the basic security terms and feel comfortable to
         3999 = “MMMCMXCIX”
     </pre>
 </details>    
+
+<div style="page-break-before:always"></div>
+
+#### SKILLS
+
+    These are some concept that you need to know (and probably master):
+
+    • [What is Debounce? What is Throttling?](https://css-tricks.com/debouncing-throttling-explained-examples/) 
+    • Memoization: both in vanilla JS and in React (e.g. React.memo(), useMemo(), useCallback())
+    • Pure functions and Pure Components (React)
 
 <div style="page-break-before:always"></div>
 
