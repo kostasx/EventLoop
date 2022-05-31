@@ -89,7 +89,7 @@ const tableCreate = function () {
 			`INSERT INTO messages (uid,message) VALUES (1, '${message}');`
 		);
 	
-		// A) >> CORRECT:
+		// A) >> CORRECT: PREPARED STATEMENTS/ESCAPING/FILTERING
 		// execEditorContents(
 		// 	`INSERT INTO messages (uid,message) VALUES (1, $msg);`, 
 		// 	{ $msg: message }
