@@ -1,4 +1,3 @@
-// DOM:
 const execBtn = document.getElementById( "execute" );
 const outputElm = document.getElementById( 'output' );
 const messageText = document.getElementById( "message" );
@@ -19,26 +18,6 @@ let initialSQL = trimmer(`
 	INSERT INTO messages (uid, message) VALUES (3,'How are you?');
 `);
 
-// -- Show all SQLite Tables:
-// -- SELECT name FROM  sqlite_master WHERE type ='table' AND name NOT LIKE 'sqlite_%';
-
-// PREPARED STATEMENTS:
-/*
-	const stmt = db.prepare("INSERT INTO messages (uid,message) VALUES (1, $message);");
-	stmt.bind({ $message: `'); UPDATE employees SET role='admin' WHERE email='adagmail.com';` });
-	while (stmt.step()) {
-		const row = stmt.getAsObject();
-		console.log('Here is a row: ' + JSON.stringify(row));
-	}
-*/
-
-// Hello %NAME%! <= server-side template injection?
-const initialMessage = trimmer(`What time do you get off?`);
-
-// Connect to the HTML element we 'print' to
-function print( text ) {
-	outputElm.innerHTML = text.replace( /\n/g, '<br>' );
-}
 function escapeHtml( text ) {
 	if ( typeof text !== "string" ){
 		return text;
@@ -48,7 +27,6 @@ function escapeHtml( text ) {
 		.replace( />/g, "&gt;" );
 }
 
-// Create an HTML table
 const tableCreate = function () {
 
 	return function ( columns, values, table ) {
@@ -89,24 +67,38 @@ const tableCreate = function () {
 	}
 }();
 
-( async function () {
+(async function () {
 
-	// SET UP DATABASE >>
 	const config = {
 		locateFile: ( filename, prefix ) => {
 			console.log( `prefix is : ${prefix}` );
 			return `./src/${filename}`;
 		}
 	}
-	// The `initSqlJs` function is globally provided by all of the main dist files if loaded in the browser.
-	// We must specify this locateFile function if we are loading a wasm file from anywhere other than the current html page's folder.
 	const SQL = await initSqlJs( config );
-	// CREATE THE DATABASE
 	const db = new SQL.Database();
 
-	// Execute the commands when the button is clicked
+	// ATTENTION!
+	function handleSubmit ( e ){
+
+		e.preventDefault();
+		const message = form.querySelector( "textarea" ).value;
+	
+		// VULNERABLE
+		execEditorContents(
+			`INSERT INTO messages (uid,message) VALUES (1, '${message}');`
+		);
+	
+		// A) >> CORRECT:
+		// execEditorContents(
+		// 	`INSERT INTO messages (uid,message) VALUES (1, $msg);`, 
+		// 	{ $msg: message }
+		// 	// B) >>
+		// 	// { $msg: escapeHtml(message) }
+		// );
+	}
+
 	function execEditorContents( sql, params = {} ) {
-		console.log( "execEditorContents()" );
 		outputElm.classList.remove("error");
 		outputElm.textContent = "";
 		try {
@@ -123,7 +115,7 @@ const tableCreate = function () {
 		}
 	}
 
-	messageText.value = initialMessage;
+	messageText.value = `What time do you get off?`;
 
 	// CLIPBOARD:
 	document.body.addEventListener( "click", e => {
@@ -406,9 +398,7 @@ const tableCreate = function () {
 		monaco.editor.defineTheme( 'mytheme', themeData );
 		monaco.editor.setTheme( 'mytheme' );
 		editor.getModel().onDidChangeContent( ( event ) => {
-			// console.log( editor.getValue() );
 			onChange( editor.getValue() );
-			// execEditorContents
 		});
 		return editor;
 	}(onMonacoChange));
@@ -435,25 +425,6 @@ const tableCreate = function () {
 
 	// FORM (CUSTOM)
 	const form = document.querySelector( "form" );
-
-	function handleSubmit ( e ){
-
-		e.preventDefault();
-		const message = form.querySelector( "textarea" ).value;
-	
-		// VULNERABLE
-		execEditorContents(
-			`INSERT INTO messages (uid,message) VALUES (1, '${message}');`
-		);
-	
-		// A) >> CORRECT:
-		// execEditorContents(
-		// 	`INSERT INTO messages (uid,message) VALUES (1, $msg);`, 
-		// 	{ $msg: message }
-		// 	// B) >>
-		// 	// { $msg: escapeHtml(message) }
-		// );
-	}
 
 	// Save Message:
 	form.addEventListener( "submit", handleSubmit );
