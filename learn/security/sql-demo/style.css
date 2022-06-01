@@ -42,7 +42,7 @@ h1 {
 #execute {
 	margin-top: 5px;
 	min-width:100px;
-	background-color: limegreen;
+	background: limegreen !important;
 	color: white;
 }
 #execute small {
