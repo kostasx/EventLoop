@@ -1,9 +1,7 @@
 const execBtn     = document.getElementById( "execute" );
 const outputElm   = document.getElementById( 'output' );
 const messageText = document.getElementById( "message" );
-const toggle      = document.getElementById("toggle");
-const trimmer = str => str.split( "\n" ).filter( line => line ).map( line => line.trim() ).join( "\n" );
-let initialSQL = trimmer(`
+let initialSQL = helpers.trimmer(`
 	DROP TABLE IF EXISTS employees;
 	CREATE TABLE employees( id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,fullname TEXT, email TEXT, role TEXT );
 
@@ -28,55 +26,9 @@ function escapeHtml( text ) {
 		.replace( />/g, "&gt;" );
 }
 
-const tableCreate = function () {
-
-	return function ( columns, values, table ) {
-		var tbl = document.createElement( 'table' );
-		tbl.setAttribute("class", "sql-tables");
-		var thead = document.createElement("thead");
-		if ( table ){
-			const tr = document.createElement("tr");
-			const th = document.createElement("th");
-			th.style.background = "lightseagreen";
-			th.style.color = "white";
-			th.setAttribute("colspan", columns.length);
-			th.textContent = table;
-			tr.appendChild(th);
-			thead.appendChild(tr);
-		}
-		var tr = document.createElement("tr");
-		columns.forEach( col => {
-			const th = document.createElement("th");
-			th.textContent = col;
-			tr.appendChild( th );
-		});
-		thead.appendChild( tr );
-		tbl.appendChild( thead );
-
-		const tbody = document.createElement("tbody");
-		values.forEach( row =>{
-			const tr = document.createElement("tr");
-			row.forEach( data  =>{
-				const td = document.createElement("td");
-				td.textContent = data;
-				tr.appendChild(td);
-			})
-			tbody.appendChild(tr);
-		})
-		tbl.appendChild( tbody );
-		return tbl;
-	}
-}();
-
 (async function () {
 
-	const config = {
-		locateFile: ( filename, prefix ) => {
-			console.log( `prefix is : ${prefix}` );
-			return `./src/${filename}`;
-		}
-	}
-	const SQL = await initSqlJs( config );
+	const SQL = await initSqlJs( helpers.config );
 	const db = new SQL.Database();
 
 	// ATTENTION!
@@ -106,7 +58,7 @@ const tableCreate = function () {
 		try {
 			const results = db.exec( sql, params );
 			if ( results && ( results.length > 0 ) ) {
-				const output = tableCreate( results[ 0 ].columns, results[ 0 ].values );
+				const output = helpers.tableCreate( results[ 0 ].columns, results[ 0 ].values );
 				outputElm.innerHTML = "";
 				outputElm.appendChild( output );
 			}
@@ -462,10 +414,10 @@ const tableCreate = function () {
 			if ( res.length === 0 ){
 				const cols = db.exec( `SELECT name FROM PRAGMA_TABLE_INFO('${table}');` );
 				console.log( cols );
-				const tbl = tableCreate( cols[ 0 ].values, [], table );
+				const tbl = helpers.tableCreate( cols[ 0 ].values, [], table );
 				outputElm.appendChild(tbl);
 			} else {
-				const tbl = tableCreate( res[ 0 ].columns, res[ 0 ].values, table );
+				const tbl = helpers.tableCreate( res[ 0 ].columns, res[ 0 ].values, table );
 				outputElm.appendChild(tbl);
 			}
 		});
@@ -474,9 +426,7 @@ const tableCreate = function () {
 	// Show Database BUTTON:
 	document.getElementById("show_db").addEventListener("click", showDatabases );
 
-	// Toggle SQL
-	toggle.addEventListener("click", e =>{
-		document.getElementById("sql").classList.toggle("hidden");
-	});
+	// HELPERS:
+	helpers.init();
 
 }());

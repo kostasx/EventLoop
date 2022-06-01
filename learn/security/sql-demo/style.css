@@ -136,6 +136,15 @@ table.sql-tables th {
 #sql {
 	min-height: 280px; 
 	margin-top:20px;
+	position: relative;
+}
+#sql img {
+	position: absolute;
+    width: 100px;
+	right: -50px;
+	cursor: pointer;
+    bottom: -30px;
+    z-index: 1;
 }
 .chat {
 	list-style-type: none;
