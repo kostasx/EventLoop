@@ -65,6 +65,10 @@ const helpers = {
 					token: "comment",
 				},
 				{
+					foreground: "7da1ff",
+					token: "string.sql",
+				},
+				{
 					foreground: "ffffff",
 					token: "keyword.operator.class",
 				},
@@ -321,7 +325,7 @@ const helpers = {
 
     init: function(){
 
-        // TOGGLE SQL PANEL:
+		// TOGGLE SQL PANEL:
         const toggle = document.getElementById("toggle");
         toggle.addEventListener("click", e =>{
             document.getElementById("sql").classList.toggle("hidden");

@@ -40,11 +40,17 @@ h1 {
 }
 
 #execute {
-	margin-top: 5px;;
+	margin-top: 5px;
 	min-width:100px;
+	background-color: limegreen;
+	color: white;
 }
 #execute small {
-	color: gray;
+	color: rgba(255,255,255,0.65);
+}
+#show_db {
+	background: #2587ce;
+    color: white;
 }
 .error {
 	color:red;
@@ -81,6 +87,7 @@ form textarea {
 }
 .malicious {
 	color: tomato;
+	user-select: none;
 }
 .malicious pre {
 	display: inline-block;
@@ -88,6 +95,7 @@ form textarea {
 	margin: 5px;
 	border: 1px solid lightgray;
     padding: 5px 10px;
+	user-select: all;
 }
 .malicious button {
 	background: skyblue !important;
@@ -97,6 +105,10 @@ form textarea {
 	padding: 5px 20px;
 	border: none;
 	cursor: pointer;
+	transition: all 300ms ease;
+}
+.malicious button:hover {
+	background: dodgerblue !important;
 }
 table.sql-tables {
 	font-family: monospace;

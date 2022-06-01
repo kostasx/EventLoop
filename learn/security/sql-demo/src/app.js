@@ -156,6 +156,13 @@ function escapeHtml( text ) {
 	// Show Database BUTTON:
 	document.getElementById("show_db").addEventListener("click", showDatabases );
 
+	// RESET SQL PANEL:
+	const reset = document.getElementById("reset");
+	reset.addEventListener("click", e =>{
+		monacoEditor.setValue( initialSQL );
+		// monacoEditor.getModel().setValue('some value');
+	});
+	
 	// HELPERS:
 	helpers.init();
 
