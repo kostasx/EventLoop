@@ -2,6 +2,8 @@ const helpers = {
 
     tableCreate: (function () {
 
+        const theadColor = "#2587ce";
+
         return function ( columns, values, table ) {
             var tbl = document.createElement( 'table' );
             tbl.setAttribute("class", "sql-tables");
@@ -9,7 +11,7 @@ const helpers = {
             if ( table ){
                 const tr = document.createElement("tr");
                 const th = document.createElement("th");
-                th.style.background = "lightseagreen";
+                th.style.background = theadColor;
                 th.style.color = "white";
                 th.setAttribute("colspan", columns.length);
                 th.textContent = table;

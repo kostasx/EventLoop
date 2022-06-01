@@ -89,7 +89,7 @@ function escapeHtml( text ) {
 	const monacoEditor = helpers.initMonaco({ onChange: onMonacoChange, container: document.getElementById( "sql" ) })
 
 	function onMonacoChange( code ){
-		console.log("onMonacoChange()", code);
+		// console.log("onMonacoChange()", code);
 	}
 
 	// EXECUTE SQL ON Alt+Enter:
@@ -113,7 +113,7 @@ function escapeHtml( text ) {
 	// Save Message:
 	form.addEventListener( "submit", handleSubmit );
 
-	// Load BUTTON:
+	// Load Messages BUTTON:
 	document.querySelector( "button#load" ).addEventListener( "click", e => {
 		document.querySelector( "#render" ).innerHTML = "";
 		const sql = `SELECT message FROM messages`;

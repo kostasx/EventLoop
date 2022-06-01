@@ -116,6 +116,7 @@ table.sql-tables th {
     margin-top: 10px;
 	gap: 10px;
 	background: white;
+	box-shadow: 6px 6px 14px rgb(0 0 0 / 15%);
 }
 .panels > * {
 	width: 50%;
@@ -128,6 +129,7 @@ table.sql-tables th {
     padding: 10px;
     margin-top: 10px;
 	background: white;
+	box-shadow: 6px 6px 14px rgb(0 0 0 / 15%);
 }
 #message {
 	padding: 0;
