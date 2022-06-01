@@ -104,7 +104,7 @@ table.sql-tables {
 	width: 100%;
 }
 table.sql-tables td, table.sql-tables th {
-    padding: 10px;
+    padding: 8px;
 }
 table.sql-tables th {
     background: gainsboro;
