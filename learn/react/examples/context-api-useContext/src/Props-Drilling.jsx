@@ -25,7 +25,7 @@ function Child(props) {
           props.setParentData({ counter: props.parentData.counter + 1 })
         }
       >
-        Change Parent data from Child
+        Change Parent data { props.parentData.counter } from Child
       </button>
       <GrandChild
         parentData={props.parentData}
