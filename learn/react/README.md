@@ -297,17 +297,17 @@ _Illustration by [Maggie Appleton](https://maggieappleton.com/)_
 - [React | Redux | useSelector & useDispatch | **GitHub Dev**](https://github.dev/kostasx/EventLoop/tree/master/learn/react/examples/useselector-usedispatch)
 - [React | Redux | useSelector & useDispatch | **GitHub Repo**](https://github.com/kostasx/EventLoop/tree/master/learn/react/examples/useselector-usedispatch)
 
+#### React: Context API + useContext (v18, 2022)
+
+- [React | Context API + useContext | **Codesandbox**](https://codesandbox.io/s/github/kostasx/EventLoop/tree/master/learn/react/examples/context-api-useContext)
+- [React | Context API + useContext | **GitHub Dev**](https://github.dev/kostasx/EventLoop/tree/master/learn/react/examples/context-api-useContext)
+- [React | Context API + useContext | **GitHub Repo**](https://github.com/kostasx/EventLoop/tree/master/learn/react/examples/context-api-useContext)
+
 #### React: Context API
 
 - [React | Context API | **Codesandbox**](https://codesandbox.io/s/github/kostasx/EventLoop/tree/master/learn/react/examples/context-api)
 - [React | Context API | **GitHub Dev**](https://github.dev/kostasx/EventLoop/tree/master/learn/react/examples/context-api)
 - [React | Context API | **GitHub Repo**](https://github.com/kostasx/EventLoop/tree/master/learn/react/examples/context-api)
-
-#### React: Context API + useContext
-
-- [React | Context API + useContext | **Codesandbox**](https://codesandbox.io/s/github/kostasx/EventLoop/tree/master/learn/react/examples/context-api-useContext)
-- [React | Context API + useContext | **GitHub Dev**](https://github.dev/kostasx/EventLoop/tree/master/learn/react/examples/context-api-useContext)
-- [React | Context API + useContext | **GitHub Repo**](https://github.com/kostasx/EventLoop/tree/master/learn/react/examples/context-api-useContext)
 
 #### React: Fetch from API and update View
 
