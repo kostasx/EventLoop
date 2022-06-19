@@ -1,6 +1,6 @@
 // (Work in progress)
 import "./styles.css";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import { createContext, useState, useContext } from "react";
 // createContext: used to create the Context.Provider and Context.Consumer Components
 // useContext: Hook for accessing the Context.Provider value
@@ -50,5 +50,5 @@ function App() {
     </MyContext.Provider>
   );
 }
-const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+const rootElement = createRoot(document.getElementById("root"));
+rootElement.render(<App />);
