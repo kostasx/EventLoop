@@ -285,7 +285,7 @@ _Illustration by [Maggie Appleton](https://maggieappleton.com/)_
 
 <h2>EXAMPLES SECTION</h2>
 
-#### React: Pagination (2022)
+#### React: Pagination (v18, 2022)
 
 - [React | Pagination | **Codesandbox**](https://codesandbox.io/s/github/kostasx/EventLoop/tree/master/learn/react/examples/pagination)
 - [React | Pagination | **GitHub Dev**](https://github.dev/kostasx/EventLoop/tree/master/learn/react/examples/pagination)
