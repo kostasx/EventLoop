@@ -17,7 +17,7 @@ function Product({ product }){
     </p>
     <p>{product.price}</p>
     <button>Add to Cart</button>
-    <button> ❤️ Like</button>
+    <button> <span>❤️</span> Like</button>
   </article>
 
   )
