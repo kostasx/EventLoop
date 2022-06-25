@@ -325,7 +325,7 @@ _Illustration by [Maggie Appleton](https://maggieappleton.com/)_
 #### Class [1] vs Functional [2] React Components: Same state [1] causes / [2] does not cause re-render 
   - [![Open in CodeSandbox](https://img.shields.io/badge/Open%20in-CodeSandbox-blue?style=flat-square&logo=codesandbox)](https://githubbox.com/kostasx/EventLoop/tree/master/learn/react/examples/functional-vs-class-state-updates)
 
-#### React Router Setups: Re-using Layout Components
+#### React Router Setups: Re-using Layout Components (React v18, React Router v6, 2022)
 
 - [React | Redux | Outlet | **Codesandbox**](https://codesandbox.io/s/github/kostasx/EventLoop/tree/master/learn/react/examples/react-router-reusable-layout-components)
 - [React | Redux | Outlet | **GitHub Dev**](https://github.dev/kostasx/EventLoop/tree/master/learn/react/examples/react-router-reusable-layout-components)
