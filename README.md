@@ -48,19 +48,25 @@
   <br>
   <ul>
     <li>
-      <a href="https://scrimba.com/c/cz6vpwTw">Facebook Like Button with HTML, CSS and JavaScript | Interactive Screencast @ Scrimba.com </a>[ Ελληνικά ]
+      <a target="_blank" href="https://www.youtube.com/watch?v=-YiYMcgy9Zk&t=1669s">Build a React Chat with Toxicity Check based on Tensorflow.JS</a>
     </li>
     <li>
-      <a href="https://www.youtube.com/watch?v=yB_oh7WgRU8">Web Scraping with JavaScript for the lazy developer</a>
+      <a target="_blank" href="https://www.youtube.com/watch?v=s02LsdIKhVY">Deconstructing Array.prototype.reduce in JavaScript</a>
     </li>
     <li>
-      <a href="https://youtu.be/eDn663zhdhY">Web Scraping with JavaScript #2: Scraping an HTML table of german words to a JSON file</a>
+      <a target="_blank" href="https://scrimba.com/c/cz6vpwTw">Facebook Like Button with HTML, CSS and JavaScript | Interactive Screencast @ Scrimba.com </a>[ Ελληνικά ]
     </li>
     <li>
-      <a href="https://www.youtube.com/watch?v=Hy0pQXVm52k">DOM Manipulation and Performance in JavaScript: Optimizing Loops</a>
+      <a target="_blank" href="https://www.youtube.com/watch?v=yB_oh7WgRU8">Web Scraping with JavaScript for the lazy developer</a>
     </li>
     <li>
-      <a href="https://www.youtube.com/watch?v=a0ySy_u5uo8">Creating a Movies JSON API Server using Express.JS</a>
+      <a target="_blank" href="https://youtu.be/eDn663zhdhY">Web Scraping with JavaScript #2: Scraping an HTML table of german words to a JSON file</a>
+    </li>
+    <li>
+      <a target="_blank" href="https://www.youtube.com/watch?v=Hy0pQXVm52k">DOM Manipulation and Performance in JavaScript: Optimizing Loops</a>
+    </li>
+    <li>
+      <a target="_blank" href="https://www.youtube.com/watch?v=a0ySy_u5uo8">Creating a Movies JSON API Server using Express.JS</a>
     </li>
 </ul>
 </details>
