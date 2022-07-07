@@ -285,6 +285,12 @@ _Illustration by [Maggie Appleton](https://maggieappleton.com/)_
 
 <h2>EXAMPLES SECTION</h2>
 
+#### React: Internationalization/Localization with i18next (v18, 2022)
+
+- [React | i18next | **Codesandbox**](https://codesandbox.io/s/github/kostasx/EventLoop/tree/master/learn/react/examples/i18next-basic-setup)
+- [React | i18next | **GitHub Dev**](https://github.dev/kostasx/EventLoop/tree/master/learn/react/examples/i18next-basic-setup)
+- [React | i18next | **GitHub Repo**](https://github.com/kostasx/EventLoop/tree/master/learn/react/examples/i18next-basic-setup)
+
 #### React: Pagination (v18, 2022)
 
 - [React | Pagination | **Codesandbox**](https://codesandbox.io/s/github/kostasx/EventLoop/tree/master/learn/react/examples/pagination)
