@@ -285,6 +285,12 @@ _Illustration by [Maggie Appleton](https://maggieappleton.com/)_
 
 <h2>EXAMPLES SECTION</h2>
 
+#### React: useId() Hooks (v18, 2022)
+
+- [React | useId() | **Codesandbox**](https://codesandbox.io/s/github/kostasx/EventLoop/tree/master/learn/react/examples/useid-hook)
+- [React | useId() | **GitHub Dev**](https://github.dev/kostasx/EventLoop/tree/master/learn/react/examples/useid-hook)
+- [React | useId() | **GitHub Repo**](https://github.com/kostasx/EventLoop/tree/master/learn/react/examples/useid-hook)
+
 #### React: Internationalization/Localization with i18next (v18, 2022)
 
 - [React | i18next | **Codesandbox**](https://codesandbox.io/s/github/kostasx/EventLoop/tree/master/learn/react/examples/i18next-basic-setup)
