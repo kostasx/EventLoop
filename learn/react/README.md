@@ -285,6 +285,10 @@ _Illustration by [Maggie Appleton](https://maggieappleton.com/)_
 
 <h2>EXAMPLES SECTION</h2>
 
+#### React: Image Dog Classifier using TensorFlow.js (v18, 08/2022) 🆕 
+
+[**Codesandbox**](https://codesandbox.io/s/github/kostasx/EventLoop/tree/master/learn/react/examples/tfjs-dog-classifier) / [**Source Code**](https://github.dev/kostasx/EventLoop/tree/master/learn/react/examples/tfjs-dog-classifier) / [**GitHub Repo**](https://github.com/kostasx/EventLoop/tree/master/learn/react/examples/tfjs-dog-classifier)
+
 #### React: useId() Hook (v18, 2022)
 
 - [React | useId() | **Codesandbox**](https://codesandbox.io/s/github/kostasx/EventLoop/tree/master/learn/react/examples/useid-hook)
