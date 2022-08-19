@@ -198,7 +198,7 @@ function App() {
           </p>
           <p className="mt-4">
             {imageURL && (
-              <img className="border border-black mb-4" src={imageURL} alt="upload-preview" ref={imageRef} />
+              <img crossOrigin='anonymous' className="border border-black mb-4" src={imageURL} alt="upload-preview" ref={imageRef} />
             )}
             <input
               type="file"
