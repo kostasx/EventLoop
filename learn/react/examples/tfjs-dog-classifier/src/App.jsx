@@ -3,6 +3,11 @@ import "@tensorflow/tfjs-backend-cpu";
 import "@tensorflow/tfjs-backend-webgl";
 import * as mobilenet from "@tensorflow-models/mobilenet";
 
+// The MobileNet contains a huge list of classified objects
+// We just need the dogs in this example, so this list will
+// help us filter out other animals or objects.
+// The available classes can be found here: https://github.com/tensorflow/tfjs-models/blob/master/mobilenet/src/imagenet_classes.ts
+// Dog classes can be found in the range: 151~268
 const dogs = [
   "Chihuahua",
   "Japanese spaniel",
@@ -130,6 +135,7 @@ function App() {
   const [imageURL, setImageURL] = useState(null);
   const [loading, setLoading] = useState(false);
   const [model, setModel] = useState(null);
+  const [identifying, setIdentifying] = useState(false);
 
   const imageRef = useRef();
   const inputRef = useRef();
@@ -147,7 +153,9 @@ function App() {
   };
 
   const identify = async () => {
+    setIdentifying(true);
     const results = await model.classify(imageRef.current);
+    setIdentifying(false);
     const dogResults = results.filter((result) => {
       return dogs.includes(result.className);
     });
@@ -184,6 +192,7 @@ function App() {
 
   return (
     <main className="shadow w-1/2 m-auto mt-8 p-6 border border-black shadow-gray-400 shadow-lg">
+      {/* While Model is not loaded... */}
       {!model && (
         <>
           <p>
@@ -196,6 +205,7 @@ function App() {
           </p>
         </>
       )}
+      {/* While Model is loaded... */}
       {model && (
         <section>
           <p>
@@ -217,17 +227,23 @@ function App() {
             <button className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-8 rounded-full" onClick={identify}>Identify</button>
             <button className="ml-8 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-8 rounded-full" onClick={loadRandomImage}>Load random test image</button>
           </p>
-          <ul className="border p-4 mt-4 shadow">
-            {results.map(({ className, probability }) => (
-              <li className="text-lg" key={className}>
-                <strong>{className}: </strong>%{(
-                probability * 100
-              ).toFixed(2)}
-              </li>
-            ))}
-          </ul>
+          {(results.length > 0) && (
+            <ul className="border p-4 mt-4 shadow">
+              {results.map(({ className, probability }) => (
+                <li className="text-lg" key={className}>
+                  <strong>{className}: </strong>%{(
+                  probability * 100
+                ).toFixed(2)}
+                </li>
+              ))}
+            </ul>
+          )}
         </section>
       )}
+      <p className="text-gray-500 mt-6">
+        <em>By loading the model, we are fetching the sharded weight files (~17MB) and caching them in the browser. Thus a model is likely to load more quickly on subsequent occasions.</em>
+        <em>To ensure that the cached files are used on subsequent reloads, make sure to turn off the <strong>Disable cache (while DevTools is open)</strong> setting in the DevTools.</em>
+      </p>
     </main>
   );
 }
