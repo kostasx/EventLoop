@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "@tensorflow/tfjs-backend-cpu";
 import "@tensorflow/tfjs-backend-webgl";
 import * as mobilenet from "@tensorflow-models/mobilenet";
@@ -136,9 +136,24 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [model, setModel] = useState(null);
   const [identifying, setIdentifying] = useState(false);
+  const [imgLoading, setImgLoading] = useState(false);
 
   const imageRef = useRef();
   const inputRef = useRef();
+
+  useEffect(()=>{
+    function onLoad(e){
+      setImgLoading(false);
+    }
+    if ( imageRef.current ){
+      imageRef.current.addEventListener("load", onLoad);
+    } 
+    return function cleanUp(){
+      if ( imageRef.current ){
+        imageRef.current.removeEventListener("load", onLoad);
+      }
+    }
+  }, [imageURL]);
 
   const loadModel = async () => {
     setLoading(true);
@@ -185,6 +200,7 @@ function App() {
   ];
 
   const loadRandomImage = () => {
+    setImgLoading(true);
     const randomImage =
       testImages[Math.floor(Math.random() * testImages.length)];
     setImageURL(`/test-images/${randomImage}`);
@@ -212,6 +228,7 @@ function App() {
             <strong>Model loaded.</strong>
           </p>
           <p className="mt-4">
+            {imgLoading && <span>Image loading...</span>}
             {imageURL && (
               <img crossOrigin='anonymous' className="border border-black mb-4" src={imageURL} alt="upload-preview" ref={imageRef} />
             )}
