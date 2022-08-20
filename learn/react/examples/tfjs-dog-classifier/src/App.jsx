@@ -136,9 +136,14 @@ function App() {
 
   const loadModel = async () => {
     setLoading(true);
-    const model = await mobilenet.load();
-    setLoading(false);
-    setModel(model);
+    try {
+      const model = await mobilenet.load();
+      setModel(model);
+    } catch (e){
+      console.error("loadModel()", e);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const identify = async () => {
@@ -185,8 +190,8 @@ function App() {
             <strong className="text-red-700">Model has not been loaded.</strong>
           </p>
           <p className="mt-4">
-            <button className={"bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-8 rounded-full" + (loading ? " bg-orange-600" : "")} onClick={loadModel}>
-              {loading ? "Loading..." : "Load Model"}
+            <button className={"bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-8 rounded-full" + (loading ? " bg-orange-600 hover:bg-orange-700" : "")} onClick={loadModel}>
+              {loading ? "Loading... (it's going to take a while the first time)" : "Load Model"}
             </button>
           </p>
         </>
