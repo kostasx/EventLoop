@@ -9,6 +9,12 @@ _Illustration by [Maggie Appleton](https://maggieappleton.com/)_
 - [**What is JSX?** by Kent C. Dodds](https://kentcdodds.com/blog/what-is-jsx)
 - [**Deconstructing React (⭐⭐⭐⭐⭐ Pure gold!)**, Tejas Kumar | 40min](https://www.youtube.com/watch?v=f2mMOiCSj5c)
 
+## REACT + TYPESCRIPT
+
+- [**TypeScript Cheatsheets for React** ⭐](https://github.com/typescript-cheatsheets/react)
+
+
+
 <h2>HOW TO SECTION <em>(TL;DR)</em></h2>
 
   <!--
