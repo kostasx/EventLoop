@@ -1,4 +1,47 @@
-## SOLO PROJECT
+TOOLS:
+
+- Figma?
+- https://uizard.io/
+- https://responsively.app/
+
+## SOLO PROJECT PLANNING (DAVID G)
+
+  # How App Should Work
+
+  ## Parent Mode
+
+  1. Parent’s geolocation recorded, using geoLocate function. Stored in parentPositionZero variable
+
+  2. Parent places six jewels in various locations. They do this by moving to the location and pressing a button on the nav bar
+
+  3. When they press the button, it calls a handler function storeTreasure which checks if the hiddenTreasureArr array is full (max six objects)
+
+  4. If there is space, creates an object, with following properties:
+      a. The treasure object’s AR location (arLocation)
+      b. id
+      c. found (defaults to false)
+
+  5. Uses updateHiddenTreasure handler function to POST the object to the hiddenTreasureDB database and update the hiddenTreasureArr array
+
+  6. In Render, a map function automatically maps the hiddenTreasureArr array and places treasure objects with found set to false in the AR world, using the arLocation co-ordinates
+
+  7. Parent presses Start Game button in nav bar, which moves App into Game Mode
+
+  ## Game Mode
+
+  1. Upon initialisation, the player’s geolocation is recorded using geoLocate function and stored in playerPositionZero variable
+
+  2. GET request to hiddenTreasureDB database to populate retrievedFromDbArr variable
+
+  3. retrievedFromDbArr, playerPositionZero and parentPositionZero sent to adjTreasureMap handler function, to adjust AR co-ordinates to new real world starting position. This compares playerPositionZero with parentPositionZero and maps the retrievedFromDbArr adjusting the treasure object’s AR co-ordinates accordingly. It returns the gameTreasureMapArr
+
+  4. In Render, a map function maps the gameTreasureMapArr and places objects with found property set to false in the ARScene
+
+  5. The player looks for hidden treasure (hotter/colder functionality still to be determined). When they find it, they touch it on the screen
+
+  6. This triggers an onClickHandler function, which sends a PUT request to hiddenTreasureDB and changes found property of the object to true. The map function in Render will then automatically remove it from the ARScene. The onClickHandler function then adds one jewel image to the nav bar (the game mode nav bar is different to parent mode)
+
+  7. If all the jewels are located, the Render map function will detect this and launch the Game Completed screen
 
 ### SOLO PROJECT ORIENTATION GUIDELINES, SUGGESTIONS, TIPS AND RESOURCES
 
