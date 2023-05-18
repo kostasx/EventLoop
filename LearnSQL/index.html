@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/docute@4/dist/docute.css">
+  <title>LearnSQL</title>
+</head>
+
+<body>
+
+  <h1>Learn SQL</h1>
+
+  <div id="docute"></div>
+
+  <script src="https://unpkg.com/docute@4/dist/docute.js"></script>
+  <!-- RUN CODE PLUGIN -->
+  <script src="https://unpkg.com/docute-run-code@1/dist/index.min.js"></script>
+  <!-- https://docute.org/guide/customization -->
+  <!-- https://github.com/egoist/docute -->
+  <script>
+    // const color = "#040776"; // Light Theme
+    new Docute({
+      target: '#docute',
+      layout: 'left',
+      // theme: 'dark',
+      darkThemeToggler: true,
+      // cssVariables: {
+      //     accentColor: color,
+      //     linkColor: color,
+      //     navLinkBorderColor: color
+      // }
+      plugins: [
+          docuteRunCode()
+      ],
+    });
+  </script>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <script>
+  </script>
+
+</body>
+
+</html>
