@@ -506,6 +506,15 @@
   - **Concepts:** -
   - **Free:** YES
 
+- [**Introduction to SQL**( Socratica)](https://www.youtube.com/playlist?list=PLi01XoE8jYojRqM4qGBF1U90Ee1Ecb5tt)
+  - **Level:** Beginner
+  - **Uploaded:** -
+  - **Duration:** -
+  - **Description:** -
+  - **Creator/Author:** Socratica
+  - **Concepts:** -
+  - **Free:** YES
+
 - [**How to Correctly Define Many-To-Many Relationships in Database Design**](https://www.youtube.com/watch?v=1eUn6lsZ7c4)
   - **Level:** Beginner
   - **Uploaded:** -
@@ -548,15 +557,6 @@
   - **Duration:** 11min
   - **Description:** -
   - **Creator/Author:** Eddie Woo
-  - **Concepts:** -
-  - **Free:** YES
-
-- [**Introduction to SQL**( Socratica)](https://www.youtube.com/playlist?list=PLi01XoE8jYojRqM4qGBF1U90Ee1Ecb5tt)
-  - **Level:** Beginner
-  - **Uploaded:** -
-  - **Duration:** -
-  - **Description:** -
-  - **Creator/Author:** Socratica
   - **Concepts:** -
   - **Free:** YES
 
