@@ -602,7 +602,7 @@
   - **Level:** Beginner
   - **Duration:** 33 minutes
   - **Description:** 12 lessons
-  - **Creator/Author:** Tyler Clark
+  - **Creator/Author:** Tyler Clark on Egghead.io
   - **Updated:** 2021
   - **Certificate:** -
   - **Free:** Yes
@@ -611,7 +611,7 @@
   - **Level:** Beginner
   - **Duration:** 41 minutes
   - **Description:** 14 lessons
-  - **Creator/Author:** 
+  - **Creator/Author:** Brett Cassette on Egghead.io
   - **Updated:** 2021
   - **Certificate:** -
   - **Free:** -
@@ -694,6 +694,9 @@
 
 ## RESOURCES 
 
+  - [Intro to Databases (for people who don’t know a whole lot about them)](https://medium.com/@rwilliams_bv/intro-to-databases-for-people-who-dont-know-a-whole-lot-about-them-a64ae9af712)
+    - \* You can skip the section `"Non-Relational (NoSQL) Databases"` if you are not really interested to learn about other types of Databases.
+
   - [**The SQL Handbook**](https://flaviocopes.com/book/sql/)
 
   - [SQL Notes for Professionals (PDF)](https://goalkicker.com/SQLBook/SQLNotesForProfessionals.pdf)
@@ -705,6 +708,11 @@
   - [**ElephantSQL** (free Postgres cloud database)](https://www.elephantsql.com/)
 
   - [**The ins and outs of INNER JOIN**](https://campus.datacamp.com/courses/joining-data-in-sql/introducing-inner-joins)
+
+  - **Designing Databases & Schemas**
+    - [What are database schemas? 5 minute guide with examples](https://www.educative.io/blog/what-are-database-schemas-examples)
+    - [5 Database Design Schema Example: Critical Practices & Designs](https://hevodata.com/learn/schema-example/)
+    - [6 Easy And Actionable Steps On How To Design A Database](https://www.databasestar.com/how-to-design-a-database/)
 
 ## TEACHING TOOLS
 
