@@ -694,6 +694,8 @@
 
 ## RESOURCES 
 
+  - [**SQL Roadmap**: Step by step guide to learning SQL in 2023](https://roadmap.sh/sql)
+
   - [Intro to Databases (for people who don’t know a whole lot about them)](https://medium.com/@rwilliams_bv/intro-to-databases-for-people-who-dont-know-a-whole-lot-about-them-a64ae9af712)
     - \* You can skip the section `"Non-Relational (NoSQL) Databases"` if you are not really interested to learn about other types of Databases.
 
