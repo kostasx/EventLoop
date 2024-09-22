@@ -396,23 +396,23 @@
 
 ## CHEATSHEETS
 
-- [**PostgreSQL Cheatsheet** (devhints.io)](https://devhints.io/postgresql)
-  - **Level:** Beginner
-  - **Updated:** -
-  - **Description:** -
-  - **Free:** YES
+  - [**PostgreSQL Cheatsheet** (devhints.io)](https://devhints.io/postgresql)
+    - **Level:** Beginner
+    - **Updated:** -
+    - **Description:** -
+    - **Free:** YES
 
-- [**SQL Cheat Sheet** (Databasestar.com)](https://www.databasestar.com/sql-cheat-sheet/)
-  - **Level:** Beginner to Intermediate
-  - **Updated:** -
-  - **Description:** -
-  - **Free:** YES
+  - [**SQL Cheat Sheet** (Databasestar.com)](https://www.databasestar.com/sql-cheat-sheet/)
+    - **Level:** Beginner to Intermediate
+    - **Updated:** -
+    - **Description:** -
+    - **Free:** YES
 
-- [**SQL Basics Cheat Sheet**](https://www.datacamp.com/cheat-sheet/sql-basics-cheat-sheet)
-  - **Level:** Beginner to Intermediate
-  - **Updated:** -
-  - **Description:** With this SQL cheat sheet, you'll have a handy reference guide to basic querying tables, filtering data, and aggregating data. 5 min read.
-  - **Free:** YES
+  - [**SQL Basics Cheat Sheet**](https://www.datacamp.com/cheat-sheet/sql-basics-cheat-sheet)
+    - **Level:** Beginner to Intermediate
+    - **Updated:** -
+    - **Description:** With this SQL cheat sheet, you'll have a handy reference guide to basic querying tables, filtering data, and aggregating data. 5 min read.
+    - **Free:** YES
 
 ## TERMINOLOGY
 
@@ -434,157 +434,157 @@
 
 ## VIDEOS
 
-- [**Database Tutorial - What are databases?**](https://www.youtube.com/watch?v=Ls_LzOZ7x0c)
-  - **Level:** Beginner
-  - **Uploaded:** 2013
-  - **Duration:** 8min
-  - **Description:** -
-  - **Creator/Author:** LinkedIn Learning
-  - **Concepts:** -
-  - **Free:** YES
+  - [**Database Tutorial - What are databases?**](https://www.youtube.com/watch?v=Ls_LzOZ7x0c)
+    - **Level:** Beginner
+    - **Uploaded:** 2013
+    - **Duration:** 8min
+    - **Description:** -
+    - **Creator/Author:** LinkedIn Learning
+    - **Concepts:** -
+    - **Free:** YES
 
-![](./assets/What%20is%20a%20Relational%20Database.IBM.jpg)
+  ![](./assets/What%20is%20a%20Relational%20Database.IBM.jpg)
 
-- [What is a Relational Database?](https://www.youtube.com/watch?v=OqjJjpjDRLc)
-  - **Level:** Beginner
-  - **Uploaded:** 2022
-  - **Duration:** 8min
-  - **Creator/Author:** IBM
+  - [What is a Relational Database?](https://www.youtube.com/watch?v=OqjJjpjDRLc)
+    - **Level:** Beginner
+    - **Uploaded:** 2022
+    - **Duration:** 8min
+    - **Creator/Author:** IBM
 
-- [**What is SQL?** (Intro in 4 minutes)](https://www.youtube.com/watch?v=27axs9dO7AE)
-  - **Level:** Beginner
-  - **Uploaded:** -
-  - **Duration:** 5 minutes
-  - **Description:** -
-  - **Creator/Author:** -
-  - **Concepts:** -
-  - **Free:** Yes
+  - [**What is SQL?** (Intro in 4 minutes)](https://www.youtube.com/watch?v=27axs9dO7AE)
+    - **Level:** Beginner
+    - **Uploaded:** -
+    - **Duration:** 5 minutes
+    - **Description:** -
+    - **Creator/Author:** -
+    - **Concepts:** -
+    - **Free:** Yes
 
-- [**Database Tutorial for Beginners**](https://www.youtube.com/watch?v=wR0jg0eQsZA)
-  - **Level:** Beginner
-  - **Uploaded:** -
-  - **Duration:** 6 minutes 
-  - **Description:** This database tutorial will help beginners understand the basics of database management systems. We use helpful analogies to explain a high-level overview of spreadsheets, tables, and database management systems. The logic and concepts in this tutorial will make it easier to understand the more technical aspects of database architecture and Entity Relationship Diagrams (ERD).
-  - **Creator/Author:** -
-  - **Concepts:** Databases, tables, Entity Relationship Diagrams, ERD.
-  - **Free:** YES
+  - [**Database Tutorial for Beginners**](https://www.youtube.com/watch?v=wR0jg0eQsZA)
+    - **Level:** Beginner
+    - **Uploaded:** -
+    - **Duration:** 6 minutes 
+    - **Description:** This database tutorial will help beginners understand the basics of database management systems. We use helpful analogies to explain a high-level overview of spreadsheets, tables, and database management systems. The logic and concepts in this tutorial will make it easier to understand the more technical aspects of database architecture and Entity Relationship Diagrams (ERD).
+    - **Creator/Author:** -
+    - **Concepts:** Databases, tables, Entity Relationship Diagrams, ERD.
+    - **Free:** YES
 
-- [**Database Table Relationships**](https://www.youtube.com/watch?v=skHBFfw05Oo)
-  - **Level:** Beginner
-  - **Uploaded:** 2014
-  - **Duration:** 6 minutes
-  - **Description:** In this video you will learn about references - how to create a relationship between the tables, how it affects their structure and how it looks in the data.
-  - **Creator/Author:** Vertabelo
-  - **Concepts:** one-to-one, one-to-many, many-to-many
-  - **Free:** Yes
+  - [**Database Table Relationships**](https://www.youtube.com/watch?v=skHBFfw05Oo)
+    - **Level:** Beginner
+    - **Uploaded:** 2014
+    - **Duration:** 6 minutes
+    - **Description:** In this video you will learn about references - how to create a relationship between the tables, how it affects their structure and how it looks in the data.
+    - **Creator/Author:** Vertabelo
+    - **Concepts:** one-to-one, one-to-many, many-to-many
+    - **Free:** Yes
 
-- [**Eddie Woo: SQL**](https://www.youtube.com/watch?v=KLwnfxhobIQ)
-  - **Level:** Beginner
-  - **Uploaded:** -
-  - **Duration:** 16 minutes
-  - **Description:** -
-  - **Creator/Author:** Eddie Woo
-  - **Concepts:** -
-  - **Free:** Yes
+  - [**Eddie Woo: SQL**](https://www.youtube.com/watch?v=KLwnfxhobIQ)
+    - **Level:** Beginner
+    - **Uploaded:** -
+    - **Duration:** 16 minutes
+    - **Description:** -
+    - **Creator/Author:** Eddie Woo
+    - **Concepts:** -
+    - **Free:** Yes
 
-- [**CBT Nuggets: Intro to Databases**](https://www.youtube.com/playlist?list=PLQVJk9oC5JKohoyVILfdxOOzyl6w-yOur)
-  - **Level:** -
-  - **Uploaded:** -
-  - **Duration:** -
-  - **Description:** YouTube Playlist
-  - **Creator/Author:** -
-  - **Concepts:** -
-  - **Free:** YES
+  - [**CBT Nuggets: Intro to Databases**](https://www.youtube.com/playlist?list=PLQVJk9oC5JKohoyVILfdxOOzyl6w-yOur)
+    - **Level:** -
+    - **Uploaded:** -
+    - **Duration:** -
+    - **Description:** YouTube Playlist
+    - **Creator/Author:** -
+    - **Concepts:** -
+    - **Free:** YES
 
-- [**Eddie Woo: Database Systems**](https://www.youtube.com/playlist?list=PL5KkMZvBpo5BBLJdnhvFFbjkiK3JLBfeD)
-  - **Level:** Beginner to Intermediate
-  - **Uploaded:** -
-  - **Duration:** -
-  - **Description:** -
-  - **Creator/Author:** Eddie Woo
-  - **Concepts:** -
-  - **Free:** Yes
+  - [**Eddie Woo: Database Systems**](https://www.youtube.com/playlist?list=PL5KkMZvBpo5BBLJdnhvFFbjkiK3JLBfeD)
+    - **Level:** Beginner to Intermediate
+    - **Uploaded:** -
+    - **Duration:** -
+    - **Description:** -
+    - **Creator/Author:** Eddie Woo
+    - **Concepts:** -
+    - **Free:** Yes
 
-- [**SQL Tutorial - The basics of interacting with databases**](https://www.youtube.com/watch?v=SjIqHmtE3MU)
-  - **Level:** Beginner
-  - **Uploaded:** -
-  - **Duration:** 4min
-  - **Description:** -
-  - **Creator/Author:** LinkedIn Learning
-  - **Concepts:** -
-  - **Free:** YES
+  - [**SQL Tutorial - The basics of interacting with databases**](https://www.youtube.com/watch?v=SjIqHmtE3MU)
+    - **Level:** Beginner
+    - **Uploaded:** -
+    - **Duration:** 4min
+    - **Description:** -
+    - **Creator/Author:** LinkedIn Learning
+    - **Concepts:** -
+    - **Free:** YES
 
-- [**Introduction to SQL**( Socratica)](https://www.youtube.com/playlist?list=PLi01XoE8jYojRqM4qGBF1U90Ee1Ecb5tt)
-  - **Level:** Beginner
-  - **Uploaded:** -
-  - **Duration:** -
-  - **Description:** -
-  - **Creator/Author:** Socratica
-  - **Concepts:** -
-  - **Free:** YES
+  - [**Introduction to SQL**( Socratica)](https://www.youtube.com/playlist?list=PLi01XoE8jYojRqM4qGBF1U90Ee1Ecb5tt)
+    - **Level:** Beginner
+    - **Uploaded:** -
+    - **Duration:** -
+    - **Description:** -
+    - **Creator/Author:** Socratica
+    - **Concepts:** -
+    - **Free:** YES
 
-- [**How to Correctly Define Many-To-Many Relationships in Database Design**](https://www.youtube.com/watch?v=1eUn6lsZ7c4)
-  - **Level:** Beginner
-  - **Uploaded:** -
-  - **Duration:** 7min
-  - **Description:** -
-  - **Creator/Author:** -
-  - **Concepts:** -
-  - **Free:** YES
+  - [**How to Correctly Define Many-To-Many Relationships in Database Design**](https://www.youtube.com/watch?v=1eUn6lsZ7c4)
+    - **Level:** Beginner
+    - **Uploaded:** -
+    - **Duration:** 7min
+    - **Description:** -
+    - **Creator/Author:** -
+    - **Concepts:** -
+    - **Free:** YES
 
-- [**Harvard CS50 2022 - Lecture 7 - SQL**](https://www.youtube.com/watch?v=zrCLRC3Ci1c)
-  - **Level:** Beginner to Intermediate
-  - **Uploaded:** 2022
-  - **Duration:** 2h 20min
-  - **Description:** -
-  - **Creator/Author:** Harvard University
-  - **Concepts:** -
-  - **Free:** YES
+  - [**Harvard CS50 2022 - Lecture 7 - SQL**](https://www.youtube.com/watch?v=zrCLRC3Ci1c)
+    - **Level:** Beginner to Intermediate
+    - **Uploaded:** 2022
+    - **Duration:** 2h 20min
+    - **Description:** -
+    - **Creator/Author:** Harvard University
+    - **Concepts:** -
+    - **Free:** YES
 
-- [**Primary & Foreign Keys**](https://www.youtube.com/watch?v=B5r8CcTUs5Y)
-  - **Level:** Beginner
-  - **Uploaded:** -
-  - **Duration:** 9min
-  - **Description:** -
-  - **Creator/Author:** Eddie Woo
-  - **Concepts:** Primary Keys. Foreign Keys.
-  - **Free:** YES
+  - [**Primary & Foreign Keys**](https://www.youtube.com/watch?v=B5r8CcTUs5Y)
+    - **Level:** Beginner
+    - **Uploaded:** -
+    - **Duration:** 9min
+    - **Description:** -
+    - **Creator/Author:** Eddie Woo
+    - **Concepts:** Primary Keys. Foreign Keys.
+    - **Free:** YES
 
-- [**Database Schema**](https://www.youtube.com/watch?v=ymb9gsl_x1U)
-  - **Level:** Beginner
-  - **Uploaded:** 2012
-  - **Duration:** 6min
-  - **Description:** How to draw a diagram representing the entities, relationships and fields of a relational database.
-  - **Creator/Author:** Eddie Woo
-  - **Concepts:** -
-  - **Free:** YES
+  - [**Database Schema**](https://www.youtube.com/watch?v=ymb9gsl_x1U)
+    - **Level:** Beginner
+    - **Uploaded:** 2012
+    - **Duration:** 6min
+    - **Description:** How to draw a diagram representing the entities, relationships and fields of a relational database.
+    - **Creator/Author:** Eddie Woo
+    - **Concepts:** -
+    - **Free:** YES
 
-- [**Database Normalisation**](https://www.youtube.com/watch?v=2BxzjodhHPk)
-  - **Level:** Beginner to Intermediate
-  - **Uploaded:** -
-  - **Duration:** 11min
-  - **Description:** -
-  - **Creator/Author:** Eddie Woo
-  - **Concepts:** -
-  - **Free:** YES
+  - [**Database Normalisation**](https://www.youtube.com/watch?v=2BxzjodhHPk)
+    - **Level:** Beginner to Intermediate
+    - **Uploaded:** -
+    - **Duration:** 11min
+    - **Description:** -
+    - **Creator/Author:** Eddie Woo
+    - **Concepts:** -
+    - **Free:** YES
 
-- [**Entity Relationship Diagram (ERD) Tutorial - Part 1**](https://www.youtube.com/watch?v=QpdhBUYk7Kk)
-  - **Level:** -
-  - **Uploaded:** -
-  - **Duration:** 7min
-  - **Description:** -
-  - **Creator/Author:** Lucid
-  - **Concepts:** -
-  - **Free:** YES
+  - [**Entity Relationship Diagram (ERD) Tutorial - Part 1**](https://www.youtube.com/watch?v=QpdhBUYk7Kk)
+    - **Level:** -
+    - **Uploaded:** -
+    - **Duration:** 7min
+    - **Description:** -
+    - **Creator/Author:** Lucid
+    - **Concepts:** -
+    - **Free:** YES
 
-- [**SQL Tutorial - Utilizing JOINS**](https://www.youtube.com/watch?v=o14ate0Vz0s)
-  - **Level:** -
-  - **Uploaded:** -
-  - **Duration:** 13min
-  - **Description:** -
-  - **Creator/Author:** LinkedIn Learning
-  - **Concepts:** -
-  - **Free:** YES
+  - [**SQL Tutorial - Utilizing JOINS**](https://www.youtube.com/watch?v=o14ate0Vz0s)
+    - **Level:** -
+    - **Uploaded:** -
+    - **Duration:** 13min
+    - **Description:** -
+    - **Creator/Author:** LinkedIn Learning
+    - **Concepts:** -
+    - **Free:** YES
 
 ## COURSES
 
