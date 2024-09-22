@@ -416,21 +416,21 @@
 
 ## TERMINOLOGY
 
-- COLUMNS
-- ERD: Entity Relationship Diagrams
-- FIELDS (See COLUMNS)
-- FOREIGN KEY
-- JOINS
-- KEYS (Primary/Foreign)
-- NORMALIZATION
-- PRIMARY KEY
-- RDBMS
-- RECORDS (See ROWS)
-- RELATIONAL
-- ROWS
-- SCHEMA
-- SQL (Structured Query Language)
-- TABLES
+  - COLUMNS
+  - ERD: Entity Relationship Diagrams
+  - FIELDS (See COLUMNS)
+  - FOREIGN KEY
+  - JOINS
+  - KEYS (Primary/Foreign)
+  - NORMALIZATION
+  - PRIMARY KEY
+  - RDBMS
+  - RECORDS (See ROWS)
+  - RELATIONAL
+  - ROWS
+  - SCHEMA
+  - SQL (Structured Query Language)
+  - TABLES
 
 ## VIDEOS
 
@@ -442,6 +442,14 @@
   - **Creator/Author:** LinkedIn Learning
   - **Concepts:** -
   - **Free:** YES
+
+![](./assets/What%20is%20a%20Relational%20Database.IBM.jpg)
+
+- [What is a Relational Database?](https://www.youtube.com/watch?v=OqjJjpjDRLc)
+  - **Level:** Beginner
+  - **Uploaded:** 2022
+  - **Duration:** 8min
+  - **Creator/Author:** IBM
 
 - [**What is SQL?** (Intro in 4 minutes)](https://www.youtube.com/watch?v=27axs9dO7AE)
   - **Level:** Beginner
@@ -580,113 +588,113 @@
 
 ## COURSES
 
-- [**SoloLearn SQL Introduction**](https://www.sololearn.com/learn/courses/sql-introduction)
-  - **Level:** Beginner
-  - **Duration:** -
-  - **Description:** Introduction to SQL
-  - **Creator/Author:** -
-  - **Updated:** -
-  - **Certificate:** YES
-  - **Free:** YES
+  - [**SoloLearn SQL Introduction**](https://www.sololearn.com/learn/courses/sql-introduction)
+    - **Level:** Beginner
+    - **Duration:** -
+    - **Description:** Introduction to SQL
+    - **Creator/Author:** -
+    - **Updated:** -
+    - **Certificate:** YES
+    - **Free:** YES
 
-- [**SQL Tutorial for Beginners**](https://www.simplilearn.com/tutorials/sql-tutorial)
-  - **Level:** Beginner
-  - **Duration:** 1h
-  - **Description:** 6 lessons
-  - **Creator/Author:** 
-  - **Updated:** 2023
-  - **Certificate:** -
-  - **Free:** YES
+  - [**SQL Tutorial for Beginners**](https://www.simplilearn.com/tutorials/sql-tutorial)
+    - **Level:** Beginner
+    - **Duration:** 1h
+    - **Description:** 6 lessons
+    - **Creator/Author:** 
+    - **Updated:** 2023
+    - **Certificate:** -
+    - **Free:** YES
 
-- [**SQL Fundamentals (Postgres)**](https://egghead.io/courses/sql-fundamentals)
-  - **Level:** Beginner
-  - **Duration:** 33 minutes
-  - **Description:** 12 lessons
-  - **Creator/Author:** Tyler Clark on Egghead.io
-  - **Updated:** 2021
-  - **Certificate:** -
-  - **Free:** Yes
+  - [**SQL Fundamentals (Postgres)**](https://egghead.io/courses/sql-fundamentals)
+    - **Level:** Beginner
+    - **Duration:** 33 minutes
+    - **Description:** 12 lessons
+    - **Creator/Author:** Tyler Clark on Egghead.io
+    - **Updated:** 2021
+    - **Certificate:** -
+    - **Free:** Yes
 
-- [**Get Started With PostgreSQL**](https://egghead.io/courses/get-started-with-postgresql)
-  - **Level:** Beginner
-  - **Duration:** 41 minutes
-  - **Description:** 14 lessons
-  - **Creator/Author:** Brett Cassette on Egghead.io
-  - **Updated:** 2021
-  - **Certificate:** -
-  - **Free:** -
+  - [**Get Started With PostgreSQL**](https://egghead.io/courses/get-started-with-postgresql)
+    - **Level:** Beginner
+    - **Duration:** 41 minutes
+    - **Description:** 14 lessons
+    - **Creator/Author:** Brett Cassette on Egghead.io
+    - **Updated:** 2021
+    - **Certificate:** -
+    - **Free:** -
 
-- [**PostgreSQL Basics** (CrunchyData)](https://www.crunchydata.com/developers/playground/psql-basics)
-  - **Level:** Beginner
-  - **Duration:** -
-  - **Description:** Covering the basics of Postgres databases using an interactive online database
-  - **Creator/Author:** https://www.crunchydata.com
-  - **Updated:** -
-  - **Certificate:** -
-  - **Free:** YES
+  - [**PostgreSQL Basics** (CrunchyData)](https://www.crunchydata.com/developers/playground/psql-basics)
+    - **Level:** Beginner
+    - **Duration:** -
+    - **Description:** Covering the basics of Postgres databases using an interactive online database
+    - **Creator/Author:** https://www.crunchydata.com
+    - **Updated:** -
+    - **Certificate:** -
+    - **Free:** YES
 
-- [**PostgreSQL - Just for Kids** (CrunchyData)](https://www.crunchydata.com/developers/playground/postgresql-for-kids)
-  - **Level:** Beginner
-  - **Duration:** -
-  - **Description:** -
-  - **Creator/Author:** https://www.crunchydata.com
-  - **Updated:** -
-  - **Certificate:** -
-  - **Free:** YES
+  - [**PostgreSQL - Just for Kids** (CrunchyData)](https://www.crunchydata.com/developers/playground/postgresql-for-kids)
+    - **Level:** Beginner
+    - **Duration:** -
+    - **Description:** -
+    - **Creator/Author:** https://www.crunchydata.com
+    - **Updated:** -
+    - **Certificate:** -
+    - **Free:** YES
 
-- [**SQLBolt**](https://sqlbolt.com/)
-  - **Level:** -
-  - **Duration:** -
-  - **Description:** Learn SQL with simple, interactive exercises
-  - **Creator/Author:** -
-  - **Updated:** -
-  - **Certificate:** -
-  - **Free:** -
+  - [**SQLBolt**](https://sqlbolt.com/)
+    - **Level:** -
+    - **Duration:** -
+    - **Description:** Learn SQL with simple, interactive exercises
+    - **Creator/Author:** -
+    - **Updated:** -
+    - **Certificate:** -
+    - **Free:** -
 
-- [**Learn SQL (Codecademy)**](https://www.codecademy.com/learn/learn-sql)
-  - **Level:** -
-  - **Duration:** 8h
-  - **Description:** -
-  - **Creator/Author:** -
-  - **Updated:** -
-  - **Certificate:** Yes (paid)
-  - **Free:** -
+  - [**Learn SQL (Codecademy)**](https://www.codecademy.com/learn/learn-sql)
+    - **Level:** -
+    - **Duration:** 8h
+    - **Description:** -
+    - **Creator/Author:** -
+    - **Updated:** -
+    - **Certificate:** Yes (paid)
+    - **Free:** -
 
-- [**SQLZoo: Learn SQL in stages**](https://sqlzoo.net/wiki/SQL_Tutorial)
-  - **Level:** Beginner to Intermediate
-  - **Duration:** -
-  - **Description:** -
-  - **Creator/Author:** -
-  - **Updated:** -
-  - **Certificate:** -
-  - **Free:** Yes
+  - [**SQLZoo: Learn SQL in stages**](https://sqlzoo.net/wiki/SQL_Tutorial)
+    - **Level:** Beginner to Intermediate
+    - **Duration:** -
+    - **Description:** -
+    - **Creator/Author:** -
+    - **Updated:** -
+    - **Certificate:** -
+    - **Free:** Yes
 
-- [**Khan Academy: Intro to SQL: Querying and managing data**](https://www.khanacademy.org/computing/computer-programming/sql)
-  - **Level:** Beginner to Intermediate
-  - **Duration:** -
-  - **Description:** -
-  - **Creator/Author:** -
-  - **Updated:** -
-  - **Certificate:** -
-  - **Free:** Yes
+  - [**Khan Academy: Intro to SQL: Querying and managing data**](https://www.khanacademy.org/computing/computer-programming/sql)
+    - **Level:** Beginner to Intermediate
+    - **Duration:** -
+    - **Description:** -
+    - **Creator/Author:** -
+    - **Updated:** -
+    - **Certificate:** -
+    - **Free:** Yes
 
-- [**Introduction to SQL**](https://app.datacamp.com/learn/courses/introduction-to-sql)
-  - **Level:** -
-  - **Duration:** 2h
-  - **Description:** 7 videos. 24 exercises.
-  - **Creator/Author:** -
-  - **Updated:** -
-  - **Certificate:** -
-  - **Free:** Only the first Chapter "Relational Databases" is available for free
+  - [**Introduction to SQL**](https://app.datacamp.com/learn/courses/introduction-to-sql)
+    - **Level:** -
+    - **Duration:** 2h
+    - **Description:** 7 videos. 24 exercises.
+    - **Creator/Author:** -
+    - **Updated:** -
+    - **Certificate:** -
+    - **Free:** Only the first Chapter "Relational Databases" is available for free
 
-- [**Intermediate SQL** (Interactive course)](https://app.datacamp.com/learn/courses/intermediate-sql)
-  - **Level:** -
-  - **Duration:** 4h
-  - **Description:** Interactive course. 14 videos. 50 exercises.
-  - **Creator/Author:** -
-  - **Updated:** -
-  - **Certificate:** -
-  - **Free:** Only the first Chapter "Selecting Data" is available for free
+  - [**Intermediate SQL** (Interactive course)](https://app.datacamp.com/learn/courses/intermediate-sql)
+    - **Level:** -
+    - **Duration:** 4h
+    - **Description:** Interactive course. 14 videos. 50 exercises.
+    - **Creator/Author:** -
+    - **Updated:** -
+    - **Certificate:** -
+    - **Free:** Only the first Chapter "Selecting Data" is available for free
 
 ## EXERCISES / PRACTICE
 
@@ -718,11 +726,10 @@
 
 ## TEACHING TOOLS
 
-  - [**ExplainDev**](https://app.explain.dev/)
-    - **Description:** -
-    - **Free:** Yes
   - [**ChatGPT**](https://chat.openai.com/)
     - **Description:** -
+    - **Free:** Yes
+  - [**Database Murder Mystery**](https://in-tech-gration.github.io/database-mysteries/)
     - **Free:** Yes
   - [**SQLFiddle**](http://sqlfiddle.com/)
     - **Description:** A tool for easy online testing and sharing of database problems and their solutions.
