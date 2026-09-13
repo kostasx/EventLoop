@@ -2,6 +2,7 @@
 
 #### CV & RESUME RESOURCES
 
+- [**ResumeAI**](https://withresumeai.com/) — free ATS resume checker (3/day anonymous, 10/day free account) + [State of ATS 2026](https://github.com/Kayvan-Zahiri/state-of-ats-2026)
 - [Build a job-winning resume for free using **flowcv.io**](https://flowcv.io/)
 
 #### INTERVIEW FEEDBACK AND TIPS 
